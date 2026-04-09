@@ -2,7 +2,7 @@
 
 import { Flexbox } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
-import { memo, Suspense } from 'react';
+import { memo } from 'react';
 
 import ToolAuthAlert from '@/routes/(main)/agent/features/Conversation/AgentWelcome/ToolAuthAlert';
 import { useAgentStore } from '@/store/agent';
@@ -10,8 +10,6 @@ import { agentSelectors } from '@/store/agent/selectors';
 
 import AgentInfo from './AgentInfo';
 import OpeningQuestions from './OpeningQuestions';
-import AgentRecentTopics from './RecentTopics';
-import AgentTaskList from './TaskList';
 
 const AgentHome = memo(() => {
   const openingQuestions = useAgentStore(agentSelectors.openingQuestions, isEqual);
@@ -19,16 +17,10 @@ const AgentHome = memo(() => {
   return (
     <>
       <Flexbox flex={1} />
-      <Flexbox gap={32} width={'100%'} style={{ paddingBottom: 'max(4vh, 16px)' }}>
+      <Flexbox gap={32} style={{ paddingBottom: 'max(4vh, 16px)' }} width={'100%'}>
         <AgentInfo />
         {openingQuestions.length > 0 && <OpeningQuestions questions={openingQuestions} />}
         <ToolAuthAlert />
-        <Suspense>
-          <AgentRecentTopics />
-        </Suspense>
-        <Suspense>
-          <AgentTaskList />
-        </Suspense>
       </Flexbox>
     </>
   );

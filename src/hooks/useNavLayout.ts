@@ -1,4 +1,4 @@
-import { HomeIcon, PlusCircleIcon, SearchIcon } from 'lucide-react';
+import { HomeIcon, SearchIcon } from 'lucide-react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -70,12 +70,6 @@ export const useNavLayout = (): NavLayout => {
           icon: getRouteById('community')!.icon,
           key: SidebarTabKey.Community,
           title: t('tab.community'),
-          url: '/community',
-        },
-        {
-          icon: PlusCircleIcon,
-          key: 'create',
-          title: t('tab.create'),
           url: '/community',
         },
         {

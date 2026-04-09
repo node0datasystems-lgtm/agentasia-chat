@@ -1,7 +1,6 @@
 'use client';
 
 import { Block, Flexbox, Tag, Text } from '@lobehub/ui';
-import { cssVar } from 'antd-style';
 import { CheckSquareIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -24,12 +23,11 @@ const AgentTaskList = memo(() => {
   const { t } = useTranslation('chat');
   const { aid } = useParams<{ aid: string }>();
 
-  const { data: result, isLoading } = useSWR(
-    aid ? ['agentHome.tasks', aid] : null,
-    () => taskService.list({ assigneeAgentId: aid!, limit: 10 }),
+  const { data: result, isLoading } = useSWR(aid ? ['agentHome.tasks', aid] : null, () =>
+    taskService.list({ assigneeAgentId: aid!, limit: 10 }),
   );
 
-  const tasks = result?.tasks;
+  const tasks = result?.data;
 
   if (isLoading || !tasks || tasks.length === 0) return null;
 
@@ -57,10 +55,7 @@ const AgentTaskList = memo(() => {
                   </Text>
                 )}
               </Flexbox>
-              <Tag
-                color={STATUS_COLORS[task.status] || 'default'}
-                style={{ flexShrink: 0 }}
-              >
+              <Tag color={STATUS_COLORS[task.status] || 'default'} style={{ flexShrink: 0 }}>
                 {task.status}
               </Tag>
             </Flexbox>
