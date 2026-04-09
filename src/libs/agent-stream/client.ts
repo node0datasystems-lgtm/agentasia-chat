@@ -81,6 +81,7 @@ export class AgentStreamClient extends TypedEmitter {
   private readonly gatewayUrl: string;
   private readonly operationId: string;
   private readonly autoReconnect: boolean;
+  private readonly resumeOnConnect: boolean;
   private token: string;
 
   constructor(options: AgentStreamClientOptions) {
@@ -89,6 +90,7 @@ export class AgentStreamClient extends TypedEmitter {
     this.operationId = options.operationId;
     this.token = options.token;
     this.autoReconnect = options.autoReconnect ?? true;
+    this.resumeOnConnect = options.resumeOnConnect ?? false;
   }
 
   // ─── Public API ───
@@ -205,9 +207,10 @@ export class AgentStreamClient extends TypedEmitter {
           this.setStatus('connected');
           this.startHeartbeat();
 
-          // Enter resume mode when reconnecting with no lastEventId (page reload).
+          // Enter resume mode only for explicit reconnect scenarios (page reload).
           // Buffer all events until resume replay completes, then deduplicate and emit.
-          if (!this.lastEventId) {
+          // This is NOT enabled for normal first-connect to avoid delaying live streaming.
+          if (this.resumeOnConnect && !this.lastEventId) {
             this.resumeMode = true;
             this.resumeBuffer = [];
 

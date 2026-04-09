@@ -42,6 +42,10 @@ export interface ConnectGatewayParams {
    */
   operationId: string;
   /**
+   * Enable resume buffering for reconnect scenarios (default: false)
+   */
+  resumeOnConnect?: boolean;
+  /**
    * Auth token for the Gateway
    */
   token: string;
@@ -68,12 +72,12 @@ export class GatewayActionImpl {
    * Creates an AgentStreamClient, manages its lifecycle, and wires up event callbacks.
    */
   connectToGateway = (params: ConnectGatewayParams): void => {
-    const { operationId, gatewayUrl, token, onEvent, onSessionComplete } = params;
+    const { operationId, gatewayUrl, token, onEvent, onSessionComplete, resumeOnConnect } = params;
 
     // Disconnect existing connection for this operation if any
     this.disconnectFromGateway(operationId);
 
-    const client = this.createClient({ gatewayUrl, operationId, token });
+    const client = this.createClient({ gatewayUrl, operationId, resumeOnConnect, token });
 
     // Track connection in store
     this.#set(
@@ -316,6 +320,7 @@ export class GatewayActionImpl {
         topicService.updateTopicMetadata(topicId, { runningOperation: null }).catch(() => {});
       },
       operationId,
+      resumeOnConnect: true,
       token,
     });
   };
