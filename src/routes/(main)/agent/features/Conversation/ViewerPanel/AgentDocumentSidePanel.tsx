@@ -1,5 +1,15 @@
 import { DESKTOP_HEADER_ICON_SIZE } from '@lobechat/const';
-import { ActionIcon, Button, Flexbox, Icon, Markdown, Skeleton, Text } from '@lobehub/ui';
+import { type DraggablePanelProps } from '@lobehub/ui';
+import {
+  ActionIcon,
+  Button,
+  DraggablePanel,
+  Flexbox,
+  Icon,
+  Markdown,
+  Skeleton,
+  Text,
+} from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Eye, PanelRightCloseIcon, SquarePen } from 'lucide-react';
@@ -9,41 +19,15 @@ import { useTranslation } from 'react-i18next';
 
 import EditorTextArea from '@/features/EditorModal/TextArea';
 import { useClientDataSWR } from '@/libs/swr';
-import { agentDocumentService } from '@/services/agentDocument';
+import { agentDocumentService, agentDocumentSWRKeys } from '@/services/agentDocument';
 import { useAgentStore } from '@/store/agent';
 
 const styles = createStaticStyles(({ css }) => ({
   container: css`
-    flex: none;
-
-    width: min(42vw, 560px);
-    min-width: 320px;
     height: 100%;
     border-inline-start: 1px solid ${cssVar.colorBorderSecondary};
     border-inline-end: 1px solid ${cssVar.colorBorderSecondary};
-
     background: ${cssVar.colorBgContainer};
-
-    transition:
-      width 0.22s ${cssVar.motionEaseInOut},
-      min-width 0.22s ${cssVar.motionEaseInOut},
-      opacity 0.2s ${cssVar.motionEaseInOut},
-      transform 0.22s ${cssVar.motionEaseInOut},
-      border-color 0.2s ${cssVar.motionEaseInOut};
-  `,
-  hidden: css`
-    pointer-events: none;
-
-    transform: translateX(8px);
-
-    overflow: hidden;
-
-    width: 0;
-    min-width: 0;
-    border-inline-start-color: transparent;
-    border-inline-end-color: transparent;
-
-    opacity: 0;
   `,
   editor: css`
     flex: 1;
@@ -119,7 +103,7 @@ const AgentDocumentSidePanel = memo<AgentDocumentSidePanelProps>(
 
     const { data, error, isLoading, mutate } = useClientDataSWR(
       agentId && selectedDocumentId
-        ? ['workspace-agent-document-editor', agentId, selectedDocumentId]
+        ? agentDocumentSWRKeys.readDocument(agentId, selectedDocumentId)
         : null,
       () => agentDocumentService.readDocument({ agentId: agentId!, id: selectedDocumentId! }),
     );
@@ -145,8 +129,16 @@ const AgentDocumentSidePanel = memo<AgentDocumentSidePanelProps>(
     const shouldShowLoading = Boolean(selectedDocumentId) && (isLoading || !isDocumentReady);
     const isOpen = Boolean(selectedDocumentId);
     const isMarkdownDocument = isMarkdownFile(data?.filename || data?.title);
+    const [panelWidth, setPanelWidth] = useState<number>(520);
 
     if (!agentId) return null;
+
+    const handlePanelSizeChange: DraggablePanelProps['onSizeChange'] = (_, size) => {
+      if (!size?.width) return;
+      const width = typeof size.width === 'number' ? size.width : Number.parseInt(size.width, 10);
+      if (!Number.isFinite(width)) return;
+      setPanelWidth(width);
+    };
 
     const saveDocument = async () => {
       if (!isDirty || isSaving || !selectedDocumentId) return;
@@ -166,11 +158,20 @@ const AgentDocumentSidePanel = memo<AgentDocumentSidePanelProps>(
     };
 
     return (
-      <Flexbox
-        className={`${styles.container} ${!isOpen ? styles.hidden : ''}`}
+      <DraggablePanel
+        className={styles.container}
         data-testid="workspace-document-panel"
+        defaultSize={{ width: panelWidth }}
+        expand={isOpen}
+        expandable={false}
+        maxWidth={720}
+        minWidth={320}
+        placement="right"
+        showHandleWhenCollapsed={false}
+        size={{ height: '100%', width: panelWidth }}
+        onSizeChange={handlePanelSizeChange}
       >
-        {!isOpen ? null : (
+        {isOpen ? (
           <>
             <Flexbox
               horizontal
@@ -280,8 +281,8 @@ const AgentDocumentSidePanel = memo<AgentDocumentSidePanelProps>(
               </>
             )}
           </>
-        )}
-      </Flexbox>
+        ) : null}
+      </DraggablePanel>
     );
   },
 );

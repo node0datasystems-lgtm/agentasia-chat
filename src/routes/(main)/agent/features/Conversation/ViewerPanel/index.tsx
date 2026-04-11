@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import AgentDocumentSidePanel from '../AgentDocumentSidePanel';
+import AgentDocumentSidePanel from './AgentDocumentSidePanel';
 
 interface ViewerPanelProps {
   onClose: () => void;
