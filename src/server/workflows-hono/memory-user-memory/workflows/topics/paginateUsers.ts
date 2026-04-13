@@ -98,7 +98,7 @@ export const paginateUsersHandler = (context: WorkflowContext<MemoryExtractionPa
 
         const batch = await context.run(
           `memory:topics:paginate-users:list:${userCursor?.id || 'root'}`,
-          () => executor.getUsers(USER_PAGE_SIZE, userCursor),
+          () => executor.getUsersForHourlyExtraction(USER_PAGE_SIZE, userCursor),
         );
 
         const userIds = batch.ids;

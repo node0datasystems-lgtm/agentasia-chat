@@ -15,16 +15,14 @@ import {
   normalizeMemoryExtractionPayload,
 } from '@/server/services/memory/userMemory/extract';
 
-const COUNT_SAMPLE_PAGE_SIZE = 200;
-
 const { upstashWorkflowExtraHeaders } = parseMemoryExtractionConfig();
 
 /**
  * L1: Entry for the topics extraction pipeline.
  *
- * - If `userIds` in payload, treat as explicit target list (used by hourly cron fan-out).
- * - Else sample a single page to estimate eligible users (dry-run returns this count).
- * - When not dry-run: trigger L2 (paginate-users) to walk all users.
+ * - If `userIds` in payload, skip the eligibility query and fan out directly via L2.
+ * - Else materialise the full eligible user list in one step so dry-run can report the exact total.
+ * - When not dry-run: trigger L2 (paginate-users) to walk all users via cursor pagination.
  */
 export const processUsersHandler = (context: WorkflowContext<MemoryExtractionPayloadInput>) =>
   upstashWorkflowTracer.startActiveSpan(
@@ -50,7 +48,7 @@ export const processUsersHandler = (context: WorkflowContext<MemoryExtractionPay
         };
       }
 
-      // Explicit target userIds path: skip the user-count sampling and go straight to fan-out via L2.
+      // Explicit target userIds path: skip the eligibility query and go straight to fan-out via L2.
       if (payload.userIds.length > 0) {
         if (dryRun) {
           span.setStatus({ code: SpanStatusCode.OK });
@@ -73,42 +71,34 @@ export const processUsersHandler = (context: WorkflowContext<MemoryExtractionPay
         return { success: true, triggeredFanout: payload.userIds.length };
       }
 
-      // Sample first page for a dry-run estimate.
+      // Count-only query: cheap COUNT(*) with the hourly-extraction filter (memory-enabled + has
+      // at least one user message). Gives an exact total for dry-run.
       const executor = await MemoryExtractionExecutor.create();
-      const sampleBatch = await context.run('memory:topics:process-users:sample-first-page', () =>
-        executor.getUsers(COUNT_SAMPLE_PAGE_SIZE),
+      const totalEligible = await context.run(
+        'memory:topics:process-users:count-eligible-users',
+        () => executor.countUsersForHourlyExtraction(),
       );
 
-      const sampleCount = sampleBatch.ids.length;
-      const hasMorePages = !!('cursor' in sampleBatch && sampleBatch.cursor);
-
-      if (sampleCount === 0) {
+      if (totalEligible === 0) {
         span.setStatus({ code: SpanStatusCode.OK });
         return {
           message: 'No eligible users for topics extraction.',
           success: true,
-          totalEligibleSample: 0,
+          totalEligible: 0,
         };
       }
-
-      const result = {
-        hasMorePages,
-        success: true as const,
-        totalEligibleSample: sampleCount,
-      };
 
       if (dryRun) {
         span.setStatus({ code: SpanStatusCode.OK });
         return {
-          ...result,
           dryRun: true,
-          message: hasMorePages
-            ? `[DryRun] At least ${sampleCount} eligible users (more pages available).`
-            : `[DryRun] Exactly ${sampleCount} eligible users.`,
+          message: `[DryRun] Would process ${totalEligible} users.`,
+          success: true,
+          totalEligible,
         };
       }
 
-      // Trigger L2 to walk all pages from the start.
+      // Trigger L2 to walk all users via cursor pagination.
       await context.run('memory:topics:process-users:trigger-paginate', () =>
         MemoryExtractionWorkflowService.triggerTopicsPaginateUsers(
           buildWorkflowPayloadInput({
@@ -123,8 +113,9 @@ export const processUsersHandler = (context: WorkflowContext<MemoryExtractionPay
 
       span.setStatus({ code: SpanStatusCode.OK });
       return {
-        ...result,
-        message: `Triggered paginate-users (sampled ${sampleCount} users in first page).`,
+        message: `Triggered paginate-users for ${totalEligible} eligible users.`,
+        success: true,
+        totalEligible,
       };
     },
   );

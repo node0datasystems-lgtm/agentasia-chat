@@ -395,6 +395,40 @@ export class UserModel {
     return options.limit !== undefined ? query.limit(options.limit) : query;
   };
 
+  static countUsersForHourlyMemoryExtractor = async (
+    db: LobeChatDatabase,
+    options: Pick<ListUsersForHourlyMemoryExtractorOptions, 'whitelist'> = {},
+  ): Promise<number> => {
+    // NOTICE: Reversed from the per-row EXISTS pattern in listUsersForHourlyMemoryExtractor.
+    // Start with a CTE of users who actually chatted (messages ⋈ topics on user_id) then join
+    // to users+settings. On our data this is ~20× faster than the EXISTS variant because the
+    // chatted set is much smaller than the total users table.
+    const whitelistSql =
+      options.whitelist && options.whitelist.length > 0
+        ? sql`AND u.id IN (${sql.join(
+            options.whitelist.map((id) => sql`${id}`),
+            sql`, `,
+          )})`
+        : sql``;
+
+    const rows = await db.execute<{ n: number }>(sql`
+      WITH chatted AS (
+        SELECT DISTINCT m.user_id
+        FROM ${messages} m
+        INNER JOIN ${topics} t ON t.id = m.topic_id AND t.user_id = m.user_id
+        WHERE m.role = 'user'
+      )
+      SELECT COUNT(*)::int AS n
+      FROM chatted c
+      INNER JOIN ${users} u ON u.id = c.user_id
+      LEFT JOIN ${userSettings} s ON s.id = u.id
+      WHERE COALESCE((s.memory ->> 'enabled')::boolean, true) = true
+        ${whitelistSql}
+    `);
+
+    return rows.rows[0]?.n ?? 0;
+  };
+
   /**
    * Get user info for AI generation (name and language preference)
    */

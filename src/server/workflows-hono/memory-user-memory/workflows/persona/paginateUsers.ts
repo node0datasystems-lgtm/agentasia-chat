@@ -56,7 +56,7 @@ export const paginateUsersHandler = async (
   const executor = await MemoryExtractionExecutor.create();
   const batch = await context.run(
     `memory:persona:paginate-users:list:${cursor?.id || 'root'}`,
-    () => executor.getUsers(USER_PAGE_SIZE, cursor),
+    () => executor.getUsersForHourlyExtraction(USER_PAGE_SIZE, cursor),
   );
 
   const userIds = batch.ids;

@@ -1709,6 +1709,13 @@ export class MemoryExtractionExecutor {
     };
   }
 
+  async countUsersForHourlyExtraction(): Promise<number> {
+    const db = await this.db;
+    return UserModel.countUsersForHourlyMemoryExtractor(db, {
+      whitelist: this.privateConfig.whitelistUsers,
+    });
+  }
+
   async getUsersForHourlyExtraction(
     limit: number,
     cursor?: ListUsersForMemoryExtractorCursor,

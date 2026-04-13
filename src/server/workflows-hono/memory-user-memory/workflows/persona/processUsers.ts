@@ -7,8 +7,6 @@ import {
   type PersonaProcessUsersWorkflowPayload,
 } from '@/server/services/memory/userMemory/extract';
 
-const COUNT_SAMPLE_PAGE_SIZE = 200;
-
 const { upstashWorkflowExtraHeaders } = parseMemoryExtractionConfig();
 
 const requireBaseUrl = (baseUrl?: string) => {
@@ -19,8 +17,9 @@ const requireBaseUrl = (baseUrl?: string) => {
 /**
  * L1: Entry for the persona update pipeline.
  *
- * - If payload `userIds` provided, fan out directly via L2.
- * - Else sample first page for dry-run estimate; when not dry-run, trigger L2 cursor walk.
+ * - If `userIds` provided, skip eligibility query and fan out directly via L2.
+ * - Else materialise the full eligible user list in one step so dry-run can report the exact total.
+ * - When not dry-run: trigger L2 (paginate-users) to walk all users via cursor pagination.
  */
 export const processUsersHandler = async (
   context: WorkflowContext<PersonaProcessUsersWorkflowPayload>,
@@ -49,31 +48,26 @@ export const processUsersHandler = async (
     return { success: true, triggeredFanout: payload.userIds.length };
   }
 
+  // Count-only query: cheap COUNT(*) with the hourly-extraction filter.
   const executor = await MemoryExtractionExecutor.create();
-  const sampleBatch = await context.run('memory:persona:process-users:sample-first-page', () =>
-    executor.getUsers(COUNT_SAMPLE_PAGE_SIZE),
+  const totalEligible = await context.run('memory:persona:process-users:count-eligible-users', () =>
+    executor.countUsersForHourlyExtraction(),
   );
 
-  const sampleCount = sampleBatch.ids.length;
-  const hasMorePages = !!('cursor' in sampleBatch && sampleBatch.cursor);
-
-  if (sampleCount === 0) {
+  if (totalEligible === 0) {
     return {
       message: 'No eligible users for persona update.',
       success: true,
-      totalEligibleSample: 0,
+      totalEligible: 0,
     };
   }
 
   if (dryRun) {
     return {
       dryRun: true,
-      hasMorePages,
-      message: hasMorePages
-        ? `[DryRun] At least ${sampleCount} eligible users (more pages available).`
-        : `[DryRun] Exactly ${sampleCount} eligible users.`,
+      message: `[DryRun] Would process ${totalEligible} users.`,
       success: true,
-      totalEligibleSample: sampleCount,
+      totalEligible,
     };
   }
 
@@ -85,9 +79,8 @@ export const processUsersHandler = async (
   );
 
   return {
-    hasMorePages,
-    message: `Triggered paginate-users (sampled ${sampleCount} users in first page).`,
+    message: `Triggered paginate-users for ${totalEligible} eligible users.`,
     success: true,
-    totalEligibleSample: sampleCount,
+    totalEligible,
   };
 };
