@@ -4,7 +4,7 @@ import { type NetworkProxySettings } from '@lobechat/electron-client-ipc';
 import { type FormGroupItemType } from '@lobehub/ui';
 import { Form, Skeleton, toast } from '@lobehub/ui';
 import { Button, Form as AntdForm, Input, Radio, Space, Switch } from 'antd';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { FORM_STYLE } from '@/const/layoutTokens';
@@ -32,17 +32,26 @@ const ProxyForm = () => {
 
   const { isDirty } = useProxyDirty(form, proxySettings);
 
+  const initializedRef = useRef(false);
   useEffect(() => {
-    if (proxySettings) form.setFieldsValue(proxySettings);
+    if (proxySettings && !initializedRef.current) {
+      form.setFieldsValue(proxySettings);
+      initializedRef.current = true;
+    }
   }, [form, proxySettings]);
 
   const handleValuesChange = useCallback(
     (changed: Partial<NetworkProxySettings>) => {
       if ('enableProxy' in changed) {
-        void setProxySettings({ enableProxy: changed.enableProxy });
+        const next = changed.enableProxy;
+        setProxySettings({ enableProxy: next }).catch((error) => {
+          form.setFieldsValue({ enableProxy: !next });
+          const message = error instanceof Error ? error.message : String(error);
+          toast.error(t('proxy.saveFailed', { error: message }));
+        });
       }
     },
-    [setProxySettings],
+    [form, setProxySettings, t],
   );
 
   const handleSave = useCallback(async () => {
