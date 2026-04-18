@@ -341,4 +341,53 @@ describe('WorkflowCollapse', () => {
     const icon = screen.getByTestId('icon');
     expect(icon).toHaveAttribute('data-icon', 'X');
   });
+
+  it('renders flat without accordion when single tool completes', () => {
+    mockIsGenerating = false;
+    const blocks: AssistantContentBlock[] = [
+      {
+        content: '',
+        id: 'block-1',
+        tools: [
+          {
+            apiName: 'search',
+            arguments: '{}',
+            id: 'tool-1',
+            identifier: 'search',
+            type: 'builtin',
+            result: { content: 'ok' },
+          } as any,
+        ],
+      } as AssistantContentBlock,
+    ];
+
+    render(<WorkflowCollapse assistantMessageId="msg-1" blocks={blocks} />);
+
+    expect(screen.queryByTestId('workflow-accordion')).not.toBeInTheDocument();
+    expect(screen.getByText('workflow-expanded-list')).toBeInTheDocument();
+  });
+
+  it('still uses accordion for single tool while streaming', () => {
+    mockIsGenerating = true;
+    const blocks: AssistantContentBlock[] = [
+      {
+        content: '',
+        id: 'block-1',
+        tools: [
+          {
+            apiName: 'search',
+            arguments: '{}',
+            id: 'tool-1',
+            identifier: 'search',
+            type: 'builtin',
+            result: { content: 'ok' },
+          } as any,
+        ],
+      } as AssistantContentBlock,
+    ];
+
+    render(<WorkflowCollapse assistantMessageId="msg-1" blocks={blocks} />);
+
+    expect(screen.getByTestId('workflow-accordion')).toBeInTheDocument();
+  });
 });
