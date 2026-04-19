@@ -111,6 +111,14 @@ export class GatewayService {
                 log('Gateway sync: %s already %s, skipping', provider.id, status.state.status);
                 continue;
               }
+              // Dormant: gateway is running sparse alarm-driven polling and will
+              // self-wake when a message arrives. Reconnecting here would defeat
+              // the purpose — only manual reconnect (startClient) should override.
+              if (status.state.status === 'dormant') {
+                skippedConnected++;
+                log('Gateway sync: %s dormant, skipping (DO is sparse-polling)', provider.id);
+                continue;
+              }
               // "error" means credential/config issue (e.g. session expired, unauthorized).
               // Auto-retry is pointless — only user action (saving new credentials) can fix it.
               if (status.state.status === 'error') {
