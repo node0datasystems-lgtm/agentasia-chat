@@ -14,11 +14,17 @@ export const useProcessList = () => {
   const [loading, setLoading] = useState(true);
 
   const refetch = useCallback(async () => {
-    const res = await processManagerService.listProcesses();
-    const next = new Map<string, ProcessInfo>();
-    for (const p of res.processes) next.set(p.shellId, p);
-    setItems(next);
-    setLoading(false);
+    try {
+      const res = await processManagerService.listProcesses();
+      const next = new Map<string, ProcessInfo>();
+      for (const p of res.processes) next.set(p.shellId, p);
+      setItems(next);
+    } catch {
+      // IPC failure (missing preload, main-process error, etc.) — leave existing
+      // items in place so the UI doesn't flash to empty, but stop loading.
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {

@@ -103,7 +103,7 @@ export class ProcessRegistry {
     const killed: string[] = [];
     for (const entry of targets) {
       if (entry.status !== 'running') continue;
-      killProcessTree(entry.pid, signal);
+      killProcessTree(entry.pgid ?? entry.pid, signal);
       entry.status = 'killed';
       entry.exitedAt = Date.now();
       this.emit({ process: entry, type: 'killed' });
@@ -120,7 +120,7 @@ export class ProcessRegistry {
   cleanupAll(signal: NodeJS.Signals = 'SIGTERM'): void {
     for (const entry of this.processes.values()) {
       if (entry.status === 'running') {
-        killProcessTree(entry.pid, signal);
+        killProcessTree(entry.pgid ?? entry.pid, signal);
         entry.status = 'killed';
         entry.exitedAt = Date.now();
         this.emit({ process: entry, type: 'killed' });
