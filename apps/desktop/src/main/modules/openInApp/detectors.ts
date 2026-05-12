@@ -10,10 +10,9 @@ import { extractAllIcons } from './iconExtractor';
 import type { DetectStrategy } from './registry';
 import { ALWAYS_INSTALLED, APP_REGISTRY } from './registry';
 
-// Icon extraction now runs in an isolated Swift child process
-// (see iconExtractor.ts) so Electron itself cannot crash on
-// `app.getFileIcon` regressions. Renderer falls back to lucide if extraction
-// returns undefined (e.g. swift CLI missing).
+// Icon extraction shells out to plutil + sips on macOS (see iconExtractor.ts)
+// so Electron itself cannot crash on `app.getFileIcon` regressions. Renderer
+// falls back to lucide if extraction returns undefined.
 
 const logger = createLogger('modules:openInApp:detectors');
 
@@ -91,8 +90,8 @@ export const detectAllApps = async (
   >;
   const installedFlags = await Promise.all(entries.map(([id]) => detectApp(id, platform)));
 
-  // Extract icons for installed apps only. Extraction runs in a JXA child
-  // process (see iconExtractor.ts) so it cannot crash the renderer; failures
+  // Extract icons for installed apps only. Extraction shells out to plutil +
+  // sips (see iconExtractor.ts) so it cannot crash the renderer; failures
   // resolve to undefined and the renderer falls back to lucide icons.
   const installedIds = entries.filter((_entry, i) => installedFlags[i]).map(([id]) => id);
   const icons = await extractAllIcons(installedIds, platform);

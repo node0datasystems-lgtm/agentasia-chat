@@ -1,8 +1,7 @@
-import { execFile, spawn } from 'node:child_process';
-import { access, mkdtemp, writeFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
+import { access, mkdtemp, readFile, unlink } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { promisify } from 'node:util';
 
 import type { OpenInAppId } from '@lobechat/electron-client-ipc';
 
@@ -12,157 +11,71 @@ import { APP_REGISTRY } from './registry';
 
 const logger = createLogger('modules:openInApp:iconExtractor');
 
-const execFileAsync = promisify(execFile);
+// Manual promise wrapper rather than util.promisify(execFile): the latter
+// relies on execFile's custom `util.promisify.custom` symbol to return
+// `{ stdout, stderr }`, which vi.fn() mocks don't carry — so destructuring
+// silently yields `undefined` under test. This wrapper resolves directly to
+// the stdout string and is mock-friendly.
+const execFileToString = (
+  file: string,
+  args: string[],
+  opts?: { timeout?: number },
+): Promise<string> =>
+  new Promise((resolve, reject) => {
+    const cb = (err: Error | null, stdout: string, stderr: string) => {
+      if (err) {
+        (err as Error & { stderr?: string }).stderr = stderr;
+        reject(err);
+      } else {
+        resolve(stdout);
+      }
+    };
+    if (opts) execFile(file, args, opts, cb);
+    else execFile(file, args, cb);
+  });
 
 /** Render dimensions for the extracted PNG. 64 keeps the payload tiny while
  *  staying crisp at the renderer's 16-20 px display size on retina. */
 const ICON_SIZE = 64;
-/** Each JXA invocation is bounded to avoid pathological hangs. macOS's
- *  IconServices generally responds within tens of ms. */
-const OSASCRIPT_TIMEOUT_MS = 5000;
 
-/**
- * JXA (JavaScript for Automation) program that extracts a macOS app icon as a
- * base64 PNG data URL. Runs via `osascript -l JavaScript` in an isolated
- * child process so Electron itself cannot crash on `app.getFileIcon`
- * regressions (Electron 41 + macOS 26 trips EXC_BREAKPOINT inside
- * NSImage / IconServices when invoked from the Electron main process).
- *
- * osascript ships on every macOS install — no Xcode / Swift toolchain
- * dependency, no electron-builder bundling required.
- *
- * argv: <bundlePath> <size>
- * stdout: `data:image/png;base64,…` on success; empty / non-conforming on
- * failure (caller treats anything other than a valid data URL as "no icon").
- */
-const JXA_SOURCE = `function run(argv) {
-  ObjC.import('AppKit');
-  if (argv.length < 1) return '';
-  var bundlePath = argv[0];
-  var size = parseInt(argv[1], 10) || 64;
+/** Per-extraction bound. plutil and sips are local file ops; tens of ms is
+ *  typical, so a generous timeout still catches real hangs. */
+const EXEC_TIMEOUT_MS = 5000;
 
-  var fm = $.NSFileManager.defaultManager;
-  if (!fm.fileExistsAtPath(bundlePath)) return '';
+let tmpDirPromise: Promise<string | undefined> | undefined;
 
-  var workspace = $.NSWorkspace.sharedWorkspace;
-  var icon = workspace.iconForFile(bundlePath);
-  if (!icon) return '';
-  icon.size = $.NSMakeSize(size, size);
-
-  // Re-draw into a fresh canvas at the target size so we get the resolved
-  // representation rather than the multi-rep NSImage's TIFF (which may be
-  // larger than needed).
-  var target = $.NSImage.alloc.initWithSize($.NSMakeSize(size, size));
-  target.lockFocus();
-  icon.drawInRectFromRectOperationFraction(
-    $.NSMakeRect(0, 0, size, size),
-    $.NSMakeRect(0, 0, 0, 0),
-    1, // NSCompositingOperationCopy
-    1.0
-  );
-  target.unlockFocus();
-
-  var tiff = target.tiffRepresentation;
-  if (!tiff) return '';
-  var rep = $.NSBitmapImageRep.imageRepWithData(tiff);
-  if (!rep) return '';
-  var png = rep.representationUsingTypeProperties(4 /* NSBitmapImageFileTypePNG */, $());
-  if (!png) return '';
-  var base64 = png.base64EncodedStringWithOptions(0);
-  return 'data:image/png;base64,' + ObjC.unwrap(base64);
-}
-`;
-
-let scriptPathPromise: Promise<string | undefined> | undefined;
-
-/**
- * Write the JXA source to a tmp file once per process and reuse it for every
- * extraction call. Returns undefined if the source can't be written (rare).
- */
-const ensureScript = async (): Promise<string | undefined> => {
-  if (scriptPathPromise) return scriptPathPromise;
-  scriptPathPromise = (async () => {
+const ensureTmpDir = async (): Promise<string | undefined> => {
+  if (tmpDirPromise) return tmpDirPromise;
+  tmpDirPromise = (async () => {
     try {
-      const dir = await mkdtemp(path.join(tmpdir(), 'lobehub-openinapp-'));
-      const filePath = path.join(dir, 'extractIcon.js');
-      await writeFile(filePath, JXA_SOURCE, 'utf8');
-      logger.debug(`prepared JXA script at ${filePath}`);
-      return filePath;
+      return await mkdtemp(path.join(tmpdir(), 'lobehub-openinapp-'));
     } catch (error) {
-      logger.debug(`failed to prepare JXA script: ${(error as Error).message}`);
+      logger.debug(`failed to create tmp dir: ${(error as Error).message}`);
       return undefined;
     }
   })();
-  return scriptPathPromise;
+  return tmpDirPromise;
 };
 
-const runOsascript = (scriptPath: string, bundlePath: string): Promise<string | undefined> => {
-  return new Promise((resolve) => {
-    let stdout = '';
-    let stderr = '';
-    let settled = false;
-    const finish = (value: string | undefined) => {
-      if (settled) return;
-      settled = true;
-      resolve(value);
-    };
-
-    const proc = spawn(
-      'osascript',
-      ['-l', 'JavaScript', scriptPath, bundlePath, String(ICON_SIZE)],
-      {
-        stdio: ['ignore', 'pipe', 'pipe'],
-        timeout: OSASCRIPT_TIMEOUT_MS,
-      },
-    );
-    proc.stdout.on('data', (chunk) => {
-      stdout += chunk.toString();
-    });
-    proc.stderr.on('data', (chunk) => {
-      stderr += chunk.toString();
-    });
-    proc.on('error', (error) => {
-      logger.debug(`osascript spawn failed for ${bundlePath}: ${error.message}`);
-      finish(undefined);
-    });
-    proc.on('close', (code) => {
-      if (code !== 0) {
-        logger.debug(
-          `osascript exited code=${code} for ${bundlePath}: ${stderr.trim().slice(0, 200)}`,
-        );
-        finish(undefined);
-        return;
-      }
-      const trimmed = stdout.trim();
-      const prefix = 'data:image/png;base64,';
-      if (trimmed.startsWith(prefix) && trimmed.length > prefix.length) {
-        finish(trimmed);
-        return;
-      }
-      logger.debug(`osascript produced unexpected stdout for ${bundlePath}`);
-      finish(undefined);
-    });
-  });
-};
-
-let osascriptAvailablePromise: Promise<boolean> | undefined;
+let toolsAvailablePromise: Promise<boolean> | undefined;
 
 /**
- * Confirm `osascript` is on PATH. It ships with every macOS install so this is
- * effectively a sanity check; cached for the process lifetime.
+ * Confirm `plutil` and `sips` are both on PATH. Both ship with every macOS
+ * install so this is effectively a sanity check; cached for the process lifetime.
  */
-const isOsascriptAvailable = (): Promise<boolean> => {
-  if (osascriptAvailablePromise) return osascriptAvailablePromise;
-  osascriptAvailablePromise = (async () => {
+const areToolsAvailable = (): Promise<boolean> => {
+  if (toolsAvailablePromise) return toolsAvailablePromise;
+  toolsAvailablePromise = (async () => {
     try {
-      await execFileAsync('/usr/bin/which', ['osascript']);
+      await execFileToString('/usr/bin/which', ['plutil']);
+      await execFileToString('/usr/bin/which', ['sips']);
       return true;
     } catch {
-      logger.debug('osascript not found on PATH; falling back to renderer icons');
+      logger.debug('plutil or sips missing from PATH; falling back to renderer icons');
       return false;
     }
   })();
-  return osascriptAvailablePromise;
+  return toolsAvailablePromise;
 };
 
 const resolveDarwinBundlePath = async (id: OpenInAppId): Promise<string | undefined> => {
@@ -180,9 +93,73 @@ const resolveDarwinBundlePath = async (id: OpenInAppId): Promise<string | undefi
 };
 
 /**
- * Extract the real macOS app icon for the given AppId via a JXA child process
- * that calls `NSWorkspace.shared.icon(forFile:)`. macOS only (Windows / Linux
- * fall back to the renderer's lucide icon table).
+ * Look up the bundle's icon file name via Info.plist (`CFBundleIconFile`).
+ * Returns the resolved absolute .icns path, or undefined if not derivable.
+ */
+const resolveIcnsPath = async (bundlePath: string): Promise<string | undefined> => {
+  const plistPath = path.join(bundlePath, 'Contents', 'Info.plist');
+  try {
+    const stdout = await execFileToString(
+      'plutil',
+      ['-extract', 'CFBundleIconFile', 'raw', plistPath],
+      { timeout: EXEC_TIMEOUT_MS },
+    );
+    const iconName = stdout.trim();
+    if (!iconName) return undefined;
+    const fileName = iconName.endsWith('.icns') ? iconName : `${iconName}.icns`;
+    const icnsPath = path.join(bundlePath, 'Contents', 'Resources', fileName);
+    await access(icnsPath);
+    return icnsPath;
+  } catch (error) {
+    logger.debug(`resolveIcnsPath failed for ${bundlePath}: ${(error as Error).message}`);
+    return undefined;
+  }
+};
+
+/**
+ * Resize/convert the given .icns to a 64×64 PNG using sips, then return the
+ * base64 data URL. The PNG file is unlinked after read.
+ */
+const renderIcnsToDataUrl = async (
+  icnsPath: string,
+  tmpDir: string,
+  filename: string,
+): Promise<string | undefined> => {
+  const outPath = path.join(tmpDir, filename);
+  try {
+    await execFileToString(
+      'sips',
+      [
+        '-z',
+        String(ICON_SIZE),
+        String(ICON_SIZE),
+        '-s',
+        'format',
+        'png',
+        icnsPath,
+        '--out',
+        outPath,
+      ],
+      { timeout: EXEC_TIMEOUT_MS },
+    );
+    const buf = await readFile(outPath);
+    if (buf.length === 0) return undefined;
+    return `data:image/png;base64,${buf.toString('base64')}`;
+  } catch (error) {
+    logger.debug(`sips failed for ${icnsPath}: ${(error as Error).message}`);
+    return undefined;
+  } finally {
+    unlink(outPath).catch(() => undefined);
+  }
+};
+
+/**
+ * Extract the real macOS app icon for the given AppId by reading the bundle's
+ * Info.plist (`CFBundleIconFile`) and rendering the resolved .icns via `sips`.
+ * Both `plutil` and `sips` ship with every macOS install — no Xcode, swift, or
+ * electron-builder bundling required, and no JXA / NSImage drawing path
+ * (which is broken in JXA: lockFocus and NSGraphicsContext class methods are
+ * not exposed). macOS only; other platforms return undefined.
  */
 export const extractAppIcon = async (
   id: OpenInAppId,
@@ -190,12 +167,14 @@ export const extractAppIcon = async (
 ): Promise<string | undefined> => {
   if (platform !== 'darwin') return undefined;
   try {
-    if (!(await isOsascriptAvailable())) return undefined;
+    if (!(await areToolsAvailable())) return undefined;
     const bundlePath = await resolveDarwinBundlePath(id);
     if (!bundlePath) return undefined;
-    const scriptPath = await ensureScript();
-    if (!scriptPath) return undefined;
-    return await runOsascript(scriptPath, bundlePath);
+    const icnsPath = await resolveIcnsPath(bundlePath);
+    if (!icnsPath) return undefined;
+    const tmpDir = await ensureTmpDir();
+    if (!tmpDir) return undefined;
+    return await renderIcnsToDataUrl(icnsPath, tmpDir, `${id}.png`);
   } catch (error) {
     logger.debug(`extractAppIcon error for ${id}: ${(error as Error).message}`);
     return undefined;
@@ -204,7 +183,7 @@ export const extractAppIcon = async (
 
 /**
  * Resolve icons for a list of installed AppIds. Sequential — keeps spawn
- * pressure low and matches IconServices' single-thread behavior.
+ * pressure low and matches the underlying single-thread tools.
  */
 export const extractAllIcons = async (
   installedIds: OpenInAppId[],
@@ -226,6 +205,6 @@ export const extractAllIcons = async (
  * Test-only: reset the module-level caches so each test starts fresh.
  */
 export const __resetForTest = () => {
-  scriptPathPromise = undefined;
-  osascriptAvailablePromise = undefined;
+  tmpDirPromise = undefined;
+  toolsAvailablePromise = undefined;
 };

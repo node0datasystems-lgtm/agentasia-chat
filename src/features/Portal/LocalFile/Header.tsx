@@ -8,7 +8,6 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import { SESSION_CHAT_TOPIC_PAGE_URL, SESSION_CHAT_TOPIC_URL } from '@/const/url';
 import NavHeader from '@/features/NavHeader';
-import OpenInAppButton from '@/features/OpenInAppButton';
 import { useChatStore } from '@/store/chat';
 import { chatPortalSelectors } from '@/store/chat/selectors';
 
@@ -23,9 +22,6 @@ const Header = memo(() => {
     s.goBack,
     s.clearPortalStack,
   ]);
-  const activeWorkingDirectory = useChatStore(
-    (s) => chatPortalSelectors.currentLocalFile(s)?.workingDirectory ?? '',
-  );
   const isTopicPageRoute =
     !!params.aid &&
     !!params.topicId &&
@@ -45,7 +41,6 @@ const Header = memo(() => {
       }
       right={
         <Fragment>
-          <OpenInAppButton workingDirectory={activeWorkingDirectory} />
           <ActionIcon
             icon={X}
             size={DESKTOP_HEADER_ICON_SIZE}
