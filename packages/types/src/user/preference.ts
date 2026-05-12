@@ -143,6 +143,7 @@ export interface SSOProvider {
 
 export const UserPreferenceSchema = z
   .object({
+    defaultOpenInApp: z.string().optional(),
     guide: UserGuideSchema.optional(),
     hideSyncAlert: z.boolean().optional(),
     lab: UserLabSchema.optional(),
