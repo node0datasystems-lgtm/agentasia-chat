@@ -135,10 +135,8 @@ const Files = memo<FilesProps>(({ workingDirectory }) => {
 
     const nodeIds = new Set(nodes.map((n) => n.id));
     if (!nodeIds.has(path)) {
-      // Data may still be loading — retry silently instead of showing a warning.
-      if (!isLoading) {
-        void message.warning(t('workingPanel.review.revealNotFound'));
-      }
+      // Data may still be loading — the effect re-runs when nodes/isLoading
+      // change, so the reveal will be retried automatically once data arrives.
       return;
     }
 
