@@ -27,6 +27,7 @@ import {
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useHasWorkspace } from '@/business/client/hooks/useHasWorkspace';
 import { useElectronStore } from '@/store/electron';
 import { electronSyncSelectors } from '@/store/electron/selectors';
 import { SettingsTabs } from '@/store/global/initialState';
@@ -42,6 +43,7 @@ import { userGeneralSettingsSelectors } from '@/store/user/slices/settings/selec
 export enum SettingsGroupKey {
   Agent = 'agent',
   General = 'general',
+  Subscription = 'subscription',
   System = 'system',
   Workspace = 'workspace',
 }
@@ -79,6 +81,7 @@ export const useCategory = () => {
     return avatar;
   }, [avatar, remoteServerUrl]);
   const enableBusinessFeatures = useServerConfigStore(serverConfigSelectors.enableBusinessFeatures);
+  const hasWorkspace = useHasWorkspace();
   const categoryGroups: CategoryGroup[] = useMemo(() => {
     const groups: CategoryGroup[] = [];
 
@@ -117,11 +120,30 @@ export const useCategory = () => {
       title: t('group.common'),
     });
 
-    // Workspace group — workspace management (general / members) on top,
-    // followed by the subscription / billing items (Plans, Usage, Credits,
-    // Billing, Referral), which are also workspace-scoped for team workspaces
-    // and user-scoped for personal.
+    // Plans group — subscription / billing items. Always shown when business
+    // features are enabled, regardless of whether the user has upgraded to a
+    // workspace. Personal-mode users still need access to billing.
     if (enableBusinessFeatures) {
+      const subscriptionItems: CategoryItem[] = [
+        { icon: Map, key: SettingsTabs.Plans, label: tSubscription('tab.plans') },
+        { icon: ChartColumnBigIcon, key: SettingsTabs.Usage, label: t('tab.usage') },
+        { icon: Coins, key: SettingsTabs.Credits, label: tSubscription('tab.credits') },
+        { icon: CreditCard, key: SettingsTabs.Billing, label: tSubscription('tab.billing') },
+        { icon: Gift, key: SettingsTabs.Referral, label: tSubscription('tab.referral') },
+      ];
+
+      groups.push({
+        items: subscriptionItems,
+        key: SettingsGroupKey.Subscription,
+        title: t('group.subscription'),
+      });
+    }
+
+    // Workspace group — workspace management (general / members). Only shown
+    // when the user has at least one workspace (upgraded personal OR team
+    // membership). Hides the entire group for legacy/compat-mode users so
+    // workspace-admin surface area doesn't leak before upgrade.
+    if (enableBusinessFeatures && hasWorkspace) {
       const workspaceItems: CategoryItem[] = [
         {
           icon: Building2,
@@ -133,11 +155,6 @@ export const useCategory = () => {
           key: SettingsTabs.WorkspaceMembers,
           label: t('tab.workspaceMembers'),
         },
-        { icon: Map, key: SettingsTabs.Plans, label: tSubscription('tab.plans') },
-        { icon: ChartColumnBigIcon, key: SettingsTabs.Usage, label: t('tab.usage') },
-        { icon: Coins, key: SettingsTabs.Credits, label: tSubscription('tab.credits') },
-        { icon: CreditCard, key: SettingsTabs.Billing, label: tSubscription('tab.billing') },
-        { icon: Gift, key: SettingsTabs.Referral, label: tSubscription('tab.referral') },
       ];
 
       groups.push({
@@ -238,6 +255,7 @@ export const useCategory = () => {
     tAuth,
     tSubscription,
     enableBusinessFeatures,
+    hasWorkspace,
     hideDocs,
     mobile,
     showApiKeyManage,
