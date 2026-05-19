@@ -9,8 +9,7 @@ if (!LobeHubSkill) {
 const lobeHubContent = LobeHubSkill.content;
 
 /**
- * Regression for LOBE-6882.
- *
+ * Regression for  *
  * Instead of building a dedicated AgentIdentityContextInjector, we wire current
  * agent / topic identity through the existing PlaceholderVariablesProcessor —
  * the LobeHub builtin skill content references `{{agent_id}}`, `{{topic_id}}`,
@@ -24,7 +23,7 @@ const lobeHubContent = LobeHubSkill.content;
  * vice versa), this test fails before users see a broken `lh agent run -a {{agent_id}}`
  * literal in their prompts.
  */
-describe('LobeHub skill identity placeholders (LOBE-6882)', () => {
+describe('LobeHub skill identity placeholders ',  => {
   const PLACEHOLDER_KEYS = [
     'agent_id',
     'agent_title',
