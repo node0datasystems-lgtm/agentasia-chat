@@ -29,9 +29,14 @@ vi.mock('react-i18next', () => ({
           back: 'Back',
           next: 'Next',
           'proSettings.connectors.title': 'Connect Your Favorite Tools',
+          'proSettings.model.title': 'Default Model Used by the Agent',
         } as Record<string, string>
       )[key] ?? key,
   }),
+}));
+
+vi.mock('@/features/ModelSelect', () => ({
+  default: () => <div>ModelSelect</div>,
 }));
 
 vi.mock('@/routes/onboarding/components/LobeMessage', () => ({
@@ -52,6 +57,13 @@ describe('ProSettingsStep', () => {
 
     expect(screen.getAllByText('Connect Your Favorite Tools')).toHaveLength(1);
     expect(screen.getByText('KlavisServerList')).toBeInTheDocument();
+  });
+
+  it('does not allow configuring the default agent model during classic onboarding', () => {
+    render(<ProSettingsStep onBack={vi.fn()} onNext={vi.fn()} />);
+
+    expect(screen.queryByText('Default Model Used by the Agent')).not.toBeInTheDocument();
+    expect(screen.queryByText('ModelSelect')).not.toBeInTheDocument();
   });
 
   it('calls the provided navigation handlers', () => {
