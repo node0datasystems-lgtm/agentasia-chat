@@ -40,6 +40,27 @@ describe('MessageService', () => {
         agentId: 'agent-123',
       });
     });
+
+    it('should omit optimistic temporary parent ids before calling lambdaClient', async () => {
+      vi.mocked(lambdaClient.message.createMessage.mutate).mockResolvedValue({
+        id: 'msg-1',
+        messages: [],
+      });
+
+      await service.createMessage({
+        content: 'test',
+        parentId: 'tmp_staleParent',
+        role: 'user',
+        agentId: 'agent-123',
+      });
+
+      expect(lambdaClient.message.createMessage.mutate).toHaveBeenCalledWith({
+        content: 'test',
+        parentId: undefined,
+        role: 'user',
+        agentId: 'agent-123',
+      });
+    });
   });
 
   describe('removeMessagesByAssistant', () => {

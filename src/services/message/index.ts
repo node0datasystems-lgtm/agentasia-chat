@@ -18,6 +18,7 @@ import { type HeatmapsProps } from '@lobehub/charts';
 import { lambdaClient } from '@/libs/trpc/client';
 
 import { abortableRequest } from '../utils/abortableRequest';
+import { omitOptimisticParentId } from '../utils/optimisticMessage';
 
 /**
  * Query context for message operations
@@ -33,7 +34,7 @@ export interface MessageQueryContext {
 
 export class MessageService {
   createMessage = async (params: CreateMessageParams): Promise<CreateMessageResult> => {
-    return lambdaClient.message.createMessage.mutate(params as any);
+    return lambdaClient.message.createMessage.mutate(omitOptimisticParentId(params) as any);
   };
 
   getMessages = async (params: MessageQueryContext): Promise<UIChatMessage[]> => {

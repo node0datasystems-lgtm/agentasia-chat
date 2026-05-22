@@ -3,12 +3,19 @@ import { cleanObject } from '@lobechat/utils';
 
 import { lambdaClient } from '@/libs/trpc/client';
 
+import { omitOptimisticParentId } from './utils/optimisticMessage';
+
 class AiChatService {
   sendMessageInServer = async (
     params: SendMessageServerParams,
     abortController: AbortController,
   ) => {
-    return lambdaClient.aiChat.sendMessageInServer.mutate(cleanObject(params), {
+    const sanitizedParams: SendMessageServerParams = {
+      ...params,
+      newUserMessage: omitOptimisticParentId(params.newUserMessage),
+    };
+
+    return lambdaClient.aiChat.sendMessageInServer.mutate(cleanObject(sanitizedParams), {
       context: { showNotification: false },
       signal: abortController?.signal,
     });
