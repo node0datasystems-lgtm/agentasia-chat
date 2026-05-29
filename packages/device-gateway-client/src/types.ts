@@ -37,7 +37,7 @@ export interface DeviceSystemInfo {
   workingDirectory: string;
 }
 
-// ─── WebSocket Protocol Messages (mirrors apps/device-gateway/src/types.ts) ───
+// ─── WebSocket Protocol Messages (mirrors the device-gateway service's types) ───
 
 // Client → Server
 export interface AuthMessage {
