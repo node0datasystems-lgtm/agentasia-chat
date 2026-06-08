@@ -28,6 +28,37 @@ import { createLogger } from '@/utils/logger';
 
 import { ControllerModule, IpcMethod } from './index';
 
+/**
+ * Local mirror of `@lobechat/types`' `DeviceGitInfo` — the desktop tsconfig only
+ * sees a stub of `@lobechat/types` that doesn't include it, so inline the shape
+ * (same pattern as `BuiltinServerRuntimeOutput` in GatewayConnectionCtr). Keep in
+ * sync with the canonical type in `packages/types/src/agentExecution/index.ts`.
+ */
+interface DeviceGitInfo {
+  aheadBehind: {
+    ahead: number;
+    behind: number;
+    hasUpstream: boolean;
+    pushTarget?: string;
+    pushTargetExists?: boolean;
+    upstream?: string;
+  };
+  info: {
+    branch?: string;
+    detached?: boolean;
+    extraCount?: number;
+    ghMissing?: boolean;
+    pullRequest?: { number: number; state: string; title: string; url: string } | null;
+  };
+  workingStatus: {
+    added: number;
+    clean: boolean;
+    deleted: number;
+    modified: number;
+    total: number;
+  };
+}
+
 const logger = createLogger('controllers:GitCtr');
 
 interface DirtyEntry {
@@ -467,6 +498,37 @@ export default class GitController extends ControllerModule {
     } catch {
       return {};
     }
+  }
+
+  /**
+   * Aggregate git status for a working directory into one payload, served over
+   * the device RPC so a remote device (or web client) can render branch / file
+   * changes / PR. Mirrors the renderer's `useGitInfo` + `useWorkingTreeStatus` +
+   * `useGitAheadBehind`. Returns empty-ish data for a non-git directory.
+   */
+  async gitInfo(params: { isGithub?: boolean; scope: string }): Promise<DeviceGitInfo> {
+    const dirPath = params.scope;
+    const { branch, detached } = await this.getGitBranch(dirPath);
+
+    let info: DeviceGitInfo['info'] = { branch, detached };
+    // PR lookup only for a real branch on a GitHub remote (mirrors useGitInfo).
+    if (branch && !detached && params.isGithub) {
+      const pr = await this.getLinkedPullRequest({ branch, path: dirPath });
+      info = {
+        branch,
+        detached,
+        extraCount: pr.extraCount,
+        ghMissing: pr.status === 'gh-missing',
+        pullRequest: pr.pullRequest,
+      };
+    }
+
+    const [workingStatus, aheadBehind] = await Promise.all([
+      this.getGitWorkingTreeStatus(dirPath),
+      this.getGitAheadBehind(dirPath),
+    ]);
+
+    return { aheadBehind, info, workingStatus };
   }
 
   /**

@@ -7,6 +7,7 @@ import { resolveTargetDeviceId } from '@/helpers/agentWorkingDirectory';
 import { useEffectiveWorkingDirectory } from '@/hooks/useEffectiveWorkingDirectory';
 import { useAgentStore } from '@/store/agent';
 import { agentByIdSelectors } from '@/store/agent/selectors';
+import { deviceSelectors, useDeviceStore } from '@/store/device';
 import { useElectronStore } from '@/store/electron';
 
 import GitStatus from './GitStatus';
@@ -19,9 +20,9 @@ interface WorkingDirectorySectionProps {
 
 /**
  * Working directory + git status, shared by the agent runtime bars. The unified
- * picker handles local and remote targets alike; git status is only shown when
- * the cwd lives on this machine (a remote device's git state isn't readable here
- * yet — that's the git-over-RPC follow-up).
+ * picker handles local and remote targets alike; git status shows for both — the
+ * local machine probes its own filesystem, a remote device answers over RPC
+ * (read-only) via GitStatus's `deviceId`.
  */
 const WorkingDirectorySection = memo<WorkingDirectorySectionProps>(({ agentId }) => {
   const agencyConfig = useAgentStore(agentByIdSelectors.getAgencyConfigById(agentId));
@@ -30,14 +31,23 @@ const WorkingDirectorySection = memo<WorkingDirectorySectionProps>(({ agentId })
   const isLocalDevice = isDesktop && !!targetDeviceId && targetDeviceId === currentDeviceId;
 
   const effectiveWorkingDirectory = useEffectiveWorkingDirectory(agentId);
-  // Only probe git on this machine — `useRepoType` reads the local filesystem.
-  const repoType = useRepoType(isLocalDevice ? effectiveWorkingDirectory : undefined);
+
+  // Local machine probes the filesystem for repoType; a remote device's repoType
+  // comes from the cached `workingDirs` entry (we can't probe a remote fs here).
+  const localRepoType = useRepoType(isLocalDevice ? effectiveWorkingDirectory : undefined);
+  const remoteDirs = useDeviceStore(deviceSelectors.getDeviceWorkingDirs(targetDeviceId));
+  const remoteRepoType = remoteDirs.find((d) => d.path === effectiveWorkingDirectory)?.repoType;
+  const repoType = isLocalDevice ? localRepoType : remoteRepoType;
 
   return (
     <>
       <WorkingDirectoryPicker agentId={agentId} />
-      {isLocalDevice && effectiveWorkingDirectory && repoType && (
-        <GitStatus isGithub={repoType === 'github'} path={effectiveWorkingDirectory} />
+      {effectiveWorkingDirectory && repoType && (
+        <GitStatus
+          deviceId={isLocalDevice ? undefined : targetDeviceId}
+          isGithub={repoType === 'github'}
+          path={effectiveWorkingDirectory}
+        />
       )}
     </>
   );
