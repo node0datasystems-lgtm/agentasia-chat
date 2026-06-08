@@ -16,7 +16,7 @@ import { useAgentStore } from '@/store/agent';
 import { agentByIdSelectors } from '@/store/agent/selectors';
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
-import { deviceSelectors, useDeviceStore } from '@/store/device';
+import { deviceSelectors, useDeviceStore, useMigrateDeviceRecents } from '@/store/device';
 import { useElectronStore } from '@/store/electron';
 
 import { renderDirIcon } from './dirIcon';
@@ -160,6 +160,8 @@ const WorkingDirectoryPicker = memo<WorkingDirectoryPickerProps>(({ agentId }) =
 
   // Populate the device store (SWR dedupes across callers).
   useDeviceStore((s) => s.useFetchDevices)();
+  // One-time fold of legacy localStorage recents into device.workingDirs.
+  useMigrateDeviceRecents();
 
   const agencyConfig = useAgentStore(agentByIdSelectors.getAgencyConfigById(agentId));
   const currentDeviceId = useElectronStore((s) => s.gatewayDeviceInfo?.deviceId);

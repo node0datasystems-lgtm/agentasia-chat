@@ -3,8 +3,10 @@ import { type SWRResponse } from 'swr';
 import {
   nextWorkingDirs,
   removeWorkingDir,
+  WORKING_DIRS_MAX,
   type WorkingDirEntry,
 } from '@/features/ChatInput/RuntimeConfig/deviceCwd';
+import { getRecentDirs, RECENT_DIRS_KEY } from '@/features/ChatInput/RuntimeConfig/recentDirs';
 import { mutate, useClientDataSWR } from '@/libs/swr';
 import { lambdaClient } from '@/libs/trpc/client';
 import { type StoreSetter } from '@/store/types';
@@ -69,6 +71,43 @@ export class DeviceActionImpl {
       });
     } finally {
       // Re-fetch the truth (self-corrects a failed optimistic write).
+      await mutate(FETCH_DEVICES_KEY);
+    }
+  };
+
+  /**
+   * One-time migration of the legacy localStorage recent dirs into the current
+   * machine's `device.workingDirs` (the unified recent source). Existing device
+   * entries win on conflict; localStorage is cleared only after a successful
+   * persist, so a failed run retries next time. No-op once localStorage is empty.
+   */
+  migrateLocalRecentsToDevice = async (deviceId: string): Promise<void> => {
+    const legacy = getRecentDirs();
+    if (legacy.length === 0) return;
+
+    const device = this.#get().devices.find((d) => d.deviceId === deviceId);
+    const existing = device?.workingDirs ?? [];
+    const existingPaths = new Set(existing.map((d) => d.path));
+    const merged = [...existing, ...legacy.filter((d) => !existingPaths.has(d.path))].slice(
+      0,
+      WORKING_DIRS_MAX,
+    );
+
+    this.#set(
+      {
+        devices: this.#get().devices.map((d) =>
+          d.deviceId === deviceId ? { ...d, workingDirs: merged } : d,
+        ) as DeviceListItem[],
+      },
+      false,
+      'migrateLocalRecents',
+    );
+
+    try {
+      await lambdaClient.device.updateDevice.mutate({ deviceId, workingDirs: merged });
+      // Clear only after the server accepted the merge (failure → retry next load).
+      localStorage.removeItem(RECENT_DIRS_KEY);
+    } finally {
       await mutate(FETCH_DEVICES_KEY);
     }
   };
