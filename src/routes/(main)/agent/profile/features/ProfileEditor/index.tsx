@@ -15,6 +15,7 @@ import { agentSelectors } from '@/store/agent/selectors';
 import AgentSettings from '../AgentSettings';
 import EditorCanvas from '../EditorCanvas';
 import AgentHeader from './AgentHeader';
+import AgentOperationStats from './AgentOperationStats';
 import AgentTool from './AgentTool';
 import CloudHeterogeneousConfig from './CloudHeterogeneousConfig';
 import HeterogeneousAgentStatusCard from './HeterogeneousAgentStatusCard';
@@ -53,6 +54,11 @@ const ProfileEditor = memo(() => {
     isHeterogeneous &&
     !!heterogeneousProvider &&
     isRemoteHeterogeneousType(heterogeneousProvider.type);
+  const operationStatsTab = {
+    key: 'usage',
+    label: t('heterogeneousStatus.usage.tabLabel'),
+    children: <AgentOperationStats />,
+  };
 
   return (
     <>
@@ -65,13 +71,24 @@ const ProfileEditor = memo(() => {
         {/* Header: Avatar + Name + Description */}
         <AgentHeader />
         {isRemoteHetero && heterogeneousProvider ? (
-          // Remote platform agents (openclaw / hermes): show device config panel
-          <Flexbox paddingBlock={'8px 0'}>
-            <RemoteAgentConfigCard
-              provider={heterogeneousProvider}
-              onBoundDeviceChange={updateBoundDeviceId}
-            />
-          </Flexbox>
+          // Remote platform agents (openclaw / hermes): show device config and operation stats.
+          <Tabs
+            defaultActiveKey="connection"
+            size="small"
+            items={[
+              {
+                key: 'connection',
+                label: t('platformAgentConfig.title'),
+                children: (
+                  <RemoteAgentConfigCard
+                    provider={heterogeneousProvider}
+                    onBoundDeviceChange={updateBoundDeviceId}
+                  />
+                ),
+              },
+              operationStatsTab,
+            ]}
+          />
         ) : isHeterogeneous && heterogeneousProvider ? (
           // Local CLI agents (claude-code, codex): tabs for cloud (web) and desktop environments
           <Tabs
@@ -99,6 +116,7 @@ const ProfileEditor = memo(() => {
                   />
                 ),
               },
+              operationStatsTab,
             ]}
           />
         ) : (

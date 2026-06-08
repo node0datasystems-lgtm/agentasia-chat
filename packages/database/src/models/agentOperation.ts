@@ -1,5 +1,5 @@
 import type { VerifyCheckItem } from '@lobechat/types';
-import { and, eq, gte, isNotNull, isNull, sql } from 'drizzle-orm';
+import { and, desc, eq, gte, isNotNull, isNull, sql } from 'drizzle-orm';
 
 import { today } from '@/utils/time';
 
@@ -75,6 +75,66 @@ export interface RecordOperationCompletionParams {
   totalTokens?: number | null;
   traceS3Key?: string | null;
   usage?: Record<string, unknown> | null;
+}
+
+export interface AgentOperationProfileStatsParams {
+  agentId: string;
+  days?: number;
+  recentLimit?: number;
+}
+
+export interface AgentOperationDailyStats {
+  date: string;
+  llmCalls: number;
+  operationCount: number;
+  processingTimeMs: number;
+  toolCalls: number;
+  totalCost: number;
+  totalInputTokens: number;
+  totalOutputTokens: number;
+  totalTokens: number;
+}
+
+export interface AgentOperationRecentItem {
+  completedAt: Date | null;
+  completionReason: string | null;
+  createdAt: Date;
+  errorMessage?: string;
+  id: string;
+  llmCalls: number;
+  model: string | null;
+  processingTimeMs: number;
+  provider: string | null;
+  startedAt: Date | null;
+  status: string;
+  stepCount: number;
+  toolCalls: number;
+  totalCost: number;
+  totalInputTokens: number;
+  totalOutputTokens: number;
+  totalTokens: number;
+  trigger: string | null;
+}
+
+export interface AgentOperationProfileStats {
+  daily: AgentOperationDailyStats[];
+  recentOperations: AgentOperationRecentItem[];
+  summary: {
+    averageDurationMs: number;
+    averageStepCount: number;
+    completedOperations: number;
+    failedOperations: number;
+    interruptedOperations: number;
+    llmCalls: number;
+    operationCount: number;
+    successRate: number;
+    toolCalls: number;
+    totalCost: number;
+    totalDurationMs: number;
+    totalInputTokens: number;
+    totalOutputTokens: number;
+    totalTokens: number;
+  };
 }
 
 export class AgentOperationModel {
@@ -161,6 +221,173 @@ export class AgentOperationModel {
       .where(and(eq(agentOperations.id, operationId), eq(agentOperations.userId, this.userId)))
       .limit(1);
     return row ?? null;
+  }
+
+  async getProfileStats({
+    agentId,
+    days = 30,
+    recentLimit = 8,
+  }: AgentOperationProfileStatsParams): Promise<AgentOperationProfileStats> {
+    const safeDays = Math.min(Math.max(Math.trunc(days) || 30, 1), 90);
+    const safeRecentLimit = Math.min(Math.max(Math.trunc(recentLimit) || 8, 1), 20);
+    const startDate = today()
+      .subtract(safeDays - 1, 'day')
+      .startOf('day')
+      .toDate();
+
+    const where = and(
+      eq(agentOperations.userId, this.userId),
+      eq(agentOperations.agentId, agentId),
+      gte(agentOperations.createdAt, startDate),
+    );
+
+    const [summaryRow] = await this.db
+      .select({
+        averageDurationMs:
+          sql<number>`COALESCE(AVG(${agentOperations.processingTimeMs}), 0)`.mapWith(Number),
+        averageStepCount: sql<number>`COALESCE(AVG(${agentOperations.stepCount}), 0)`.mapWith(
+          Number,
+        ),
+        completedOperations:
+          sql<number>`COUNT(*) FILTER (WHERE ${agentOperations.status} = 'done')::int`.mapWith(
+            Number,
+          ),
+        failedOperations:
+          sql<number>`COUNT(*) FILTER (WHERE ${agentOperations.status} = 'error')::int`.mapWith(
+            Number,
+          ),
+        interruptedOperations:
+          sql<number>`COUNT(*) FILTER (WHERE ${agentOperations.status} = 'interrupted')::int`.mapWith(
+            Number,
+          ),
+        llmCalls: sql<number>`COALESCE(SUM(${agentOperations.llmCalls}), 0)`.mapWith(Number),
+        operationCount: sql<number>`COUNT(*)::int`.mapWith(Number),
+        toolCalls: sql<number>`COALESCE(SUM(${agentOperations.toolCalls}), 0)`.mapWith(Number),
+        totalCost: sql<number>`COALESCE(SUM(${agentOperations.totalCost}), 0)`.mapWith(Number),
+        totalDurationMs: sql<number>`COALESCE(SUM(${agentOperations.processingTimeMs}), 0)`.mapWith(
+          Number,
+        ),
+        totalInputTokens:
+          sql<number>`COALESCE(SUM(${agentOperations.totalInputTokens}), 0)`.mapWith(Number),
+        totalOutputTokens:
+          sql<number>`COALESCE(SUM(${agentOperations.totalOutputTokens}), 0)`.mapWith(Number),
+        totalTokens: sql<number>`COALESCE(SUM(${agentOperations.totalTokens}), 0)`.mapWith(Number),
+      })
+      .from(agentOperations)
+      .where(where);
+
+    const dayExpr = sql<string>`to_char(${agentOperations.createdAt}, 'YYYY-MM-DD')`;
+    const dailyRows = await this.db
+      .select({
+        date: dayExpr,
+        llmCalls: sql<number>`COALESCE(SUM(${agentOperations.llmCalls}), 0)`.mapWith(Number),
+        operationCount: sql<number>`COUNT(*)::int`.mapWith(Number),
+        processingTimeMs:
+          sql<number>`COALESCE(SUM(${agentOperations.processingTimeMs}), 0)`.mapWith(Number),
+        toolCalls: sql<number>`COALESCE(SUM(${agentOperations.toolCalls}), 0)`.mapWith(Number),
+        totalCost: sql<number>`COALESCE(SUM(${agentOperations.totalCost}), 0)`.mapWith(Number),
+        totalInputTokens:
+          sql<number>`COALESCE(SUM(${agentOperations.totalInputTokens}), 0)`.mapWith(Number),
+        totalOutputTokens:
+          sql<number>`COALESCE(SUM(${agentOperations.totalOutputTokens}), 0)`.mapWith(Number),
+        totalTokens: sql<number>`COALESCE(SUM(${agentOperations.totalTokens}), 0)`.mapWith(Number),
+      })
+      .from(agentOperations)
+      .where(where)
+      .groupBy(dayExpr)
+      .orderBy(dayExpr);
+
+    const recentRows = await this.db
+      .select({
+        completedAt: agentOperations.completedAt,
+        completionReason: agentOperations.completionReason,
+        createdAt: agentOperations.createdAt,
+        error: agentOperations.error,
+        id: agentOperations.id,
+        llmCalls: agentOperations.llmCalls,
+        model: agentOperations.model,
+        processingTimeMs: agentOperations.processingTimeMs,
+        provider: agentOperations.provider,
+        startedAt: agentOperations.startedAt,
+        status: agentOperations.status,
+        stepCount: agentOperations.stepCount,
+        toolCalls: agentOperations.toolCalls,
+        totalCost: agentOperations.totalCost,
+        totalInputTokens: agentOperations.totalInputTokens,
+        totalOutputTokens: agentOperations.totalOutputTokens,
+        totalTokens: agentOperations.totalTokens,
+        trigger: agentOperations.trigger,
+      })
+      .from(agentOperations)
+      .where(where)
+      .orderBy(desc(agentOperations.createdAt))
+      .limit(safeRecentLimit);
+
+    const dailyByDate = new Map(dailyRows.map((row) => [row.date, row]));
+    const daily = Array.from({ length: safeDays }, (_, index) => {
+      const date = today()
+        .subtract(safeDays - 1 - index, 'day')
+        .format('YYYY-MM-DD');
+      const row = dailyByDate.get(date);
+
+      return {
+        date,
+        llmCalls: Number(row?.llmCalls ?? 0),
+        operationCount: Number(row?.operationCount ?? 0),
+        processingTimeMs: Number(row?.processingTimeMs ?? 0),
+        toolCalls: Number(row?.toolCalls ?? 0),
+        totalCost: Number(row?.totalCost ?? 0),
+        totalInputTokens: Number(row?.totalInputTokens ?? 0),
+        totalOutputTokens: Number(row?.totalOutputTokens ?? 0),
+        totalTokens: Number(row?.totalTokens ?? 0),
+      };
+    });
+
+    const operationCount = Number(summaryRow?.operationCount ?? 0);
+    const completedOperations = Number(summaryRow?.completedOperations ?? 0);
+
+    return {
+      daily,
+      recentOperations: recentRows.map((row) => ({
+        completedAt: row.completedAt,
+        completionReason: row.completionReason,
+        createdAt: row.createdAt,
+        errorMessage:
+          typeof row.error?.message === 'string' && row.error.message.trim()
+            ? row.error.message
+            : undefined,
+        id: row.id,
+        llmCalls: Number(row.llmCalls ?? 0),
+        model: row.model,
+        processingTimeMs: Number(row.processingTimeMs ?? 0),
+        provider: row.provider,
+        startedAt: row.startedAt,
+        status: row.status,
+        stepCount: Number(row.stepCount ?? 0),
+        toolCalls: Number(row.toolCalls ?? 0),
+        totalCost: Number(row.totalCost ?? 0),
+        totalInputTokens: Number(row.totalInputTokens ?? 0),
+        totalOutputTokens: Number(row.totalOutputTokens ?? 0),
+        totalTokens: Number(row.totalTokens ?? 0),
+        trigger: row.trigger,
+      })),
+      summary: {
+        averageDurationMs: Number(summaryRow?.averageDurationMs ?? 0),
+        averageStepCount: Number(summaryRow?.averageStepCount ?? 0),
+        completedOperations,
+        failedOperations: Number(summaryRow?.failedOperations ?? 0),
+        interruptedOperations: Number(summaryRow?.interruptedOperations ?? 0),
+        llmCalls: Number(summaryRow?.llmCalls ?? 0),
+        operationCount,
+        successRate: operationCount > 0 ? completedOperations / operationCount : 0,
+        toolCalls: Number(summaryRow?.toolCalls ?? 0),
+        totalCost: Number(summaryRow?.totalCost ?? 0),
+        totalDurationMs: Number(summaryRow?.totalDurationMs ?? 0),
+        totalInputTokens: Number(summaryRow?.totalInputTokens ?? 0),
+        totalOutputTokens: Number(summaryRow?.totalOutputTokens ?? 0),
+        totalTokens: Number(summaryRow?.totalTokens ?? 0),
+      },
+    };
   }
 
   /**

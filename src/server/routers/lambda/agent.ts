@@ -4,6 +4,7 @@ import { KnowledgeType } from '@lobechat/types';
 import { z } from 'zod';
 
 import { AgentModel } from '@/database/models/agent';
+import { AgentOperationModel } from '@/database/models/agentOperation';
 import { ChatGroupModel } from '@/database/models/chatGroup';
 import { FileModel } from '@/database/models/file';
 import { KnowledgeBaseModel } from '@/database/models/knowledgeBase';
@@ -19,6 +20,7 @@ const agentProcedure = authedProcedure.use(serverDatabase).use(async (opts) => {
   return opts.next({
     ctx: {
       agentModel: new AgentModel(ctx.serverDB, ctx.userId),
+      agentOperationModel: new AgentOperationModel(ctx.serverDB, ctx.userId),
       agentService: new AgentService(ctx.serverDB, ctx.userId),
       chatGroupModel: new ChatGroupModel(ctx.serverDB, ctx.userId),
       fileModel: new FileModel(ctx.serverDB, ctx.userId),
@@ -274,6 +276,20 @@ export const agentRouter = router({
           type: KnowledgeType.KnowledgeBase,
         })),
       ];
+    }),
+
+  getOperationStats: agentProcedure
+    .input(
+      z.object({
+        agentId: z.string(),
+        days: z.number().min(1).max(90).optional(),
+      }),
+    )
+    .query(async ({ input, ctx }) => {
+      return ctx.agentOperationModel.getProfileStats({
+        agentId: input.agentId,
+        days: input.days,
+      });
     }),
 
   /**

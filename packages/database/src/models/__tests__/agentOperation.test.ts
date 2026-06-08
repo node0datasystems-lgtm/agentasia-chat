@@ -3,7 +3,7 @@ import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../core/getTestDB';
-import { agentOperations, users } from '../../schemas';
+import { agentOperations, agents, users } from '../../schemas';
 import type { LobeChatDatabase } from '../../type';
 import { AgentOperationModel } from '../agentOperation';
 
@@ -266,6 +266,134 @@ describe('AgentOperationModel', () => {
 
       const result = await model.getMaxDurationSeconds();
       expect(result).toBe(0);
+    });
+  });
+
+  describe('getProfileStats', () => {
+    it('aggregates recent operations for one agent and pads daily buckets', async () => {
+      const model = new AgentOperationModel(serverDB, userId);
+      const agentId = 'agent-operation-stats-agent';
+      const otherAgentId = 'agent-operation-stats-other-agent';
+      const now = new Date();
+      const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+      const oldDate = new Date(now.getTime() - 40 * 24 * 60 * 60 * 1000);
+
+      await serverDB.insert(agents).values([
+        { id: agentId, title: 'Stats agent', userId },
+        { id: otherAgentId, title: 'Other agent', userId },
+        {
+          id: 'agent-operation-stats-cross-user-agent',
+          title: 'Cross user agent',
+          userId: otherUserId,
+        },
+      ]);
+
+      await serverDB.insert(agentOperations).values([
+        {
+          agentId,
+          completedAt: now,
+          completionReason: 'done',
+          createdAt: now,
+          id: 'op-stats-today',
+          llmCalls: 2,
+          processingTimeMs: 1000,
+          startedAt: now,
+          status: 'done',
+          stepCount: 4,
+          toolCalls: 3,
+          totalCost: 0.2,
+          totalInputTokens: 60,
+          totalOutputTokens: 40,
+          totalTokens: 100,
+          userId,
+        },
+        {
+          agentId,
+          completedAt: yesterday,
+          completionReason: 'done',
+          createdAt: yesterday,
+          id: 'op-stats-yesterday',
+          llmCalls: 3,
+          processingTimeMs: 3000,
+          startedAt: yesterday,
+          status: 'done',
+          stepCount: 6,
+          toolCalls: 1,
+          totalCost: 0.3,
+          totalInputTokens: 100,
+          totalOutputTokens: 100,
+          totalTokens: 200,
+          userId,
+        },
+        {
+          agentId,
+          completedAt: now,
+          completionReason: 'error',
+          createdAt: now,
+          error: { message: 'failed run' },
+          id: 'op-stats-error',
+          processingTimeMs: 200,
+          startedAt: now,
+          status: 'error',
+          userId,
+        },
+        {
+          agentId: otherAgentId,
+          completedAt: now,
+          createdAt: now,
+          id: 'op-stats-other-agent',
+          status: 'done',
+          totalCost: 9,
+          totalTokens: 9000,
+          userId,
+        },
+        {
+          agentId,
+          completedAt: oldDate,
+          createdAt: oldDate,
+          id: 'op-stats-old',
+          status: 'done',
+          totalCost: 7,
+          totalTokens: 7000,
+          userId,
+        },
+        {
+          agentId,
+          completedAt: now,
+          createdAt: now,
+          id: 'op-stats-other-user',
+          status: 'done',
+          totalCost: 8,
+          totalTokens: 8000,
+          userId: otherUserId,
+        },
+      ]);
+
+      const result = await model.getProfileStats({ agentId, days: 3, recentLimit: 2 });
+
+      expect(result.summary).toMatchObject({
+        completedOperations: 2,
+        failedOperations: 1,
+        interruptedOperations: 0,
+        llmCalls: 5,
+        operationCount: 3,
+        toolCalls: 4,
+        totalInputTokens: 160,
+        totalOutputTokens: 140,
+        totalTokens: 300,
+      });
+      expect(result.summary.totalCost).toBeCloseTo(0.5, 6);
+      expect(result.summary.totalDurationMs).toBe(4200);
+      expect(result.summary.successRate).toBeCloseTo(2 / 3, 6);
+
+      expect(result.daily).toHaveLength(3);
+      expect(result.daily.reduce((sum, item) => sum + item.operationCount, 0)).toBe(3);
+      expect(result.daily.reduce((sum, item) => sum + item.totalTokens, 0)).toBe(300);
+      expect(result.recentOperations).toHaveLength(2);
+      expect(result.recentOperations.map((item) => item.id)).toContain('op-stats-error');
+      expect(
+        result.recentOperations.find((item) => item.id === 'op-stats-error')?.errorMessage,
+      ).toBe('failed run');
     });
   });
 });
