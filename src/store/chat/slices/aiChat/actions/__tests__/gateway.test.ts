@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import type * as ConstVersion from '@/const/version';
 import { aiAgentService } from '@/services/aiAgent';
+import { topicService } from '@/services/topic';
 
 import type { GatewayConnection } from '../gateway';
 import { GatewayActionImpl } from '../gateway';
@@ -118,6 +119,7 @@ function createTestAction() {
 describe('GatewayActionImpl', () => {
   afterEach(() => {
     vi.restoreAllMocks();
+    delete (globalThis as any).window;
   });
 
   describe('connectToGateway', () => {
@@ -409,6 +411,98 @@ describe('GatewayActionImpl', () => {
     it('should return undefined for unknown operationId', () => {
       const { action } = createTestAction();
       expect(action.getGatewayConnectionStatus('nonexistent')).toBeUndefined();
+    });
+  });
+
+  describe('reconnectToGatewayOperation', () => {
+    it('marks the topic running while reconnecting an existing server operation', async () => {
+      const associateMessageWithOperation = vi.fn();
+      const completeOperation = vi.fn();
+      const connectToGateway = vi.fn();
+      const internal_updateTopicLoading = vi.fn();
+      const onOperationCancel = vi.fn();
+      const startOperation = vi.fn(() => ({ operationId: 'gw-op-local' }));
+      const updateTopicStatus = vi.fn();
+
+      const state: Record<string, any> = {
+        activeAgentId: 'agent-1',
+        activeGroupId: null,
+        gatewayConnections: {},
+        topicDataMap: {},
+      };
+      const set = vi.fn((updater: any) => {
+        if (typeof updater === 'function') Object.assign(state, updater(state));
+        else Object.assign(state, updater);
+      });
+      const get = vi.fn(() => ({
+        ...state,
+        associateMessageWithOperation,
+        completeOperation,
+        connectToGateway,
+        internal_updateTopicLoading,
+        onOperationCancel,
+        startOperation,
+        updateTopicStatus,
+      })) as any;
+
+      (globalThis as any).window = {
+        global_serverConfigStore: {
+          getState: () => ({ serverConfig: { agentGatewayUrl: 'https://gateway.test.com' } }),
+        },
+      };
+
+      vi.mocked(aiAgentService.refreshGatewayToken).mockResolvedValue({ token: 'fresh-token' });
+      vi.mocked(topicService.updateTopicMetadata).mockResolvedValue(undefined);
+
+      const action = new GatewayActionImpl(set as any, get, undefined);
+
+      await action.reconnectToGatewayOperation({
+        agentId: 'agent-from-context',
+        assistantMessageId: 'ast-1',
+        groupId: 'group-1',
+        operationId: 'server-op-1',
+        topicId: 'topic-1',
+      });
+
+      expect(startOperation).toHaveBeenCalledWith(
+        expect.objectContaining({
+          context: expect.objectContaining({
+            agentId: 'agent-from-context',
+            groupId: 'group-1',
+            topicId: 'topic-1',
+          }),
+          metadata: { serverOperationId: 'server-op-1' },
+          type: 'execServerAgentRuntime',
+        }),
+      );
+      expect(associateMessageWithOperation).toHaveBeenCalledWith('ast-1', 'gw-op-local');
+      expect(internal_updateTopicLoading).toHaveBeenCalledWith('topic-1', true);
+      expect(updateTopicStatus).toHaveBeenCalledWith({
+        agentId: 'agent-from-context',
+        groupId: 'group-1',
+        status: 'running',
+        topicId: 'topic-1',
+      });
+      expect(connectToGateway).toHaveBeenCalledWith(
+        expect.objectContaining({
+          operationId: 'server-op-1',
+          resumeOnConnect: true,
+          token: 'fresh-token',
+          topicId: 'topic-1',
+        }),
+      );
+
+      const [{ onSessionComplete }] = connectToGateway.mock.calls[0];
+      onSessionComplete();
+
+      expect(completeOperation).toHaveBeenCalledWith('gw-op-local');
+      expect(internal_updateTopicLoading).toHaveBeenLastCalledWith('topic-1', false);
+      expect(updateTopicStatus).toHaveBeenLastCalledWith({
+        agentId: 'agent-from-context',
+        groupId: 'group-1',
+        status: 'active',
+        topicId: 'topic-1',
+      });
     });
   });
 

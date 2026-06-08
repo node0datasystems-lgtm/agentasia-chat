@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import NeuralNetworkLoading from '@/components/NeuralNetworkLoading';
 import { useChatStore } from '@/store/chat';
 
+import { hasActiveRuntimeOperationForMessage } from './activeOperation';
 import { MAX_PROGRESS, PROGRESS_INCREMENT, PROGRESS_INTERVAL } from './constants';
 import { formatElapsedTime, formatToolName } from './utils';
 
@@ -111,13 +112,8 @@ const ProcessingState = memo<ProcessingStateProps>(
       s.operations,
     ]);
 
-    // Check if exec_async_task is already polling for this message
-    const hasActiveOperationPolling = Object.values(operations).some(
-      (op) =>
-        op.status === 'running' &&
-        op.type === 'execAgentRuntime' &&
-        op.context?.messageId === messageId,
-    );
+    // Check if a live runtime operation is already responsible for this message.
+    const hasActiveOperationPolling = hasActiveRuntimeOperationForMessage(operations, messageId);
 
     // Enable polling only when no active operation is already polling
     // This handles the case when user refreshes page and exec_async_task is no longer running

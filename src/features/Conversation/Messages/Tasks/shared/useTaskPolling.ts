@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { useChatStore } from '@/store/chat';
 
+import { hasActiveRuntimeOperationForMessage } from './activeOperation';
 import { isProcessingStatus } from './utils';
 
 interface UseTaskPollingParams {
@@ -22,13 +23,8 @@ export const useTaskPolling = ({ messageId, threadId, status }: UseTaskPollingPa
     s.operations,
   ]);
 
-  // Check if exec_async_task is already polling for this message
-  const hasActiveOperationPolling = Object.values(operations).some(
-    (op) =>
-      op.status === 'running' &&
-      op.type === 'execAgentRuntime' &&
-      op.context?.messageId === messageId,
-  );
+  // Check if a live runtime operation is already responsible for this message.
+  const hasActiveOperationPolling = hasActiveRuntimeOperationForMessage(operations, messageId);
 
   // Enable polling when:
   // 1. Has threadId

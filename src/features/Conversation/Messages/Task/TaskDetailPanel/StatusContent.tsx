@@ -8,6 +8,7 @@ import { ThreadStatus } from '@/types/index';
 
 import {
   ErrorState,
+  hasActiveRuntimeOperationForMessage,
   InitializingState,
   isProcessingStatus,
   TaskMessages,
@@ -30,13 +31,8 @@ const StatusContent = memo<StatusContentProps>(({ taskDetail, messageId }) => {
     s.operations,
   ]);
 
-  // Check if exec_async_task is already polling for this message
-  const hasActiveOperationPolling = Object.values(operations).some(
-    (op) =>
-      op.status === 'running' &&
-      op.type === 'execAgentRuntime' &&
-      op.context?.messageId === messageId,
-  );
+  // Check if a live runtime operation is already responsible for this message.
+  const hasActiveOperationPolling = hasActiveRuntimeOperationForMessage(operations, messageId);
 
   // Enable polling when task has threadId and no active operation is polling
   // For completed tasks, this will fetch messages once (no refreshInterval needed)

@@ -10,6 +10,11 @@ interface RunningOperation {
   threadId?: string | null;
 }
 
+interface GatewayReconnectContext {
+  agentId?: string;
+  groupId?: string | null;
+}
+
 /**
  * Auto-reconnect to a running Gateway operation on the given topic.
  *
@@ -27,6 +32,7 @@ interface RunningOperation {
 export const useGatewayReconnect = (
   topicId: string | null | undefined,
   runningOperation: RunningOperation | null | undefined,
+  context?: GatewayReconnectContext,
 ) => {
   const agentGatewayUrl = useServerConfigStore((s) => s.serverConfig.agentGatewayUrl);
 
@@ -38,7 +44,9 @@ export const useGatewayReconnect = (
       if (!runningOperation || !topicId) return;
 
       await useChatStore.getState().reconnectToGatewayOperation({
+        agentId: context?.agentId,
         assistantMessageId: runningOperation.assistantMessageId,
+        groupId: context?.groupId,
         operationId: runningOperation.operationId,
         scope: runningOperation.scope,
         threadId: runningOperation.threadId,

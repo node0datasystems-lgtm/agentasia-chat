@@ -64,7 +64,7 @@ const TopicChatDrawerBody = memo<TopicChatDrawerBodyProps>(({ agentId, topicId }
   const runningOperation = useTaskStore(
     (s) => taskActivitySelectors.activeDrawerTopicActivity(s)?.runningOperation,
   );
-  useGatewayReconnect(topicId, runningOperation);
+  useGatewayReconnect(topicId, runningOperation, { agentId });
 
   const itemContent = useCallback(
     (index: number, id: string) => (

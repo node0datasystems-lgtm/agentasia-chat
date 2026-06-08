@@ -551,13 +551,23 @@ export class GatewayActionImpl {
    * and establishes a new WebSocket connection with event replay.
    */
   reconnectToGatewayOperation = async (params: {
+    agentId?: string;
     assistantMessageId: string;
+    groupId?: string | null;
     operationId: string;
     scope?: string;
     threadId?: string | null;
     topicId: string;
   }): Promise<void> => {
-    const { assistantMessageId, operationId, topicId, scope, threadId } = params;
+    const {
+      agentId: reconnectAgentId,
+      assistantMessageId,
+      groupId,
+      operationId,
+      scope,
+      threadId,
+      topicId,
+    } = params;
 
     const agentGatewayUrl =
       window.global_serverConfigStore?.getState()?.serverConfig?.agentGatewayUrl;
@@ -592,9 +602,10 @@ export class GatewayActionImpl {
       ?.runningOperation?.operationId;
     if (topicOpIdAfterRefresh && topicOpIdAfterRefresh !== operationId) return;
 
-    const agentId = this.#get().activeAgentId;
+    const agentId = reconnectAgentId ?? this.#get().activeAgentId;
     const context = {
       agentId,
+      groupId: groupId ?? undefined,
       scope: (scope ?? 'main') as ConversationContext['scope'],
       threadId: threadId ?? null,
       topicId,
@@ -609,6 +620,13 @@ export class GatewayActionImpl {
     });
 
     this.#get().associateMessageWithOperation(assistantMessageId, gatewayOpId);
+    this.#get().internal_updateTopicLoading(topicId, true);
+    void this.#get().updateTopicStatus?.({
+      agentId: context.agentId,
+      groupId: context.groupId,
+      status: 'running',
+      topicId,
+    });
 
     // Forward local-op cancellation to the server-side agent loop via tRPC.
     // See note in executeGatewayAgent for details.
@@ -635,6 +653,7 @@ export class GatewayActionImpl {
         this.#get().internal_updateTopicLoading(topicId, false);
         void this.#get().updateTopicStatus?.({
           agentId: context.agentId,
+          groupId: context.groupId,
           status: 'active',
           topicId,
         });

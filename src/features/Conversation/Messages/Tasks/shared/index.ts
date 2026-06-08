@@ -1,3 +1,4 @@
+export * from './activeOperation';
 export type { CompletedStateVariant } from './CompletedState';
 export { default as CompletedState, MetricItem } from './CompletedState';
 export * from './constants';
