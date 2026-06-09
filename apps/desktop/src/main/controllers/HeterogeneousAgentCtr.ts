@@ -7,6 +7,7 @@ import os from 'node:os';
 import path from 'node:path';
 import type { Readable, Writable } from 'node:stream';
 import { finished as streamFinished } from 'node:stream/promises';
+import { fileURLToPath } from 'node:url';
 
 import type { HeterogeneousAgentSessionError } from '@lobechat/electron-client-ipc';
 import {
@@ -18,7 +19,7 @@ import {
 } from '@lobechat/electron-client-ipc';
 import type { AskUserBridge } from '@lobechat/heterogeneous-agents/askUser';
 import { AskUserMcpServer } from '@lobechat/heterogeneous-agents/askUser';
-import type { AgentContentBlock } from '@lobechat/heterogeneous-agents/spawn';
+import type { AgentContentBlock, AgentImageSource } from '@lobechat/heterogeneous-agents/spawn';
 import {
   AgentStreamPipeline,
   buildAgentInput,
@@ -36,7 +37,9 @@ import type {
 } from '@/modules/heterogeneousAgent/types';
 import { buildProxyEnv } from '@/modules/networkProxy/envBuilder';
 import { detectHeterogeneousCliCommand } from '@/modules/toolDetectors';
+import FileService from '@/services/fileSrv';
 import { createLogger } from '@/utils/logger';
+import { netFetch } from '@/utils/net-fetch';
 
 import { ControllerModule, IpcMethod } from './index';
 
@@ -750,18 +753,64 @@ export default class HeterogeneousAgentCtr extends ControllerModule {
     return path.join(this.app.appStoragePath, FILE_CACHE_DIR);
   }
 
+  private get fileService() {
+    return this.app.getService(FileService);
+  }
+
+  private normalizeDesktopFileUrl(url: string): string | undefined {
+    if (!url.startsWith('desktop:/')) return;
+
+    return url.replace(/^desktop:\/+/, 'desktop://');
+  }
+
+  private async toImageSource(image: HeterogeneousAgentImageAttachment): Promise<AgentImageSource> {
+    const desktopFileUrl = this.normalizeDesktopFileUrl(image.url);
+    if (desktopFileUrl) {
+      return { path: await this.fileService.getFilePath(desktopFileUrl), type: 'path' };
+    }
+
+    try {
+      const parsedUrl = new URL(image.url);
+      if (parsedUrl.protocol === 'file:') {
+        return { path: fileURLToPath(parsedUrl), type: 'path' };
+      }
+    } catch {
+      // Non-URL strings fall through to the shared URL normalizer, which
+      // preserves the existing failure semantics for unsupported attachment URLs.
+    }
+
+    return { id: image.id, type: 'url', url: image.url };
+  }
+
   /**
    * Convert a desktop image attachment list into shared content blocks. Each
    * attachment's id is preserved as the cache key so repeated prompts hit the
    * same on-disk entries.
    */
-  private toImageContentBlocks(
+  private async toImageContentBlocks(
     imageList: HeterogeneousAgentImageAttachment[],
-  ): AgentContentBlock[] {
-    return imageList.map((image) => ({
-      source: { id: image.id, type: 'url', url: image.url },
-      type: 'image',
-    }));
+  ): Promise<AgentContentBlock[]> {
+    return Promise.all(
+      imageList.map(async (image) => ({
+        source: await this.toImageSource(image),
+        type: 'image' as const,
+      })),
+    );
+  }
+
+  private async normalizeAttachmentImage(
+    image: HeterogeneousAgentImageAttachment,
+    cacheDir: string,
+  ) {
+    return normalizeImage(await this.toImageSource(image), { cacheDir, fetcher: netFetch });
+  }
+
+  private async toMaterializedImagePath(
+    image: HeterogeneousAgentImageAttachment,
+    cacheDir: string,
+  ): Promise<string> {
+    const normalized = await this.normalizeAttachmentImage(image, cacheDir);
+    return materializeImageToPath(normalized, cacheDir);
   }
 
   /**
@@ -775,9 +824,12 @@ export default class HeterogeneousAgentCtr extends ControllerModule {
   ): Promise<string> {
     const blocks: AgentContentBlock[] = [];
     if (prompt && prompt.length > 0) blocks.push({ text: prompt, type: 'text' });
-    blocks.push(...this.toImageContentBlocks(imageList));
+    blocks.push(...(await this.toImageContentBlocks(imageList)));
 
-    const plan = await buildAgentInput('claude-code', blocks, { cacheDir: this.fileCacheDir });
+    const plan = await buildAgentInput('claude-code', blocks, {
+      cacheDir: this.fileCacheDir,
+      fetcher: netFetch,
+    });
     return plan.stdin;
   }
 
@@ -794,13 +846,7 @@ export default class HeterogeneousAgentCtr extends ControllerModule {
 
     const cacheDir = this.fileCacheDir;
     const results = await Promise.allSettled(
-      imageList.map(async (image) => {
-        const normalized = await normalizeImage(
-          { id: image.id, type: 'url', url: image.url },
-          { cacheDir },
-        );
-        return materializeImageToPath(normalized, cacheDir);
-      }),
+      imageList.map((image) => this.toMaterializedImagePath(image, cacheDir)),
     );
 
     const imagePaths: string[] = [];

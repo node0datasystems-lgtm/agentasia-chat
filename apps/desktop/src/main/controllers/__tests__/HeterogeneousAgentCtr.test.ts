@@ -1,5 +1,5 @@
 import { EventEmitter } from 'node:events';
-import { access, mkdtemp, readdir, readFile, rm, unlink, writeFile } from 'node:fs/promises';
+import { access, mkdir, mkdtemp, readdir, readFile, rm, unlink, writeFile } from 'node:fs/promises';
 import * as os from 'node:os';
 import path from 'node:path';
 import { PassThrough } from 'node:stream';
@@ -19,7 +19,10 @@ vi.mock('node:os', async () => {
 
 const FAKE_DESKTOP_PATH = '/Users/fake/Desktop';
 
-const { mockGetAllWindows } = vi.hoisted(() => ({
+const { mockElectronNetFetch, mockGetAllWindows } = vi.hoisted(() => ({
+  mockElectronNetFetch: vi.fn((input: RequestInfo | URL, init?: RequestInit) =>
+    fetch(input as RequestInfo, init),
+  ),
   mockGetAllWindows: vi.fn<() => any[]>(() => []),
 }));
 
@@ -32,6 +35,7 @@ vi.mock('electron', () => ({
     on: vi.fn(),
   },
   ipcMain: { handle: vi.fn() },
+  net: { fetch: mockElectronNetFetch },
 }));
 
 vi.mock('@/utils/logger', () => ({
@@ -116,11 +120,38 @@ const createFakeProc = ({
 const getFlagValues = (args: string[], flag: string) =>
   args.flatMap((arg, index) => (arg === flag ? [args[index + 1]] : []));
 
+const writeDesktopImageFixture = async (
+  storageRoot: string,
+  relativePath: string,
+  content: string,
+) => {
+  const filePath = path.join(storageRoot, 'file-storage', relativePath);
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await writeFile(filePath, content);
+
+  return {
+    desktopUrl: `desktop://${relativePath}`,
+    filePath,
+  };
+};
+
+const createFileServiceMock = (pathByDesktopUrl: Record<string, string>) => ({
+  getFilePath: vi.fn(async (desktopUrl: string) => {
+    const filePath = pathByDesktopUrl[desktopUrl];
+    if (!filePath) throw new Error(`Unexpected desktop file URL: ${desktopUrl}`);
+    return filePath;
+  }),
+});
+
 describe('HeterogeneousAgentCtr', () => {
   let appStoragePath: string;
 
   beforeEach(async () => {
     appStoragePath = await mkdtemp(path.join(os.tmpdir(), 'lobehub-hetero-'));
+    mockElectronNetFetch.mockReset();
+    mockElectronNetFetch.mockImplementation((input: RequestInfo | URL, init?: RequestInit) =>
+      fetch(input as RequestInfo, init),
+    );
   });
 
   afterEach(async () => {
@@ -220,6 +251,7 @@ describe('HeterogeneousAgentCtr', () => {
       sessionOverrides: Record<string, any> = {},
       stdoutLines: string[] = [],
       sendPromptOverrides: Partial<{ imageList: Array<{ id: string; url: string }> }> = {},
+      appOverrides: Record<string, any> = {},
     ) => {
       const { proc, writes } = createFakeProc({ stdoutLines });
       nextFakeProc = proc;
@@ -227,6 +259,7 @@ describe('HeterogeneousAgentCtr', () => {
       const ctr = new HeterogeneousAgentCtr({
         appStoragePath,
         storeManager: { get: vi.fn() },
+        ...appOverrides,
       } as any);
       const { sessionId } = await ctr.startSession({
         agentType: 'claude-code',
@@ -360,6 +393,60 @@ describe('HeterogeneousAgentCtr', () => {
       }
     });
 
+    it('resolves desktop:// image attachments through FileService for Claude Code input', async () => {
+      const { desktopUrl, filePath } = await writeDesktopImageFixture(
+        appStoragePath,
+        'chat/images/local.png',
+        'LOCAL_PNG',
+      );
+      const fileService = createFileServiceMock({ [desktopUrl]: filePath });
+
+      const { writes } = await runSendPrompt(
+        '',
+        {},
+        [],
+        { imageList: [{ id: 'desktop-image', url: desktopUrl }] },
+        { getService: vi.fn(() => fileService) },
+      );
+
+      expect(fileService.getFilePath).toHaveBeenCalledWith(desktopUrl);
+      const msg = JSON.parse(writes[0].trimEnd());
+      expect(msg.message.content).toEqual([
+        {
+          source: {
+            data: Buffer.from('LOCAL_PNG').toString('base64'),
+            media_type: 'image/png',
+            type: 'base64',
+          },
+          type: 'image',
+        },
+      ]);
+    });
+
+    it('downloads HTTP image attachments through Electron net.fetch for Claude Code input', async () => {
+      const remoteUrl = 'https://app.lobehub.com/f/file_remote';
+      mockElectronNetFetch.mockResolvedValueOnce(
+        new Response('REMOTE_PNG', { headers: { 'content-type': 'image/png' } }),
+      );
+
+      const { writes } = await runSendPrompt('', {}, [], {
+        imageList: [{ id: 'remote-image', url: remoteUrl }],
+      });
+
+      expect(mockElectronNetFetch).toHaveBeenCalledWith(remoteUrl, undefined);
+      const msg = JSON.parse(writes[0].trimEnd());
+      expect(msg.message.content).toEqual([
+        {
+          source: {
+            data: Buffer.from('REMOTE_PNG').toString('base64'),
+            media_type: 'image/png',
+            type: 'base64',
+          },
+          type: 'image',
+        },
+      ]);
+    });
+
     it('captures the Claude Code session id from stream-json init events', async () => {
       const { ctr, sessionId } = await runSendPrompt('hello', {}, [
         `${JSON.stringify({ session_id: 'sess_cc_123', subtype: 'init', type: 'system' })}\n`,
@@ -383,6 +470,7 @@ describe('HeterogeneousAgentCtr', () => {
       stdoutLines: string[] = [],
       sendPromptOverrides: Partial<{ imageList: Array<{ id: string; url: string }> }> = {},
       storeGet?: (key: string, defaultValue?: any) => any,
+      appOverrides: Record<string, any> = {},
     ) => {
       const { proc, writes } = createFakeProc({ stdoutLines });
       nextFakeProc = proc;
@@ -390,6 +478,7 @@ describe('HeterogeneousAgentCtr', () => {
       const ctr = new HeterogeneousAgentCtr({
         appStoragePath,
         storeManager: { get: storeGet ? vi.fn(storeGet) : vi.fn() },
+        ...appOverrides,
       } as any);
       const { sessionId } = await ctr.startSession({
         agentType: 'codex',
@@ -527,6 +616,49 @@ describe('HeterogeneousAgentCtr', () => {
         Promise.all(imagePaths.map((filePath) => readFile(filePath, 'utf8'))),
       ).resolves.toEqual(['PNG_TEST', 'JPEG_TEST']);
       expect(writes).toEqual(['describe these screenshots']);
+    });
+
+    it('passes desktop:// image attachments to Codex as resolved local paths', async () => {
+      const { desktopUrl, filePath } = await writeDesktopImageFixture(
+        appStoragePath,
+        'chat/images/codex-local.png',
+        'CODEX_LOCAL_PNG',
+      );
+      const fileService = createFileServiceMock({ [desktopUrl]: filePath });
+
+      const { cliArgs, writes } = await runSendPrompt(
+        'describe this screenshot',
+        {},
+        [],
+        { imageList: [{ id: 'desktop-image', url: desktopUrl }] },
+        undefined,
+        { getService: vi.fn(() => fileService) },
+      );
+
+      expect(fileService.getFilePath).toHaveBeenCalledWith(desktopUrl);
+      expect(getFlagValues(cliArgs, '--image')).toEqual([filePath]);
+      expect(writes).toEqual(['describe this screenshot']);
+    });
+
+    it('downloads HTTP image attachments through Electron net.fetch for Codex materialization', async () => {
+      const remoteUrl = 'https://app.lobehub.com/f/file_remote';
+      const pngBytes = Buffer.concat([
+        Buffer.from('89504e470d0a1a0a', 'hex'),
+        Buffer.from('REMOTE_PNG'),
+      ]);
+      mockElectronNetFetch.mockResolvedValueOnce(
+        new Response(pngBytes, { headers: { 'content-type': 'image/png' } }),
+      );
+
+      const { cliArgs, writes } = await runSendPrompt('describe this screenshot', {}, [], {
+        imageList: [{ id: 'remote-image', url: remoteUrl }],
+      });
+
+      expect(mockElectronNetFetch).toHaveBeenCalledWith(remoteUrl, undefined);
+      const [imagePath] = getFlagValues(cliArgs, '--image');
+      expect(imagePath).toMatch(/\.png$/);
+      await expect(readFile(imagePath)).resolves.toEqual(pngBytes);
+      expect(writes).toEqual(['describe this screenshot']);
     });
 
     it('normalizes parameterized image MIME types before choosing the CLI file extension', async () => {
