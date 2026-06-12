@@ -20,8 +20,19 @@ const mockArtifactState = vi.hoisted(() => ({
 }));
 
 vi.mock('@lobehub/ui', () => ({
-  Flexbox: ({ children, style }: { children: ReactNode; style?: CSSProperties }) => (
-    <div data-testid={style?.overflow === 'auto' ? 'artifact-scroll-container' : undefined}>
+  Flexbox: ({
+    children,
+    className,
+    style,
+  }: {
+    children: ReactNode;
+    className?: string;
+    style?: CSSProperties;
+  }) => (
+    <div
+      className={className}
+      data-testid={style?.overflow === 'auto' ? 'artifact-scroll-container' : undefined}
+    >
       {children}
     </div>
   ),
@@ -42,6 +53,23 @@ vi.mock('@lobehub/ui', () => ({
       {children}
     </pre>
   ),
+}));
+
+vi.mock('antd-style', () => ({
+  createStaticStyles: (
+    factory: (helpers: {
+      css: (strings: TemplateStringsArray, ...values: string[]) => string;
+      cssVar: Record<string, string>;
+    }) => Record<string, string>,
+  ) =>
+    factory({
+      css: (strings, ...values) =>
+        strings.reduce((result, string, index) => result + string + (values[index] || ''), ''),
+      cssVar: {
+        borderRadius: 'var(--lobe-border-radius)',
+        colorFillQuaternary: 'var(--lobe-color-fill-quaternary)',
+      },
+    }),
 }));
 
 vi.mock('@/store/chat', () => ({
@@ -99,6 +127,17 @@ describe('ArtifactsUI', () => {
     expect(screen.getByTestId('artifact-scroll-container')).toBeDefined();
     expect(screen.queryByTestId('artifact-preview')).toBeNull();
     expect(mockArtifactState.setState).not.toHaveBeenCalled();
+  });
+
+  it('extends the code surface background through the scroll container', () => {
+    render(<ArtifactsUI />);
+
+    const scrollContainer = screen.getByTestId('artifact-scroll-container');
+
+    expect(scrollContainer.className).toContain('background: var(--lobe-color-fill-quaternary)');
+    expect(scrollContainer.className).toContain('border-radius: var(--lobe-border-radius)');
+    expect(scrollContainer.className).toContain("[data-code-type='highlighter']");
+    expect(scrollContainer.className).toContain('background: transparent !important');
   });
 
   it('keeps streaming source animation enabled while the artifact tag is still open', () => {

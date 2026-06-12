@@ -10,10 +10,19 @@ import { ArtifactType } from '@/types/artifact';
 import Renderer from './Renderer';
 import { useArtifactCodeAutoScroll } from './useArtifactCodeAutoScroll';
 
-const styles = createStaticStyles(({ css }) => ({
+const styles = createStaticStyles(({ css, cssVar }) => ({
   codeScroll: css`
+    border-radius: ${cssVar.borderRadius};
+    background: ${cssVar.colorFillQuaternary};
+
+    [data-code-type='highlighter'] {
+      min-height: 100%;
+      background: transparent;
+    }
+
     pre.shiki {
       overflow: visible !important;
+      background: transparent !important;
     }
   `,
 }));
