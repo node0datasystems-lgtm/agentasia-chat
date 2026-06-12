@@ -111,7 +111,7 @@
     "test:e2e": "pnpm --filter @lobechat/e2e-tests test",
     "test:e2e:smoke": "pnpm --filter @lobechat/e2e-tests test:smoke",
     "test:update": "vitest -u",
-    "test-app": "vitest run",
+    "test-app": "vitest run --silent='passed-only'",
     "test-app:coverage": "vitest --coverage --silent='passed-only'",
     "tunnel:cloudflare": "cloudflared tunnel --url http://localhost:3010 --protocol http2",
     "tunnel:ngrok": "ngrok http http://localhost:3010",

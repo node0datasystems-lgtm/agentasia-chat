@@ -36,7 +36,7 @@
     "package:win": "npm run build:main && electron-builder --win --config electron-builder.mjs  --publish never",
     "start": "electron-vite preview",
     "stylelint": "stylelint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-    "test": "vitest --run",
+    "test": "vitest --run --silent='passed-only'",
     "type-check": "tsgo --noEmit -p tsconfig.json",
     "typecheck": "tsgo --noEmit -p tsconfig.json",
     "update-server": "sh scripts/update-test/run-test.sh"
