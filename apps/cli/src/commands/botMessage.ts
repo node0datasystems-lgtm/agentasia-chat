@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { basename, extname } from 'node:path';
+import path from 'node:path';
 
 import { DEFAULT_BOT_HISTORY_LIMIT } from '@lobechat/const';
 import type { Command } from 'commander';
@@ -35,7 +35,8 @@ const MIME_EXT_MAP: Record<string, string> = {
   '.webp': 'image/webp',
 };
 
-const inferMime = (path: string): string | undefined => MIME_EXT_MAP[extname(path).toLowerCase()];
+const inferMime = (filePath: string): string | undefined =>
+  MIME_EXT_MAP[path.extname(filePath).toLowerCase()];
 
 const inferAttachmentType = (mimeType?: string): AttachmentInput['type'] => {
   if (!mimeType) return 'file';
@@ -80,7 +81,7 @@ const parseAttachmentArg = async (raw: string): Promise<AttachmentInput> => {
     return {
       fetchUrl: raw,
       mimeType,
-      name: basename(pathname) || undefined,
+      name: path.basename(pathname) || undefined,
       type: inferAttachmentType(mimeType),
     };
   }
@@ -89,7 +90,7 @@ const parseAttachmentArg = async (raw: string): Promise<AttachmentInput> => {
   return {
     data: bytes.toString('base64'),
     mimeType,
-    name: basename(raw),
+    name: path.basename(raw),
     type: inferAttachmentType(mimeType),
   };
 };
@@ -224,8 +225,11 @@ export function registerBotMessageCommands(bot: Command) {
   // ── read ────────────────────────────────────────────────
 
   message
-    .command('read <botId>')
-    .description('Read messages from a channel')
+    .command('read <botIdOrAtKey>')
+    .description(
+      'Read messages from a channel. Pass a per-agent bot id, or "@<messenger-install-id>" ' +
+        'to read through a System Bot messenger installation (see `lh bot messengers list`).',
+    )
     .requiredOption('--target <channelId>', 'Target channel / conversation ID')
     .option('--limit <n>', 'Max messages to fetch', String(DEFAULT_BOT_HISTORY_LIMIT))
     .option('--before <messageId>', 'Read messages before this ID')
@@ -236,7 +240,7 @@ export function registerBotMessageCommands(bot: Command) {
     .option('--json', 'Output JSON')
     .action(
       async (
-        botId: string,
+        botIdOrAtKey: string,
         options: {
           after?: string;
           before?: string;
@@ -248,11 +252,12 @@ export function registerBotMessageCommands(bot: Command) {
           target: string;
         },
       ) => {
+        const target = resolveSendTargetArg(botIdOrAtKey);
         const client = await getTrpcClient();
         const result = await client.botMessage.readMessages.query({
+          ...target,
           after: options.after,
           before: options.before,
-          botId,
           channelId: options.target,
           cursor: options.cursor,
           endTime: options.endTime,
@@ -343,8 +348,11 @@ export function registerBotMessageCommands(bot: Command) {
   // ── search ──────────────────────────────────────────────
 
   message
-    .command('search <botId>')
-    .description('Search messages in a channel')
+    .command('search <botIdOrAtKey>')
+    .description(
+      'Search messages in a channel. Pass a per-agent bot id, or "@<messenger-install-id>" ' +
+        'for a System Bot install.',
+    )
     .requiredOption('--target <channelId>', 'Channel ID to search in')
     .requiredOption('--query <text>', 'Search query')
     .option('--author-id <id>', 'Filter by author ID')
@@ -352,7 +360,7 @@ export function registerBotMessageCommands(bot: Command) {
     .option('--json', 'Output JSON')
     .action(
       async (
-        botId: string,
+        botIdOrAtKey: string,
         options: {
           authorId?: string;
           json?: boolean;
@@ -361,10 +369,11 @@ export function registerBotMessageCommands(bot: Command) {
           target: string;
         },
       ) => {
+        const target = resolveSendTargetArg(botIdOrAtKey);
         const client = await getTrpcClient();
         const result = await client.botMessage.searchMessages.query({
+          ...target,
           authorId: options.authorId,
-          botId,
           channelId: options.target,
           limit: options.limit ? Number.parseInt(options.limit, 10) : undefined,
           query: options.query,
@@ -418,16 +427,23 @@ export function registerBotMessageCommands(bot: Command) {
   // ── reactions ───────────────────────────────────────────
 
   message
-    .command('reactions <botId>')
-    .description('List reactions on a message')
+    .command('reactions <botIdOrAtKey>')
+    .description(
+      'List reactions on a message. Pass a per-agent bot id, or "@<messenger-install-id>" ' +
+        'for a System Bot install.',
+    )
     .requiredOption('--target <channelId>', 'Channel ID')
     .requiredOption('--message-id <id>', 'Message ID')
     .option('--json', 'Output JSON')
     .action(
-      async (botId: string, options: { json?: boolean; messageId: string; target: string }) => {
+      async (
+        botIdOrAtKey: string,
+        options: { json?: boolean; messageId: string; target: string },
+      ) => {
+        const target = resolveSendTargetArg(botIdOrAtKey);
         const client = await getTrpcClient();
         const result = await client.botMessage.getReactions.query({
-          botId,
+          ...target,
           channelId: options.target,
           messageId: options.messageId,
         });
@@ -487,14 +503,18 @@ export function registerBotMessageCommands(bot: Command) {
   // ── pins ────────────────────────────────────────────────
 
   message
-    .command('pins <botId>')
-    .description('List pinned messages')
+    .command('pins <botIdOrAtKey>')
+    .description(
+      'List pinned messages. Pass a per-agent bot id, or "@<messenger-install-id>" ' +
+        'for a System Bot install.',
+    )
     .requiredOption('--target <channelId>', 'Channel ID')
     .option('--json', 'Output JSON')
-    .action(async (botId: string, options: { json?: boolean; target: string }) => {
+    .action(async (botIdOrAtKey: string, options: { json?: boolean; target: string }) => {
+      const target = resolveSendTargetArg(botIdOrAtKey);
       const client = await getTrpcClient();
       const result = await client.botMessage.listPins.query({
-        botId,
+        ...target,
         channelId: options.target,
       });
 
@@ -594,14 +614,18 @@ export function registerBotMessageCommands(bot: Command) {
     );
 
   thread
-    .command('list <botId>')
-    .description('List threads in a channel')
+    .command('list <botIdOrAtKey>')
+    .description(
+      'List threads in a channel. Pass a per-agent bot id, or "@<messenger-install-id>" ' +
+        'for a System Bot install.',
+    )
     .requiredOption('--target <channelId>', 'Channel ID')
     .option('--json', 'Output JSON')
-    .action(async (botId: string, options: { json?: boolean; target: string }) => {
+    .action(async (botIdOrAtKey: string, options: { json?: boolean; target: string }) => {
+      const target = resolveSendTargetArg(botIdOrAtKey);
       const client = await getTrpcClient();
       const result = await client.botMessage.listThreads.query({
-        botId,
+        ...target,
         channelId: options.target,
       });
 

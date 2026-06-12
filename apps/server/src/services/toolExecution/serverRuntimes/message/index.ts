@@ -130,8 +130,19 @@ export const messageRuntime: ServerRuntimeRegistration = {
 
     const service = new MessageDispatcherService({
       discord: async () => {
-        const { credentials } = await resolveCredentials(providerModel, 'discord');
-        return new DiscordMessageService(new DiscordApi(credentials.botToken));
+        // Per-agent provider takes precedence; fall back to the LobeHub System
+        // Bot (the global Discord bot in `system_bot_providers`) so an agent
+        // invoked *through* the System Bot — e.g. @mentioned in a guild channel
+        // with no per-agent bot of its own — can still read channel history and
+        // reply in that channel. Mirrors the telegram fallback below.
+        try {
+          const { credentials } = await resolveCredentials(providerModel, 'discord');
+          return new DiscordMessageService(new DiscordApi(credentials.botToken));
+        } catch (error) {
+          const systemConfig = await getMessengerDiscordConfig();
+          if (!systemConfig) throw error;
+          return new DiscordMessageService(new DiscordApi(systemConfig.botToken));
+        }
       },
       feishu: async () => {
         const { applicationId, credentials } = await resolveCredentials(providerModel, 'feishu');
@@ -162,8 +173,37 @@ export const messageRuntime: ServerRuntimeRegistration = {
         return new QQMessageService(new QQApiClient(applicationId, credentials.appSecret));
       },
       slack: async () => {
-        const { credentials } = await resolveCredentials(providerModel, 'slack');
-        return new SlackMessageService(new SlackApi(credentials.botToken));
+        // Per-agent provider takes precedence. Unlike Discord/Telegram (a single
+        // global System Bot token), Slack's System Bot is per-workspace OAuth —
+        // each install carries its own token in `messenger_installations`, and
+        // the tool-execution context does not carry the originating workspace.
+        // So we can only safely fall back when the user has exactly ONE active
+        // Slack install; with multiple we'd risk reading the wrong workspace, so
+        // we refuse and point at the CLI's explicit `messengerInstallationId`.
+        try {
+          const { credentials } = await resolveCredentials(providerModel, 'slack');
+          return new SlackMessageService(new SlackApi(credentials.botToken));
+        } catch (error) {
+          if (!context.serverDB || !context.userId) throw error;
+          const slackInstalls = (
+            await MessengerInstallationModel.listByInstallerUserId(
+              context.serverDB,
+              context.userId,
+              gateKeeper,
+            )
+          ).filter((row) => row.platform === 'slack');
+          if (slackInstalls.length === 0) throw error;
+          if (slackInstalls.length > 1) {
+            throw new Error(
+              'Multiple Slack System Bot workspaces are installed; cannot pick one automatically. ' +
+                'Use the lobehub CLI with an explicit messengerInstallationId to target a workspace.',
+              { cause: error },
+            );
+          }
+          const botToken = (slackInstalls[0].credentials as { botToken?: string }).botToken;
+          if (!botToken) throw error;
+          return new SlackMessageService(new SlackApi(botToken));
+        }
       },
       telegram: async () => {
         // Per-agent provider takes precedence; fall back to the env-backed

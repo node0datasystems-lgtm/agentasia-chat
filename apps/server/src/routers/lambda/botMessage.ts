@@ -261,6 +261,16 @@ const resolveSendTarget = async (
   });
 };
 
+/**
+ * Shared "exactly one of botId / messengerInstallationId" guard, reused by
+ * every read + send procedure that can target either a per-agent bot or a
+ * System Bot messenger install. Both sources resolve through
+ * {@link resolveSendTarget}.
+ */
+const exactlyOneTarget = (v: { botId?: string; messengerInstallationId?: string }): boolean =>
+  !!v.botId !== !!v.messengerInstallationId;
+const ONE_TARGET_MESSAGE = { message: 'Provide exactly one of botId or messengerInstallationId' };
+
 // ── Router ───────────────────────────────────────────────
 
 export const botMessageRouter = router({
@@ -328,28 +338,28 @@ export const botMessageRouter = router({
 
   readMessages: botMessageProcedure
     .input(
-      z.object({
-        after: z
-          .string()
-          .optional()
-          .transform((v) => v || undefined),
-        before: z
-          .string()
-          .optional()
-          .transform((v) => v || undefined),
-        botId: z.string(),
-        channelId: z.string(),
-        cursor: z.string().optional(),
-        endTime: z.string().optional(),
-        limit: z.number().min(MIN_BOT_HISTORY_LIMIT).max(MAX_BOT_HISTORY_LIMIT).optional(),
-        startTime: z.string().optional(),
-      }),
+      z
+        .object({
+          after: z
+            .string()
+            .optional()
+            .transform((v) => v || undefined),
+          before: z
+            .string()
+            .optional()
+            .transform((v) => v || undefined),
+          botId: z.string().optional(),
+          channelId: z.string(),
+          cursor: z.string().optional(),
+          endTime: z.string().optional(),
+          limit: z.number().min(MIN_BOT_HISTORY_LIMIT).max(MAX_BOT_HISTORY_LIMIT).optional(),
+          messengerInstallationId: z.string().optional(),
+          startTime: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform, settings } = await resolveBot(
-        ctx.agentBotProviderModel,
-        input.botId,
-      );
+      const { service, platform, settings } = await resolveSendTarget(ctx, input);
       const defaultLimit = (settings.historyLimit as number) || DEFAULT_BOT_HISTORY_LIMIT;
       return service.readMessages({
         after: input.after,
@@ -401,16 +411,19 @@ export const botMessageRouter = router({
 
   searchMessages: botMessageProcedure
     .input(
-      z.object({
-        authorId: z.string().optional(),
-        botId: z.string(),
-        channelId: z.string(),
-        limit: z.number().min(MIN_BOT_HISTORY_LIMIT).max(MAX_BOT_HISTORY_LIMIT).optional(),
-        query: z.string(),
-      }),
+      z
+        .object({
+          authorId: z.string().optional(),
+          botId: z.string().optional(),
+          channelId: z.string(),
+          limit: z.number().min(MIN_BOT_HISTORY_LIMIT).max(MAX_BOT_HISTORY_LIMIT).optional(),
+          messengerInstallationId: z.string().optional(),
+          query: z.string(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.searchMessages({
         authorId: input.authorId,
         channelId: input.channelId,
@@ -443,14 +456,17 @@ export const botMessageRouter = router({
 
   getReactions: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        channelId: z.string(),
-        messageId: z.string(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          channelId: z.string(),
+          messageId: z.string(),
+          messengerInstallationId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.getReactions({
         channelId: input.channelId,
         messageId: input.messageId,
@@ -496,13 +512,16 @@ export const botMessageRouter = router({
 
   listPins: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        channelId: z.string(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          channelId: z.string(),
+          messengerInstallationId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.listPins({
         channelId: input.channelId,
         platform,
@@ -513,13 +532,16 @@ export const botMessageRouter = router({
 
   getChannelInfo: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        channelId: z.string(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          channelId: z.string(),
+          messengerInstallationId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.getChannelInfo({
         channelId: input.channelId,
         platform,
@@ -528,14 +550,17 @@ export const botMessageRouter = router({
 
   listChannels: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        filter: z.string().optional(),
-        serverId: z.string().optional(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          filter: z.string().optional(),
+          messengerInstallationId: z.string().optional(),
+          serverId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.listChannels({
         filter: input.filter,
         platform,
@@ -547,14 +572,17 @@ export const botMessageRouter = router({
 
   getMemberInfo: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        memberId: z.string(),
-        serverId: z.string().optional(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          memberId: z.string(),
+          messengerInstallationId: z.string().optional(),
+          serverId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.getMemberInfo({
         memberId: input.memberId,
         platform,
@@ -587,13 +615,16 @@ export const botMessageRouter = router({
 
   listThreads: botMessageProcedure
     .input(
-      z.object({
-        botId: z.string(),
-        channelId: z.string(),
-      }),
+      z
+        .object({
+          botId: z.string().optional(),
+          channelId: z.string(),
+          messengerInstallationId: z.string().optional(),
+        })
+        .refine(exactlyOneTarget, ONE_TARGET_MESSAGE),
     )
     .query(async ({ input, ctx }) => {
-      const { service, platform } = await resolveBot(ctx.agentBotProviderModel, input.botId);
+      const { service, platform } = await resolveSendTarget(ctx, input);
       return service.listThreads({
         channelId: input.channelId,
         platform,
