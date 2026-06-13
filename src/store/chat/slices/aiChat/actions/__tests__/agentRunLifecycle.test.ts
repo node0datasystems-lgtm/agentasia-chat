@@ -1,8 +1,55 @@
+import type * as LobeConst from '@lobechat/const';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { topicService } from '@/services/topic';
 import { emitClientAgentSignalSourceEvent } from '@/store/chat/slices/aiChat/actions/agentSignalBridge';
 
-import { completeAgentRunLifecycle } from '../agentRunLifecycle';
+import {
+  completeAgentRunLifecycle,
+  completeAgentRunSessionLifecycle,
+  runAgentRunEventLifecycle,
+  startAgentRunLifecycle,
+} from '../agentRunLifecycle';
+
+const desktopEnv = vi.hoisted(() => ({ isDesktop: false }));
+const desktopNotificationMock = vi.hoisted(() => ({
+  showNotification: vi.fn().mockResolvedValue(undefined),
+}));
+
+vi.mock('@lobechat/const', async (importOriginal) => {
+  const actual = await importOriginal<typeof LobeConst>();
+
+  return {
+    ...actual,
+    get isDesktop() {
+      return desktopEnv.isDesktop;
+    },
+  };
+});
+
+vi.mock('i18next', () => ({
+  t: vi.fn((key: string) => key),
+}));
+
+vi.mock('@/services/electron/desktopNotification', () => ({
+  desktopNotificationService: desktopNotificationMock,
+}));
+
+vi.mock('@/services/topic', () => ({
+  topicService: {
+    updateTopicMetadata: vi.fn().mockResolvedValue(undefined),
+  },
+}));
+
+vi.mock('@/store/agent', () => ({
+  getAgentStoreState: vi.fn(() => ({})),
+}));
+
+vi.mock('@/store/agent/selectors', () => ({
+  agentSelectors: {
+    getAgentMetaById: vi.fn(() => () => ({ title: 'Agent title' })),
+  },
+}));
 
 vi.mock('@/store/chat/slices/aiChat/actions/agentSignalBridge', () => ({
   emitClientAgentSignalSourceEvent: vi.fn().mockResolvedValue(undefined),
@@ -27,9 +74,11 @@ const createStore = (overrides: Record<string, unknown> = {}) => {
         },
       ];
     }),
+    internal_updateTopicLoading: vi.fn(),
     markUnreadCompleted: vi.fn(() => {
       events.push('unread');
     }),
+    messagesMap: {},
     operations: {
       'op-1': {
         context: { agentId: 'agent-1', topicId: 'topic-1' },
@@ -47,6 +96,8 @@ const createStore = (overrides: Record<string, unknown> = {}) => {
     sendMessage: vi.fn(async () => {
       events.push('sendMessage');
     }),
+    topicDataMap: {},
+    updateTopicStatus: vi.fn(),
     ...overrides,
   } as any;
 };
@@ -54,6 +105,7 @@ const createStore = (overrides: Record<string, unknown> = {}) => {
 describe('completeAgentRunLifecycle', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    desktopEnv.isDesktop = false;
     vi.useRealTimers();
   });
 
@@ -167,5 +219,115 @@ describe('completeAgentRunLifecycle', () => {
 
     expect(store.completeOperation).toHaveBeenCalledTimes(2);
     expect(store.drainQueuedMessages).not.toHaveBeenCalled();
+  });
+
+  it('emits client runtime start from the start lifecycle only for client runs', () => {
+    startAgentRunLifecycle({
+      context: { agentId: 'agent-1', threadId: 'thread-1', topicId: 'topic-1' } as any,
+      operationId: 'op-1',
+      parentMessageId: 'user-1',
+      parentMessageType: 'user',
+      runtimeType: 'client',
+    });
+    startAgentRunLifecycle({
+      context: { agentId: 'agent-1', topicId: 'topic-1' } as any,
+      operationId: 'op-2',
+      runtimeType: 'gateway',
+    });
+
+    expect(emitClientAgentSignalSourceEvent).toHaveBeenCalledTimes(1);
+    expect(emitClientAgentSignalSourceEvent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        payload: expect.objectContaining({
+          operationId: 'op-1',
+          parentMessageId: 'user-1',
+          triggerMessageId: 'user-1',
+        }),
+        sourceId: 'op-1:client:start',
+        sourceType: 'client.runtime.start',
+      }),
+    );
+  });
+
+  it('emits gateway event signals from the event lifecycle', () => {
+    runAgentRunEventLifecycle({
+      anchorMessageId: 'asst-1',
+      assistantMessageId: 'asst-1',
+      context: { agentId: 'agent-1', topicId: 'topic-1' } as any,
+      eventType: 'stream_start',
+      operationId: 'op-1',
+      runtimeType: 'gateway',
+      stepIndex: 2,
+    });
+
+    expect(emitClientAgentSignalSourceEvent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        payload: expect.objectContaining({
+          anchorMessageId: 'asst-1',
+          assistantMessageId: 'asst-1',
+          operationId: 'op-1',
+          stepIndex: 2,
+        }),
+        sourceId: 'op-1:gateway:start:2',
+        sourceType: 'client.gateway.stream_start',
+      }),
+    );
+  });
+
+  it('runs gateway session cleanup from the session lifecycle', async () => {
+    const onComplete = vi.fn();
+    const store = createStore();
+
+    await completeAgentRunSessionLifecycle({
+      context: { agentId: 'agent-1', groupId: 'group-1', topicId: 'topic-1' } as any,
+      get: () => store,
+      onComplete,
+      operationId: 'op-1',
+      runtimeType: 'gateway',
+    });
+
+    expect(store.completeOperation).toHaveBeenCalledWith('op-1');
+    expect(store.internal_updateTopicLoading).toHaveBeenCalledWith('topic-1', false);
+    expect(store.updateTopicStatus).toHaveBeenCalledWith({
+      agentId: 'agent-1',
+      groupId: 'group-1',
+      status: 'active',
+      topicId: 'topic-1',
+    });
+    expect(topicService.updateTopicMetadata).toHaveBeenCalledWith('topic-1', {
+      runningOperation: null,
+    });
+    expect(onComplete).toHaveBeenCalled();
+  });
+
+  it('runs client desktop notification as a client complete lifecycle effect', async () => {
+    desktopEnv.isDesktop = true;
+    const store = createStore({
+      messagesMap: {
+        'main_agent-1_topic-1': [
+          { content: 'Finished **answer**', id: 'asst-1', role: 'assistant' },
+        ],
+      },
+      topicDataMap: {
+        'agent_agent-1': { items: [{ id: 'topic-1', title: 'Topic title' }] },
+      },
+    });
+
+    await completeAgentRunLifecycle({
+      assistantMessageId: 'asst-1',
+      context: { agentId: 'agent-1', topicId: 'topic-1' } as any,
+      drainQueuedMessages: false,
+      get: () => store,
+      operationId: 'op-1',
+      runtimeType: 'client',
+      status: 'completed',
+    });
+
+    expect(desktopNotificationMock.showNotification).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: 'Finished answer',
+        title: 'Topic title',
+      }),
+    );
   });
 });

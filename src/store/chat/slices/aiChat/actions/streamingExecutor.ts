@@ -21,7 +21,6 @@ import {
   type UIChatMessage,
 } from '@lobechat/types';
 import debug from 'debug';
-import { t } from 'i18next';
 
 import { createAgentToolsEngine } from '@/helpers/toolEngineering';
 import { aiAgentService } from '@/services/aiAgent';
@@ -35,13 +34,9 @@ import { agentSelectors } from '@/store/agent/selectors';
 import { aiModelSelectors } from '@/store/aiInfra/selectors';
 import { getAiInfraStoreState } from '@/store/aiInfra/store';
 import { createAgentExecutors } from '@/store/chat/agents/createAgentExecutors';
-import { emitClientAgentSignalSourceEvent } from '@/store/chat/slices/aiChat/actions/agentSignalBridge';
 import type { OperationStatus } from '@/store/chat/slices/operation/types';
 import type { ChatStore } from '@/store/chat/store';
-import {
-  notifyDesktopHumanApprovalRequired,
-  resolveNotificationNavigatePath,
-} from '@/store/chat/utils/desktopNotification';
+import { notifyDesktopHumanApprovalRequired } from '@/store/chat/utils/desktopNotification';
 import { getElectronStoreState } from '@/store/electron';
 import { getServerConfigStoreState, serverConfigSelectors } from '@/store/serverConfig';
 import { getTaskStoreState } from '@/store/task';
@@ -49,17 +44,15 @@ import { pageAgentRuntime } from '@/store/tool/slices/builtin/executors/lobe-pag
 import type { StoreSetter } from '@/store/types';
 import { toolInterventionSelectors } from '@/store/user/selectors';
 import { getUserStoreState } from '@/store/user/store';
-import { markdownToTxt } from '@/utils/markdownToTxt';
 
 import { topicSelectors } from '../../../selectors';
 import { messageMapKey } from '../../../utils/messageMapKey';
-import { topicMapKey } from '../../../utils/topicMapKey';
 import {
   selectActivatedSkillsFromMessages,
   selectActivatedToolIdsFromMessages,
   selectTodosFromMessages,
 } from '../../message/selectors/dbMessage';
-import { completeAgentRunLifecycle } from './agentRunLifecycle';
+import { completeAgentRunLifecycle, startAgentRunLifecycle } from './agentRunLifecycle';
 
 const log = debug('lobe-store:streaming-executor');
 
@@ -543,18 +536,12 @@ export class StreamingExecutorActionImpl {
       originalMessages.length,
       disableTools,
     );
-    void emitClientAgentSignalSourceEvent({
-      payload: {
-        agentId,
-        operationId,
-        parentMessageId,
-        parentMessageType,
-        threadId: threadId ?? undefined,
-        topicId: topicId ?? undefined,
-        ...(parentMessageType === 'user' ? { triggerMessageId: parentMessageId } : {}),
-      },
-      sourceId: `${operationId}:client:start`,
-      sourceType: 'client.runtime.start',
+    startAgentRunLifecycle({
+      context,
+      operationId,
+      parentMessageId,
+      parentMessageType,
+      runtimeType: 'client',
     });
 
     // Create a new array to avoid modifying the original messages
@@ -855,42 +842,6 @@ export class StreamingExecutorActionImpl {
     });
 
     log('[executeClientAgent] completed');
-
-    // Desktop notification (if not in tools calling mode)
-    if (isDesktop) {
-      try {
-        const finalMessages = this.#get().messagesMap[messageKey] || [];
-        const lastAssistant = finalMessages.findLast((m) => m.role === 'assistant');
-
-        // Only show notification if there's content and no tools
-        if (lastAssistant?.content && !lastAssistant?.tools) {
-          const { desktopNotificationService } =
-            await import('@/services/electron/desktopNotification');
-
-          // Use topic title or agent title as notification title
-          let notificationTitle = t('notification.finishChatGeneration', { ns: 'electron' });
-          if (topicId) {
-            const key = topicMapKey({ agentId, groupId });
-            const topicData = this.#get().topicDataMap[key];
-            const topic = topicData?.items?.find((item) => item.id === topicId);
-            if (topic?.title) notificationTitle = topic.title;
-          } else {
-            const agentMeta = agentSelectors.getAgentMetaById(agentId)(getAgentStoreState());
-            if (agentMeta?.title) notificationTitle = agentMeta.title;
-          }
-
-          const navigatePath = resolveNotificationNavigatePath({ agentId, groupId, topicId });
-
-          await desktopNotificationService.showNotification({
-            body: markdownToTxt(lastAssistant.content),
-            navigate: navigatePath ? { path: navigatePath } : undefined,
-            title: notificationTitle,
-          });
-        }
-      } catch (error) {
-        console.error('Desktop notification error:', error);
-      }
-    }
 
     // Return usage and cost data for caller to use
     return { cost: state.cost, model, provider: provider ?? undefined, usage: state.usage };

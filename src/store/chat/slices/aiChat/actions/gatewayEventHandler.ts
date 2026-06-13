@@ -16,13 +16,12 @@ import type {
 import { AgentRuntimeErrorType } from '@lobechat/types';
 
 import { messageService } from '@/services/message';
-import { emitClientAgentSignalSourceEvent } from '@/store/chat/slices/aiChat/actions/agentSignalBridge';
 import type { ChatStore } from '@/store/chat/store';
 import { notifyDesktopHumanApprovalRequired } from '@/store/chat/utils/desktopNotification';
 import { addUsageToOperationMetrics, type OperationUsageLike } from '@/utils/operationUsageMetrics';
 
 import type { AgentRunLifecycleCallback, AgentRunRuntimeType } from './agentRunLifecycle';
-import { completeAgentRunLifecycle } from './agentRunLifecycle';
+import { completeAgentRunLifecycle, runAgentRunEventLifecycle } from './agentRunLifecycle';
 
 // Lazy-loaded to break the import cycle:
 //   gateway.ts → gatewayEventHandler.ts → executors/index.ts (which pulls in
@@ -338,21 +337,14 @@ export const createGatewayEventHandler = (
             }
           }
 
-          void emitClientAgentSignalSourceEvent({
-            payload: {
-              agentId: context.agentId,
-              ...(currentAssistantMessageId
-                ? {
-                    anchorMessageId: currentAssistantMessageId,
-                    assistantMessageId: currentAssistantMessageId,
-                  }
-                : {}),
-              operationId,
-              stepIndex: event.stepIndex,
-              topicId: context.topicId ?? undefined,
-            },
-            sourceId: `${operationId}:gateway:start:${event.stepIndex}`,
-            sourceType: 'client.gateway.stream_start',
+          runAgentRunEventLifecycle({
+            anchorMessageId: currentAssistantMessageId,
+            assistantMessageId: currentAssistantMessageId,
+            context,
+            eventType: 'stream_start',
+            operationId,
+            runtimeType,
+            stepIndex: event.stepIndex,
           });
         });
         break;
@@ -525,15 +517,12 @@ export const createGatewayEventHandler = (
         // Refresh on execution_complete to ensure final step state is consistent
         if (data?.phase === 'execution_complete') {
           enqueue(async () => {
-            void emitClientAgentSignalSourceEvent({
-              payload: {
-                agentId: context.agentId,
-                operationId,
-                stepIndex: event.stepIndex,
-                topicId: context.topicId ?? undefined,
-              },
-              sourceId: `${operationId}:gateway:step_complete:${event.stepIndex}`,
-              sourceType: 'client.gateway.step_complete',
+            runAgentRunEventLifecycle({
+              context,
+              eventType: 'step_complete',
+              operationId,
+              runtimeType,
+              stepIndex: event.stepIndex,
             });
             await fetchAndReplaceMessages(get, context).catch(console.error);
           });
@@ -549,20 +538,13 @@ export const createGatewayEventHandler = (
               ? 'cancelled'
               : 'completed';
 
-          void emitClientAgentSignalSourceEvent({
-            payload: {
-              agentId: context.agentId,
-              ...(currentAssistantMessageId
-                ? {
-                    anchorMessageId: currentAssistantMessageId,
-                    assistantMessageId: currentAssistantMessageId,
-                  }
-                : {}),
-              operationId,
-              topicId: context.topicId ?? undefined,
-            },
-            sourceId: `${operationId}:gateway:runtime_end`,
-            sourceType: 'client.gateway.runtime_end',
+          runAgentRunEventLifecycle({
+            anchorMessageId: currentAssistantMessageId,
+            assistantMessageId: currentAssistantMessageId,
+            context,
+            eventType: 'runtime_end',
+            operationId,
+            runtimeType,
           });
           get().internal_toggleToolCallingStreaming(currentAssistantMessageId, undefined);
           endReasoningIfNeeded();
@@ -632,15 +614,12 @@ export const createGatewayEventHandler = (
           const messageError = toChatMessageError(event.data);
           const errorMessage = messageError.message;
 
-          void emitClientAgentSignalSourceEvent({
-            payload: {
-              agentId: context.agentId,
-              errorMessage,
-              operationId,
-              topicId: context.topicId ?? undefined,
-            },
-            sourceId: `${operationId}:gateway:error`,
-            sourceType: 'client.gateway.error',
+          runAgentRunEventLifecycle({
+            context,
+            errorMessage,
+            eventType: 'error',
+            operationId,
+            runtimeType,
           });
 
           get().internal_toggleToolCallingStreaming(currentAssistantMessageId, undefined);

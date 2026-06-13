@@ -5,14 +5,20 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type * as ConstVersion from '@/const/version';
 import { aiAgentService } from '@/services/aiAgent';
 import { messageService } from '@/services/message';
+import type * as AgentRunLifecycleModule from '@/store/chat/slices/aiChat/actions/agentRunLifecycle';
 import { runAfterUserMessagePersistedLifecycle } from '@/store/chat/slices/aiChat/actions/agentRunLifecycle';
 
 import type { GatewayConnection } from '../gateway';
 import { GatewayActionImpl } from '../gateway';
 
-vi.mock('@/store/chat/slices/aiChat/actions/agentRunLifecycle', () => ({
-  runAfterUserMessagePersistedLifecycle: vi.fn().mockResolvedValue(undefined),
-}));
+vi.mock('@/store/chat/slices/aiChat/actions/agentRunLifecycle', async (importOriginal) => {
+  const actual = await importOriginal<typeof AgentRunLifecycleModule>();
+
+  return {
+    ...actual,
+    runAfterUserMessagePersistedLifecycle: vi.fn().mockResolvedValue(undefined),
+  };
+});
 
 vi.mock('@/services/aiAgent', () => ({
   aiAgentService: {

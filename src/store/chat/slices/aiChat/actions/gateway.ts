@@ -15,7 +15,6 @@ import { isDesktop } from '@/const/version';
 import { aiAgentService, type ResumeApprovalParam } from '@/services/aiAgent';
 import { gatewayConnectionService } from '@/services/electron/gatewayConnection';
 import { messageService } from '@/services/message';
-import { topicService } from '@/services/topic';
 import { getAgentStoreState } from '@/store/agent';
 import { chatConfigByIdSelectors } from '@/store/agent/selectors';
 import { consumePendingTopicRepos, getPendingTopicRepos } from '@/store/chat/pendingTopicRepos';
@@ -24,7 +23,10 @@ import type { ChatStore } from '@/store/chat/store';
 import type { StoreSetter } from '@/store/types';
 import { useUserStore } from '@/store/user';
 
-import { runAfterUserMessagePersistedLifecycle } from './agentRunLifecycle';
+import {
+  completeAgentRunSessionLifecycle,
+  runAfterUserMessagePersistedLifecycle,
+} from './agentRunLifecycle';
 import { createGatewayEventHandler } from './gatewayEventHandler';
 
 /**
@@ -543,22 +545,13 @@ export class GatewayActionImpl {
       gatewayUrl: agentGatewayUrl,
       onEvent: eventHandler,
       onSessionComplete: () => {
-        this.#get().completeOperation(gatewayOpId);
-        if (result.topicId) {
-          this.#get().internal_updateTopicLoading(result.topicId, false);
-          void this.#get().updateTopicStatus?.({
-            agentId: execContext.agentId,
-            groupId: execContext.groupId,
-            status: 'active',
-            topicId: result.topicId,
-          });
-          // Clear running operation from topic metadata (best-effort from frontend;
-          // if browser was closed, reconnect logic will handle stale entries)
-          topicService
-            .updateTopicMetadata(result.topicId, { runningOperation: null })
-            .catch(() => {});
-        }
-        onComplete?.();
+        void completeAgentRunSessionLifecycle({
+          context: execContext,
+          get: this.#get,
+          onComplete,
+          operationId: gatewayOpId,
+          runtimeType: 'gateway',
+        });
       },
       operationId: result.operationId,
       token: result.token || '',
@@ -664,14 +657,12 @@ export class GatewayActionImpl {
       gatewayUrl: agentGatewayUrl,
       onEvent: eventHandler,
       onSessionComplete: () => {
-        this.#get().completeOperation(gatewayOpId);
-        this.#get().internal_updateTopicLoading(topicId, false);
-        void this.#get().updateTopicStatus?.({
-          agentId: context.agentId,
-          status: 'active',
-          topicId,
+        void completeAgentRunSessionLifecycle({
+          context,
+          get: this.#get,
+          operationId: gatewayOpId,
+          runtimeType: 'gateway',
         });
-        topicService.updateTopicMetadata(topicId, { runningOperation: null }).catch(() => {});
       },
       operationId,
       resumeOnConnect: true,

@@ -1,12 +1,19 @@
+import { isDesktop } from '@lobechat/const';
 import type { ConversationContext, UIChatMessage, UploadFileItem } from '@lobechat/types';
+import { t } from 'i18next';
 
+import { topicService } from '@/services/topic';
+import { getAgentStoreState } from '@/store/agent';
+import { agentSelectors } from '@/store/agent/selectors';
 import { emitClientAgentSignalSourceEvent } from '@/store/chat/slices/aiChat/actions/agentSignalBridge';
 import type { ChatStore } from '@/store/chat/store';
+import { resolveNotificationNavigatePath } from '@/store/chat/utils/desktopNotification';
 import { markdownToTxt } from '@/utils/markdownToTxt';
 
 import { displayMessageSelectors, topicSelectors } from '../../../selectors';
 import type { MessageMapKeyInput } from '../../../utils/messageMapKey';
 import { messageMapKey } from '../../../utils/messageMapKey';
+import { topicMapKey } from '../../../utils/topicMapKey';
 import { mergeQueuedMessages, reconstructUploadFilesFromQueue } from '../../operation/types';
 
 export type AgentRunRuntimeType = 'client' | 'gateway' | 'heterogeneous';
@@ -14,6 +21,27 @@ export type AgentRunRuntimeType = 'client' | 'gateway' | 'heterogeneous';
 export type AgentRunTerminalStatus = 'cancelled' | 'completed' | 'failed';
 
 export type AgentRunLifecycleCallback = () => Promise<void> | void;
+
+export type AgentRunEventLifecycleType = 'error' | 'runtime_end' | 'step_complete' | 'stream_start';
+
+export interface StartAgentRunLifecycleParams {
+  context: ConversationContext;
+  operationId: string;
+  parentMessageId?: string;
+  parentMessageType?: 'assistant' | 'tool' | 'user';
+  runtimeType: AgentRunRuntimeType;
+}
+
+export interface AgentRunEventLifecycleParams {
+  anchorMessageId?: string;
+  assistantMessageId?: string;
+  context: ConversationContext;
+  errorMessage?: string;
+  eventType: AgentRunEventLifecycleType;
+  operationId: string;
+  runtimeType: AgentRunRuntimeType;
+  stepIndex?: number;
+}
 
 export interface CompleteAgentRunLifecycleParams {
   afterRunComplete?: AgentRunLifecycleCallback[];
@@ -33,6 +61,14 @@ export interface CompleteAgentRunLifecycleParams {
 export interface CompleteAgentRunLifecycleResult {
   contextKey: string;
   queuedMessageCount: number;
+}
+
+export interface CompleteAgentRunSessionLifecycleParams {
+  context: ConversationContext;
+  get: () => ChatStore;
+  onComplete?: AgentRunLifecycleCallback;
+  operationId: string;
+  runtimeType: AgentRunRuntimeType;
 }
 
 interface AfterUserMessagePersistedParams {
@@ -113,6 +149,164 @@ const drainQueuedMessagesAfterComplete = ({
   return remainingQueued.length;
 };
 
+export const startAgentRunLifecycle = ({
+  context,
+  operationId,
+  parentMessageId,
+  parentMessageType,
+  runtimeType,
+}: StartAgentRunLifecycleParams): void => {
+  if (runtimeType !== 'client') return;
+
+  void emitClientAgentSignalSourceEvent({
+    payload: {
+      agentId: context.agentId,
+      operationId,
+      parentMessageId,
+      parentMessageType,
+      threadId: context.threadId ?? undefined,
+      topicId: context.topicId ?? undefined,
+      ...(parentMessageType === 'user' ? { triggerMessageId: parentMessageId } : {}),
+    },
+    sourceId: `${operationId}:client:start`,
+    sourceType: 'client.runtime.start',
+  });
+};
+
+export const runAgentRunEventLifecycle = ({
+  anchorMessageId,
+  assistantMessageId,
+  context,
+  errorMessage,
+  eventType,
+  operationId,
+  runtimeType,
+  stepIndex,
+}: AgentRunEventLifecycleParams): void => {
+  if (runtimeType !== 'gateway' && runtimeType !== 'heterogeneous') return;
+
+  switch (eventType) {
+    case 'stream_start': {
+      const resolvedStepIndex = stepIndex ?? 0;
+      void emitClientAgentSignalSourceEvent({
+        payload: {
+          agentId: context.agentId,
+          ...(assistantMessageId
+            ? {
+                anchorMessageId,
+                assistantMessageId,
+              }
+            : {}),
+          operationId,
+          stepIndex: resolvedStepIndex,
+          topicId: context.topicId ?? undefined,
+        },
+        sourceId: `${operationId}:gateway:start:${resolvedStepIndex}`,
+        sourceType: 'client.gateway.stream_start',
+      });
+      return;
+    }
+
+    case 'step_complete': {
+      const resolvedStepIndex = stepIndex ?? 0;
+      void emitClientAgentSignalSourceEvent({
+        payload: {
+          agentId: context.agentId,
+          operationId,
+          stepIndex: resolvedStepIndex,
+          topicId: context.topicId ?? undefined,
+        },
+        sourceId: `${operationId}:gateway:step_complete:${resolvedStepIndex}`,
+        sourceType: 'client.gateway.step_complete',
+      });
+      return;
+    }
+
+    case 'runtime_end': {
+      void emitClientAgentSignalSourceEvent({
+        payload: {
+          agentId: context.agentId,
+          ...(assistantMessageId
+            ? {
+                anchorMessageId,
+                assistantMessageId,
+              }
+            : {}),
+          operationId,
+          topicId: context.topicId ?? undefined,
+        },
+        sourceId: `${operationId}:gateway:runtime_end`,
+        sourceType: 'client.gateway.runtime_end',
+      });
+      return;
+    }
+
+    case 'error': {
+      void emitClientAgentSignalSourceEvent({
+        payload: {
+          agentId: context.agentId,
+          errorMessage,
+          operationId,
+          topicId: context.topicId ?? undefined,
+        },
+        sourceId: `${operationId}:gateway:error`,
+        sourceType: 'client.gateway.error',
+      });
+      return;
+    }
+  }
+};
+
+const runClientCompleteLifecycle = async ({
+  context,
+  contextKey,
+  get,
+  runtimeType,
+  status,
+}: {
+  context: ConversationContext;
+  contextKey: string;
+  get: () => ChatStore;
+  runtimeType: AgentRunRuntimeType;
+  status: AgentRunTerminalStatus;
+}) => {
+  if (runtimeType !== 'client' || !isDesktop || status !== 'completed') return;
+
+  try {
+    const finalMessages = get().messagesMap[contextKey] || [];
+    const lastAssistant = finalMessages.findLast((message) => message.role === 'assistant');
+
+    if (!lastAssistant?.content || lastAssistant?.tools) return;
+
+    let notificationTitle = t('notification.finishChatGeneration', { ns: 'electron' });
+    if (context.topicId) {
+      const key = topicMapKey({ agentId: context.agentId, groupId: context.groupId });
+      const topicData = get().topicDataMap[key];
+      const topic = topicData?.items?.find((item) => item.id === context.topicId);
+      if (topic?.title) notificationTitle = topic.title;
+    } else {
+      const agentMeta = agentSelectors.getAgentMetaById(context.agentId)(getAgentStoreState());
+      if (agentMeta?.title) notificationTitle = agentMeta.title;
+    }
+
+    const navigatePath = resolveNotificationNavigatePath({
+      agentId: context.agentId,
+      groupId: context.groupId,
+      topicId: context.topicId,
+    });
+
+    const { desktopNotificationService } = await import('@/services/electron/desktopNotification');
+
+    await desktopNotificationService.showNotification({
+      body: markdownToTxt(lastAssistant.content),
+      navigate: navigatePath ? { path: navigatePath } : undefined,
+      title: notificationTitle,
+    });
+  } catch (error) {
+    console.error('Desktop notification error:', error);
+  }
+};
+
 export const completeAgentRunLifecycle = async ({
   afterRunComplete,
   anchorMessageId,
@@ -174,8 +368,43 @@ export const completeAgentRunLifecycle = async ({
       : 0;
 
   await runCallbacks('afterRunComplete', afterRunComplete);
+  await runClientCompleteLifecycle({
+    context: lifecycleContext as ConversationContext,
+    contextKey,
+    get,
+    runtimeType,
+    status,
+  });
 
   return { contextKey, queuedMessageCount };
+};
+
+export const completeAgentRunSessionLifecycle = async ({
+  context,
+  get,
+  onComplete,
+  operationId,
+  runtimeType,
+}: CompleteAgentRunSessionLifecycleParams): Promise<void> => {
+  if (runtimeType !== 'gateway') {
+    await onComplete?.();
+    return;
+  }
+
+  get().completeOperation(operationId);
+
+  if (context.topicId) {
+    get().internal_updateTopicLoading(context.topicId, false);
+    void get().updateTopicStatus?.({
+      agentId: context.agentId,
+      groupId: context.groupId,
+      status: 'active',
+      topicId: context.topicId,
+    });
+    topicService.updateTopicMetadata(context.topicId, { runningOperation: null }).catch(() => {});
+  }
+
+  await onComplete?.();
 };
 
 const applyTopicTitle = async (
