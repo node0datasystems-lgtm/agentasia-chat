@@ -4,7 +4,7 @@ import { ThreadType, type UIChatMessage } from '@lobechat/types';
 import { FloatingSheet, type FloatingSheetProps } from '@lobehub/ui/base-ui';
 import { createStaticStyles } from 'antd-style';
 import type { ReactNode } from 'react';
-import { memo, useEffect, useMemo, useState } from 'react';
+import { memo, useEffect, useMemo, useRef, useState } from 'react';
 
 import {
   type ActionsBarConfig,
@@ -24,9 +24,10 @@ import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 import ChatBody from './ChatBody';
 import { useSingleInstanceGuard } from './guard';
 
-const SNAP_POINTS = [180, 320, 520, 800] as const;
+const SNAP_POINTS = [128, 320, 520, 800] as const;
 const MAX_SNAP_POINT = SNAP_POINTS.at(-1)!;
 const REST_SNAP_POINT = SNAP_POINTS[0];
+const CONVERSATION_SNAP_POINT = SNAP_POINTS[1];
 
 const styles = createStaticStyles(({ css }) => ({
   sheet: css`
@@ -241,6 +242,14 @@ const FloatingChatPanel = memo<FloatingChatPanelProps>(
 
     const [open, setOpen] = useState(true);
     const [activeSnapPoint, setActiveSnapPoint] = useState<number>(REST_SNAP_POINT);
+    const hasAutoExpandedExistingThreadRef = useRef(false);
+    const hasPanelMessages = (messages?.length ?? 0) > 0;
+
+    useEffect(() => {
+      if (!hasPanelMessages || hasAutoExpandedExistingThreadRef.current) return;
+      hasAutoExpandedExistingThreadRef.current = true;
+      setActiveSnapPoint((point) => (point === REST_SNAP_POINT ? CONVERSATION_SNAP_POINT : point));
+    }, [hasPanelMessages]);
 
     const agentChatConfig = useAgentStore(chatConfigByIdSelectors.getChatConfigById(agentId));
     const chatFollowUpHooks = useChatFollowUp({
@@ -275,7 +284,7 @@ const FloatingChatPanel = memo<FloatingChatPanelProps>(
       headerActions,
 
       maxHeight: MAX_SNAP_POINT,
-      minHeight: SNAP_POINTS[1],
+      minHeight: REST_SNAP_POINT,
       mode: 'inline',
       onOpenChange: setOpen,
       onSnapPointChange: setActiveSnapPoint,

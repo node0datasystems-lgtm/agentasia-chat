@@ -192,7 +192,7 @@ describe('FloatingChatPanel', () => {
   it('applies default shell props', () => {
     const { getByTestId } = render(<FloatingChatPanel agentId="a" topicId="t" />);
     const sheet = getByTestId('floating-panel-shell');
-    expect(sheet.dataset.snapPoints).toBe(JSON.stringify([180, 320, 520, 800]));
+    expect(sheet.dataset.snapPoints).toBe(JSON.stringify([128, 320, 520, 800]));
     expect(sheet.dataset.variant).toBe('embedded');
     expect(sheet.dataset.dismissible).toBe('false');
   });

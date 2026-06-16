@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react';
 import type { CSSProperties, ReactNode } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import ChatBody from './ChatBody';
 
@@ -36,12 +36,46 @@ vi.mock('@lobehub/ui', () => ({
 }));
 
 vi.mock('@/features/Conversation', () => ({
-  ChatInput: () => <div data-testid="floating-chat-input">chat input</div>,
   ChatList: () => <div data-testid="floating-chat-list">chat list</div>,
 }));
 
+const mockConversationState = vi.hoisted(() => ({
+  displayMessageIds: [] as string[],
+}));
+
+vi.mock('@/features/Conversation/store', () => ({
+  dataSelectors: {
+    displayMessageIds: (s: { displayMessageIds: string[] }) => s.displayMessageIds,
+  },
+  useConversationStore: (selector: (state: { displayMessageIds: string[] }) => unknown) =>
+    selector(mockConversationState),
+}));
+
+vi.mock('./MiniChatInput', () => ({
+  default: () => <div data-testid="floating-chat-input">mini input</div>,
+}));
+
 describe('FloatingChatPanel ChatBody', () => {
-  it('keeps the chat input after the list while leaving scroll ownership to the virtual list', () => {
+  beforeEach(() => {
+    mockConversationState.displayMessageIds = [];
+  });
+
+  it('renders only the mini input before the conversation starts', () => {
+    render(<ChatBody />);
+
+    const body = screen.getByTestId('floating-chat-panel-body');
+    const input = screen.getByTestId('floating-chat-input');
+
+    expect(body).toHaveAttribute('data-flex', '1');
+    expect(body).toHaveAttribute('data-height', '100%');
+    expect(body).toContainElement(input);
+    expect(screen.queryByTestId('floating-chat-panel-list')).not.toBeInTheDocument();
+    expect(body).toHaveStyle({ overflow: 'hidden' });
+  });
+
+  it('keeps the mini input after the list once messages exist', () => {
+    mockConversationState.displayMessageIds = ['message-1'];
+
     render(<ChatBody />);
 
     const body = screen.getByTestId('floating-chat-panel-body');
