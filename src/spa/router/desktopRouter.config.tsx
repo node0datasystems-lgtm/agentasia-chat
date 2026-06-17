@@ -14,6 +14,7 @@ import { type RouteObject } from 'react-router-dom';
 import {
   BusinessDesktopRoutesWithMainLayout,
   BusinessDesktopRoutesWithoutMainLayout,
+  BusinessResourceRoutes,
 } from '@/business/client/BusinessDesktopRoutes';
 import { taskRouteMeta, tasksRouteMeta } from '@/features/AgentTasks/routeMeta';
 import { pageRouteMeta } from '@/features/Pages/routeMeta';
@@ -388,6 +389,7 @@ export const sharedMainAreaChildren: RouteObject[] = [
         ),
         path: 'library/:id',
       },
+      ...BusinessResourceRoutes,
     ],
     element: dynamicElement(
       () => import('@/routes/(main)/resource/_layout'),
