@@ -99,7 +99,8 @@
   "response.SubscriptionPlanLimitUltimate": "Has agotado tus puntos de suscripción. Recarga créditos o configura una API personalizada.",
   "response.SystemTimeNotMatchError": "Lo sentimos, la hora de tu sistema no coincide con la del servidor.",
   "response.UnknownChatFetchError": "Lo sentimos, ocurrió un error desconocido en la solicitud.",
-  "response.WorkspaceFrozen": "Este espacio de trabajo está congelado y no puede ejecutar solicitudes. Por favor, contacta al propietario del espacio de trabajo para resolver el problema.",
+  "response.WorkspaceFrozenByAdmin": "Este espacio de trabajo está congelado por un administrador y no puede ejecutar solicitudes. Por favor, contacte al propietario del espacio de trabajo para resolver el problema.",
+  "response.WorkspaceFrozenByRiskControl": "Este espacio de trabajo fue congelado automáticamente por control de riesgos y no puede ejecutar solicitudes. Por favor, contacte al soporte para revisar el estado.",
   "stt.responseError": "Error en la solicitud del servicio. Verifica la configuración.",
   "supervisor.decisionFailed": "El anfitrión del grupo no puede funcionar. Verifica la configuración del modelo y API Key.",
   "testConnectionFailed": "Error al probar la conexión: {{error}}",
@@ -151,8 +152,14 @@
   "upload.title": "Error al subir el archivo. Verifica tu conexión o inténtalo más tarde.",
   "upload.unknownError": "Motivo del error: {{reason}}",
   "upload.uploadFailed": "Error al subir el archivo.",
-  "workspaceFrozen.contactSupport": "Contactar soporte",
-  "workspaceFrozen.descriptionMember": "La actividad en este espacio de trabajo ha sido pausada. Contacta al propietario del espacio de trabajo para revisar el estado, o cambia a otro espacio de trabajo para seguir trabajando.",
-  "workspaceFrozen.descriptionOwner": "Este espacio de trabajo fue congelado por control de riesgos y está temporalmente no disponible. Contacta al soporte para revisar el estado y solicitar el descongelamiento.",
-  "workspaceFrozen.title": "El espacio de trabajo está congelado"
+  "workspaceFrozenByAdmin.contactSupport": "Contactar soporte",
+  "workspaceFrozenByAdmin.description": "Este espacio de trabajo fue congelado por un administrador. Revise la razón a continuación y contacte al soporte si tiene preguntas.",
+  "workspaceFrozenByAdmin.frozenAt": "Congelado el",
+  "workspaceFrozenByAdmin.reason": "Razón",
+  "workspaceFrozenByAdmin.title": "El espacio de trabajo está congelado",
+  "workspaceFrozenByRiskControl.contactSupport": "Contactar soporte",
+  "workspaceFrozenByRiskControl.description": "Este espacio de trabajo fue congelado automáticamente por control de riesgos tras detectar un gasto anormal. Contacte al soporte para revisar y solicitar el descongelamiento.",
+  "workspaceFrozenByRiskControl.frozenAt": "Congelado el",
+  "workspaceFrozenByRiskControl.title": "Espacio de trabajo congelado automáticamente por control de riesgos",
+  "workspaceFrozenByRiskControl.topup": "Recargar créditos"
 }

@@ -99,7 +99,8 @@
   "response.SubscriptionPlanLimitUltimate": "您的訂閱點數已用盡，無法使用此功能。請儲值點數或設定自訂模型 API 以繼續使用。",
   "response.SystemTimeNotMatchError": "很抱歉，您的系統時間與伺服器不匹配，請檢查您的系統時間後重試",
   "response.UnknownChatFetchError": "很抱歉，遇到未知請求錯誤，請根據以下資訊排查或重試",
-  "response.WorkspaceFrozen": "此工作區已被凍結，無法執行請求。請聯繫工作區擁有者以解決問題。",
+  "response.WorkspaceFrozenByAdmin": "此工作區已被管理員凍結，無法執行請求。請聯繫工作區擁有者以解決此問題。",
+  "response.WorkspaceFrozenByRiskControl": "此工作區因風險控制自動凍結，無法執行請求。請聯繫支援以檢視狀態。",
   "stt.responseError": "服務請求失敗，請檢查配置或重試",
   "supervisor.decisionFailed": "群組主持人無法工作。請檢查你的主持人設定，確保配置了正確的模型、API Key 和 API 位址。",
   "testConnectionFailed": "測試連線失敗：{{error}}",
@@ -151,8 +152,14 @@
   "upload.title": "檔案上傳失敗，請檢查網路連線或稍後再試",
   "upload.unknownError": "錯誤原因: {{reason}}",
   "upload.uploadFailed": "檔案上傳失敗",
-  "workspaceFrozen.contactSupport": "聯繫支援",
-  "workspaceFrozen.descriptionMember": "此工作區的活動已被暫停。請聯繫工作區擁有者以檢視狀態，或切換到其他工作區繼續工作。",
-  "workspaceFrozen.descriptionOwner": "此工作區因風險控制已被凍結，暫時無法使用。請聯繫支援以檢視狀態並申請解凍。",
-  "workspaceFrozen.title": "工作區已被凍結"
+  "workspaceFrozenByAdmin.contactSupport": "聯繫支援",
+  "workspaceFrozenByAdmin.description": "此工作區已被管理員凍結。請檢視以下原因，如有疑問，請聯繫支援。",
+  "workspaceFrozenByAdmin.frozenAt": "凍結時間",
+  "workspaceFrozenByAdmin.reason": "原因",
+  "workspaceFrozenByAdmin.title": "工作區已被凍結",
+  "workspaceFrozenByRiskControl.contactSupport": "聯繫支援",
+  "workspaceFrozenByRiskControl.description": "此工作區因檢測到異常消費而被風險控制自動凍結。請聯繫支援以檢視並申請解凍。",
+  "workspaceFrozenByRiskControl.frozenAt": "凍結時間",
+  "workspaceFrozenByRiskControl.title": "工作區因風險控制自動凍結",
+  "workspaceFrozenByRiskControl.topup": "充值點數"
 }

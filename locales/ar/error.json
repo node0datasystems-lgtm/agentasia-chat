@@ -99,7 +99,8 @@
   "response.SubscriptionPlanLimitUltimate": "تم استنفاد نقاط اشتراكك، ولا يمكنك استخدام هذه الميزة. يرجى شحن الرصيد أو إعداد API مخصص.",
   "response.SystemTimeNotMatchError": "عذرًا، لا يتطابق وقت نظامك مع الخادم. يرجى التحقق من الوقت والمحاولة مجددًا.",
   "response.UnknownChatFetchError": "عذرًا، حدث خطأ غير معروف في الطلب. يرجى التحقق من المعلومات أدناه أو إعادة المحاولة.",
-  "response.WorkspaceFrozen": "تم تجميد مساحة العمل هذه ولا يمكن تشغيل الطلبات. يرجى الاتصال بمالك مساحة العمل لحل المشكلة.",
+  "response.WorkspaceFrozenByAdmin": "تم تجميد مساحة العمل هذه بواسطة مسؤول ولا يمكنها تشغيل الطلبات. يرجى الاتصال بمالك مساحة العمل لحل المشكلة.",
+  "response.WorkspaceFrozenByRiskControl": "تم تجميد مساحة العمل هذه تلقائيًا بواسطة التحكم في المخاطر ولا يمكنها تشغيل الطلبات. يرجى الاتصال بالدعم لمراجعة الحالة.",
   "stt.responseError": "فشل طلب الخدمة، يرجى التحقق من الإعدادات أو إعادة المحاولة.",
   "supervisor.decisionFailed": "المضيف الجماعي غير قادر على العمل. يرجى التحقق من إعدادات المضيف والتأكد من صحة النموذج ومفتاح API ونقطة النهاية.",
   "testConnectionFailed": "فشل اختبار الاتصال: {{error}}",
@@ -151,8 +152,14 @@
   "upload.title": "فشل تحميل الملف. يرجى التحقق من الاتصال أو المحاولة لاحقًا.",
   "upload.unknownError": "سبب الخطأ: {{reason}}",
   "upload.uploadFailed": "فشل تحميل الملف.",
-  "workspaceFrozen.contactSupport": "اتصل بالدعم",
-  "workspaceFrozen.descriptionMember": "تم إيقاف النشاط في هذه مساحة العمل. اتصل بمالك مساحة العمل لمراجعة الحالة، أو انتقل إلى مساحة عمل أخرى لمواصلة العمل.",
-  "workspaceFrozen.descriptionOwner": "تم تجميد هذه مساحة العمل بواسطة التحكم في المخاطر وهي غير متاحة مؤقتًا. اتصل بالدعم لمراجعة الحالة وطلب فك التجميد.",
-  "workspaceFrozen.title": "تم تجميد مساحة العمل"
+  "workspaceFrozenByAdmin.contactSupport": "اتصل بالدعم",
+  "workspaceFrozenByAdmin.description": "تم تجميد مساحة العمل هذه بواسطة مسؤول. راجع السبب أدناه واتصل بالدعم إذا كانت لديك أسئلة.",
+  "workspaceFrozenByAdmin.frozenAt": "تم التجميد في",
+  "workspaceFrozenByAdmin.reason": "السبب",
+  "workspaceFrozenByAdmin.title": "تم تجميد مساحة العمل",
+  "workspaceFrozenByRiskControl.contactSupport": "اتصل بالدعم",
+  "workspaceFrozenByRiskControl.description": "تم تجميد مساحة العمل هذه تلقائيًا بواسطة التحكم في المخاطر بعد اكتشاف إنفاق غير طبيعي. اتصل بالدعم لمراجعة الحالة وطلب إلغاء التجميد.",
+  "workspaceFrozenByRiskControl.frozenAt": "تم التجميد في",
+  "workspaceFrozenByRiskControl.title": "تم تجميد مساحة العمل تلقائيًا بواسطة التحكم في المخاطر",
+  "workspaceFrozenByRiskControl.topup": "شحن الرصيد"
 }

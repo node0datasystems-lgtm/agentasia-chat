@@ -175,16 +175,22 @@ export default {
     'The model "{{model}}" is no longer available. Please pick a current model from the model selector.',
   'response.UnknownChatFetchError':
     'Sorry, an unknown request error occurred. Please check the information below or try again.',
-  'response.WorkspaceFrozen':
-    'This workspace is frozen and cannot run requests. Please contact the workspace owner to resolve the issue.',
-  'workspaceFrozen.contactSupport': 'Contact support',
-  'workspaceFrozen.descriptionMember':
-    'Activity in this workspace has been paused. Contact the workspace owner to review the status, or switch to another workspace to keep working.',
-  'workspaceFrozen.descriptionOwner':
-    'This workspace was frozen by risk control and is temporarily unavailable. Contact support to review the status and request to unfreeze.',
-  'workspaceFrozen.frozenAt': 'Frozen at',
-  'workspaceFrozen.reason': 'Reason',
-  'workspaceFrozen.title': 'Workspace is frozen',
+  'response.WorkspaceFrozenByAdmin':
+    'This workspace is frozen by an admin and cannot run requests. Please contact the workspace owner to resolve the issue.',
+  'response.WorkspaceFrozenByRiskControl':
+    'This workspace was auto-frozen by risk control and cannot run requests. Please contact support to review the status.',
+  'workspaceFrozenByAdmin.contactSupport': 'Contact support',
+  'workspaceFrozenByAdmin.description':
+    'This workspace was frozen by an admin. Review the reason below and contact support if you have questions.',
+  'workspaceFrozenByAdmin.frozenAt': 'Frozen at',
+  'workspaceFrozenByAdmin.reason': 'Reason',
+  'workspaceFrozenByAdmin.title': 'Workspace is frozen',
+  'workspaceFrozenByRiskControl.contactSupport': 'Contact support',
+  'workspaceFrozenByRiskControl.description':
+    'This workspace was auto-frozen by risk control after abnormal spending was detected. Top up credits so the workspace is ready to resume, and contact support to unfreeze.',
+  'workspaceFrozenByRiskControl.frozenAt': 'Frozen at',
+  'workspaceFrozenByRiskControl.title': 'Workspace auto-frozen by risk control',
+  'workspaceFrozenByRiskControl.topup': 'Top up credits',
   'stt.responseError': 'Service request failed, please check the configuration or try again',
   'supervisor.decisionFailed':
     'The group host is unable to function. Please check your host configuration to ensure the correct model, API Key, and API endpoint are set.',

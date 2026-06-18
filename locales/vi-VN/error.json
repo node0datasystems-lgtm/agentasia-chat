@@ -99,7 +99,8 @@
   "response.SubscriptionPlanLimitUltimate": "Điểm gói đăng ký của bạn đã hết, bạn không thể sử dụng tính năng này. Vui lòng nạp thêm điểm hoặc cấu hình API mô hình tùy chỉnh.",
   "response.SystemTimeNotMatchError": "Xin lỗi, thời gian hệ thống của bạn không khớp với máy chủ. Vui lòng kiểm tra lại thời gian hệ thống và thử lại.",
   "response.UnknownChatFetchError": "Xin lỗi, đã xảy ra lỗi yêu cầu không xác định. Vui lòng kiểm tra thông tin bên dưới hoặc thử lại.",
-  "response.WorkspaceFrozen": "Không gian làm việc này đã bị đóng băng và không thể thực hiện yêu cầu. Vui lòng liên hệ với chủ sở hữu không gian làm việc để giải quyết vấn đề.",
+  "response.WorkspaceFrozenByAdmin": "Không gian làm việc này đã bị đóng băng bởi quản trị viên và không thể thực hiện yêu cầu. Vui lòng liên hệ với chủ sở hữu không gian làm việc để giải quyết vấn đề.",
+  "response.WorkspaceFrozenByRiskControl": "Không gian làm việc này đã tự động bị đóng băng bởi kiểm soát rủi ro và không thể thực hiện yêu cầu. Vui lòng liên hệ với bộ phận hỗ trợ để xem xét trạng thái.",
   "stt.responseError": "Yêu cầu dịch vụ thất bại, vui lòng kiểm tra cấu hình hoặc thử lại",
   "supervisor.decisionFailed": "Chủ nhóm không thể hoạt động. Vui lòng kiểm tra cấu hình để đảm bảo mô hình, API Key và endpoint chính xác.",
   "testConnectionFailed": "Kết nối thử thất bại: {{error}}",
@@ -151,8 +152,14 @@
   "upload.title": "Tải tệp thất bại. Vui lòng kiểm tra kết nối mạng hoặc thử lại sau",
   "upload.unknownError": "Lý do lỗi: {{reason}}",
   "upload.uploadFailed": "Tải tệp thất bại.",
-  "workspaceFrozen.contactSupport": "Liên hệ hỗ trợ",
-  "workspaceFrozen.descriptionMember": "Hoạt động trong không gian làm việc này đã bị tạm dừng. Liên hệ với chủ sở hữu không gian làm việc để xem xét trạng thái, hoặc chuyển sang không gian làm việc khác để tiếp tục làm việc.",
-  "workspaceFrozen.descriptionOwner": "Không gian làm việc này đã bị đóng băng bởi kiểm soát rủi ro và tạm thời không khả dụng. Liên hệ hỗ trợ để xem xét trạng thái và yêu cầu mở lại.",
-  "workspaceFrozen.title": "Không gian làm việc bị đóng băng"
+  "workspaceFrozenByAdmin.contactSupport": "Liên hệ hỗ trợ",
+  "workspaceFrozenByAdmin.description": "Không gian làm việc này đã bị đóng băng bởi quản trị viên. Xem xét lý do bên dưới và liên hệ hỗ trợ nếu bạn có thắc mắc.",
+  "workspaceFrozenByAdmin.frozenAt": "Đã đóng băng vào lúc",
+  "workspaceFrozenByAdmin.reason": "Lý do",
+  "workspaceFrozenByAdmin.title": "Không gian làm việc bị đóng băng",
+  "workspaceFrozenByRiskControl.contactSupport": "Liên hệ hỗ trợ",
+  "workspaceFrozenByRiskControl.description": "Không gian làm việc này đã tự động bị đóng băng bởi kiểm soát rủi ro sau khi phát hiện chi tiêu bất thường. Liên hệ hỗ trợ để xem xét và yêu cầu mở lại.",
+  "workspaceFrozenByRiskControl.frozenAt": "Đã đóng băng vào lúc",
+  "workspaceFrozenByRiskControl.title": "Không gian làm việc tự động bị đóng băng bởi kiểm soát rủi ro",
+  "workspaceFrozenByRiskControl.topup": "Nạp thêm tín dụng"
 }

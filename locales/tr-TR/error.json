@@ -99,7 +99,8 @@
   "response.SubscriptionPlanLimitUltimate": "Abonelik puanlarınız tükendi, bu özelliği kullanamazsınız. Lütfen kredi yükleyin veya özel model API yapılandırın.",
   "response.SystemTimeNotMatchError": "Üzgünüz, sistem saatiniz sunucuyla eşleşmiyor. Lütfen sistem saatinizi kontrol edip tekrar deneyin.",
   "response.UnknownChatFetchError": "Üzgünüz, bilinmeyen bir istek hatası oluştu. Lütfen aşağıdaki bilgileri kontrol edin veya tekrar deneyin.",
-  "response.WorkspaceFrozen": "Bu çalışma alanı dondurulmuş ve istekler çalıştırılamıyor. Sorunu çözmek için lütfen çalışma alanı sahibine başvurun.",
+  "response.WorkspaceFrozenByAdmin": "Bu çalışma alanı bir yönetici tarafından dondurulmuş ve istekler çalıştırılamıyor. Sorunu çözmek için lütfen çalışma alanı sahibiyle iletişime geçin.",
+  "response.WorkspaceFrozenByRiskControl": "Bu çalışma alanı risk kontrolü tarafından otomatik olarak dondurulmuş ve istekler çalıştırılamıyor. Durumu gözden geçirmek için lütfen destekle iletişime geçin.",
   "stt.responseError": "Hizmet isteği başarısız oldu, lütfen yapılandırmayı kontrol edin veya tekrar deneyin",
   "supervisor.decisionFailed": "Grup yöneticisi çalışamıyor. Lütfen doğru model, API Anahtarı ve API uç noktasının ayarlandığından emin olun.",
   "testConnectionFailed": "Bağlantı testi başarısız: {{error}}",
@@ -151,8 +152,14 @@
   "upload.title": "Dosya yükleme başarısız oldu. Lütfen ağ bağlantınızı kontrol edin veya daha sonra tekrar deneyin",
   "upload.unknownError": "Hata nedeni: {{reason}}",
   "upload.uploadFailed": "Dosya yükleme başarısız oldu.",
-  "workspaceFrozen.contactSupport": "Destek ile iletişime geçin",
-  "workspaceFrozen.descriptionMember": "Bu çalışma alanındaki etkinlik duraklatıldı. Durumu gözden geçirmek için çalışma alanı sahibine başvurun veya çalışmaya devam etmek için başka bir çalışma alanına geçin.",
-  "workspaceFrozen.descriptionOwner": "Bu çalışma alanı risk kontrolü tarafından donduruldu ve geçici olarak kullanılamıyor. Durumu gözden geçirmek ve dondurmayı kaldırmak için destek ile iletişime geçin.",
-  "workspaceFrozen.title": "Çalışma alanı donduruldu"
+  "workspaceFrozenByAdmin.contactSupport": "Destekle iletişime geçin",
+  "workspaceFrozenByAdmin.description": "Bu çalışma alanı bir yönetici tarafından donduruldu. Aşağıdaki nedeni inceleyin ve sorularınız varsa destekle iletişime geçin.",
+  "workspaceFrozenByAdmin.frozenAt": "Dondurulma tarihi",
+  "workspaceFrozenByAdmin.reason": "Neden",
+  "workspaceFrozenByAdmin.title": "Çalışma alanı donduruldu",
+  "workspaceFrozenByRiskControl.contactSupport": "Destekle iletişime geçin",
+  "workspaceFrozenByRiskControl.description": "Bu çalışma alanı, anormal harcama tespit edildikten sonra risk kontrolü tarafından otomatik olarak donduruldu. Durumu gözden geçirmek ve dondurmayı kaldırmak için destekle iletişime geçin.",
+  "workspaceFrozenByRiskControl.frozenAt": "Dondurulma tarihi",
+  "workspaceFrozenByRiskControl.title": "Çalışma alanı risk kontrolü tarafından otomatik olarak donduruldu",
+  "workspaceFrozenByRiskControl.topup": "Kredi yükle"
 }
