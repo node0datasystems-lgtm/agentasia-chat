@@ -179,7 +179,7 @@ export default {
     'This workspace is frozen by an admin and cannot run requests. Please contact the workspace owner to resolve the issue.',
   'response.WorkspaceFrozenByRiskControl':
     'This workspace was auto-frozen by risk control and cannot run requests. Please contact support to review the status.',
-  'workspaceFrozenByAdmin.bannerTitle': 'Workspace frozen · Contact support',
+  'workspaceFrozenByAdmin.bannerTitle': 'Workspace frozen by admin',
   'workspaceFrozenByAdmin.contactSupport': 'Contact support',
   'workspaceFrozenByAdmin.description':
     'This workspace was frozen by an admin. Review the reason below and contact support if you have questions.',
@@ -187,7 +187,7 @@ export default {
   'workspaceFrozenByAdmin.reason': 'Reason',
   'workspaceFrozenByAdmin.title': 'Workspace is frozen',
   'workspaceFrozenByRiskControl.available': 'Available credits',
-  'workspaceFrozenByRiskControl.bannerTitle': 'Workspace frozen · Top up to resume',
+  'workspaceFrozenByRiskControl.bannerTitle': 'Workspace frozen by risk control',
   'workspaceFrozenByRiskControl.contactSupport': 'Contact support',
   'workspaceFrozenByRiskControl.description':
     'This workspace was auto-frozen by risk control after abnormal spending was detected. Top up credits so the workspace is ready to resume, and contact support to unfreeze.',
