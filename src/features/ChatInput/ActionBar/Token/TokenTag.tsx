@@ -21,6 +21,7 @@ import { useUserStore } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';
 
 import { useAgentId } from '../../hooks/useAgentId';
+import { useEffectiveModel } from '../../hooks/useEffectiveModel';
 import { useChatInputStore } from '../../store';
 import ActionPopover from '../components/ActionPopover';
 import TokenProgress from './TokenProgress';
@@ -39,11 +40,10 @@ const Token = memo(() => {
   );
 
   const agentId = useAgentId();
-  const [systemRole, model, provider] = useAgentStore((s) => {
+  const { model, provider } = useEffectiveModel(agentId);
+  const [systemRole] = useAgentStore((s) => {
     return [
       agentByIdSelectors.getAgentSystemRoleById(agentId)(s),
-      agentByIdSelectors.getAgentModelById(agentId)(s),
-      agentByIdSelectors.getAgentModelProviderById(agentId)(s),
       // add these two params to enable the component to re-render
       chatConfigByIdSelectors.getHistoryCountById(agentId)(s),
       chatConfigByIdSelectors.getEnableHistoryCountById(agentId)(s),
