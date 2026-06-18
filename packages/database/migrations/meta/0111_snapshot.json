@@ -6,7 +6,7 @@
   },
   "dialect": "postgresql",
   "enums": {},
-  "id": "1ed377b0-c3c3-4a65-9c22-b2cf137aeb34",
+  "id": "c01e5456-110a-4170-8af4-79cc5896f3a5",
   "policies": {},
   "prevId": "ae7b7028-ea77-4a93-80e1-f9d0fb314f14",
   "roles": {},
@@ -21050,6 +21050,25 @@
           "primaryKey": false,
           "notNull": false,
           "default": "'{}'::jsonb"
+        },
+        "frozen": {
+          "name": "frozen",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": false
+        },
+        "frozen_reason": {
+          "name": "frozen_reason",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "frozen_at": {
+          "name": "frozen_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
         },
         "created_at": {
           "name": "created_at",

@@ -781,8 +781,8 @@
     {
       "idx": 111,
       "version": "7",
-      "when": 1781754823440,
-      "tag": "0111_devices_scope_user_unique_by_workspace",
+      "when": 1781776299250,
+      "tag": "0111_workspace_device_unique_and_frozen_columns",
       "breakpoints": true
     }
   ],
