@@ -182,6 +182,8 @@ export default {
     'Activity in this workspace has been paused. Contact the workspace owner to review the status, or switch to another workspace to keep working.',
   'workspaceFrozen.descriptionOwner':
     'This workspace was frozen by risk control and is temporarily unavailable. Contact support to review the status and request to unfreeze.',
+  'workspaceFrozen.frozenAt': 'Frozen at',
+  'workspaceFrozen.reason': 'Reason',
   'workspaceFrozen.title': 'Workspace is frozen',
   'stt.responseError': 'Service request failed, please check the configuration or try again',
   'supervisor.decisionFailed':

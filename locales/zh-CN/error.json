@@ -154,5 +154,7 @@
   "workspaceFrozen.contactSupport": "联系客服",
   "workspaceFrozen.descriptionMember": "此工作区的活动已被暂停。请联系工作区所有者了解状态，或切换到其他工作区继续使用",
   "workspaceFrozen.descriptionOwner": "此工作区已被风控系统冻结，暂时无法使用。请联系客服处理后申请解冻",
+  "workspaceFrozen.frozenAt": "冻结时间",
+  "workspaceFrozen.reason": "冻结原因",
   "workspaceFrozen.title": "工作区已冻结"
 }
