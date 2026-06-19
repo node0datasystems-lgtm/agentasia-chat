@@ -986,6 +986,8 @@ export default {
   'translate.clear': 'Clear Translation',
   'tts.action': 'Text-to-Speech',
   'tts.clear': 'Clear Speech',
+  'turnCollapse.collapse': 'Collapse',
+  'turnCollapse.done': 'Completed',
   'untitledAgent': 'Untitled Agent',
   'untitledGroup': 'Untitled Group',
   'updateAgent': 'Update Agent Information',

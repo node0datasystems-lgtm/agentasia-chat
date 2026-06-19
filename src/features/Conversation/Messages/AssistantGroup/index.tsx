@@ -1,10 +1,12 @@
 'use client';
 
 import type { AssistantContentBlock, EmojiReaction, UISignalCallbacksBlock } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
+import { ChevronsDownUp } from 'lucide-react';
 import type { MouseEventHandler, ReactNode } from 'react';
-import { memo, Suspense, useCallback, useMemo } from 'react';
+import { memo, Suspense, useCallback, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { MESSAGE_ACTION_BAR_PORTAL_ATTRIBUTES } from '@/const/messageActionPortal';
 import { ChatItem } from '@/features/Conversation/ChatItem';
@@ -28,8 +30,11 @@ import {
 } from '../Contexts/message-action-context';
 import SignalCallbacks from '../SignalCallbacks';
 import FileListViewer from '../User/components/FileListViewer';
+import CollapsedTurn from './components/CollapsedTurn';
 import Group from './components/Group';
+import { resolveTurnCollapse } from './components/turnCollapse';
 import type { WorkflowExpandLevelDefault } from './components/WorkflowCollapse';
+import { formatReasoningDuration, getWorkflowSummaryText } from './toolDisplayNames';
 
 const EditState = dynamic(() => import('./components/EditState'), {
   ssr: false,
@@ -51,7 +56,8 @@ interface GroupMessageProps {
 }
 
 const GroupMessage = memo<GroupMessageProps>(
-  ({ defaultWorkflowExpandLevel, id, index, disableEditing, footerRender }) => {
+  ({ defaultWorkflowExpandLevel, id, index, disableEditing, footerRender, isLatestItem }) => {
+    const { t } = useTranslation('chat');
     // Get message and actionsConfig from ConversationStore
     const item = useConversationStore(dataSelectors.getDisplayMessageById(id), isEqual)!;
 
@@ -151,6 +157,54 @@ const GroupMessage = memo<GroupMessageProps>(
       }
     }, [isInbox]);
 
+    // Codex-style history folding: a finished, non-latest turn collapses into a
+    // compact summary so the conversation stays focused on the latest result.
+    // This is a pure view affordance — ephemeral, never persisted (unlike the
+    // separate `metadata.collapsed` message-collapse feature).
+    const isGenerating = useConversationStore(
+      messageStateSelectors.isAssistantGroupItemGenerating(id),
+    );
+    const [userExpanded, setUserExpanded] = useState<boolean | undefined>(undefined);
+    const { collapsed, foldable } = resolveTurnCollapse({
+      isGenerating,
+      isLatestItem: !!isLatestItem,
+      userExpanded,
+    });
+
+    const turnSummary = useMemo(() => {
+      const fromContent = (lastAssistantMsg?.content ?? '')
+        .trim()
+        .split('\n')
+        .map((line) =>
+          line
+            .replace(/^#{1,6}\s*/, '') // drop leading heading marks
+            .replaceAll(/[*_`]+/g, '') // drop inline emphasis / code marks
+            .trim(),
+        )
+        .find((line) => line.length > 0);
+      if (fromContent) return fromContent.slice(0, 80);
+      const fromWorkflow = children ? getWorkflowSummaryText(children) : '';
+      return fromWorkflow || t('turnCollapse.done');
+    }, [lastAssistantMsg?.content, children, t]);
+
+    const durationText = useMemo(() => {
+      const totalMs = (children ?? []).reduce(
+        (sum, block) => sum + (block.performance?.duration ?? 0),
+        0,
+      );
+      return totalMs > 0 ? formatReasoningDuration(totalMs) : undefined;
+    }, [children]);
+
+    if (collapsed) {
+      return (
+        <CollapsedTurn
+          durationText={durationText}
+          onExpand={() => setUserExpanded(true)}
+          summary={turnSummary}
+        />
+      );
+    }
+
     return (
       <ChatItem
         showTitle
@@ -183,6 +237,16 @@ const GroupMessage = memo<GroupMessageProps>(
           reply → callbacks → summary — reads as three disconnected
           sections ().
         */}
+        {foldable && (
+          <Flexbox horizontal justify={'flex-end'}>
+            <ActionIcon
+              icon={ChevronsDownUp}
+              size={'small'}
+              title={t('turnCollapse.collapse')}
+              onClick={() => setUserExpanded(false)}
+            />
+          </Flexbox>
+        )}
         <Flexbox gap={4}>
           {children && children.length > 0 && (
             <Group
