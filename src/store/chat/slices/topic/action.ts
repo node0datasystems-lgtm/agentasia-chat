@@ -883,7 +883,7 @@ export class ChatTopicActionImpl {
     await refreshTopic();
   };
 
-  removeTopic = async (id: string): Promise<void> => {
+  removeTopic = async (id: string, removeFiles?: boolean): Promise<void> => {
     const {
       activeAgentId,
       activeGroupId,
@@ -895,8 +895,8 @@ export class ChatTopicActionImpl {
     // Allow deletion when either agentId or groupId is active
     if (!activeAgentId && !activeGroupId) return;
 
-    // remove topic
-    await topicService.removeTopic(id);
+    // remove topic (and optionally its uploaded attachments)
+    await topicService.removeTopic(id, removeFiles);
     this.#get().internal_dispatchTopic({ type: 'deleteTopic', id }, 'removeTopic');
     purgeUnreadTopics([id]);
     await refreshTopic();
