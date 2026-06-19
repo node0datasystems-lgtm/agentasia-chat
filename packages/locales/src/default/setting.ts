@@ -2012,7 +2012,8 @@ When I am ___, I need ___
   'workspace.wizard.step2.payFailed': 'Failed to start checkout',
   'workspace.wizard.step2.pill.free': 'Free',
   'workspace.wizard.step2.pill.freeUsed': '{{used}}/{{limit}} used',
-  'workspace.wizard.step2.pill.proPerSeat': '${{fee}} / seat / month',
+  'workspace.wizard.step2.pill.platformPerMonth': '${{fee}} / month',
+  'workspace.wizard.step2.pill.seatPerMonth': '+${{fee}} / seat / month',
   'workspace.wizard.step2.plans.business': 'Business',
   'workspace.wizard.step2.plans.hobby': 'Hobby',
   'workspace.wizard.step2.plans.pro': 'Pro',
@@ -2021,6 +2022,7 @@ When I am ___, I need ___
   'workspace.wizard.step2.subtitle':
     'Each workspace is billed separately. Choose a plan to finish.',
   'workspace.wizard.step2.title': 'Choose plan',
+  'workspace.wizard.step2.yearlyDiscount': '-20%',
   'workspace.wizard.step3.addMore': 'Add more',
   'workspace.wizard.step3.allFailed': 'Could not send invitations',
   'workspace.wizard.step3.emailPlaceholder': 'name@company.com',
