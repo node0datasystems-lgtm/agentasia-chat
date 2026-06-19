@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import useBusinessMenuItems from '@/business/client/features/User/useBusinessMenuItems';
+import { useActiveWorkspaceSlug } from '@/business/client/hooks/useActiveWorkspaceSlug';
 import { type MenuProps } from '@/components/Menu';
 import { DEFAULT_DESKTOP_HOTKEY_CONFIG } from '@/const/desktop';
 import { OFFICIAL_URL } from '@/const/url';
@@ -57,6 +58,8 @@ export const useMenu = () => {
   const { userPanel } = useNavLayout();
   const businessMenuItems = useBusinessMenuItems(isLogin);
   const { isIOS, isAndroid } = usePlatform();
+  const activeWorkspaceSlug = useActiveWorkspaceSlug();
+  const settingsLabel = t(activeWorkspaceSlug ? 'userPanel.workspaceSetting' : 'userPanel.setting');
 
   const downloadUrl = useMemo(() => {
     if (isIOS) return DOWNLOAD_URL.ios;
@@ -75,7 +78,7 @@ export const useMenu = () => {
       key: 'setting',
       label: (
         <WorkspaceLink to="/settings">
-          <NewVersionBadge showBadge={hasNewVersion}>{t('userPanel.setting')}</NewVersionBadge>
+          <NewVersionBadge showBadge={hasNewVersion}>{settingsLabel}</NewVersionBadge>
         </WorkspaceLink>
       ),
     },
