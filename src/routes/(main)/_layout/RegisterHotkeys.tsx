@@ -1,9 +1,10 @@
 'use client';
 
-import { useRegisterGlobalHotkeys } from '@/hooks/useHotkeys';
+import { useRegisterDesktopTabHotkeys, useRegisterGlobalHotkeys } from '@/hooks/useHotkeys';
 
 const RegisterHotkeys = () => {
   useRegisterGlobalHotkeys();
+  useRegisterDesktopTabHotkeys();
 
   return null;
 };
