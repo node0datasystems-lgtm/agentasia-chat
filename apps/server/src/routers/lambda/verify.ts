@@ -5,19 +5,31 @@ import { AgentOperationModel } from '@/database/models/agentOperation';
 import { LlmGenerationTracingModel } from '@/database/models/llmGenerationTracing';
 import { VerifyCheckResultModel } from '@/database/models/verifyCheckResult';
 import { VerifyCriterionModel } from '@/database/models/verifyCriterion';
+import { VerifyReportModel } from '@/database/models/verifyReport';
 import { VerifyRubricModel } from '@/database/models/verifyRubric';
 import { VerifyRunModel } from '@/database/models/verifyRun';
 import { router } from '@/libs/trpc/lambda';
 import { serverDatabase } from '@/libs/trpc/lambda/middleware';
 import {
+  VerifyEvidenceService,
   VerifyExecutorService,
   VerifyFeedbackService,
   VerifyPlanGeneratorService,
+  VerifyReporterService,
 } from '@/server/services/verify';
 
 const verifierTypeSchema = z.enum(['program', 'agent', 'llm']);
 const onFailSchema = z.enum(['manual', 'auto_repair']);
 const decisionSchema = z.enum(['accepted', 'rejected', 'overridden']);
+const evidenceTypeSchema = z.enum([
+  'screenshot',
+  'gif',
+  'video',
+  'text',
+  'dom_snapshot',
+  'transcript',
+]);
+const capturedBySchema = z.enum(['agent-browser', 'cdp', 'cli', 'program', 'llm_judge']);
 const modelConfigSchema = z.object({ model: z.string(), provider: z.string() });
 
 /** Run-policy knobs persisted on a rubric (see VerifyRubricConfig). */
@@ -43,11 +55,14 @@ const verifyProcedure = wsCompatProcedure.use(serverDatabase).use(async (opts) =
   return opts.next({
     ctx: {
       criterionModel: new VerifyCriterionModel(ctx.serverDB, ctx.userId, workspaceId),
+      evidenceService: new VerifyEvidenceService(ctx.serverDB, ctx.userId, workspaceId),
       executorService: new VerifyExecutorService(ctx.serverDB, ctx.userId, workspaceId),
       tracingModel: new LlmGenerationTracingModel(ctx.serverDB, ctx.userId, workspaceId),
       feedbackService: new VerifyFeedbackService(ctx.serverDB, ctx.userId, workspaceId),
       operationModel: new AgentOperationModel(ctx.serverDB, ctx.userId, workspaceId),
       planGenerator: new VerifyPlanGeneratorService(ctx.serverDB, ctx.userId, workspaceId),
+      reportModel: new VerifyReportModel(ctx.serverDB, ctx.userId, workspaceId),
+      reporterService: new VerifyReporterService(ctx.serverDB, ctx.userId, workspaceId),
       resultModel: new VerifyCheckResultModel(ctx.serverDB, ctx.userId, workspaceId),
       rubricModel: new VerifyRubricModel(ctx.serverDB, ctx.userId, workspaceId),
       runModel: new VerifyRunModel(ctx.serverDB, ctx.userId, workspaceId),
@@ -232,6 +247,56 @@ export const verifyRouter = router({
       const run = await ctx.runModel.findByOperation(input.operationId);
       return run ? ctx.resultModel.listByRun(run.id) : [];
     }),
+
+  // ---- evidence (run-captured artifacts) ----
+  listEvidence: verifyProcedure
+    .input(z.object({ operationId: z.string() }))
+    .query(async ({ ctx, input }) => ctx.evidenceService.listEvidence(input.operationId)),
+
+  /**
+   * Ingestion seam for run-captured evidence — a builder / review agent pushes an
+   * artifact (inline `content` or an already-uploaded `fileId`) keyed by the plan
+   * item it backs. The CLI (`lh verify upload-evidence`) is the primary caller.
+   */
+  uploadEvidence: verifyProcedure
+    .input(
+      z.object({
+        capturedBy: capturedBySchema.optional(),
+        checkItemId: z.string(),
+        content: z.string().optional(),
+        description: z.string().optional(),
+        fileId: z.string().optional(),
+        operationId: z.string(),
+        type: evidenceTypeSchema,
+      }),
+    )
+    .mutation(async ({ ctx, input }) => ctx.evidenceService.recordEvidence(input)),
+
+  // ---- report (LLM narrative over results + evidence) ----
+  getReport: verifyProcedure
+    .input(z.object({ operationId: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const run = await ctx.runModel.findByOperation(input.operationId);
+      return run ? ctx.reportModel.findByRun(run.id) : null;
+    }),
+
+  markReportReviewed: verifyProcedure
+    .input(z.object({ operationId: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const run = await ctx.runModel.findByOperation(input.operationId);
+      return run ? ctx.reportModel.markReviewed(run.id) : null;
+    }),
+
+  regenerateReport: verifyProcedure
+    .input(
+      z.object({
+        deliverable: z.string(),
+        goal: z.string(),
+        modelConfig: modelConfigSchema,
+        operationId: z.string(),
+      }),
+    )
+    .mutation(async ({ ctx, input }) => ctx.reporterService.generateReport(input)),
 
   // ---- feedback (data flywheel) ----
   submitDecision: verifyProcedure
