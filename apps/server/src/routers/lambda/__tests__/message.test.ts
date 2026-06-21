@@ -2,7 +2,7 @@ import {
   type CreateMessageParams,
   type UIChatMessage,
   type UpdateMessageRAGParams,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { describe, expect, it, vi } from 'vitest';
 

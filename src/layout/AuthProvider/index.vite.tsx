@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { type PropsWithChildren } from 'react';
 
 import BetterAuth from './BetterAuth';

@@ -1,6 +1,6 @@
 'use client';
 
-import { DEFAULT_INBOX_TITLE, SESSION_CHAT_URL } from '@lobechat/const';
+import { DEFAULT_INBOX_TITLE, SESSION_CHAT_URL } from '@agentasia/const';
 import { type ReactNode, useCallback } from 'react';
 import { createContext, memo, use, useMemo, useState } from 'react';
 

@@ -1,4 +1,4 @@
-import type { CheckpointConfig, TaskAutomationMode, TaskStatus } from '@lobechat/types';
+import type { CheckpointConfig, TaskAutomationMode, TaskStatus } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

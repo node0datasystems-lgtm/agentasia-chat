@@ -1,6 +1,6 @@
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
-import type { BriefArtifactDocument, BriefMetadata } from '@lobechat/types';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
+import type { BriefArtifactDocument, BriefMetadata } from '@agentasia/types';
 
 import { BriefModel } from '@/database/models/brief';
 import type { BriefItem, NewBrief } from '@/database/schemas';

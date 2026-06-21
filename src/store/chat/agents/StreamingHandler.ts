@@ -3,8 +3,8 @@ import {
   type ChatToolPayload,
   type MessageContentPart,
   type MessageToolCall,
-} from '@lobechat/types';
-import { serializePartsForStorage } from '@lobechat/utils';
+} from '@agentasia/types';
+import { serializePartsForStorage } from '@agentasia/utils';
 import debug from 'debug';
 import { throttle } from 'es-toolkit/compat';
 import pMap from 'p-map';

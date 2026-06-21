@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/agent-mock",
+  "name": "@agentasia/agent-mock",
   "version": "0.0.1",
   "private": true,
   "exports": {
@@ -11,8 +11,8 @@
     "test": "vitest run --silent='passed-only'"
   },
   "dependencies": {
-    "@lobechat/agent-gateway-client": "workspace:*",
-    "@lobechat/agent-tracing": "workspace:*"
+    "@agentasia/agent-gateway-client": "workspace:*",
+    "@agentasia/agent-tracing": "workspace:*"
   },
   "devDependencies": {
     "vitest": "^3.2.6"

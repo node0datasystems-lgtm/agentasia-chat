@@ -1,7 +1,7 @@
 'use client';
 
-import { ProviderIcon } from '@lobehub/icons';
-import { Button, DropdownMenu, Icon } from '@lobehub/ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { Button, DropdownMenu, Icon } from '@agentasia/ui';
 import { Dropdown } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';
@@ -25,9 +25,9 @@ const styles = createStaticStyles(({ css }) => ({
 const ChatWithModel = memo(() => {
   const { t } = useTranslation('discover');
   const { providers = [] } = useDetailContext();
-  const includeLobeHub = providers.some((item) => item.id === 'lobehub');
+  const includeAgentAsia = providers.some((item) => item.id === 'agentasia');
   const navigate = useWorkspaceAwareNavigate();
-  const list = providers.filter((provider) => provider.id !== 'lobehub');
+  const list = providers.filter((provider) => provider.id !== 'agentasia');
 
   const items = list.map((item) => ({
     icon: <ProviderIcon provider={item.id} size={20} type={'avatar'} />,
@@ -39,11 +39,11 @@ const ChatWithModel = memo(() => {
     ),
   }));
 
-  const handleLobeHubChat = () => {
+  const handleAgentAsiaChat = () => {
     navigate('/agent');
   };
 
-  if (includeLobeHub)
+  if (includeAgentAsia)
     return (
       <Dropdown.Button
         className={styles.button}
@@ -55,7 +55,7 @@ const ChatWithModel = memo(() => {
         menu={{
           items,
         }}
-        onClick={handleLobeHubChat}
+        onClick={handleAgentAsiaChat}
       >
         {t('models.chat')}
       </Dropdown.Button>

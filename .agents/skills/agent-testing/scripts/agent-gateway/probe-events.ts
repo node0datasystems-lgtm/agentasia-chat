@@ -1,4 +1,4 @@
-// LobeHub gateway raw-event-stream probe.
+// AgentAsia gateway raw-event-stream probe.
 //
 // Gateway-mode chats subscribe via WebSocket — NOT via the `/api/agent/stream`
 // SSE endpoint (that one belongs to the direct/client durable-agent runtime).

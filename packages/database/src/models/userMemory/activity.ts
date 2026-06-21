@@ -1,4 +1,4 @@
-import type { ActivityListParams, ActivityListResult } from '@lobechat/types';
+import type { ActivityListParams, ActivityListResult } from '@agentasia/types';
 import type { SQL } from 'drizzle-orm';
 import { and, asc, desc, eq, inArray, or, sql } from 'drizzle-orm';
 

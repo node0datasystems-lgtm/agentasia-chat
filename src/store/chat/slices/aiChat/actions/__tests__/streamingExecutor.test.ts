@@ -1,7 +1,7 @@
-import type { AgentState } from '@lobechat/agent-runtime';
-import * as agentRuntime from '@lobechat/agent-runtime';
-import type * as LobeChatConst from '@lobechat/const';
-import { type UIChatMessage } from '@lobechat/types';
+import type { AgentState } from '@agentasia/agent-runtime';
+import * as agentRuntime from '@agentasia/agent-runtime';
+import type * as LobeChatConst from '@agentasia/const';
+import { type UIChatMessage } from '@agentasia/types';
 import { act, renderHook } from '@testing-library/react';
 import { type EnabledAiModel, ModelProvider } from 'model-bank';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -1239,7 +1239,7 @@ describe('StreamingExecutor actions', () => {
       );
     });
 
-    it('should not enable visual understanding when the active LobeHub model supports visual media natively', () => {
+    it('should not enable visual understanding when the active AgentAsia model supports visual media natively', () => {
       act(() => {
         useChatStore.setState({ executeClientAgent: realExecAgentRuntime });
       });
@@ -1282,7 +1282,7 @@ describe('StreamingExecutor actions', () => {
       vi.spyOn(agentConfigResolver, 'resolveAgentConfig').mockReturnValue({
         agentConfig: createMockAgentConfig({
           model: 'gemini-3.1-flash-lite-preview',
-          provider: ModelProvider.LobeHub,
+          provider: ModelProvider.AgentAsia,
         }),
         chatConfig: createMockChatConfig(),
         isBuiltinAgent: false,
@@ -1461,7 +1461,7 @@ describe('StreamingExecutor actions', () => {
       vi.spyOn(agentConfigResolver, 'resolveAgentConfig').mockReturnValue({
         agentConfig: createMockAgentConfig({
           model: 'claude-sonnet-4-6',
-          provider: 'lobehub',
+          provider: 'agentasia',
         }),
         chatConfig: createMockChatConfig(),
         isBuiltinAgent: false,
@@ -1492,7 +1492,7 @@ describe('StreamingExecutor actions', () => {
         expect.objectContaining({
           model: 'claude-sonnet-4-6',
           parentMessageId: TEST_IDS.USER_MESSAGE_ID,
-          provider: 'lobehub',
+          provider: 'agentasia',
         }),
       );
     });

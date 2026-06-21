@@ -1,4 +1,4 @@
-import type { SearchMemoryParams } from '@lobechat/types';
+import type { SearchMemoryParams } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { normalizeSearchMemoryParams, resolveTimeIntent } from './searchParams';

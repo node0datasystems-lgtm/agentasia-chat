@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-claude-code",
+  "name": "@agentasia/builtin-tool-claude-code",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,13 +9,13 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/shared-tool-ui": "workspace:*"
+    "@agentasia/shared-tool-ui": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "path-browserify-esm": "*",

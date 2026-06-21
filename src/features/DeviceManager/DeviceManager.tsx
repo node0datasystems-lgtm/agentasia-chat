@@ -1,8 +1,8 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import type { DeviceScope } from '@lobechat/types';
-import { Flexbox, Icon, Skeleton, Text } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import type { DeviceScope } from '@agentasia/types';
+import { Flexbox, Icon, Skeleton, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
   ChevronRightIcon,

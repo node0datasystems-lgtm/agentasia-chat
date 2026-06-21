@@ -1,4 +1,4 @@
-import { RouteVariants } from '@lobechat/desktop-bridge';
+import { RouteVariants } from '@agentasia/desktop-bridge';
 
 import { type DynamicLayoutProps } from '@/types/next';
 
@@ -9,7 +9,7 @@ export {
   type IRouteVariants,
   type Locales,
   locales,
-} from '@lobechat/desktop-bridge';
+} from '@agentasia/desktop-bridge';
 
 class NextRouteVariants extends RouteVariants {
   static getVariantsFromProps = async (props: DynamicLayoutProps) => {

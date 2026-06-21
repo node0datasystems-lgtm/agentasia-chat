@@ -1,4 +1,4 @@
-import { type AvailableToolItem, availableToolsPrompts } from '@lobechat/prompts';
+import { type AvailableToolItem, availableToolsPrompts } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseFirstUserContentProvider } from '../base/BaseFirstUserContentProvider';

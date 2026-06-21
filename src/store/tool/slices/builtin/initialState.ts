@@ -1,6 +1,6 @@
-import { builtinSkills } from '@lobechat/builtin-skills';
-import { builtinTools, defaultUninstalledBuiltinTools } from '@lobechat/builtin-tools';
-import { type BuiltinSkill, type LobeBuiltinTool } from '@lobechat/types';
+import { builtinSkills } from '@agentasia/builtin-skills';
+import { builtinTools, defaultUninstalledBuiltinTools } from '@agentasia/builtin-tools';
+import { type BuiltinSkill, type LobeBuiltinTool } from '@agentasia/types';
 
 import { filterBuiltinSkills } from '@/helpers/skillFilters';
 

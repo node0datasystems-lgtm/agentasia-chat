@@ -12,12 +12,16 @@
             "children": [
               {
                 "id": "msg-assistant-1",
-                "tools": ["msg-tool-1"],
+                "tools": [
+                  "msg-tool-1"
+                ],
                 "type": "message"
               },
               {
                 "id": "msg-assistant-2",
-                "tools": ["msg-tool-2"],
+                "tools": [
+                  "msg-tool-2"
+                ],
                 "type": "message"
               },
               {
@@ -34,7 +38,10 @@
             "children": [
               {
                 "id": "msg-assistant-4",
-                "tools": ["msg-tool-3", "msg-tool-4"],
+                "tools": [
+                  "msg-tool-3",
+                  "msg-tool-4"
+                ],
                 "type": "message"
               },
               {
@@ -51,7 +58,9 @@
             "children": [
               {
                 "id": "msg-assistant-6",
-                "tools": ["msg-tool-5"],
+                "tools": [
+                  "msg-tool-5"
+                ],
                 "type": "message"
               },
               {

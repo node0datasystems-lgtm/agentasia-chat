@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-calculator",
+  "name": "@agentasia/builtin-tool-calculator",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,16 +9,16 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/prompts": "workspace:*",
     "@thi.ng/base-n": "^2.7.58",
     "mathjs": "^15.1.0",
-    "nerdamer-prime": "^1.3.1"
+    "nerdamer-prime": "^1.3.1",
+    "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "react": "*",

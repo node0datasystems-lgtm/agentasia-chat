@@ -1,4 +1,4 @@
-import type { AiProviderListItem } from '@lobechat/types';
+import type { AiProviderListItem } from '@agentasia/types';
 import { DEFAULT_MODEL_PROVIDER_LIST } from 'model-bank/modelProviders';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 

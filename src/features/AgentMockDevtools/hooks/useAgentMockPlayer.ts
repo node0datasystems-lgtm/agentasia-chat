@@ -1,5 +1,5 @@
-import { executeMockStream, type MockCase } from '@lobechat/agent-mock';
-import type { ConversationContext } from '@lobechat/types';
+import { executeMockStream, type MockCase } from '@agentasia/agent-mock';
+import type { ConversationContext } from '@agentasia/types';
 import { useCallback } from 'react';
 
 import { topicSelectors } from '@/store/chat/selectors';

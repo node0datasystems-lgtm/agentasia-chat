@@ -1,6 +1,6 @@
 'use client';
 
-import { ClaudeCodeIdentifier } from '@lobechat/builtin-tool-claude-code/client';
+import { ClaudeCodeIdentifier } from '@agentasia/builtin-tool-claude-code/client';
 
 import { defineFixtures, single, variants } from './_helpers';
 
@@ -12,12 +12,12 @@ const linearIssueResult = {
   links: [
     {
       title: 'PR #15766: refactor(chat): unify agent run lifecycle',
-      url: 'https://github.com/lobehub/lobehub/pull/15766',
+      url: 'https://github.com/node0datasystems-lgtm/agentasia-chat/pull/15766',
     },
   ],
   state: { name: 'In Review' },
   title: '统一三种客户端 Agent Runtime 的 run 生命周期 hooks',
-  url: 'https://linear.app/lobehub/issue/TEST-0000',
+  url: 'https://linear.app/agentasia/issue/TEST-0000',
 };
 
 export default defineFixtures({
@@ -188,7 +188,7 @@ export default defineFixtures({
     Read: single({
       args: { file_path: 'packages/builtin-tools/src/renders.ts' },
       content:
-        "1  import { RunCommandRender } from '@lobechat/shared-tool-ui/renders';\n2  export interface BuiltinRenderRegistryEntry { ... }",
+        "1  import { RunCommandRender } from '@agentasia/shared-tool-ui/renders';\n2  export interface BuiltinRenderRegistryEntry { ... }",
     }),
     ScheduleWakeup: single({
       args: {
@@ -203,7 +203,7 @@ export default defineFixtures({
     TaskOutput: single({
       args: { block: false, task_id: 'task-build-2025-04-25', timeout_ms: 8000 },
       content:
-        '✅  Vite: compile and bundle finished (200) http://localhost:9876/\nDebug Proxy: https://app.lobehub.com/_dangerous_local_dev_proxy?debug-host=http://localhost:9876',
+        '✅  Vite: compile and bundle finished (200) http://localhost:9876/\nDebug Proxy: https://app.agentasia.ai/_dangerous_local_dev_proxy?debug-host=http://localhost:9876',
     }),
     TaskStop: single({
       args: { task_id: 'task-build-2025-04-25' },
@@ -397,7 +397,7 @@ export default defineFixtures({
     WebFetch: single({
       args: {
         prompt: 'Summarize the key changes in the latest release.',
-        url: 'https://github.com/lobehub/lobe-chat/releases/latest',
+        url: 'https://github.com/agentasia/agentasia-chat/releases/latest',
       },
       content:
         '## LobeChat v1.0\n\n- New agent runtime with tool streaming\n- Faster cold start\n- Fixed a memory leak in the chat store',

@@ -1,5 +1,5 @@
-import { KeyEnum } from '@lobechat/const/hotkeys';
-import { combineKeys, Flexbox, Hotkey, Text } from '@lobehub/ui';
+import { KeyEnum } from '@agentasia/const/hotkeys';
+import { combineKeys, Flexbox, Hotkey, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -86,7 +86,7 @@ const interactivityBody = (teamId: string) =>
 const slashCommandBody = (teamId: string) =>
   new URLSearchParams({
     api_app_id: 'A_APP',
-    command: '/lobehub',
+    command: '/agentasia',
     team_id: teamId,
     user_id: 'U_X',
   }).toString();

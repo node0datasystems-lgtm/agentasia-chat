@@ -1,5 +1,5 @@
-import { ComputerRuntime } from '@lobechat/tool-runtime';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import { ComputerRuntime } from '@agentasia/tool-runtime';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type {
   ExecuteCodeParams,

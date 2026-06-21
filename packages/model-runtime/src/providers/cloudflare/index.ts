@@ -1,4 +1,4 @@
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import { ModelProvider } from 'model-bank';
 
 import type { LobeRuntimeAI } from '../../core/BaseAI';

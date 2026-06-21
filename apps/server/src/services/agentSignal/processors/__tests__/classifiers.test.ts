@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { SourceAgentUserMessage } from '@lobechat/agent-signal/source';
+import type { SourceAgentUserMessage } from '@agentasia/agent-signal/source';
 import { describe, expect, it, vi } from 'vitest';
 import { z } from 'zod';
 

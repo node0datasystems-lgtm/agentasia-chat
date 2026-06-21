@@ -1,5 +1,5 @@
-import { type ChatFileChunk } from '@lobechat/types';
-import { Center, Flexbox, Text, Tooltip } from '@lobehub/ui';
+import { type ChatFileChunk } from '@agentasia/types';
+import { Center, Flexbox, Text, Tooltip } from '@agentasia/ui';
 import { cx } from 'antd-style';
 import { memo } from 'react';
 

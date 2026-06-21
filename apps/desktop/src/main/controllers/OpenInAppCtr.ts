@@ -2,7 +2,7 @@ import type {
   DetectAppsResult,
   OpenInAppParams,
   OpenInAppResult,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { getCachedDetection } from '@/modules/openInApp/cache';
 import { detectApp } from '@/modules/openInApp/detectors';

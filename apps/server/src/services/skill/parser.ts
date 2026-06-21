@@ -5,7 +5,7 @@ import {
   type ParsedZipSkill,
   type SkillManifest,
   skillManifestSchema,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { unzip as fflateUnzip, zip as fflateZip } from 'fflate';
 import matter from 'gray-matter';
 import { sha256 } from 'js-sha256';

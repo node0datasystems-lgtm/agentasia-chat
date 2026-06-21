@@ -1,10 +1,10 @@
-import { LobeActivatorIdentifier } from '@lobechat/builtin-tool-activator';
-import { SkillsIdentifier } from '@lobechat/builtin-tool-skills';
+import { LobeActivatorIdentifier } from '@agentasia/builtin-tool-activator';
+import { SkillsIdentifier } from '@agentasia/builtin-tool-skills';
 import {
   type StepActivatedSkill,
   type StepContextTodos,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { chatHelpers } from '../../../helpers';
 import { type ChatStoreState } from '../../../initialState';

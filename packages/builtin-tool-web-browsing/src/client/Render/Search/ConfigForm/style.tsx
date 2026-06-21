@@ -1,5 +1,5 @@
-import type { CenterProps } from '@lobehub/ui';
-import { Avatar, Center, Flexbox } from '@lobehub/ui';
+import type { CenterProps } from '@agentasia/ui';
+import { Avatar, Center, Flexbox } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import type { ReactNode } from 'react';
 import { memo } from 'react';

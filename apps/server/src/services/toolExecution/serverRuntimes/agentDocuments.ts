@@ -1,9 +1,9 @@
-import type { DocumentLoadRule } from '@lobechat/agent-templates';
+import type { DocumentLoadRule } from '@agentasia/agent-templates';
 import {
   AgentDocumentsIdentifier,
   buildAgentDocumentUrl,
-} from '@lobechat/builtin-tool-agent-documents';
-import { AgentDocumentsExecutionRuntime } from '@lobechat/builtin-tool-agent-documents/executionRuntime';
+} from '@agentasia/builtin-tool-agent-documents';
+import { AgentDocumentsExecutionRuntime } from '@agentasia/builtin-tool-agent-documents/executionRuntime';
 import { eq } from 'drizzle-orm';
 
 import { TaskModel } from '@/database/models/task';

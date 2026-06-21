@@ -1,4 +1,4 @@
-import { getErrorCodeSpec } from '@lobechat/model-runtime';
+import { getErrorCodeSpec } from '@agentasia/model-runtime';
 
 /**
  * Loose `t` shape that accepts any key / vars — the type-safe key inference in

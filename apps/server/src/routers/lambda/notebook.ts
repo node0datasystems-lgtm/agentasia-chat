@@ -1,4 +1,4 @@
-import { type NotebookDocument } from '@lobechat/types';
+import { type NotebookDocument } from '@agentasia/types';
 import { z } from 'zod';
 
 import { withScopedPermission } from '@/business/server/trpc-middlewares/rbacPermission';

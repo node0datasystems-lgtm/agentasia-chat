@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_INBOX_AVATAR } from '@lobechat/const';
-import { Avatar, Icon } from '@lobehub/ui';
+import { DEFAULT_INBOX_AVATAR } from '@agentasia/const';
+import { Avatar, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { Loader2 } from 'lucide-react';
 import { type CSSProperties } from 'react';

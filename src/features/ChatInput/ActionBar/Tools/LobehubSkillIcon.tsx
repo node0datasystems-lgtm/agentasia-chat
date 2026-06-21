@@ -1,12 +1,12 @@
-import { type LobehubSkillProviderType } from '@lobechat/const';
-import { Icon } from '@lobehub/ui';
+import { type LobehubSkillProviderType } from '@agentasia/const';
+import { Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 
 export const SKILL_ICON_SIZE = 20;
 
 /**
- * LobeHub Skill Provider icon component
+ * AgentAsia Skill Provider icon component
  */
 const LobehubSkillIcon = memo<Pick<LobehubSkillProviderType, 'icon' | 'label'> & { size: number }>(
   ({ icon, label, size = SKILL_ICON_SIZE }) => {

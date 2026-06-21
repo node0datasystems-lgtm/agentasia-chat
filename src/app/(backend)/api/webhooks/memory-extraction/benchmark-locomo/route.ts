@@ -1,5 +1,5 @@
-import { BenchmarkLocomoContextProvider } from '@lobechat/memory-user-memory';
-import { MemorySourceType } from '@lobechat/types';
+import { BenchmarkLocomoContextProvider } from '@agentasia/memory-user-memory';
+import { MemorySourceType } from '@agentasia/types';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 

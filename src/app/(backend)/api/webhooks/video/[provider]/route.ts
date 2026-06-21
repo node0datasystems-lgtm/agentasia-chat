@@ -3,8 +3,8 @@ import { timingSafeEqual } from 'node:crypto';
 import {
   buildMappedBusinessModelFields,
   resolveBusinessModelMapping,
-} from '@lobechat/business-model-runtime';
-import { ModelRuntime } from '@lobechat/model-runtime';
+} from '@agentasia/business-model-runtime';
+import { ModelRuntime } from '@agentasia/model-runtime';
 import {
   AsyncTaskError,
   AsyncTaskErrorType,
@@ -12,7 +12,7 @@ import {
   FileSource,
   type VideoGenerationAsset,
   type VideoGenerationTaskMetadata,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 import { eq } from 'drizzle-orm';
 import { type RuntimeVideoGenParams } from 'model-bank';

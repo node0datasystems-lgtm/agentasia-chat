@@ -1,7 +1,7 @@
 'use client';
 
-import { BRANDING_NAME } from '@lobechat/business-const';
-import { Block, Modal, Text } from '@lobehub/ui';
+import { BRANDING_NAME } from '@agentasia/business-const';
+import { Block, Modal, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

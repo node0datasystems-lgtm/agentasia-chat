@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Checkbox, Flexbox, stopPropagation, Text } from '@lobehub/ui';
+import { Avatar, Checkbox, Flexbox, stopPropagation, Text } from '@agentasia/ui';
 import { useHover } from 'ahooks';
 import { createStaticStyles } from 'antd-style';
 import { X } from 'lucide-react';

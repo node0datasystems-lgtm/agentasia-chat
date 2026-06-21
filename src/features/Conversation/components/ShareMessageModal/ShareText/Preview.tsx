@@ -1,4 +1,4 @@
-import { Markdown } from '@lobehub/ui';
+import { Markdown } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useIsMobile } from '@/hooks/useIsMobile';

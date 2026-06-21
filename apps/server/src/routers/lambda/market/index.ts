@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { TRPCError } from '@trpc/server';
 import { serialize } from 'cookie';
 import debug from 'debug';

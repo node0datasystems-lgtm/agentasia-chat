@@ -7,15 +7,15 @@ import {
   defaultGetProjectFileIndex,
   type DeviceControlDeps,
   executeDeviceRpc,
-} from '@lobechat/device-control';
+} from '@agentasia/device-control';
 import type {
   AgentRunRequestMessage,
   DeviceSystemInfo,
   RpcRequestMessage,
   SystemInfoRequestMessage,
   ToolCallRequestMessage,
-} from '@lobechat/device-gateway-client';
-import { GatewayClient } from '@lobechat/device-gateway-client';
+} from '@agentasia/device-gateway-client';
+import { GatewayClient } from '@agentasia/device-gateway-client';
 import type { Command } from 'commander';
 
 import { resolveToken } from '../auth/resolveToken';
@@ -284,7 +284,7 @@ async function runConnect(options: ConnectOptions, isDaemonChild: boolean) {
   };
 
   // Print device info
-  info('─── LobeHub CLI ───');
+  info('─── AgentAsia CLI ───');
   info(`  Device ID : ${client.currentDeviceId}`);
   info(`  Hostname  : ${os.hostname()}`);
   info(`  Platform  : ${process.platform}`);
@@ -645,7 +645,7 @@ function collectSystemInfo(): DeviceSystemInfo {
     homePath: home,
     musicPath: path.join(home, 'Music'),
     picturesPath: path.join(home, 'Pictures'),
-    userDataPath: path.join(home, '.lobehub'),
+    userDataPath: path.join(home, '.agentasia'),
     videosPath: path.join(home, videosDir),
     workingDirectory: process.cwd(),
   };

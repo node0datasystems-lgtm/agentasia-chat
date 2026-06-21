@@ -1,4 +1,4 @@
-import { HotkeyEnum } from '@lobechat/const/hotkeys';
+import { HotkeyEnum } from '@agentasia/const/hotkeys';
 import { act, renderHook } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -1,5 +1,5 @@
-import type { TaskStatus } from '@lobechat/types';
-import { Icon, Text, Tooltip } from '@lobehub/ui';
+import type { TaskStatus } from '@agentasia/types';
+import { Icon, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { PanelRightClose, PanelRightOpen } from 'lucide-react';
 import { memo } from 'react';

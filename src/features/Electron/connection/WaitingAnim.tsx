@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { createStaticStyles, cx, keyframes } from 'antd-style';
 import { WifiIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { type AgentItem, type LobeAgentConfig } from '@lobechat/types';
+import { type AgentItem, type LobeAgentConfig } from '@agentasia/types';
 import { type SWRResponse } from 'swr';
 import { type PartialDeep } from 'type-fest';
 

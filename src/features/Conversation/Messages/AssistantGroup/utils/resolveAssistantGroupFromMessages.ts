@@ -1,4 +1,4 @@
-import type { AssistantContentBlock, UIChatMessage } from '@lobechat/types';
+import type { AssistantContentBlock, UIChatMessage } from '@agentasia/types';
 
 export interface ResolvedAssistantGroup {
   assistantId: string;

@@ -1,5 +1,5 @@
-import { chainAnswerWithContext } from '@lobechat/prompts';
-import { EvalEvaluationStatus, RequestTrigger } from '@lobechat/types';
+import { chainAnswerWithContext } from '@agentasia/prompts';
+import { EvalEvaluationStatus, RequestTrigger } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { eq } from 'drizzle-orm';
 import { ModelProvider } from 'model-bank';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert } from '@lobehub/ui';
+import { Alert } from '@agentasia/ui';
 import { type ErrorInfo, type ReactNode } from 'react';
 import { Component } from 'react';
 

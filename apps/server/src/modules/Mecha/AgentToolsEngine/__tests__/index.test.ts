@@ -1,12 +1,12 @@
 // @vitest-environment node
-import { KnowledgeBaseManifest } from '@lobechat/builtin-tool-knowledge-base';
-import { LobeAgentManifest } from '@lobechat/builtin-tool-lobe-agent';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { MemoryManifest } from '@lobechat/builtin-tool-memory';
-import { RemoteDeviceManifest } from '@lobechat/builtin-tool-remote-device';
-import { WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
-import { builtinTools } from '@lobechat/builtin-tools';
-import { ToolsEngine } from '@lobechat/context-engine';
+import { KnowledgeBaseManifest } from '@agentasia/builtin-tool-knowledge-base';
+import { LobeAgentManifest } from '@agentasia/builtin-tool-lobe-agent';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { MemoryManifest } from '@agentasia/builtin-tool-memory';
+import { RemoteDeviceManifest } from '@agentasia/builtin-tool-remote-device';
+import { WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
+import { builtinTools } from '@agentasia/builtin-tools';
+import { ToolsEngine } from '@agentasia/context-engine';
 import { describe, expect, it } from 'vitest';
 
 import { createServerAgentToolsEngine, createServerToolsEngine } from '../index';

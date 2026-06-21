@@ -1,7 +1,7 @@
 'use client';
 
-import { BRANDING_NAME } from '@lobechat/business-const';
-import { Center, Flexbox, Icon } from '@lobehub/ui';
+import { BRANDING_NAME } from '@agentasia/business-const';
+import { Center, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { MessageSquareHeart } from 'lucide-react';
 import { type PropsWithChildren } from 'react';

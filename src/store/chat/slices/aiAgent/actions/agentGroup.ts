@@ -1,7 +1,7 @@
 // Disable the auto sort key eslint rule to make the code more logic and readable
-import { LOADING_FLAT } from '@lobechat/const';
-import { type SendGroupMessageParams } from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+import { LOADING_FLAT } from '@agentasia/const';
+import { type SendGroupMessageParams } from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 import debug from 'debug';
 
 import { lambdaClient } from '@/libs/trpc/client';

@@ -1,10 +1,10 @@
 import { randomUUID } from 'node:crypto';
 
-import { TRACING_SCENARIOS } from '@lobechat/const';
-import { getErrorCodeSpec } from '@lobechat/model-runtime';
-import type { CreateMessageParams, SendMessageServerResponse } from '@lobechat/types';
-import { AiSendMessageServerSchema, RequestTrigger, StructureOutputSchema } from '@lobechat/types';
-import { createTimingHelpers, createTimingRequestId } from '@lobechat/utils';
+import { TRACING_SCENARIOS } from '@agentasia/const';
+import { getErrorCodeSpec } from '@agentasia/model-runtime';
+import type { CreateMessageParams, SendMessageServerResponse } from '@agentasia/types';
+import { AiSendMessageServerSchema, RequestTrigger, StructureOutputSchema } from '@agentasia/types';
+import { createTimingHelpers, createTimingRequestId } from '@agentasia/utils';
 import { TRPCError } from '@trpc/server';
 import { getStatusKeyFromCode } from '@trpc/server/unstable-core-do-not-import';
 import debug from 'debug';
@@ -27,7 +27,7 @@ import { archiveToolResultIfNeeded } from '@/server/services/toolExecution/archi
 
 const log = debug('lobe-lambda-router:ai-chat');
 const { createPrefixedTimingContext, logTiming, runTimedStage } = createTimingHelpers(
-  'lobe-server:chat:lobehub:timing',
+  'lobe-server:chat:agentasia:timing',
 );
 const SILENT_TRPC_ERROR_LOG_KEY = '__lobeSilentTRPCErrorLog';
 
@@ -167,7 +167,7 @@ export const aiChatRouter = router({
     .input(AiSendMessageServerSchema)
     .mutation(async ({ input, ctx }) => {
       const timingContext =
-        input.newAssistantMessage.provider === 'lobehub'
+        input.newAssistantMessage.provider === 'agentasia'
           ? { requestId: createTimingRequestId(), startedAt: Date.now() }
           : undefined;
       logTiming(timingContext, 'lambda.aiChat.sendMessageInServer:start', {

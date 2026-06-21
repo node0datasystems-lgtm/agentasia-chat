@@ -1,4 +1,4 @@
-import { SELF_ITERATION_AGENT_SLUGS } from '@lobechat/builtin-agents';
+import { SELF_ITERATION_AGENT_SLUGS } from '@agentasia/builtin-agents';
 
 /**
  * Returns true when the agent run should not trigger downstream

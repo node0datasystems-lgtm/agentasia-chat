@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
-import { EditableMessage } from '@lobehub/ui/chat';
+import { Flexbox } from '@agentasia/ui';
+import { EditableMessage } from '@agentasia/ui/chat';
 import { type MouseEvent } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

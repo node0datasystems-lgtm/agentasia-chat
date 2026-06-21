@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -11,7 +11,7 @@ const permissionMock = vi.hoisted(() => ({
   canEdit: true,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIconGroup: ({
     items,
     menu,

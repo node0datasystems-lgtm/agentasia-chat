@@ -1,4 +1,4 @@
-import type { FollowUpModelConfig } from '@lobechat/types';
+import type { FollowUpModelConfig } from '@agentasia/types';
 import { useMemo } from 'react';
 
 import { type ConversationHooks } from '@/features/Conversation/types';

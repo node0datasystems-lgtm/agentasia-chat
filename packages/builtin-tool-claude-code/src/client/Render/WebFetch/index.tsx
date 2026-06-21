@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Markdown } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Markdown } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { WebFetchArgs } from '../../../types';

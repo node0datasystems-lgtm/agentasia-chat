@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@lobehub/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

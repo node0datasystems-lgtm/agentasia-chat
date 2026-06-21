@@ -9,8 +9,8 @@ import {
   Segmented,
   Skeleton,
   SliderWithInput,
-} from '@lobehub/ui';
-import { Select, Switch } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { Select, Switch } from '@agentasia/ui/base-ui';
 import isEqual from 'fast-deep-equal';
 import { Loader2Icon } from 'lucide-react';
 import { memo, useState } from 'react';

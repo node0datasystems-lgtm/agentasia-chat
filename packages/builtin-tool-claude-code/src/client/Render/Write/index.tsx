@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Highlighter, Markdown, Skeleton } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Highlighter, Markdown, Skeleton } from '@agentasia/ui';
 import path from 'path-browserify-esm';
 import { memo } from 'react';
 

@@ -1,4 +1,4 @@
-import { LOBE_CHAT_TRACE_HEADER, LOBE_CHAT_TRACE_ID } from '@lobechat/const';
+import { LOBE_CHAT_TRACE_HEADER, LOBE_CHAT_TRACE_ID } from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import { createTraceHeader, getTraceId, getTracePayload } from './trace';

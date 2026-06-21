@@ -1,4 +1,4 @@
-import type { TaskAutomationMode, TaskStatus } from '@lobechat/types';
+import type { TaskAutomationMode, TaskStatus } from '@agentasia/types';
 
 export const TaskApiName = {
   /** Add a comment to a task */

@@ -1,7 +1,7 @@
 'use client';
 
-import { Alert, Flexbox, Icon, Input } from '@lobehub/ui';
-import { GithubIcon } from '@lobehub/ui/icons';
+import { Alert, Flexbox, Icon, Input } from '@agentasia/ui';
+import { GithubIcon } from '@agentasia/ui/icons';
 import { App, Button, Modal, Typography } from 'antd';
 import { ArrowLeftRight, Sparkles } from 'lucide-react';
 import { memo, useState } from 'react';

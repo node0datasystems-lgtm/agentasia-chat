@@ -1,4 +1,4 @@
-import type { TaskDetailData } from '@lobechat/types';
+import type { TaskDetailData } from '@agentasia/types';
 
 import type { TaskStoreState } from '../initialState';
 

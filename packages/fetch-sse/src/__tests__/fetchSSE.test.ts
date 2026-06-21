@@ -1,8 +1,8 @@
-import { MESSAGE_CANCEL_FLAT } from '@lobechat/const';
-import type { ChatMessageError } from '@lobechat/types';
-import type { FetchEventSourceInit } from '@lobechat/utils/client/fetchEventSource/index';
-import { fetchEventSource } from '@lobechat/utils/client/fetchEventSource/index';
-import { sleep } from '@lobechat/utils/sleep';
+import { MESSAGE_CANCEL_FLAT } from '@agentasia/const';
+import type { ChatMessageError } from '@agentasia/types';
+import type { FetchEventSourceInit } from '@agentasia/utils/client/fetchEventSource/index';
+import { fetchEventSource } from '@agentasia/utils/client/fetchEventSource/index';
+import { sleep } from '@agentasia/utils/sleep';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { fetchSSE } from '../fetchSSE';
@@ -577,7 +577,7 @@ describe('fetchSSE', () => {
             type: 'invalid_request_error',
             message: 'Invalid signature in thinking block',
           },
-          provider: 'lobehub',
+          provider: 'agentasia',
           errorType: 'ProviderBizError',
         },
         message: 'ProviderBizError',
@@ -602,7 +602,7 @@ describe('fetchSSE', () => {
       expect(receivedError.body).not.toHaveProperty('elapsedMs');
       expect(receivedError.body).not.toHaveProperty('networkStatus');
       expect(receivedError.body).not.toHaveProperty('model');
-      expect(receivedError.body.provider).toBe('lobehub');
+      expect(receivedError.body.provider).toBe('agentasia');
     });
 
     it('should call onErrorHandle when Unknown error is thrown', async () => {

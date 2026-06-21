@@ -166,7 +166,7 @@ export interface UniformTool {
 
 // ---- Tool Lifecycle Types ----
 
-export type ToolSource = 'builtin' | 'client' | 'mcp' | 'composio' | 'lobehubSkill';
+export type ToolSource = 'builtin' | 'client' | 'mcp' | 'composio' | 'agentasiaSkill';
 
 /**
  * Where the tool is executed for a given invocation.

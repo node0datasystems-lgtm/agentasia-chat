@@ -1,4 +1,4 @@
-import { type BuiltinToolManifest } from '@lobechat/types';
+import { type BuiltinToolManifest } from '@agentasia/types';
 
 import { TopicReferenceApiName, TopicReferenceIdentifier } from './types';
 

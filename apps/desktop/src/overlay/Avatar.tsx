@@ -1,4 +1,4 @@
-import { FluentEmoji, getEmoji } from '@lobehub/fluent-emoji';
+import { FluentEmoji, getEmoji } from '@agentasia/fluent-emoji';
 import { memo, useMemo } from 'react';
 
 import * as styles from './avatar.css.ts';

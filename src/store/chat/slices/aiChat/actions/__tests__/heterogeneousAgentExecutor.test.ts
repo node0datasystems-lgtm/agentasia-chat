@@ -11,11 +11,11 @@
  */
 import path from 'node:path';
 
-import type * as LobeChatConst from '@lobechat/const';
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
-import type { AgentEventAdapter } from '@lobechat/heterogeneous-agents';
-import { createAdapter } from '@lobechat/heterogeneous-agents';
-import { ThreadStatus } from '@lobechat/types';
+import type * as LobeChatConst from '@agentasia/const';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
+import type { AgentEventAdapter } from '@agentasia/heterogeneous-agents';
+import { createAdapter } from '@agentasia/heterogeneous-agents';
+import { ThreadStatus } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { useChatStore } from '@/store/chat/store';

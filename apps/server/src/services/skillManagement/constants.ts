@@ -8,4 +8,4 @@ export {
   SKILL_INDEX_FILENAME,
   SKILL_MANAGEMENT_SOURCE,
   SKILL_MANAGEMENT_SOURCE_TYPE,
-} from '@lobechat/database/schemas';
+} from '@agentasia/database/schemas';

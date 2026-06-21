@@ -41,7 +41,7 @@ export function createProgram() {
 
   program
     .name('lh')
-    .description('LobeHub CLI - manage and connect to LobeHub services')
+    .description('AgentAsia CLI - manage and connect to AgentAsia services')
     .version(cliVersion);
 
   registerLoginCommand(program);

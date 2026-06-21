@@ -1,4 +1,4 @@
-import { Block, Flexbox, Icon } from '@lobehub/ui';
+import { Block, Flexbox, Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { LucideArrowRight, LucideBolt } from 'lucide-react';
 import { type FC } from 'react';

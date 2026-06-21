@@ -1,5 +1,5 @@
-import { isRecord } from '@lobechat/utils/object';
-import { safeParseJSON } from '@lobechat/utils/safeParseJSON';
+import { isRecord } from '@agentasia/utils/object';
+import { safeParseJSON } from '@agentasia/utils/safeParseJSON';
 
 import { parseToolName, staticLabelFor } from '../../Inspector/Linear/labels';
 

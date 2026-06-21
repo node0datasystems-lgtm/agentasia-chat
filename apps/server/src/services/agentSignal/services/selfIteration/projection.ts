@@ -1,5 +1,5 @@
-import type { ChatToolPayload } from '@lobechat/types';
-import { pickTrimmedString, toRecord } from '@lobechat/utils';
+import type { ChatToolPayload } from '@agentasia/types';
+import { pickTrimmedString, toRecord } from '@agentasia/utils';
 
 import type {
   SelfReviewIdea,

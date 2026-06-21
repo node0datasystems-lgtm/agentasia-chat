@@ -41,16 +41,16 @@ describe('collectAttachmentUrlsFromEditorData', () => {
       root: {
         children: [
           {
-            children: [image('https://app.lobehub.com/f/file_nested')],
+            children: [image('https://app.agentasia.ai/f/file_nested')],
             type: 'paragraph',
           },
-          file('https://app.lobehub.com/f/file_pdf', 'doc.pdf'),
+          file('https://app.agentasia.ai/f/file_pdf', 'doc.pdf'),
         ],
       },
     };
     expect(collectAttachmentUrlsFromEditorData(json)).toEqual([
-      'https://app.lobehub.com/f/file_nested',
-      'https://app.lobehub.com/f/file_pdf',
+      'https://app.agentasia.ai/f/file_nested',
+      'https://app.agentasia.ai/f/file_pdf',
     ]);
   });
 

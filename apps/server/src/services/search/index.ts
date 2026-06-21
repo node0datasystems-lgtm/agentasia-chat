@@ -1,5 +1,5 @@
-import type { SearchParams, SearchQuery } from '@lobechat/types';
-import type { Crawler, CrawlImplType, CrawlUniformResult } from '@lobechat/web-crawler';
+import type { SearchParams, SearchQuery } from '@agentasia/types';
+import type { Crawler, CrawlImplType, CrawlUniformResult } from '@agentasia/web-crawler';
 import debug from 'debug';
 import pMap from 'p-map';
 

@@ -13,8 +13,8 @@ import {
   saveSettings,
 } from './index';
 
-const tmpDir = path.join(os.tmpdir(), 'lobehub-cli-test-settings');
-const settingsDir = path.join(tmpDir, '.lobehub');
+const tmpDir = path.join(os.tmpdir(), 'agentasia-cli-test-settings');
+const settingsDir = path.join(tmpDir, '.agentasia');
 const settingsFile = path.join(settingsDir, 'settings.json');
 const originalServer = process.env.LOBEHUB_SERVER;
 
@@ -24,7 +24,7 @@ vi.mock('node:os', async (importOriginal) => {
     ...actual,
     default: {
       ...actual.default,
-      homedir: () => path.join(os.tmpdir(), 'lobehub-cli-test-settings'),
+      homedir: () => path.join(os.tmpdir(), 'agentasia-cli-test-settings'),
     },
   };
 });
@@ -60,7 +60,7 @@ describe('settings', () => {
   });
 
   it('should clear official server settings instead of persisting them', () => {
-    saveSettings({ serverUrl: 'https://app.lobehub.com/' });
+    saveSettings({ serverUrl: 'https://app.agentasia.ai/' });
 
     expect(fs.existsSync(settingsFile)).toBe(false);
     expect(loadSettings()).toBeNull();
@@ -95,7 +95,7 @@ describe('settings', () => {
 
     fs.unlinkSync(settingsFile);
 
-    expect(resolveServerUrl()).toBe('https://app.lobehub.com');
+    expect(resolveServerUrl()).toBe('https://app.agentasia.ai');
   });
 
   it('should create a connectionId once and reuse it across calls', () => {
@@ -110,7 +110,7 @@ describe('settings', () => {
   it('should keep the connectionId even when settings.json is cleared', () => {
     const id = loadOrCreateConnectionId();
     // Clearing official-server settings unlinks settings.json — connectionId must survive.
-    saveSettings({ serverUrl: 'https://app.lobehub.com/' });
+    saveSettings({ serverUrl: 'https://app.agentasia.ai/' });
 
     expect(fs.existsSync(settingsFile)).toBe(false);
     expect(loadOrCreateConnectionId()).toBe(id);

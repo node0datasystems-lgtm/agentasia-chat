@@ -1,4 +1,4 @@
-import { Avatar, Block, Button, Center, Flexbox, Text } from '@lobehub/ui';
+import { Avatar, Block, Button, Center, Flexbox, Text } from '@agentasia/ui';
 import { HandIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

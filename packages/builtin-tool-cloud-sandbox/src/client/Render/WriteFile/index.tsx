@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Block, Highlighter } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Block, Highlighter } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { WriteLocalFileState } from '../../../types';

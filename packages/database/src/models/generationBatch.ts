@@ -4,7 +4,7 @@ import type {
   GenerationConfig,
   ImageGenerationAsset,
   VideoGenerationAsset,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
 

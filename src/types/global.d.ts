@@ -1,7 +1,7 @@
 import 'antd-style';
 
-import { type IEditor } from '@lobehub/editor';
-import { type LobeCustomStylish, type LobeCustomToken } from '@lobehub/ui';
+import { type IEditor } from '@agentasia/editor';
+import { type LobeCustomStylish, type LobeCustomToken } from '@agentasia/ui';
 import { type AntdToken } from 'antd-style/lib/types/theme';
 
 import { type SPAServerConfig } from './spaServerConfig';

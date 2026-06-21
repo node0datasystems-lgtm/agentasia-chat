@@ -1,6 +1,6 @@
 'use client';
 
-import { createModal } from '@lobehub/ui/base-ui';
+import { createModal } from '@agentasia/ui/base-ui';
 import { t } from 'i18next';
 
 import { BuiltinAgentSkillDetailContent } from './BuiltinAgentSkillDetailContent';

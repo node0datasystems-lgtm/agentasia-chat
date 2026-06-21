@@ -1,4 +1,4 @@
-import type { ChatToolPayload, UIChatMessage } from '@lobechat/types';
+import type { ChatToolPayload, UIChatMessage } from '@agentasia/types';
 
 /**
  * Keep a raw message bucket internally consistent on the tool↔assistant link.

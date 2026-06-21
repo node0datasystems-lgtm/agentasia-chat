@@ -1,4 +1,4 @@
-import type { WorkingDirEntry } from '@lobechat/types';
+import type { WorkingDirEntry } from '@agentasia/types';
 import { and, desc, eq, isNull, sql } from 'drizzle-orm';
 
 import type { DeviceItem } from '../schemas';

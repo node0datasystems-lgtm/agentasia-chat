@@ -1,7 +1,7 @@
 'use client';
 
-import { HotkeyGroupEnum } from '@lobechat/const/hotkeys';
-import { Grid, Icon, Modal, Segmented } from '@lobehub/ui';
+import { HotkeyGroupEnum } from '@agentasia/const/hotkeys';
+import { Grid, Icon, Modal, Segmented } from '@agentasia/ui';
 import { MessageSquare, Settings2 } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

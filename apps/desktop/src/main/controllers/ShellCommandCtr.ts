@@ -5,8 +5,8 @@ import type {
   KillCommandResult,
   RunCommandParams,
   RunCommandResult,
-} from '@lobechat/electron-client-ipc';
-import { runCommand, ShellProcessManager } from '@lobechat/local-file-shell';
+} from '@agentasia/electron-client-ipc';
+import { runCommand, ShellProcessManager } from '@agentasia/local-file-shell';
 
 import { createLogger } from '@/utils/logger';
 
@@ -17,8 +17,8 @@ const logger = createLogger('controllers:ShellCommandCtr');
 
 const processManager = new ShellProcessManager();
 
-/** Prefix for a simple `lh`/`lobe`/`lobehub` invocation (keyword + boundary, args via slice). */
-const SIMPLE_LH_PREFIX = /^\s*(?:lh|lobe|lobehub)(?=\s|$)/;
+/** Prefix for a simple `lh`/`lobe`/`agentasia` invocation (keyword + boundary, args via slice). */
+const SIMPLE_LH_PREFIX = /^\s*(?:lh|lobe|agentasia)(?=\s|$)/;
 
 export default class ShellCommandCtr extends ControllerModule {
   static override readonly groupName = 'shellCommand';

@@ -1,7 +1,7 @@
 'use client';
 
-import { formatElapsedClockTime } from '@lobechat/utils';
-import { Flexbox, Icon, Popover, Tooltip } from '@lobehub/ui';
+import { formatElapsedClockTime } from '@agentasia/utils';
+import { Flexbox, Icon, Popover, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import { CircleDollarSignIcon, CoinsIcon, FootprintsIcon } from 'lucide-react';

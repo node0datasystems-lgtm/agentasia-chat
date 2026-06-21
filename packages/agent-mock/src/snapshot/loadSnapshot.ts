@@ -1,4 +1,4 @@
-import type { ExecutionSnapshot } from '@lobechat/agent-tracing';
+import type { ExecutionSnapshot } from '@agentasia/agent-tracing';
 
 import type { MockCase } from '../types';
 import { snapshotToEvents } from './snapshotToEvents';

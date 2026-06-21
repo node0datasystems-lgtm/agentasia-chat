@@ -1,6 +1,6 @@
 import process from 'node:process';
 
-import type { ElectronAppState, ThemeMode } from '@lobechat/electron-client-ipc';
+import type { ElectronAppState, ThemeMode } from '@agentasia/electron-client-ipc';
 import { app, dialog, nativeTheme, shell } from 'electron';
 import * as electronIs from 'electron-is';
 import { pathExists, readdir } from 'fs-extra';
@@ -232,7 +232,7 @@ export default class SystemController extends ControllerModule {
 
   /**
    * Detect whether user used the legacy local database in older desktop versions.
-   * Legacy path: {app.getPath('userData')}/lobehub-storage/lobehub-local-db
+   * Legacy path: {app.getPath('userData')}/agentasia-storage/agentasia-local-db
    */
   @IpcMethod()
   async hasLegacyLocalDb(): Promise<boolean> {

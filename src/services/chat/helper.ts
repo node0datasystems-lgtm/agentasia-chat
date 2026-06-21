@@ -13,7 +13,7 @@ export const getEnabledRuntimeModel = (
     (item) => item.id === model && item.providerId === provider,
   );
 
-  if (exactModel || provider !== ModelProvider.LobeHub) return exactModel;
+  if (exactModel || provider !== ModelProvider.AgentAsia) return exactModel;
 
   return state.enabledAiModels?.find((item) => item.id === model);
 };

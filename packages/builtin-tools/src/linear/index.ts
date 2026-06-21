@@ -1,8 +1,8 @@
-import { LINEAR_TOOL_NAMES, LinearInspector } from '@lobechat/shared-tool-ui/inspectors';
-import { LinearRender } from '@lobechat/shared-tool-ui/renders';
-import type { BuiltinInspector, BuiltinRender } from '@lobechat/types';
+import { LINEAR_TOOL_NAMES, LinearInspector } from '@agentasia/shared-tool-ui/inspectors';
+import { LinearRender } from '@agentasia/shared-tool-ui/renders';
+import type { BuiltinInspector, BuiltinRender } from '@agentasia/types';
 
-// LobeHub built-in Linear skill: tool calls arrive with
+// AgentAsia built-in Linear skill: tool calls arrive with
 // `identifier='linear'` and bare `apiName` like 'get_issue'. The shared
 // inspector / render tolerate both bare and MCP-prefixed names, so we just
 // register them under every supported tool suffix.

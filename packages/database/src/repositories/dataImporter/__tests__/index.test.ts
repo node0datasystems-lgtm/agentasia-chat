@@ -1,4 +1,4 @@
-import type { ImporterEntryData, ImportErrorResult, ImportPgDataStructure } from '@lobechat/types';
+import type { ImporterEntryData, ImportErrorResult, ImportPgDataStructure } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

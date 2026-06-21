@@ -10,7 +10,7 @@ const {
   mockAfter,
   mockCreateVideo,
   mockFindUserById,
-  mockIsLobeHubModelAvailable,
+  mockIsAgentAsiaModelAvailable,
   mockProcessBackgroundVideoPolling,
   mockResolveBusinessModelMapping,
   mockServerDB,
@@ -21,14 +21,14 @@ const {
   const mockCreateVideo = vi.fn();
   const mockAfter = vi.fn((cb: () => void) => cb());
   const mockFindUserById = vi.fn();
-  const mockIsLobeHubModelAvailable = vi.fn();
+  const mockIsAgentAsiaModelAvailable = vi.fn();
   const mockProcessBackgroundVideoPolling = vi.fn().mockResolvedValue(undefined);
   const mockResolveBusinessModelMapping = vi.fn();
   return {
     mockAfter,
     mockCreateVideo,
     mockFindUserById,
-    mockIsLobeHubModelAvailable,
+    mockIsAgentAsiaModelAvailable,
     mockProcessBackgroundVideoPolling,
     mockResolveBusinessModelMapping,
     mockServerDB,
@@ -67,13 +67,13 @@ vi.mock('@lobechat/business-model-runtime', async (importOriginal) => ({
     mockResolveBusinessModelMapping(...args),
 }));
 vi.mock('@lobechat/business-model-bank/model-config', () => ({
-  isLobeHubModelAvailable: (
+  isAgentAsiaModelAvailable: (
     ...args: [
       string,
       string,
       { getUserEmail?: () => Promise<string | null | undefined>; userEmail?: string | null }?,
     ]
-  ) => mockIsLobeHubModelAvailable(...args),
+  ) => mockIsAgentAsiaModelAvailable(...args),
 }));
 vi.mock('@/business/server/video-generation/getVideoFreeQuota', () => ({
   getVideoFreeQuota: vi.fn().mockResolvedValue({ remaining: 10 }),
@@ -161,7 +161,7 @@ describe('videoRouter', () => {
       }),
     );
     mockFindUserById.mockResolvedValue({ email: 'user@example.com' });
-    mockIsLobeHubModelAvailable.mockResolvedValue(true);
+    mockIsAgentAsiaModelAvailable.mockResolvedValue(true);
   });
 
   describe('createVideo - async strategy routing', () => {
@@ -181,7 +181,7 @@ describe('videoRouter', () => {
       expect(mockAfter).not.toHaveBeenCalled();
     });
 
-    it('should validate mapped model id before rejecting deprecated lobehub video models', async () => {
+    it('should validate mapped model id before rejecting deprecated agentasia video models', async () => {
       setupMocks();
       mockResolveBusinessModelMapping.mockResolvedValue({
         requestedModelId: 'onboarding-video',
@@ -193,17 +193,17 @@ describe('videoRouter', () => {
       const result = await caller.createVideo({
         ...defaultInput,
         model: 'onboarding-video',
-        provider: 'lobehub',
+        provider: 'agentasia',
       });
 
       expect(result.success).toBe(true);
-      expect(mockResolveBusinessModelMapping).toHaveBeenCalledWith('lobehub', 'onboarding-video');
-      expect(mockIsLobeHubModelAvailable).toHaveBeenCalledWith(
+      expect(mockResolveBusinessModelMapping).toHaveBeenCalledWith('agentasia', 'onboarding-video');
+      expect(mockIsAgentAsiaModelAvailable).toHaveBeenCalledWith(
         'dreamina-seedance-2-0-260128',
         'video',
         { getUserEmail: expect.any(Function) },
       );
-      const availabilityOptions = mockIsLobeHubModelAvailable.mock.calls.at(-1)?.[2];
+      const availabilityOptions = mockIsAgentAsiaModelAvailable.mock.calls.at(-1)?.[2];
       expect(mockFindUserById).not.toHaveBeenCalled();
       await expect(availabilityOptions!.getUserEmail!()).resolves.toBe('user@example.com');
       expect(mockFindUserById).toHaveBeenCalledWith(mockServerDB, mockCtx.userId);
@@ -213,9 +213,9 @@ describe('videoRouter', () => {
       );
     });
 
-    it('should reject unavailable lobehub video models before creating async tasks', async () => {
+    it('should reject unavailable agentasia video models before creating async tasks', async () => {
       setupMocks();
-      mockIsLobeHubModelAvailable.mockResolvedValue(false);
+      mockIsAgentAsiaModelAvailable.mockResolvedValue(false);
 
       const caller = videoRouter.createCaller(mockCtx);
 
@@ -223,11 +223,11 @@ describe('videoRouter', () => {
         caller.createVideo({
           ...defaultInput,
           model: 'restricted-video-model',
-          provider: 'lobehub',
+          provider: 'agentasia',
         }),
       ).rejects.toMatchObject({
         code: 'BAD_REQUEST',
-        message: 'LobeHubModelDeprecated',
+        message: 'AgentAsiaModelDeprecated',
       });
 
       expect(mockTransaction).not.toHaveBeenCalled();

@@ -7,7 +7,7 @@ import { marketSDK, marketUserInfo, serverDatabase } from '@/libs/trpc/lambda/mi
 
 const log = debug('lambda-router:market:socialProfile');
 
-const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.lobehub.com';
+const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.agentasia.ai';
 
 // Authenticated procedure for social profile operations
 const socialProfileAuthProcedure = authedProcedure

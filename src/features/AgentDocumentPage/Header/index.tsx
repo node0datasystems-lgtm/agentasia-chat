@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, Flexbox, Text } from '@lobehub/ui';
-import { DropdownMenu } from '@lobehub/ui/base-ui';
+import { ActionIcon, Flexbox, Text } from '@agentasia/ui';
+import { DropdownMenu } from '@agentasia/ui/base-ui';
 import { cssVar, cx } from 'antd-style';
 import { MoreHorizontal } from 'lucide-react';
 import { memo } from 'react';

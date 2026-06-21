@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, Markdown, Skeleton } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Avatar, Markdown, Skeleton } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Button } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { ConnectorDetail } from '@/features/Connectors';
 import { usePermission } from '@/hooks/usePermission';
 import { useToolStore } from '@/store/tool';
-import { builtinToolSelectors, lobehubSkillStoreSelectors } from '@/store/tool/selectors';
+import { builtinToolSelectors, agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
 import { connectorSelectors } from '@/store/tool/slices/connector';
 
 const AgentSkillDetail = lazy(() => import('@/features/AgentSkillDetail'));
@@ -21,7 +21,7 @@ export type ToolDetailType =
   | 'agent-skill'
   | 'builtin'
   | 'builtin-skill'
-  | 'lobehub-connector'
+  | 'agentasia-connector'
   | 'mcp-connector'
   | 'plugin';
 
@@ -84,8 +84,8 @@ const SkillDetail = memo<SkillDetailProps>(({ identifier, type, onDelete }) => {
   const deleteAgentSkill = useToolStore((s) => s.deleteAgentSkill);
   const connector = useToolStore(connectorSelectors.connectorByIdentifier(identifier));
 
-  // For lobehub-connector: get the server's tool list from the store
-  const lobehubServer = useToolStore(lobehubSkillStoreSelectors.getServerByIdentifier(identifier));
+  // For agentasia-connector: get the server's tool list from the store
+  const agentasiaServer = useToolStore(agentasiaSkillStoreSelectors.getServerByIdentifier(identifier));
 
   // For builtin-skill: look up from store
   const builtinSkill = useToolStore(
@@ -98,7 +98,7 @@ const SkillDetail = memo<SkillDetailProps>(({ identifier, type, onDelete }) => {
     type === 'builtin' ||
     type === 'plugin' ||
     type === 'mcp-connector' ||
-    type === 'lobehub-connector';
+    type === 'agentasia-connector';
 
   useEffect(() => {
     if (!isConnectorType) return;
@@ -109,9 +109,9 @@ const SkillDetail = memo<SkillDetailProps>(({ identifier, type, onDelete }) => {
       try {
         if (type === 'builtin') {
           await syncBuiltinTool(identifier);
-        } else if (type === 'lobehub-connector') {
-          // Use tools from the lobehub skill server (already fetched via OAuth flow)
-          const tools = (lobehubServer?.tools ?? []).map((t) => ({
+        } else if (type === 'agentasia-connector') {
+          // Use tools from the agentasia skill server (already fetched via OAuth flow)
+          const tools = (agentasiaServer?.tools ?? []).map((t) => ({
             description: t.description,
             inputSchema: t.inputSchema as Record<string, unknown>,
             toolName: t.name,
@@ -121,7 +121,7 @@ const SkillDetail = memo<SkillDetailProps>(({ identifier, type, onDelete }) => {
           } else {
             await syncToolsFromClient({
               identifier,
-              name: lobehubServer?.name || identifier,
+              name: agentasiaServer?.name || identifier,
               sourceType: 'marketplace',
               tools,
             });

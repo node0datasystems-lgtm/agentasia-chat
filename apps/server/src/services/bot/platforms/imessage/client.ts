@@ -4,7 +4,7 @@ import {
   createImessageAdapter,
   resolveAttachmentGuid,
   resolveAttachmentName,
-} from '@lobechat/chat-adapter-imessage';
+} from '@agentasia/chat-adapter-imessage';
 import type { Message } from 'chat';
 import debug from 'debug';
 

@@ -1,4 +1,4 @@
-import type { UserPreference } from '@lobechat/types';
+import type { UserPreference } from '@agentasia/types';
 
 /**
  * Current onboarding flow version.

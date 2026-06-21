@@ -1,7 +1,7 @@
-import { getBuiltinStreaming } from '@lobechat/builtin-tools/streamings';
-import { type ChatToolResult, type ToolIntervention } from '@lobechat/types';
-import { safeParsePartialJSON } from '@lobechat/utils';
-import { Flexbox } from '@lobehub/ui';
+import { getBuiltinStreaming } from '@agentasia/builtin-tools/streamings';
+import { type ChatToolResult, type ToolIntervention } from '@agentasia/types';
+import { safeParsePartialJSON } from '@agentasia/utils';
+import { Flexbox } from '@agentasia/ui';
 import { memo, Suspense } from 'react';
 
 import AbortResponse from './AbortResponse';

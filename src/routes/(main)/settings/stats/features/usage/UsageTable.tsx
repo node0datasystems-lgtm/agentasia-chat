@@ -1,5 +1,5 @@
-import { ProviderIcon } from '@lobehub/icons';
-import { Flexbox, Tag, Text, Tooltip } from '@lobehub/ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { Flexbox, Tag, Text, Tooltip } from '@agentasia/ui';
 import { type TableColumnType } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo, useEffect } from 'react';

@@ -1,4 +1,4 @@
-import { EdgeConfig } from '@lobechat/edge-config';
+import { EdgeConfig } from '@agentasia/edge-config';
 import debug from 'debug';
 
 import { businessConfigEndpoints } from '@/business/server/lambda-routers/config';

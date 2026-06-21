@@ -1,4 +1,4 @@
-import type { SkillItem, SkillListItem, SkillResourceMeta } from '@lobechat/types';
+import type { SkillItem, SkillListItem, SkillResourceMeta } from '@agentasia/types';
 
 import { AgentDocumentVfsError } from '@/server/services/agentDocumentVfs/errors';
 import type { SkillResourceService } from '@/server/services/skill/resource';

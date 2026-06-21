@@ -1,6 +1,6 @@
-import { type AgentState, type ExecutorResult } from '@lobechat/agent-runtime';
-import { GroupOrchestrationRuntime, GroupOrchestrationSupervisor } from '@lobechat/agent-runtime';
-import { type TaskStatusResult } from '@lobechat/types';
+import { type AgentState, type ExecutorResult } from '@agentasia/agent-runtime';
+import { GroupOrchestrationRuntime, GroupOrchestrationSupervisor } from '@agentasia/agent-runtime';
+import { type TaskStatusResult } from '@agentasia/types';
 import debug from 'debug';
 import { type SWRResponse } from 'swr';
 

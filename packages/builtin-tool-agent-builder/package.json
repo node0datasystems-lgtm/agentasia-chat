@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-agent-builder",
+  "name": "@agentasia/builtin-tool-agent-builder",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,16 +9,16 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/agent-manager-runtime": "workspace:*",
-    "@lobechat/const": "workspace:*",
-    "@lobechat/prompts": "workspace:*",
-    "type-fest": "^4.18.3"
+    "type-fest": "^4.18.3",
+    "@agentasia/agent-manager-runtime": "workspace:*",
+    "@agentasia/const": "workspace:*",
+    "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd": "^6",
     "lucide-react": "*",
     "next": "*",

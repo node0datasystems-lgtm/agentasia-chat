@@ -15,9 +15,9 @@ import type {
   ToolDiscoveryConfig,
   TopicReferenceItem,
   UserMemoryData,
-} from '@lobechat/context-engine';
-import type { PageContentContext } from '@lobechat/prompts';
-import type { RuntimeInitialContext, UIChatMessage } from '@lobechat/types';
+} from '@agentasia/context-engine';
+import type { PageContentContext } from '@agentasia/prompts';
+import type { RuntimeInitialContext, UIChatMessage } from '@agentasia/types';
 
 /**
  * Model capability checker functions for server-side
@@ -173,5 +173,5 @@ export {
   type KnowledgeBaseInfo,
   type TopicReferenceItem,
   type UserMemoryData,
-} from '@lobechat/context-engine';
-export type { PageContentContext } from '@lobechat/prompts';
+} from '@agentasia/context-engine';
+export type { PageContentContext } from '@agentasia/prompts';

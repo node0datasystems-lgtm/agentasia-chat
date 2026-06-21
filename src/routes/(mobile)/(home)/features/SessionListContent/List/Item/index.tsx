@@ -1,5 +1,5 @@
-import { ModelTag } from '@lobehub/icons';
-import { Flexbox } from '@lobehub/ui';
+import { ModelTag } from '@agentasia/icons';
+import { Flexbox } from '@agentasia/ui';
 import React, { memo, useMemo, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 

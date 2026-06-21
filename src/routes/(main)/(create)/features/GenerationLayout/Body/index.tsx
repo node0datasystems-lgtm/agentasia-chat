@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, AccordionItem, Flexbox, Icon, Segmented, Text } from '@lobehub/ui';
+import { Accordion, AccordionItem, Flexbox, Icon, Segmented, Text } from '@agentasia/ui';
 import { LayoutGrid, ListIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import type { FollowUpChip } from '@lobechat/types';
+import type { FollowUpChip } from '@agentasia/types';
 
 export type FollowUpActionStatus = 'idle' | 'loading' | 'ready';
 

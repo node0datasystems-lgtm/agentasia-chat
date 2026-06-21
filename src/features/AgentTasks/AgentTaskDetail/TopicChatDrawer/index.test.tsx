@@ -52,7 +52,7 @@ const mocks = vi.hoisted(() => ({
   },
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({
     disabled,
     onClick,

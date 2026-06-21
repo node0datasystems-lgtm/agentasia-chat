@@ -89,7 +89,7 @@ export interface CreateTasksState {
 ## 3. `manifest.ts` — JSON Schema for the LLM
 
 ```ts
-import type { BuiltinToolManifest } from '@lobechat/types';
+import type { BuiltinToolManifest } from '@agentasia/types';
 
 import { systemPrompt } from './systemRole';
 import { TaskApiName, TaskIdentifier } from './types';
@@ -226,7 +226,7 @@ Use when the runtime calls out to IPC, network, or DB.
 
 ```ts
 // ExecutionRuntime/index.ts
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 export interface IWebBrowsingService {
   search: (q: SearchQuery) => Promise<UniformSearchResponse>;
@@ -299,7 +299,7 @@ Use `@lobechat/prompts` formatters (`searchResultsPrompt`, `crawlResultsPrompt`,
 The executor's job is to **resolve frontend defaults** (current agent, current task, scope) and **call the runtime**. It then funnels through `toResult()` into the `BuiltinToolResult` shape.
 
 ```ts
-import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@lobechat/types';
+import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@agentasia/types';
 import debug from 'debug';
 
 import { taskService } from '@/services/task';
@@ -446,7 +446,7 @@ This entry is what `packages/builtin-tools/src/index.ts` and `identifiers.ts` im
   "main": "./src/index.ts",
   "name": "@lobechat/builtin-tool-<name>",
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd": "^6",
     "antd-style": "*",
     "lucide-react": "*",

@@ -1,4 +1,4 @@
-import { UserMemoryContextObjectType, UserMemoryContextSubjectType } from '@lobechat/types';
+import { UserMemoryContextObjectType, UserMemoryContextSubjectType } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { formatMemorySearchResults } from './formatSearchResults';

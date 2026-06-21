@@ -1,8 +1,8 @@
 'use client';
 
-import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT } from '@lobechat/const';
-import type { DocumentItem } from '@lobechat/database/schemas';
-import type { IEditor } from '@lobehub/editor';
+import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT } from '@agentasia/const';
+import type { DocumentItem } from '@agentasia/database/schemas';
+import type { IEditor } from '@agentasia/editor';
 import { debounce } from 'es-toolkit/compat';
 import type { SWRResponse } from 'swr';
 

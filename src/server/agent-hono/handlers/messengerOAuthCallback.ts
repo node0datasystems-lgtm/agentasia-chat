@@ -34,10 +34,10 @@ const errorRedirect = (origin: string, platform: string, code: string, extra?: U
  * `oauth` adapter at `platforms/<id>/oauth.ts`.
  *
  * Success path:
- *   1. Validate single-use state → recover the LobeHub user who initiated
+ *   1. Validate single-use state → recover the AgentAsia user who initiated
  *   2. Exchange the code via the platform adapter, normalised into
  *      `NormalizedInstallation`
- *   3. Detect tenant takeover (another LobeHub user already owns this row)
+ *   3. Detect tenant takeover (another AgentAsia user already owns this row)
  *   4. Encrypt + upsert into `messenger_installations`
  *   5. Hand off to the platform's deep-link redirect (Slack
  *      `slack.com/app/open`) or fall back to the settings page.
@@ -75,7 +75,7 @@ export async function messengerOAuthCallback(c: Context): Promise<Response> {
   if (!config) {
     log('callback[%s]: messenger env not configured', platform);
     return new Response(
-      `${definition.name} messenger is not configured on this LobeHub deployment.`,
+      `${definition.name} messenger is not configured on this AgentAsia deployment.`,
       { status: 503 },
     );
   }
@@ -107,7 +107,7 @@ export async function messengerOAuthCallback(c: Context): Promise<Response> {
     return errorRedirect(url.origin, platform, 'exchange_failed');
   }
 
-  // 3. Detect takeover by another LobeHub user. The tenant install is shared
+  // 3. Detect takeover by another AgentAsia user. The tenant install is shared
   // infrastructure: whoever connected first owns the row. OAuth doesn't let
   // us refuse the install (the token has already been minted by the time we
   // get here), and revoking would uninstall the App from the tenant —

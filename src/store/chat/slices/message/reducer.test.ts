@@ -1,4 +1,4 @@
-import { type ChatToolPayload, type UIChatMessage } from '@lobechat/types';
+import { type ChatToolPayload, type UIChatMessage } from '@agentasia/types';
 import i18n from 'i18next';
 
 import { type MessageDispatch } from './reducer';

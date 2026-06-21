@@ -1,4 +1,4 @@
-import type { ChatToolPayloadWithResult, ToolIntervention, UIChatMessage } from '@lobechat/types';
+import type { ChatToolPayloadWithResult, ToolIntervention, UIChatMessage } from '@agentasia/types';
 
 export interface PendingIntervention {
   apiName: string;

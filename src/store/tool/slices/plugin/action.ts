@@ -1,5 +1,5 @@
 import { type Schema, type ValidationResult } from '@cfworker/json-schema';
-import { type LobeTool } from '@lobechat/types';
+import { type LobeTool } from '@agentasia/types';
 import { type SWRResponse } from 'swr';
 
 import { MESSAGE_CANCEL_FLAT } from '@/const/message';

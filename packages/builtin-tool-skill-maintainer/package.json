@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-skill-maintainer",
+  "name": "@agentasia/builtin-tool-skill-maintainer",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -8,6 +8,6 @@
   },
   "main": "./src/index.ts",
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

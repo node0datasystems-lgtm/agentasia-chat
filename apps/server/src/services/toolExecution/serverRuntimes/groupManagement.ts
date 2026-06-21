@@ -26,9 +26,9 @@ import type {
   SpeakParams,
   SummarizeParams,
   VoteParams,
-} from '@lobechat/builtin-tool-group-management';
-import { GroupManagementIdentifier } from '@lobechat/builtin-tool-group-management';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+} from '@agentasia/builtin-tool-group-management';
+import { GroupManagementIdentifier } from '@agentasia/builtin-tool-group-management';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type { ToolExecutionContext } from '../types';
 import type { ServerRuntimeRegistration } from './types';

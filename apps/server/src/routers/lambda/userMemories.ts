@@ -1,10 +1,10 @@
-import { BRANDING_PROVIDER, ENABLE_BUSINESS_FEATURES } from '@lobechat/business-const';
+import { BRANDING_PROVIDER, ENABLE_BUSINESS_FEATURES } from '@agentasia/business-const';
 import {
   DEFAULT_SEARCH_USER_MEMORY_TOP_K,
   DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM,
   MEMORY_SEARCH_TOP_K_LIMITS,
-} from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
+} from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   ActivityMemoryItemSchema,
   AddIdentityActionSchema,
@@ -13,9 +13,9 @@ import {
   PreferenceMemoryItemSchema,
   RemoveIdentityActionSchema,
   UpdateIdentityActionSchema,
-} from '@lobechat/memory-user-memory';
-import type { QueryTaxonomyOptionsResult, SearchMemoryResult } from '@lobechat/types';
-import { LayersEnum, queryTaxonomyOptionsSchema, searchMemorySchema } from '@lobechat/types';
+} from '@agentasia/memory-user-memory';
+import type { QueryTaxonomyOptionsResult, SearchMemoryResult } from '@agentasia/types';
+import { LayersEnum, queryTaxonomyOptionsSchema, searchMemorySchema } from '@agentasia/types';
 import { type SQL } from 'drizzle-orm';
 import { and, asc, eq, gte, lte } from 'drizzle-orm';
 import pMap from 'p-map';

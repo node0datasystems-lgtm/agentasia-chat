@@ -1,4 +1,4 @@
-import type { LobeAgentChatConfig } from '@lobechat/types';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 import { z } from 'zod';
 
 import type { AgentItem } from '@/database/schemas';

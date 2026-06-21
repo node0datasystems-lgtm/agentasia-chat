@@ -1,5 +1,5 @@
-import type { LobeChatDatabase } from '@lobechat/database';
-import type { ChatAudioItem, ChatFileItem, ChatImageItem, ChatVideoItem } from '@lobechat/types';
+import type { LobeChatDatabase } from '@agentasia/database';
+import type { ChatAudioItem, ChatFileItem, ChatImageItem, ChatVideoItem } from '@agentasia/types';
 import debug from 'debug';
 
 import { FileModel } from '@/database/models/file';

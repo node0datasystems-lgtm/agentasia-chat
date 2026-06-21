@@ -158,12 +158,12 @@ description: test
       const data = {
         description: 'A test skill',
         name: 'test-skill',
-        repository: 'https://github.com/lobehub/skills',
+        repository: 'https://github.com/agentasia/skills',
       };
 
       const result = parser.validateManifest(data);
 
-      expect(result.repository).toBe('https://github.com/lobehub/skills');
+      expect(result.repository).toBe('https://github.com/agentasia/skills');
     });
 
     it('should throw for invalid author URL', () => {

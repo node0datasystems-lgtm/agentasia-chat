@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-agent-signal",
+  "name": "@agentasia/builtin-tool-agent-signal",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,6 +9,6 @@
   },
   "main": "./src/index.ts",
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

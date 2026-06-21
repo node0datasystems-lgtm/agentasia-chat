@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, AccordionItem, Flexbox, Text } from '@lobehub/ui';
+import { Accordion, AccordionItem, Flexbox, Text } from '@agentasia/ui';
 import { memo, useMemo } from 'react';
 import { Link, useLocation } from 'react-router';
 

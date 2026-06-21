@@ -1,4 +1,4 @@
-import type { TaskDetailWorkspaceNode } from '@lobechat/types';
+import type { TaskDetailWorkspaceNode } from '@agentasia/types';
 import {
   ActionIcon,
   Block,
@@ -8,8 +8,8 @@ import {
   Icon,
   Tag,
   Text,
-} from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { cssVar } from 'antd-style';
 import { FileTextIcon, MoreHorizontal, Package, Trash } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';

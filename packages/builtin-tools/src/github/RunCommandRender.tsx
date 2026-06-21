@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox, Highlighter, Text } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 

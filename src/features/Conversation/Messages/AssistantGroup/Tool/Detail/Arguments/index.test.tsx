@@ -7,7 +7,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import Arguments from './index';
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({
     active,
     icon: IconComponent,

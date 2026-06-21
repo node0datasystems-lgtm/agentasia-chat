@@ -1,4 +1,4 @@
-import type { ErrorResponse } from '@lobechat/types';
+import type { ErrorResponse } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { getMessageError } from '../parseError';

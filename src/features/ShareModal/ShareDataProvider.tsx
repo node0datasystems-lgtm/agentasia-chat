@@ -1,6 +1,6 @@
 'use client';
 
-import { type ConversationContext, type UIChatMessage } from '@lobechat/types';
+import { type ConversationContext, type UIChatMessage } from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 import { createContext, memo, type PropsWithChildren, use, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

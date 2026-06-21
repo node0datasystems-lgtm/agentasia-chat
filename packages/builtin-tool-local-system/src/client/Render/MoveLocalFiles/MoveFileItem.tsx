@@ -1,5 +1,5 @@
-import { useToolRenderCapabilities } from '@lobechat/shared-tool-ui';
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowRight } from 'lucide-react';
 import { memo } from 'react';

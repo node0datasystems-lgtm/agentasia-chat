@@ -1,4 +1,4 @@
-import type { LobeAgentAgencyConfig } from '@lobechat/types';
+import type { LobeAgentAgencyConfig } from '@agentasia/types';
 
 /**
  * The device a run targets: an explicitly bound remote device, this machine,

@@ -1,1 +1,1 @@
-export { isDesktop } from '@lobechat/const';
+export { isDesktop } from '@agentasia/const';

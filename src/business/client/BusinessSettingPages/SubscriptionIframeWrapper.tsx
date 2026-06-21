@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox } from '@lobehub/ui';
+import { Center, Flexbox } from '@agentasia/ui';
 import { Spin } from 'antd';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

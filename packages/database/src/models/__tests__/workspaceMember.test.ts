@@ -1,4 +1,4 @@
-import { INVITATION_EXPIRY_DAYS } from '@lobechat/const';
+import { INVITATION_EXPIRY_DAYS } from '@agentasia/const';
 import { and, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

@@ -1,4 +1,4 @@
-import type { ChunkMetadata, FileChunk } from '@lobechat/types';
+import type { ChunkMetadata, FileChunk } from '@agentasia/types';
 import { and, asc, cosineDistance, count, desc, eq, inArray, isNull, sql } from 'drizzle-orm';
 import { chunk } from 'es-toolkit/compat';
 

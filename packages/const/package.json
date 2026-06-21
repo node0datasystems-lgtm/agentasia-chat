@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/const",
+  "name": "@agentasia/const",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -12,15 +12,15 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/business-const": "workspace:*",
     "query-string": "^9.3.1",
-    "url-join": "^5.0.0"
+    "url-join": "^5.0.0",
+    "@agentasia/business-const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
     "@icons-pack/react-simple-icons": "^13.8.0",
-    "@lobehub/ui": "^5"
+    "@agentasia/ui": "^5"
   }
 }

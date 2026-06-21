@@ -1,5 +1,5 @@
-import type { AgentSignalSource, BaseAction, ExecutorResult } from '@lobechat/agent-signal';
-import { LayersEnum } from '@lobechat/types';
+import type { AgentSignalSource, BaseAction, ExecutorResult } from '@agentasia/agent-signal';
+import { LayersEnum } from '@agentasia/types';
 
 import { AGENT_SIGNAL_DEFAULTS } from '../constants';
 import { redisReceiptStore } from '../store/adapters/redis/receiptStore';

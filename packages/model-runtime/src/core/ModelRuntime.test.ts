@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { ClientSecretPayload } from '@lobechat/types';
+import type { ClientSecretPayload } from '@agentasia/types';
 import { ModelProvider } from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -83,7 +83,7 @@ beforeEach(async () => {
 
 describe('ModelRuntime', () => {
   describe('should initialize with various providers', () => {
-    const providers = Object.values(ModelProvider).filter((i) => i !== 'lobehub');
+    const providers = Object.values(ModelProvider).filter((i) => i !== 'agentasia');
     const specialProviderIds = [ModelProvider.VertexAI, ...specialProviders.map((p) => p.id)];
 
     const generalTestProviders = providers.filter(

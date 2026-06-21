@@ -1,4 +1,4 @@
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import { AGENT_SIGNAL_TOOL_RESULT_KIND, type AgentSignalToolApiName } from './apiNames';
 

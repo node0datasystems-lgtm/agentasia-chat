@@ -1,5 +1,5 @@
-import { type BriefAction, DEFAULT_BRIEF_ACTIONS, type TaskStatus } from '@lobechat/types';
-import { Button, Flexbox, Icon, Text, Tooltip } from '@lobehub/ui';
+import { type BriefAction, DEFAULT_BRIEF_ACTIONS, type TaskStatus } from '@agentasia/types';
+import { Button, Flexbox, Icon, Text, Tooltip } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Check, SquarePen, Workflow } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

@@ -5,8 +5,8 @@ import {
   type ComfyUIKeyVault,
   type OpenAICompatibleKeyVault,
   type VertexAIKeyVault,
-} from '@lobechat/types';
-import { clientApiKeyManager } from '@lobechat/utils/client';
+} from '@agentasia/types';
+import { clientApiKeyManager } from '@agentasia/utils/client';
 import { ModelProvider } from 'model-bank';
 
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';

@@ -1,4 +1,4 @@
-import { Checkbox, Flexbox, Icon, stopPropagation } from '@lobehub/ui';
+import { Checkbox, Flexbox, Icon, stopPropagation } from '@agentasia/ui';
 import { Loader2, SquareArrowOutUpRight } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -7,8 +7,8 @@ import { usePermission } from '@/hooks/usePermission';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { useToolStore } from '@/store/tool';
-import { lobehubSkillStoreSelectors } from '@/store/tool/selectors';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 const POLL_INTERVAL_MS = 1000;
 const POLL_TIMEOUT_MS = 15_000;
@@ -42,7 +42,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
   const pollIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const pollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const server = useToolStore(lobehubSkillStoreSelectors.getServerByIdentifier(provider));
+  const server = useToolStore(agentasiaSkillStoreSelectors.getServerByIdentifier(provider));
   const checkStatus = useToolStore((s) => s.checkLobehubSkillStatus);
   const getAuthorizeUrl = useToolStore((s) => s.getLobehubSkillAuthorizeUrl);
 
@@ -178,7 +178,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
         // Need to get the latest server state after checkStatus
         const latestServer = useToolStore
           .getState()
-          .lobehubSkillServers?.find((s) => s.identifier === provider);
+          .agentasiaSkillServers?.find((s) => s.identifier === provider);
         if (latestServer?.status === LobehubSkillStatus.CONNECTED) {
           const newPluginId = latestServer.identifier;
           const currentAgentPlugins =
@@ -247,7 +247,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
             handleConnect();
           }}
         >
-          {t('tools.lobehubSkill.connect', { defaultValue: 'Connect' })}
+          {t('tools.agentasiaSkill.connect', { defaultValue: 'Connect' })}
           <Icon icon={SquareArrowOutUpRight} size="small" />
         </Flexbox>
       );
@@ -298,7 +298,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
               }
             }}
           >
-            {t('tools.lobehubSkill.authorize', { defaultValue: 'Authorize' })}
+            {t('tools.agentasiaSkill.authorize', { defaultValue: 'Authorize' })}
             <Icon icon={SquareArrowOutUpRight} size="small" />
           </Flexbox>
         );
@@ -316,7 +316,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
               handleConnect();
             }}
           >
-            {t('tools.lobehubSkill.connect', { defaultValue: 'Connect' })}
+            {t('tools.agentasiaSkill.connect', { defaultValue: 'Connect' })}
             <Icon icon={SquareArrowOutUpRight} size="small" />
           </Flexbox>
         );
@@ -324,7 +324,7 @@ const LobehubSkillServerItem = memo<LobehubSkillServerItemProps>(({ provider, la
       case LobehubSkillStatus.ERROR: {
         return (
           <span style={{ color: 'red', fontSize: 12 }}>
-            {t('tools.lobehubSkill.error', { defaultValue: 'Error' })}
+            {t('tools.agentasiaSkill.error', { defaultValue: 'Error' })}
           </span>
         );
       }

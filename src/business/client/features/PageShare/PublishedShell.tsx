@@ -1,4 +1,4 @@
-import { type SharedDocumentData } from '@lobechat/types';
+import { type SharedDocumentData } from '@agentasia/types';
 import { type ReactNode } from 'react';
 
 interface PublishedShellProps {

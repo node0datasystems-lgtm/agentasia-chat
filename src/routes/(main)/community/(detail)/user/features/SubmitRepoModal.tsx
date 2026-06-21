@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Modal, Text } from '@lobehub/ui';
+import { Flexbox, Modal, Text } from '@agentasia/ui';
 import { App, Form, Input } from 'antd';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

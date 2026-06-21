@@ -1,4 +1,4 @@
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { Button } from 'antd';
 import { AlertTriangle, RotateCw } from 'lucide-react';
 import { memo } from 'react';

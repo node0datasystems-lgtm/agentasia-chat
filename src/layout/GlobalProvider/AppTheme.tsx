@@ -2,9 +2,9 @@
 
 import 'antd/dist/reset.css';
 
-import { TITLE_BAR_HEIGHT } from '@lobechat/desktop-bridge';
-import { type NeutralColors, type PrimaryColors } from '@lobehub/ui';
-import { ConfigProvider, FontLoader, ThemeProvider } from '@lobehub/ui';
+import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
+import { type NeutralColors, type PrimaryColors } from '@agentasia/ui';
+import { ConfigProvider, FontLoader, ThemeProvider } from '@agentasia/ui';
 import { message as antdMessage } from 'antd';
 import { AppConfigContext } from 'antd/es/app/context';
 import { createStaticStyles, cx, useTheme } from 'antd-style';

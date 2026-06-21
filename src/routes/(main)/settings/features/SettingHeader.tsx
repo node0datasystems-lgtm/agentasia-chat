@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@lobehub/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { type FC, type ReactNode } from 'react';
 

@@ -7,7 +7,7 @@ import {
   AGENT_SIGNAL_SOURCE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
   WEB_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import { deriveAgentDocumentFields } from '../deriveFields';

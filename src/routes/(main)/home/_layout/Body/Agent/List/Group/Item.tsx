@@ -1,5 +1,5 @@
-import { type SidebarGroup } from '@lobechat/types';
-import { AccordionItem, ContextMenuTrigger, Flexbox, Icon, Text } from '@lobehub/ui';
+import { type SidebarGroup } from '@agentasia/types';
+import { AccordionItem, ContextMenuTrigger, Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { HashIcon, Loader2 } from 'lucide-react';
 import React, { memo, useCallback, useMemo, useState } from 'react';

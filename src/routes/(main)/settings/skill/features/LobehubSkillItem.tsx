@@ -1,8 +1,8 @@
 'use client';
 
-import { type LobehubSkillProviderType } from '@lobechat/const';
-import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { type LobehubSkillProviderType } from '@agentasia/const';
+import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Button } from 'antd';
 import { cssVar } from 'antd-style';
 import { Loader2, MoreHorizontalIcon, SquareArrowOutUpRight, Unplug } from 'lucide-react';
@@ -12,8 +12,8 @@ import { useTranslation } from 'react-i18next';
 import { createLobehubSkillDetailModal } from '@/features/SkillStore/SkillDetail';
 import { usePermission } from '@/hooks/usePermission';
 import { useToolStore } from '@/store/tool';
-import { type LobehubSkillServer } from '@/store/tool/slices/lobehubSkillStore/types';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { type LobehubSkillServer } from '@/store/tool/slices/agentasiaSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 import { styles } from './style';
 
@@ -178,9 +178,9 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
       if (!canEdit) return;
       confirmModal({
         cancelText: t('cancel', { ns: 'common' }),
-        content: t('tools.lobehubSkill.disconnectConfirm.desc', { name: provider.label }),
+        content: t('tools.agentasiaSkill.disconnectConfirm.desc', { name: provider.label }),
         okButtonProps: { danger: true },
-        okText: t('tools.lobehubSkill.disconnect'),
+        okText: t('tools.agentasiaSkill.disconnect'),
         onOk: async () => {
           if (server) {
             await revokeConnect(server.identifier);
@@ -188,7 +188,7 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
             onDelete?.();
           }
         },
-        title: t('tools.lobehubSkill.disconnectConfirm.title', { name: provider.label }),
+        title: t('tools.agentasiaSkill.disconnectConfirm.title', { name: provider.label }),
       });
     };
 
@@ -204,7 +204,7 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
       if (!server) {
         return (
           <span className={styles.disconnected}>
-            {t('tools.lobehubSkill.disconnected', { defaultValue: 'Disconnected' })}
+            {t('tools.agentasiaSkill.disconnected', { defaultValue: 'Disconnected' })}
           </span>
         );
       }
@@ -213,17 +213,17 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
         case LobehubSkillStatus.CONNECTED: {
           return (
             <span className={styles.connected}>
-              {t('tools.lobehubSkill.connected', { defaultValue: 'Connected' })}
+              {t('tools.agentasiaSkill.connected', { defaultValue: 'Connected' })}
             </span>
           );
         }
         case LobehubSkillStatus.ERROR: {
-          return <span className={styles.error}>{t('tools.lobehubSkill.error')}</span>;
+          return <span className={styles.error}>{t('tools.agentasiaSkill.error')}</span>;
         }
         default: {
           return (
             <span className={styles.disconnected}>
-              {t('tools.lobehubSkill.disconnected', { defaultValue: 'Disconnected' })}
+              {t('tools.agentasiaSkill.disconnected', { defaultValue: 'Disconnected' })}
             </span>
           );
         }
@@ -234,7 +234,7 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
       if (isConnecting || isWaitingAuth) {
         return (
           <Button disabled icon={<Icon spin icon={Loader2} />} type="default">
-            {t('tools.lobehubSkill.connect')}
+            {t('tools.agentasiaSkill.connect')}
           </Button>
         );
       }
@@ -248,7 +248,7 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
               type="default"
               onClick={handleConnect}
             >
-              {t('tools.lobehubSkill.connect')}
+              {t('tools.agentasiaSkill.connect')}
             </Button>
           </Tooltip>
         );
@@ -262,7 +262,7 @@ const LobehubSkillItem = memo<LobehubSkillItemProps>(
               disabled: !canEdit,
               icon: <Icon icon={Unplug} />,
               key: 'disconnect',
-              label: t('tools.lobehubSkill.disconnect', { defaultValue: 'Disconnect' }),
+              label: t('tools.agentasiaSkill.disconnect', { defaultValue: 'Disconnect' }),
               onClick: handleDisconnect,
             },
           ]}

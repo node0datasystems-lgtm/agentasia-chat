@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { builtinSkills } from '@lobechat/builtin-skills';
+import { builtinSkills } from '@agentasia/builtin-skills';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { filterBuiltinSkills } from '@/helpers/skillFilters';

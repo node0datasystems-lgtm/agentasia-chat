@@ -19,7 +19,7 @@ import { createCustomPluginSlice, type CustomPluginAction } from './slices/custo
 import {
   createLobehubSkillStoreSlice,
   type LobehubSkillStoreAction,
-} from './slices/lobehubSkillStore';
+} from './slices/agentasiaSkillStore';
 import { createMCPPluginStoreSlice, type PluginMCPStoreAction } from './slices/mcpStore';
 import { createPluginSlice, type PluginAction } from './slices/plugin';
 

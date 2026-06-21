@@ -1,7 +1,7 @@
 'use client';
 
-import { formatPrice, formatTokenNumber } from '@lobechat/utils/format';
-import { Block, Checkbox, Flexbox, Icon, Tag, Text } from '@lobehub/ui';
+import { formatPrice, formatTokenNumber } from '@agentasia/utils/format';
+import { Block, Checkbox, Flexbox, Icon, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CircleDollarSign, FolderIcon, MessageSquare, Star, Zap } from 'lucide-react';
 import { memo, type MouseEvent, useCallback } from 'react';

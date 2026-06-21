@@ -1,8 +1,8 @@
 'use client';
 
-import { type ErrorShape, type ImportFileUploadState } from '@lobechat/types';
-import { ImportStage } from '@lobechat/types';
-import { Center } from '@lobehub/ui';
+import { type ErrorShape, type ImportFileUploadState } from '@agentasia/types';
+import { ImportStage } from '@agentasia/types';
+import { Center } from '@agentasia/ui';
 import { Upload } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { ImportIcon } from 'lucide-react';

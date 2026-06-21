@@ -10,7 +10,7 @@ export interface LobehubSkillDetailContentProps {
 export const LobehubSkillDetailContent = ({ identifier }: LobehubSkillDetailContentProps) => {
   return (
     <LobehubDetailProvider identifier={identifier}>
-      <SkillDetailInner type="lobehub" />
+      <SkillDetailInner type="agentasia" />
     </LobehubDetailProvider>
   );
 };

@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum } from '@lobechat/types';
+import { LayersEnum } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { RuntimeProcessorContext } from '../../../../runtime/context';
@@ -413,7 +413,7 @@ describe('resolveMemoryActionTargetFromState', () => {
                   id: 'identity-existing',
                   mergeStrategy: 'replace',
                   set: {
-                    details: 'The user clarified that they maintain LobeHub Agent Signal code.',
+                    details: 'The user clarified that they maintain AgentAsia Agent Signal code.',
                     summary: 'The user maintains Agent Signal memory receipt behavior.',
                     title: 'Maintains Agent Signal receipts',
                   },

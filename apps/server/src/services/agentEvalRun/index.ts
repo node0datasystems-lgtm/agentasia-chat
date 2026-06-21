@@ -1,6 +1,6 @@
-import { LOADING_FLAT } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
-import { evaluate } from '@lobechat/eval-rubric';
+import { LOADING_FLAT } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { evaluate } from '@agentasia/eval-rubric';
 import type {
   EvalBenchmarkRubric,
   EvalRunAgentSnapshot,
@@ -10,8 +10,8 @@ import type {
   EvalRunTopicResult,
   EvalThreadResult,
   RubricType,
-} from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+} from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import debug from 'debug';
 
 import {

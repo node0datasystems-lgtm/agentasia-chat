@@ -1,4 +1,4 @@
-import type { CustomPluginParams, ToolManifest } from '@lobechat/types';
+import type { CustomPluginParams, ToolManifest } from '@agentasia/types';
 import {
   boolean,
   index,

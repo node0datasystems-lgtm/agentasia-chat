@@ -1,10 +1,10 @@
 ---
 name: data-fetching-architecture
-description: 'LobeHub data-fetching pipeline guide. Use for service layer, Zustand store, SWR, lambdaClient, useClientDataSWR, useFetchXxx hooks, or migrating useEffect fetches.'
+description: 'AgentAsia data-fetching pipeline guide. Use for service layer, Zustand store, SWR, lambdaClient, useClientDataSWR, useFetchXxx hooks, or migrating useEffect fetches.'
 user-invocable: false
 ---
 
-# LobeHub Data Fetching Architecture
+# AgentAsia Data Fetching Architecture
 
 > **Related:** `store-data-structures` covers List vs Detail data shape rationale (Map vs Array).
 

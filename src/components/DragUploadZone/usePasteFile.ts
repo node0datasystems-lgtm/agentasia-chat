@@ -1,13 +1,13 @@
-import { type IEditor } from '@lobehub/editor';
+import { type IEditor } from '@agentasia/editor';
 import { useCallback, useEffect } from 'react';
 
 import { getFileListFromDataTransferItems } from './useLocalDragUpload';
 
 /**
- * Hook for handling paste file uploads via @lobehub/editor.
+ * Hook for handling paste file uploads via @agentasia/editor.
  * Listens to editor's onPaste event and extracts files from clipboard.
  *
- * @param editor - The editor instance from @lobehub/editor
+ * @param editor - The editor instance from @agentasia/editor
  * @param onUploadFiles - Callback when files are pasted
  */
 export const usePasteFile = (

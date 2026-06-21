@@ -9,14 +9,14 @@ vi.mock('@/libs/trpc/utils/internalJwt', () => ({
 }));
 
 vi.mock('@/envs/app', () => ({
-  appEnv: { APP_URL: 'https://app.lobehub.com' },
+  appEnv: { APP_URL: 'https://app.agentasia.ai' },
 }));
 
 vi.mock('@/utils/env', () => ({
   isDev: false,
 }));
 
-const ENV_PREFIX = 'LOBEHUB_JWT=mock-jwt-token LOBEHUB_SERVER=https://app.lobehub.com';
+const ENV_PREFIX = 'LOBEHUB_JWT=mock-jwt-token LOBEHUB_SERVER=https://app.agentasia.ai';
 
 describe('preprocessLhCommand', () => {
   it('should return unchanged command for non-lh commands', async () => {
@@ -32,7 +32,7 @@ describe('preprocessLhCommand', () => {
 
     expect(result.isLhCommand).toBe(true);
     expect(result.skipSkillLookup).toBe(true);
-    expect(result.command).toBe(`${ENV_PREFIX} npx -y @lobehub/cli topic list --json`);
+    expect(result.command).toBe(`${ENV_PREFIX} npx -y @agentasia/cli topic list --json`);
   });
 
   it('should rewrite all lh commands chained with &&', async () => {
@@ -40,7 +40,7 @@ describe('preprocessLhCommand', () => {
     const result = await preprocessLhCommand(cmd, 'user-1');
 
     expect(result.command).toBe(
-      `${ENV_PREFIX} npx -y @lobehub/cli topic list --page 1 && ${ENV_PREFIX} npx -y @lobehub/cli topic list --page 2 && echo "done"`,
+      `${ENV_PREFIX} npx -y @agentasia/cli topic list --page 1 && ${ENV_PREFIX} npx -y @agentasia/cli topic list --page 2 && echo "done"`,
     );
   });
 
@@ -49,7 +49,7 @@ describe('preprocessLhCommand', () => {
     const result = await preprocessLhCommand(cmd, 'user-1');
 
     expect(result.command).toBe(
-      `${ENV_PREFIX} npx -y @lobehub/cli foo || ${ENV_PREFIX} npx -y @lobehub/cli bar`,
+      `${ENV_PREFIX} npx -y @agentasia/cli foo || ${ENV_PREFIX} npx -y @agentasia/cli bar`,
     );
   });
 
@@ -58,7 +58,7 @@ describe('preprocessLhCommand', () => {
     const result = await preprocessLhCommand(cmd, 'user-1');
 
     expect(result.command).toBe(
-      `${ENV_PREFIX} npx -y @lobehub/cli foo; ${ENV_PREFIX} npx -y @lobehub/cli bar`,
+      `${ENV_PREFIX} npx -y @agentasia/cli foo; ${ENV_PREFIX} npx -y @agentasia/cli bar`,
     );
   });
 
@@ -73,7 +73,7 @@ describe('preprocessLhCommand', () => {
     const result = await preprocessLhCommand('lh', 'user-1');
 
     expect(result.isLhCommand).toBe(true);
-    expect(result.command).toBe(`${ENV_PREFIX} npx -y @lobehub/cli`);
+    expect(result.command).toBe(`${ENV_PREFIX} npx -y @agentasia/cli`);
   });
 
   it('should return error when JWT signing fails', async () => {

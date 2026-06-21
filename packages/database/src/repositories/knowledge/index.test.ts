@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { FilesTabs } from '@lobechat/types';
+import { FilesTabs } from '@agentasia/types';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../core/getTestDB';

@@ -3,7 +3,7 @@ import type {
   BaseAction,
   BaseSignal,
   ExecutorResult,
-} from '@lobechat/agent-signal';
+} from '@agentasia/agent-signal';
 
 /** Describes the compact telemetry record for one AgentSignal chain. */
 export interface AgentSignalTelemetryRecord {

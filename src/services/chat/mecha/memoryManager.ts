@@ -1,5 +1,5 @@
-import { type UserMemoryData } from '@lobechat/context-engine';
-import { type RetrieveMemoryResult } from '@lobechat/types';
+import { type UserMemoryData } from '@agentasia/context-engine';
+import { type RetrieveMemoryResult } from '@agentasia/types';
 
 import { getChatStoreState } from '@/store/chat';
 import { getUserMemoryStoreState } from '@/store/userMemory';

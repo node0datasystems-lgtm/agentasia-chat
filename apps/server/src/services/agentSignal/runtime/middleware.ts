@@ -1,8 +1,8 @@
-import type { AgentSignalSource, BaseAction, BaseSignal } from '@lobechat/agent-signal';
+import type { AgentSignalSource, BaseAction, BaseSignal } from '@agentasia/agent-signal';
 import type {
   AgentSignalSourceType,
   AgentSignalSourceVariant,
-} from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
 
 import type {
   AgentSignalPolicyActionType,

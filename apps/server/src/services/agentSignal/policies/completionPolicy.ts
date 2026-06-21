@@ -1,4 +1,4 @@
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
 import debug from 'debug';
 
 import { defineAgentSignalHandlers, defineSourceHandler } from '../runtime/middleware';

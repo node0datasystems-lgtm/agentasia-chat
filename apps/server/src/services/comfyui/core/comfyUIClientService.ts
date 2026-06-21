@@ -5,7 +5,7 @@
  * Provides unified error handling and abstraction over SDK
  * Uses modular services for authentication, connection, and caching
  */
-import { type ComfyUIKeyVault } from '@lobechat/types';
+import { type ComfyUIKeyVault } from '@agentasia/types';
 import { type PromptBuilder } from '@saintno/comfyui-sdk';
 import { CallWrapper, ComfyApi } from '@saintno/comfyui-sdk';
 import debug from 'debug';

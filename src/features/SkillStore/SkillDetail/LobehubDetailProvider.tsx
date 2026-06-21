@@ -1,13 +1,13 @@
 'use client';
 
-import { getLobehubSkillProviderById } from '@lobechat/const';
+import { getLobehubSkillProviderById } from '@agentasia/const';
 import { type ReactNode } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useToolStore } from '@/store/tool';
-import { lobehubSkillStoreSelectors } from '@/store/tool/selectors';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 import { type DetailContextValue } from './DetailContext';
 import { DetailContext } from './DetailContext';
@@ -22,11 +22,11 @@ export const LobehubDetailProvider = ({ children, identifier }: LobehubDetailPro
 
   const config = useMemo(() => getLobehubSkillProviderById(identifier), [identifier]);
 
-  const lobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers);
+  const agentasiaSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers);
 
   const serverState = useMemo(
-    () => lobehubSkillServers.find((s) => s.identifier === identifier),
-    [identifier, lobehubSkillServers],
+    () => agentasiaSkillServers.find((s) => s.identifier === identifier),
+    [identifier, agentasiaSkillServers],
   );
 
   const isConnected = useMemo(
@@ -41,10 +41,10 @@ export const LobehubDetailProvider = ({ children, identifier }: LobehubDetailPro
 
   const { author, authorUrl, description, icon, readme, label } = config;
 
-  const localizedDescription = t(`tools.lobehubSkill.providers.${identifier}.description`, {
+  const localizedDescription = t(`tools.agentasiaSkill.providers.${identifier}.description`, {
     defaultValue: description,
   });
-  const localizedReadme = t(`tools.lobehubSkill.providers.${identifier}.readme`, {
+  const localizedReadme = t(`tools.agentasiaSkill.providers.${identifier}.readme`, {
     defaultValue: readme,
   });
 

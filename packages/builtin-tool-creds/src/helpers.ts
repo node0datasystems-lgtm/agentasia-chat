@@ -1,4 +1,4 @@
-import type { CredType } from '@lobechat/types';
+import type { CredType } from '@agentasia/types';
 
 /**
  * Summary of a user credential for display in the tool prompt

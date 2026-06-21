@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/agent-tracing",
+  "name": "@agentasia/agent-tracing",
   "version": "1.0.0",
   "private": true,
   "exports": {

@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

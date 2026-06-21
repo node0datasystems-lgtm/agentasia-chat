@@ -1,4 +1,4 @@
-import { Block, Icon } from '@lobehub/ui';
+import { Block, Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { AtomIcon, Loader2Icon } from 'lucide-react';
 import { memo } from 'react';

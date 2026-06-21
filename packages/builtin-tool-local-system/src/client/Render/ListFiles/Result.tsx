@@ -1,6 +1,6 @@
-import { useToolRenderCapabilities } from '@lobechat/shared-tool-ui';
-import type { ChatMessagePluginError } from '@lobechat/types';
-import { Block, Empty, Flexbox, Skeleton } from '@lobehub/ui';
+import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
+import type { ChatMessagePluginError } from '@agentasia/types';
+import { Block, Empty, Flexbox, Skeleton } from '@agentasia/ui';
 import { FolderOpenIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

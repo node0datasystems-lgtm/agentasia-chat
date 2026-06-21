@@ -1,6 +1,6 @@
-import { DEFAULT_USER_MEMORY_EMBEDDING_DIMENSIONS } from '@lobechat/const';
-import type { ModelRuntime } from '@lobechat/model-runtime';
-import { RequestTrigger } from '@lobechat/types';
+import { DEFAULT_USER_MEMORY_EMBEDDING_DIMENSIONS } from '@agentasia/const';
+import type { ModelRuntime } from '@agentasia/model-runtime';
+import { RequestTrigger } from '@agentasia/types';
 
 import { parseMemoryExtractionConfig } from '@/server/globalConfig/parseMemoryExtractionConfig';
 import { trimBasedOnBatchProbe } from '@/utils/chunkers';

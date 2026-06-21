@@ -1,4 +1,4 @@
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
 import {
   DEFAULT_AGENT_CONFIG,
   DEFAULT_AVATAR,
@@ -7,7 +7,7 @@ import {
   DEFAULT_MODEL,
   DEFAUTT_AGENT_TTS_CONFIG,
   isDesktop,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import {
   type AgentMode,
   type KnowledgeItem,
@@ -15,9 +15,9 @@ import {
   type LobeAgentTTSConfig,
   type MetaData,
   type RuntimeEnvConfig,
-} from '@lobechat/types';
-import { KnowledgeType } from '@lobechat/types';
-import { VoiceList } from '@lobehub/tts';
+} from '@agentasia/types';
+import { KnowledgeType } from '@agentasia/types';
+import { VoiceList } from '@agentasia/tts';
 
 import { DEFAULT_OPENING_QUESTIONS } from '@/features/AgentSetting/store/selectors';
 import { resolveTargetDeviceId } from '@/helpers/agentWorkingDirectory';
@@ -305,7 +305,7 @@ const isCurrentAgentExternal = (s: AgentStoreState): boolean => !currentAgentDat
 
 /**
  * Whether current agent is driven by an external heterogeneous runtime
- * (e.g. Claude Code). These agents skip LobeHub's message-channel / model
+ * (e.g. Claude Code). These agents skip AgentAsia's message-channel / model
  * pickers because their toolchain is owned by the external runtime.
  */
 const isCurrentAgentHeterogeneous = (s: AgentStoreState): boolean =>

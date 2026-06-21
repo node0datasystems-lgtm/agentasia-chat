@@ -1,4 +1,4 @@
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import debug from 'debug';
@@ -101,7 +101,7 @@ export const CHAT_MODELS_BLOCK_LIST = [
   'dall-e',
 ];
 
-// OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; lobehub only ever
+// OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; agentasia only ever
 // passes a plain string, so narrow it back to keep `.trim()` / string assignments valid.
 type LobeClientOptions = Omit<ClientOptions, 'apiKey'> & { apiKey?: string };
 type ConstructorOptions<T extends Record<string, any> = any> = LobeClientOptions &
@@ -632,7 +632,7 @@ export const createOpenAICompatibleRuntime = <T extends Record<string, any> = an
           // Apply sampling sanitization to processedPayload for the custom client path.
           // We use processedPayload (ChatStreamPayload type) here because
           // createChatCompletionStream expects ChatStreamPayload, not the OpenAI SDK format.
-          // Strip LobeHub-internal fields that should never reach downstream APIs.
+          // Strip AgentAsia-internal fields that should never reach downstream APIs.
           const {
             apiMode: _apiMode,
             preserveThinking: _preserveThinking,
@@ -652,7 +652,7 @@ export const createOpenAICompatibleRuntime = <T extends Record<string, any> = an
             this,
           ) as any;
         } else {
-          // Remove LobeHub-internal fields before sending to downstream API.
+          // Remove AgentAsia-internal fields before sending to downstream API.
           // `preserveThinking` is only consumed by Qwen/Zhipu handlePayload (which runs above)
           // and must not leak to other providers' APIs as an unknown parameter.
           const { apiMode: _, preserveThinking: _pt, ...cleanedPayload } = postPayload as any;
@@ -679,7 +679,7 @@ export const createOpenAICompatibleRuntime = <T extends Record<string, any> = an
           }
 
           response = (await this.client.chat.completions.create(requestPayload, {
-            // https://github.com/lobehub/lobe-chat/pull/318
+            // https://github.com/agentasia/agentasia-chat/pull/318
             headers: { Accept: '*/*', ...options?.requestHeaders },
             signal: options?.signal,
           })) as unknown as Stream<OpenAI.Chat.Completions.ChatCompletionChunk>;
@@ -1205,7 +1205,7 @@ export const createOpenAICompatibleRuntime = <T extends Record<string, any> = an
 
       let desensitizedEndpoint = this.baseURL;
 
-      // refs: https://github.com/lobehub/lobe-chat/issues/842
+      // refs: https://github.com/agentasia/agentasia-chat/issues/842
       if (this.baseURL !== DEFAULT_BASE_URL) {
         desensitizedEndpoint = desensitizeUrl(this.baseURL);
       }
@@ -1601,7 +1601,7 @@ export const createOpenAICompatibleRuntime = <T extends Record<string, any> = an
 
       try {
         const result = toolCalls.map((item) => {
-          // OpenAI SDK v6 made tool calls a function|custom union; lobehub only emits function calls.
+          // OpenAI SDK v6 made tool calls a function|custom union; agentasia only emits function calls.
           const { function: fn } = item as OpenAI.ChatCompletionMessageFunctionToolCall;
           return {
             arguments: JSON.parse(fn.arguments),

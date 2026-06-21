@@ -1,4 +1,4 @@
-import { AgentRuntimeErrorType } from '@lobechat/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 
 /**
  * Postgres error code for `foreign_key_violation`.

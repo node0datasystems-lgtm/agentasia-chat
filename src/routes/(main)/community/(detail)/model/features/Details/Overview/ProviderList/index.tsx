@@ -1,7 +1,7 @@
 'use client';
 
-import { ProviderIcon } from '@lobehub/icons';
-import { ActionIcon, Block, Flexbox, Icon, Tooltip, TooltipGroup } from '@lobehub/ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { ActionIcon, Block, Flexbox, Icon, Tooltip, TooltipGroup } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { BadgeCheck, BookIcon, ChevronRightIcon, KeyIcon } from 'lucide-react';
 import { memo } from 'react';
@@ -142,10 +142,10 @@ const ProviderList = memo(() => {
               dataIndex: 'action',
               key: 'action',
               render: (_, record) => {
-                const isLobeHub = record.id === 'lobehub';
+                const isAgentAsia = record.id === 'agentasia';
                 return (
                   <Flexbox horizontal align="center" gap={4} justify={'flex-end'}>
-                    {isLobeHub && (
+                    {isAgentAsia && (
                       <Tooltip title={t('models.providerInfo.officialTooltip')}>
                         <ActionIcon
                           color={cssVar.colorSuccess}
@@ -155,7 +155,7 @@ const ProviderList = memo(() => {
                         />
                       </Tooltip>
                     )}
-                    {!isLobeHub && (
+                    {!isAgentAsia && (
                       <Tooltip title={t('models.providerInfo.apiTooltip')}>
                         <ActionIcon
                           icon={<Icon icon={KeyIcon} />}

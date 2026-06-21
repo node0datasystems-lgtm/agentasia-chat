@@ -1,5 +1,5 @@
-import { DEFAULT_AVATAR, DEFAULT_INBOX_AVATAR } from '@lobechat/const';
-import { Avatar, preventDefault } from '@lobehub/ui';
+import { DEFAULT_AVATAR, DEFAULT_INBOX_AVATAR } from '@agentasia/const';
+import { Avatar, preventDefault } from '@agentasia/ui';
 import { Command } from 'cmdk';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

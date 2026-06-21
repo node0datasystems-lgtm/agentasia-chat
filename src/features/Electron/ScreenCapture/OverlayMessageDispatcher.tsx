@@ -1,11 +1,11 @@
 'use client';
 
-import { SESSION_CHAT_URL } from '@lobechat/const';
+import { SESSION_CHAT_URL } from '@agentasia/const';
 import {
   type OverlayDispatchMessagePayload,
   useWatchBroadcast,
-} from '@lobechat/electron-client-ipc';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/electron-client-ipc';
+import { nanoid } from '@agentasia/utils';
 import { memo, useCallback } from 'react';
 
 import { useQueryRoute } from '@/hooks/useQueryRoute';

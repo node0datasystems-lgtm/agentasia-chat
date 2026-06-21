@@ -1,7 +1,7 @@
 'use client';
 
-import { type SidebarAgentItem } from '@lobechat/types';
-import { Avatar, Block, Flexbox, Text } from '@lobehub/ui';
+import { type SidebarAgentItem } from '@agentasia/types';
+import { Avatar, Block, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

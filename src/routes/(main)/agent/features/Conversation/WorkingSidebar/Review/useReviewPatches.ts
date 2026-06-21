@@ -1,7 +1,7 @@
 import type {
   GitWorkingTreePatch,
   SubmoduleWorkingTreePatches,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { useClientDataSWR } from '@/libs/swr';
 import { deviceKeys } from '@/libs/swr/keys';

@@ -1,5 +1,5 @@
-import { BRANDING_NAME, ORG_NAME } from '@lobechat/business-const';
-import { OG_URL } from '@lobechat/const';
+import { BRANDING_NAME, ORG_NAME } from '@agentasia/business-const';
+import { OG_URL } from '@agentasia/const';
 import urlJoin from 'url-join';
 
 import { OFFICIAL_URL } from '@/const/url';
@@ -61,6 +61,6 @@ export async function buildSeoMeta(locale: string, pathname: string): Promise<st
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,
     `<meta name="twitter:image" content="${OG_URL}" />`,
-    `<meta name="twitter:site" content="${isCustomORG ? `@${ORG_NAME}` : '@lobehub'}" />`,
+    `<meta name="twitter:site" content="${isCustomORG ? `@${ORG_NAME}` : '@agentasia'}" />`,
   ].join('\n    ');
 }

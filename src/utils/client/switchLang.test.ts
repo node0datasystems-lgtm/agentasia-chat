@@ -1,4 +1,4 @@
-import { setCookie } from '@lobechat/utils';
+import { setCookie } from '@agentasia/utils';
 import { changeLanguage } from 'i18next';
 import { describe, expect, it, vi } from 'vitest';
 

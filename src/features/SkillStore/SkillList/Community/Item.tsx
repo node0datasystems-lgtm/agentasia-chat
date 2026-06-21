@@ -8,8 +8,8 @@ import {
   Icon,
   Modal,
   stopPropagation,
-} from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Button } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { MoreVerticalIcon, Plus, Trash2 } from 'lucide-react';

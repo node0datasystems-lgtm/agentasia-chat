@@ -1,4 +1,4 @@
-import { Flexbox, Icon, SliderWithInput } from '@lobehub/ui';
+import { Flexbox, Icon, SliderWithInput } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { AtomIcon, RepeatIcon } from 'lucide-react';
 import { memo } from 'react';

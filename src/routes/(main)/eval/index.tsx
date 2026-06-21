@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Empty, Flexbox } from '@lobehub/ui';
+import { Button, Empty, Flexbox } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { FlaskConical, Plus } from 'lucide-react';
 import { memo } from 'react';

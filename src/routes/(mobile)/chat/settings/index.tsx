@@ -1,6 +1,6 @@
 'use client';
 
-import { Tabs } from '@lobehub/ui';
+import { Tabs } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo, useState } from 'react';
 

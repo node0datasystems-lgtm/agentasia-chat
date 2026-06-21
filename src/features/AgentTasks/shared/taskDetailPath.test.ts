@@ -56,11 +56,11 @@ describe('taskDetailPath', () => {
 
   it('prefixes the navigation target with the active workspace slug', () => {
     mocks.params = { aid: 'agt_current' };
-    mocks.activeWorkspaceSlug = 'lobehub';
+    mocks.activeWorkspaceSlug = 'agentasia';
 
     const { result } = renderHook(() => useNavigateToTaskDetail());
     result.current('T-2', 'agt_child');
 
-    expect(mocks.navigate).toHaveBeenCalledWith('/lobehub/agent/agt_child/task/T-2');
+    expect(mocks.navigate).toHaveBeenCalledWith('/agentasia/agent/agt_child/task/T-2');
   });
 });

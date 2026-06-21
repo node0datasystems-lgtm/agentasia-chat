@@ -1,5 +1,5 @@
-import { PythonInterpreter } from '@lobechat/python-interpreter';
-import { type CodeInterpreterResponse } from '@lobechat/types';
+import { PythonInterpreter } from '@agentasia/python-interpreter';
+import { type CodeInterpreterResponse } from '@agentasia/types';
 
 import { pythonEnv } from '@/envs/python';
 

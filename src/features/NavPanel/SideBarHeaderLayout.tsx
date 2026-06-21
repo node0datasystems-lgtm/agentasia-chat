@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import type { BreadcrumbProps } from 'antd';
 import { Breadcrumb } from 'antd';
 import { createStaticStyles } from 'antd-style';

@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Block, Markdown } from '@lobehub/ui';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Block, Markdown } from '@agentasia/ui';
 import { memo, useEffect } from 'react';
 
 import { useGroupProfileStore } from '@/store/groupProfile';

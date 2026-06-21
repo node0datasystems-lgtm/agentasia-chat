@@ -4,27 +4,27 @@ import {
   type AgentState,
   type Cost,
   type Usage,
-} from '@lobechat/agent-runtime';
+} from '@agentasia/agent-runtime';
 import {
   AgentRuntime,
   computeStepContext,
   GeneralChatAgent,
   isParkedStatus,
-} from '@lobechat/agent-runtime';
-import { LobeAgentManifest } from '@lobechat/builtin-tool-lobe-agent';
-import { createPathScopeAudit } from '@lobechat/builtin-tool-local-system';
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { manualModeExcludeToolIds } from '@lobechat/builtin-tools';
-import { isDesktop } from '@lobechat/const';
-import { type ToolsEngine } from '@lobechat/context-engine';
-import { buildTaskDetailPrompt, buildTaskListPrompt } from '@lobechat/prompts';
+} from '@agentasia/agent-runtime';
+import { LobeAgentManifest } from '@agentasia/builtin-tool-lobe-agent';
+import { createPathScopeAudit } from '@agentasia/builtin-tool-local-system';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { manualModeExcludeToolIds } from '@agentasia/builtin-tools';
+import { isDesktop } from '@agentasia/const';
+import { type ToolsEngine } from '@agentasia/context-engine';
+import { buildTaskDetailPrompt, buildTaskListPrompt } from '@agentasia/prompts';
 import {
   type ConversationContext,
   type MessageMetadata,
   type RunSubAgentResult,
   type RuntimeInitialContext,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 
 import { createAgentToolsEngine } from '@/helpers/toolEngineering';

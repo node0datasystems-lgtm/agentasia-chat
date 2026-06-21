@@ -1,9 +1,9 @@
-import type { ActivateToolsState } from '@lobechat/builtin-tool-activator';
-import { ActivatorApiName, LobeActivatorIdentifier } from '@lobechat/builtin-tool-activator';
-import { getBuiltinInspector } from '@lobechat/builtin-tools/inspectors';
-import type { ToolIntervention } from '@lobechat/types';
-import { safeParseJSON, safeParsePartialJSON } from '@lobechat/utils';
-import { Flexbox } from '@lobehub/ui';
+import type { ActivateToolsState } from '@agentasia/builtin-tool-activator';
+import { ActivatorApiName, LobeActivatorIdentifier } from '@agentasia/builtin-tool-activator';
+import { getBuiltinInspector } from '@agentasia/builtin-tools/inspectors';
+import type { ToolIntervention } from '@agentasia/types';
+import { safeParseJSON, safeParsePartialJSON } from '@agentasia/utils';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import SafeBoundary from '@/components/ErrorBoundary';

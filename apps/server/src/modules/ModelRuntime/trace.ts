@@ -1,7 +1,7 @@
-import { INBOX_SESSION_ID, LOBE_CHAT_OBSERVATION_ID, LOBE_CHAT_TRACE_ID } from '@lobechat/const';
-import { type ChatStreamCallbacks, type ChatStreamPayload } from '@lobechat/model-runtime';
-import { type TracePayload } from '@lobechat/types';
-import { TraceTagMap } from '@lobechat/types';
+import { INBOX_SESSION_ID, LOBE_CHAT_OBSERVATION_ID, LOBE_CHAT_TRACE_ID } from '@agentasia/const';
+import { type ChatStreamCallbacks, type ChatStreamPayload } from '@agentasia/model-runtime';
+import { type TracePayload } from '@agentasia/types';
+import { TraceTagMap } from '@agentasia/types';
 import { after } from 'next/server';
 
 import { TraceClient } from '@/libs/traces';

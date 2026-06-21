@@ -10,7 +10,7 @@ import type {
   SkillResourceTreeNode,
   SkillSource,
   UpdateSkillInput,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

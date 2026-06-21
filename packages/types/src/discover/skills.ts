@@ -5,7 +5,7 @@ import type {
   MarketSkillListResponse,
   SkillCommentListResponse,
   SkillRatingDistribution,
-} from '@lobehub/market-sdk';
+} from '@agentasia/market-sdk';
 
 export enum SkillCategory {
   AgentToAgentProtocols = 'agent-to-agent-protocols',

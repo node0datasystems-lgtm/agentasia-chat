@@ -1,11 +1,11 @@
 'use client';
 
-import { SOCIAL_URL } from '@lobechat/business-const';
-import { isDesktop } from '@lobechat/const';
-import { useAnalytics } from '@lobehub/analytics/react';
-import { type MenuProps } from '@lobehub/ui';
-import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@lobehub/ui';
-import { DiscordIcon, GithubIcon } from '@lobehub/ui/icons';
+import { SOCIAL_URL } from '@agentasia/business-const';
+import { isDesktop } from '@agentasia/const';
+import { useAnalytics } from '@agentasia/analytics/react';
+import { type MenuProps } from '@agentasia/ui';
+import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@agentasia/ui';
+import { DiscordIcon, GithubIcon } from '@agentasia/ui/icons';
 import {
   Book,
   CircleHelp,
@@ -45,9 +45,9 @@ import { resolveFooterPromotionState } from './promotionPipeline';
 const AGENT_ONBOARDING_PROMO_SLUG = 'agent-onboarding-promo-v1';
 
 const PRODUCT_HUNT_NOTIFICATION = {
-  actionHref: 'https://www.producthunt.com/products/lobehub?launch=lobehub',
+  actionHref: 'https://www.producthunt.com/products/agentasia?launch=agentasia',
   endTime: new Date('2026-02-01T00:00:00Z'),
-  image: 'https://hub-apac-1.lobeobjects.space/og/lobehub-ph.png',
+  image: 'https://hub-apac-1.lobeobjects.space/og/agentasia-ph.png',
   slug: 'product-hunt-2026',
   startTime: new Date('2026-01-27T08:00:00Z'),
 } as const;

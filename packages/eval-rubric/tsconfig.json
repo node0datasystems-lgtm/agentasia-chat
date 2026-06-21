@@ -2,7 +2,11 @@
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -13,6 +17,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "types": ["vitest/globals"]
+    "types": [
+      "vitest/globals"
+    ]
   }
 }

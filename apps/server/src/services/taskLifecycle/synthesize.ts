@@ -1,4 +1,4 @@
-import type { BriefType, TaskItem } from '@lobechat/types';
+import type { BriefType, TaskItem } from '@agentasia/types';
 
 /** Inputs for the brief-emission rule. Pure data, no I/O. */
 export interface ShouldEmitTopicBriefInput {

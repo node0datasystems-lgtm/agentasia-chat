@@ -1,8 +1,8 @@
 'use client';
 
-import type { GitFileDiffStatus } from '@lobechat/electron-client-ipc';
-import { ActionIcon, copyToClipboard, Flexbox, PatchDiff } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import type { GitFileDiffStatus } from '@agentasia/electron-client-ipc';
+import { ActionIcon, copyToClipboard, Flexbox, PatchDiff } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { createStaticStyles } from 'antd-style';
 import { CopyIcon, LocateFixedIcon, Undo2Icon } from 'lucide-react';
 import path from 'path-browserify-esm';

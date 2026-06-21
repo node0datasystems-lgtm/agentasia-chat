@@ -1,4 +1,4 @@
-import type { OpenInAppId } from '@lobechat/electron-client-ipc';
+import type { OpenInAppId } from '@agentasia/electron-client-ipc';
 
 export type DetectStrategy =
   | { paths: string[]; type: 'appBundle' }

@@ -1,4 +1,4 @@
-import { genCdnUrl } from '@lobehub/ui';
+import { genCdnUrl } from '@agentasia/ui';
 import type { CSSProperties } from 'react';
 
 // Pierre's unsafeCSS is captured at FileTree construction with no public
@@ -17,7 +17,7 @@ const RESERVED_FILE_ICON_OFFSET = '22px';
 
 const MATERIAL_FILE_ICON_ASSETS_URL = genCdnUrl({
   path: 'assets',
-  pkg: '@lobehub/assets-fileicon',
+  pkg: '@agentasia/assets-fileicon',
   version: '1.0.0',
 });
 

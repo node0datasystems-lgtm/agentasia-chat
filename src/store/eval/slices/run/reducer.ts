@@ -1,4 +1,4 @@
-import type { AgentEvalRunDetail } from '@lobechat/types';
+import type { AgentEvalRunDetail } from '@agentasia/types';
 import { produce } from 'immer';
 
 type SetRunDetailAction = {

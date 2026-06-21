@@ -1,7 +1,7 @@
-import { getDocumentTemplate } from '@lobechat/agent-templates';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { CURRENT_ONBOARDING_VERSION } from '@lobechat/const';
-import type { OnboardingUserInfo } from '@lobechat/context-engine';
+import { getDocumentTemplate } from '@agentasia/agent-templates';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { CURRENT_ONBOARDING_VERSION } from '@agentasia/const';
+import type { OnboardingUserInfo } from '@agentasia/context-engine';
 import type {
   AgentOnboardingStructuredField,
   ChatTopicMetadata,
@@ -12,14 +12,14 @@ import type {
   SaveUserQuestionInput,
   UserAgentOnboarding,
   UserAgentOnboardingContext,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import {
   MAX_ONBOARDING_STEPS,
   MIN_DISCOVERY_USER_MESSAGES,
   RECOMMENDED_DISCOVERY_USER_MESSAGES,
   SAVE_USER_QUESTION_FIELDS,
-} from '@lobechat/types';
-import { isRecord, merge, pickTrimmedString } from '@lobechat/utils';
+} from '@agentasia/types';
+import { isRecord, merge, pickTrimmedString } from '@agentasia/utils';
 import { and, count, eq, sql } from 'drizzle-orm';
 
 import { AgentModel } from '@/database/models/agent';

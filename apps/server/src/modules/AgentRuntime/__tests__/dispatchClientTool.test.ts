@@ -1,4 +1,4 @@
-import type { ChatToolPayload } from '@lobechat/types';
+import type { ChatToolPayload } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { dispatchClientTool } from '../dispatchClientTool';

@@ -1,4 +1,4 @@
-import type { EvalRunInputConfig, RubricType } from '@lobechat/types';
+import type { EvalRunInputConfig, RubricType } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

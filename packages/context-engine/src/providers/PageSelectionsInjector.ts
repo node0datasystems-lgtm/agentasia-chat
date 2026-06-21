@@ -1,5 +1,5 @@
-import { formatPageSelections } from '@lobechat/prompts';
-import type { PageSelection } from '@lobechat/types';
+import { formatPageSelections } from '@agentasia/prompts';
+import type { PageSelection } from '@agentasia/types';
 import debug from 'debug';
 
 import { BaseEveryUserContentProvider } from '../base/BaseEveryUserContentProvider';

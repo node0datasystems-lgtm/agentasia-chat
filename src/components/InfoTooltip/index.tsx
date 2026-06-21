@@ -1,5 +1,5 @@
-import { type IconSize, type TooltipProps } from '@lobehub/ui';
-import { Icon, Tooltip } from '@lobehub/ui';
+import { type IconSize, type TooltipProps } from '@agentasia/ui';
+import { Icon, Tooltip } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { CircleHelp } from 'lucide-react';
 import { type CSSProperties } from 'react';

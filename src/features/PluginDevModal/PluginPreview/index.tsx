@@ -1,5 +1,5 @@
-import { type ToolManifest } from '@lobechat/types';
-import { Block, Button, Flexbox, Icon, Text } from '@lobehub/ui';
+import { type ToolManifest } from '@agentasia/types';
+import { Block, Button, Flexbox, Icon, Text } from '@agentasia/ui';
 import { type FormInstance } from 'antd';
 import { Form as AForm } from 'antd';
 import { cssVar } from 'antd-style';

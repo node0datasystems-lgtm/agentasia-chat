@@ -4,7 +4,7 @@ import type {
   Part,
   Tool as GoogleFunctionCallTool,
 } from '@google/genai';
-import { imageUrlToBase64, resolveImageMimeTypeFromBase64 } from '@lobechat/utils';
+import { imageUrlToBase64, resolveImageMimeTypeFromBase64 } from '@agentasia/utils';
 
 import type { ChatCompletionTool, OpenAIChatMessage, UserMessageContentPart } from '../../types';
 import { safeParseJSON } from '../../utils/safeParseJSON';
@@ -359,7 +359,7 @@ export const buildGoogleMessages = async (
   // This handles cross-provider scenarios (e.g., OpenAI → Gemini switch) where
   // historical tool_calls lack thoughtSignature, as well as multi-turn Gemini
   // conversations where earlier turns may have lost their signatures.
-  // @see https://linear.app/lobehub/issue/
+  // @see https://linear.app/agentasia/issue/
   for (const content of filteredContents) {
     if (content.role === 'model' && content.parts) {
       for (const part of content.parts) {
@@ -382,7 +382,7 @@ export const buildGoogleMessages = async (
  * schema may place `enum` on non-STRING types (e.g. number, boolean)
  * or `required` on non-OBJECT types.
  *
- * @see https://linear.app/lobehub/issue/
+ * @see https://linear.app/agentasia/issue/
  */
 export const sanitizeGeminiSchema = (schema: any): any => {
   if (!schema || typeof schema !== 'object') return schema;
@@ -475,7 +475,7 @@ export const buildGoogleTool = (tool: ChatCompletionTool): FunctionDeclaration =
   const functionDeclaration = tool.function;
   const parameters = functionDeclaration.parameters;
 
-  // refs: https://github.com/lobehub/lobe-chat/pull/5002
+  // refs: https://github.com/agentasia/agentasia-chat/pull/5002
   const hasProperties = parameters?.properties && Object.keys(parameters.properties).length > 0;
 
   const jsonSchema = hasProperties

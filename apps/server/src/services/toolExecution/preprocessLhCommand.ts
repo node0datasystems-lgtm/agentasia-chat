@@ -15,7 +15,7 @@ export interface PreprocessResult {
 
 /**
  * Detect and preprocess `lh` CLI commands.
- * - Replaces `lh` with `npx -y @lobehub/cli`
+ * - Replaces `lh` with `npx -y @agentasia/cli`
  * - Injects LOBEHUB_JWT and LOBEHUB_SERVER env vars
  * - Signals caller to skip skill DB lookup
  */
@@ -34,14 +34,14 @@ export const preprocessLhCommand = async (
   try {
     const jwt = await signUserJWT(userId);
 
-    const serverUrl = isDev ? 'https://app.lobehub.com' : appEnv.APP_URL;
+    const serverUrl = isDev ? 'https://app.agentasia.ai' : appEnv.APP_URL;
 
     const envPrefix = `LOBEHUB_JWT=${jwt} LOBEHUB_SERVER=${serverUrl}`;
 
     // Replace `lh` in all sub-commands separated by &&, ||, or ;
     const rewritten = command.replaceAll(
       /(^|&&|\|\||;)(\s*)lh(\s|$)/g,
-      `$1$2${envPrefix} npx -y @lobehub/cli$3`,
+      `$1$2${envPrefix} npx -y @agentasia/cli$3`,
     );
     const finalCommand = rewritten;
 

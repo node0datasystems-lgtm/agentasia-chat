@@ -1,6 +1,6 @@
 'use client';
 
-import { type ConversationContext } from '@lobechat/types';
+import { type ConversationContext } from '@agentasia/types';
 
 import { useChatStore } from '@/store/chat';
 import { useDocumentStore } from '@/store/document';

@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/env",
+  "name": "@agentasia/env",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,9 @@
     "./*": "./src/*.ts"
   },
   "dependencies": {
-    "@lobechat/const": "workspace:*",
-    "@lobechat/types": "workspace:*",
     "@t3-oss/env-core": "^0.13.10",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "@agentasia/const": "workspace:*",
+    "@agentasia/types": "workspace:*"
   }
 }

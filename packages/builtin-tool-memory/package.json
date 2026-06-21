@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-memory",
+  "name": "@agentasia/builtin-tool-memory",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -12,15 +12,15 @@
   "main": "./src/index.ts",
   "scripts": {},
   "dependencies": {
-    "@lobechat/memory-user-memory": "workspace:*",
-    "@lobechat/prompts": "workspace:*"
+    "@agentasia/memory-user-memory": "workspace:*",
+    "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*",
-    "@types/json-schema": "^7.0.15"
+    "@types/json-schema": "^7.0.15",
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "react": "*",

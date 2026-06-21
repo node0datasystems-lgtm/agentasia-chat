@@ -1,8 +1,8 @@
 'use client';
 
-import { type FormGroupItemType } from '@lobehub/ui';
-import { Flexbox, Form, Icon, ImageSelect, Skeleton } from '@lobehub/ui';
-import { Select } from '@lobehub/ui/base-ui';
+import { type FormGroupItemType } from '@agentasia/ui';
+import { Flexbox, Form, Icon, ImageSelect, Skeleton } from '@agentasia/ui';
+import { Select } from '@agentasia/ui/base-ui';
 import { Segmented } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Ban, Gauge, Loader2Icon, Monitor, Moon, Mouse, Sun, Waves } from 'lucide-react';

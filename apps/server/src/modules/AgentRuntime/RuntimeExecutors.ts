@@ -11,17 +11,17 @@ import {
   type GeneralAgentCompressionResultPayload,
   type InstructionExecutor,
   UsageCounter,
-} from '@lobechat/agent-runtime';
-import { LobeActivatorIdentifier } from '@lobechat/builtin-tool-activator';
+} from '@agentasia/agent-runtime';
+import { LobeActivatorIdentifier } from '@agentasia/builtin-tool-activator';
 import {
   type ComposioServiceSummary,
   type CredSummary,
   generateComposioServicesList,
   generateCredsList,
-} from '@lobechat/builtin-tool-creds';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { COMPOSIO_APP_TYPES } from '@lobechat/const';
+} from '@agentasia/builtin-tool-creds';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { COMPOSIO_APP_TYPES } from '@agentasia/const';
 import {
   type AgentContextDocument,
   type AgentGroupConfig,
@@ -36,20 +36,20 @@ import {
   SkillResolver,
   ToolNameResolver,
   ToolResolver,
-} from '@lobechat/context-engine';
-import { parse } from '@lobechat/conversation-flow';
+} from '@agentasia/context-engine';
+import { parse } from '@agentasia/conversation-flow';
 import {
   applyModelExtendParams,
   type ChatStreamPayload,
   consumeStreamUntilDone,
   type ModelExtendParams,
-} from '@lobechat/model-runtime';
+} from '@agentasia/model-runtime';
 import {
   context as otelContext,
   SpanKind,
   SpanStatusCode,
   trace as otelTrace,
-} from '@lobechat/observability-otel/api';
+} from '@agentasia/observability-otel/api';
 import {
   buildChatRequestAttributes,
   buildChatResponseAttributes,
@@ -61,16 +61,16 @@ import {
   executeToolSpanName,
   type ToolType,
   tracer as agentRuntimeTracer,
-} from '@lobechat/observability-otel/modules/agent-runtime';
-import { chainCompressContext } from '@lobechat/prompts';
+} from '@agentasia/observability-otel/modules/agent-runtime';
+import { chainCompressContext } from '@agentasia/prompts';
 import {
   type ChatToolPayload,
   type ExecSubAgentParams,
   type ExecVirtualSubAgentParams,
   type MessageToolCall,
   type UIChatMessage,
-} from '@lobechat/types';
-import { sanitizeToolCallArguments, serializePartsForStorage } from '@lobechat/utils';
+} from '@agentasia/types';
+import { sanitizeToolCallArguments, serializePartsForStorage } from '@agentasia/utils';
 import debug from 'debug';
 import { type ExtendParamsType, ModelProvider } from 'model-bank';
 
@@ -916,11 +916,11 @@ export const createRuntimeExecutors = (
         );
         const modelKnowledgeCutoff =
           modelCard?.knowledgeCutoff ??
-          (provider === ModelProvider.LobeHub ? canonicalModelCard?.knowledgeCutoff : undefined);
+          (provider === ModelProvider.AgentAsia ? canonicalModelCard?.knowledgeCutoff : undefined);
 
         let modelExtendParams = readExtendParams(modelCard);
 
-        // Aggregation providers (e.g. `lobehub`) may serve a model without copying
+        // Aggregation providers (e.g. `agentasia`) may serve a model without copying
         // its origin `settings.extendParams`. Fall back to the canonical model card
         // (matched by id across any provider) so reasoning/thinking params like
         // `thinkingLevel` still reach the model. Mirrors the client-side
@@ -1074,8 +1074,8 @@ export const createRuntimeExecutors = (
           }
         }
 
-        // Build additional placeholder variables for the lobehub builtin skill
-        // (`packages/builtin-skills/src/lobehub/content.ts`) so it can render
+        // Build additional placeholder variables for the agentasia builtin skill
+        // (`packages/builtin-skills/src/agentasia/content.ts`) so it can render
         // `{{agent_id}}` / `{{agent_title}}` / `{{topic_id}}` etc. into the
         // model's prompt without needing a separate context injector.
         //
@@ -1087,29 +1087,29 @@ export const createRuntimeExecutors = (
         //   topics table. Skipped when topicId is missing or the lookup fails
         //   (best-effort, falls back to empty string so the template still
         //   renders cleanly).
-        const lobehubSkillAgentId = state.metadata?.agentId;
-        const lobehubSkillTopicId = state.metadata?.topicId;
-        const lobehubSkillAgentMeta = state.metadata?.agentConfig as
+        const agentasiaSkillAgentId = state.metadata?.agentId;
+        const agentasiaSkillTopicId = state.metadata?.topicId;
+        const agentasiaSkillAgentMeta = state.metadata?.agentConfig as
           | { description?: string | null; title?: string | null }
           | undefined;
 
-        let lobehubSkillTopicTitle = '';
-        if (lobehubSkillTopicId && ctx.serverDB && ctx.userId) {
+        let agentasiaSkillTopicTitle = '';
+        if (agentasiaSkillTopicId && ctx.serverDB && ctx.userId) {
           try {
             const topicModelForLobehub = new TopicModel(ctx.serverDB, ctx.userId, ctx.workspaceId);
-            const topicRecord = await topicModelForLobehub.findById(lobehubSkillTopicId);
-            lobehubSkillTopicTitle = topicRecord?.title ?? '';
+            const topicRecord = await topicModelForLobehub.findById(agentasiaSkillTopicId);
+            agentasiaSkillTopicTitle = topicRecord?.title ?? '';
           } catch (error) {
-            log('Failed to load topic title for lobehub skill placeholders: %O', error);
+            log('Failed to load topic title for agentasia skill placeholders: %O', error);
           }
         }
 
-        const lobehubSkillVariables: Record<string, string> = {
-          agent_id: lobehubSkillAgentId ?? '',
-          agent_title: lobehubSkillAgentMeta?.title ?? '',
-          agent_description: lobehubSkillAgentMeta?.description ?? '',
-          topic_id: lobehubSkillTopicId ?? '',
-          topic_title: lobehubSkillTopicTitle,
+        const agentasiaSkillVariables: Record<string, string> = {
+          agent_id: agentasiaSkillAgentId ?? '',
+          agent_title: agentasiaSkillAgentMeta?.title ?? '',
+          agent_description: agentasiaSkillAgentMeta?.description ?? '',
+          topic_id: agentasiaSkillTopicId ?? '',
+          topic_title: agentasiaSkillTopicTitle,
         };
 
         // ── Tool-specific template variable resolution ────────────────────
@@ -1138,13 +1138,13 @@ export const createRuntimeExecutors = (
         // synced into the sandbox upload dir, so the agent knows they exist.
         // Mirrors the bootstrap query in SandboxMiddlewareService.
         let sandboxUploadedFiles = '';
-        if (sandboxEnabled === 'true' && ctx.serverDB && ctx.userId && lobehubSkillTopicId) {
+        if (sandboxEnabled === 'true' && ctx.serverDB && ctx.userId && agentasiaSkillTopicId) {
           try {
             const { FileModel } = await import('@/database/models/file');
             const { formatUploadedFilesPrompt } =
               await import('@lobechat/builtin-tool-cloud-sandbox');
             const fileModel = new FileModel(ctx.serverDB, ctx.userId);
-            const uploadedFiles = await fileModel.findFilesToInitInSandbox(lobehubSkillTopicId);
+            const uploadedFiles = await fileModel.findFilesToInitInSandbox(agentasiaSkillTopicId);
             sandboxUploadedFiles = formatUploadedFilesPrompt(uploadedFiles);
           } catch (error) {
             log('Failed to resolve files for {{sandbox_uploaded_files}} substitution: %O', error);
@@ -1237,7 +1237,7 @@ export const createRuntimeExecutors = (
           }),
           additionalVariables: {
             ...state.metadata?.deviceSystemInfo,
-            ...lobehubSkillVariables,
+            ...agentasiaSkillVariables,
             // User identity variables
             username: serverUsername,
             language: serverLanguage,
@@ -1269,7 +1269,7 @@ export const createRuntimeExecutors = (
               return info?.abilities?.video ?? false;
             },
             isCanUseVision: (m: string, p: string) => {
-              // Aggregator providers (e.g. lobehub) route to upstream model cards
+              // Aggregator providers (e.g. agentasia) route to upstream model cards
               // that live under the original provider's id in the registry, so
               // fall back to a cross-provider lookup by model id when the
               // (model, provider) pair has no direct entry.
@@ -1355,7 +1355,7 @@ export const createRuntimeExecutors = (
           async (ceSpan) => {
             try {
               const result = await serverMessagesEngine(contextEngineInput);
-              ceSpan.setAttribute('lobehub.context.message_count', result.length);
+              ceSpan.setAttribute('agentasia.context.message_count', result.length);
               return result;
             } catch (error) {
               ceSpan.recordException(error as Error);
@@ -2647,7 +2647,7 @@ export const createRuntimeExecutors = (
           execution = { attempts: 1, result: dispatchResult };
         } else {
           // Inject source from sourceMap so BuiltinToolsExecutor can route
-          // lobehubSkill / composio tools correctly (LLM responses don't carry source)
+          // agentasiaSkill / composio tools correctly (LLM responses don't carry source)
           if (toolSource && !chatToolPayload.source) {
             chatToolPayload.source = toolSource;
           }
@@ -3238,7 +3238,7 @@ export const createRuntimeExecutors = (
               execution = { attempts: 1, result: dispatchResult };
             } else {
               // Inject source from sourceMap so BuiltinToolsExecutor can route
-              // lobehubSkill / composio tools correctly (LLM responses don't carry source)
+              // agentasiaSkill / composio tools correctly (LLM responses don't carry source)
               const batchToolSource =
                 state.operationToolSet?.sourceMap?.[chatToolPayload.identifier] ??
                 state.toolSourceMap?.[chatToolPayload.identifier];

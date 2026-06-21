@@ -98,8 +98,8 @@ async function autoCloseDuplicates(): Promise<void> {
   }
   console.log('[DEBUG] GitHub token found');
 
-  const owner = process.env.GITHUB_REPOSITORY_OWNER || 'lobehub';
-  const repo = process.env.GITHUB_REPOSITORY_NAME || 'lobe-chat';
+  const owner = process.env.GITHUB_REPOSITORY_OWNER || 'agentasia';
+  const repo = process.env.GITHUB_REPOSITORY_NAME || 'agentasia-chat';
   console.log(`[DEBUG] Repository: ${owner}/${repo}`);
 
   const threeDaysAgo = new Date();

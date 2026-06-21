@@ -1,6 +1,6 @@
-import type { ChatStreamPayload } from '@lobechat/model-runtime';
-import type { LobeAgentChatConfig, LobeAgentConfig, UserSystemAgentConfig } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+import type { ChatStreamPayload } from '@agentasia/model-runtime';
+import type { LobeAgentChatConfig, LobeAgentConfig, UserSystemAgentConfig } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import { and, eq } from 'drizzle-orm';
 
 import { getBusinessModelRuntimeHooks } from '@/business/server/model-runtime';

@@ -1,4 +1,4 @@
-import { Flexbox, Segmented, Tag, Text } from '@lobehub/ui';
+import { Flexbox, Segmented, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useCallback, useEffect, useMemo, useRef } from 'react';
 

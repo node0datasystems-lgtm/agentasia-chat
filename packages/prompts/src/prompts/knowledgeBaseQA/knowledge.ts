@@ -1,4 +1,4 @@
-import type { KnowledgeItem } from '@lobechat/types';
+import type { KnowledgeItem } from '@agentasia/types';
 
 const knowledgePrompt = (item: KnowledgeItem) =>
   `<knowledge id="${item.id}" name="${item.name}" type="${item.type}"${item.fileType ? ` fileType="${item.fileType}" ` : ''}>${item.description || ''}</knowledge>`;

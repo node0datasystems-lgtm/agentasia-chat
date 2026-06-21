@@ -33,8 +33,8 @@ describe('agent-runtime attribute builders', () => {
       'gen_ai.provider.name': 'openai',
       'gen_ai.request.model': 'gpt-5',
       'gen_ai.conversation.id': 'topic_abc',
-      'lobehub.agent.operation.id': 'op_xyz',
-      'lobehub.agent.step.index': 0,
+      'agentasia.agent.operation.id': 'op_xyz',
+      'agentasia.agent.step.index': 0,
     });
     expect(attrs).not.toHaveProperty('gen_ai.agent.description');
   });
@@ -50,8 +50,8 @@ describe('agent-runtime attribute builders', () => {
     expect(attrs).toEqual({
       'gen_ai.usage.input_tokens': 1000,
       'gen_ai.usage.output_tokens': 200,
-      'lobehub.agent.step.count': 5,
-      'lobehub.agent.completion_reason': 'done',
+      'agentasia.agent.step.count': 5,
+      'agentasia.agent.completion_reason': 'done',
     });
   });
 
@@ -111,9 +111,9 @@ describe('agent-runtime attribute builders', () => {
       'gen_ai.tool.name': 'web_search',
       'gen_ai.tool.type': 'function',
       'gen_ai.tool.call.id': 'call_42',
-      'lobehub.tool.source': 'builtin',
-      'lobehub.agent.operation.id': 'op_xyz',
-      'lobehub.agent.step.index': 1,
+      'agentasia.tool.source': 'builtin',
+      'agentasia.agent.operation.id': 'op_xyz',
+      'agentasia.agent.step.index': 1,
     });
   });
 
@@ -124,8 +124,8 @@ describe('agent-runtime attribute builders', () => {
     });
 
     expect(attrs).toEqual({
-      'lobehub.tool.success': false,
-      'lobehub.tool.attempts': 2,
+      'agentasia.tool.success': false,
+      'agentasia.tool.attempts': 2,
     });
   });
 
@@ -144,19 +144,19 @@ describe('agent-runtime attribute builders', () => {
     });
 
     expect(attrs).toMatchObject({
-      'lobehub.context.message_count': 12,
-      'lobehub.context.knowledge_injected': true,
-      'lobehub.context.knowledge_count': 3,
-      'lobehub.context.history_compressed': false,
-      'lobehub.context.memory_injected': true,
-      'lobehub.context.system_role_length': 1024,
-      'lobehub.context.tool_count': 7,
-      'lobehub.context.has_images': true,
-      'lobehub.agent.operation.id': 'op_xyz',
-      'lobehub.agent.step.index': 0,
+      'agentasia.context.message_count': 12,
+      'agentasia.context.knowledge_injected': true,
+      'agentasia.context.knowledge_count': 3,
+      'agentasia.context.history_compressed': false,
+      'agentasia.context.memory_injected': true,
+      'agentasia.context.system_role_length': 1024,
+      'agentasia.context.tool_count': 7,
+      'agentasia.context.has_images': true,
+      'agentasia.agent.operation.id': 'op_xyz',
+      'agentasia.agent.step.index': 0,
     });
-    expect(attrs).not.toHaveProperty('lobehub.context.token_usage');
-    expect(attrs).not.toHaveProperty('lobehub.context.window_ratio');
+    expect(attrs).not.toHaveProperty('agentasia.context.token_usage');
+    expect(attrs).not.toHaveProperty('agentasia.context.window_ratio');
   });
 
   it('formats span names per gen_ai convention', () => {

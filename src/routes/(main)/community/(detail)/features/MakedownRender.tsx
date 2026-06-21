@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Empty, Markdown } from '@lobehub/ui';
+import { Center, Empty, Markdown } from '@agentasia/ui';
 import { FileText } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { memo } from 'react';

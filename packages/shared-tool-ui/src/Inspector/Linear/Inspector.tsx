@@ -1,6 +1,6 @@
 'use client';
 
-import type { BuiltinInspector, BuiltinInspectorProps } from '@lobechat/types';
+import type { BuiltinInspector, BuiltinInspectorProps } from '@agentasia/types';
 import { createStaticStyles, cx } from 'antd-style';
 import { CornerLeftUp } from 'lucide-react';
 import { memo } from 'react';

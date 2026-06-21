@@ -10,7 +10,7 @@ import {
   Tag,
   Text,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { App } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { ClockIcon, DownloadIcon, Heart } from 'lucide-react';

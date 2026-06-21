@@ -1,8 +1,8 @@
 'use client';
 
-import { LOADING_FLAT } from '@lobechat/const';
-import type { ChatToolPayload, UIChatMessage } from '@lobechat/types';
-import { Text } from '@lobehub/ui';
+import { LOADING_FLAT } from '@agentasia/const';
+import type { ChatToolPayload, UIChatMessage } from '@agentasia/types';
+import { Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 

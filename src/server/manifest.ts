@@ -1,4 +1,4 @@
-import { BRANDING_LOGO_URL } from '@lobechat/business-const';
+import { BRANDING_LOGO_URL } from '@agentasia/business-const';
 import qs from 'query-string';
 
 import { getCanonicalUrl } from '@/server/utils/url';

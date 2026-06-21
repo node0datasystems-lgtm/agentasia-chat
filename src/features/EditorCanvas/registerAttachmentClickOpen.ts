@@ -1,4 +1,4 @@
-import type { IEditor } from '@lobehub/editor';
+import type { IEditor } from '@agentasia/editor';
 import { $getNearestNodeFromDOMNode } from 'lexical';
 
 /**
@@ -27,7 +27,7 @@ export const registerAttachmentClickOpen = (editor: IEditor): (() => void) | und
     // `data-lexical-decorator="true"` on their wrapper.
     if (!target.closest('[data-lexical-decorator="true"]')) return;
     // Explicit download button has its own handler; don't also open in a new tab.
-    if (target.closest('[data-lobehub-file-download]')) return;
+    if (target.closest('[data-agentasia-file-download]')) return;
 
     let url: string | undefined;
     lexicalEditor.read(() => {

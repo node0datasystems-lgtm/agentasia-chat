@@ -1,5 +1,5 @@
-import { type DropdownMenuCheckboxItem, type DropdownMenuProps } from '@lobehub/ui';
-import { ActionIcon, DropdownMenu, Flexbox, Icon, Text } from '@lobehub/ui';
+import { type DropdownMenuCheckboxItem, type DropdownMenuProps } from '@agentasia/ui';
+import { ActionIcon, DropdownMenu, Flexbox, Icon, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { ChevronRight, Languages } from 'lucide-react';
 import { memo, type ReactNode, useMemo } from 'react';

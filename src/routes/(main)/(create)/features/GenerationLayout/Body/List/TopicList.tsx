@@ -1,6 +1,6 @@
 'use client';
 
-import { Grid, TooltipGroup } from '@lobehub/ui';
+import { Grid, TooltipGroup } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

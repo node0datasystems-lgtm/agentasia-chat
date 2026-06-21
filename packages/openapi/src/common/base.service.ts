@@ -1,4 +1,4 @@
-import { buildWorkspacePayload, buildWorkspaceWhere } from '@lobechat/database';
+import { buildWorkspacePayload, buildWorkspaceWhere } from '@agentasia/database';
 import { and, eq, inArray, type SQL } from 'drizzle-orm';
 import type { AnyPgColumn } from 'drizzle-orm/pg-core';
 

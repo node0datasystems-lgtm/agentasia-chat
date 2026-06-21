@@ -1,7 +1,7 @@
-import { ToolNameResolver } from '@lobechat/context-engine';
-import { pluginPrompts } from '@lobechat/prompts';
-import { Center, Flexbox, Tooltip } from '@lobehub/ui';
-import { TokenTag } from '@lobehub/ui/chat';
+import { ToolNameResolver } from '@agentasia/context-engine';
+import { pluginPrompts } from '@agentasia/prompts';
+import { Center, Flexbox, Tooltip } from '@agentasia/ui';
+import { TokenTag } from '@agentasia/ui/chat';
 import { cssVar } from 'antd-style';
 import numeral from 'numeral';
 import { memo } from 'react';

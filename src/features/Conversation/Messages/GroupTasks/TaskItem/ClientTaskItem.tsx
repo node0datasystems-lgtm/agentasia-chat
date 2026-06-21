@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionItem, Block, Text } from '@lobehub/ui';
+import { AccordionItem, Block, Text } from '@agentasia/ui';
 import { memo, useMemo, useState } from 'react';
 
 import { useAgentGroupStore } from '@/store/agentGroup';

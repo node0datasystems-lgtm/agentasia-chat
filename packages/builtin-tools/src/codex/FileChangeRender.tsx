@@ -1,8 +1,8 @@
 'use client';
 
-import { FilePathDisplay } from '@lobechat/shared-tool-ui/components';
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox, PatchDiff, Text } from '@lobehub/ui';
+import { FilePathDisplay } from '@agentasia/shared-tool-ui/components';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox, PatchDiff, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

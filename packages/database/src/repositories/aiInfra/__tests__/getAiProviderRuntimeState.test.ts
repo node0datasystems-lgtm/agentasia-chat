@@ -1,4 +1,4 @@
-import type { AiProviderRuntimeConfig, EnabledProvider } from '@lobechat/types';
+import type { AiProviderRuntimeConfig, EnabledProvider } from '@agentasia/types';
 import type { EnabledAiModel } from 'model-bank';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 

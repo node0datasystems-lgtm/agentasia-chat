@@ -1,6 +1,6 @@
 'use client';
 
-import type { LobeAgentChatConfig } from '@lobechat/types';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 import type { SliderSingleProps } from 'antd/es/slider';
 import type { CSSProperties } from 'react';
 import { memo } from 'react';

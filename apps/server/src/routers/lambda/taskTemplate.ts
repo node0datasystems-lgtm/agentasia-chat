@@ -1,4 +1,4 @@
-import { TASK_TEMPLATE_RECOMMEND_MAX_COUNT } from '@lobechat/const';
+import { TASK_TEMPLATE_RECOMMEND_MAX_COUNT } from '@agentasia/const';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

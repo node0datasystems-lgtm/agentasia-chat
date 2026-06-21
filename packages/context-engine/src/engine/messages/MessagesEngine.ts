@@ -443,7 +443,7 @@ export class MessagesEngine {
       // hoist that nested content into top-level `role: 'tool'` messages.
       // PlaceholderVariablesProcessor only walks `message.content`, so it MUST
       // run after the hoist or it would silently miss every placeholder buried
-      // inside an assistantGroup. (Regression discovered while wiring lobehub
+      // inside an assistantGroup. (Regression discovered while wiring agentasia
       // skill identity placeholders — see .)
       new PlaceholderVariablesProcessor({ variableGenerators: variableGenerators || {} }),
 

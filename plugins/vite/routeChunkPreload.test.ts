@@ -65,9 +65,9 @@ describe('routeChunkPreload', () => {
   it('matches route modules when built from the cloud repository root', () => {
     const bundle = {
       'assets/agent-CJm8x.js': createChunk({
-        facadeModuleId: '/repo/lobehub/src/routes/(main)/agent/index.tsx',
+        facadeModuleId: '/repo/agentasia/src/routes/(main)/agent/index.tsx',
         fileName: 'assets/agent-CJm8x.js',
-        moduleIds: ['/repo/lobehub/src/routes/(main)/agent/index.tsx'],
+        moduleIds: ['/repo/agentasia/src/routes/(main)/agent/index.tsx'],
       }),
     } satisfies TestOutputBundle;
 

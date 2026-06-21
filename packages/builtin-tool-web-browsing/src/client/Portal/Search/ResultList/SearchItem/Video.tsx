@@ -1,5 +1,5 @@
-import type { UniformSearchResult } from '@lobechat/types';
-import { Avatar, Flexbox, Text } from '@lobehub/ui';
+import type { UniformSearchResult } from '@agentasia/types';
+import { Avatar, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useState } from 'react';
 

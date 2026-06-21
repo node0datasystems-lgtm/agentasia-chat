@@ -1,9 +1,9 @@
 'use client';
 
-import { AGENT_PROFILE_URL } from '@lobechat/const';
-import type { AgentEvalRunDetail } from '@lobechat/types';
-import { ActionIcon, Avatar, copyToClipboard, Flexbox, Highlighter, Markdown } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { AGENT_PROFILE_URL } from '@agentasia/const';
+import type { AgentEvalRunDetail } from '@agentasia/types';
+import { ActionIcon, Avatar, copyToClipboard, Flexbox, Highlighter, Markdown } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Button, Card, Tag, Typography } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import {

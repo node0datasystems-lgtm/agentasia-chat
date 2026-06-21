@@ -1,4 +1,4 @@
-import { CopyButton, Flexbox, Text } from '@lobehub/ui';
+import { CopyButton, Flexbox, Text } from '@agentasia/ui';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
 

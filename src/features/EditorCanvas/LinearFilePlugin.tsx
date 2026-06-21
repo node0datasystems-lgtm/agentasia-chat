@@ -1,8 +1,8 @@
 'use client';
 
-import { downloadFile } from '@lobechat/utils/client';
-import { FilePlugin, UploadPlugin, useLexicalComposerContext } from '@lobehub/editor';
-import { ActionIcon } from '@lobehub/ui';
+import { downloadFile } from '@agentasia/utils/client';
+import { FilePlugin, UploadPlugin, useLexicalComposerContext } from '@agentasia/editor';
+import { ActionIcon } from '@agentasia/ui';
 import { createStyles } from 'antd-style';
 import { DownloadIcon } from 'lucide-react';
 import { type FC, memo, useLayoutEffect } from 'react';
@@ -36,7 +36,7 @@ const useStyles = createStyles(({ css, cssVar, token }) => ({
       background: ${token.colorFillTertiary};
     }
 
-    &:hover [data-lobehub-file-download] {
+    &:hover [data-agentasia-file-download] {
       opacity: 1;
     }
   `,
@@ -125,7 +125,7 @@ export const LinearFileCard = memo<LinearFileCardProps>(({ node }) => {
           <div className={styles.size}>{formatSize(size)}</div>
         ) : null}
       </div>
-      <div className={styles.download} data-lobehub-file-download="">
+      <div className={styles.download} data-agentasia-file-download="">
         <ActionIcon
           aria-label="Download"
           icon={DownloadIcon}

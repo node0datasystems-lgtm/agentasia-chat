@@ -1,4 +1,4 @@
-import { type ButtonProps } from '@lobehub/ui';
+import { type ButtonProps } from '@agentasia/ui';
 import {
   ActionIcon,
   Avatar,
@@ -10,8 +10,8 @@ import {
   Skeleton,
   Tag,
   Text,
-} from '@lobehub/ui';
-import { Modal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { Modal } from '@agentasia/ui/base-ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { startCase } from 'es-toolkit/compat';
 import { LinkIcon, Share2Icon } from 'lucide-react';

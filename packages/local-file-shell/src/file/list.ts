@@ -1,7 +1,7 @@
 import { readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 
-import { SYSTEM_FILES_TO_IGNORE } from '@lobechat/file-loaders';
+import { SYSTEM_FILES_TO_IGNORE } from '@agentasia/file-loaders';
 
 import type { FileEntry, ListFilesParams, ListFilesResult } from '../types';
 import { resolveAgainstCwd } from './expandTilde';

@@ -1,4 +1,4 @@
-import { type ChatToolPayload, type RuntimeStepContext } from '@lobechat/types';
+import { type ChatToolPayload, type RuntimeStepContext } from '@agentasia/types';
 
 import { type ChatStore } from '@/store/chat/store';
 import { type StoreSetter } from '@/store/types';

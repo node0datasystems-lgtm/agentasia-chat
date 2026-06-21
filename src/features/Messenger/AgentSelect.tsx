@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, Flexbox, Text } from '@lobehub/ui';
-import { Select, type SelectProps } from '@lobehub/ui/base-ui';
+import { Avatar, Flexbox, Text } from '@agentasia/ui';
+import { Select, type SelectProps } from '@agentasia/ui/base-ui';
 import { memo, useEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';

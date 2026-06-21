@@ -1,9 +1,9 @@
-import type * as businessConstModule from '@lobechat/business-const';
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
-import type * as modelRuntimeModule from '@lobechat/model-runtime';
-import { AgentRuntimeErrorType } from '@lobechat/model-runtime';
-import type * as lobechatTypesModule from '@lobechat/types';
-import type * as lobehubUiModule from '@lobehub/ui';
+import type * as businessConstModule from '@agentasia/business-const';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
+import type * as modelRuntimeModule from '@agentasia/model-runtime';
+import { AgentRuntimeErrorType } from '@agentasia/model-runtime';
+import type * as lobechatTypesModule from '@agentasia/types';
+import type * as agentasiaUiModule from '@agentasia/ui';
 import { render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -46,8 +46,8 @@ vi.mock('@lobechat/types', async (importOriginal) => {
   };
 });
 
-vi.mock('@lobehub/ui', async (importOriginal) => {
-  const actual = (await importOriginal()) as typeof lobehubUiModule;
+vi.mock('@agentasia/ui', async (importOriginal) => {
+  const actual = (await importOriginal()) as typeof agentasiaUiModule;
 
   return {
     ...actual,

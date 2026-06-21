@@ -1,5 +1,5 @@
-import { getBuiltinPortalAction } from '@lobechat/builtin-tools/portals';
-import type { BuiltinPortalTitle } from '@lobechat/types';
+import { getBuiltinPortalAction } from '@agentasia/builtin-tools/portals';
+import type { BuiltinPortalTitle } from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 
 import { useChatStore } from '@/store/chat';

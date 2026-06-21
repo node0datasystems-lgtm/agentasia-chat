@@ -1,4 +1,4 @@
-import type { PluginQueryParams, SystemDependency } from '@lobehub/market-sdk';
+import type { PluginQueryParams, SystemDependency } from '@agentasia/market-sdk';
 import { z } from 'zod';
 
 import type { MCPErrorType } from '@/libs/mcp';

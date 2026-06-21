@@ -1,5 +1,5 @@
-import type { ModalInstance } from '@lobehub/ui/base-ui';
-import { createModal } from '@lobehub/ui/base-ui';
+import type { ModalInstance } from '@agentasia/ui/base-ui';
+import { createModal } from '@agentasia/ui/base-ui';
 import { memo, useEffect, useRef } from 'react';
 
 import { DevtoolsLayout } from './DevtoolsLayout';

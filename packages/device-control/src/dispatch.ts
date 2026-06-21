@@ -17,7 +17,7 @@ import {
   renameLocalFile,
   revertGitFile,
   writeLocalFile,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';
 
 import type {
   DeviceControlDeps,

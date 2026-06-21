@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Badge, Card, Skeleton } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {

@@ -3,7 +3,7 @@ import {
   createContentSearchImpl,
   type GrepContentParams,
   type GrepContentResult,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';
 
 import { ServiceModule } from './index';
 

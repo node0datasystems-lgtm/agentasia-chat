@@ -1,5 +1,5 @@
-import { CUSTOM_FOLDER_FILE_TYPE } from '@lobechat/const';
-import { Button, Flexbox, Icon, Modal } from '@lobehub/ui';
+import { CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
+import { Button, Flexbox, Icon, Modal } from '@agentasia/ui';
 import { App } from 'antd';
 import { FolderIcon } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';

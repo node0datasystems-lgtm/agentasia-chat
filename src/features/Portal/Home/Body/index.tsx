@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 
 import Files from './Files';
 import Plugins from './Plugins';

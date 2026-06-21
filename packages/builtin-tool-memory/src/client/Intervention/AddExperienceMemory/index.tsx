@@ -1,6 +1,6 @@
 'use client';
 
-import type { BuiltinInterventionProps } from '@lobechat/types';
+import type { BuiltinInterventionProps } from '@agentasia/types';
 import { memo } from 'react';
 
 import type { AddExperienceMemoryParams } from '../../../types';

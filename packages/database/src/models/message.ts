@@ -1,5 +1,5 @@
-import { INBOX_SESSION_ID } from '@lobechat/const';
-import { parse } from '@lobechat/conversation-flow';
+import { INBOX_SESSION_ID } from '@agentasia/const';
+import { parse } from '@agentasia/conversation-flow';
 import type {
   ChatAudioItem,
   ChatFileItem,
@@ -21,15 +21,15 @@ import type {
   UIChatMessage,
   UpdateMessageParams,
   UpdateMessageRAGParams,
-} from '@lobechat/types';
-import { MessageGroupType, ThreadType } from '@lobechat/types';
-import type { TimingSink } from '@lobechat/utils';
+} from '@agentasia/types';
+import { MessageGroupType, ThreadType } from '@agentasia/types';
+import type { TimingSink } from '@agentasia/utils';
 import {
   getDurationMs,
   logTimingSink as logTiming,
   runTimedSinkStage as runTimedStage,
-} from '@lobechat/utils';
-import type { HeatmapsProps } from '@lobehub/charts';
+} from '@agentasia/utils';
+import type { HeatmapsProps } from '@agentasia/charts';
 import dayjs from 'dayjs';
 import type { SQL } from 'drizzle-orm';
 import {

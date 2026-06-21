@@ -1,5 +1,5 @@
-import { CURRENT_ONBOARDING_VERSION } from '@lobechat/const';
-import { MAX_ONBOARDING_STEPS } from '@lobechat/types';
+import { CURRENT_ONBOARDING_VERSION } from '@agentasia/const';
+import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { type UserStore } from '@/store/user';

@@ -1,8 +1,8 @@
 'use client';
 
-import { type TaskDetail } from '@lobechat/types';
-import { type IconProps } from '@lobehub/ui';
-import { Flexbox, Icon, Tag } from '@lobehub/ui';
+import { type TaskDetail } from '@agentasia/types';
+import { type IconProps } from '@agentasia/ui';
+import { Flexbox, Icon, Tag } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Footprints, Timer, Wrench } from 'lucide-react';
 import { memo, useMemo } from 'react';

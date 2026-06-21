@@ -7,7 +7,7 @@ import {
   SkillMaintainerExecutionRuntime,
   SkillMaintainerIdentifier,
   type SkillMaintainerRuntimeService,
-} from '@lobechat/builtin-tool-skill-maintainer';
+} from '@agentasia/builtin-tool-skill-maintainer';
 
 import { SkillManagementDocumentService } from '@/server/services/skillManagement';
 

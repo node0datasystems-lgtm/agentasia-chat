@@ -10,7 +10,7 @@ export const qq: PlatformDefinition = {
   description: 'Connect a QQ bot',
   documentation: {
     portalUrl: 'https://q.qq.com/',
-    setupGuideUrl: 'https://lobehub.com/docs/usage/channels/qq',
+    setupGuideUrl: 'https://agentasia.ai/docs/usage/channels/qq',
   },
   schema,
   supportsMarkdown: false,

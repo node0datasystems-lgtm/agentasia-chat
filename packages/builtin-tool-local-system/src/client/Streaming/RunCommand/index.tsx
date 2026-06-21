@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Highlighter } from '@lobehub/ui';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Highlighter } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface RunCommandParams {

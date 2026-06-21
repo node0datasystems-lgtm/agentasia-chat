@@ -1,4 +1,4 @@
-import { ProviderIcon } from '@lobehub/icons';
+import { ProviderIcon } from '@agentasia/icons';
 import { uniqBy } from 'es-toolkit/compat';
 import { LayoutPanelTopIcon } from 'lucide-react';
 import { DEFAULT_MODEL_PROVIDER_LIST } from 'model-bank/modelProviders';

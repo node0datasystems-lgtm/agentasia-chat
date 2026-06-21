@@ -1,6 +1,6 @@
 'use client';
 
-import { fetchEventSource } from '@lobechat/utils/client';
+import { fetchEventSource } from '@agentasia/utils/client';
 import { useEffect } from 'react';
 
 import { mutate } from '@/libs/swr';

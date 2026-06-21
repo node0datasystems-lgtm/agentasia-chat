@@ -1,4 +1,4 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 
 import type { HeterogeneousAgentEvent } from '../types';
 

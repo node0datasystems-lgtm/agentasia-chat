@@ -1,5 +1,5 @@
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { CheckCircle, FileText } from 'lucide-react';
 import { memo } from 'react';

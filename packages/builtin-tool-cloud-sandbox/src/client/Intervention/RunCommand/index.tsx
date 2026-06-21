@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox, Highlighter, Text } from '@lobehub/ui';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface RunCommandParams {

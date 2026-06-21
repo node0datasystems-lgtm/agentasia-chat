@@ -24,7 +24,7 @@ const UPDATED_AT = '2026-01-10T00:00:00.000Z';
 
 export const mockAssistantItems: DiscoverAssistantItem[] = [
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     avatar: '🤖',
     backgroundColor: '#1890ff',
     category: 'general',
@@ -47,10 +47,10 @@ export const mockAssistantItems: DiscoverAssistantItem[] = [
     tokenUsage: 4096,
     type: 'agent',
     updatedAt: UPDATED_AT,
-    userName: 'lobehub',
+    userName: 'agentasia',
   },
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     avatar: '💻',
     backgroundColor: '#52c41a',
     category: 'programming',
@@ -73,10 +73,10 @@ export const mockAssistantItems: DiscoverAssistantItem[] = [
     tokenUsage: 8192,
     type: 'agent',
     updatedAt: UPDATED_AT,
-    userName: 'lobehub',
+    userName: 'agentasia',
   },
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     avatar: '🎓',
     backgroundColor: '#faad14',
     category: 'academic',
@@ -99,10 +99,10 @@ export const mockAssistantItems: DiscoverAssistantItem[] = [
     tokenUsage: 4096,
     type: 'agent',
     updatedAt: UPDATED_AT,
-    userName: 'lobehub',
+    userName: 'agentasia',
   },
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     avatar: '✍️',
     backgroundColor: '#722ed1',
     category: 'copywriting',
@@ -125,7 +125,7 @@ export const mockAssistantItems: DiscoverAssistantItem[] = [
     tokenUsage: 4096,
     type: 'agent',
     updatedAt: UPDATED_AT,
-    userName: 'lobehub',
+    userName: 'agentasia',
   },
 ];
 
@@ -157,7 +157,7 @@ export const mockModelItems: DiscoverModelItem[] = [
     id: 'gpt-4o',
     identifier: 'gpt-4o',
     providerCount: 2,
-    providers: ['openai', 'lobehub'],
+    providers: ['openai', 'agentasia'],
     releasedAt: CREATED_AT,
     type: 'chat',
   },
@@ -240,13 +240,13 @@ export const mockProviderList: ProviderListResponse = {
 
 export const mockMcpItems: DiscoverMcpItem[] = [
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     capabilities: { prompts: false, resources: false, tools: true },
     category: 'business',
     connectionType: 'stdio',
     createdAt: CREATED_AT,
     description: 'Business automation MCP tool fixture.',
-    github: { stars: 1200, url: 'https://github.com/lobehub/e2e-business-mcp' },
+    github: { stars: 1200, url: 'https://github.com/agentasia/e2e-business-mcp' },
     icon: '📊',
     identifier: 'business-automation',
     installCount: 500,
@@ -261,13 +261,13 @@ export const mockMcpItems: DiscoverMcpItem[] = [
     updatedAt: UPDATED_AT,
   },
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     capabilities: { prompts: false, resources: true, tools: true },
     category: 'developer',
     connectionType: 'stdio',
     createdAt: CREATED_AT,
     description: 'Developer file-system MCP fixture.',
-    github: { stars: 900, url: 'https://github.com/lobehub/e2e-file-mcp' },
+    github: { stars: 900, url: 'https://github.com/agentasia/e2e-file-mcp' },
     icon: '📁',
     identifier: 'file-manager',
     installCount: 300,
@@ -283,13 +283,13 @@ export const mockMcpItems: DiscoverMcpItem[] = [
     updatedAt: UPDATED_AT,
   },
   {
-    author: 'LobeHub',
+    author: 'AgentAsia',
     capabilities: { prompts: true, resources: false, tools: true },
     category: 'productivity',
     connectionType: 'http',
     createdAt: CREATED_AT,
     description: 'Productivity search MCP fixture.',
-    github: { stars: 600, url: 'https://github.com/lobehub/e2e-search-mcp' },
+    github: { stars: 600, url: 'https://github.com/agentasia/e2e-search-mcp' },
     icon: '🔍',
     identifier: 'web-search',
     installCount: 260,
@@ -344,7 +344,7 @@ export const mockAssistantDetails = mockAssistantItems.map((item) => ({
 
 export const mockMcpDetails = mockMcpItems.map((item) => ({
   ...item,
-  author: { name: item.author ?? 'LobeHub', url: 'https://lobehub.com' },
+  author: { name: item.author ?? 'AgentAsia', url: 'https://agentasia.ai' },
   deploymentOptions: [
     {
       connection: { command: 'npx', type: item.connectionType ?? 'stdio' },

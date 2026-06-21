@@ -1,5 +1,5 @@
-import { useEditor } from '@lobehub/editor/react';
-import { Modal, type ModalComponentProps } from '@lobehub/ui/base-ui';
+import { useEditor } from '@agentasia/editor/react';
+import { Modal, type ModalComponentProps } from '@agentasia/ui/base-ui';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { exportJSONFile } from '@lobechat/utils/client';
-import { Icon, Tag } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { exportJSONFile } from '@agentasia/utils/client';
+import { Icon, Tag } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Dropdown, type MenuProps } from 'antd';
 import { createStaticStyles, cx, useTheme } from 'antd-style';
 import { Book, Download, MoreHorizontal, Trash2, Upload } from 'lucide-react';
@@ -99,7 +99,7 @@ const PlatformList = memo<PlatformListProps>(
     const handleExport = useCallback(() => {
       if (!providers?.length) return;
       const exportData = providers.map(({ id: _, ...rest }) => rest);
-      exportJSONFile(exportData, `lobehub-channels-${agentId}.json`);
+      exportJSONFile(exportData, `agentasia-channels-${agentId}.json`);
     }, [providers, agentId]);
 
     const handleImport = useCallback(() => {
@@ -309,7 +309,7 @@ const PlatformList = memo<PlatformListProps>(
           }}
         >
           <a
-            href="https://lobehub.com/docs/usage/channels/overview"
+            href="https://agentasia.ai/docs/usage/channels/overview"
             rel="noopener noreferrer"
             target="_blank"
             style={{

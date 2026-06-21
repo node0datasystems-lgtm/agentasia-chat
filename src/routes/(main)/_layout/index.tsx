@@ -1,8 +1,8 @@
 'use client';
 
-import { HotkeyScopeEnum } from '@lobechat/const/hotkeys';
-import { TITLE_BAR_HEIGHT } from '@lobechat/desktop-bridge';
-import { Flexbox } from '@lobehub/ui';
+import { HotkeyScopeEnum } from '@agentasia/const/hotkeys';
+import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
+import { Flexbox } from '@agentasia/ui';
 import { cx } from 'antd-style';
 import { type FC } from 'react';
 import { Suspense } from 'react';

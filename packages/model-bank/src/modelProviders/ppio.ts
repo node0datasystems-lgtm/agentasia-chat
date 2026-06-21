@@ -9,7 +9,7 @@ const PPIO: ModelProviderCard = {
   id: 'ppio',
   modelList: { showModelFetcher: true },
   modelsUrl:
-    'https://ppinfra.com/llm-api?utm_source=github_lobe-chat&utm_medium=github_readme&utm_campaign=link',
+    'https://ppinfra.com/llm-api?utm_source=github_agentasia-chat&utm_medium=github_readme&utm_campaign=link',
   name: 'PPIO',
   settings: {
     disableBrowserRequest: true,

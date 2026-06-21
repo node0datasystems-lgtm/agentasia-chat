@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, Flexbox } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Button, Flexbox } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Card, Skeleton } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { Plus } from 'lucide-react';

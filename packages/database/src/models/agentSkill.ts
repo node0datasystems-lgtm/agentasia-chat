@@ -1,5 +1,5 @@
-import type { SkillItem, SkillListItem } from '@lobechat/types';
-import { merge } from '@lobechat/utils';
+import type { SkillItem, SkillListItem } from '@agentasia/types';
+import { merge } from '@agentasia/utils';
 import { and, desc, eq, ilike, inArray, or } from 'drizzle-orm';
 
 import type { NewAgentSkill } from '../schemas';

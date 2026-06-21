@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Icon, Image } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Icon, Image } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowUp, ListEnd, Pencil, Trash2 } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
@@ -94,7 +94,7 @@ interface QueuedFilePreviewProps {
 
 const QueuedFilePreview = memo<QueuedFilePreviewProps>(({ file }) => {
   if (isImageFile(file)) {
-    // Use @lobehub/ui Image so click-to-zoom preview works. Lock both wrapper
+    // Use @agentasia/ui Image so click-to-zoom preview works. Lock both wrapper
     // and inner <img> to PREVIEW_SIZE — `size` alone doesn't constrain the
     // intrinsic image dimensions inside a flex row.
     return (

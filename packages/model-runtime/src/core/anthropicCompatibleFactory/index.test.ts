@@ -41,7 +41,7 @@ describe('createDefaultAnthropicClient', () => {
     expect(MockedAnthropic).toHaveBeenCalledWith(
       expect.objectContaining({
         defaultHeaders: expect.objectContaining({
-          'User-Agent': 'lobehub/1.0.0-test',
+          'User-Agent': 'agentasia/1.0.0-test',
         }),
       }),
     );
@@ -58,7 +58,7 @@ describe('createDefaultAnthropicClient', () => {
     const passedOptions = MockedAnthropic.mock.calls[0][0] as any;
 
     expect(passedOptions.defaultHeaders).toMatchObject({
-      'User-Agent': 'lobehub/1.0.0-test',
+      'User-Agent': 'agentasia/1.0.0-test',
       'X-Custom': 'value',
     });
   });

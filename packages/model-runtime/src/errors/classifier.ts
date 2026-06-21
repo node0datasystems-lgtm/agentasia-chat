@@ -1,5 +1,5 @@
-import type { ILobeAgentRuntimeErrorType } from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
+import type { ILobeAgentRuntimeErrorType } from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 
 import { matchErrorPattern } from './match';
 
@@ -16,7 +16,7 @@ const matches = (message: string | undefined, code: ILobeAgentRuntimeErrorType):
  * here:
  *
  * ```ts
- * import { ErrorClassifier } from '@lobechat/model-runtime';
+ * import { ErrorClassifier } from '@agentasia/model-runtime';
  * if (ErrorClassifier.isExceededContextWindow(message)) { ... }
  * ```
  *

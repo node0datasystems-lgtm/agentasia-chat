@@ -1,6 +1,6 @@
-import { chainSummaryTitle } from '@lobechat/prompts';
-import type { UserSystemAgentConfig, UserSystemAgentConfigKey } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+import { chainSummaryTitle } from '@agentasia/prompts';
+import type { UserSystemAgentConfig, UserSystemAgentConfigKey } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import debug from 'debug';
 
 import { UserModel } from '@/database/models/user';

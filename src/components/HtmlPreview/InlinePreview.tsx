@@ -1,4 +1,4 @@
-import { HtmlPreview } from '@lobehub/ui';
+import { HtmlPreview } from '@agentasia/ui';
 import type { CSSProperties } from 'react';
 import { memo } from 'react';
 

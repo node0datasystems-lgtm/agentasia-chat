@@ -1,5 +1,5 @@
-import { type HeterogeneousAgentClientConfig } from '@lobechat/heterogeneous-agents/client';
-import { ClaudeCode, Codex } from '@lobehub/icons';
+import { type HeterogeneousAgentClientConfig } from '@agentasia/heterogeneous-agents/client';
+import { ClaudeCode, Codex } from '@agentasia/icons';
 import { createElement } from 'react';
 
 import type { RecommendedAction } from './types';

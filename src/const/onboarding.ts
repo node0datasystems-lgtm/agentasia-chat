@@ -1,4 +1,4 @@
-import { DEFAULT_ONBOARDING_MODEL, DEFAULT_ONBOARDING_PROVIDER } from '@lobechat/business-const';
+import { DEFAULT_ONBOARDING_MODEL, DEFAULT_ONBOARDING_PROVIDER } from '@agentasia/business-const';
 
 export const ONBOARDING_PRODUCTION_DEFAULT_MODEL = {
   model: DEFAULT_ONBOARDING_MODEL,

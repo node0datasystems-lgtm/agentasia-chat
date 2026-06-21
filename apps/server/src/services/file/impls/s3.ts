@@ -1,4 +1,4 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import debug from 'debug';
 import urlJoin from 'url-join';
 

@@ -12,14 +12,14 @@ describe('loadModels', () => {
     const loader = vi.fn().mockResolvedValue([
       {
         enabled: true,
-        id: 'injected-lobehub-model',
+        id: 'injected-agentasia-model',
         type: 'chat',
       },
     ]);
 
     const models = await loadModels({
       providerLoaders: {
-        [ModelProvider.LobeHub]: loader,
+        [ModelProvider.AgentAsia]: loader,
       },
     });
 
@@ -28,8 +28,8 @@ describe('loadModels', () => {
       expect.arrayContaining([
         expect.objectContaining({
           enabled: true,
-          id: 'injected-lobehub-model',
-          providerId: ModelProvider.LobeHub,
+          id: 'injected-agentasia-model',
+          providerId: ModelProvider.AgentAsia,
           source: 'builtin',
           type: 'chat',
         }),
@@ -41,7 +41,7 @@ describe('loadModels', () => {
     await expect(
       loadModels({
         providerLoaders: {
-          [ModelProvider.LobeHub]: undefined,
+          [ModelProvider.AgentAsia]: undefined,
         },
       }),
     ).resolves.toBe(LOBE_DEFAULT_MODEL_LIST);
@@ -53,7 +53,7 @@ describe('loadModels', () => {
     await expect(
       loadModels({
         providerLoaders: {
-          [ModelProvider.LobeHub]: loader,
+          [ModelProvider.AgentAsia]: loader,
         },
       }),
     ).rejects.toThrow('model config missing');
@@ -91,11 +91,11 @@ describe('knowledgeCutoff backfill', () => {
     ]);
 
     const models = await loadModels({
-      providerLoaders: { [ModelProvider.LobeHub]: loader },
+      providerLoaders: { [ModelProvider.AgentAsia]: loader },
     });
 
-    const lobehubModels = models.filter((m) => m.providerId === ModelProvider.LobeHub);
-    expect(lobehubModels.find((m) => m.id === 'gpt-5')?.knowledgeCutoff).toBe('2020-01');
-    expect(lobehubModels.find((m) => m.id === 'gpt-5-mini')?.knowledgeCutoff).toBe('2024-05');
+    const agentasiaModels = models.filter((m) => m.providerId === ModelProvider.AgentAsia);
+    expect(agentasiaModels.find((m) => m.id === 'gpt-5')?.knowledgeCutoff).toBe('2020-01');
+    expect(agentasiaModels.find((m) => m.id === 'gpt-5-mini')?.knowledgeCutoff).toBe('2024-05');
   });
 });

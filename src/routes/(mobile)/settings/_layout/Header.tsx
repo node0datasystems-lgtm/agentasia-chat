@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
-import { ChatHeader } from '@lobehub/ui/mobile';
+import { Flexbox } from '@agentasia/ui';
+import { ChatHeader } from '@agentasia/ui/mobile';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';

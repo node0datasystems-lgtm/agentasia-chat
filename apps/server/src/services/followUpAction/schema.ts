@@ -1,4 +1,4 @@
-import type { GenerateObjectSchema } from '@lobechat/model-runtime';
+import type { GenerateObjectSchema } from '@agentasia/model-runtime';
 import { z } from 'zod';
 
 /**

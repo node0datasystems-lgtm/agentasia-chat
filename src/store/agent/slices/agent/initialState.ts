@@ -1,4 +1,4 @@
-import type { AgentContextDocument } from '@lobechat/context-engine';
+import type { AgentContextDocument } from '@agentasia/context-engine';
 import type { PartialDeep } from 'type-fest';
 
 import { type AgentSettingsInstance } from '@/features/AgentSetting';

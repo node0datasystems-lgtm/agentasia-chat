@@ -1,12 +1,12 @@
-import { CURRENT_VERSION, isDesktop } from '@lobechat/const';
+import { CURRENT_VERSION, isDesktop } from '@agentasia/const';
 import {
   type ChatToolPayload,
   type CheckMcpInstallResult,
   type CustomPluginMetadata,
-} from '@lobechat/types';
-import { isLocalOrPrivateUrl, safeParseJSON } from '@lobechat/utils';
-import { type PluginManifest } from '@lobehub/market-sdk';
-import { type CallReportRequest } from '@lobehub/market-types';
+} from '@agentasia/types';
+import { isLocalOrPrivateUrl, safeParseJSON } from '@agentasia/utils';
+import { type PluginManifest } from '@agentasia/market-sdk';
+import { type CallReportRequest } from '@agentasia/market-types';
 import superjson from 'superjson';
 
 import { type MCPToolCallResult } from '@/libs/mcp';

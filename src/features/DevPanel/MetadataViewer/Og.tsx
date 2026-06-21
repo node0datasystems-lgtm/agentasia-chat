@@ -1,4 +1,4 @@
-import { Flexbox, Form, Input, TextArea } from '@lobehub/ui';
+import { Flexbox, Form, Input, TextArea } from '@agentasia/ui';
 import { memo } from 'react';
 
 import Image from '@/libs/next/Image';
@@ -48,7 +48,7 @@ const MetaData = memo(() => {
                   zIndex: 10,
                 }}
               >
-                lobehub.com
+                agentasia.ai
               </div>
               <Image
                 fill

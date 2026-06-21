@@ -1,4 +1,4 @@
-import { imageUrlToBase64, videoUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64, videoUrlToBase64 } from '@agentasia/utils';
 import type OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -838,7 +838,7 @@ describe('convertOpenAIResponseInputs', () => {
   });
 
   it('should handle openai and claude mixed message', async () => {
-    // See: https://github.com/lobehub/lobehub/pull/12017
+    // See: https://github.com/node0datasystems-lgtm/agentasia-chat/pull/12017
     const messages: OpenAIChatMessage[] = [
       {
         content: 'system prompts',

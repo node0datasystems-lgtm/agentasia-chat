@@ -3,9 +3,9 @@
 import type {
   AgentTemplate,
   MarketplaceCategory,
-} from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
-import { getTemplatesByCategoryPriority } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
-import { Button, Flexbox, Text } from '@lobehub/ui';
+} from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
+import { getTemplatesByCategoryPriority } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
+import { Button, Flexbox, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Undo2Icon } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';

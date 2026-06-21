@@ -9,7 +9,7 @@ Every surface file is the same shape, so internalize it once instead of re-deriv
 ```tsx
 'use client'; // (a) leaves of the chat tree must not block server rendering
 
-import type { BuiltinInspectorProps, SearchQuery, UniformSearchResponse } from '@lobechat/types';
+import type { BuiltinInspectorProps, SearchQuery, UniformSearchResponse } from '@agentasia/types';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -34,7 +34,7 @@ export default SearchInspector;
 - **(c)** Default an Inspector to `t('builtins.<identifier>.apiName.<api>')` so the row is non-empty while args stream in.
 - **(d)** Read the store via Zustand selectors inside the component; see [streaming.md](streaming.md) for the buffer selector.
 
-## Styling: `createStaticStyles + cssVar.*`, `@lobehub/ui` over `antd`
+## Styling: `createStaticStyles + cssVar.*`, `@agentasia/ui` over `antd`
 
 Zero-runtime CSS-in-JS — styles compile once and read CSS variables at runtime:
 
@@ -53,7 +53,7 @@ const styles = createStaticStyles(({ css, cssVar }) => ({
 ```
 
 - Fall back to `createStyles + token` only when you need runtime token computation (rare). Inline `style={{ color: cssVar.colorTextSecondary }}` is fine for one-off dynamic values.
-- Components come from `@lobehub/ui` (`Block`, `Text`, `Flexbox`, `Highlighter`, `Alert`, `Tooltip`, `Skeleton`), not raw `antd`. Modals come from `@lobehub/ui/base-ui` (`createModal`, `useModalContext`, `confirmModal`) — see the **modal** skill.
+- Components come from `@agentasia/ui` (`Block`, `Text`, `Flexbox`, `Highlighter`, `Alert`, `Tooltip`, `Skeleton`), not raw `antd`. Modals come from `@agentasia/ui/base-ui` (`createModal`, `useModalContext`, `confirmModal`) — see the **modal** skill.
 - Note: `<Text type='secondary'>` is a lighter shade than `colorTextSecondary`. For that exact token color, write `<Text style={{ color: cssVar.colorTextSecondary }}>`.
 
 ## Stay single-layer — don't nest filled cards

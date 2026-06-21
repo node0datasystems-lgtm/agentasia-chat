@@ -1,4 +1,4 @@
-import { Accordion, Flexbox } from '@lobehub/ui';
+import { Accordion, Flexbox } from '@agentasia/ui';
 import React, { type Key, memo, useCallback, useMemo } from 'react';
 
 import { useAgentStore } from '@/store/agent';

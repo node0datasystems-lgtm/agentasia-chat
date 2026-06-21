@@ -1,4 +1,4 @@
-import type { UIChatMessage, UploadFileItem } from '@lobechat/types';
+import type { UIChatMessage, UploadFileItem } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import {

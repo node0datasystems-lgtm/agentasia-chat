@@ -1,6 +1,6 @@
-import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@lobechat/const';
-import type { BuiltinToolContext, BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@agentasia/const';
+import type { BuiltinToolContext, BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 import debug from 'debug';
 
 import { lambdaClient, toolsClient } from '@/libs/trpc/client';

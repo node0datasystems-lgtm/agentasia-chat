@@ -1,6 +1,6 @@
-import { LOADING_FLAT } from '@lobechat/const';
-import { type UIChatMessage } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { LOADING_FLAT } from '@agentasia/const';
+import { type UIChatMessage } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useCallback } from 'react';
 
 import { useUserStore } from '@/store/user';
@@ -35,7 +35,7 @@ const MessageContent = memo<UIChatMessage>(
     const showImageItems = !!imageList && imageList.length > 0;
 
     // remove \n to avoid empty content
-    // refs: https://github.com/lobehub/lobe-chat/pull/6153
+    // refs: https://github.com/agentasia/agentasia-chat/pull/6153
     const showReasoning =
       (!!props.reasoning && props.reasoning.content?.trim() !== '') ||
       (!props.reasoning && isReasoning);

@@ -1,4 +1,4 @@
-import { RunCommandRender } from '@lobechat/shared-tool-ui/renders';
+import { RunCommandRender } from '@agentasia/shared-tool-ui/renders';
 
 import { SkillsApiName } from '../../types';
 import ExecScript from './ExecScript';

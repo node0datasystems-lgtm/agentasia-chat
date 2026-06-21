@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import { uuid } from '@lobechat/utils';
+import { isDesktop } from '@agentasia/const';
+import { uuid } from '@agentasia/utils';
 
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
@@ -55,7 +55,7 @@ export const VARIABLE_GENERATORS = {
    *
    * | Value | Example |
    * |-------|---------|
-   * | `{{email}}` | demo@lobehub.com |
+   * | `{{email}}` | demo@agentasia.ai |
    * | `{{nickname}}` | Community User |
    * | `{{username}}` | LobeChat |
    *

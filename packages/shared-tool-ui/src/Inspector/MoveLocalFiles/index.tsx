@@ -1,8 +1,8 @@
 'use client';
 
-import type { MoveFilesState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { Icon, Text } from '@lobehub/ui';
+import type { MoveFilesState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { Icon, Text } from '@agentasia/ui';
 import { cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

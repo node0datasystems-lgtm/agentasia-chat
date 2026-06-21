@@ -1,7 +1,7 @@
 // @vitest-environment node
-import type { LobeChatDatabase } from '@lobechat/database';
-import { agentSkills } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { agentSkills } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AgentDocumentModel } from '@/database/models/agentDocuments';
@@ -746,7 +746,7 @@ describe('Skill Router Integration Tests', () => {
     it('should update existing skill when re-importing from same GitHub path', async () => {
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         path: 'skills/demo',
         repo: 'skills',
       });
@@ -771,14 +771,14 @@ describe('Skill Router Integration Tests', () => {
 
       // First import
       const first = await caller.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skills/tree/main/skills/demo',
+        gitUrl: 'https://github.com/agentasia/skills/tree/main/skills/demo',
       });
       expect(first!.skill.name).toBe('Original Name');
       expect(first!.skill.content).toBe('# Original');
 
       // Re-import (should update)
       const second = await caller.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skills/tree/main/skills/demo',
+        gitUrl: 'https://github.com/agentasia/skills/tree/main/skills/demo',
       });
       expect(second!.skill.id).toBe(first!.skill.id); // Same skill updated
       expect(second!.skill.name).toBe('Updated Name');
@@ -871,9 +871,9 @@ description: A skill from URL
 
     it('should keep the market identifier stable when re-importing from market', async () => {
       mockMarketServiceInstance.getSkillDownloadUrl
-        .mockReturnValueOnce('https://market.lobehub.com/api/v1/skills/github.owner.repo/download')
+        .mockReturnValueOnce('https://market.agentasia.ai/api/v1/skills/github.owner.repo/download')
         .mockReturnValueOnce(
-          'https://market.lobehub.com/api/v1/skills/github.owner.repo/download?version=1.0.0',
+          'https://market.agentasia.ai/api/v1/skills/github.owner.repo/download?version=1.0.0',
         );
 
       mockFetch.mockResolvedValue({

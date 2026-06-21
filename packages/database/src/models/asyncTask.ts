@@ -1,11 +1,11 @@
-import { ASYNC_TASK_TIMEOUT } from '@lobechat/business-config/server';
-import type { UserMemoryExtractionMetadata } from '@lobechat/types';
+import { ASYNC_TASK_TIMEOUT } from '@agentasia/business-config/server';
+import type { UserMemoryExtractionMetadata } from '@agentasia/types';
 import {
   AsyncTaskError,
   AsyncTaskErrorType,
   AsyncTaskStatus,
   AsyncTaskType,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { and, eq, inArray, lt, or, sql } from 'drizzle-orm';
 
 import type { AsyncTaskSelectItem, NewAsyncTaskItem } from '../schemas';

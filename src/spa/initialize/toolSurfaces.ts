@@ -1,4 +1,4 @@
-import { registerBuiltinToolSurfaces as registerSurfaces } from '@lobechat/builtin-tools/register';
+import { registerBuiltinToolSurfaces as registerSurfaces } from '@agentasia/builtin-tools/register';
 
 let registered = false;
 

@@ -35,7 +35,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Form: ({
     items,
   }: {
@@ -62,7 +62,7 @@ vi.mock('@lobehub/ui', () => ({
   Skeleton: () => <div>loading</div>,
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   Select: () => <button />,
   Switch: () => <button />,
 }));

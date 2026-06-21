@@ -1,5 +1,5 @@
-import { DEFAULT_EMBEDDING_PROVIDER } from '@lobechat/business-const';
-import type { FilesConfig, FilesConfigItem } from '@lobechat/types';
+import { DEFAULT_EMBEDDING_PROVIDER } from '@agentasia/business-const';
+import type { FilesConfig, FilesConfigItem } from '@agentasia/types';
 
 import {
   DEFAULT_EMBEDDING_MODEL,

@@ -1,8 +1,8 @@
 import {
   DEFAULT_USER_MEMORY_EMBEDDING_DIMENSIONS,
   DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM,
-} from '@lobechat/const';
-import { messages, topics } from '@lobechat/database/schemas';
+} from '@agentasia/const';
+import { messages, topics } from '@agentasia/database/schemas';
 import {
   ActivityMemoryItemSchema,
   BenchmarkLocomoContextProvider,
@@ -17,27 +17,27 @@ import {
   RetrievalUserMemoryContextProvider,
   RetrievalUserMemoryIdentitiesProvider,
   type WithActivity,
-} from '@lobechat/memory-user-memory';
+} from '@agentasia/memory-user-memory';
 import {
   type Embeddings,
   type GenerateObjectPayload,
   type LLMRoleType,
   type ModelRuntimeHooks,
   type OpenAIChatMessage,
-} from '@lobechat/model-runtime';
-import { ModelRuntime } from '@lobechat/model-runtime';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
+} from '@agentasia/model-runtime';
+import { ModelRuntime } from '@agentasia/model-runtime';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
 import {
   ATTR_GEN_AI_OPERATION_NAME,
   ATTR_GEN_AI_REQUEST_MODEL,
-} from '@lobechat/observability-otel/gen-ai';
+} from '@agentasia/observability-otel/gen-ai';
 import {
   layerEntriesHistogram,
   processedDurationHistogram,
   processedSourceCounter,
   tracer,
-} from '@lobechat/observability-otel/modules/memory-user-memory';
-import { attributesCommon } from '@lobechat/observability-otel/node';
+} from '@agentasia/observability-otel/modules/memory-user-memory';
+import { attributesCommon } from '@agentasia/observability-otel/node';
 import type {
   AiProviderRuntimeState,
   ChatTopicMetadata,
@@ -46,8 +46,8 @@ import type {
   MemoryExtractionTraceError,
   MemoryExtractionTracePayload,
   UserServiceModelConfig,
-} from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+} from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import { type FlowControl } from '@upstash/qstash';
 import { Client } from '@upstash/workflow';
 import debug from 'debug';
@@ -502,7 +502,7 @@ export const resolveRuntimeAgentConfig = (
   );
 
   for (const provider of providerOrder) {
-    if (provider === 'lobehub') {
+    if (provider === 'agentasia') {
       debugRuntimeInit(agent, {
         provider,
         source: 'user-vault' as const,
@@ -2484,7 +2484,7 @@ export class MemoryExtractionExecutor {
       userId,
     };
 
-    const hooks = getBusinessModelRuntimeHooks(userId, 'lobehub');
+    const hooks = getBusinessModelRuntimeHooks(userId, 'agentasia');
 
     const runtimes: RuntimeBundle = {
       embeddings: await resolveRuntimeAgentConfig(

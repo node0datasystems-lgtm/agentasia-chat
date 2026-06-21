@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/shared-tool-ui",
+  "name": "@agentasia/shared-tool-ui",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -11,15 +11,15 @@
     "./styles": "./src/styles.ts"
   },
   "dependencies": {
-    "@lobechat/tool-runtime": "workspace:*",
-    "@lobechat/utils": "workspace:*",
-    "anser": "^2.3.5"
+    "anser": "^2.3.5",
+    "@agentasia/tool-runtime": "workspace:*",
+    "@agentasia/utils": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "path-browserify-esm": "*",

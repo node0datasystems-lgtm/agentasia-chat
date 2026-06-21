@@ -13,7 +13,7 @@ const GLOBAL_TENANT_ID = '';
 
 /**
  * Thrown by `upsertForPlatform` when the IM identity is already bound to a
- * different LobeHub user. Callers (e.g. the messenger router) should surface
+ * different AgentAsia user. Callers (e.g. the messenger router) should surface
  * a friendly 409 — never let the underlying DB unique-index error escape.
  */
 export class MessengerAccountLinkConflictError extends Error {
@@ -21,14 +21,14 @@ export class MessengerAccountLinkConflictError extends Error {
   readonly existingUserId: string;
 
   constructor(existingUserId: string, message?: string) {
-    super(message ?? 'IM identity is already linked to another LobeHub user');
+    super(message ?? 'IM identity is already linked to another AgentAsia user');
     this.name = 'MessengerAccountLinkConflictError';
     this.existingUserId = existingUserId;
   }
 }
 
 /**
- * Thrown when the same LobeHub user already has a different IM identity bound
+ * Thrown when the same AgentAsia user already has a different IM identity bound
  * for the requested `(platform, tenant)` scope and must explicitly unlink
  * before switching accounts.
  */
@@ -73,7 +73,7 @@ export class MessengerAccountLinkModel {
    * `(user, platform, tenant)` — so we never let the
    * `messenger_account_links_platform_tenant_user_unique` constraint surface
    * as an opaque DB error when the IM identity is already owned by another
-   * LobeHub user; we throw `MessengerAccountLinkConflictError` instead.
+   * AgentAsia user; we throw `MessengerAccountLinkConflictError` instead.
    *
    * Returns the resulting link row.
    */

@@ -1,6 +1,6 @@
-import type { GenerateObjectSchema } from '@lobechat/model-runtime';
-import type { LayersEnum } from '@lobechat/types';
-import { ActivityTypeEnum, TypesEnum } from '@lobechat/types';
+import type { GenerateObjectSchema } from '@agentasia/model-runtime';
+import type { LayersEnum } from '@agentasia/types';
+import { ActivityTypeEnum, TypesEnum } from '@agentasia/types';
 import type { JSONSchema7 } from 'json-schema';
 import { z } from 'zod';
 

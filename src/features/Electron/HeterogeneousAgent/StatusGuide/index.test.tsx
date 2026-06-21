@@ -1,4 +1,4 @@
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
 import { render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { describe, expect, it, vi } from 'vitest';
@@ -9,12 +9,12 @@ vi.mock('@lobechat/const', () => ({
   isDesktop: false,
 }));
 
-vi.mock('@lobehub/icons', () => ({
+vi.mock('@agentasia/icons', () => ({
   ClaudeCode: () => <span>Claude Code Icon</span>,
   Codex: () => <span>Codex Icon</span>,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Avatar: ({ avatar }: { avatar?: ReactNode }) => <div>{avatar}</div>,
   Block: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Button: ({ children, onClick }: { children?: ReactNode; onClick?: () => void }) => (
@@ -105,7 +105,7 @@ vi.mock('react-i18next', () => ({
               'Claude Code needs the Claude Code CLI to run locally. Install it first.',
             'claudeCodeInstallGuide.installWithBrew': 'Homebrew',
             'claudeCodeInstallGuide.installWithNpm': 'Recommended install',
-            'claudeCodeInstallGuide.reason': `LobeHub could not start Claude Code: ${options?.message ?? ''}`,
+            'claudeCodeInstallGuide.reason': `AgentAsia could not start Claude Code: ${options?.message ?? ''}`,
             'claudeCodeInstallGuide.title': 'Install Claude Code CLI',
             'codexInstallGuide.actions.openDocs': 'Open Install Guide',
             'codexInstallGuide.actions.openSystemTools': 'Open System Tools',
@@ -115,7 +115,7 @@ vi.mock('react-i18next', () => ({
               'Codex Agent needs the Codex CLI to run locally. Install it first.',
             'codexInstallGuide.installWithBrew': 'Homebrew',
             'codexInstallGuide.installWithNpm': 'Recommended install',
-            'codexInstallGuide.reason': `LobeHub could not start Codex: ${options?.message ?? ''}`,
+            'codexInstallGuide.reason': `AgentAsia could not start Codex: ${options?.message ?? ''}`,
             'codexInstallGuide.title': 'Install Codex CLI',
           } as Record<string, string>
         )[key] || key
@@ -142,7 +142,7 @@ describe('HeterogeneousAgentStatusGuide', () => {
     );
 
     expect(screen.getByText('Install Codex CLI')).toBeInTheDocument();
-    expect(screen.queryByText(/LobeHub could not start Codex:/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/AgentAsia could not start Codex:/)).not.toBeInTheDocument();
   });
 
   it('keeps the detailed reason for unexpected errors', () => {
@@ -156,7 +156,7 @@ describe('HeterogeneousAgentStatusGuide', () => {
     );
 
     expect(
-      screen.getByText('LobeHub could not start Codex: Permission denied'),
+      screen.getByText('AgentAsia could not start Codex: Permission denied'),
     ).toBeInTheDocument();
   });
 
@@ -186,7 +186,7 @@ describe('HeterogeneousAgentStatusGuide', () => {
       screen.getByText('Claude Code needs the Claude Code CLI to run locally. Install it first.'),
     ).toBeInTheDocument();
     expect(screen.getByText('curl -fsSL https://claude.ai/install.sh | bash')).toBeInTheDocument();
-    expect(screen.queryByText(/LobeHub could not start Claude Code:/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/AgentAsia could not start Claude Code:/)).not.toBeInTheDocument();
   });
 
   it('renders sign-in guidance for auth-required errors', () => {

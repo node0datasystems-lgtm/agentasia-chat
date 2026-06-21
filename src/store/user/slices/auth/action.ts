@@ -1,4 +1,4 @@
-import { type SSOProvider } from '@lobechat/types';
+import { type SSOProvider } from '@agentasia/types';
 
 import { type StoreSetter } from '@/store/types';
 

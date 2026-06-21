@@ -1,18 +1,18 @@
 'use client';
 
-import { listBuiltinInspectorEntries } from '@lobechat/builtin-tools/inspectors';
-import { listBuiltinInterventionEntries } from '@lobechat/builtin-tools/interventions';
-import { listBuiltinPlaceholderEntries } from '@lobechat/builtin-tools/placeholders';
-import { listBuiltinRenderEntries } from '@lobechat/builtin-tools/renders';
-import { listBuiltinStreamingEntries } from '@lobechat/builtin-tools/streamings';
+import { listBuiltinInspectorEntries } from '@agentasia/builtin-tools/inspectors';
+import { listBuiltinInterventionEntries } from '@agentasia/builtin-tools/interventions';
+import { listBuiltinPlaceholderEntries } from '@agentasia/builtin-tools/placeholders';
+import { listBuiltinRenderEntries } from '@agentasia/builtin-tools/renders';
+import { listBuiltinStreamingEntries } from '@agentasia/builtin-tools/streamings';
 import type {
   BuiltinInspector,
   BuiltinIntervention,
   BuiltinPlaceholder,
   BuiltinRender,
   BuiltinStreaming,
-} from '@lobechat/types';
-import type { MenuProps } from '@lobehub/ui';
+} from '@agentasia/types';
+import type { MenuProps } from '@agentasia/ui';
 import { useMemo } from 'react';
 
 import { getToolRenderFixture, getToolRenderMeta, type ToolRenderFixture } from './fixtures';

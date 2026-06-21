@@ -1,7 +1,7 @@
 'use client';
 
-import { SOCIAL_URL } from '@lobechat/business-const';
-import { Flexbox, Icon, Tabs } from '@lobehub/ui';
+import { SOCIAL_URL } from '@agentasia/business-const';
+import { Flexbox, Icon, Tabs } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { BookOpenIcon, ListIcon, Settings2Icon } from 'lucide-react';
 import { memo } from 'react';
@@ -69,7 +69,7 @@ const Nav = memo<NavProps>(({ mobile, setActiveTab, activeTab = ModelNavKey.Over
         </a>
         <a
           className={styles.link}
-          href="https://github.com/lobehub/lobe-chat/tree/main/src/config/aiModels"
+          href="https://github.com/agentasia/agentasia-chat/tree/main/src/config/aiModels"
           rel="noreferrer"
           target="_blank"
         >
@@ -77,7 +77,7 @@ const Nav = memo<NavProps>(({ mobile, setActiveTab, activeTab = ModelNavKey.Over
         </a>
         <a
           className={styles.link}
-          href="https://github.com/lobehub/lobe-chat/issues/new/choose"
+          href="https://github.com/agentasia/agentasia-chat/issues/new/choose"
           rel="noreferrer"
           target="_blank"
         >

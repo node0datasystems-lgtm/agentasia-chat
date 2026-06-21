@@ -13,7 +13,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   DropdownMenuGroup: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   DropdownMenuGroupLabel: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   DropdownMenuItem: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
@@ -72,7 +72,7 @@ describe('MultipleProvidersModelItem', () => {
   it('renders model detail panel even when info tags are hidden', () => {
     render(
       <MultipleProvidersModelItem
-        activeKey="lobehub/gpt-5.4"
+        activeKey="agentasia/gpt-5.4"
         newLabel="new"
         showInfoTag={false}
         data={{
@@ -83,7 +83,7 @@ describe('MultipleProvidersModelItem', () => {
             id: 'gpt-5.4',
           } as any,
           providers: [
-            { id: 'lobehub', name: 'LobeHub' },
+            { id: 'agentasia', name: 'AgentAsia' },
             { id: 'openai', name: 'OpenAI' },
           ],
         }}
@@ -92,7 +92,7 @@ describe('MultipleProvidersModelItem', () => {
       />,
     );
 
-    expect(screen.getByTestId('model-detail-panel')).toHaveTextContent('lobehub/gpt-5.4');
+    expect(screen.getByTestId('model-detail-panel')).toHaveTextContent('agentasia/gpt-5.4');
     expect(screen.getByText('ModelSwitchPanel.useModelFrom')).toBeInTheDocument();
   });
 
@@ -115,12 +115,12 @@ describe('MultipleProvidersModelItem', () => {
             id: 'claude-opus-4-7',
           } as any,
           providers: [
-            { id: 'lobehub', name: 'LobeHub' },
+            { id: 'agentasia', name: 'AgentAsia' },
             { id: 'anthropic', name: 'Anthropic' },
           ],
         }}
         isModelRestricted={(modelId, providerId) =>
-          modelId === 'claude-opus-4-7' && providerId === 'lobehub'
+          modelId === 'claude-opus-4-7' && providerId === 'agentasia'
         }
         onClose={onClose}
         onModelChange={onModelChange}

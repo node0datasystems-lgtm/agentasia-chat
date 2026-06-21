@@ -7,15 +7,15 @@ import {
   formatTaskEdited,
   formatTaskList,
   priorityLabel,
-} from '@lobechat/prompts';
+} from '@agentasia/prompts';
 import type {
   BuiltinToolContext,
   BuiltinToolResult,
   TaskAutomationMode,
   TaskStatus,
   ToolAfterCallContext,
-} from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 import debug from 'debug';
 
 import { taskService } from '@/services/task';

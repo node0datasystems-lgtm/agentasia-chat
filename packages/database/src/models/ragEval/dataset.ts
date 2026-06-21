@@ -1,4 +1,4 @@
-import type { RAGEvalDataSetItem } from '@lobechat/types';
+import type { RAGEvalDataSetItem } from '@agentasia/types';
 import { and, desc, eq } from 'drizzle-orm';
 
 import type { NewEvalDatasetsItem } from '../../schemas';

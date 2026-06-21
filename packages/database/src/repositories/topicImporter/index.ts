@@ -1,4 +1,4 @@
-import type { ExportedTopic, ImportedMessage } from '@lobechat/types';
+import type { ExportedTopic, ImportedMessage } from '@agentasia/types';
 
 import { messagePlugins, messages, topics } from '../../schemas';
 import type { LobeChatDatabase } from '../../type';

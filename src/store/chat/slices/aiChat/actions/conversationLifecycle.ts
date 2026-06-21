@@ -1,13 +1,13 @@
 // Disable the auto sort key eslint rule to make the code more logic and readable
-import type { CallAgentParams, CallAgentState } from '@lobechat/builtin-tool-agent-management';
+import type { CallAgentParams, CallAgentState } from '@agentasia/builtin-tool-agent-management';
 import {
   AgentManagementApiName,
   AgentManagementIdentifier,
   createCallAgentManifest,
-} from '@lobechat/builtin-tool-agent-management';
-import { isDesktop, LOADING_FLAT } from '@lobechat/const';
-import { formatSelectedSkillsContext, formatSelectedToolsContext } from '@lobechat/context-engine';
-import { chainCompressContext } from '@lobechat/prompts';
+} from '@agentasia/builtin-tool-agent-management';
+import { isDesktop, LOADING_FLAT } from '@agentasia/const';
+import { formatSelectedSkillsContext, formatSelectedToolsContext } from '@agentasia/context-engine';
+import { chainCompressContext } from '@agentasia/prompts';
 import type {
   ChatImageItem,
   ChatThreadType,
@@ -18,8 +18,8 @@ import type {
   SendMessageParams,
   SendMessageServerResponse,
   UIChatMessage,
-} from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 import { TRPCClientError } from '@trpc/client';
 import { t } from 'i18next';
 

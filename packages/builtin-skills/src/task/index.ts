@@ -1,6 +1,6 @@
-import type { BuiltinSkill } from '@lobechat/types';
+import type { BuiltinSkill } from '@agentasia/types';
 
-import { toResourceMeta } from '../lobehub/helpers';
+import { toResourceMeta } from '../agentasia/helpers';
 import commands from './references/commands.md';
 import content from './SKILL.md';
 

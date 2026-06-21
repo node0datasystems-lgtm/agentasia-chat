@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text, Tooltip } from '@lobehub/ui';
+import { Flexbox, Icon, Text, Tooltip } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Loader2Icon, PencilIcon } from 'lucide-react';
 import { type CSSProperties, memo } from 'react';

@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { AGENT_DOCUMENT_FILE_TYPE } from '@lobechat/const';
+import { AGENT_DOCUMENT_FILE_TYPE } from '@agentasia/const';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AgentModel } from '@/database/models/agent';
@@ -51,7 +51,7 @@ vi.mock('../skill/resource', () => ({
   SkillResourceService: vi.fn(),
 }));
 
-vi.mock('@lobehub/editor/headless', () => ({
+vi.mock('@agentasia/editor/headless', () => ({
   createHeadlessEditor: vi.fn(() => {
     let markdown = '';
     let litexml = '<p id="node-1">content</p>';

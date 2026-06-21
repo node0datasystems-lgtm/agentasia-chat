@@ -1,5 +1,5 @@
-import { type LobeToolManifest } from '@lobechat/context-engine';
-import { MarketSDK, type OrgRef, orgRefToPathSegment } from '@lobehub/market-sdk';
+import { type LobeToolManifest } from '@agentasia/context-engine';
+import { MarketSDK, type OrgRef, orgRefToPathSegment } from '@agentasia/market-sdk';
 import debug from 'debug';
 import { type NextRequest } from 'next/server';
 
@@ -8,7 +8,7 @@ import { generateTrustedClientToken, getTrustedClientTokenForSession } from '@/l
 
 const log = debug('lobe-server:market-service');
 
-const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.lobehub.com';
+const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.agentasia.ai';
 
 // ============================== Helper Functions ==============================
 
@@ -135,7 +135,7 @@ export class MarketService {
   // ============================== Feedback Methods ==============================
 
   /**
-   * Submit feedback to LobeHub
+   * Submit feedback to AgentAsia
    */
   async submitFeedback(params: {
     clientInfo?: {
@@ -203,7 +203,7 @@ export class MarketService {
    * Get user info with trusted client token (server-side)
    */
   async getUserInfoWithTrustedClient() {
-    const userInfoUrl = `${MARKET_BASE_URL}/lobehub-oidc/userinfo`;
+    const userInfoUrl = `${MARKET_BASE_URL}/agentasia-oidc/userinfo`;
     const response = await fetch(userInfoUrl, {
       // @ts-ignore
       headers: this.market.headers,
@@ -403,7 +403,7 @@ export class MarketService {
   // ============================== Skills Methods (using SDK) ==============================
 
   /**
-   * Search for skills in the LobeHub Market
+   * Search for skills in the AgentAsia Market
    */
   async searchSkill(params: {
     category?: string;
@@ -470,7 +470,7 @@ export class MarketService {
   }
 
   /**
-   * Execute a LobeHub Skill tool
+   * Execute a AgentAsia Skill tool
    * @param params - The skill execution parameters (provider, toolName, args)
    * @returns Execution result with content and success status
    */
@@ -516,7 +516,7 @@ export class MarketService {
   }
 
   /**
-   * Fetch LobeHub Skills manifests from Market API
+   * Fetch AgentAsia Skills manifests from Market API
    * Gets user's connected skills and builds tool manifests for agent execution
    *
    * @returns Array of tool manifests for connected skills
@@ -549,7 +549,7 @@ export class MarketService {
           // connection.providerName is the *user's* display name on that provider,
           // NOT the provider's own name (e.g., "LiJian" instead of "Linear").
           // Static label map — avoids importing LOBEHUB_SKILL_PROVIDERS which
-          // pulls in react-icons (client-side only). Keep in sync with lobehubSkill.ts.
+          // pulls in react-icons (client-side only). Keep in sync with agentasiaSkill.ts.
           const PROVIDER_LABELS: Record<string, string> = {
             github: 'GitHub',
             linear: 'Linear',
@@ -572,8 +572,8 @@ export class MarketService {
             identifier: providerId,
             meta: {
               avatar: icon || '🔗',
-              description: `LobeHub Skill: ${providerLabel}`,
-              tags: ['lobehub-skill', providerId],
+              description: `AgentAsia Skill: ${providerLabel}`,
+              tags: ['agentasia-skill', providerId],
               title: providerLabel,
             },
             systemRole: instruction || undefined,

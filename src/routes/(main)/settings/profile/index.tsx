@@ -1,7 +1,7 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { Flexbox, FormGroup, Skeleton } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { Flexbox, FormGroup, Skeleton } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

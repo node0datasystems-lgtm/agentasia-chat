@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/device-identity",
+  "name": "@agentasia/device-identity",
   "version": "1.0.0",
   "private": true,
   "exports": {

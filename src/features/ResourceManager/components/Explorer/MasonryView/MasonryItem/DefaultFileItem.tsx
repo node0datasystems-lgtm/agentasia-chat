@@ -1,5 +1,5 @@
-import { CUSTOM_FOLDER_FILE_TYPE } from '@lobechat/const';
-import { Button, Flexbox, stopPropagation, Tooltip } from '@lobehub/ui';
+import { CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
+import { Button, Flexbox, stopPropagation, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { isNull } from 'es-toolkit/compat';
 import { FileBoxIcon, Folder } from 'lucide-react';
@@ -99,7 +99,7 @@ const DefaultFileItem = memo<DefaultFileItemProps>(
           {!isFolder && (
             <div
               style={{
-                color: 'var(--lobe-chat-text-tertiary)',
+                color: 'var(--agentasia-chat-text-tertiary)',
                 fontSize: 12,
                 textAlign: 'center',
               }}

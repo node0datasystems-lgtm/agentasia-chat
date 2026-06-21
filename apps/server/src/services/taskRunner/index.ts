@@ -1,7 +1,7 @@
-import { TaskIdentifier as TaskSkillIdentifier } from '@lobechat/builtin-skills';
-import { BriefIdentifier } from '@lobechat/builtin-tool-brief';
-import { INBOX_SESSION_ID } from '@lobechat/const';
-import type { ExecAgentResult, TaskItem } from '@lobechat/types';
+import { TaskIdentifier as TaskSkillIdentifier } from '@agentasia/builtin-skills';
+import { BriefIdentifier } from '@agentasia/builtin-tool-brief';
+import { INBOX_SESSION_ID } from '@agentasia/const';
+import type { ExecAgentResult, TaskItem } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 

@@ -5,7 +5,7 @@ import {
   type insertEvalDatasetsSchema,
   type RAGEvalDataSetItem,
   type RAGEvalEvaluationItem,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { uploadService } from '@/services/upload';

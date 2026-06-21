@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/device-control",
+  "name": "@agentasia/device-control",
   "version": "1.0.0",
   "private": true,
   "sideEffects": false,
@@ -13,8 +13,8 @@
     "test:coverage": "bunx vitest run --coverage"
   },
   "dependencies": {
-    "@lobechat/local-file-shell": "workspace:*",
-    "fast-glob": "^3.3.3"
+    "fast-glob": "^3.3.3",
+    "@agentasia/local-file-shell": "workspace:*"
   },
   "devDependencies": {
     "vitest": "^3.2.6"

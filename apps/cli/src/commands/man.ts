@@ -1,6 +1,6 @@
 import type { Argument, Command } from 'commander';
 
-const ROOT_ALIASES = ['lobe', 'lobehub'];
+const ROOT_ALIASES = ['lobe', 'agentasia'];
 const HELP_COMMAND_NAME = 'help';
 
 interface DefinitionItem {

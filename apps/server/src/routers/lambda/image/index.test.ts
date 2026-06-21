@@ -14,7 +14,7 @@ const {
   mockCreateAsyncCaller,
   mockFindUserById,
   mockInsertValues,
-  mockIsLobeHubModelAvailable,
+  mockIsAgentAsiaModelAvailable,
   mockResolveBusinessModelMapping,
 } = vi.hoisted(() => ({
   mockServerDB: {
@@ -27,7 +27,7 @@ const {
   mockCreateAsyncCaller: vi.fn(),
   mockFindUserById: vi.fn(),
   mockInsertValues: [] as unknown[],
-  mockIsLobeHubModelAvailable: vi.fn(),
+  mockIsAgentAsiaModelAvailable: vi.fn(),
   mockResolveBusinessModelMapping: vi.fn(),
 }));
 
@@ -74,13 +74,13 @@ vi.mock('@lobechat/business-model-runtime', async (importOriginal) => ({
 }));
 
 vi.mock('@lobechat/business-model-bank/model-config', () => ({
-  isLobeHubModelAvailable: (
+  isAgentAsiaModelAvailable: (
     ...args: [
       string,
       string,
       { getUserEmail?: () => Promise<string | null | undefined>; userEmail?: string | null }?,
     ]
-  ) => mockIsLobeHubModelAvailable(...args),
+  ) => mockIsAgentAsiaModelAvailable(...args),
 }));
 
 // Mock async caller
@@ -142,7 +142,7 @@ describe('imageRouter', () => {
     mockGetKeyFromFullUrl.mockResolvedValue(null);
     mockGetFullFileUrl.mockResolvedValue(null);
     mockFindUserById.mockResolvedValue({ email: 'user@example.com' });
-    mockIsLobeHubModelAvailable.mockResolvedValue(true);
+    mockIsAgentAsiaModelAvailable.mockResolvedValue(true);
 
     // Setup default transaction mock
     const mockBatch = {
@@ -215,7 +215,7 @@ describe('imageRouter', () => {
       expect(mockServerDB.transaction).toHaveBeenCalled();
     });
 
-    it('should validate mapped model id before rejecting deprecated lobehub image models', async () => {
+    it('should validate mapped model id before rejecting deprecated agentasia image models', async () => {
       mockResolveBusinessModelMapping.mockResolvedValue({
         requestedModelId: 'onboarding-image',
         resolvedModelId: 'gpt-image-1',
@@ -224,38 +224,38 @@ describe('imageRouter', () => {
       const ctx = createMockCtx();
       const input = createDefaultInput({
         model: 'onboarding-image',
-        provider: 'lobehub',
+        provider: 'agentasia',
       });
 
       const caller = imageRouter.createCaller(ctx);
       const result = await caller.createImage(input);
 
       expect(result.success).toBe(true);
-      expect(mockResolveBusinessModelMapping).toHaveBeenCalledWith('lobehub', 'onboarding-image');
-      expect(mockIsLobeHubModelAvailable).toHaveBeenCalledWith('gpt-image-1', 'image', {
+      expect(mockResolveBusinessModelMapping).toHaveBeenCalledWith('agentasia', 'onboarding-image');
+      expect(mockIsAgentAsiaModelAvailable).toHaveBeenCalledWith('gpt-image-1', 'image', {
         getUserEmail: expect.any(Function),
       });
-      const availabilityOptions = mockIsLobeHubModelAvailable.mock.calls.at(-1)?.[2];
+      const availabilityOptions = mockIsAgentAsiaModelAvailable.mock.calls.at(-1)?.[2];
       expect(mockFindUserById).not.toHaveBeenCalled();
       await expect(availabilityOptions!.getUserEmail!()).resolves.toBe('user@example.com');
       expect(mockFindUserById).toHaveBeenCalledWith(mockServerDB, mockUserId);
       expect(mockCreateAsyncCaller).toHaveBeenCalledWith({ userId: mockUserId });
     });
 
-    it('should reject unavailable lobehub image models before creating async tasks', async () => {
-      mockIsLobeHubModelAvailable.mockResolvedValue(false);
+    it('should reject unavailable agentasia image models before creating async tasks', async () => {
+      mockIsAgentAsiaModelAvailable.mockResolvedValue(false);
 
       const ctx = createMockCtx();
       const input = createDefaultInput({
         model: 'restricted-image-model',
-        provider: 'lobehub',
+        provider: 'agentasia',
       });
 
       const caller = imageRouter.createCaller(ctx);
 
       await expect(caller.createImage(input)).rejects.toMatchObject({
         code: 'BAD_REQUEST',
-        message: 'LobeHubModelDeprecated',
+        message: 'AgentAsiaModelDeprecated',
       });
 
       expect(mockServerDB.transaction).not.toHaveBeenCalled();

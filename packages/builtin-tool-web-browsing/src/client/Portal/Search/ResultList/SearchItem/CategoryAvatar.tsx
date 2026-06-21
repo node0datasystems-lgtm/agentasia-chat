@@ -1,4 +1,4 @@
-import { Avatar, Icon } from '@lobehub/ui';
+import { Avatar, Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import {
   LucideAtom,

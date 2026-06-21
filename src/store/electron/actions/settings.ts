@@ -1,7 +1,7 @@
 import {
   type NetworkProxySettings,
   type ShortcutUpdateResult,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import isEqual from 'fast-deep-equal';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';

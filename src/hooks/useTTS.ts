@@ -3,8 +3,8 @@ import {
   type MicrosoftSpeechOptions,
   type OpenAITTSOptions,
   type TTSOptions,
-} from '@lobehub/tts/react';
-import { useEdgeSpeech, useMicrosoftSpeech, useOpenAITTS } from '@lobehub/tts/react';
+} from '@agentasia/tts/react';
+import { useEdgeSpeech, useMicrosoftSpeech, useOpenAITTS } from '@agentasia/tts/react';
 import isEqual from 'fast-deep-equal';
 
 import { useBusinessTTSProvider } from '@/business/client/hooks/useBusinessTTSProvider';

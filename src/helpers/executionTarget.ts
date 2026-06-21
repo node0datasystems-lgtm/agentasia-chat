@@ -3,8 +3,8 @@ import type {
   LobeAgentAgencyConfig,
   LobeAgentChatConfig,
   RuntimeEnvMode,
-} from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+} from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 
 /**
  * The agent's tool mode — explicit `chatConfig.toolMode` wins; otherwise derive

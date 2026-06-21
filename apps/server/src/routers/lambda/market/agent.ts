@@ -11,7 +11,7 @@ import { generateTrustedClientToken } from '@/libs/trusted-client';
 import { normalizeLocale } from '@/locales/resources';
 import type { AgentForkBatchResult, AgentForkResponse } from '@/types/discover';
 
-const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.lobehub.com';
+const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.agentasia.ai';
 
 interface MarketUserInfo {
   accountId: number;
@@ -49,7 +49,7 @@ const fetchMarketUserInfo = async (
   const { userInfo, accessToken } = options;
 
   try {
-    const userInfoUrl = `${MARKET_BASE_URL}/lobehub-oidc/userinfo`;
+    const userInfoUrl = `${MARKET_BASE_URL}/agentasia-oidc/userinfo`;
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };

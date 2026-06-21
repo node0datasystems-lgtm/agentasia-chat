@@ -1,5 +1,5 @@
-import { TASK_STATUSES } from '@lobechat/builtin-tool-task';
-import type { TaskListItem, TaskParticipant } from '@lobechat/types';
+import { TASK_STATUSES } from '@agentasia/builtin-tool-task';
+import type { TaskListItem, TaskParticipant } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, eq, isNull } from 'drizzle-orm';
 import { z } from 'zod';

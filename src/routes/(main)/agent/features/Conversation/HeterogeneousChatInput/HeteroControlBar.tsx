@@ -1,7 +1,7 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { Flexbox, Icon, Skeleton, Tooltip } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { Flexbox, Icon, Skeleton, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CircleAlertIcon } from 'lucide-react';
 import { memo } from 'react';

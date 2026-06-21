@@ -1,5 +1,5 @@
-import type { UserAgentOnboardingDraft, UserAgentOnboardingNode } from '@lobechat/types';
-import { isRecord, pickTrimmedString } from '@lobechat/utils';
+import type { UserAgentOnboardingDraft, UserAgentOnboardingNode } from '@agentasia/types';
+import { isRecord, pickTrimmedString } from '@agentasia/utils';
 
 type FieldType = 'string' | 'string[]';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Highlighter, Icon } from '@lobehub/ui';
+import { Flexbox, Highlighter, Icon } from '@agentasia/ui';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

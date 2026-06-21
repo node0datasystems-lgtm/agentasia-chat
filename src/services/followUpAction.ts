@@ -1,4 +1,4 @@
-import type { FollowUpExtractInput, FollowUpExtractResult } from '@lobechat/types';
+import type { FollowUpExtractInput, FollowUpExtractResult } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

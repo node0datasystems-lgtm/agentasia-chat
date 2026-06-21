@@ -1,5 +1,5 @@
-import { LocalSystemRenders } from '@lobechat/builtin-tool-local-system/client';
-import { RunCommandRender } from '@lobechat/shared-tool-ui/renders';
+import { LocalSystemRenders } from '@agentasia/builtin-tool-local-system/client';
+import { RunCommandRender } from '@agentasia/shared-tool-ui/renders';
 
 import { CloudSandboxApiName } from '../../types';
 import ExecuteCode from './ExecuteCode';

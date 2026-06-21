@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/config",
+  "name": "@agentasia/config",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -7,10 +7,10 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/business-config": "workspace:*",
-    "@lobechat/const": "workspace:*"
+    "@agentasia/business-config": "workspace:*",
+    "@agentasia/const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

@@ -1,6 +1,6 @@
-import { GroupAgentBuilderIdentifier } from '@lobechat/builtin-tool-group-agent-builder';
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
-import { DEFAULT_MODEL } from '@lobechat/const';
+import { GroupAgentBuilderIdentifier } from '@agentasia/builtin-tool-group-agent-builder';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
+import { DEFAULT_MODEL } from '@agentasia/const';
 
 import type { BuiltinAgentDefinition } from '../../types';
 import { BUILTIN_AGENT_SLUGS } from '../../types';

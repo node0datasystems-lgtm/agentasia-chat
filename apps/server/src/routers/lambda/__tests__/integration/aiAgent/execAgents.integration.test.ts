@@ -5,9 +5,9 @@
  * Note: AgentStateManager and StreamEventManager will automatically use
  * InMemory implementations when Redis is not available (test environment).
  */
-import { type LobeChatDatabase } from '@lobechat/database';
-import { agents, topics } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { agents, topics } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { eq } from 'drizzle-orm';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

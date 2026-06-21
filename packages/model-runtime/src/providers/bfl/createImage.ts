@@ -1,4 +1,4 @@
-import { imageUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64 } from '@agentasia/utils';
 import createDebug from 'debug';
 import type { RuntimeImageGenParamsValue } from 'model-bank';
 

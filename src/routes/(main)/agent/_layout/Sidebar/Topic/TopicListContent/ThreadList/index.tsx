@@ -1,5 +1,5 @@
-import { ThreadType } from '@lobechat/types';
-import { ScrollShadow } from '@lobehub/ui';
+import { ThreadType } from '@agentasia/types';
+import { ScrollShadow } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useFetchThreads } from '@/hooks/useFetchThreads';

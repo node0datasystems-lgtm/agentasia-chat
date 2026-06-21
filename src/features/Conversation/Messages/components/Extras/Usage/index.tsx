@@ -1,10 +1,10 @@
 import {
   HETEROGENEOUS_TYPE_LABELS,
   isRemoteHeterogeneousType,
-} from '@lobechat/heterogeneous-agents';
-import { type ModelPerformance, type ModelUsage } from '@lobechat/types';
-import { ModelIcon } from '@lobehub/icons';
-import { Center, Flexbox, Icon } from '@lobehub/ui';
+} from '@agentasia/heterogeneous-agents';
+import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
+import { ModelIcon } from '@agentasia/icons';
+import { Center, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { CircleDollarSignIcon } from 'lucide-react';

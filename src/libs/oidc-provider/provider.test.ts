@@ -23,7 +23,7 @@ vi.mock('debug', () => ({
 }));
 
 describe('OIDC Provider - Market Client Integration', () => {
-  const MARKET_CLIENT_ID = 'lobehub-market';
+  const MARKET_CLIENT_ID = 'agentasia-market';
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -35,14 +35,14 @@ describe('OIDC Provider - Market Client Integration', () => {
 
   describe('Market Client Logic', () => {
     it('should identify market client correctly', () => {
-      expect(MARKET_CLIENT_ID).toBe('lobehub-market');
+      expect(MARKET_CLIENT_ID).toBe('agentasia-market');
     });
 
     it('should have market client in default clients', async () => {
       vi.doMock('@/envs/app', () => ({
         appEnv: {
           APP_URL: 'https://example.com',
-          MARKET_BASE_URL: 'https://market.lobehub.com',
+          MARKET_BASE_URL: 'https://market.agentasia.ai',
         },
       }));
 
@@ -50,8 +50,8 @@ describe('OIDC Provider - Market Client Integration', () => {
       const marketClient = defaultClients.find((c) => c.client_id === MARKET_CLIENT_ID);
 
       expect(marketClient).toBeDefined();
-      expect(marketClient?.client_id).toBe('lobehub-market');
-      expect(marketClient?.client_name).toBe('LobeHub Marketplace');
+      expect(marketClient?.client_id).toBe('agentasia-market');
+      expect(marketClient?.client_name).toBe('AgentAsia Marketplace');
 
       vi.doUnmock('@/envs/app');
     });
@@ -67,7 +67,7 @@ describe('OIDC Provider - Market Client Integration', () => {
       }));
 
       const module = await import('./provider');
-      expect(module.API_AUDIENCE).toBe('urn:lobehub:chat');
+      expect(module.API_AUDIENCE).toBe('urn:agentasia:chat');
 
       vi.doUnmock('@/envs/app');
     }, 10000);
@@ -120,18 +120,18 @@ describe('OIDC Provider - Market Client Integration', () => {
   describe('Non-Market Client Logic (Default Path)', () => {
     it('should use UserModel for non-market clients (desktop client)', () => {
       // Desktop client should use the default user database lookup
-      const desktopClientId = 'lobehub-desktop';
+      const desktopClientId = 'agentasia-desktop';
       expect(desktopClientId).not.toBe(MARKET_CLIENT_ID);
     });
 
     it('should use UserModel for non-market clients (mobile client)', () => {
       // Mobile client should use the default user database lookup
-      const mobileClientId = 'lobehub-mobile';
+      const mobileClientId = 'agentasia-mobile';
       expect(mobileClientId).not.toBe(MARKET_CLIENT_ID);
     });
 
     it('should validate non-market client IDs are different from market client', () => {
-      const nonMarketClients = ['lobehub-desktop', 'lobehub-mobile'];
+      const nonMarketClients = ['agentasia-desktop', 'agentasia-mobile'];
 
       nonMarketClients.forEach((clientId) => {
         expect(clientId).not.toBe(MARKET_CLIENT_ID);
@@ -172,12 +172,12 @@ describe('OIDC Provider - Market Client Integration', () => {
       it('should use local UserModel for desktop client', () => {
         // Business: Desktop app uses local database for user management
         const scenario = {
-          client: 'lobehub-desktop',
+          client: 'agentasia-desktop',
           authProvider: 'UserModel (Local Database)',
           useCase: 'Desktop app with local/self-hosted user database',
         };
 
-        expect(scenario.client).toBe('lobehub-desktop');
+        expect(scenario.client).toBe('agentasia-desktop');
         expect(scenario.authProvider).toBe('UserModel (Local Database)');
       });
     });
@@ -186,12 +186,12 @@ describe('OIDC Provider - Market Client Integration', () => {
       it('should use local UserModel for mobile client', () => {
         // Business: Mobile app uses local database for user management
         const scenario = {
-          client: 'lobehub-mobile',
+          client: 'agentasia-mobile',
           authProvider: 'UserModel (Local Database)',
           useCase: 'Mobile app with local/self-hosted user database',
         };
 
-        expect(scenario.client).toBe('lobehub-mobile');
+        expect(scenario.client).toBe('agentasia-mobile');
         expect(scenario.authProvider).toBe('UserModel (Local Database)');
       });
     });

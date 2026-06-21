@@ -1,4 +1,4 @@
-import type { TaskDetailActivity } from '@lobechat/types';
+import type { TaskDetailActivity } from '@agentasia/types';
 import {
   ActionIcon,
   Avatar,
@@ -8,8 +8,8 @@ import {
   Flexbox,
   stopPropagation,
   Text,
-} from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { cssVar } from 'antd-style';
 import { CircleDot, CircleStop, Copy, ExternalLink, MoreHorizontal } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';

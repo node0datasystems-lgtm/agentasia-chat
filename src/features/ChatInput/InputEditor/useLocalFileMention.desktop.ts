@@ -1,4 +1,4 @@
-import type { ISlashMenuOption } from '@lobehub/editor';
+import type { ISlashMenuOption } from '@agentasia/editor';
 import debug from 'debug';
 import { createElement, useCallback, useEffect } from 'react';
 

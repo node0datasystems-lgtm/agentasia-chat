@@ -4,7 +4,7 @@ import {
   type ToolCategory,
   type ToolInfo,
   type ToolStatus,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { ensureElectronIpc } from '@/utils/electron/ipc';
 

@@ -1,5 +1,5 @@
-import { Github, ModelTag, ProviderCombine } from '@lobehub/icons';
-import { ActionIcon, Block, Flexbox, MaskShadow, stopPropagation, Text } from '@lobehub/ui';
+import { Github, ModelTag, ProviderCombine } from '@agentasia/icons';
+import { ActionIcon, Block, Flexbox, MaskShadow, stopPropagation, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { GlobeIcon } from 'lucide-react';
 import { memo } from 'react';
@@ -89,7 +89,7 @@ const ProviderItem = memo<DiscoverProviderItem>(
               <ActionIcon color={cssVar.colorTextDescription} icon={GlobeIcon} />
             </a>
             <a
-              href={`https://github.com/lobehub/lobe-chat/blob/main/src/config/modelProviders/${identifier}.ts`}
+              href={`https://github.com/agentasia/agentasia-chat/blob/main/src/config/modelProviders/${identifier}.ts`}
               rel="noopener noreferrer"
               target={'_blank'}
               onClick={stopPropagation}

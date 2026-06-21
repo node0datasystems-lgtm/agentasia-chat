@@ -1,4 +1,4 @@
-import type { NetworkProxySettings } from '@lobechat/electron-client-ipc';
+import type { NetworkProxySettings } from '@agentasia/electron-client-ipc';
 import { describe, expect, it } from 'vitest';
 
 import { ProxyUrlBuilder } from '../urlBuilder';

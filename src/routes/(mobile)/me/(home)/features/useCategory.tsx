@@ -1,5 +1,5 @@
-import { LOBE_CHAT_CLOUD, UTM_SOURCE } from '@lobechat/business-const';
-import { DOWNLOAD_URL, OFFICIAL_URL } from '@lobechat/const';
+import { LOBE_CHAT_CLOUD, UTM_SOURCE } from '@agentasia/business-const';
+import { DOWNLOAD_URL, OFFICIAL_URL } from '@agentasia/const';
 import {
   Book,
   CircleUserRound,

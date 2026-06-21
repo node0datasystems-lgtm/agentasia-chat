@@ -18,8 +18,8 @@ afterEach(() => {
 describe('fetchInteractionDetails', () => {
   it('returns interaction details on success', async () => {
     const details: OidcInteractionDetailsResponse = {
-      clientId: 'lobehub-desktop',
-      clientMetadata: { clientName: 'LobeHub Desktop', isFirstParty: true },
+      clientId: 'agentasia-desktop',
+      clientMetadata: { clientName: 'AgentAsia Desktop', isFirstParty: true },
       prompt: 'consent',
       redirectUri: 'https://example.com/callback',
       scopes: ['openid', 'profile'],

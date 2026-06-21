@@ -1,4 +1,4 @@
-import type { DesktopHotkeyConfig } from '@lobechat/types';
+import type { DesktopHotkeyConfig } from '@agentasia/types';
 
 import { DESKTOP_HOTKEYS_REGISTRATION } from './desktopGlobalShortcuts';
 

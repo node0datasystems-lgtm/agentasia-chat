@@ -1,12 +1,12 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, getLobehubSkillProviderById } from '@lobechat/const';
+import { COMPOSIO_APP_TYPES, getLobehubSkillProviderById } from '@agentasia/const';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { useToolStore } from '@/store/tool';
-import { composioStoreSelectors, lobehubSkillStoreSelectors } from '@/store/tool/selectors';
+import { composioStoreSelectors, agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 
@@ -16,7 +16,7 @@ const POLL_TIMEOUT_MS = 15_000;
 interface UseSkillConnectOptions {
   identifier: string;
   serverName?: string;
-  type: 'composio' | 'lobehub';
+  type: 'composio' | 'agentasia';
 }
 
 export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnectOptions) => {
@@ -28,11 +28,11 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
   const pollIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const pollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // LobeHub skill hooks
+  // AgentAsia skill hooks
   const checkLobehubStatus = useToolStore((s) => s.checkLobehubSkillStatus);
   const revokeLobehubConnect = useToolStore((s) => s.revokeLobehubSkill);
   const getAuthorizeUrl = useToolStore((s) => s.getLobehubSkillAuthorizeUrl);
-  const lobehubServer = useToolStore(lobehubSkillStoreSelectors.getServerByIdentifier(identifier));
+  const agentasiaServer = useToolStore(agentasiaSkillStoreSelectors.getServerByIdentifier(identifier));
 
   // Composio hooks
   const userId = useUserStore(userProfileSelectors.userId);
@@ -66,18 +66,18 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
 
   useEffect(() => {
     const connected =
-      type === 'lobehub'
-        ? lobehubServer?.status === LobehubSkillStatus.CONNECTED
+      type === 'agentasia'
+        ? agentasiaServer?.status === LobehubSkillStatus.CONNECTED
         : composioServer?.status === ComposioServerStatus.ACTIVE;
 
     if (connected && isWaitingAuth) {
       cleanup();
     }
-  }, [type, lobehubServer?.status, composioServer?.status, isWaitingAuth, cleanup]);
+  }, [type, agentasiaServer?.status, composioServer?.status, isWaitingAuth, cleanup]);
 
-  // Listen for OAuth success message from popup window (for LobeHub skills)
+  // Listen for OAuth success message from popup window (for AgentAsia skills)
   useEffect(() => {
-    if (type !== 'lobehub') return;
+    if (type !== 'agentasia') return;
 
     const handleMessage = async (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
@@ -101,7 +101,7 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
 
       pollIntervalRef.current = setInterval(async () => {
         try {
-          if (type === 'lobehub') {
+          if (type === 'agentasia') {
             await checkLobehubStatus(serverIdOrName);
           } else {
             await refreshComposioConnectionStatus(serverIdOrName);
@@ -133,7 +133,7 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
             }
             oauthWindowRef.current = null;
             // Check status and then reset waiting state
-            if (type === 'lobehub') {
+            if (type === 'agentasia') {
               await checkLobehubStatus(serverIdOrName);
             } else {
               await refreshComposioConnectionStatus(serverIdOrName);
@@ -168,9 +168,9 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
     [cleanup, startWindowMonitor, startFallbackPolling],
   );
 
-  // Handle connect for LobeHub
+  // Handle connect for AgentAsia
   const handleLobehubConnect = useCallback(async () => {
-    if (lobehubServer?.isConnected) return;
+    if (agentasiaServer?.isConnected) return;
 
     setIsConnecting(true);
     try {
@@ -188,7 +188,7 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
     } finally {
       setIsConnecting(false);
     }
-  }, [identifier, lobehubServer?.isConnected, getAuthorizeUrl, openOAuthWindow]);
+  }, [identifier, agentasiaServer?.isConnected, getAuthorizeUrl, openOAuthWindow]);
 
   // Handle connect for Composio
   const handleComposioConnect = useCallback(async () => {
@@ -227,19 +227,19 @@ export const useSkillConnect = ({ identifier, serverName, type }: UseSkillConnec
     openOAuthWindow,
   ]);
 
-  const handleConnect = type === 'lobehub' ? handleLobehubConnect : handleComposioConnect;
+  const handleConnect = type === 'agentasia' ? handleLobehubConnect : handleComposioConnect;
 
   const handleDisconnect = useCallback(async () => {
-    if (type === 'lobehub' && lobehubServer) {
-      await revokeLobehubConnect(lobehubServer.identifier);
+    if (type === 'agentasia' && agentasiaServer) {
+      await revokeLobehubConnect(agentasiaServer.identifier);
     } else if (type === 'composio' && composioServer) {
       await removeComposioConnection(composioServer.identifier);
     }
-  }, [type, lobehubServer, composioServer, revokeLobehubConnect, removeComposioConnection]);
+  }, [type, agentasiaServer, composioServer, revokeLobehubConnect, removeComposioConnection]);
 
   const isConnected =
-    type === 'lobehub'
-      ? lobehubServer?.status === LobehubSkillStatus.CONNECTED
+    type === 'agentasia'
+      ? agentasiaServer?.status === LobehubSkillStatus.CONNECTED
       : composioServer?.status === ComposioServerStatus.ACTIVE;
 
   return {

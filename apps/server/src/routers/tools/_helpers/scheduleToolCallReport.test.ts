@@ -1,6 +1,6 @@
 // @vitest-environment node
-import { CURRENT_VERSION } from '@lobechat/const';
-import { type CallReportRequest } from '@lobehub/market-types';
+import { CURRENT_VERSION } from '@agentasia/const';
+import { type CallReportRequest } from '@agentasia/market-types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { DiscoverService } from '@/server/services/discover';

@@ -1,7 +1,7 @@
-import { type IEditor } from '@lobehub/editor';
-import { ReactLinkPlugin, ReactTablePlugin } from '@lobehub/editor';
-import { Editor } from '@lobehub/editor/react';
-import { Flexbox } from '@lobehub/ui';
+import { type IEditor } from '@agentasia/editor';
+import { ReactLinkPlugin, ReactTablePlugin } from '@agentasia/editor';
+import { Editor } from '@agentasia/editor/react';
+import { Flexbox } from '@agentasia/ui';
 import { type FC, useMemo } from 'react';
 
 import { createChatInputRichPlugins } from '@/features/ChatInput/InputEditor/plugins';

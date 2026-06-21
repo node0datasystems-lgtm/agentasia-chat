@@ -1,4 +1,4 @@
-import type { BuiltinStreaming } from '@lobechat/types';
+import type { BuiltinStreaming } from '@agentasia/types';
 
 import { AgentDocumentsApiName } from '../../types';
 import { CreateDocumentStreaming } from './CreateDocument';

@@ -3,7 +3,7 @@ import {
   type DynamicInterventionResolver,
   type GlobalInterventionAuditConfig,
   type MessageToolCall,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 export interface GeneralAgentCallLLMInstructionPayload {
   /** Force create a new assistant message (e.g., after compression) */

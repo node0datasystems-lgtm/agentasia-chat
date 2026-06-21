@@ -6,8 +6,8 @@ import type {
   PreferenceMemoryItemSchema,
   RemoveIdentityActionSchema,
   UpdateIdentityActionSchema,
-} from '@lobechat/memory-user-memory/schemas';
-import type { QueryTaxonomyOptionsResult, SearchMemoryResult } from '@lobechat/types';
+} from '@agentasia/memory-user-memory/schemas';
+import type { QueryTaxonomyOptionsResult, SearchMemoryResult } from '@agentasia/types';
 import type { z } from 'zod';
 
 export const MemoryApiName = {
@@ -88,4 +88,4 @@ export {
   type QueryTaxonomyOptionsResult,
   type SearchMemoryParams,
   type SearchMemoryResult,
-} from '@lobechat/types';
+} from '@agentasia/types';

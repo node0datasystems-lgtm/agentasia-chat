@@ -1,7 +1,7 @@
 'use client';
 
-import { type BuiltinRenderProps } from '@lobechat/types';
-import { Icon } from '@lobehub/ui';
+import { type BuiltinRenderProps } from '@agentasia/types';
+import { Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { AlertTriangleIcon } from 'lucide-react';
 import { memo } from 'react';

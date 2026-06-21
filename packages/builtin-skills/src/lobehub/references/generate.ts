@@ -24,14 +24,14 @@ Generate text, images, videos, and audio. Alias: \`lh generate\`.
 Before generating, always look up the correct model ID with \`lh model list\`:
 
 \`\`\`bash
-# List all video models for the lobehub provider
-lh model list lobehub --type video
+# List all video models for the agentasia provider
+lh model list agentasia --type video
 
 # List only enabled video models
-lh model list lobehub --type video --enabled
+lh model list agentasia --type video --enabled
 
 # List image generation models
-lh model list lobehub --type image
+lh model list agentasia --type image
 \`\`\`
 
 Use the \`id\` field from the output as the \`-m\` argument. Model IDs for video/image are
@@ -40,10 +40,10 @@ Use the \`id\` field from the output as the \`-m\` argument. Model IDs for video
 Example:
 \`\`\`bash
 # ✅ Correct — use the id from lh model list
-lh gen video "a cat riding a skateboard" -p lobehub -m dreamina-seedance-2-0-260128
+lh gen video "a cat riding a skateboard" -p agentasia -m dreamina-seedance-2-0-260128
 
 # ❌ Wrong — guessed slugs will fail with no_valid_channel_error
-lh gen video "a cat riding a skateboard" -p lobehub -m seedance-2.0
+lh gen video "a cat riding a skateboard" -p agentasia -m seedance-2.0
 \`\`\`
 
 ## ⚠️ asyncTaskId vs generationId

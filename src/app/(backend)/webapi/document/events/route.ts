@@ -1,4 +1,4 @@
-import { createSSEHeaders, createSSEWriter } from '@lobechat/utils/server';
+import { createSSEHeaders, createSSEWriter } from '@agentasia/utils/server';
 import debug from 'debug';
 
 import { checkAuth } from '@/app/(backend)/middleware/auth';

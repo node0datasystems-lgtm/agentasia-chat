@@ -20,4 +20,4 @@ export type {
   ModifyRemoveOperation,
   ModifyUpdateOperation,
   ReplaceTextArgs,
-} from '@lobechat/editor-runtime';
+} from '@agentasia/editor-runtime';

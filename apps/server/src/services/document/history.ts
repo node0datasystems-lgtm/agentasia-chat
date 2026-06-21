@@ -1,6 +1,6 @@
-import { buildWorkspaceWhere } from '@lobechat/database';
-import type { DocumentItem } from '@lobechat/database/schemas';
-import { documentHistories, documents } from '@lobechat/database/schemas';
+import { buildWorkspaceWhere } from '@agentasia/database';
+import type { DocumentItem } from '@agentasia/database/schemas';
+import { documentHistories, documents } from '@agentasia/database/schemas';
 import { and, desc, eq, gte, inArray, lt, or } from 'drizzle-orm';
 
 import {

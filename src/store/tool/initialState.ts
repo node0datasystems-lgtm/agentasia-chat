@@ -16,7 +16,7 @@ import {
 import {
   initialLobehubSkillStoreState,
   type LobehubSkillStoreState,
-} from './slices/lobehubSkillStore/initialState';
+} from './slices/agentasiaSkillStore/initialState';
 import { initialMCPStoreState, type MCPStoreState } from './slices/mcpStore/initialState';
 import { initialPluginState, type PluginState } from './slices/plugin/initialState';
 

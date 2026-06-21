@@ -1,5 +1,5 @@
-import type { SubmitVerifyResultParams } from '@lobechat/builtin-tool-verify';
-import { VerifyToolIdentifier } from '@lobechat/builtin-tool-verify';
+import type { SubmitVerifyResultParams } from '@agentasia/builtin-tool-verify';
+import { VerifyToolIdentifier } from '@agentasia/builtin-tool-verify';
 import debug from 'debug';
 
 import { AgentOperationModel } from '@/database/models/agentOperation';

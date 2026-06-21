@@ -1,7 +1,7 @@
 'use client';
 
-import { useEditor } from '@lobehub/editor/react';
-import { ActionIcon, Block, Flexbox, Icon, Text } from '@lobehub/ui';
+import { useEditor } from '@agentasia/editor/react';
+import { ActionIcon, Block, Flexbox, Icon, Text } from '@agentasia/ui';
 import { Button } from 'antd';
 import { cssVar } from 'antd-style';
 import { $getRoot } from 'lexical';

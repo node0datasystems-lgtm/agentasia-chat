@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 
 import { shouldEnableBuiltinSkill } from './skillFilters';
 import { shouldEnableTool } from './toolFilters';

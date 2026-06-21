@@ -1,7 +1,7 @@
 // @vitest-environment node
 import './testUtils';
 
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { params } from '../index';

@@ -1,3 +1,3 @@
-import { commitlint } from '@lobehub/lint';
+import { commitlint } from '@agentasia/lint';
 
 export default commitlint;

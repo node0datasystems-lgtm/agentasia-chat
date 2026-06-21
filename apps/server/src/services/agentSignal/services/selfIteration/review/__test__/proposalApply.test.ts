@@ -1,4 +1,4 @@
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { SkillRefineInput } from '../../tools/shared';

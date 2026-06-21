@@ -1,8 +1,8 @@
-name: lobehub
+name: agentasia
 services:
   lobe:
-    image: lobehub/lobehub
-    container_name: lobehub
+    image: node0datasystems-lgtm/agentasia-chat
+    container_name: agentasia
     ports:
       - '${LOBE_PORT}:3210'
     depends_on:

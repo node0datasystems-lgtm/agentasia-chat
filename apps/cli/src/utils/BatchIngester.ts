@@ -1,4 +1,4 @@
-import type { AgentStreamEvent } from '@lobechat/heterogeneous-agents/spawn';
+import type { AgentStreamEvent } from '@agentasia/heterogeneous-agents/spawn';
 
 export interface IngestSink {
   finish: (params: {

@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   agents,
   agentsToSessions,
@@ -9,11 +9,11 @@ import {
   sessions,
   topics,
   users,
-} from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
-import { AgentRuntimeErrorType } from '@lobechat/model-runtime';
-import { MessageGroupType } from '@lobechat/types';
+} from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
+import { AgentRuntimeErrorType } from '@agentasia/model-runtime';
+import { MessageGroupType } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

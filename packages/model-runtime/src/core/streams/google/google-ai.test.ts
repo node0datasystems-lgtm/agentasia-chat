@@ -1172,7 +1172,7 @@ describe('GoogleGenerativeAIStream', () => {
                       name: 'grep____searchGitHub____mcp',
                       args: {
                         query: '"version":',
-                        repo: 'lobehub/lobe-chat',
+                        repo: 'agentasia/agentasia-chat',
                         path: 'package.json',
                       },
                     },
@@ -1231,7 +1231,7 @@ describe('GoogleGenerativeAIStream', () => {
         [
           'id: chat_1',
           'event: tool_calls',
-          'data: [{"function":{"arguments":"{\\"query\\":\\"\\\\\\"version\\\\\\":\\",\\"repo\\":\\"lobehub/lobe-chat\\",\\"path\\":\\"package.json\\"}","name":"grep____searchGitHub____mcp"},"id":"grep____searchGitHub____mcp_0_abcd1234","index":0,"thoughtSignature":"123","type":"function"}]\n',
+          'data: [{"function":{"arguments":"{\\"query\\":\\"\\\\\\"version\\\\\\":\\",\\"repo\\":\\"agentasia/agentasia-chat\\",\\"path\\":\\"package.json\\"}","name":"grep____searchGitHub____mcp"},"id":"grep____searchGitHub____mcp_0_abcd1234","index":0,"thoughtSignature":"123","type":"function"}]\n',
 
           'id: chat_1',
           'event: stop',

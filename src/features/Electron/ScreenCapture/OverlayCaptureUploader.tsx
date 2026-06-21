@@ -4,8 +4,8 @@ import {
   type OverlayCaptureUploadStatus,
   type OverlayUploadRequestPayload,
   useWatchBroadcast,
-} from '@lobechat/electron-client-ipc';
-import { COMPRESSIBLE_IMAGE_TYPES, compressImageFile } from '@lobechat/utils/compressImage';
+} from '@agentasia/electron-client-ipc';
+import { COMPRESSIBLE_IMAGE_TYPES, compressImageFile } from '@agentasia/utils/compressImage';
 import { memo, useCallback } from 'react';
 
 import { useFileStore } from '@/store/file';

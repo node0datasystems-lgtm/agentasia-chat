@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import debug from 'debug';
 import { memo, Suspense, useMemo } from 'react';
@@ -56,7 +56,7 @@ const Conversation = memo(() => {
   const actionsBarConfig = useActionsBarConfig();
 
   // Heterogeneous agents (Claude Code, etc.) use a simplified input — their
-  // toolchain/memory/model are managed by the external runtime, so LobeHub's
+  // toolchain/memory/model are managed by the external runtime, so AgentAsia's
   // model/tools/memory/KB/MCP/runtime-mode pickers don't apply.
   const isHeterogeneousAgent = useAgentStore(
     agentByIdSelectors.isAgentHeterogeneousById(context.agentId),

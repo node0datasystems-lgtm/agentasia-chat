@@ -1,5 +1,5 @@
-import type { HeteroAgentRuntimeDescriptor } from '@lobechat/agent-manager-runtime';
-import type { LobeAgentConfig, MetaData } from '@lobechat/types';
+import type { HeteroAgentRuntimeDescriptor } from '@agentasia/agent-manager-runtime';
+import type { LobeAgentConfig, MetaData } from '@agentasia/types';
 import type { PartialDeep } from 'type-fest';
 
 /**
@@ -390,7 +390,7 @@ export interface InstallPluginParams {
    */
   identifier: string;
   /**
-   * Plugin source: 'official' (builtin/composio/lobehub-skill) or 'market' (MCP marketplace)
+   * Plugin source: 'official' (builtin/composio/agentasia-skill) or 'market' (MCP marketplace)
    */
   source: InstallPluginSource;
 }

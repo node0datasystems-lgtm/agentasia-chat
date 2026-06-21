@@ -1,7 +1,7 @@
 /**
  * @vitest-environment node
  */
-import { getModelPropertyWithFallback } from '@lobechat/model-runtime';
+import { getModelPropertyWithFallback } from '@agentasia/model-runtime';
 import type * as ModelBankModule from 'model-bank';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

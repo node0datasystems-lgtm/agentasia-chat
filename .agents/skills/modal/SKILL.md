@@ -1,25 +1,25 @@
 ---
 name: modal
-description: 'LobeHub imperative modal conventions. Use when creating or migrating modals, dialogs, popups, confirm flows, ModalHost wiring, createModal, confirmModal, useModalContext, or base-ui modal APIs.'
+description: 'AgentAsia imperative modal conventions. Use when creating or migrating modals, dialogs, popups, confirm flows, ModalHost wiring, createModal, confirmModal, useModalContext, or base-ui modal APIs.'
 user-invocable: false
 ---
 
 # Modal Imperative API Guide
 
-## Recommended: `@lobehub/ui/base-ui`
+## Recommended: `@agentasia/ui/base-ui`
 
 New code should use the **base-ui** modal stack (headless primitives, not antd `Modal`):
 
-- `createModal`, `confirmModal`, `ModalHost` from `@lobehub/ui/base-ui`
-- `useModalContext` from `@lobehub/ui/base-ui` inside modal **content**
+- `createModal`, `confirmModal`, `ModalHost` from `@agentasia/ui/base-ui`
+- `useModalContext` from `@agentasia/ui/base-ui` inside modal **content**
 
 Body slot: pass **`content`** (or `children`; runtime uses `content ?? children`).
 
 ### Global `ModalHost` (required)
 
-Base-ui `createModal` renders through a **separate** host from the root package. The app must mount **`ModalHost`** from `@lobehub/ui/base-ui` once near the root (e.g. next to other global hosts). Without it, `createModal` calls will not appear.
+Base-ui `createModal` renders through a **separate** host from the root package. The app must mount **`ModalHost`** from `@agentasia/ui/base-ui` once near the root (e.g. next to other global hosts). Without it, `createModal` calls will not appear.
 
-If the project only mounts `ModalHost` from `@lobehub/ui`, add a second lazy `ModalHost` from `@lobehub/ui/base-ui` until all imperative modals are migrated.
+If the project only mounts `ModalHost` from `@agentasia/ui`, add a second lazy `ModalHost` from `@agentasia/ui/base-ui` until all imperative modals are migrated.
 
 ### Why imperative?
 
@@ -42,7 +42,7 @@ features/
 ```tsx
 'use client';
 
-import { useModalContext } from '@lobehub/ui/base-ui';
+import { useModalContext } from '@agentasia/ui/base-ui';
 import { useTranslation } from 'react-i18next';
 
 export const MyFeatureContent = () => {
@@ -58,7 +58,7 @@ export const MyFeatureContent = () => {
 ```tsx
 'use client';
 
-import { createModal } from '@lobehub/ui/base-ui';
+import { createModal } from '@agentasia/ui/base-ui';
 import { t } from 'i18next';
 
 import { MyFeatureContent } from './MyFeatureContent';
@@ -112,7 +112,7 @@ const { close, setCanDismissByClickOutside } = useModalContext();
 ### Confirm
 
 ```tsx
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 
 confirmModal({
   title: '…',
@@ -125,9 +125,9 @@ confirmModal({
 
 ---
 
-## Legacy: `@lobehub/ui` (root)
+## Legacy: `@agentasia/ui` (root)
 
-Older call sites use **`createModal` from `@lobehub/ui`**, which is typed as **antd `Modal` props** (`children`, `allowFullscreen`, `getContainer`, `destroyOnHidden`, `styles.body`, etc.). Prefer migrating new work to **`@lobehub/ui/base-ui`**.
+Older call sites use **`createModal` from `@agentasia/ui`**, which is typed as **antd `Modal` props** (`children`, `allowFullscreen`, `getContainer`, `destroyOnHidden`, `styles.body`, etc.). Prefer migrating new work to **`@agentasia/ui/base-ui`**.
 
 Examples (legacy): `src/features/SkillStore/index.tsx`, `src/features/LibraryModal/CreateNew/index.tsx`.
 

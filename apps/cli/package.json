@@ -1,16 +1,16 @@
 {
-  "name": "@lobehub/cli",
+  "name": "@agentasia/cli",
   "version": "0.0.34",
   "type": "module",
   "bin": {
     "lh": "./dist/index.js",
     "lobe": "./dist/index.js",
-    "lobehub": "./dist/index.js"
+    "agentasia": "./dist/index.js"
   },
   "man": [
     "./man/man1/lh.1",
     "./man/man1/lobe.1",
-    "./man/man1/lobehub.1"
+    "./man/man1/agentasia.1"
   ],
   "files": [
     "dist",
@@ -20,7 +20,7 @@
     "build": "tsdown",
     "cli:link": "bun link",
     "cli:unlink": "bun unlink",
-    "dev": "LOBEHUB_CLI_HOME=.lobehub-dev bun src/index.ts",
+    "dev": "LOBEHUB_CLI_HOME=.agentasia-dev bun src/index.ts",
     "man:generate": "bun src/man/generate.ts",
     "prepublishOnly": "npm run build && npm run man:generate",
     "test": "bunx vitest run --config vitest.config.mts --silent='passed-only'",
@@ -28,13 +28,6 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@lobechat/agent-gateway-client": "workspace:*",
-    "@lobechat/device-control": "workspace:*",
-    "@lobechat/device-gateway-client": "workspace:*",
-    "@lobechat/device-identity": "workspace:*",
-    "@lobechat/heterogeneous-agents": "workspace:*",
-    "@lobechat/local-file-shell": "workspace:*",
-    "@lobechat/tool-runtime": "workspace:*",
     "@trpc/client": "^11.8.1",
     "@types/node": "^24.13.2",
     "@types/semver": "^7.7.1",
@@ -50,7 +43,14 @@
     "superjson": "^2.2.6",
     "tsdown": "^0.21.4",
     "typescript": "^6.0.3",
-    "ws": "^8.18.1"
+    "ws": "^8.18.1",
+    "@agentasia/agent-gateway-client": "workspace:*",
+    "@agentasia/device-control": "workspace:*",
+    "@agentasia/device-gateway-client": "workspace:*",
+    "@agentasia/device-identity": "workspace:*",
+    "@agentasia/heterogeneous-agents": "workspace:*",
+    "@agentasia/local-file-shell": "workspace:*",
+    "@agentasia/tool-runtime": "workspace:*"
   },
   "publishConfig": {
     "access": "public",

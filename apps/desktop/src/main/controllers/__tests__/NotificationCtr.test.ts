@@ -1,4 +1,4 @@
-import type { ShowDesktopNotificationParams } from '@lobechat/electron-client-ipc';
+import type { ShowDesktopNotificationParams } from '@agentasia/electron-client-ipc';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { App } from '@/core/App';
@@ -113,7 +113,7 @@ describe('NotificationCtr', () => {
 
       controller.afterAppReady();
 
-      expect(app.setAppUserModelId).toHaveBeenCalledWith('com.lobehub.chat');
+      expect(app.setAppUserModelId).toHaveBeenCalledWith('com.agentasia.chat');
 
       vi.mocked(windows).mockReturnValue(false);
     });

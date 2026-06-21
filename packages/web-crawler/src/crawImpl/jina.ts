@@ -1,4 +1,4 @@
-import { getJinaReaderBaseUrl } from '@lobechat/utils';
+import { getJinaReaderBaseUrl } from '@agentasia/utils';
 
 import type { CrawlImpl } from '../type';
 import { toFetchError } from '../utils/errorType';

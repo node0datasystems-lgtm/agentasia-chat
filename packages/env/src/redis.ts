@@ -1,4 +1,4 @@
-import { type RedisConfig } from '@lobechat/types';
+import { type RedisConfig } from '@agentasia/types';
 import { createEnv } from '@t3-oss/env-core';
 import { z } from 'zod';
 

@@ -497,11 +497,11 @@ export const toolKeys = {
   ]),
   composioConnections: def('tool:composioConnections', () => ['tool:composioConnections']),
   installedPlugins: def('tool:installedPlugins', () => ['tool:installedPlugins']),
-  lobehubSkillConnections: def('tool:lobehubSkillConnections', () => [
-    'tool:lobehubSkillConnections',
+  agentasiaSkillConnections: def('tool:agentasiaSkillConnections', () => [
+    'tool:agentasiaSkillConnections',
   ]),
-  lobehubSkillTools: def('tool:lobehubSkillTools', (provider: string) => [
-    'tool:lobehubSkillTools',
+  agentasiaSkillTools: def('tool:agentasiaSkillTools', (provider: string) => [
+    'tool:agentasiaSkillTools',
     provider,
   ]),
   mcpPluginList: def('tool:mcpPluginList', (locale: string, params: unknown) => [

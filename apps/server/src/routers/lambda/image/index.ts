@@ -1,7 +1,7 @@
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { isLobeHubModelAvailable } from '@lobechat/business-model-bank/model-config';
-import { resolveBusinessModelMapping } from '@lobechat/business-model-runtime';
-import { ChatErrorType } from '@lobechat/types';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { isAgentAsiaModelAvailable } from '@agentasia/business-model-bank/model-config';
+import { resolveBusinessModelMapping } from '@agentasia/business-model-runtime';
+import { ChatErrorType } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
@@ -75,19 +75,19 @@ export const imageRouter = router({
 
       const { resolvedModelId } = await resolveBusinessModelMapping(provider, model);
 
-      // Reject lobehub model ids that are no longer in the model bank so callers get a
+      // Reject agentasia model ids that are no longer in the model bank so callers get a
       // clear error instead of an opaque downstream failure when the underlying channel
       // can't serve the requested id.
       if (
         provider === BRANDING_PROVIDER &&
-        !(await isLobeHubModelAvailable(resolvedModelId, 'image', {
+        !(await isAgentAsiaModelAvailable(resolvedModelId, 'image', {
           getUserEmail: async () => (await UserModel.findById(serverDB, userId))?.email,
         }))
       ) {
         throw new TRPCError({
           cause: { data: { modelType: 'image', requestedModel: model } },
           code: 'BAD_REQUEST',
-          message: ChatErrorType.LobeHubModelDeprecated,
+          message: ChatErrorType.AgentAsiaModelDeprecated,
         });
       }
 

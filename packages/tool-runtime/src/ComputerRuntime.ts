@@ -11,8 +11,8 @@ import {
   formatMoveResults,
   formatRenameResult,
   formatWriteResult,
-} from '@lobechat/prompts/fileSystem';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+} from '@agentasia/prompts/fileSystem';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type {
   EditFileParams,

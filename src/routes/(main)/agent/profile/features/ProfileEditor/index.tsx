@@ -1,8 +1,8 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
-import { Flexbox } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
+import { Flexbox } from '@agentasia/ui';
 import { Divider, Tabs, type TabsProps } from 'antd';
 import isEqual from 'fast-deep-equal';
 import React, { memo } from 'react';

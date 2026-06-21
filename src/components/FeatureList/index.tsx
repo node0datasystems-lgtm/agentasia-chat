@@ -1,4 +1,4 @@
-import { Center, Flexbox, Icon } from '@lobehub/ui';
+import { Center, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles, responsive } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';
 import { memo } from 'react';

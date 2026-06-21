@@ -1,7 +1,7 @@
 'use client';
 
-import { Github, ProviderCombine } from '@lobehub/icons';
-import { ActionIcon, Flexbox, stopPropagation } from '@lobehub/ui';
+import { Github, ProviderCombine } from '@agentasia/icons';
+import { ActionIcon, Flexbox, stopPropagation } from '@agentasia/ui';
 import { cssVar, useResponsive } from 'antd-style';
 import { GlobeIcon } from 'lucide-react';
 import { memo } from 'react';
@@ -55,7 +55,7 @@ const Header = memo<{ mobile?: boolean }>(({ mobile: isMobile }) => {
             rel="noreferrer"
             target="_blank"
             href={urlJoin(
-              'https://github.com/lobehub/lobe-chat-agents/tree/main/locales',
+              'https://github.com/agentasia/agentasia-chat-agents/tree/main/locales',
               identifier as string,
             )}
             onClick={stopPropagation}

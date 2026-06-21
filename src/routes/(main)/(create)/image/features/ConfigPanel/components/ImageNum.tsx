@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, InputNumber, Segmented } from '@lobehub/ui';
+import { ActionIcon, Flexbox, InputNumber, Segmented } from '@agentasia/ui';
 import { Check, Plus, X } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 

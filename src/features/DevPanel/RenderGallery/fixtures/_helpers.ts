@@ -1,6 +1,6 @@
 'use client';
 
-import type { LobeChatPluginApi } from '@lobechat/types';
+import type { LobeChatPluginApi } from '@agentasia/types';
 
 import type { ToolRenderFixture, ToolRenderFixtureVariant } from '../lifecycleMode';
 

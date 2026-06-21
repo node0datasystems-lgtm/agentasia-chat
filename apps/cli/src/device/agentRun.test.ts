@@ -21,7 +21,7 @@ const baseParams = {
   jwt: 'jwt',
   operationId: 'op',
   prompt: 'hi',
-  serverUrl: 'https://app.lobehub.com',
+  serverUrl: 'https://app.agentasia.ai',
   topicId: 'tpc',
 };
 
@@ -68,7 +68,7 @@ describe('spawnHeteroAgentRun', () => {
       cwd: '/work/dir',
       env: expect.objectContaining({
         LOBEHUB_JWT: 'jwt-token',
-        LOBEHUB_SERVER: 'https://app.lobehub.com',
+        LOBEHUB_SERVER: 'https://app.agentasia.ai',
       }),
     });
 

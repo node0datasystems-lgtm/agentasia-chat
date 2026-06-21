@@ -1,4 +1,4 @@
-import type { InjectedToolManifest } from '@lobechat/types';
+import type { InjectedToolManifest } from '@agentasia/types';
 
 import { AgentManagementManifest } from './manifest';
 import { AgentManagementApiName, AgentManagementIdentifier } from './types';

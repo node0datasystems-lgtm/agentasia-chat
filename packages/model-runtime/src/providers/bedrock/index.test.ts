@@ -286,7 +286,7 @@ describe('LobeBedrockAI', () => {
             {
               content: 'Here is my response.',
               model: 'deepseek-v4-pro',
-              provider: 'lobehub',
+              provider: 'agentasia',
               reasoning: {
                 content: 'DeepSeek reasoning',
                 signature: '340acffe-0000-4000-8000-000000000000',

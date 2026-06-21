@@ -1,7 +1,7 @@
 'use client';
 
 import { ExclamationCircleOutlined, FolderOpenOutlined } from '@ant-design/icons';
-import { Button, FluentEmoji, Text } from '@lobehub/ui';
+import { Button, FluentEmoji, Text } from '@agentasia/ui';
 import { Result } from 'antd';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -46,7 +46,7 @@ const StatusPage = memo<StatusPageProps>(({ status }) => {
                 i18nKey="assistants.status.unpublished.subtitle"
                 ns="discover"
                 components={{
-                  email: <a href="mailto:support@lobehub.com">support@lobehub.com</a>,
+                  email: <a href="mailto:support@agentasia.ai">support@agentasia.ai</a>,
                 }}
               />
             </Text>
@@ -101,7 +101,7 @@ const StatusPage = memo<StatusPageProps>(({ status }) => {
                 i18nKey="assistants.status.support"
                 ns="discover"
                 components={{
-                  email: <a href="mailto:support@lobehub.com">support@lobehub.com</a>,
+                  email: <a href="mailto:support@agentasia.ai">support@agentasia.ai</a>,
                 }}
               />
             </p>

@@ -5,7 +5,7 @@ import {
   type GlobFilesParams,
   type GlobFilesResult,
   type SearchOptions,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';
 
 import { ServiceModule } from './index';
 

@@ -1,4 +1,4 @@
-import type { BuiltinInspector } from '@lobechat/types';
+import type { BuiltinInspector } from '@agentasia/types';
 
 import { AgentMarketplaceInspectors } from '../../agentMarketplace/client/Inspector';
 import { WebOnboardingApiName } from '../../types';

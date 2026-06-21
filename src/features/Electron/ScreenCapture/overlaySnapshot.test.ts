@@ -1,4 +1,4 @@
-import { DEFAULT_AVATAR, DEFAULT_INBOX_AVATAR } from '@lobechat/const';
+import { DEFAULT_AVATAR, DEFAULT_INBOX_AVATAR } from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import { resolveOverlayAgentOptions, resolveOverlayDefaultAgentId } from './overlaySnapshot';

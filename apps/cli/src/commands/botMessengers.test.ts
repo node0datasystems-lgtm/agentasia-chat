@@ -212,13 +212,13 @@ describe('bot messengers', () => {
     it('renders the platforms table', async () => {
       mockTrpcClient.messenger.availablePlatforms.query.mockResolvedValueOnce([
         { appId: 'A123', id: 'slack', name: 'Slack' },
-        { botUsername: 'lobehub_bot', id: 'telegram', name: 'Telegram' },
+        { botUsername: 'agentasia_bot', id: 'telegram', name: 'Telegram' },
       ]);
       await createProgram().parseAsync(['node', 'test', 'bot', 'messengers', 'platforms']);
       const out = renderedOutput();
       expect(out).toContain('slack');
       expect(out).toContain('A123');
-      expect(out).toContain('lobehub_bot');
+      expect(out).toContain('agentasia_bot');
     });
 
     it('handles empty platform list gracefully', async () => {

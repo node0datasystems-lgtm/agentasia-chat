@@ -1,4 +1,4 @@
-import { CLAUDE_CODE_BASE_ARGS } from '@lobechat/heterogeneous-agents/spawn';
+import { CLAUDE_CODE_BASE_ARGS } from '@agentasia/heterogeneous-agents/spawn';
 
 import type { HeterogeneousAgentBuildPlanParams, HeterogeneousAgentDriver } from '../types';
 

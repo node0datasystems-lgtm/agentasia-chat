@@ -1,5 +1,5 @@
-import { AGENT_DOCUMENT_CATEGORY } from '@lobechat/const';
-import { Center, Empty, Flexbox } from '@lobehub/ui';
+import { AGENT_DOCUMENT_CATEGORY } from '@agentasia/const';
+import { Center, Empty, Flexbox } from '@agentasia/ui';
 import type { MenuProps } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { FileTextIcon, Maximize2Icon, Trash2Icon } from 'lucide-react';

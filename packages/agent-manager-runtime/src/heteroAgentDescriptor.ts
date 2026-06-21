@@ -16,7 +16,7 @@ import type {
   DeviceExecutionTarget,
   HeterogeneousProviderConfig,
   LobeAgentAgencyConfig,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 type HeteroType = HeterogeneousProviderConfig['type'];
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { type HeterogeneousProviderConfig, type UserCredSummary } from '@lobechat/types';
-import { Github } from '@lobehub/icons';
-import { Flexbox } from '@lobehub/ui';
+import { type HeterogeneousProviderConfig, type UserCredSummary } from '@agentasia/types';
+import { Github } from '@agentasia/icons';
+import { Flexbox } from '@agentasia/ui';
 import { Avatar, Button, Input, Select, Spin, Tag, Typography } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CheckCircle2, KeyRound, X } from 'lucide-react';

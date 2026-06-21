@@ -1,5 +1,5 @@
-import type { SpeedMultiplier } from '@lobechat/agent-mock';
-import { ActionIcon, Dropdown, Flexbox, Segmented, toast } from '@lobehub/ui';
+import type { SpeedMultiplier } from '@agentasia/agent-mock';
+import { ActionIcon, Dropdown, Flexbox, Segmented, toast } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Pause, Play, Repeat, RotateCcw, SkipForward } from 'lucide-react';
 import { memo, useCallback, useMemo, useRef } from 'react';

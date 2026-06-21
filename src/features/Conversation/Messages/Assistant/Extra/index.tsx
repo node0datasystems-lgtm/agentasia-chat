@@ -1,7 +1,7 @@
-import { LOADING_FLAT } from '@lobechat/const';
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
-import { type ModelPerformance, type ModelUsage } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { LOADING_FLAT } from '@agentasia/const';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
+import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useUserStore } from '@/store/user';

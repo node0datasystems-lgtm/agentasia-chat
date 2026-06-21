@@ -1,4 +1,4 @@
-import type { SaveUserQuestionField } from '@lobechat/types';
+import type { SaveUserQuestionField } from '@agentasia/types';
 
 interface WebOnboardingToolActionResult {
   content?: string;

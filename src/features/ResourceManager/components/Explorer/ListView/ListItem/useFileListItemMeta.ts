@@ -1,4 +1,4 @@
-import { CUSTOM_FOLDER_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@lobechat/const';
+import { CUSTOM_FOLDER_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
 import dayjs from 'dayjs';
 import { useMemo } from 'react';
 

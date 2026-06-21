@@ -1,4 +1,4 @@
-import type { DesktopHotkeyConfig, DesktopHotkeyId, DesktopHotkeyItem } from '@lobechat/types';
+import type { DesktopHotkeyConfig, DesktopHotkeyId, DesktopHotkeyItem } from '@agentasia/types';
 
 type DesktopHotkeyIdCompatible = DesktopHotkeyId | 'quickComposer';
 

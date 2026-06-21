@@ -1,4 +1,4 @@
-import type { ChatTopicMetadata } from '@lobechat/types';
+import type { ChatTopicMetadata } from '@agentasia/types';
 
 export type HeteroResumeBlockedReason = 'cwd_changed' | 'missing_bound_cwd';
 

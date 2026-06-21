@@ -1,6 +1,6 @@
 'use client';
 
-import { type UIChatMessage } from '@lobechat/types';
+import { type UIChatMessage } from '@agentasia/types';
 import debug from 'debug';
 import { memo, useEffect, useLayoutEffect, useRef } from 'react';
 import { createStoreUpdater } from 'zustand-utils';

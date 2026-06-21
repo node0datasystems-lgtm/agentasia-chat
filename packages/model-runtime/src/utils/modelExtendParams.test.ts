@@ -1,4 +1,4 @@
-import type { LobeAgentChatConfig } from '@lobechat/types';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { applyModelExtendParams, resolveDefaultThinkingLevelForModel } from './modelExtendParams';
@@ -25,7 +25,7 @@ describe('applyModelExtendParams', () => {
     ).toEqual({});
   });
 
-  // Gemini 3 Pro via the agent path (provider=lobehub) billed reasoning tokens but
+  // Gemini 3 Pro via the agent path (provider=agentasia) billed reasoning tokens but
   // returned empty thinking summaries because thinkingLevel never reached the
   // request. With the model's extendParams present, thinkingLevel must default
   // to 'high' even when the chat config does not set thinkingLevel3.

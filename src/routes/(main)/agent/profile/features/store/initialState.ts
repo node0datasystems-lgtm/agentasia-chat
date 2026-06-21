@@ -1,5 +1,5 @@
-import { type IEditor } from '@lobehub/editor';
-import { type EditorState } from '@lobehub/editor/react';
+import { type IEditor } from '@agentasia/editor';
+import { type EditorState } from '@agentasia/editor/react';
 
 export interface EditLockState {
   holderId: string | null;

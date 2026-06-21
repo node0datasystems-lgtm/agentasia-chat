@@ -10,7 +10,7 @@ const emojiPickerProps = vi.hoisted(() => ({
   last: undefined as any,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children }: any) => <div>{children}</div>,
   Icon: () => <span />,
   Input: () => <input readOnly />,

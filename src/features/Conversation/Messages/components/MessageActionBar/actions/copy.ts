@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@lobehub/ui';
+import { copyToClipboard } from '@agentasia/ui';
 import { App } from 'antd';
 import { Copy } from 'lucide-react';
 import { useMemo } from 'react';

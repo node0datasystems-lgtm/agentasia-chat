@@ -1,4 +1,4 @@
-import type { BuiltinRender } from '@lobechat/types';
+import type { BuiltinRender } from '@agentasia/types';
 
 import { TaskApiName } from '../../types';
 import CreateTaskRender from './CreateTask';

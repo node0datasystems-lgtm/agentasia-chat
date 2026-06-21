@@ -1,6 +1,6 @@
 'use client';
 
-import { Center } from '@lobehub/ui';
+import { Center } from '@agentasia/ui';
 import { createStaticStyles, responsive } from 'antd-style';
 import { memo } from 'react';
 

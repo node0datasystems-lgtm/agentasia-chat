@@ -1,4 +1,4 @@
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 import { describe, expect, it, vi } from 'vitest';
 
 import type { ToolExecutionContext } from '../../types';

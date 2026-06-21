@@ -10,7 +10,7 @@ import TopicItem from './index';
 const useTopicNavigationMock = vi.hoisted(() => vi.fn());
 const runningStartTimeMock = vi.hoisted(() => ({ value: undefined as number | undefined }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <div {...props}>{children}</div>
   ),

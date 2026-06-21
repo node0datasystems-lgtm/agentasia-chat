@@ -1,4 +1,4 @@
-import type { ChatTopicBotContext } from '@lobechat/types';
+import type { ChatTopicBotContext } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { resolveDeviceAccessPolicy } from './deviceAccessPolicy';

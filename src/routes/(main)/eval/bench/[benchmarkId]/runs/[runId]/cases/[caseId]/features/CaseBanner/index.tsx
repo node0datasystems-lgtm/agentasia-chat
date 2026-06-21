@@ -1,8 +1,8 @@
 'use client';
 
-import type { EvalRunTopicResult } from '@lobechat/types';
-import { formatCost, formatShortenNumber } from '@lobechat/utils';
-import { ActionIcon, Flexbox, Tag } from '@lobehub/ui';
+import type { EvalRunTopicResult } from '@agentasia/types';
+import { formatCost, formatShortenNumber } from '@agentasia/utils';
+import { ActionIcon, Flexbox, Tag } from '@agentasia/ui';
 import { Typography } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import {

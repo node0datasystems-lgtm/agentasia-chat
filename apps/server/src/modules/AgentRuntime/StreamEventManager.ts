@@ -1,5 +1,5 @@
-import { type AgentStreamEventType } from '@lobechat/agent-gateway-client';
-import { type ChatToolPayload } from '@lobechat/types';
+import { type AgentStreamEventType } from '@agentasia/agent-gateway-client';
+import { type ChatToolPayload } from '@agentasia/types';
 import debug from 'debug';
 import { type Redis } from 'ioredis';
 

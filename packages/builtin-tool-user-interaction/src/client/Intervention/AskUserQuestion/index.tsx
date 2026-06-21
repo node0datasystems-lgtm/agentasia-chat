@@ -1,9 +1,9 @@
 'use client';
 
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { SendButton } from '@lobehub/editor/react';
-import { Flexbox, Icon, Input, Text, TextArea } from '@lobehub/ui';
-import { Select } from '@lobehub/ui/base-ui';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { SendButton } from '@agentasia/editor/react';
+import { Flexbox, Icon, Input, Text, TextArea } from '@agentasia/ui';
+import { Select } from '@agentasia/ui/base-ui';
 import { ArrowLeft, PenLine } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

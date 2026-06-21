@@ -1,4 +1,4 @@
-import type { TopicQuerySortBy } from '@lobechat/types';
+import type { TopicQuerySortBy } from '@agentasia/types';
 
 import { useAgentStore } from '@/store/agent';
 import { builtinAgentSelectors } from '@/store/agent/selectors';

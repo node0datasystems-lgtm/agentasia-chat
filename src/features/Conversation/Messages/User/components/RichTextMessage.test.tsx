@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import { moment } from '@lobehub/editor';
+import { moment } from '@agentasia/editor';
 import { act, cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 

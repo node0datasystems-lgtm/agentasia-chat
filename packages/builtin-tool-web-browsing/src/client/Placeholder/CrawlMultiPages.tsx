@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinPlaceholderProps } from '@lobechat/types';
-import { ScrollShadow } from '@lobehub/ui';
+import type { BuiltinPlaceholderProps } from '@agentasia/types';
+import { ScrollShadow } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useIsMobile } from '@/hooks/useIsMobile';

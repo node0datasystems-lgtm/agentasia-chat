@@ -36,7 +36,7 @@ export interface ScopeEntry {
   version?: string;
 }
 
-const DB_NAME = 'lobehub-local-data';
+const DB_NAME = 'agentasia-local-data';
 const STORE_NAME = 'cache';
 
 const isAvailable = () => typeof indexedDB !== 'undefined';

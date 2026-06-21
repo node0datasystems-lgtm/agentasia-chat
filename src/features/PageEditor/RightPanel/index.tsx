@@ -1,6 +1,6 @@
 'use client';
 
-import { Freeze } from '@lobehub/ui';
+import { Freeze } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { AnimatePresence, m, useIsPresent } from 'motion/react';
 import { type ReactNode } from 'react';

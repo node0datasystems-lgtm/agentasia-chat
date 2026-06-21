@@ -1,4 +1,4 @@
-import type { TaskDetailData, TaskDetailWorkspaceNode, TaskStatus } from '@lobechat/types';
+import type { TaskDetailData, TaskDetailWorkspaceNode, TaskStatus } from '@agentasia/types';
 
 // ── Formatting helpers for Task tool responses ──
 
@@ -61,7 +61,7 @@ export type {
   TaskDetailData,
   TaskDetailSubtask,
   TaskDetailWorkspaceNode,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 /**
  * Format a single task as a one-line summary

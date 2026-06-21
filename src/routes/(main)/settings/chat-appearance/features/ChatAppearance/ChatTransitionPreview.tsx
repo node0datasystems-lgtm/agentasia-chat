@@ -1,4 +1,4 @@
-import { Flexbox, Markdown } from '@lobehub/ui';
+import { Flexbox, Markdown } from '@agentasia/ui';
 import { memo, useEffect, useMemo, useState } from 'react';
 
 import { type UserGeneralConfig } from '@/types/user/settings';

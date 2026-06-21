@@ -8,22 +8,22 @@ import path from 'node:path';
 import type { Readable, Writable } from 'node:stream';
 import { finished as streamFinished } from 'node:stream/promises';
 
-import type { HeterogeneousAgentSessionError } from '@lobechat/electron-client-ipc';
+import type { HeterogeneousAgentSessionError } from '@agentasia/electron-client-ipc';
 import {
   CLAUDE_CODE_CLI_INSTALL_COMMANDS,
   CLAUDE_CODE_CLI_INSTALL_DOCS_URL,
   CODEX_CLI_INSTALL_COMMANDS,
   CODEX_CLI_INSTALL_DOCS_URL,
   HeterogeneousAgentSessionErrorCode,
-} from '@lobechat/electron-client-ipc';
-import type { AskUserBridge } from '@lobechat/heterogeneous-agents/askUser';
-import { AskUserMcpServer } from '@lobechat/heterogeneous-agents/askUser';
+} from '@agentasia/electron-client-ipc';
+import type { AskUserBridge } from '@agentasia/heterogeneous-agents/askUser';
+import { AskUserMcpServer } from '@agentasia/heterogeneous-agents/askUser';
 import type {
   AgentContentBlock,
   HeteroExecImageRef,
-} from '@lobechat/heterogeneous-agents/protocol';
-import { buildHeteroExecStdinPayload } from '@lobechat/heterogeneous-agents/protocol';
-import type { AgentStreamEvent, UsageData } from '@lobechat/heterogeneous-agents/spawn';
+} from '@agentasia/heterogeneous-agents/protocol';
+import { buildHeteroExecStdinPayload } from '@agentasia/heterogeneous-agents/protocol';
+import type { AgentStreamEvent, UsageData } from '@agentasia/heterogeneous-agents/spawn';
 import {
   AgentStreamPipeline,
   buildAgentInput,
@@ -32,7 +32,7 @@ import {
   readCodexSessionModel,
   resolveCliSpawnPlan,
   resolveCodexInitialModel,
-} from '@lobechat/heterogeneous-agents/spawn';
+} from '@agentasia/heterogeneous-agents/spawn';
 import { app as electronApp, BrowserWindow } from 'electron';
 
 import { HETERO_AGENT_FILES_DIR, HETERO_AGENT_TRACING_DIR } from '@/const/heteroAgent';

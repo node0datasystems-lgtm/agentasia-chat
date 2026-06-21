@@ -1,4 +1,4 @@
-import { CalculatorExecutionRuntime, CalculatorManifest } from '@lobechat/builtin-tool-calculator';
+import { CalculatorExecutionRuntime, CalculatorManifest } from '@agentasia/builtin-tool-calculator';
 
 import { type ServerRuntimeRegistration } from './types';
 

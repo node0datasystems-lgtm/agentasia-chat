@@ -1,4 +1,4 @@
-import type { AgentState } from '@lobechat/agent-runtime';
+import type { AgentState } from '@agentasia/agent-runtime';
 
 import {
   type AgentSignalOperationMarker,

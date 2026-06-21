@@ -1,5 +1,5 @@
-import { type ChatPluginPayload } from '@lobechat/types';
-import { Flexbox, Icon, Tag, Text } from '@lobehub/ui';
+import { type ChatPluginPayload } from '@agentasia/types';
+import { Flexbox, Icon, Tag, Text } from '@agentasia/ui';
 import { cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { CircuitBoard } from 'lucide-react';

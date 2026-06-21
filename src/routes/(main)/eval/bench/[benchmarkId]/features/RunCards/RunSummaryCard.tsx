@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Card, Progress, Typography } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

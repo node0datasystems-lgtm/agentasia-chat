@@ -12,7 +12,7 @@ import {
   Flexbox,
   menuSharedStyles,
   Tag,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import { memo, useState } from 'react';
@@ -112,7 +112,7 @@ export const MultipleProvidersModelItem = memo<MultipleProvidersModelItemProps>(
                 </DropdownMenuGroupLabel>
                 {data.providers.map((p) => {
                   const key = menuKey(p.id, data.model.id);
-                  const isProviderActive = isActive ? activeKey === key : p.id === 'lobehub';
+                  const isProviderActive = isActive ? activeKey === key : p.id === 'agentasia';
                   const providerRestricted = isModelRestricted?.(data.model.id, p.id);
 
                   return (

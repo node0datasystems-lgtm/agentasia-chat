@@ -1,5 +1,5 @@
-import type { BuiltinToolContext, BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+import type { BuiltinToolContext, BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 import type { MessageExecutionRuntime } from '../ExecutionRuntime';
 import type {

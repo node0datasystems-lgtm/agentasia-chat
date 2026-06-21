@@ -1,6 +1,6 @@
 'use client';
 
-import { Collapse, Flexbox, Markdown, ScrollShadow, Tag } from '@lobehub/ui';
+import { Collapse, Flexbox, Markdown, ScrollShadow, Tag } from '@agentasia/ui';
 import qs from 'query-string';
 import { memo, type PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';

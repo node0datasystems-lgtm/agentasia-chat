@@ -1,4 +1,4 @@
-import { Avatar, Button, Flexbox } from '@lobehub/ui';
+import { Avatar, Button, Flexbox } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Input, Popover, stopPropagation } from '@lobehub/ui';
+import { Input, Popover, stopPropagation } from '@agentasia/ui';
 import { memo, useCallback, useEffect, useState } from 'react';
 
 import { useKnowledgeBaseStore } from '@/store/library';

@@ -1,8 +1,8 @@
 'use client';
 
-import { AGENT_SKILLS_IDENTIFIER_PREFIX } from '@lobechat/const';
-import { type BuiltinInspectorProps } from '@lobechat/types';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { AGENT_SKILLS_IDENTIFIER_PREFIX } from '@agentasia/const';
+import { type BuiltinInspectorProps } from '@agentasia/types';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

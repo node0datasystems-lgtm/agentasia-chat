@@ -1,5 +1,5 @@
-import { type ChatTopic, type ExportedTopic, type UIChatMessage } from '@lobechat/types';
-import { cleanObject } from '@lobechat/utils';
+import { type ChatTopic, type ExportedTopic, type UIChatMessage } from '@agentasia/types';
+import { cleanObject } from '@agentasia/utils';
 
 import { LOADING_FLAT } from '@/const/message';
 

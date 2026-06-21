@@ -1,5 +1,5 @@
-import type { ISnapshotStore, StepSnapshot } from '@lobechat/agent-tracing';
-import type { ChatMessageErrorAttribution, ChatMessageErrorSeverity } from '@lobechat/types';
+import type { ISnapshotStore, StepSnapshot } from '@agentasia/agent-tracing';
+import type { ChatMessageErrorAttribution, ChatMessageErrorSeverity } from '@agentasia/types';
 import debug from 'debug';
 
 import type { StepCompletionReason, StepPresentationData } from './types';

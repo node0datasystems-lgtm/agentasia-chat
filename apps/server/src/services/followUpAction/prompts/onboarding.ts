@@ -1,4 +1,4 @@
-import type { OnboardingPhase } from '@lobechat/types';
+import type { OnboardingPhase } from '@agentasia/types';
 
 const PHASE_TIPS: Record<OnboardingPhase, string> = {
   agent_identity:

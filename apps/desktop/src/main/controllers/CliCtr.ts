@@ -22,7 +22,7 @@ export default class CliCtr extends ControllerModule {
   async runCliCommand(args: string): Promise<{ exitCode: number; stderr: string; stdout: string }> {
     const execAsync = promisify(exec);
     const wrapperDir = getCliWrapperDir();
-    const cmd = process.platform === 'win32' ? 'lobehub.cmd' : 'lobehub';
+    const cmd = process.platform === 'win32' ? 'agentasia.cmd' : 'agentasia';
     const wrapperPath = path.join(wrapperDir, cmd);
 
     const env = { ...process.env };

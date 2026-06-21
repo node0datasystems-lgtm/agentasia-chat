@@ -13,7 +13,7 @@ const metaMap: Record<string, { avatar?: string; title?: string }> = {
   'search': { title: 'Web Search' },
 };
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <button {...props}>{children}</button>
   ),

@@ -6,7 +6,7 @@ import { timestamps } from './_helpers';
 /**
  * System-level (deployment-wide) bot provider credentials. Distinct from
  * `agent_bot_providers` (per-user-per-agent) — this table holds the App-level
- * credentials for the LobeHub-distributed messenger bots that any user can
+ * credentials for the AgentAsia-distributed messenger bots that any user can
  * link their account to. Singleton per `platform` (one Discord App per
  * deployment, one Telegram bot, etc.).
  *
@@ -54,7 +54,7 @@ export const systemBotProviders = pgTable(
     /**
      * Per-platform tunable settings (e.g. Slack `connectionMode`). Plaintext
      * JSONB — the shape is owned by `PlatformDefinition.schema` in
-     * develop-center / lobehub-dev.
+     * develop-center / agentasia-dev.
      */
     settings: jsonb('settings').$type<Record<string, unknown>>().default({}).notNull(),
 

@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { Plans } from '@lobechat/types';
+import { Plans } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {

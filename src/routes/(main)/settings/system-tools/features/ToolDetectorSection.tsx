@@ -1,8 +1,8 @@
 'use client';
 
-import { type ToolStatus } from '@lobechat/electron-client-ipc';
-import { type FormGroupItemType } from '@lobehub/ui';
-import { Button, CopyButton, Flexbox, Form, Icon, Tag, Text, Tooltip } from '@lobehub/ui';
+import { type ToolStatus } from '@agentasia/electron-client-ipc';
+import { type FormGroupItemType } from '@agentasia/ui';
+import { Button, CopyButton, Flexbox, Form, Icon, Tag, Text, Tooltip } from '@agentasia/ui';
 import { CheckCircle2, Loader2Icon, RefreshCw, XCircle } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -19,7 +19,7 @@ const TOOL_CATEGORIES = {
     descKey: 'settingSystemTools.category.runtimeEnvironment.desc',
     titleKey: 'settingSystemTools.category.runtimeEnvironment',
     tools: [
-      { descKey: 'settingSystemTools.tools.lobehub.desc', name: 'lobehub' },
+      { descKey: 'settingSystemTools.tools.agentasia.desc', name: 'agentasia' },
       { descKey: 'settingSystemTools.tools.node.desc', name: 'node' },
       { descKey: 'settingSystemTools.tools.python.desc', name: 'python' },
       { descKey: 'settingSystemTools.tools.npm.desc', name: 'npm' },

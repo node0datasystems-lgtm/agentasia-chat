@@ -1,7 +1,7 @@
 'use client';
 
-import { ReactBlockPlugin } from '@lobehub/editor';
-import { Editor } from '@lobehub/editor/react';
+import { ReactBlockPlugin } from '@agentasia/editor';
+import { Editor } from '@agentasia/editor/react';
 import { type CSSProperties, useMemo } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

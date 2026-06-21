@@ -1,7 +1,7 @@
 'use client';
 
-import { type GroupAvatarProps } from '@lobehub/ui';
-import { GroupAvatar, Skeleton } from '@lobehub/ui';
+import { type GroupAvatarProps } from '@agentasia/ui';
+import { GroupAvatar, Skeleton } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 

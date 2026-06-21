@@ -1,4 +1,4 @@
-import { Markdown } from '@lobehub/ui';
+import { Markdown } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

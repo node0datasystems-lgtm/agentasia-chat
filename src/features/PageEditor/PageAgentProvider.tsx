@@ -1,5 +1,5 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { isChatGroupSessionId } from '@lobechat/types';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { isChatGroupSessionId } from '@agentasia/types';
 import type { ReactNode } from 'react';
 import { memo, useEffect, useMemo, useRef } from 'react';
 

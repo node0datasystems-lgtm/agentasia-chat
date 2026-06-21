@@ -1,5 +1,5 @@
-import { CURRENT_ONBOARDING_VERSION, INBOX_SESSION_ID } from '@lobechat/const';
-import { MAX_ONBOARDING_STEPS } from '@lobechat/types';
+import { CURRENT_ONBOARDING_VERSION, INBOX_SESSION_ID } from '@agentasia/const';
+import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
 
 import { userService } from '@/services/user';
 import { getAgentStoreState } from '@/store/agent';

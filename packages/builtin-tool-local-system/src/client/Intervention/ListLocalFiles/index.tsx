@@ -1,6 +1,6 @@
-import type { ListLocalFileParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import type { ListLocalFileParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { LocalFolder } from '@/features/LocalFile';

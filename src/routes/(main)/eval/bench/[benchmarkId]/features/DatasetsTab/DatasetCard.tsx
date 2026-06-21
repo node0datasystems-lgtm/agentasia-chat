@@ -1,5 +1,5 @@
-import { Button, Flexbox, Tag } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Button, Flexbox, Tag } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Card, Dropdown } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ArrowRight, ChevronRight, Database, Ellipsis, Pencil, Play, Trash2 } from 'lucide-react';

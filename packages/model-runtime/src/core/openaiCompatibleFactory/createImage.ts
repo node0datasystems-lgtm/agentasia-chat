@@ -1,5 +1,5 @@
-import { imageUrlToBase64 } from '@lobechat/utils';
-import { cleanObject } from '@lobechat/utils/object';
+import { imageUrlToBase64 } from '@agentasia/utils';
+import { cleanObject } from '@agentasia/utils/object';
 import createDebug from 'debug';
 import type { RuntimeImageGenParamsValue } from 'model-bank';
 import type OpenAI from 'openai';

@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 
 import { isInstalledPluginAvailableInCurrentEnv } from '@/helpers/toolAvailability';
 import { type InstallPluginMeta, type LobeToolCustomPlugin } from '@/types/tool/plugin';

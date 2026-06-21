@@ -58,17 +58,17 @@ describe('useStarterModelDefaults', () => {
 
     const { result } = renderHook(() => useStarterModelDefaults());
 
-    expect(result.current.fallbackChatProvider).toBe('lobehub');
+    expect(result.current.fallbackChatProvider).toBe('agentasia');
     expect(result.current.defaultHomeNewModels).toEqual([
       {
         model: 'glm-5.2',
-        provider: 'lobehub',
+        provider: 'agentasia',
         title: 'GLM-5.2',
         type: 'chat',
       },
       {
         model: 'kimi-k2.7-code',
-        provider: 'lobehub',
+        provider: 'agentasia',
         title: 'Kimi K2.7 Code',
         type: 'chat',
       },

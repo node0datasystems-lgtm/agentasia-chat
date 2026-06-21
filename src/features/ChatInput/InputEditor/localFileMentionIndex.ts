@@ -1,4 +1,4 @@
-import type { ProjectFileIndexEntry } from '@lobechat/electron-client-ipc';
+import type { ProjectFileIndexEntry } from '@agentasia/electron-client-ipc';
 import debug from 'debug';
 import Fuse from 'fuse.js';
 

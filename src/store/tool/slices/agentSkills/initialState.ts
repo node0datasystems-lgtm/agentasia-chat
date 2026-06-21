@@ -1,4 +1,4 @@
-import type { SkillItem, SkillListItem } from '@lobechat/types';
+import type { SkillItem, SkillListItem } from '@agentasia/types';
 
 export interface AgentSkillsState {
   agentSkillDetailMap: Record<string, SkillItem>;

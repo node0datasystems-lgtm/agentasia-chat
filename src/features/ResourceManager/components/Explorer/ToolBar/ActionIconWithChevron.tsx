@@ -1,4 +1,4 @@
-import { Button, Flexbox, Icon } from '@lobehub/ui';
+import { Button, Flexbox, Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';
 import { ChevronDownIcon } from 'lucide-react';

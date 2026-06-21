@@ -6,7 +6,7 @@ import {
   loadFile,
   sniffBinaryFile,
   SPECIAL_PARSED_FILE_TYPES,
-} from '@lobechat/file-loaders';
+} from '@agentasia/file-loaders';
 
 import type { ReadFileParams, ReadFileResult } from '../types';
 import { resolveAgainstCwd } from './expandTilde';

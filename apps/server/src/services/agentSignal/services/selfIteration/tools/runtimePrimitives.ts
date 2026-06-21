@@ -1,4 +1,4 @@
-import type { AgentSignalRuntimeService } from '@lobechat/builtin-tool-agent-signal';
+import type { AgentSignalRuntimeService } from '@agentasia/builtin-tool-agent-signal';
 
 import type { LobeChatDatabase } from '@/database/type';
 import { runMemoryActionAgent } from '@/server/services/agentSignal/policies/analyzeIntent/actions/userMemory';

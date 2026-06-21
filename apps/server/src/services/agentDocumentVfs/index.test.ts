@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { AGENT_DOCUMENT_FILE_TYPE } from '@lobechat/const';
+import { AGENT_DOCUMENT_FILE_TYPE } from '@agentasia/const';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AgentAccess, AgentDocumentModel } from '@/database/models/agentDocuments';
@@ -704,7 +704,7 @@ describe('AgentDocumentVfsService', () => {
     const service = new AgentDocumentVfsService(db, userId);
 
     await expect(
-      service.delete('./lobe/skills/builtin/skills/lobehub/SKILL.md', { agentId: 'agent-1' }),
+      service.delete('./lobe/skills/builtin/skills/agentasia/SKILL.md', { agentId: 'agent-1' }),
     ).rejects.toMatchObject({ code: 'FORBIDDEN' });
   });
 

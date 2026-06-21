@@ -1,9 +1,9 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobechat/const';
-import { type ItemType } from '@lobehub/ui';
-import { Avatar, Button, Flexbox, Icon } from '@lobehub/ui';
-import { McpIcon, SkillsIcon } from '@lobehub/ui/icons';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
+import { type ItemType } from '@agentasia/ui';
+import { Avatar, Button, Flexbox, Icon } from '@agentasia/ui';
+import { McpIcon, SkillsIcon } from '@agentasia/ui/icons';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { PlusIcon } from 'lucide-react';
@@ -34,7 +34,7 @@ import {
   agentSkillsSelectors,
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { type LobeToolMetaWithAvailability } from '@/store/tool/slices/builtin/selectors';
@@ -99,8 +99,8 @@ const AgentTool = memo<AgentToolProps>(
     const allComposioServers = useToolStore(composioStoreSelectors.getServers, isEqual);
     const isComposioEnabledInEnv = useServerConfigStore(serverConfigSelectors.enableComposio);
 
-    // LobeHub Skill-related state
-    const allLobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers, isEqual);
+    // AgentAsia Skill-related state
+    const allLobehubSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers, isEqual);
     const isLobehubSkillEnabled = useServerConfigStore(serverConfigSelectors.enableLobehubSkill);
 
     // Agent Skills-related state
@@ -134,7 +134,7 @@ const AgentTool = memo<AgentToolProps>(
     // Load user's Composio integrations via SWR (from database)
     useFetchUserComposioConnections(isComposioEnabledInEnv);
 
-    // Load user's LobeHub Skill connections via SWR
+    // Load user's AgentAsia Skill connections via SWR
     useFetchLobehubSkillConnections(isLobehubSkillEnabled);
 
     // Toggle web browsing via searchMode - use byId action
@@ -279,8 +279,8 @@ const AgentTool = memo<AgentToolProps>(
       [isComposioEnabledInEnv, allComposioServers, effectiveAgentId, t],
     );
 
-    // LobeHub Skill Provider list items
-    const lobehubSkillItems = useMemo(
+    // AgentAsia Skill Provider list items
+    const agentasiaSkillItems = useMemo(
       () =>
         isLobehubSkillEnabled
           ? LOBEHUB_SKILL_PROVIDERS.map((provider) => ({
@@ -305,7 +305,7 @@ const AgentTool = memo<AgentToolProps>(
                   identifier={provider.id}
                   sourceLabel={provider.author}
                   title={provider.label}
-                  description={t(`tools.lobehubSkill.providers.${provider.id}.description` as any, {
+                  description={t(`tools.agentasiaSkill.providers.${provider.id}.description` as any, {
                     defaultValue: provider.description,
                   })}
                 />
@@ -334,7 +334,7 @@ const AgentTool = memo<AgentToolProps>(
         }
       };
 
-    // Builtin Agent Skills list items (grouped under LobeHub)
+    // Builtin Agent Skills list items (grouped under AgentAsia)
     const builtinAgentSkillItems = useMemo(
       () =>
         installedBuiltinSkills.map((skill) => ({
@@ -359,7 +359,7 @@ const AgentTool = memo<AgentToolProps>(
           popoverContent: (
             <ToolItemDetailPopover
               identifier={skill.identifier}
-              sourceLabel={t('skillStore.tabs.lobehub')}
+              sourceLabel={t('skillStore.tabs.agentasia')}
               description={t(`tools.builtins.${skill.identifier}.description` as any, {
                 defaultValue: skill.description,
               })}
@@ -450,7 +450,7 @@ const AgentTool = memo<AgentToolProps>(
       [userAgentSkills, isToolEnabled, handleToggleTool, t],
     );
 
-    // Merge Builtin Agent Skills, builtin tools, LobeHub Skill Providers, and Composio servers
+    // Merge Builtin Agent Skills, builtin tools, AgentAsia Skill Providers, and Composio servers
     const builtinItems = useMemo(
       () => [
         // 1. Builtin Agent Skills
@@ -480,7 +480,7 @@ const AgentTool = memo<AgentToolProps>(
           popoverContent: (
             <ToolItemDetailPopover
               identifier={item.identifier}
-              sourceLabel={t('skillStore.tabs.lobehub')}
+              sourceLabel={t('skillStore.tabs.agentasia')}
               description={t(`tools.builtins.${item.identifier}.description` as any, {
                 defaultValue: item.meta?.description || '',
               })}
@@ -497,8 +497,8 @@ const AgentTool = memo<AgentToolProps>(
             />
           ),
         })),
-        // 3. LobeHub Skill Providers
-        ...lobehubSkillItems,
+        // 3. AgentAsia Skill Providers
+        ...agentasiaSkillItems,
         // 4. Composio servers
         ...composioServerItems,
       ],
@@ -506,7 +506,7 @@ const AgentTool = memo<AgentToolProps>(
         builtinAgentSkillItems,
         filteredBuiltinList,
         composioServerItems,
-        lobehubSkillItems,
+        agentasiaSkillItems,
         isToolEnabled,
         handleToggleTool,
         t,
@@ -593,13 +593,13 @@ const AgentTool = memo<AgentToolProps>(
     // All tab items (marketplace tab)
     const allTabItems: ItemType[] = useMemo(
       () => [
-        // LobeHub group
+        // AgentAsia group
         ...(builtinItems.length > 0
           ? [
               {
                 children: builtinItems,
-                key: 'lobehub',
-                label: t('skillStore.tabs.lobehub'),
+                key: 'agentasia',
+                label: t('skillStore.tabs.agentasia'),
                 type: 'group' as const,
               },
             ]
@@ -661,7 +661,7 @@ const AgentTool = memo<AgentToolProps>(
         for (const type of COMPOSIO_APP_TYPES) all.add(type.identifier);
       }
 
-      // 4. LobeHub Skill providers (if enabled)
+      // 4. AgentAsia Skill providers (if enabled)
       if (isLobehubSkillEnabled) {
         for (const provider of LOBEHUB_SKILL_PROVIDERS) all.add(provider.id);
       }

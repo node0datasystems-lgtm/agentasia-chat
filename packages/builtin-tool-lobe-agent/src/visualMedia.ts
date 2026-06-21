@@ -1,5 +1,5 @@
-import { createVisualFileRef, createVisualLocalRef } from '@lobechat/const/visualRef';
-import type { ChatImageItem, ChatVideoItem } from '@lobechat/types';
+import { createVisualFileRef, createVisualLocalRef } from '@agentasia/const/visualRef';
+import type { ChatImageItem, ChatVideoItem } from '@agentasia/types';
 
 export interface VisualFileItem {
   description: string;

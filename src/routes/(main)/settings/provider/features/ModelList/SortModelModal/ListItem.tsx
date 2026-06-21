@@ -1,5 +1,5 @@
-import { ModelIcon } from '@lobehub/icons';
-import { Flexbox, SortableList } from '@lobehub/ui';
+import { ModelIcon } from '@agentasia/icons';
+import { Flexbox, SortableList } from '@agentasia/ui';
 import { type AiProviderModelListItem } from 'model-bank';
 import { memo } from 'react';
 

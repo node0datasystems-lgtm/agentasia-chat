@@ -1,4 +1,4 @@
-import { Plans } from '@lobechat/types';
+import { Plans } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { getBudgetContextFromErrorBody, getNextUpgradePlan, isKnownPlan } from './budget';

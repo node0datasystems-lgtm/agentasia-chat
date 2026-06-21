@@ -1,7 +1,7 @@
 'use client';
 
-import { FormGroup, Grid, Icon, Segmented } from '@lobehub/ui';
-import { ProviderIcon } from '@lobehub/ui/icons';
+import { FormGroup, Grid, Icon, Segmented } from '@agentasia/ui';
+import { ProviderIcon } from '@agentasia/ui/icons';
 import { type DatePickerProps } from 'antd';
 import { DatePicker, Divider } from 'antd';
 import dayjs from 'dayjs';

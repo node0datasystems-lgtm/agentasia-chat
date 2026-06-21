@@ -115,15 +115,15 @@ export const getLatestDesktopReleaseFromGithub = async (options?: {
   repo?: string;
   token?: string;
 }): Promise<GithubRelease> => {
-  const owner = options?.owner || 'lobehub';
-  const repo = options?.repo || 'lobe-chat';
+  const owner = options?.owner || 'agentasia';
+  const repo = options?.repo || 'agentasia-chat';
   const token = options?.token || process.env.GITHUB_TOKEN;
 
   const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`, {
     headers: {
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
       'Accept': 'application/vnd.github+json',
-      'User-Agent': 'lobehub-server',
+      'User-Agent': 'agentasia-server',
     },
     next: { revalidate: 300, tags: [FetchCacheTag.DesktopRelease] },
   });

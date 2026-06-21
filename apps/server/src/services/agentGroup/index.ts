@@ -1,7 +1,7 @@
-import { DEFAULT_AGENT_CONFIG, DEFAULT_CHAT_GROUP_CHAT_CONFIG } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
-import { type LobeAgentConfig } from '@lobechat/types';
-import { cleanObject, merge } from '@lobechat/utils';
+import { DEFAULT_AGENT_CONFIG, DEFAULT_CHAT_GROUP_CHAT_CONFIG } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { type LobeAgentConfig } from '@agentasia/types';
+import { cleanObject, merge } from '@agentasia/utils';
 import { type PartialDeep } from 'type-fest';
 
 import { AgentModel } from '@/database/models/agent';

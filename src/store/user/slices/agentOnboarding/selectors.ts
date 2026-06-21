@@ -1,4 +1,4 @@
-import { CURRENT_ONBOARDING_VERSION } from '@lobechat/const';
+import { CURRENT_ONBOARDING_VERSION } from '@agentasia/const';
 
 import type { UserStore } from '../../store';
 

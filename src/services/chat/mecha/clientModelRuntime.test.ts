@@ -1,4 +1,4 @@
-import { type LobeOpenAICompatibleRuntime } from '@lobechat/model-runtime';
+import { type LobeOpenAICompatibleRuntime } from '@agentasia/model-runtime';
 import {
   LobeAnthropicAI,
   LobeAzureOpenAI,
@@ -17,7 +17,7 @@ import {
   LobeZeroOneAI,
   LobeZhipuAI,
   ModelRuntime,
-} from '@lobechat/model-runtime';
+} from '@agentasia/model-runtime';
 import { ModelProvider } from 'model-bank';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

@@ -1,10 +1,10 @@
 ---
 name: project-overview
-description: 'LobeHub open-source monorepo architecture map. Use when locating code layers, understanding apps/packages/src layout, business stubs, project structure, or onboarding to the repository.'
+description: 'AgentAsia open-source monorepo architecture map. Use when locating code layers, understanding apps/packages/src layout, business stubs, project structure, or onboarding to the repository.'
 user-invocable: false
 ---
 
-# LobeHub Project Overview
+# AgentAsia Project Overview
 
 > The directory listings below are a **curated map of key locations**, not an
 > exhaustive tree. `packages/`, `src/store/`, route groups etc. grow over time —
@@ -12,8 +12,8 @@ user-invocable: false
 
 ## Project Description
 
-Open-source, modern-design AI Agent Workspace: **LobeHub** (previously LobeChat).
-This repo is the **open-source root** (`github.com/lobehub/lobehub`, package `@lobehub/lobehub`).
+Open-source, modern-design AI Agent Workspace: **AgentAsia** (previously LobeChat).
+This repo is the **open-source root** (`github.com/node0datasystems-lgtm/agentasia-chat`, package `@agentasia/agentasia-chat`).
 
 **Supported platforms:**
 
@@ -30,7 +30,7 @@ This repo is the **open-source root** (`github.com/lobehub/lobehub`, package `@l
 | Framework     | Next.js 16 + React 19                      |
 | Routing       | SPA inside Next.js with `react-router-dom` |
 | Language      | TypeScript                                 |
-| UI Components | `@lobehub/ui`, antd                        |
+| UI Components | `@agentasia/ui`, antd                        |
 | CSS-in-JS     | antd-style                                 |
 | Icons         | lucide-react, `@ant-design/icons`          |
 | i18n          | react-i18next                              |
@@ -54,7 +54,7 @@ git submodules.
 ```
 (repo root)
 ├── apps/
-│   ├── cli/                  # LobeHub CLI
+│   ├── cli/                  # AgentAsia CLI
 │   ├── desktop/              # Electron desktop app
 │   ├── device-gateway/       # Device gateway service
 │   └── server/               # Next.js-backed server: featureFlags, globalConfig, modules, routers, services, utils, workflows (`@/server/*` alias)
@@ -122,7 +122,7 @@ React UI → Store Actions → Client Service → TRPC Lambda → Server Service
 ## Note: Relationship to the Cloud Repo
 
 This open-source repo is consumed by a **separate, private cloud (SaaS) repo**
-as a git submodule mounted at `lobehub/`. The cloud repo provides:
+as a git submodule mounted at `agentasia/`. The cloud repo provides:
 
 - **`src/business/{client,server}`** and **`packages/business/*`** implementations
   that override the stubs shipped here.
@@ -130,7 +130,7 @@ as a git submodule mounted at `lobehub/`. The cloud repo provides:
   `subscription/`), cloud-only TRPC routers (billing, budget, risk control, …),
   and Vercel cron routes under `src/app/(backend)/cron/`.
 - File-resolution order in cloud: `@/store/x` → cloud `src/store/x` first, then
-  `lobehub/packages/store/src/x`, then `lobehub/src/store/x`. **Cloud override wins.**
+  `agentasia/packages/store/src/x`, then `agentasia/src/store/x`. **Cloud override wins.**
 
 When working in this repo alone, ignore the cloud layer — the stubs in
 `src/business/` and `packages/business/` are the source of truth here.

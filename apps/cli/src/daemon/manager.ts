@@ -6,7 +6,7 @@ import path from 'node:path';
 const MAX_LOG_SIZE = 5 * 1024 * 1024; // 5MB
 
 function getLobehubDir() {
-  return path.join(os.homedir(), '.lobehub');
+  return path.join(os.homedir(), '.agentasia');
 }
 
 function getPidPath() {
@@ -71,7 +71,7 @@ export function isProcessAlive(pid: number): boolean {
 }
 
 /**
- * Verify a live PID actually belongs to a LobeHub connect daemon.
+ * Verify a live PID actually belongs to a AgentAsia connect daemon.
  *
  * A bare `isProcessAlive` check is not enough: if a daemon dies without cleaning
  * up `daemon.pid` (crash, `kill -9`, reboot), the OS can later reuse that PID

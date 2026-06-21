@@ -1,4 +1,4 @@
-import { SKILL_TAG } from '@lobechat/const';
+import { SKILL_TAG } from '@agentasia/const';
 
 import { createRemarkSelfClosingTagPlugin } from '../remarkPlugins/createRemarkSelfClosingTagPlugin';
 import { type MarkdownElement } from '../type';

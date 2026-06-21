@@ -1,4 +1,4 @@
-import { MarketplaceCategory } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+import { MarketplaceCategory } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import { describe, expect, it } from 'vitest';
 
 import { interestsToCategoryHints } from './interestCategoryMap';

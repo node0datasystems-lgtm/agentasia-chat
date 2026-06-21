@@ -1,4 +1,4 @@
-import { SANDBOX_UPLOADED_FILES_DIR } from '@lobechat/builtin-tool-cloud-sandbox';
+import { SANDBOX_UPLOADED_FILES_DIR } from '@agentasia/builtin-tool-cloud-sandbox';
 import { describe, expect, it } from 'vitest';
 
 import { buildSandboxFilesInitCommand, SANDBOX_FILES_INIT_MARKER } from '../bootstrap';

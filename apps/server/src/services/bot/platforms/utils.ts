@@ -1,4 +1,4 @@
-import { merge } from '@lobechat/utils';
+import { merge } from '@agentasia/utils';
 
 import type {
   BotProviderConfig,

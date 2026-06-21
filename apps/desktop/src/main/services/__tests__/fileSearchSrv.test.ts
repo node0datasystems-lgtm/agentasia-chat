@@ -1,4 +1,4 @@
-import type { FileResult, SearchOptions } from '@lobechat/local-file-shell';
+import type { FileResult, SearchOptions } from '@agentasia/local-file-shell';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { App } from '@/core/App';

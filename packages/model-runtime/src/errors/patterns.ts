@@ -1,5 +1,5 @@
-import type { ILobeAgentRuntimeErrorType } from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
+import type { ILobeAgentRuntimeErrorType } from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 
 /**
  * One entry in the pattern registry.
@@ -1017,7 +1017,7 @@ export const ERROR_PATTERNS: ErrorPattern[] = [
   {
     code: AgentRuntimeErrorType.InvalidRequestFormat,
     match: sub('function_declarations'),
-    note: 'custom gemini proxies mangle tool schema; lobehub-native schema bug fixed in #14740',
+    note: 'custom gemini proxies mangle tool schema; agentasia-native schema bug fixed in #14740',
   },
 
   // ─────────────────────────────────────────────────────────────────────────

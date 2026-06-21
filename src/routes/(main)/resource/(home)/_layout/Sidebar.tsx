@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, Flexbox } from '@lobehub/ui';
+import { Accordion, Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { NavPanelPortal } from '@/features/NavPanel';

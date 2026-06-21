@@ -1,4 +1,4 @@
-import type { ToolExecuteData } from '@lobechat/agent-gateway-client';
+import type { ToolExecuteData } from '@agentasia/agent-gateway-client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ClientToolExecutionActionImpl } from '../clientToolExecution';

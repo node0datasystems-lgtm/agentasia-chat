@@ -1,5 +1,5 @@
-import { DEFAULT_AGENT_CONFIG } from '@lobechat/const';
-import { Flexbox, Icon, Select, SliderWithInput, TextArea } from '@lobehub/ui';
+import { DEFAULT_AGENT_CONFIG } from '@agentasia/const';
+import { Flexbox, Icon, Select, SliderWithInput, TextArea } from '@agentasia/ui';
 import { Form as AntdForm, Switch } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { debounce } from 'es-toolkit/compat';
@@ -403,8 +403,8 @@ const PARAM_CONFIG = {
 
 const PARAM_ORDER: ParamKey[] = ['temperature', 'top_p', 'frequency_penalty', 'presence_penalty'];
 
-const ADVANCED_OPEN_STORAGE_KEY = 'lobehub-chat-input-params-advanced-open';
-const MODEL_CONFIG_OPEN_STORAGE_KEY = 'lobehub-chat-input-params-model-config-open';
+const ADVANCED_OPEN_STORAGE_KEY = 'agentasia-chat-input-params-advanced-open';
+const MODEL_CONFIG_OPEN_STORAGE_KEY = 'agentasia-chat-input-params-model-config-open';
 
 const getStoredOpen = (storageKey: string) => {
   if (typeof window === 'undefined') return false;

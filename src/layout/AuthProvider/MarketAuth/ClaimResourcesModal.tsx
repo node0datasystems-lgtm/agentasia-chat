@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Modal, Text } from '@lobehub/ui';
+import { Flexbox, Modal, Text } from '@agentasia/ui';
 import { App, Checkbox, List } from 'antd';
 import { cssVar } from 'antd-style';
 import { Package, Wrench } from 'lucide-react';

@@ -1,4 +1,4 @@
-import { OFFICIAL_URL } from '@lobechat/const';
+import { OFFICIAL_URL } from '@agentasia/const';
 
 import { type ElectronState } from '../initialState';
 

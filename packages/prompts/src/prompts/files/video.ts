@@ -1,5 +1,5 @@
-import { createVisualFileRef } from '@lobechat/const/visualRef';
-import type { ChatVideoItem } from '@lobechat/types';
+import { createVisualFileRef } from '@agentasia/const/visualRef';
+import type { ChatVideoItem } from '@agentasia/types';
 
 const videoPrompt = (
   item: ChatVideoItem,

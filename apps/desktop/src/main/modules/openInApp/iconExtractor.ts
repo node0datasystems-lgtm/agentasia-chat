@@ -3,7 +3,7 @@ import { access, mkdtemp, readFile, unlink } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 
-import type { OpenInAppId } from '@lobechat/electron-client-ipc';
+import type { OpenInAppId } from '@agentasia/electron-client-ipc';
 
 import { createLogger } from '@/utils/logger';
 
@@ -48,7 +48,7 @@ const ensureTmpDir = async (): Promise<string | undefined> => {
   if (tmpDirPromise) return tmpDirPromise;
   tmpDirPromise = (async () => {
     try {
-      return await mkdtemp(path.join(tmpdir(), 'lobehub-openinapp-'));
+      return await mkdtemp(path.join(tmpdir(), 'agentasia-openinapp-'));
     } catch (error) {
       logger.debug(`failed to create tmp dir: ${(error as Error).message}`);
       return undefined;

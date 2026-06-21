@@ -3,11 +3,11 @@ import {
   LOBEHUB_SKILL_PROVIDERS,
   RECOMMENDED_SKILLS,
   RecommendedSkillType,
-} from '@lobechat/const';
-import type { ItemType } from '@lobehub/ui';
-import { Avatar, Icon, Popover, SearchBar, stopPropagation, Tag, Tooltip } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
-import { McpIcon, SkillsIcon } from '@lobehub/ui/icons';
+} from '@agentasia/const';
+import type { ItemType } from '@agentasia/ui';
+import { Avatar, Icon, Popover, SearchBar, stopPropagation, Tag, Tooltip } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
+import { McpIcon, SkillsIcon } from '@agentasia/ui/icons';
 import { Switch } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
@@ -43,12 +43,12 @@ import {
   agentSkillsSelectors,
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore';
 import { connectorSelectors } from '@/store/tool/slices/connector';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 import { useAgentId } from '../../hooks/useAgentId';
 import { useUpdateAgentConfig } from '../../hooks/useUpdateAgentConfig';
@@ -62,10 +62,10 @@ import ToolItem from './ToolItem';
 import ToolItemDetailPopover from './ToolItemDetailPopover';
 
 const SKILL_ICON_SIZE = 18;
-const CLOSE_TOOL_DETAIL_POPOVER_EVENT = 'lobe-chat-tool-detail-popover-close';
+const CLOSE_TOOL_DETAIL_POPOVER_EVENT = 'agentasia-chat-tool-detail-popover-close';
 
 const officialTag = (
-  <Tooltip placement={'top'} title={'LobeHub'}>
+  <Tooltip placement={'top'} title={'AgentAsia'}>
     <Tag color={'success'} icon={<Icon icon={BadgeCheck} />} size={'small'} />
   </Tooltip>
 );
@@ -717,8 +717,8 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
   const allComposioServers = useToolStore(composioStoreSelectors.getServers, isEqual);
   const isComposioEnabledInEnv = useServerConfigStore(serverConfigSelectors.enableComposio);
 
-  // LobeHub Skill related state
-  const allLobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers, isEqual);
+  // AgentAsia Skill related state
+  const allLobehubSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers, isEqual);
   const isLobehubSkillEnabled = useServerConfigStore(serverConfigSelectors.enableLobehubSkill);
 
   // Agent Skills related state
@@ -754,7 +754,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
   // Load user's Composio integrations via SWR (from database)
   useFetchUserComposioConnections(isComposioEnabledInEnv);
 
-  // Load user's LobeHub Skill connections via SWR
+  // Load user's AgentAsia Skill connections via SWR
   useFetchLobehubSkillConnections(isLobehubSkillEnabled);
 
   // Get connected server by identifier
@@ -874,7 +874,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
                   displayName: type.label,
                   onDelete: () => removeComposioServer(server.identifier),
                 },
-                extraTag: type.author === 'LobeHub' ? officialTag : undefined,
+                extraTag: type.author === 'AgentAsia' ? officialTag : undefined,
                 icon,
                 id: server.identifier,
                 popoverContent,
@@ -954,8 +954,8 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     ],
   );
 
-  // LobeHub Skill Provider list items - only show installed or recommended
-  const lobehubSkillItems = useMemo(
+  // AgentAsia Skill Provider list items - only show installed or recommended
+  const agentasiaSkillItems = useMemo(
     () =>
       isLobehubSkillEnabled
         ? LOBEHUB_SKILL_PROVIDERS.filter(
@@ -976,7 +976,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
                 identifier={provider.id}
                 sourceLabel={provider.author}
                 title={provider.label}
-                description={t(`tools.lobehubSkill.providers.${provider.id}.description` as any, {
+                description={t(`tools.agentasiaSkill.providers.${provider.id}.description` as any, {
                   defaultValue: provider.description,
                 })}
               />
@@ -985,7 +985,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
             if (server?.status === LobehubSkillStatus.CONNECTED || server?.isConnected) {
               return createManagedSkillItem({
                 badge: <Icon icon={McpIcon} size={12} />,
-                extraTag: provider.author === 'LobeHub' ? officialTag : undefined,
+                extraTag: provider.author === 'AgentAsia' ? officialTag : undefined,
                 icon,
                 id: server.identifier,
                 popoverContent,
@@ -1020,7 +1020,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     ],
   );
 
-  // Builtin tool list items (excluding Composio and LobeHub Skill)
+  // Builtin tool list items (excluding Composio and AgentAsia Skill)
   const builtinItems = useMemo(
     () =>
       filteredBuiltinList.map((item) => {
@@ -1035,7 +1035,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         const popoverContent = (
           <ToolItemDetailPopover
             identifier={item.identifier}
-            sourceLabel={t('skillStore.tabs.lobehub')}
+            sourceLabel={t('skillStore.tabs.agentasia')}
             title={title}
             description={t(`tools.builtins.${item.identifier}.description` as any, {
               defaultValue: item.meta?.description || '',
@@ -1089,7 +1089,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         const popoverContent = (
           <ToolItemDetailPopover
             identifier={item.identifier}
-            sourceLabel={t('skillStore.tabs.lobehub')}
+            sourceLabel={t('skillStore.tabs.agentasia')}
             title={title}
             description={t(`tools.builtins.${item.identifier}.description` as any, {
               defaultValue: item.meta?.description || '',
@@ -1138,7 +1138,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     [fixedDisplayList, t],
   );
 
-  // Builtin Agent Skills list items (grouped under LobeHub)
+  // Builtin Agent Skills list items (grouped under AgentAsia)
   const builtinAgentSkillItems = useMemo(
     () =>
       installedBuiltinSkills.map((skill) => {
@@ -1153,7 +1153,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         const popoverContent = (
           <ToolItemDetailPopover
             identifier={skill.identifier}
-            sourceLabel={t('skillStore.tabs.lobehub')}
+            sourceLabel={t('skillStore.tabs.agentasia')}
             title={title}
             description={t(`tools.builtins.${skill.identifier}.description` as any, {
               defaultValue: skill.description,
@@ -1279,15 +1279,15 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     [customConnectors, t, createManagedSkillItem],
   );
 
-  // Skills list items (including LobeHub Skill and Composio)
-  // Connected items listed first, deduplicated by key (LobeHub takes priority)
+  // Skills list items (including AgentAsia Skill and Composio)
+  // Connected items listed first, deduplicated by key (AgentAsia takes priority)
   const skillItems = useMemo(() => {
-    // Deduplicate by key - LobeHub items take priority over Composio
+    // Deduplicate by key - AgentAsia items take priority over Composio
     const seenKeys = new Set<string>();
-    const allItems: typeof lobehubSkillItems = [];
+    const allItems: typeof agentasiaSkillItems = [];
 
-    // Add LobeHub items first (they take priority)
-    for (const item of lobehubSkillItems) {
+    // Add AgentAsia items first (they take priority)
+    for (const item of agentasiaSkillItems) {
       if (!seenKeys.has(item.key as string)) {
         seenKeys.add(item.key as string);
         allItems.push(item);
@@ -1312,13 +1312,13 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
       if (!isConnectedA && isConnectedB) return 1;
       return 0;
     });
-  }, [lobehubSkillItems, composioServerItems, installedLobehubIds, installedComposioIds]);
+  }, [agentasiaSkillItems, composioServerItems, installedLobehubIds, installedComposioIds]);
 
   // Distinguish community plugins and custom plugins.
   // Whitelist `type === 'plugin'` (matching /settings/skill) so connected
-  // integrations (Composio/LobeHub Skill gateway plugins with other sources like
+  // integrations (Composio/AgentAsia Skill gateway plugins with other sources like
   // 'self'/'builtin') don't leak in here and duplicate the brand-icon items
-  // already rendered under the LobeHub group.
+  // already rendered under the AgentAsia group.
   const communityPlugins = list.filter((item) => item.type === 'plugin');
   const customPlugins = list.filter((item) => item.type === 'customPlugin');
 
@@ -1366,7 +1366,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         <Tag color={'warning'} icon={<Icon icon={Package} />} size={'small'}>
           {t('store.customPlugin', { ns: 'plugin' })}
         </Tag>
-      ) : item.author === 'LobeHub' ? (
+      ) : item.author === 'AgentAsia' ? (
         officialTag
       ) : undefined,
       icon,
@@ -1377,13 +1377,13 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     });
   };
 
-  // Build LobeHub group children (including Builtin Agent Skills, builtin tools, and LobeHub Skill/Composio)
-  const lobehubGroupChildren: ItemType[] = [
+  // Build AgentAsia group children (including Builtin Agent Skills, builtin tools, and AgentAsia Skill/Composio)
+  const agentasiaGroupChildren: ItemType[] = [
     // 1. Builtin Agent Skills
     ...builtinAgentSkillItems,
     // 2. Builtin tools
     ...builtinItems,
-    // 3. LobeHub Skill and Composio (as builtin skills)
+    // 3. AgentAsia Skill and Composio (as builtin skills)
     ...skillItems,
   ];
 
@@ -1402,13 +1402,13 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
 
   const normalizedSearchKeyword = searchKeyword.trim().toLowerCase();
   // Deduplicate by key: the same app can be sourced from more than one list
-  // (e.g. a Composio/LobeHub integration item plus an installed plugin sharing
+  // (e.g. a Composio/AgentAsia integration item plus an installed plugin sharing
   // the same identifier), which would otherwise render the row twice. Keep the
-  // first occurrence so the richer integration item (LobeHub group, listed
+  // first occurrence so the richer integration item (AgentAsia group, listed
   // first) wins over a generic plugin duplicate.
   const seenSkillKeys = new Set<string>();
   const allSkillItems = [
-    ...lobehubGroupChildren,
+    ...agentasiaGroupChildren,
     ...communityGroupChildren,
     ...customGroupChildren,
   ].filter((item): item is SkillMenuItem => {
@@ -1619,7 +1619,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         popoverContent: (
           <ToolItemDetailPopover
             identifier={item.identifier}
-            sourceLabel={t('skillStore.tabs.lobehub')}
+            sourceLabel={t('skillStore.tabs.agentasia')}
             description={t(`tools.builtins.${item.identifier}.description` as any, {
               defaultValue: item.meta?.description || '',
             })}
@@ -1647,12 +1647,12 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
       checked.includes(item.key as string),
     );
 
-    // Connected LobeHub Skill Providers
-    const connectedLobehubSkillItems = lobehubSkillItems.filter((item) =>
+    // Connected AgentAsia Skill Providers
+    const connectedLobehubSkillItems = agentasiaSkillItems.filter((item) =>
       checked.includes(item.key as string),
     );
 
-    // Merge enabled LobeHub Skill and Composio (as builtin skills)
+    // Merge enabled AgentAsia Skill and Composio (as builtin skills)
     const enabledSkillItems = [...connectedLobehubSkillItems, ...connectedComposioItems];
 
     // Enabled Builtin Agent Skills
@@ -1680,7 +1680,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         popoverContent: (
           <ToolItemDetailPopover
             identifier={skill.identifier}
-            sourceLabel={t('skillStore.tabs.lobehub')}
+            sourceLabel={t('skillStore.tabs.agentasia')}
             description={t(`tools.builtins.${skill.identifier}.description` as any, {
               defaultValue: skill.description,
             })}
@@ -1703,7 +1703,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
         ),
       }));
 
-    // Build builtin tools group children (including Builtin Agent Skills, builtin tools, and LobeHub Skill/Composio)
+    // Build builtin tools group children (including Builtin Agent Skills, builtin tools, and AgentAsia Skill/Composio)
     const allBuiltinItems: ItemType[] = [
       // 1. Builtin Agent Skills
       ...enabledBuiltinAgentSkillItems,
@@ -1713,15 +1713,15 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
       ...(enabledBuiltinItems.length > 0 && enabledSkillItems.length > 0
         ? [{ key: 'installed-divider-builtin-skill', type: 'divider' as const }]
         : []),
-      // 4. LobeHub Skill and Composio
+      // 4. AgentAsia Skill and Composio
       ...enabledSkillItems,
     ];
 
     if (allBuiltinItems.length > 0) {
       installedItems.push({
         children: allBuiltinItems,
-        key: 'installed-lobehub',
-        label: t('skillStore.tabs.lobehub'),
+        key: 'installed-agentasia',
+        label: t('skillStore.tabs.agentasia'),
         type: 'group',
       });
     }
@@ -1910,7 +1910,7 @@ export const useControls = ({ closeDropdown }: { closeDropdown?: () => void } = 
     communityPlugins,
     customPlugins,
     composioServerItems,
-    lobehubSkillItems,
+    agentasiaSkillItems,
     checked,
     togglePlugin,
     canEdit,

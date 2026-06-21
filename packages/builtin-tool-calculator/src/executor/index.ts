@@ -1,4 +1,4 @@
-import { BaseExecutor, type BuiltinToolResult, type IBuiltinToolExecutor } from '@lobechat/types';
+import { BaseExecutor, type BuiltinToolResult, type IBuiltinToolExecutor } from '@agentasia/types';
 import { defBase } from '@thi.ng/base-n/base';
 import { all, create } from 'mathjs';
 // @ts-ignore - nerdamer doesn't have TypeScript definitions

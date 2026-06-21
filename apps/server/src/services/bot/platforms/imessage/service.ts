@@ -34,14 +34,14 @@ import type {
   SendMessageState,
   UnpinMessageParams,
   UnpinMessageState,
-} from '@lobechat/builtin-tool-message/executionRuntime';
+} from '@agentasia/builtin-tool-message/executionRuntime';
 import type {
   BlueBubblesChat,
   BlueBubblesMessage,
   BlueBubblesOutboundAttachment,
   BlueBubblesQueryResult,
-} from '@lobechat/chat-adapter-imessage';
-import { resolveAttachmentName } from '@lobechat/chat-adapter-imessage';
+} from '@agentasia/chat-adapter-imessage';
+import { resolveAttachmentName } from '@agentasia/chat-adapter-imessage';
 
 import type { MessageRuntimeService } from '@/server/services/toolExecution/serverRuntimes/message/adapters/types';
 import { PlatformUnsupportedError } from '@/server/services/toolExecution/serverRuntimes/message/PlatformUnsupportedError';

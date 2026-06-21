@@ -2,7 +2,7 @@ import {
   DOCUMENT_TEMPLATES,
   DocumentLoadFormat,
   DocumentLoadRule,
-} from '@lobechat/agent-templates';
+} from '@agentasia/agent-templates';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

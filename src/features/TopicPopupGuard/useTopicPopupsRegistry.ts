@@ -1,4 +1,4 @@
-import { type TopicPopupInfo } from '@lobechat/electron-client-ipc';
+import { type TopicPopupInfo } from '@agentasia/electron-client-ipc';
 import { useCallback, useEffect, useMemo } from 'react';
 import { create } from 'zustand';
 

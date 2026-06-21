@@ -1,31 +1,31 @@
-import type { AgentRuntimeContext, AgentState } from '@lobechat/agent-runtime';
-import { BUILTIN_AGENT_SLUGS, getAgentRuntimeConfig } from '@lobechat/builtin-agents';
-import { builtinSkills } from '@lobechat/builtin-skills';
-import { CloudSandboxManifest } from '@lobechat/builtin-tool-cloud-sandbox';
-import { LobeAgentIdentifier, LobeAgentManifest } from '@lobechat/builtin-tool-lobe-agent';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { MessageToolIdentifier } from '@lobechat/builtin-tool-message';
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import type { DeviceAttachment } from '@lobechat/builtin-tool-remote-device';
-import { generateSystemPrompt, RemoteDeviceManifest } from '@lobechat/builtin-tool-remote-device';
+import type { AgentRuntimeContext, AgentState } from '@agentasia/agent-runtime';
+import { BUILTIN_AGENT_SLUGS, getAgentRuntimeConfig } from '@agentasia/builtin-agents';
+import { builtinSkills } from '@agentasia/builtin-skills';
+import { CloudSandboxManifest } from '@agentasia/builtin-tool-cloud-sandbox';
+import { LobeAgentIdentifier, LobeAgentManifest } from '@agentasia/builtin-tool-lobe-agent';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { MessageToolIdentifier } from '@agentasia/builtin-tool-message';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import type { DeviceAttachment } from '@agentasia/builtin-tool-remote-device';
+import { generateSystemPrompt, RemoteDeviceManifest } from '@agentasia/builtin-tool-remote-device';
 import {
   injectSelfFeedbackIntentTool,
   shouldExposeSelfFeedbackIntentTool,
-} from '@lobechat/builtin-tool-self-iteration';
-import { TaskIdentifier } from '@lobechat/builtin-tool-task';
-import { builtinTools, manualModeExcludeToolIds } from '@lobechat/builtin-tools';
-import { LOADING_FLAT } from '@lobechat/const';
+} from '@agentasia/builtin-tool-self-iteration';
+import { TaskIdentifier } from '@agentasia/builtin-tool-task';
+import { builtinTools, manualModeExcludeToolIds } from '@agentasia/builtin-tools';
+import { LOADING_FLAT } from '@agentasia/const';
 import type {
   AgentManagementContext,
   BotPlatformContext,
   LobeToolManifest,
   ToolExecutor,
   ToolSource,
-} from '@lobechat/context-engine';
-import { SkillEngine } from '@lobechat/context-engine';
-import type { LobeChatDatabase } from '@lobechat/database';
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
-import { buildTaskManagerDefaultsPrompt } from '@lobechat/prompts';
+} from '@agentasia/context-engine';
+import { SkillEngine } from '@agentasia/context-engine';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
+import { buildTaskManagerDefaultsPrompt } from '@agentasia/prompts';
 import type {
   ChatAudioItem,
   ChatFileItem,
@@ -42,9 +42,9 @@ import type {
   MessagePluginItem,
   UserInterventionConfig,
   WorkspaceInitResult,
-} from '@lobechat/types';
-import { RequestTrigger, ThreadStatus, ThreadType } from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/types';
+import { RequestTrigger, ThreadStatus, ThreadType } from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 import debug from 'debug';
 
 import { AgentModel } from '@/database/models/agent';
@@ -1262,7 +1262,7 @@ export class AiAgentService {
 
       // Resolve GitHub OAuth token for the sandbox. Always attempt so CC can use
       // git / gh CLI even when no repos are pre-selected. Falls back to the
-      // standard 'github' key (LobeHub OAuth connector default); agent config can
+      // standard 'github' key (AgentAsia OAuth connector default); agent config can
       // override via GITHUB_CRED_KEY.
       let githubToken: string | undefined;
       const githubCredKey =
@@ -1709,7 +1709,7 @@ export class AiAgentService {
     // systemRole injection below.
 
     // These are needed outside the tools block (for agent management context, skill engine, etc.)
-    let lobehubSkillManifests: LobeToolManifest[] = [];
+    let agentasiaSkillManifests: LobeToolManifest[] = [];
     let composioManifests: LobeToolManifest[] = [];
     let connectorManifests: ReturnType<typeof buildConnectorManifests> = [];
     let agentPlugins: string[] = [...(agentConfig?.plugins ?? []), ...(additionalPluginIds || [])];
@@ -1816,13 +1816,13 @@ export class AiAgentService {
         return info?.abilities?.functionCall ?? true;
       };
 
-      // 5c. Fetch LobeHub Skills manifests
+      // 5c. Fetch AgentAsia Skills manifests
       try {
-        lobehubSkillManifests = await this.marketService.getLobehubSkillManifests();
+        agentasiaSkillManifests = await this.marketService.getLobehubSkillManifests();
       } catch (error) {
-        log('execAgent: failed to fetch lobehub skill manifests: %O', error);
+        log('execAgent: failed to fetch agentasia skill manifests: %O', error);
       }
-      log('execAgent: got %d lobehub skill manifests', lobehubSkillManifests.length);
+      log('execAgent: got %d agentasia skill manifests', agentasiaSkillManifests.length);
 
       // 5d. Fetch Composio tool manifests from database
       try {
@@ -1840,7 +1840,7 @@ export class AiAgentService {
       // The 'disabled' hard-block is already enforced universally in
       // ToolExecutionService; this surfaces the permission to the model too.
       if (
-        lobehubSkillManifests.length > 0 ||
+        agentasiaSkillManifests.length > 0 ||
         composioManifests.length > 0 ||
         pluginsWithoutConnectors.length > 0
       ) {
@@ -1849,7 +1849,7 @@ export class AiAgentService {
             await import('@/libs/mcp/connectorPermissionCheck');
           const { ConnectorToolModel } = await import('@/database/models/connectorTool');
           const allIdentifiers = [
-            ...lobehubSkillManifests.map((m) => m.identifier),
+            ...agentasiaSkillManifests.map((m) => m.identifier),
             ...composioManifests.map((m) => m.identifier),
             ...pluginsWithoutConnectors.map((p) => p.identifier),
           ];
@@ -1869,7 +1869,7 @@ export class AiAgentService {
               }),
             );
 
-            lobehubSkillManifests = lobehubSkillManifests.map((m) => {
+            agentasiaSkillManifests = agentasiaSkillManifests.map((m) => {
               const perms = connectorToolsMap.get(m.identifier);
               return perms && perms.size > 0
                 ? (patchManifestWithPermissions(m as any, perms as any) as any)
@@ -2027,7 +2027,7 @@ export class AiAgentService {
 
       const toolsEngine = createServerAgentToolsEngine(toolsContext, {
         additionalManifests: [
-          ...lobehubSkillManifests,
+          ...agentasiaSkillManifests,
           ...composioManifests,
           ...connectorManifests,
         ],
@@ -2059,8 +2059,8 @@ export class AiAgentService {
           ...agentPlugins,
           ...(disableLocalSystem ? [] : [LocalSystemManifest.identifier]),
           RemoteDeviceManifest.identifier,
-          // Include LobeHub Skills and Composio tools so they are passed to generateToolsDetailed
-          ...lobehubSkillManifests.map((m) => m.identifier),
+          // Include AgentAsia Skills and Composio tools so they are passed to generateToolsDetailed
+          ...agentasiaSkillManifests.map((m) => m.identifier),
           ...composioManifests.map((m) => m.identifier),
           // Connector manifests are also injected as additionalManifests
           ...connectorManifests.map((m) => m.identifier),
@@ -2082,7 +2082,7 @@ export class AiAgentService {
 
       // Single guard for every `toolManifestMap[id] = ...` ingest below.
       // Mirrors the post-merge filter in `createServerToolsEngine`: an
-      // installed plugin, a LobeHub Skill, or a Composio manifest declaring
+      // installed plugin, a AgentAsia Skill, or a Composio manifest declaring
       // `identifier: 'lobe-remote-device'` would otherwise reach the
       // activator-discovery map and let an external bot sender enable it
       // (). Centralising the check at the ingest layer means
@@ -2156,8 +2156,8 @@ export class AiAgentService {
         toolManifestMap[LocalSystemManifest.identifier] = LocalSystemManifest as LobeToolManifest;
       }
 
-      // Include lobehub skill and composio manifests for activator discovery
-      for (const manifest of lobehubSkillManifests) {
+      // Include agentasia skill and composio manifests for activator discovery
+      for (const manifest of agentasiaSkillManifests) {
         if (!isManifestIngestAllowed(manifest.identifier)) continue;
         if (!toolManifestMap[manifest.identifier]) {
           toolManifestMap[manifest.identifier] = manifest;
@@ -2170,9 +2170,9 @@ export class AiAgentService {
         }
       }
 
-      for (const manifest of lobehubSkillManifests) {
+      for (const manifest of agentasiaSkillManifests) {
         if (!isManifestIngestAllowed(manifest.identifier)) continue;
-        toolSourceMap[manifest.identifier] = 'lobehubSkill';
+        toolSourceMap[manifest.identifier] = 'agentasiaSkill';
       }
       for (const manifest of composioManifests) {
         if (!isManifestIngestAllowed(manifest.identifier)) continue;
@@ -2208,9 +2208,9 @@ export class AiAgentService {
       }
 
       log(
-        'execAgent: generated %d tools, %d lobehub skills, %d composio tools',
+        'execAgent: generated %d tools, %d agentasia skills, %d composio tools',
         tools?.length ?? 0,
-        lobehubSkillManifests.length,
+        agentasiaSkillManifests.length,
         composioManifests.length,
       );
 
@@ -2435,11 +2435,11 @@ export class AiAgentService {
             type: 'builtin' as const,
           })),
         // Lobehub Skills
-        ...lobehubSkillManifests.map((manifest) => ({
+        ...agentasiaSkillManifests.map((manifest) => ({
           description: manifest.meta?.description,
           identifier: manifest.identifier,
           name: manifest.meta?.title || manifest.identifier,
-          type: 'lobehub-skill' as const,
+          type: 'agentasia-skill' as const,
         })),
         // Composio tools
         ...composioManifests.map((manifest) => ({

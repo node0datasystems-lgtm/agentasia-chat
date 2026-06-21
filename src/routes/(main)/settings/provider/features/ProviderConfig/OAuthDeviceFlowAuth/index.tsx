@@ -1,9 +1,9 @@
 'use client';
 
 import { CheckCircleFilled } from '@ant-design/icons';
-import { ProviderIcon } from '@lobehub/icons';
-import { CopyButton, Flexbox, Icon } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { CopyButton, Flexbox, Icon } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Avatar, Button, Typography } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ExternalLinkIcon, Loader2Icon, LogOutIcon, UnplugIcon } from 'lucide-react';

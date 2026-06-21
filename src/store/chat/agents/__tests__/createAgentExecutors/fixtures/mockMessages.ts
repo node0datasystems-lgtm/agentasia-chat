@@ -1,5 +1,5 @@
-import { type UIChatMessage } from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+import { type UIChatMessage } from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 
 /**
  * Create a mock assistant message

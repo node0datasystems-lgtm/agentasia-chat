@@ -4,7 +4,7 @@ import type {
   AgentInterventionRequestData,
   AgentInterventionResponseData,
   AgentStreamEvent,
-} from '@lobechat/agent-gateway-client';
+} from '@agentasia/agent-gateway-client';
 
 /**
  * What the MCP handler gets back from `bridge.pending()`.

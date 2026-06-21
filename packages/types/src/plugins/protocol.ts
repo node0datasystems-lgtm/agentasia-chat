@@ -8,7 +8,7 @@ export enum ProtocolSource {
   DEVELOPER = 'developer',
   /** GitHub official */
   GITHUB_OFFICIAL = 'github_official',
-  /** Official LobeHub marketplace */
+  /** Official AgentAsia marketplace */
   OFFICIAL = 'official',
   /** Third-party marketplace */
   THIRD_PARTY = 'third_party',
@@ -63,7 +63,7 @@ export interface McpSchema {
 
 /**
  * RFC 0001 protocol parameters
- * lobehub://plugin/install?id=xxx&schema=xxx&marketId=xxx&meta_*=xxx
+ * agentasia://plugin/install?id=xxx&schema=xxx&marketId=xxx&meta_*=xxx
  */
 export interface McpInstallProtocolParamsRFC {
   /** Optional UI display metadata, prefixed with meta_ */

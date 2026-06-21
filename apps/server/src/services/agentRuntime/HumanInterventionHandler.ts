@@ -1,4 +1,4 @@
-import type { AgentRuntimeContext } from '@lobechat/agent-runtime';
+import type { AgentRuntimeContext } from '@agentasia/agent-runtime';
 import debug from 'debug';
 
 import type { MessageModel } from '@/database/models/message';

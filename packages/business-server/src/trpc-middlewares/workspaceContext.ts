@@ -6,4 +6,4 @@
  * package can't import from `src/`. Routers and middleware can import either
  * from this path or from `@lobechat/database` directly.
  */
-export { buildWorkspacePayload, buildWorkspaceWhere } from '@lobechat/database';
+export { buildWorkspacePayload, buildWorkspaceWhere } from '@agentasia/database';

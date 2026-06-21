@@ -1,5 +1,5 @@
-import { type GeneralAgentCallToolResultPayload } from '@lobechat/agent-runtime';
-import { type ChatToolPayload } from '@lobechat/types';
+import { type GeneralAgentCallToolResultPayload } from '@agentasia/agent-runtime';
+import { type ChatToolPayload } from '@agentasia/types';
 import { type Mock } from 'vitest';
 import { describe, expect, it, vi } from 'vitest';
 

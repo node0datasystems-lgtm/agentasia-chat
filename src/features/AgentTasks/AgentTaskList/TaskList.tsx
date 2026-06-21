@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Block, Center, Empty, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Accordion, AccordionItem, Block, Center, Empty, Flexbox, Icon, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { ClipboardCheckIcon, UserRound } from 'lucide-react';

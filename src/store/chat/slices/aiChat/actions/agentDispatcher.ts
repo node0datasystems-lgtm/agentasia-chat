@@ -1,6 +1,6 @@
-import { isDesktop as defaultIsDesktop } from '@lobechat/const';
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
-import { type DeviceExecutionTarget, type HeterogeneousProviderConfig } from '@lobechat/types';
+import { isDesktop as defaultIsDesktop } from '@agentasia/const';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
+import { type DeviceExecutionTarget, type HeterogeneousProviderConfig } from '@agentasia/types';
 
 import { resolveExecutionTarget } from '@/helpers/executionTarget';
 

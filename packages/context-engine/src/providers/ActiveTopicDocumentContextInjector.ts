@@ -1,5 +1,5 @@
-import { escapeXmlAttr } from '@lobechat/prompts';
-import type { RuntimeActiveTopicDocumentContext } from '@lobechat/types';
+import { escapeXmlAttr } from '@agentasia/prompts';
+import type { RuntimeActiveTopicDocumentContext } from '@agentasia/types';
 import debug from 'debug';
 
 import { BaseLastUserContentProvider } from '../base/BaseLastUserContentProvider';

@@ -1,6 +1,6 @@
 'use client';
 
-import { LOADING_FLAT } from '@lobechat/const';
+import { LOADING_FLAT } from '@agentasia/const';
 import isEqual from 'fast-deep-equal';
 import type { MouseEventHandler, ReactNode } from 'react';
 import { memo, useCallback } from 'react';

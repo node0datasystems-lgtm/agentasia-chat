@@ -1,6 +1,6 @@
 'use client';
 
-import { Empty, Segmented } from '@lobehub/ui';
+import { Empty, Segmented } from '@agentasia/ui';
 import { Database } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { type CreateNewEvalEvaluation, type RAGEvalDataSetItem } from '@lobechat/types';
+import { type CreateNewEvalEvaluation, type RAGEvalDataSetItem } from '@agentasia/types';
 import { type SWRResponse } from 'swr';
 
 import { mutate, useClientDataSWR } from '@/libs/swr';

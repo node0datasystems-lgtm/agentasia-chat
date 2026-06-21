@@ -2,7 +2,7 @@ import type {
   LocalFileItem,
   LocalMoveFilesResultItem,
   LocalReadFileResult,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 // Re-export shared state types from @lobechat/tool-runtime
 export type {
@@ -10,7 +10,7 @@ export type {
   GlobFilesState,
   GrepContentState,
   RunCommandState,
-} from '@lobechat/tool-runtime';
+} from '@agentasia/tool-runtime';
 
 export const LocalSystemIdentifier = 'lobe-local-system';
 

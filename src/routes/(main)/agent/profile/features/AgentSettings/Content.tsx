@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Block, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Avatar, Block, Flexbox, Icon, Text } from '@agentasia/ui';
 import { type ItemType } from 'antd/es/menu/interface';
 import { useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';

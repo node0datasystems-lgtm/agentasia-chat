@@ -1,6 +1,6 @@
-import { serverDB } from '@lobechat/database';
-import { oidcSessions } from '@lobechat/database/schemas';
-import { getUserAuth } from '@lobechat/utils/server';
+import { serverDB } from '@agentasia/database';
+import { oidcSessions } from '@agentasia/database/schemas';
+import { getUserAuth } from '@agentasia/utils/server';
 import debug from 'debug';
 import { eq } from 'drizzle-orm';
 import { cookies } from 'next/headers';

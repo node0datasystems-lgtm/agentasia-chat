@@ -53,7 +53,7 @@ export const params = {
     chatCompletion: () => process.env.DEBUG_NEWAPI_CHAT_COMPLETION === '1',
   },
   defaultHeaders: {
-    'X-Client': 'LobeHub',
+    'X-Client': 'AgentAsia',
   },
   id: ModelProvider.NewAPI,
   models: async ({ client: openAIClient }) => {

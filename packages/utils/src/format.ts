@@ -1,4 +1,4 @@
-import { USD_TO_CNY } from '@lobechat/const';
+import { USD_TO_CNY } from '@agentasia/const';
 import dayjs from 'dayjs';
 import { isNumber } from 'es-toolkit/compat';
 import type { ModelPriceCurrency } from 'model-bank';

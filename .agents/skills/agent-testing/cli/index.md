@@ -17,7 +17,7 @@ flakiness.
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Dev server   | `localhost:3010` — see [../references/dev-server.md](../references/dev-server.md)                                                              |
 | CLI source   | `apps/cli/` — runs from source, no rebuild; standalone `node_modules` — run `pnpm install` inside `apps/cli/` (root install does not cover it) |
-| CLI dev mode | `LOBEHUB_CLI_HOME=.lobehub-dev` for isolated settings                                                                                          |
+| CLI dev mode | `LOBEHUB_CLI_HOME=.agentasia-dev` for isolated settings                                                                                          |
 | Auth         | Seeded API key first; Device Code Flow only as fallback — see [../references/auth.md](../references/auth.md)                                   |
 
 All CLI dev commands run from `apps/cli/`. Subsequent examples use `$CLI`:
@@ -51,11 +51,11 @@ source .records/env/agent-testing-cli.env
 If the target environment is not seeded, use the interactive fallback:
 
 ```bash
-cd apps/cli && LOBEHUB_CLI_HOME=.lobehub-dev bun src/index.ts login --server http://localhost:3010
+cd apps/cli && LOBEHUB_CLI_HOME=.agentasia-dev bun src/index.ts login --server http://localhost:3010
 ```
 
 Seeded API-key auth does not store credentials. It writes local settings under
-`$HOME/.lobehub-dev` and requires the generated env file to be sourced before
+`$HOME/.agentasia-dev` and requires the generated env file to be sourced before
 CLI commands. Details:
 [../references/auth.md](../references/auth.md).
 

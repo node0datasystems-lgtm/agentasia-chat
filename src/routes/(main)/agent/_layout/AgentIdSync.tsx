@@ -1,4 +1,4 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
 import { usePrevious } from 'ahooks';
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { useLocation, useParams, useSearchParams } from 'react-router';

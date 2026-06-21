@@ -3,7 +3,7 @@ import {
   PERMISSION_ACTIONS,
   WORKSPACE_ROLE_PERMISSIONS,
   WORKSPACE_SYSTEM_ROLES,
-} from '@lobechat/const/rbac';
+} from '@agentasia/const/rbac';
 import { and, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

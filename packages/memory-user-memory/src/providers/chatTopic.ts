@@ -1,7 +1,7 @@
-import type { LobeChatDatabase } from '@lobechat/database';
-import { topics } from '@lobechat/database/schemas';
-import type { OpenAIChatMessage } from '@lobechat/model-runtime';
-import type { ChatTopicMetadata } from '@lobechat/types';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { topics } from '@agentasia/database/schemas';
+import type { OpenAIChatMessage } from '@agentasia/model-runtime';
+import type { ChatTopicMetadata } from '@agentasia/types';
 import { and, eq } from 'drizzle-orm';
 import { u } from 'unist-builder';
 import { toXml } from 'xast-util-to-xml';

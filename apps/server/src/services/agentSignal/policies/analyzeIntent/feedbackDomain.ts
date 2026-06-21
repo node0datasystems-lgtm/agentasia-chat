@@ -1,4 +1,4 @@
-import type { RuntimeProcessorResult } from '@lobechat/agent-signal';
+import type { RuntimeProcessorResult } from '@agentasia/agent-signal';
 
 import type { LobeChatDatabase } from '@/database/type';
 

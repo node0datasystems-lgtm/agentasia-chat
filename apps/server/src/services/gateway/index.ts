@@ -106,7 +106,7 @@ export class GatewayService {
 
   /**
    * Sync all enabled bots to the external message-gateway.
-   * Called on startup to recover connections after LobeHub restarts.
+   * Called on startup to recover connections after AgentAsia restarts.
    */
   private async syncGatewayConnections(): Promise<void> {
     const { getServerDB } = await import('@/database/core/db-adaptor');
@@ -516,7 +516,7 @@ export class GatewayService {
         // The user DO is purely an outbound surface for typing; no inbound
         // events come back through this connection. Webhook mode prevents the
         // gateway from opening per-user persistent connections (Telegram /
-        // Slack inbound already arrives at lobehub directly via webhooks;
+        // Slack inbound already arrives at agentasia directly via webhooks;
         // Discord inbound stays on the singleton WS).
         connectionMode: 'webhook',
         credentials: { botToken: creds.botToken },

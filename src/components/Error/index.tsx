@@ -8,7 +8,7 @@ import {
   Flexbox,
   FluentEmoji,
   Highlighter,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import type { Key } from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

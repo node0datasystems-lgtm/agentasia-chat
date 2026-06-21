@@ -1,10 +1,10 @@
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
 import {
   type LobeAgentChatConfig,
   type LobeAgentConfig,
   type LobeAgentTTSConfig,
   type UserDefaultAgent,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { DEFAULT_AGENT_META } from '../meta';
 import { DEFAULT_MODEL } from './llm';

@@ -1,5 +1,5 @@
-import type { API, Tool } from '@lobechat/prompts';
-import { pluginPrompts } from '@lobechat/prompts';
+import type { API, Tool } from '@agentasia/prompts';
+import { pluginPrompts } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseSystemRoleProvider } from '../base/BaseSystemRoleProvider';

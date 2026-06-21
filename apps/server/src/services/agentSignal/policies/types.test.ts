@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
 import { describe, expect, it } from 'vitest';
 
 import { AGENT_SIGNAL_POLICY_SIGNAL_TYPES } from './types';

@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionItem, Flexbox, Text } from '@lobehub/ui';
+import { AccordionItem, Flexbox, Text } from '@agentasia/ui';
 import {
   Activity,
   Award,

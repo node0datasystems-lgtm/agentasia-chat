@@ -1,5 +1,5 @@
 // cspell:ignore tokenx
-import { filesPrompts } from '@lobechat/prompts';
+import { filesPrompts } from '@agentasia/prompts';
 import type {
   ChatAudioItem,
   ChatFileItem,
@@ -7,8 +7,8 @@ import type {
   ChatVideoItem,
   UIChatMessage,
   UploadFileItem,
-} from '@lobechat/types';
-import { getMimeType } from '@lobechat/utils/mimeType';
+} from '@agentasia/types';
+import { getMimeType } from '@agentasia/utils/mimeType';
 import { estimateTokenCount } from 'tokenx';
 
 const ESTIMATE_INPUT_MESSAGE_ID = '__cost_estimate_input__';

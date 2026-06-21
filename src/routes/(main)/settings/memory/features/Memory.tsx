@@ -1,8 +1,8 @@
 'use client';
 
-import { type UserMemoryEffort } from '@lobechat/types';
-import { type FormGroupItemType } from '@lobehub/ui';
-import { Form, Icon, Skeleton, Tooltip } from '@lobehub/ui';
+import { type UserMemoryEffort } from '@agentasia/types';
+import { type FormGroupItemType } from '@agentasia/ui';
+import { Form, Icon, Skeleton, Tooltip } from '@agentasia/ui';
 import { Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Loader2Icon } from 'lucide-react';

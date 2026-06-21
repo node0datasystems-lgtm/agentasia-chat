@@ -1,10 +1,10 @@
-import { AgentManagementIdentifier } from '@lobechat/builtin-tool-agent-management';
-import { LOADING_FLAT } from '@lobechat/const';
+import { AgentManagementIdentifier } from '@agentasia/builtin-tool-agent-management';
+import { LOADING_FLAT } from '@agentasia/const';
 import type {
   ChatImageItem,
   ConversationContext,
   HeterogeneousProviderConfig,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { t } from 'i18next';
 import { type StateCreator } from 'zustand';
 

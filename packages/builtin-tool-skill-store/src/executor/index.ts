@@ -1,4 +1,4 @@
-import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@lobechat/types';
+import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@agentasia/types';
 
 import type { SkillStoreExecutionRuntime } from '../ExecutionRuntime';
 import {

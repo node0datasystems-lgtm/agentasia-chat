@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-topic-reference",
+  "name": "@agentasia/builtin-tool-topic-reference",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -8,6 +8,6 @@
   },
   "main": "./src/index.ts",
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

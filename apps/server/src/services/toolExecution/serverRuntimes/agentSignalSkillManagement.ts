@@ -2,7 +2,7 @@ import {
   AGENT_SIGNAL_SKILL_MANAGEMENT_IDENTIFIER,
   AGENT_SIGNAL_SKILL_MANAGEMENT_TOOL_API_NAMES,
   AgentSignalToolExecutionRuntime,
-} from '@lobechat/builtin-tool-agent-signal';
+} from '@agentasia/builtin-tool-agent-signal';
 
 import { createResourceRuntimePrimitives } from '@/server/services/agentSignal/services/selfIteration/tools/runtimePrimitives';
 import { SkillManagementDocumentService } from '@/server/services/skillManagement';

@@ -1,4 +1,4 @@
-import type { VerifierType, VerifyOnFailStrategy, VerifyRubricConfig } from '@lobechat/types';
+import type { VerifierType, VerifyOnFailStrategy, VerifyRubricConfig } from '@agentasia/types';
 
 /** The criterion fields the portal can edit. */
 export interface VerifyCriterionEdit {

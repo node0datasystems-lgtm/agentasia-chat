@@ -2,7 +2,7 @@ import {
   type CompressionGroupMetadata,
   type ConversationContext,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { type Operation } from '../slices/operation/types';
 

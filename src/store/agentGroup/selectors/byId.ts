@@ -1,4 +1,4 @@
-import { type AgentGroupDetail, type AgentGroupMember, type AgentItem } from '@lobechat/types';
+import { type AgentGroupDetail, type AgentGroupMember, type AgentItem } from '@agentasia/types';
 
 import { DEFAULT_CHAT_GROUP_CHAT_CONFIG, DEFAULT_CHAT_GROUP_META_CONFIG } from '@/const/settings';
 import { merge } from '@/utils/merge';

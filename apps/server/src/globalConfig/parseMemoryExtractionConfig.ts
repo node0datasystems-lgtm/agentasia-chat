@@ -1,5 +1,5 @@
-import { DEFAULT_MINI_PROVIDER } from '@lobechat/business-const';
-import { DEFAULT_MINI_MODEL, DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM } from '@lobechat/const';
+import { DEFAULT_MINI_PROVIDER } from '@agentasia/business-const';
+import { DEFAULT_MINI_MODEL, DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM } from '@agentasia/const';
 
 import {
   type GlobalMemoryExtractionConfig,

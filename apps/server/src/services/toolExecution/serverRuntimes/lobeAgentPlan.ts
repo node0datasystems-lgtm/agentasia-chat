@@ -1,6 +1,6 @@
-import { type PlanDocument, type PlanRuntimeService } from '@lobechat/builtin-tool-lobe-agent';
-import { AGENT_PLAN_FILE_TYPE } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type PlanDocument, type PlanRuntimeService } from '@agentasia/builtin-tool-lobe-agent';
+import { AGENT_PLAN_FILE_TYPE } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
 
 import { DocumentModel } from '@/database/models/document';
 import { TopicDocumentModel } from '@/database/models/topicDocument';

@@ -4,7 +4,7 @@ import * as os from 'node:os';
 import path from 'node:path';
 import { PassThrough } from 'node:stream';
 
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
 // `electron` is mocked below; this binding is the mock object so tests can
 // flip `isPackaged` to exercise the packaged-build tracing gate.
 import { app as electronAppMock } from 'electron';
@@ -120,7 +120,7 @@ describe('HeterogeneousAgentCtr', () => {
   let appStoragePath: string;
 
   beforeEach(async () => {
-    appStoragePath = await mkdtemp(path.join(os.tmpdir(), 'lobehub-hetero-'));
+    appStoragePath = await mkdtemp(path.join(os.tmpdir(), 'agentasia-hetero-'));
   });
 
   afterEach(async () => {

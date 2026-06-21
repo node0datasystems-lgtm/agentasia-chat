@@ -1,4 +1,4 @@
-import { DEFAULT_AGENT_CONFIG } from '@lobechat/const';
+import { DEFAULT_AGENT_CONFIG } from '@agentasia/const';
 import { and, eq, inArray } from 'drizzle-orm';
 import type { LLMParams } from 'model-bank';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -314,7 +314,7 @@ describe('SessionModel', () => {
 
     it('should return sessions with matching description', async () => {
       // The sessions has no title and desc,
-      // see: https://github.com/lobehub/lobe-chat/pull/4725
+      // see: https://github.com/agentasia/agentasia-chat/pull/4725
       await serverDB.insert(sessions).values([
         { id: '1', userId },
         { id: '2', userId },

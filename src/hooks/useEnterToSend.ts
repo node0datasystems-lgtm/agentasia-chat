@@ -1,4 +1,4 @@
-import { isCommandPressed } from '@lobechat/utils';
+import { isCommandPressed } from '@agentasia/utils';
 import { useCallback } from 'react';
 
 import { useUserStore } from '@/store/user';

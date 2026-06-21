@@ -1,5 +1,5 @@
-import { ActionIcon, Flexbox } from '@lobehub/ui';
-import { ChatHeader } from '@lobehub/ui/mobile';
+import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { ChatHeader } from '@agentasia/ui/mobile';
 import { cssVar } from 'antd-style';
 import { ChevronDown } from 'lucide-react';
 import { memo } from 'react';

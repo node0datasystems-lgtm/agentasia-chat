@@ -1,4 +1,4 @@
-import { Flexbox, Icon } from '@lobehub/ui';
+import { Flexbox, Icon } from '@agentasia/ui';
 import { DownloadIcon, MessageSquareIcon, StarIcon } from 'lucide-react';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';

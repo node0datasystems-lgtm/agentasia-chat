@@ -1,4 +1,4 @@
-import { isRecord } from '@lobechat/utils';
+import { isRecord } from '@agentasia/utils';
 
 import type { InputCompletionError } from '../store/initialState';
 

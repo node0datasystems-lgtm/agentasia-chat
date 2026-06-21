@@ -1,6 +1,6 @@
-import { type LobeChatDatabase } from '@lobechat/database';
-import { type ChatToolPayload } from '@lobechat/types';
-import { detectTruncatedJSON, safeParseJSON } from '@lobechat/utils';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { type ChatToolPayload } from '@agentasia/types';
+import { detectTruncatedJSON, safeParseJSON } from '@agentasia/utils';
 import debug from 'debug';
 
 import { ComposioService } from '@/server/services/composio';
@@ -66,8 +66,8 @@ export class BuiltinToolsExecutor implements IToolExecutor {
       args,
     );
 
-    // Route LobeHub Skills to MarketService
-    if (source === 'lobehubSkill') {
+    // Route AgentAsia Skills to MarketService
+    if (source === 'agentasiaSkill') {
       return this.marketService.executeLobehubSkill({
         args,
         context: {

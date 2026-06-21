@@ -1,9 +1,9 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import type {
   DeviceGitAheadBehind,
   DeviceGitWorkingTreeStatus,
   DeviceGitWorktreeListItem,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { useClientDataSWR } from '@/libs/swr';
 import { deviceKeys } from '@/libs/swr/keys';

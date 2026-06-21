@@ -1,4 +1,4 @@
-import { type LobeAgentChatConfig } from '@lobechat/types';
+import { type LobeAgentChatConfig } from '@agentasia/types';
 import { useMemo } from 'react';
 
 import { useFollowUpActionStore } from '@/store/followUpAction';

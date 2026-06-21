@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { MessageGroupType } from '@lobechat/types';
+import { MessageGroupType } from '@agentasia/types';
 import { inArray } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

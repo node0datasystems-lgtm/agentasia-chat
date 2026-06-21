@@ -1,4 +1,4 @@
-import { isRecord } from '@lobechat/utils';
+import { isRecord } from '@agentasia/utils';
 import { create, type Delta, patch as patchDelta } from 'jsondiffpatch';
 
 const createHashComparable = (value: unknown): unknown => {

@@ -1,4 +1,4 @@
-import { MARKET_AUTH_REQUIRED_MESSAGE } from '@lobechat/desktop-bridge';
+import { MARKET_AUTH_REQUIRED_MESSAGE } from '@agentasia/desktop-bridge';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import { z } from 'zod';
@@ -80,22 +80,22 @@ const marketToolProcedure = wsCompatProcedure
     });
   });
 
-// ============================== LobeHub Skill Procedures ==============================
+// ============================== AgentAsia Skill Procedures ==============================
 /**
- * LobeHub Skill procedure with SDK and optional auth
+ * AgentAsia Skill procedure with SDK and optional auth
  * Used for routes that may work without auth (like listing providers)
  */
-const lobehubSkillBaseProcedure = authedProcedure
+const agentasiaSkillBaseProcedure = authedProcedure
   .use(serverDatabase)
   .use(telemetry)
   .use(marketUserInfo)
   .use(marketSDK);
 
 /**
- * LobeHub Skill procedure with required auth
+ * AgentAsia Skill procedure with required auth
  * Used for routes that require user authentication
  */
-const lobehubSkillAuthProcedure = lobehubSkillBaseProcedure.use(requireMarketAuth);
+const agentasiaSkillAuthProcedure = agentasiaSkillBaseProcedure.use(requireMarketAuth);
 
 // ============================== Schema Definitions ==============================
 
@@ -188,7 +188,7 @@ const execInSandboxHandler = async ({
   try {
     let enhancedParams = params;
 
-    // Preprocess lh commands: rewrite to npx @lobehub/cli + inject auth env vars
+    // Preprocess lh commands: rewrite to npx @agentasia/cli + inject auth env vars
     if ((toolName === 'execScript' || toolName === 'runCommand') && params.command) {
       const { preprocessLhCommand } =
         await import('@/server/services/toolExecution/preprocessLhCommand');
@@ -397,11 +397,11 @@ export const marketRouter = router({
     .input(execInSandboxSchema)
     .mutation(({ input, ctx }) => execInSandboxHandler({ ctx, input })),
 
-  // ============================== LobeHub Skill ==============================
+  // ============================== AgentAsia Skill ==============================
   /**
-   * Call a LobeHub Skill tool
+   * Call a AgentAsia Skill tool
    */
-  connectCallTool: lobehubSkillAuthProcedure
+  connectCallTool: agentasiaSkillAuthProcedure
     .input(
       z.object({
         args: z.record(z.any()).optional(),
@@ -455,7 +455,7 @@ export const marketRouter = router({
   /**
    * Get all connections health status
    */
-  connectGetAllHealth: lobehubSkillAuthProcedure.query(async ({ ctx }) => {
+  connectGetAllHealth: agentasiaSkillAuthProcedure.query(async ({ ctx }) => {
     log('connectGetAllHealth');
 
     try {
@@ -477,7 +477,7 @@ export const marketRouter = router({
    * Get authorize URL for a provider
    * This calls the SDK's authorize method which generates a secure authorization URL
    */
-  connectGetAuthorizeUrl: lobehubSkillAuthProcedure
+  connectGetAuthorizeUrl: agentasiaSkillAuthProcedure
     .input(
       z.object({
         provider: z.string(),
@@ -511,7 +511,7 @@ export const marketRouter = router({
   /**
    * Get connection status for a provider
    */
-  connectGetStatus: lobehubSkillAuthProcedure
+  connectGetStatus: agentasiaSkillAuthProcedure
     .input(z.object({ provider: z.string() }))
     .query(async ({ input, ctx }) => {
       log('connectGetStatus: provider=%s', input.provider);
@@ -536,7 +536,7 @@ export const marketRouter = router({
   /**
    * List all user connections
    */
-  connectListConnections: lobehubSkillBaseProcedure.query(async ({ ctx }) => {
+  connectListConnections: agentasiaSkillBaseProcedure.query(async ({ ctx }) => {
     log('connectListConnections');
 
     try {
@@ -568,7 +568,7 @@ export const marketRouter = router({
   /**
    * List available providers (public, no auth required)
    */
-  connectListProviders: lobehubSkillBaseProcedure.query(async ({ ctx }) => {
+  connectListProviders: agentasiaSkillBaseProcedure.query(async ({ ctx }) => {
     log('connectListProviders');
 
     try {
@@ -588,7 +588,7 @@ export const marketRouter = router({
   /**
    * List tools for a provider
    */
-  connectListTools: lobehubSkillBaseProcedure
+  connectListTools: agentasiaSkillBaseProcedure
     .input(z.object({ provider: z.string() }))
     .query(async ({ input, ctx }) => {
       log('connectListTools: provider=%s', input.provider);
@@ -611,7 +611,7 @@ export const marketRouter = router({
   /**
    * Refresh token for a provider
    */
-  connectRefresh: lobehubSkillAuthProcedure
+  connectRefresh: agentasiaSkillAuthProcedure
     .input(z.object({ provider: z.string() }))
     .mutation(async ({ input, ctx }) => {
       log('connectRefresh: provider=%s', input.provider);
@@ -634,7 +634,7 @@ export const marketRouter = router({
   /**
    * Revoke connection for a provider
    */
-  connectRevoke: lobehubSkillAuthProcedure
+  connectRevoke: agentasiaSkillAuthProcedure
     .input(z.object({ provider: z.string() }))
     .mutation(async ({ input, ctx }) => {
       log('connectRevoke: provider=%s', input.provider);

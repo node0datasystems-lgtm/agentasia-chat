@@ -13,7 +13,7 @@ List models for a specific provider.
 ```bash
 lh model list openai
 lh model list openai --type image --enabled
-lh model list lobehub --type video --json
+lh model list agentasia --type video --json
 ```
 
 | Option            | Description                                                                            | Default |
@@ -161,7 +161,7 @@ lh provider config openai --show --json
 | `--show`                 | Show current config               |
 | `--json [fields]`        | Output JSON (with --show)         |
 
-**Important**: The `lobehub` provider is platform-managed. Attempting to set `--api-key` or `--base-url` on it will be rejected with an error message.
+**Important**: The `agentasia` provider is platform-managed. Attempting to set `--api-key` or `--base-url` on it will be rejected with an error message.
 
 ### `lh provider test <id>`
 

@@ -19,8 +19,8 @@ interface LobehubRouterRuntimeOptions {
   routers: (options: any, runtimeContext: { model?: string }) => Promise<RouterInstance[]>;
 }
 
-export const lobehubRouterRuntimeOptions: LobehubRouterRuntimeOptions = {
-  id: 'lobehub',
+export const agentasiaRouterRuntimeOptions: LobehubRouterRuntimeOptions = {
+  id: 'agentasia',
 
   // eslint-disable-next-line unused-imports/no-unused-vars
   routers: async (options, { model: _model }) => {

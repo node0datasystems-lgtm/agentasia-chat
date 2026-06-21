@@ -1,4 +1,4 @@
-import type { BuiltinStreaming } from '@lobechat/types';
+import type { BuiltinStreaming } from '@agentasia/types';
 
 /**
  * Builtin tools streaming renderer registry

@@ -1,8 +1,8 @@
 'use client';
 
-import type { InterestAreaKey } from '@lobechat/const';
-import type { BuiltinRenderProps, SaveUserQuestionInput } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import type { InterestAreaKey } from '@agentasia/const';
+import type { BuiltinRenderProps, SaveUserQuestionInput } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

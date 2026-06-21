@@ -9,7 +9,7 @@ import type {
   DocumentLoadPosition as DocumentLoadPositionType,
   DocumentLoadRules,
   PolicyLoad,
-} from '@lobechat/agent-templates';
+} from '@agentasia/agent-templates';
 
 export {
   AgentAccess,
@@ -18,10 +18,10 @@ export {
   DocumentLoadPosition,
   DocumentLoadRule,
   PolicyLoad,
-} from '@lobechat/agent-templates';
+} from '@agentasia/agent-templates';
 
 // Type-only exports (interfaces)
-export type { AgentDocumentPolicy, DocumentLoadRules } from '@lobechat/agent-templates';
+export type { AgentDocumentPolicy, DocumentLoadRules } from '@agentasia/agent-templates';
 
 export type AgentDocumentSourceType = 'file' | 'web' | 'api' | 'topic' | 'agent' | 'agent-signal';
 export type AgentDocumentListSourceType = 'all' | 'file' | 'web';

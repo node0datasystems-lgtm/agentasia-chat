@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { basename, extname } from 'node:path';
 
-import { DEFAULT_BOT_HISTORY_LIMIT } from '@lobechat/const';
+import { DEFAULT_BOT_HISTORY_LIMIT } from '@agentasia/const';
 import type { Command } from 'commander';
 import pc from 'picocolors';
 

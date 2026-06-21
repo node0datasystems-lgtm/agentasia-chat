@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_SKILL_CATEGORY,
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react';
 import { MemoryRouter } from 'react-router';
@@ -22,7 +22,7 @@ const modalConfirm = vi.hoisted(() => vi.fn());
 const openDocumentMock = vi.hoisted(() => vi.fn());
 const removeDocumentMock = vi.hoisted(() => vi.fn());
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({ onClick, title }: { onClick?: () => void; title?: string }) => (
     <button aria-label={title} onClick={onClick}>
       {title}
@@ -32,7 +32,7 @@ vi.mock('@lobehub/ui', () => ({
   Text: ({ children }: { children?: ReactNode }) => <span>{children}</span>,
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   confirmModal: modalConfirm,
 }));
 

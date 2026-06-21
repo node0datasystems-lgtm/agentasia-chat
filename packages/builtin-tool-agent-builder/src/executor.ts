@@ -4,9 +4,9 @@
  * Handles all agent builder tool calls for configuring and customizing agents.
  * Delegates to AgentManagerRuntime for actual implementation.
  */
-import { AgentManagerRuntime } from '@lobechat/agent-manager-runtime';
-import type { BuiltinToolContext, BuiltinToolResult, ToolAfterCallContext } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+import { AgentManagerRuntime } from '@agentasia/agent-manager-runtime';
+import type { BuiltinToolContext, BuiltinToolResult, ToolAfterCallContext } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 import { getAgentStoreState } from '@/store/agent';
 import { getChatStoreState } from '@/store/chat';

@@ -3,14 +3,14 @@ import type {
   StepCompleteData,
   StreamChunkData,
   ToolExecuteData,
-} from '@lobechat/agent-gateway-client';
+} from '@agentasia/agent-gateway-client';
 import type {
   ChatMessageError,
   ChatToolPayload,
   ChatToolPayloadWithResult,
   ConversationContext,
-} from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
+} from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 
 import type { ChatStore } from '@/store/chat/store';
 

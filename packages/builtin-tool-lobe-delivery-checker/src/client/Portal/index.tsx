@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinPortalProps } from '@lobechat/types';
-import { Center } from '@lobehub/ui';
+import type { BuiltinPortalProps } from '@agentasia/types';
+import { Center } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { GenerateVerifyPlanParams, GenerateVerifyPlanState } from '../../types';

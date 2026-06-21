@@ -1,4 +1,4 @@
-import { type CreateMessageParams } from '@lobechat/types';
+import { type CreateMessageParams } from '@agentasia/types';
 
 import { messageService } from '@/services/message';
 import { type ChatStore } from '@/store/chat/store';

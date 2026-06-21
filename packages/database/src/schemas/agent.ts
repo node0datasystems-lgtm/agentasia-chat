@@ -2,8 +2,8 @@ import type {
   LobeAgentAgencyConfig,
   LobeAgentChatConfig,
   LobeAgentTTSConfig,
-} from '@lobechat/types';
-import { AgentChatConfigSchema } from '@lobechat/types';
+} from '@agentasia/types';
+import { AgentChatConfigSchema } from '@agentasia/types';
 import { isNotNull, isNull } from 'drizzle-orm';
 import {
   boolean,

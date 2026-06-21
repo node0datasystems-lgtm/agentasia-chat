@@ -1,4 +1,4 @@
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import {
   File,
   FileArchive,

@@ -7,7 +7,7 @@ import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { promisify } from 'node:util';
 
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import debug from 'debug';
 import { nanoid } from 'nanoid';
 import sharp from 'sharp';

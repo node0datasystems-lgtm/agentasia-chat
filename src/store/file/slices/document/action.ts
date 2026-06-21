@@ -2,8 +2,8 @@ import {
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
   DERIVED_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
-import { createNanoId } from '@lobechat/utils';
+} from '@agentasia/const';
+import { createNanoId } from '@agentasia/utils';
 import { type SWRResponse } from 'swr';
 
 import { useClientDataSWRWithSync } from '@/libs/swr';

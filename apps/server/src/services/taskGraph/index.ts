@@ -1,4 +1,4 @@
-import type { TaskItem } from '@lobechat/types';
+import type { TaskItem } from '@agentasia/types';
 
 import { TaskModel } from '@/database/models/task';
 import type { LobeChatDatabase } from '@/database/type';

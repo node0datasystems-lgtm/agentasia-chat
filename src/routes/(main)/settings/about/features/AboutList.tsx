@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Grid } from '@lobehub/ui';
+import { Flexbox, Grid } from '@agentasia/ui';
 import { type FC } from 'react';
 import { memo } from 'react';
 

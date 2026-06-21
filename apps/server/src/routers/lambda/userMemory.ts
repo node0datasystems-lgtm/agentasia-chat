@@ -7,7 +7,7 @@ import {
   MemorySourceType,
   UpdateUserMemoryIdentitySchema,
   type UserMemoryExtractionMetadata,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

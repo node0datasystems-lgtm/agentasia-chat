@@ -366,15 +366,15 @@ export default {
     'Start the background daemon to keep the device online and listening for remote operations.',
   'devices.connectWizard.cli.connectTitle': 'Start the daemon',
   'devices.connectWizard.cli.installDesc':
-    'Install the LobeHub CLI globally with your preferred package manager to enable device connectivity and management.',
+    'Install the AgentAsia CLI globally with your preferred package manager to enable device connectivity and management.',
   'devices.connectWizard.cli.installTitle': 'Install the CLI',
   'devices.connectWizard.cli.loginDesc':
     'Complete OAuth authorization in your browser to link the CLI with your account.',
   'devices.connectWizard.cli.loginTitle': 'Sign in',
-  'devices.connectWizard.desktop.downloadLink': 'Download LobeHub Desktop',
+  'devices.connectWizard.desktop.downloadLink': 'Download AgentAsia Desktop',
   'devices.connectWizard.desktop.step1': 'Download the desktop app',
   'devices.connectWizard.desktop.step1Desc':
-    'Visit the LobeHub downloads page and get the app for your operating system.',
+    'Visit the AgentAsia downloads page and get the app for your operating system.',
   'devices.connectWizard.desktop.step2': 'Sign in and open the device gateway',
   'devices.connectWizard.desktop.step2Desc':
     "After signing in, click the device gateway icon in the top-right corner and confirm it's turned on.",
@@ -385,10 +385,10 @@ export default {
     'Only device metadata is registered — your data is never accessed.',
   'devices.connectWizard.method.cli': 'Via CLI',
   'devices.connectWizard.method.desktop': 'Via Desktop',
-  'devices.connectWizard.subtitle': 'Choose how to connect your computer to LobeHub.',
+  'devices.connectWizard.subtitle': 'Choose how to connect your computer to AgentAsia.',
   'devices.connectWizard.title': 'Connect Device',
   'devices.empty.desc':
-    'Once connected, LobeHub agents can read/write files, run commands, and call system tools directly on your computer.',
+    'Once connected, AgentAsia agents can read/write files, run commands, and call system tools directly on your computer.',
   'devices.empty.methodCli.desc':
     'Install the CLI in your terminal — great for servers or headless machines.',
   'devices.empty.methodCli.title': 'Connect via CLI',
@@ -522,7 +522,7 @@ export default {
   'memory.effort.medium': 'Medium — Balanced behavior',
   'memory.effort.title': 'Aggressiveness',
   'memory.enabled.desc':
-    'Allow LobeHub to extract preferences and info from conversations and use them later. You can view, edit, or clear memory anytime.',
+    'Allow AgentAsia to extract preferences and info from conversations and use them later. You can view, edit, or clear memory anytime.',
   'memory.enabled.title': 'Enable Memory',
   'memory.title': 'Memory Settings',
   'message.success': 'Update successful',
@@ -532,7 +532,7 @@ export default {
   'notification.inbox.desc': 'Show notifications in the in-app inbox',
   'notification.inbox.title': 'Inbox Notifications',
   'notification.push.desc':
-    'Send push notifications to your mobile devices (LobeHub mobile app required)',
+    'Send push notifications to your mobile devices (AgentAsia mobile app required)',
   'notification.push.title': 'Mobile Push Notifications',
   'notification.category.billing.title': 'Billing',
   'notification.category.generation.title': 'Generation',
@@ -627,7 +627,7 @@ export default {
   'settingAgent.tag.title': 'Tag',
   'settingAgent.title': 'Agent info',
   'settingAppearance.appTray.desc':
-    'Show the LobeHub icon in the system tray or macOS menu bar. Disabling it also removes tray menu access.',
+    'Show the AgentAsia icon in the system tray or macOS menu bar. Disabling it also removes tray menu access.',
   'settingAppearance.appTray.title': 'Show App Tray',
   'settingAppearance.animationMode.agile': 'Agile',
   'settingAppearance.animationMode.desc':
@@ -891,7 +891,7 @@ export default {
   'settingSystemTools.tools.grep.desc': 'GNU grep - standard text search tool',
   'settingSystemTools.tools.kimi.desc': 'Kimi CLI - Moonshot AI agentic coding CLI',
   'settingSystemTools.tools.mdfind.desc': 'macOS Spotlight search (fast indexed search)',
-  'settingSystemTools.tools.lobehub.desc': 'LobeHub CLI - manage and connect to LobeHub services',
+  'settingSystemTools.tools.agentasia.desc': 'AgentAsia CLI - manage and connect to AgentAsia services',
   'settingSystemTools.tools.bun.desc': 'Bun - fast JavaScript runtime and package manager',
   'settingSystemTools.tools.bunx.desc': 'bunx - Bun package runner for executing npm packages',
   'settingSystemTools.tools.node.desc': 'Node.js - JavaScript runtime for executing JS/TS',
@@ -934,7 +934,7 @@ export default {
   'skillStore.search': 'Search skills by name or keyword, press Enter to search…',
   'skillStore.tabs.community': 'Community',
   'skillStore.tabs.custom': 'Custom',
-  'skillStore.tabs.lobehub': 'LobeHub',
+  'skillStore.tabs.agentasia': 'AgentAsia',
   'skillStore.tabs.mcp': 'MCP',
   'skillStore.tabs.skills': 'Skills',
   'skillStore.title': 'Skill Store',
@@ -1712,7 +1712,7 @@ When I am ___, I need ___
   'workspace.general.url.title': 'Workspace URL',
   'workspace.slugBrandApply.button': 'Apply',
   'workspace.slugBrandApply.mailBody':
-    'Hi LobeHub team,\n\nI would like to request the workspace URL "{{slug}}" (https://lobehub.com/{{slug}}).\n\n- Brand / organization I represent:\n- Official website / domain:\n- My role in the organization:\n- Organization email (please reply from this address):\n\nThanks!',
+    'Hi AgentAsia team,\n\nI would like to request the workspace URL "{{slug}}" (https://agentasia.ai/{{slug}}).\n\n- Brand / organization I represent:\n- Official website / domain:\n- My role in the organization:\n- Organization email (please reply from this address):\n\nThanks!',
   'workspace.slugBrandApply.mailButton': 'Apply via email',
   'workspace.slugBrandApply.mailSubject': 'Workspace URL brand request: {{slug}}',
   'workspace.slugBrandApply.modalCreateTip':
@@ -2209,7 +2209,7 @@ When I am ___, I need ___
     'Manage connections to your desktop devices. List online devices, activate a device for remote operations, and check connection status.',
   'tools.builtins.lobe-remote-device.title': 'Remote Device',
   'tools.builtins.lobe-skill-store.description':
-    'Browse and install agent skills from the LobeHub marketplace. Use this when you need extended capabilities or want to install a specific skill.',
+    'Browse and install agent skills from the AgentAsia marketplace. Use this when you need extended capabilities or want to install a specific skill.',
   'tools.builtins.lobe-skill-store.title': 'Skill Store',
   'tools.builtins.lobe-skills.description': 'Activate and use reusable skill packages',
   'tools.builtins.lobe-skills.title': 'Skills',
@@ -2237,9 +2237,9 @@ When I am ___, I need ___
   'tools.builtins.lobe-agent-browser.description':
     'Browser automation CLI for AI agents. Use when tasks involve website or Electron interaction such as navigation, form filling, clicking, screenshot capture, scraping data, login flows, and end-to-end app testing.',
   'tools.builtins.lobe-agent-browser.title': 'Agent Browser',
-  'tools.builtins.lobehub.description':
-    'Manage the LobeHub platform via CLI — knowledge bases, memory, agents, files, search, generation, and more.',
-  'tools.builtins.lobehub.title': 'LobeHub',
+  'tools.builtins.agentasia.description':
+    'Manage the AgentAsia platform via CLI — knowledge bases, memory, agents, files, search, generation, and more.',
+  'tools.builtins.agentasia.title': 'AgentAsia',
   'tools.builtins.task.description':
     'Task management and execution — create, track, review, and complete tasks via CLI.',
   'tools.builtins.task.title': 'Task',
@@ -2415,46 +2415,46 @@ When I am ___, I need ___
 
   'tools.composio.verifyAuth': 'I have completed authentication',
 
-  'tools.lobehubSkill.authorize': 'Authorize',
+  'tools.agentasiaSkill.authorize': 'Authorize',
 
-  'tools.lobehubSkill.connect': 'Connect',
+  'tools.agentasiaSkill.connect': 'Connect',
 
-  'tools.lobehubSkill.connected': 'Connected',
+  'tools.agentasiaSkill.connected': 'Connected',
 
-  'tools.lobehubSkill.disconnect': 'Disconnect',
+  'tools.agentasiaSkill.disconnect': 'Disconnect',
 
-  'tools.lobehubSkill.disconnectConfirm.desc':
+  'tools.agentasiaSkill.disconnectConfirm.desc':
     "You can still continue previous chats that reference {{name}} content. However, the assistant won't be able to access new content or perform new tasks.",
 
-  'tools.lobehubSkill.disconnectConfirm.title': 'Disconnect {{name}}?',
+  'tools.agentasiaSkill.disconnectConfirm.title': 'Disconnect {{name}}?',
 
-  'tools.lobehubSkill.disconnected': 'Disconnected',
+  'tools.agentasiaSkill.disconnected': 'Disconnected',
 
-  'tools.lobehubSkill.error': 'Error',
-  // LobeHub Skill Providers i18n
-  'tools.lobehubSkill.providers.github.description':
+  'tools.agentasiaSkill.error': 'Error',
+  // AgentAsia Skill Providers i18n
+  'tools.agentasiaSkill.providers.github.description':
     'GitHub is a platform for version control and collaboration, enabling developers to host, review, and manage code repositories.',
-  'tools.lobehubSkill.providers.github.readme':
+  'tools.agentasiaSkill.providers.github.readme':
     'Connect to GitHub to access your repositories, create and manage issues, review pull requests, and collaborate on code—all through natural conversation with your AI assistant.',
-  'tools.lobehubSkill.providers.linear.description':
+  'tools.agentasiaSkill.providers.linear.description':
     'Linear is a modern issue tracking and project management tool designed for high-performance teams to build better software faster',
-  'tools.lobehubSkill.providers.linear.readme':
+  'tools.agentasiaSkill.providers.linear.readme':
     'Bring the power of Linear directly into your AI assistant. Create and update issues, manage sprints, track project progress, and streamline your development workflow—all through natural conversation.',
-  'tools.lobehubSkill.providers.microsoft.description':
+  'tools.agentasiaSkill.providers.microsoft.description':
     'Outlook Calendar is an integrated scheduling tool within Microsoft Outlook that enables users to create appointments, organize meetings with others, and manage their time and events effectively.',
-  'tools.lobehubSkill.providers.microsoft.readme':
+  'tools.agentasiaSkill.providers.microsoft.readme':
     'Integrate with Outlook Calendar to view, create, and manage your events seamlessly. Schedule meetings, check availability, set reminders, and coordinate your time—all through natural language commands.',
-  'tools.lobehubSkill.providers.notion.description':
+  'tools.agentasiaSkill.providers.notion.description':
     'Notion is a collaborative productivity and note-taking application.',
-  'tools.lobehubSkill.providers.notion.readme':
+  'tools.agentasiaSkill.providers.notion.readme':
     'Connect to Notion to access and manage your workspace. Create pages, search content, update databases, and organize your knowledge base—all through natural conversation with your AI assistant.',
-  'tools.lobehubSkill.providers.twitter.description':
+  'tools.agentasiaSkill.providers.twitter.description':
     'X (Twitter) is a social media platform for sharing real-time updates, news, and engaging with your audience through posts, replies, and direct messages.',
-  'tools.lobehubSkill.providers.twitter.readme':
+  'tools.agentasiaSkill.providers.twitter.readme':
     'Connect to X (Twitter) to post tweets, manage your timeline, and engage with your audience. Create content, schedule posts, monitor mentions, and build your social media presence through conversational AI.',
-  'tools.lobehubSkill.providers.vercel.description':
+  'tools.agentasiaSkill.providers.vercel.description':
     'Vercel is a cloud platform for frontend developers, providing hosting and serverless functions to deploy web applications with ease.',
-  'tools.lobehubSkill.providers.vercel.readme':
+  'tools.agentasiaSkill.providers.vercel.readme':
     'Connect to Vercel to manage your deployments, monitor project status, and control your infrastructure. Deploy applications, check build logs, manage environment variables, and scale your projects through conversational AI.',
 
   'tools.notInstalled': 'Not Installed',

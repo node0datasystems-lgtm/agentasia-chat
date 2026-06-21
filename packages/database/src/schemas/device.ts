@@ -1,4 +1,4 @@
-import type { WorkingDirEntry } from '@lobechat/types';
+import type { WorkingDirEntry } from '@agentasia/types';
 import { sql } from 'drizzle-orm';
 import { index, jsonb, pgTable, text, uniqueIndex, uuid, varchar } from 'drizzle-orm/pg-core';
 
@@ -10,7 +10,7 @@ import { workspaces } from './workspace';
  * Stable device identity anchor — one row per physical machine per user.
  *
  * `deviceId` is derived from a machine-level identifier
- * (`sha256(machineUUID + userId + salt)`), so it survives LobeHub reinstalls
+ * (`sha256(machineUUID + userId + salt)`), so it survives AgentAsia reinstalls
  * and desktop upgrades. Online status is NOT stored here — it lives in the
  * DeviceGatewayDO in-memory WS attachments; this table only records "ever
  * seen" so offline devices stay visible and bindable.

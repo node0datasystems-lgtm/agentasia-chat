@@ -11,7 +11,7 @@ const permissionMock = vi.hoisted(() => ({
   allowed: true,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 

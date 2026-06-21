@@ -1,5 +1,5 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import type { LobeChatDatabase } from '@agentasia/database';
 import debug from 'debug';
 
 import { MessageModel } from '@/database/models/message';

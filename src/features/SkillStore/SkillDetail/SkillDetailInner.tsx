@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Skeleton } from '@lobehub/ui';
+import { Flexbox, Skeleton } from '@agentasia/ui';
 import { lazy, memo, Suspense, useState } from 'react';
 
 import Agents from './Agents';
@@ -18,7 +18,7 @@ const TabSkeleton = () => (
 );
 
 interface SkillDetailInnerProps {
-  type: 'builtin' | 'composio' | 'lobehub';
+  type: 'builtin' | 'composio' | 'agentasia';
 }
 
 const SkillDetailInner = memo<SkillDetailInnerProps>(({ type }) => {

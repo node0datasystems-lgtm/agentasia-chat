@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/agent-manager-runtime",
+  "name": "@agentasia/agent-manager-runtime",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -12,8 +12,8 @@
     "test:update": "vitest -u"
   },
   "dependencies": {
-    "@lobechat/const": "workspace:*",
-    "@lobechat/prompts": "workspace:*",
-    "@lobechat/types": "workspace:*"
+    "@agentasia/const": "workspace:*",
+    "@agentasia/prompts": "workspace:*",
+    "@agentasia/types": "workspace:*"
   }
 }

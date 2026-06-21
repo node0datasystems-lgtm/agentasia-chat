@@ -1,6 +1,6 @@
-import type { EditLocalFileParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { CodeDiff, Flexbox, Icon, Skeleton, Text } from '@lobehub/ui';
+import type { EditLocalFileParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { CodeDiff, Flexbox, Icon, Skeleton, Text } from '@agentasia/ui';
 import { ChevronRight } from 'lucide-react';
 import path from 'path-browserify-esm';
 import { memo, useMemo } from 'react';

@@ -1,8 +1,8 @@
 'use client';
 
-import type { InitDocumentArgs } from '@lobechat/editor-runtime';
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import type { InitDocumentArgs } from '@agentasia/editor-runtime';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { FileText, Hash, ListTree } from 'lucide-react';
 import { memo, useMemo } from 'react';

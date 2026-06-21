@@ -1,4 +1,4 @@
-import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@lobechat/heterogeneous-agents/client';
+import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@agentasia/heterogeneous-agents/client';
 
 import { buildHeteroAgentAction } from './heteroAgent';
 import type { RecommendedAction } from './types';

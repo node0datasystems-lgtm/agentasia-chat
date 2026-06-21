@@ -1,14 +1,14 @@
-import { MemoryIdentifier } from '@lobechat/builtin-tool-memory';
+import { MemoryIdentifier } from '@agentasia/builtin-tool-memory';
 import {
   MemoryExecutionRuntime,
   type MemoryRuntimeService,
-} from '@lobechat/builtin-tool-memory/executionRuntime';
-import { BRANDING_PROVIDER, ENABLE_BUSINESS_FEATURES } from '@lobechat/business-const';
+} from '@agentasia/builtin-tool-memory/executionRuntime';
+import { BRANDING_PROVIDER, ENABLE_BUSINESS_FEATURES } from '@agentasia/business-const';
 import {
   DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM,
   MEMORY_SEARCH_TOP_K_LIMITS,
-} from '@lobechat/const';
-import type { LobeChatDatabase } from '@lobechat/database';
+} from '@agentasia/const';
+import type { LobeChatDatabase } from '@agentasia/database';
 import type {
   ActivityMemoryItemSchema,
   AddIdentityActionSchema,
@@ -17,7 +17,7 @@ import type {
   PreferenceMemoryItemSchema,
   RemoveIdentityActionSchema,
   UpdateIdentityActionSchema,
-} from '@lobechat/memory-user-memory/schemas';
+} from '@agentasia/memory-user-memory/schemas';
 import type {
   AddActivityMemoryResult,
   AddContextMemoryResult,
@@ -30,8 +30,8 @@ import type {
   SearchMemoryParams,
   SearchMemoryResult,
   UpdateIdentityMemoryResult,
-} from '@lobechat/types';
-import { LayersEnum } from '@lobechat/types';
+} from '@agentasia/types';
+import { LayersEnum } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import type { z } from 'zod';
 

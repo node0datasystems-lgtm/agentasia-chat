@@ -1,4 +1,4 @@
-import { getLobehubSkillProviderById } from '@lobechat/const';
+import { getLobehubSkillProviderById } from '@agentasia/const';
 import { produce } from 'immer';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';
@@ -18,10 +18,10 @@ import {
 } from './types';
 import { LobehubSkillStatus } from './types';
 
-const n = setNamespace('lobehubSkillStore');
+const n = setNamespace('agentasiaSkillStore');
 
 /**
- * LobeHub Skill Store Actions
+ * AgentAsia Skill Store Actions
  */
 
 type Setter = StoreSetter<ToolStore>;
@@ -46,7 +46,7 @@ export class LobehubSkillStoreActionImpl {
 
     this.#set(
       produce((draft: LobehubSkillStoreState) => {
-        draft.lobehubSkillExecutingToolIds.add(toolId);
+        draft.agentasiaSkillExecutingToolIds.add(toolId);
       }),
       false,
       n('callLobehubSkillTool/start'),
@@ -62,7 +62,7 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          draft.lobehubSkillExecutingToolIds.delete(toolId);
+          draft.agentasiaSkillExecutingToolIds.delete(toolId);
         }),
         false,
         n('callLobehubSkillTool/success'),
@@ -74,7 +74,7 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          draft.lobehubSkillExecutingToolIds.delete(toolId);
+          draft.agentasiaSkillExecutingToolIds.delete(toolId);
         }),
         false,
         n('callLobehubSkillTool/error'),
@@ -100,7 +100,7 @@ export class LobehubSkillStoreActionImpl {
   checkLobehubSkillStatus = async (provider: string): Promise<LobehubSkillServer | undefined> => {
     this.#set(
       produce((draft: LobehubSkillStoreState) => {
-        draft.lobehubSkillLoadingIds.add(provider);
+        draft.agentasiaSkillLoadingIds.add(provider);
       }),
       false,
       n('checkLobehubSkillStatus/start'),
@@ -128,15 +128,15 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          const existingIndex = draft.lobehubSkillServers.findIndex(
+          const existingIndex = draft.agentasiaSkillServers.findIndex(
             (s) => s.identifier === provider,
           );
           if (existingIndex >= 0) {
-            draft.lobehubSkillServers[existingIndex] = server;
+            draft.agentasiaSkillServers[existingIndex] = server;
           } else {
-            draft.lobehubSkillServers.push(server);
+            draft.agentasiaSkillServers.push(server);
           }
-          draft.lobehubSkillLoadingIds.delete(provider);
+          draft.agentasiaSkillLoadingIds.delete(provider);
         }),
         false,
         n('checkLobehubSkillStatus/success'),
@@ -152,7 +152,7 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          draft.lobehubSkillLoadingIds.delete(provider);
+          draft.agentasiaSkillLoadingIds.delete(provider);
         }),
         false,
         n('checkLobehubSkillStatus/error'),
@@ -185,10 +185,10 @@ export class LobehubSkillStoreActionImpl {
   ): void => {
     this.#set(
       produce((draft: LobehubSkillStoreState) => {
-        const serverIndex = draft.lobehubSkillServers.findIndex((s) => s.identifier === provider);
+        const serverIndex = draft.agentasiaSkillServers.findIndex((s) => s.identifier === provider);
         if (serverIndex >= 0) {
-          draft.lobehubSkillServers[serverIndex] = {
-            ...draft.lobehubSkillServers[serverIndex],
+          draft.agentasiaSkillServers[serverIndex] = {
+            ...draft.agentasiaSkillServers[serverIndex],
             ...update,
           };
         }
@@ -222,9 +222,9 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          const serverIndex = draft.lobehubSkillServers.findIndex((s) => s.identifier === provider);
+          const serverIndex = draft.agentasiaSkillServers.findIndex((s) => s.identifier === provider);
           if (serverIndex >= 0) {
-            draft.lobehubSkillServers[serverIndex].tools = response.tools as LobehubSkillTool[];
+            draft.agentasiaSkillServers[serverIndex].tools = response.tools as LobehubSkillTool[];
           }
         }),
         false,
@@ -238,7 +238,7 @@ export class LobehubSkillStoreActionImpl {
   revokeLobehubSkill = async (provider: string): Promise<void> => {
     this.#set(
       produce((draft: LobehubSkillStoreState) => {
-        draft.lobehubSkillLoadingIds.add(provider);
+        draft.agentasiaSkillLoadingIds.add(provider);
       }),
       false,
       n('revokeLobehubSkill/start'),
@@ -249,10 +249,10 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          draft.lobehubSkillServers = draft.lobehubSkillServers.filter(
+          draft.agentasiaSkillServers = draft.agentasiaSkillServers.filter(
             (s) => s.identifier !== provider,
           );
-          draft.lobehubSkillLoadingIds.delete(provider);
+          draft.agentasiaSkillLoadingIds.delete(provider);
         }),
         false,
         n('revokeLobehubSkill/success'),
@@ -262,7 +262,7 @@ export class LobehubSkillStoreActionImpl {
 
       this.#set(
         produce((draft: LobehubSkillStoreState) => {
-          draft.lobehubSkillLoadingIds.delete(provider);
+          draft.agentasiaSkillLoadingIds.delete(provider);
         }),
         false,
         n('revokeLobehubSkill/error'),
@@ -272,7 +272,7 @@ export class LobehubSkillStoreActionImpl {
 
   useFetchLobehubSkillConnections = (enabled: boolean): SWRResponse<LobehubSkillServer[]> => {
     return useSWR<LobehubSkillServer[]>(
-      enabled ? toolKeys.lobehubSkillConnections() : null,
+      enabled ? toolKeys.agentasiaSkillConnections() : null,
       async () => {
         const response = await toolsClient.market.connectListConnections.query();
 
@@ -303,9 +303,9 @@ export class LobehubSkillStoreActionImpl {
           if (data.length > 0) {
             this.#set(
               produce((draft: LobehubSkillStoreState) => {
-                const existingIds = new Set(draft.lobehubSkillServers.map((s) => s.identifier));
+                const existingIds = new Set(draft.agentasiaSkillServers.map((s) => s.identifier));
                 const newServers = data.filter((s) => !existingIds.has(s.identifier));
-                draft.lobehubSkillServers = [...draft.lobehubSkillServers, ...newServers];
+                draft.agentasiaSkillServers = [...draft.agentasiaSkillServers, ...newServers];
               }),
               false,
               n('useFetchLobehubSkillConnections'),
@@ -324,7 +324,7 @@ export class LobehubSkillStoreActionImpl {
 
   useFetchProviderTools = (provider: string | undefined): SWRResponse<LobehubSkillTool[]> => {
     return useSWR<LobehubSkillTool[]>(
-      provider ? toolKeys.lobehubSkillTools(provider) : null,
+      provider ? toolKeys.agentasiaSkillTools(provider) : null,
       async () => {
         const response = await toolsClient.market.connectListTools.query({ provider: provider! });
         return (response.tools || []).map((tool: any) => ({

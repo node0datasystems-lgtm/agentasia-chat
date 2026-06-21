@@ -4,9 +4,9 @@ import {
   type GoogleAnalyticsProviderConfig,
   type PostHogProviderAnalyticsConfig,
   type XAdsProviderAnalyticsConfig,
-} from '@lobehub/analytics';
-import { createSingletonAnalytics } from '@lobehub/analytics';
-import { AnalyticsProvider } from '@lobehub/analytics/react';
+} from '@agentasia/analytics';
+import { createSingletonAnalytics } from '@agentasia/analytics';
+import { AnalyticsProvider } from '@agentasia/analytics/react';
 import { type ReactNode } from 'react';
 import { memo, useRef } from 'react';
 

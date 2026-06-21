@@ -1,8 +1,8 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import {
   GetStreamableMcpServerManifestInputSchema,
   StreamableHTTPAuthSchema,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

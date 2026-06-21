@@ -1,4 +1,4 @@
-import { CUSTOM_DOCUMENT_FILE_TYPE } from '@lobechat/const';
+import { CUSTOM_DOCUMENT_FILE_TYPE } from '@agentasia/const';
 import { type SWRResponse } from 'swr';
 
 import { useClientDataSWRWithSync } from '@/libs/swr';

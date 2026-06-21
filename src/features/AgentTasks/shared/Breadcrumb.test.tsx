@@ -15,7 +15,7 @@ const createState = (taskDetailMap: Record<string, any>) => ({
   taskDetailMap,
 });
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Icon: () => <span>icon</span>,
   Text: ({ children }: { children: ReactNode }) => <span>{children}</span>,
 }));

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Skeleton } from '@lobehub/ui';
+import { Flexbox, Skeleton } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 

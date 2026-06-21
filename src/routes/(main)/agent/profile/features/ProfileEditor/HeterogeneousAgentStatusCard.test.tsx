@@ -1,4 +1,4 @@
-import type { HeterogeneousProviderConfig } from '@lobechat/types';
+import type { HeterogeneousProviderConfig } from '@agentasia/types';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router';
@@ -32,7 +32,7 @@ vi.mock('@lobechat/heterogeneous-agents/client', () => ({
     ['openclaw', 'hermes', 'amp', 'opencode'].includes(type),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({
     'aria-label': ariaLabel,
     className,

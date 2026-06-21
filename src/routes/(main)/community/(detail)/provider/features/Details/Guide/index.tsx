@@ -1,5 +1,5 @@
-import { Block, Empty } from '@lobehub/ui';
-import { Mdx } from '@lobehub/ui/mdx';
+import { Block, Empty } from '@agentasia/ui';
+import { Mdx } from '@agentasia/ui/mdx';
 import { BookOpen } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

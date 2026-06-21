@@ -1,4 +1,4 @@
-import { AsyncTaskStatus } from '@lobechat/types';
+import { AsyncTaskStatus } from '@agentasia/types';
 import { useEffect } from 'react';
 
 import { useClientDataSWR } from '@/libs/swr';

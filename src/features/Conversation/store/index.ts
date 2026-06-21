@@ -1,6 +1,6 @@
 'use client';
 
-import { type StoreApiWithSelector } from '@lobechat/types';
+import { type StoreApiWithSelector } from '@agentasia/types';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 import { createContext } from 'zustand-utils';

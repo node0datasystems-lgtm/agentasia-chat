@@ -1,4 +1,4 @@
-import { Button, Flexbox } from '@lobehub/ui';
+import { Button, Flexbox } from '@agentasia/ui';
 import { Plus } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

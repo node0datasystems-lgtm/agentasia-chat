@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/edge-config",
+  "name": "@agentasia/edge-config",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -7,6 +7,6 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/business-config": "workspace:*"
+    "@agentasia/business-config": "workspace:*"
   }
 }

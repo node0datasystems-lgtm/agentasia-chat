@@ -1,6 +1,6 @@
 'use client';
 
-import { Tag } from '@lobehub/ui';
+import { Tag } from '@agentasia/ui';
 import { memo, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
-import type { LobeAgentChatConfig } from '@lobechat/types';
-import { type FormItemProps } from '@lobehub/ui';
-import { Form } from '@lobehub/ui';
+import type { LobeAgentChatConfig } from '@agentasia/types';
+import { type FormItemProps } from '@agentasia/ui';
+import { Form } from '@agentasia/ui';
 import { Form as AntdForm, Grid, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useMemo } from 'react';

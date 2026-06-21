@@ -1,4 +1,4 @@
-import { Center, FileTypeIcon, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Center, FileTypeIcon, Flexbox, Icon, Text } from '@agentasia/ui';
 import { Upload } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ArrowUpIcon, PlusIcon } from 'lucide-react';

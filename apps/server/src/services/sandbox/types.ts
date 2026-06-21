@@ -1,8 +1,8 @@
 import type {
   ISandboxService,
   SandboxExportFileResult,
-} from '@lobechat/builtin-tool-cloud-sandbox';
-import type { LobeChatDatabase } from '@lobechat/database';
+} from '@agentasia/builtin-tool-cloud-sandbox';
+import type { LobeChatDatabase } from '@agentasia/database';
 
 import type { FileService } from '@/server/services/file';
 import type { MarketService } from '@/server/services/market';

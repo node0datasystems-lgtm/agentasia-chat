@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import { getTrustedClientTokenForSession } from '@/libs/trusted-client';
 import { MarketService } from '@/server/services/market';
 
-const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.lobehub.com';
+const MARKET_BASE_URL = process.env.MARKET_BASE_URL || 'https://market.agentasia.ai';
 
 type RouteContext = {
   params: Promise<{
@@ -181,7 +181,7 @@ const handleProxy = async (req: NextRequest, context: RouteContext) => {
           }
 
           // Use trustedClientToken to directly call the Market userinfo endpoint
-          const userInfoUrl = `${MARKET_BASE_URL}/lobehub-oidc/userinfo`;
+          const userInfoUrl = `${MARKET_BASE_URL}/agentasia-oidc/userinfo`;
           const response = await fetch(userInfoUrl, {
             headers: {
               'Content-Type': 'application/json',

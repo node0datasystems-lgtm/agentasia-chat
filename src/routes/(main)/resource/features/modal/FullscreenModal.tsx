@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from '@lobehub/ui';
+import { Modal } from '@agentasia/ui';
 import { ConfigProvider } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { type ReactNode } from 'react';

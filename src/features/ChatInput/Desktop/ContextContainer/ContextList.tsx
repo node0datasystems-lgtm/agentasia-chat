@@ -1,4 +1,4 @@
-import { Flexbox, ScrollShadow } from '@lobehub/ui';
+import { Flexbox, ScrollShadow } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useEffect, useMemo, useRef } from 'react';
 

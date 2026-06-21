@@ -43,14 +43,14 @@ const chatInputState = vi.hoisted(() => {
   return state;
 });
 
-vi.mock('@lobehub/analytics', () => ({
+vi.mock('@agentasia/analytics', () => ({
   getSingletonAnalyticsOptional: () => ({
     getStatus: () => ({ initialized: true, providersCount: 1 }),
     track: analyticsTrack,
   }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({ onClick }: { onClick?: () => void }) => (
     <button aria-label="icon action" type="button" onClick={onClick} />
   ),
@@ -98,7 +98,7 @@ vi.mock('@/services/skill', () => ({
   },
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   Modal: ({ children, open, width }: { children?: ReactNode; open?: boolean; width?: string }) =>
     open ? (
       <div data-modal-width={width} role="dialog">

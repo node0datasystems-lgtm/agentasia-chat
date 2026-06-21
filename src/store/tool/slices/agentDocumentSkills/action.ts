@@ -1,4 +1,4 @@
-import { buildAgentSkillIdentifier } from '@lobechat/const';
+import { buildAgentSkillIdentifier } from '@agentasia/const';
 import useSWR, { type SWRResponse } from 'swr';
 
 import {

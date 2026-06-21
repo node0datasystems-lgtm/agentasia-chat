@@ -1,5 +1,5 @@
-import { useToolRenderCapabilities } from '@lobechat/shared-tool-ui';
-import type { SearchFilesState } from '@lobechat/tool-runtime';
+import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
+import type { SearchFilesState } from '@agentasia/tool-runtime';
 import { memo } from 'react';
 
 import SearchView from './SearchView';

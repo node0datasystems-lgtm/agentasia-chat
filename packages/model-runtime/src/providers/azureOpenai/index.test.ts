@@ -84,7 +84,7 @@ describe('LobeAzureOpenAI', () => {
         instance = new LobeAzureOpenAI({
           apiKey: 'test_key',
           baseURL: 'https://test.openai.azure.com/',
-          id: 'lobehub',
+          id: 'agentasia',
         });
 
         vi.spyOn(instance['client'].chat.completions, 'create').mockResolvedValue(
@@ -129,7 +129,7 @@ describe('LobeAzureOpenAI', () => {
               apiMode: 'responses',
               model: 'gpt-5.4',
               pricing: mockPricing,
-              provider: 'lobehub',
+              provider: 'agentasia',
             }),
           }),
         );
@@ -143,7 +143,7 @@ describe('LobeAzureOpenAI', () => {
         instance = new LobeAzureOpenAI({
           apiKey: 'test_key',
           baseURL: 'https://test.openai.azure.com/',
-          id: 'lobehub',
+          id: 'agentasia',
         });
 
         vi.spyOn(instance['client'].chat.completions, 'create').mockResolvedValue(
@@ -177,7 +177,7 @@ describe('LobeAzureOpenAI', () => {
               apiMode: 'responses',
               model: 'gpt-5.4',
               pricing: mockPricing,
-              provider: 'lobehub',
+              provider: 'agentasia',
             }),
           }),
         );
@@ -191,7 +191,7 @@ describe('LobeAzureOpenAI', () => {
         instance = new LobeAzureOpenAI({
           apiKey: 'test_key',
           baseURL: 'https://test.openai.azure.com/',
-          id: 'lobehub',
+          id: 'agentasia',
         });
 
         vi.spyOn(instance['client'].chat.completions, 'create').mockResolvedValue({
@@ -229,7 +229,7 @@ describe('LobeAzureOpenAI', () => {
         expect(createCall.top_logprobs).toBeUndefined();
         expect(createCall.top_p).toBeUndefined();
 
-        expect(getModelPricingModule.getModelPricing).toHaveBeenCalledWith('o3', 'lobehub');
+        expect(getModelPricingModule.getModelPricing).toHaveBeenCalledWith('o3', 'agentasia');
         expect(streamsModule.OpenAIStream).toHaveBeenCalledWith(
           mockProdStream,
           expect.objectContaining({
@@ -239,7 +239,7 @@ describe('LobeAzureOpenAI', () => {
               includeUsageRequested: true,
               model: 'o3',
               pricing: mockPricing,
-              provider: 'lobehub',
+              provider: 'agentasia',
             }),
           }),
         );

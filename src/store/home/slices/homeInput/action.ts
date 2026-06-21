@@ -1,5 +1,5 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { CUSTOM_DOCUMENT_FILE_TYPE } from '@lobechat/const';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { CUSTOM_DOCUMENT_FILE_TYPE } from '@agentasia/const';
 
 import { stableWorkspaceAwareNavigate } from '@/features/Workspace/stableWorkspaceAwareNavigate';
 import { chatGroupService } from '@/services/chatGroup';

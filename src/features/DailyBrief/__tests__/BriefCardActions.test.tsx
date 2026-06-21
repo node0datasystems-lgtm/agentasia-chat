@@ -1,4 +1,4 @@
-import type { BriefAction } from '@lobechat/types';
+import type { BriefAction } from '@agentasia/types';
 import { fireEvent, render, screen } from '@testing-library/react';
 import type { ReactElement } from 'react';
 import { MemoryRouter } from 'react-router';

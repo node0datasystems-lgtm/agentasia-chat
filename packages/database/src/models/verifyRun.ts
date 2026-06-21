@@ -1,4 +1,4 @@
-import type { VerifyCheckItem, VerifyRunSource, VerifyRunStatus } from '@lobechat/types';
+import type { VerifyCheckItem, VerifyRunSource, VerifyRunStatus } from '@agentasia/types';
 import { and, desc, eq, isNull } from 'drizzle-orm';
 
 import { agentOperations } from '../schemas/agentOperations';

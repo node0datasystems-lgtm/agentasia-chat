@@ -215,7 +215,7 @@ export const buildExecuteToolResultAttributes = (input: ExecuteToolResultAttribu
 export const executeToolSpanName = (toolName: string) =>
   `${GEN_AI_OPERATION_EXECUTE_TOOL} ${toolName}`;
 
-// ---- context_engineering span (LobeHub-only) ----
+// ---- context_engineering span (AgentAsia-only) ----
 
 export interface ContextEngineeringAttributes {
   hasImages?: boolean;

@@ -1,4 +1,4 @@
-// LobeHub chat streaming time-series probe.
+// AgentAsia chat streaming time-series probe.
 //
 // Inject into the renderer (via agent-browser eval) to record store + DOM
 // snapshots every 200ms during a streaming session. Designed to surface

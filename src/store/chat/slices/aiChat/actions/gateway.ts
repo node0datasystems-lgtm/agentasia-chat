@@ -3,8 +3,8 @@ import {
   type AgentStreamClientOptions,
   type AgentStreamEvent,
   type ConnectionStatus,
-} from '@lobechat/agent-gateway-client';
-import type { ConversationContext, ExecAgentResult, MessageMetadata } from '@lobechat/types';
+} from '@agentasia/agent-gateway-client';
+import type { ConversationContext, ExecAgentResult, MessageMetadata } from '@agentasia/types';
 
 import { isDesktop } from '@/const/version';
 import { aiAgentService, type ResumeApprovalParam } from '@/services/aiAgent';
@@ -82,7 +82,7 @@ export interface GatewayConnection {
 
 export interface ConnectGatewayParams {
   /**
-   * Gateway WebSocket URL (e.g. https://agent-gateway.lobehub.com)
+   * Gateway WebSocket URL (e.g. https://agent-gateway.agentasia.ai)
    */
   gatewayUrl: string;
   /**

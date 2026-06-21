@@ -1,4 +1,4 @@
-import { DEFAULT_INBOX_AVATAR, DEFAULT_INBOX_TITLE, INBOX_SESSION_ID } from '@lobechat/const';
+import { DEFAULT_INBOX_AVATAR, DEFAULT_INBOX_TITLE, INBOX_SESSION_ID } from '@agentasia/const';
 
 interface InboxAgentIdentity {
   slug?: string | null;

@@ -4,7 +4,7 @@ import  {
   type HumanInterventionRule,
   type SecurityBlacklistRule,
   type ShouldInterveneParams,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { DEFAULT_SECURITY_BLACKLIST } from '../audit/defaultSecurityBlacklist';
 

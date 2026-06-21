@@ -11,9 +11,9 @@
  *      sub-agent's answer and resumes the parent.
  *   5. The parent op runs one more LLM step and reaches `done`.
  */
-import { type LobeChatDatabase } from '@lobechat/database';
-import { agentOperations, agents, messages } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { agentOperations, agents, messages } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { eq } from 'drizzle-orm';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

@@ -1,7 +1,7 @@
 import {
   WebOnboardingApiName,
   WebOnboardingIdentifier,
-} from '@lobechat/builtin-tool-web-onboarding';
+} from '@agentasia/builtin-tool-web-onboarding';
 
 interface ToolRenderRuleTarget {
   apiName: string;

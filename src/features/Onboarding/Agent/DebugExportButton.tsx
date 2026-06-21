@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, copyToClipboard } from '@lobehub/ui';
+import { Button, copyToClipboard } from '@agentasia/ui';
 import { App } from 'antd';
 import { LogsIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';

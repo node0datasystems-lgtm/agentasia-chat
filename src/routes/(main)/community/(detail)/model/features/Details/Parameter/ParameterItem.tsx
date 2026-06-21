@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import Statistic from '../../../../../components/Statistic';
 
-const DEFAULT_DOC_URL = 'https://lobehub.com/docs/usage/agents/model';
+const DEFAULT_DOC_URL = 'https://agentasia.ai/docs/usage/agents/model';
 
 export interface ParameterItemProps {
   defaultValue: string | number;

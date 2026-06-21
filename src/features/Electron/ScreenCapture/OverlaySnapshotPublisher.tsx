@@ -4,7 +4,7 @@ import type {
   ScreenCaptureAgentOption,
   ScreenCaptureModelOption,
   ScreenCaptureOverlayTheme,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useMemo, useRef } from 'react';

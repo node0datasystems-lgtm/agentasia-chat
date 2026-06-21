@@ -1,8 +1,8 @@
 /**
  * Tests for Lobe Web Browsing Executor
  */
-import { WebBrowsingApiName } from '@lobechat/builtin-tool-web-browsing';
-import { SEARCH_SEARXNG_NOT_CONFIG } from '@lobechat/types';
+import { WebBrowsingApiName } from '@agentasia/builtin-tool-web-browsing';
+import { SEARCH_SEARXNG_NOT_CONFIG } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { type BuiltinToolContext } from '../../types';

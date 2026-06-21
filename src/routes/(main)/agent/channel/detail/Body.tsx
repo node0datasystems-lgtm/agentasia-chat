@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Form, FormGroup, FormItem, Tag, Text } from '@lobehub/ui';
+import { Flexbox, Form, FormGroup, FormItem, Tag, Text } from '@agentasia/ui';
 import {
   Button,
   Form as AntdForm,

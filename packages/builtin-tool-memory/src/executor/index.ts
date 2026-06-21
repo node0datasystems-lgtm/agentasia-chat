@@ -6,14 +6,14 @@ import type {
   PreferenceMemoryItemSchema,
   RemoveIdentityActionSchema,
   UpdateIdentityActionSchema,
-} from '@lobechat/memory-user-memory/schemas';
+} from '@agentasia/memory-user-memory/schemas';
 import type {
   BuiltinToolContext,
   BuiltinToolResult,
   QueryTaxonomyOptionsParams,
   SearchMemoryParams,
-} from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 import type { z } from 'zod';
 
 import { userMemoryService } from '@/services/userMemory';

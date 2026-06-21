@@ -1,4 +1,4 @@
-import type { DropdownMenuProps, PopoverProps } from '@lobehub/ui';
+import type { DropdownMenuProps, PopoverProps } from '@agentasia/ui';
 import { createContext, useContext, useMemo } from 'react';
 
 import { useServerConfigStore } from '@/store/serverConfig';

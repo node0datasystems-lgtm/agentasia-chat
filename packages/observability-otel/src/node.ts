@@ -50,7 +50,7 @@ export function attributesForEnv(): DetectedResourceAttributes {
 
 export function attributesCommon(): DetectedResourceAttributes {
   return {
-    [ATTR_SERVICE_NAME]: 'lobehub',
+    [ATTR_SERVICE_NAME]: 'agentasia',
     ...attributesForEnv(),
   };
 }

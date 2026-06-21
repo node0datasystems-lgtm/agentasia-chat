@@ -1,10 +1,10 @@
-import { DEFAULT_AGENT_CONFIG, INBOX_SESSION_ID } from '@lobechat/const';
+import { DEFAULT_AGENT_CONFIG, INBOX_SESSION_ID } from '@agentasia/const';
 import type {
   ChatSessionList,
   LobeAgentConfig,
   LobeAgentSession,
   LobeGroupSession,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { and, asc, count, desc, eq, inArray, not, or, sql } from 'drizzle-orm';
 import type { PartialDeep } from 'type-fest';
 

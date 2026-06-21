@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { BaseAction, ExecutorResult } from '@lobechat/agent-signal';
-import { createSource } from '@lobechat/agent-signal';
+import type { BaseAction, ExecutorResult } from '@agentasia/agent-signal';
+import { createSource } from '@agentasia/agent-signal';
 import { describe, expect, it, vi } from 'vitest';
 
 import { AGENT_SIGNAL_POLICY_ACTION_TYPES } from '../../policies/types';

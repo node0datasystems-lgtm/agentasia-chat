@@ -1,4 +1,4 @@
-import type { WorkspaceSystemRoleName } from '@lobechat/const/rbac';
+import type { WorkspaceSystemRoleName } from '@agentasia/const/rbac';
 import { and, eq, inArray, isNull, or, sql } from 'drizzle-orm';
 
 import type { LobeChatDatabase } from '@/database/type';

@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
-import type { ExportedTopic, ImportedMessage } from '@lobechat/types';
+import type { ExportedTopic, ImportedMessage } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionItem, Center, Flexbox, Icon, Text } from '@lobehub/ui';
+import { AccordionItem, Center, Flexbox, Icon, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { CircleDashed, CircleDot, HandIcon, type LucideIcon } from 'lucide-react';
 import { memo } from 'react';

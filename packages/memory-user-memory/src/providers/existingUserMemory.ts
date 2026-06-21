@@ -4,7 +4,7 @@ import type {
   UserMemoryContextWithoutVectors,
   UserMemoryExperienceWithoutVectors,
   UserMemoryPreferenceWithoutVectors,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { u } from 'unist-builder';
 import { toXml } from 'xast-util-to-xml';
 import type { Child } from 'xastscript';

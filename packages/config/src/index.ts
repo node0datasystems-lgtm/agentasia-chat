@@ -1,4 +1,4 @@
-import { DEFAULT_LLM_CONFIG } from '@lobechat/business-config';
+import { DEFAULT_LLM_CONFIG } from '@agentasia/business-config';
 import {
   DEFAULT_AGENT,
   DEFAULT_COMMON_SETTINGS,
@@ -9,8 +9,8 @@ import {
   DEFAULT_SYSTEM_AGENT_CONFIG,
   DEFAULT_TOOL_CONFIG,
   DEFAULT_TTS_CONFIG,
-} from '@lobechat/const';
-import type { UserSettings } from '@lobechat/types';
+} from '@agentasia/const';
+import type { UserSettings } from '@agentasia/types';
 
 export const DEFAULT_SETTINGS: UserSettings = {
   defaultAgent: DEFAULT_AGENT,

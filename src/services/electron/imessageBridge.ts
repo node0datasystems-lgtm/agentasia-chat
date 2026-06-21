@@ -1,4 +1,4 @@
-import type { ImessageBridgeConfig } from '@lobechat/electron-client-ipc';
+import type { ImessageBridgeConfig } from '@agentasia/electron-client-ipc';
 
 import { ensureElectronIpc } from '@/utils/electron/ipc';
 

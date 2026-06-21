@@ -1,4 +1,4 @@
-name: lobehub
+name: agentasia
 services:
   network-service:
     image: alpine

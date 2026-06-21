@@ -318,8 +318,8 @@ export class QQGatewayConnection {
           d: {
             intents: this.intents,
             properties: {
-              $browser: 'lobehub-gateway',
-              $device: 'lobehub-gateway',
+              $browser: 'agentasia-gateway',
+              $device: 'agentasia-gateway',
               $os: 'linux',
             },
             shard: this.shard,

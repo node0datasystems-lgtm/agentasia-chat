@@ -1,4 +1,4 @@
-import { Center } from '@lobehub/ui';
+import { Center } from '@agentasia/ui';
 import { memo } from 'react';
 
 import FileIcon from '@/components/FileIcon';

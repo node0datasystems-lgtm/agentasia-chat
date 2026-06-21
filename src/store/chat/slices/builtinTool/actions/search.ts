@@ -1,5 +1,5 @@
-import { WebBrowsingApiName, WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
-import { type ChatToolPayload, type SearchQuery } from '@lobechat/types';
+import { WebBrowsingApiName, WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
+import { type ChatToolPayload, type SearchQuery } from '@agentasia/types';
 
 import { dbMessageSelectors } from '@/store/chat/selectors';
 import { type ChatStore } from '@/store/chat/store';

@@ -1,4 +1,4 @@
-import type { GatewayConnectionStatus } from '@lobechat/electron-client-ipc';
+import type { GatewayConnectionStatus } from '@agentasia/electron-client-ipc';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';
 

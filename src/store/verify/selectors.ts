@@ -1,4 +1,4 @@
-import type { VerifyRubricConfig } from '@lobechat/types';
+import type { VerifyRubricConfig } from '@agentasia/types';
 
 import { type Store } from './action';
 import { type VerifyCriterionEdit } from './initialState';

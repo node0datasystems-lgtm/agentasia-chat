@@ -1,4 +1,4 @@
-import type { SharedDocumentData } from '@lobechat/types';
+import type { SharedDocumentData } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

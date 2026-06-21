@@ -1,4 +1,4 @@
-import type * as OtelApiModule from '@lobechat/observability-otel/api';
+import type * as OtelApiModule from '@agentasia/observability-otel/api';
 import { type Mock } from 'vitest';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

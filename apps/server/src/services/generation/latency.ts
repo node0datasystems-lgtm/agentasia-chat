@@ -1,4 +1,4 @@
-import { AsyncTaskStatus, AsyncTaskType } from '@lobechat/types';
+import { AsyncTaskStatus, AsyncTaskType } from '@agentasia/types';
 import { and, eq, gte, isNotNull, sql } from 'drizzle-orm';
 
 import { asyncTasks, generationBatches, generations } from '@/database/schemas';

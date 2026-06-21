@@ -1,4 +1,4 @@
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import type {
   AIBaseModelCard,
   AiFullModelCard,
@@ -475,11 +475,11 @@ const getProviderLocalConfig = async (
 ): Promise<AiFullModelCard[] | null> => {
   if (!provider) return null;
 
-  if (provider === ModelProvider.LobeHub) {
+  if (provider === ModelProvider.AgentAsia) {
     const { loadModels } =
       (await import('@lobechat/business-model-bank/model-config')) as BusinessModelConfigModule;
     const models = await loadModels();
-    return models.filter((model) => model.providerId === ModelProvider.LobeHub);
+    return models.filter((model) => model.providerId === ModelProvider.AgentAsia);
   }
 
   try {

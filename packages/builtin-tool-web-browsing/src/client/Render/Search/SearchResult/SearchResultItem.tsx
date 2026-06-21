@@ -1,5 +1,5 @@
-import type { UniformSearchResult } from '@lobechat/types';
-import { Block, Flexbox, Text } from '@lobehub/ui';
+import type { UniformSearchResult } from '@agentasia/types';
+import { Block, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import type { CSSProperties } from 'react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { systemPrompt } from '@lobechat/builtin-tool-task';
+import { systemPrompt } from '@agentasia/builtin-tool-task';
 
 export const systemRoleTemplate = `You are a dedicated task management assistant.
 

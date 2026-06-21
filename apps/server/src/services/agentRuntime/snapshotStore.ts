@@ -1,4 +1,4 @@
-import { FileSnapshotStore, type ISnapshotStore } from '@lobechat/agent-tracing';
+import { FileSnapshotStore, type ISnapshotStore } from '@agentasia/agent-tracing';
 
 import { S3SnapshotStore } from '@/server/modules/AgentTracing';
 

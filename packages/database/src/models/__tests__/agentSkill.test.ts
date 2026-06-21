@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { SkillManifest } from '@lobechat/types';
+import type { SkillManifest } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

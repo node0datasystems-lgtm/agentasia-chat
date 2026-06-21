@@ -1,5 +1,5 @@
-import { type FlexboxProps } from '@lobehub/ui';
-import { Flexbox } from '@lobehub/ui';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Flexbox } from '@agentasia/ui';
 import { type FC } from 'react';
 
 const SidebarContainer: FC<FlexboxProps> = ({ children, style, ...rest }) => {

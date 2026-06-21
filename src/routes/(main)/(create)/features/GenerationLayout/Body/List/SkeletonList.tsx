@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Skeleton } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Skeleton } from '@agentasia/ui';
 import { Plus } from 'lucide-react';
 import { memo } from 'react';
 

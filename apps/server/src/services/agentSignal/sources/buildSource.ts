@@ -1,4 +1,4 @@
-import type { AgentSignalSource } from '@lobechat/agent-signal';
+import type { AgentSignalSource } from '@agentasia/agent-signal';
 
 import { agentExecutionCompletedRenderer } from './renderers/agentExecutionCompleted';
 import { agentExecutionFailedRenderer } from './renderers/agentExecutionFailed';

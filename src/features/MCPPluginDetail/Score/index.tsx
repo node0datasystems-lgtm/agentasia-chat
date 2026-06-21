@@ -1,4 +1,4 @@
-import { Block, Flexbox, Grid } from '@lobehub/ui';
+import { Block, Flexbox, Grid } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

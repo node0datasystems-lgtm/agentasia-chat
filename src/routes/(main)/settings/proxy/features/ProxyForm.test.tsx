@@ -74,7 +74,7 @@ vi.mock('./SaveBar', () => ({
     ) : null,
 }));
 
-vi.mock('@lobehub/ui', async () => {
+vi.mock('@agentasia/ui', async () => {
   const { Form: AntdForm } = await import('antd');
 
   const GroupedForm = Object.assign(

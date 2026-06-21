@@ -1,8 +1,8 @@
 // @vitest-environment node
-import type { AgentSignalSourceEvent } from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { messages, topics, users } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { AgentSignalSourceEvent } from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { messages, topics, users } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { describe, expect, it } from 'vitest';
 
 import { uuid } from '@/utils/uuid';

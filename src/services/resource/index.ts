@@ -1,4 +1,4 @@
-import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@lobechat/const';
+import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
 
 import { type FileListItem, type KnowledgeItemStatus } from '@/types/files';
 import {

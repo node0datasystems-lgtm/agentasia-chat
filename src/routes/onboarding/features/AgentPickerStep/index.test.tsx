@@ -1,7 +1,7 @@
 import {
   type AgentTemplate,
   MarketplaceCategory,
-} from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+} from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

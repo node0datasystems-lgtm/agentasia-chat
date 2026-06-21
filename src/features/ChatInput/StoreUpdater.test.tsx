@@ -1,4 +1,4 @@
-import { type MenuProps } from '@lobehub/ui';
+import { type MenuProps } from '@agentasia/ui';
 import { render } from '@testing-library/react';
 import { type PropsWithChildren, useEffect, useRef } from 'react';
 import { describe, expect, it, vi } from 'vitest';

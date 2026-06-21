@@ -1,6 +1,6 @@
-import type { EvaluateResult, RubricResult } from '@lobechat/eval-rubric';
-import { evaluate } from '@lobechat/eval-rubric';
-import type { EvalBenchmarkRubric, UserSystemAgentConfig } from '@lobechat/types';
+import type { EvaluateResult, RubricResult } from '@agentasia/eval-rubric';
+import { evaluate } from '@agentasia/eval-rubric';
+import type { EvalBenchmarkRubric, UserSystemAgentConfig } from '@agentasia/types';
 import debug from 'debug';
 
 import { UserModel } from '@/database/models/user';

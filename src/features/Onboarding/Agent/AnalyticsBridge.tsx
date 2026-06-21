@@ -1,6 +1,6 @@
 'use client';
 
-import { useAnalytics } from '@lobehub/analytics/react';
+import { useAnalytics } from '@agentasia/analytics/react';
 import { memo, useEffect } from 'react';
 
 import { setOnboardingAnalyticsClient } from '@/services/onboardingMetrics';

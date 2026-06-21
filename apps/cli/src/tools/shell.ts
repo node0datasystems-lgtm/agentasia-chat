@@ -4,7 +4,7 @@ import {
   runCommand as runCommandCore,
   type RunCommandParams,
   ShellProcessManager,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';
 
 import { log } from '../utils/logger';
 

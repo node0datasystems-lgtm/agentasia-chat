@@ -1,8 +1,8 @@
-# LobeHub gateway streaming + tab-switch test harness
+# AgentAsia gateway streaming + tab-switch test harness
 
 Captures store + DOM state at 200ms intervals so we can prove or disprove
 claims like "切回 tab 后消息回到了很早以前". Built for gateway-mode chat but
-works for any LobeHub streaming session.
+works for any AgentAsia streaming session.
 
 ## Files
 
@@ -78,8 +78,8 @@ tell store-side regressions apart from render-side regressions.
   in tool-call labels change as results arrive. analyze.mjs only flags
   `domLen` drops greater than 100 chars to ignore that noise.
 - **Never identify tabs by innerText.** The active tab's text embeds a
-  ` · <agent name>` suffix, so a search like `'LobeHub Growth'` matches the
-  active tab when the active agent happens to be LobeHub Growth — and you
+  ` · <agent name>` suffix, so a search like `'AgentAsia Growth'` matches the
+  active tab when the active agent happens to be AgentAsia Growth — and you
   end up clicking the tab you're already on. probe.js uses the stable
   `data-contextmenu-trigger` attribute (a React `useId()` value that's set
   per-tab and survives focus changes) plus `data-active="true"` to mark

@@ -19,7 +19,7 @@ type FluxDevOutput = Awaited<ReturnType<typeof fal.subscribe<'fal-ai/flux/dev'>>
 export class LobeFalAI implements LobeRuntimeAI {
   private readonly modelIdMappingOptions: ModelIdMappingOptions;
 
-  // OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; lobehub only uses the string form.
+  // OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; agentasia only uses the string form.
   constructor({
     apiKey,
     modelIdMapping,

@@ -2,7 +2,7 @@ import {
   CODEX_DEFAULT_EXECUTION_ARGS,
   CODEX_EXECUTION_MODE_FLAGS,
   CODEX_REQUIRED_ARGS,
-} from '@lobechat/heterogeneous-agents/spawn';
+} from '@agentasia/heterogeneous-agents/spawn';
 
 import type { HeterogeneousAgentBuildPlanParams, HeterogeneousAgentDriver } from '../types';
 

@@ -1,4 +1,4 @@
-import type { AgentSignalSource, BaseAction, BaseSignal } from '@lobechat/agent-signal';
+import type { AgentSignalSource, BaseAction, BaseSignal } from '@agentasia/agent-signal';
 
 /** One persisted guard lane inside a runtime scope. */
 export interface RuntimeGuardState {

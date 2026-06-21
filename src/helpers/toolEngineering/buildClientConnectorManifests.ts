@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 
 import { ConnectorToolPermission } from '@/database/schemas';
 import type { ConnectorWithTools } from '@/store/tool/slices/connector/types';

@@ -1,4 +1,4 @@
-import type { LobeAgentChatConfig, OpenAIChatMessage } from '@lobechat/types';
+import type { LobeAgentChatConfig, OpenAIChatMessage } from '@agentasia/types';
 import { z } from 'zod';
 
 // ==================== Chat Service Types ====================

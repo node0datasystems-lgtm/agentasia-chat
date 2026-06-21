@@ -11,8 +11,8 @@ import type {
   RunCommandParams,
   SearchFilesParams,
   WriteFileParams,
-} from '@lobechat/local-file-shell';
-import { type ILocalSystemService, LocalSystemExecutionRuntime } from '@lobechat/tool-runtime';
+} from '@agentasia/local-file-shell';
+import { type ILocalSystemService, LocalSystemExecutionRuntime } from '@agentasia/tool-runtime';
 
 import {
   editLocalFile,
@@ -44,7 +44,7 @@ export interface LocalSystemToolOutput {
  * interface just requires them, so we fail loudly if one is ever reached.
  */
 const unsupported = (method: string) => (): Promise<never> =>
-  Promise.reject(new Error(`${method} is not supported by the LobeHub CLI`));
+  Promise.reject(new Error(`${method} is not supported by the AgentAsia CLI`));
 
 /**
  * Adapter wiring the CLI's `@lobechat/local-file-shell` functions (file ops) and

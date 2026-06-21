@@ -1,5 +1,5 @@
-import { UserInteractionIdentifier } from '@lobechat/builtin-tool-user-interaction';
-import { DEFAULT_ONBOARDING_MODEL, DEFAULT_ONBOARDING_PROVIDER } from '@lobechat/business-const';
+import { UserInteractionIdentifier } from '@agentasia/builtin-tool-user-interaction';
+import { DEFAULT_ONBOARDING_MODEL, DEFAULT_ONBOARDING_PROVIDER } from '@agentasia/business-const';
 
 import type { BuiltinAgentDefinition } from '../../types';
 import { BUILTIN_AGENT_SLUGS } from '../../types';

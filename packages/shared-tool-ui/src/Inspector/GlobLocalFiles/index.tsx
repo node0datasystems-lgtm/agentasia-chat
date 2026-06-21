@@ -1,7 +1,7 @@
 'use client';
 
-import type { GlobFilesState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import type { GlobFilesState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

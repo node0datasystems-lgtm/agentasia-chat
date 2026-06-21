@@ -1,4 +1,4 @@
-import type { DocumentSharePermission, DocumentShareVisibility } from '@lobechat/types';
+import type { DocumentSharePermission, DocumentShareVisibility } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, eq, sql } from 'drizzle-orm';
 

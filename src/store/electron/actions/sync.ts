@@ -1,4 +1,4 @@
-import { type DataSyncConfig } from '@lobechat/electron-client-ipc';
+import { type DataSyncConfig } from '@agentasia/electron-client-ipc';
 import isEqual from 'fast-deep-equal';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';

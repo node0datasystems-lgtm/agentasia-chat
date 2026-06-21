@@ -1,4 +1,4 @@
-import { Button, Flexbox, stopPropagation, Tooltip } from '@lobehub/ui';
+import { Button, Flexbox, stopPropagation, Tooltip } from '@agentasia/ui';
 import { Image } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { isNull } from 'es-toolkit/compat';
@@ -157,7 +157,7 @@ const ImageFileItem = memo<ImageFileItemProps>(
               </div>
               <div
                 style={{
-                  color: 'var(--lobe-chat-text-tertiary)',
+                  color: 'var(--agentasia-chat-text-tertiary)',
                   fontSize: 12,
                   textAlign: 'center',
                 }}

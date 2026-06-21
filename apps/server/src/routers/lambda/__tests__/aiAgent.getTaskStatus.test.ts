@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   agents,
   chatGroups,
@@ -7,9 +7,9 @@ import {
   sessions,
   threads,
   topics,
-} from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
-import { ThreadStatus, ThreadType } from '@lobechat/types';
+} from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
+import { ThreadStatus, ThreadType } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

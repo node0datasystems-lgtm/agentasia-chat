@@ -8,7 +8,7 @@ import {
   DropdownMenuSubmenuTrigger,
   Flexbox,
   menuSharedStyles,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { cssVar, cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import type { ComponentType } from 'react';
@@ -81,7 +81,7 @@ const GenerationMultipleProvidersItem = memo<GenerationMultipleProvidersItemProp
                   </Flexbox>
                   {item.data.providers.map((p) => {
                     const pKey = menuKey(p.id, item.data.model.id);
-                    const isProviderActive = isActive ? activeKey === pKey : p.id === 'lobehub';
+                    const isProviderActive = isActive ? activeKey === pKey : p.id === 'agentasia';
                     return (
                       <Flexbox
                         horizontal

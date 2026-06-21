@@ -1,4 +1,4 @@
-import { Button, Flexbox, Text } from '@lobehub/ui';
+import { Button, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

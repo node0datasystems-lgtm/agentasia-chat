@@ -1,39 +1,39 @@
-import { LobeActivatorManifest } from '@lobechat/builtin-tool-activator';
-import { AgentBuilderManifest } from '@lobechat/builtin-tool-agent-builder';
-import { AgentDocumentsManifest } from '@lobechat/builtin-tool-agent-documents';
-import { AgentManagementManifest } from '@lobechat/builtin-tool-agent-management';
+import { LobeActivatorManifest } from '@agentasia/builtin-tool-activator';
+import { AgentBuilderManifest } from '@agentasia/builtin-tool-agent-builder';
+import { AgentDocumentsManifest } from '@agentasia/builtin-tool-agent-documents';
+import { AgentManagementManifest } from '@agentasia/builtin-tool-agent-management';
 import {
   agentSignalFeedbackIntentManifest,
   agentSignalReflectionManifest,
   agentSignalReviewManifest,
   agentSignalSkillManagementManifest,
-} from '@lobechat/builtin-tool-agent-signal';
-import { BriefManifest } from '@lobechat/builtin-tool-brief';
-import { CalculatorManifest } from '@lobechat/builtin-tool-calculator';
-import { CloudSandboxManifest } from '@lobechat/builtin-tool-cloud-sandbox';
-import { CredsManifest } from '@lobechat/builtin-tool-creds';
-import { GroupAgentBuilderManifest } from '@lobechat/builtin-tool-group-agent-builder';
-import { GroupManagementManifest } from '@lobechat/builtin-tool-group-management';
-import { KnowledgeBaseManifest } from '@lobechat/builtin-tool-knowledge-base';
-import { LobeAgentManifest } from '@lobechat/builtin-tool-lobe-agent';
-import { LobeDeliveryCheckerManifest } from '@lobechat/builtin-tool-lobe-delivery-checker';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { MemoryManifest } from '@lobechat/builtin-tool-memory';
-import { MessageManifest } from '@lobechat/builtin-tool-message';
-import { PageAgentManifest } from '@lobechat/builtin-tool-page-agent';
-import { RemoteDeviceManifest } from '@lobechat/builtin-tool-remote-device';
-import { selfFeedbackIntentManifest } from '@lobechat/builtin-tool-self-iteration';
-import { SkillMaintainerManifest } from '@lobechat/builtin-tool-skill-maintainer';
-import { SkillStoreManifest } from '@lobechat/builtin-tool-skill-store';
-import { SkillsManifest } from '@lobechat/builtin-tool-skills';
-import { TaskManifest } from '@lobechat/builtin-tool-task';
-import { TopicReferenceManifest } from '@lobechat/builtin-tool-topic-reference';
-import { UserInteractionManifest } from '@lobechat/builtin-tool-user-interaction';
-import { VerifyToolManifest } from '@lobechat/builtin-tool-verify';
-import { WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
-import { WebOnboardingManifest } from '@lobechat/builtin-tool-web-onboarding';
-import { isDesktop, RECOMMENDED_SKILLS, RecommendedSkillType } from '@lobechat/const';
-import { type LobeBuiltinTool } from '@lobechat/types';
+} from '@agentasia/builtin-tool-agent-signal';
+import { BriefManifest } from '@agentasia/builtin-tool-brief';
+import { CalculatorManifest } from '@agentasia/builtin-tool-calculator';
+import { CloudSandboxManifest } from '@agentasia/builtin-tool-cloud-sandbox';
+import { CredsManifest } from '@agentasia/builtin-tool-creds';
+import { GroupAgentBuilderManifest } from '@agentasia/builtin-tool-group-agent-builder';
+import { GroupManagementManifest } from '@agentasia/builtin-tool-group-management';
+import { KnowledgeBaseManifest } from '@agentasia/builtin-tool-knowledge-base';
+import { LobeAgentManifest } from '@agentasia/builtin-tool-lobe-agent';
+import { LobeDeliveryCheckerManifest } from '@agentasia/builtin-tool-lobe-delivery-checker';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { MemoryManifest } from '@agentasia/builtin-tool-memory';
+import { MessageManifest } from '@agentasia/builtin-tool-message';
+import { PageAgentManifest } from '@agentasia/builtin-tool-page-agent';
+import { RemoteDeviceManifest } from '@agentasia/builtin-tool-remote-device';
+import { selfFeedbackIntentManifest } from '@agentasia/builtin-tool-self-iteration';
+import { SkillMaintainerManifest } from '@agentasia/builtin-tool-skill-maintainer';
+import { SkillStoreManifest } from '@agentasia/builtin-tool-skill-store';
+import { SkillsManifest } from '@agentasia/builtin-tool-skills';
+import { TaskManifest } from '@agentasia/builtin-tool-task';
+import { TopicReferenceManifest } from '@agentasia/builtin-tool-topic-reference';
+import { UserInteractionManifest } from '@agentasia/builtin-tool-user-interaction';
+import { VerifyToolManifest } from '@agentasia/builtin-tool-verify';
+import { WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
+import { WebOnboardingManifest } from '@agentasia/builtin-tool-web-onboarding';
+import { isDesktop, RECOMMENDED_SKILLS, RecommendedSkillType } from '@agentasia/const';
+import { type LobeBuiltinTool } from '@agentasia/types';
 
 /**
  * Default tool IDs that will always be added to the tools list.

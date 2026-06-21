@@ -1,8 +1,8 @@
 'use client';
 
-import { type ComposioAppType } from '@lobechat/const';
-import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { type ComposioAppType } from '@agentasia/const';
+import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Button } from 'antd';
 import { cssVar } from 'antd-style';
 import {
@@ -196,13 +196,13 @@ const ComposioSkillItem = memo<ComposioSkillItemProps>(
       if (!server) return;
       confirmModal({
         cancelText: t('cancel', { ns: 'common' }),
-        content: t('tools.lobehubSkill.disconnectConfirm.desc', { name: serverType.label }),
+        content: t('tools.agentasiaSkill.disconnectConfirm.desc', { name: serverType.label }),
         okButtonProps: { danger: true },
-        okText: t('tools.lobehubSkill.disconnect'),
+        okText: t('tools.agentasiaSkill.disconnect'),
         onOk: async () => {
           await removeComposioConnection(server.identifier);
         },
-        title: t('tools.lobehubSkill.disconnectConfirm.title', { name: serverType.label }),
+        title: t('tools.agentasiaSkill.disconnectConfirm.title', { name: serverType.label }),
       });
     };
 

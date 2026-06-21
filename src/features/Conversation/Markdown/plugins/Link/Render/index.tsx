@@ -1,6 +1,6 @@
 'use client';
 
-import { Github } from '@lobehub/icons';
+import { Github } from '@agentasia/icons';
 import { Mail } from 'lucide-react';
 import { memo } from 'react';
 

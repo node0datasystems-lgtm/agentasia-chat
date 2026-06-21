@@ -1,7 +1,7 @@
-import { getAgentPersistConfig } from '@lobechat/builtin-agents';
-import { INBOX_SESSION_ID } from '@lobechat/const';
-import type { AgentRankItem } from '@lobechat/types';
-import { pruneWorkingDirByDeviceDeletes } from '@lobechat/types';
+import { getAgentPersistConfig } from '@agentasia/builtin-agents';
+import { INBOX_SESSION_ID } from '@agentasia/const';
+import type { AgentRankItem } from '@agentasia/types';
+import { pruneWorkingDirByDeviceDeletes } from '@agentasia/types';
 import { and, count, desc, eq, gt, ilike, inArray, isNull, ne, or, sql } from 'drizzle-orm';
 import type { PartialDeep } from 'type-fest';
 

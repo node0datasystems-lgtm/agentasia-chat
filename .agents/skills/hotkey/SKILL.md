@@ -1,6 +1,6 @@
 ---
 name: hotkey
-description: 'Add or edit LobeHub keyboard shortcuts. Use for HotkeyEnum, HOTKEYS_REGISTRATION, combineKeys, useHotkeyById, tooltip hotkeys, shortcut scope, conflicts, or Cmd/Ctrl key combos.'
+description: 'Add or edit AgentAsia keyboard shortcuts. Use for HotkeyEnum, HOTKEYS_REGISTRATION, combineKeys, useHotkeyById, tooltip hotkeys, shortcut scope, conflicts, or Cmd/Ctrl key combos.'
 user-invocable: false
 ---
 
@@ -24,7 +24,7 @@ export const HotkeyEnum = {
 In `src/const/hotkeys.ts`:
 
 ```typescript
-import { KeyMapEnum as Key, combineKeys } from '@lobehub/ui';
+import { KeyMapEnum as Key, combineKeys } from '@agentasia/ui';
 
 export const HOTKEYS_REGISTRATION: HotkeyRegistration = [
   {

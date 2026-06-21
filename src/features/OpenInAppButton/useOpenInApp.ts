@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import type { DetectedApp, OpenInAppId } from '@lobechat/electron-client-ipc';
+import { isDesktop } from '@agentasia/const';
+import type { DetectedApp, OpenInAppId } from '@agentasia/electron-client-ipc';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';

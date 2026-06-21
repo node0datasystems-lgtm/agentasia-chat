@@ -4,8 +4,8 @@ import {
   createGlobLocalFilesInspector,
   createGrepContentInspector,
   createRunCommandInspector,
-} from '@lobechat/shared-tool-ui/inspectors';
-import type { BuiltinInspector } from '@lobechat/types';
+} from '@agentasia/shared-tool-ui/inspectors';
+import type { BuiltinInspector } from '@agentasia/types';
 
 import { ClaudeCodeApiName } from '../../types';
 import { AgentInspector } from './Agent';

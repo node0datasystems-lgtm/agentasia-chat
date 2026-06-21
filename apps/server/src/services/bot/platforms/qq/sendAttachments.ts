@@ -1,4 +1,4 @@
-import type { QQApiClient } from '@lobechat/chat-adapter-qq';
+import type { QQApiClient } from '@agentasia/chat-adapter-qq';
 import debug from 'debug';
 
 import type { BotMessageAttachment } from '../types';

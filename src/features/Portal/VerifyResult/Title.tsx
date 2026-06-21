@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStyles } from 'antd-style';
 import { CheckCircle2, Circle, CircleAlert, LoaderCircle, XCircle } from 'lucide-react';
 

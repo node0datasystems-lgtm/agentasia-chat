@@ -1,7 +1,7 @@
 'use client';
 
-import { type BuiltinInspectorProps } from '@lobechat/types';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { type BuiltinInspectorProps } from '@agentasia/types';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { type TFunction } from 'i18next';
 import { memo } from 'react';

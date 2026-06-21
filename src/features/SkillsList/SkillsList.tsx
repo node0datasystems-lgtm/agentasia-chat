@@ -1,4 +1,4 @@
-import { EMPTY_ARRAY } from '@lobechat/const';
+import { EMPTY_ARRAY } from '@agentasia/const';
 import {
   ContextMenuTrigger,
   Flexbox,
@@ -6,8 +6,8 @@ import {
   Icon,
   Text,
   Tooltip,
-} from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+} from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronRightIcon, FileIcon, FolderIcon, type LucideIcon } from 'lucide-react';
 import type React from 'react';

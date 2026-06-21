@@ -1,4 +1,4 @@
-import type { AgentStreamEvent } from '@lobechat/heterogeneous-agents/spawn';
+import type { AgentStreamEvent } from '@agentasia/heterogeneous-agents/spawn';
 
 import type { TrpcClient } from '../api/client';
 import type { IngestSink } from './BatchIngester';

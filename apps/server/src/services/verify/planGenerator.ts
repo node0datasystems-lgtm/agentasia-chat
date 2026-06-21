@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto';
 
-import { TRACING_SCENARIOS, VERIFY_INSTRUCTION_FILE_TYPE } from '@lobechat/const';
-import type { TracingOptions } from '@lobechat/llm-generation-tracing';
-import type { VerifyCheckItem } from '@lobechat/types';
+import { TRACING_SCENARIOS, VERIFY_INSTRUCTION_FILE_TYPE } from '@agentasia/const';
+import type { TracingOptions } from '@agentasia/llm-generation-tracing';
+import type { VerifyCheckItem } from '@agentasia/types';
 import debug from 'debug';
 
 import { DocumentModel } from '@/database/models/document';

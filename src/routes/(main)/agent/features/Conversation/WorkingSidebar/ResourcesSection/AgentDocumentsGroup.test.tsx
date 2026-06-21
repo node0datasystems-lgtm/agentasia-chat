@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_FILE_TYPE,
   AGENT_DOCUMENT_SKILL_CATEGORY,
   AGENT_SIGNAL_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { fireEvent, render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import type * as ReactRouterDom from 'react-router';
@@ -20,11 +20,11 @@ const openDocumentMock = vi.hoisted(() => vi.fn());
 const removeDocumentMock = vi.hoisted(() => vi.fn());
 const useParamsMock = vi.hoisted(() => vi.fn());
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   confirmModal: modalConfirm,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Accordion: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   AccordionItem: ({ children, title }: { children?: ReactNode; title?: ReactNode }) => (
     <div>

@@ -1,8 +1,8 @@
 'use client';
 
-import { AGENT_PROFILE_URL, DEFAULT_INBOX_AVATAR, INBOX_SESSION_ID } from '@lobechat/const';
-import { Accordion, AccordionItem, ActionIcon, Avatar, Flexbox, Text } from '@lobehub/ui';
-import { useModalContext } from '@lobehub/ui/base-ui';
+import { AGENT_PROFILE_URL, DEFAULT_INBOX_AVATAR, INBOX_SESSION_ID } from '@agentasia/const';
+import { Accordion, AccordionItem, ActionIcon, Avatar, Flexbox, Text } from '@agentasia/ui';
+import { useModalContext } from '@agentasia/ui/base-ui';
 import { Form, Input, InputNumber, Select, Space } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { SquareArrowOutUpRight } from 'lucide-react';

@@ -1,4 +1,4 @@
-import { ERROR_CODE_SPECS, getErrorCodeSpec } from '@lobechat/model-runtime';
+import { ERROR_CODE_SPECS, getErrorCodeSpec } from '@agentasia/model-runtime';
 
 type LLMErrorKind = 'retry' | 'stop';
 

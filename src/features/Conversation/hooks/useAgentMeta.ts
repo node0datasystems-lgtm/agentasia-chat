@@ -1,4 +1,4 @@
-import { type MetaData } from '@lobechat/types';
+import { type MetaData } from '@agentasia/types';
 import { useMemo } from 'react';
 
 import { useAgentStore } from '@/store/agent';

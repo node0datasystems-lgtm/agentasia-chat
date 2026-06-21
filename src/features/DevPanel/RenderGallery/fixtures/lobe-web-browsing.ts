@@ -7,35 +7,35 @@ export default defineFixtures({
   fixtures: {
     crawlMultiPages: single({
       args: {
-        urls: ['https://lobehub.com', 'https://docs.lobehub.com'],
+        urls: ['https://agentasia.ai', 'https://docs.agentasia.ai'],
       },
       pluginState: {
         results: [
           {
             crawler: 'firecrawl',
             data: {
-              content: 'LobeHub ships desktop and web experiences for AI collaboration.',
+              content: 'AgentAsia ships desktop and web experiences for AI collaboration.',
               description: 'Product homepage',
-              title: 'LobeHub',
-              url: 'https://lobehub.com',
+              title: 'AgentAsia',
+              url: 'https://agentasia.ai',
             },
-            originalUrl: 'https://lobehub.com',
+            originalUrl: 'https://agentasia.ai',
           },
           {
             crawler: 'firecrawl',
             data: {
               content: 'Developer documentation for routing, tooling, and local testing.',
               description: 'Docs homepage',
-              title: 'LobeHub Docs',
-              url: 'https://docs.lobehub.com',
+              title: 'AgentAsia Docs',
+              url: 'https://docs.agentasia.ai',
             },
-            originalUrl: 'https://docs.lobehub.com',
+            originalUrl: 'https://docs.agentasia.ai',
           },
         ],
       },
     }),
     crawlSinglePage: single({
-      args: { url: 'https://lobehub.com/blog' },
+      args: { url: 'https://agentasia.ai/blog' },
       pluginState: {
         results: [
           {
@@ -43,10 +43,10 @@ export default defineFixtures({
             data: {
               content: 'Recent product updates and engineering notes.',
               description: 'Blog landing page',
-              title: 'LobeHub Blog',
-              url: 'https://lobehub.com/blog',
+              title: 'AgentAsia Blog',
+              url: 'https://agentasia.ai/blog',
             },
-            originalUrl: 'https://lobehub.com/blog',
+            originalUrl: 'https://agentasia.ai/blog',
           },
         ],
       },
@@ -54,12 +54,12 @@ export default defineFixtures({
     search: variants([
       {
         args: {
-          query: 'LobeHub devtools preview route',
+          query: 'AgentAsia devtools preview route',
           searchEngines: ['google', 'bing'],
         },
         label: 'With results',
         pluginState: {
-          query: 'LobeHub devtools preview route',
+          query: 'AgentAsia devtools preview route',
           results: [
             {
               content: 'Documentation and implementation notes about local preview tooling.',

@@ -2,7 +2,7 @@ import {
   type IdentityListResult,
   type NewUserMemoryIdentity,
   type UpdateUserMemoryIdentity,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { uniqBy } from 'es-toolkit/compat';
 import { produce } from 'immer';
 import { type SWRResponse } from 'swr';

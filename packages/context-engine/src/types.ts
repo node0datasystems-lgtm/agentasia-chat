@@ -1,4 +1,4 @@
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 
 /**
  * Consumer-side metadata extensions for PipelineContext.metadata.
@@ -259,4 +259,4 @@ export class PipelineError extends Error {
   }
 }
 
-export type { UIChatMessage } from '@lobechat/types';
+export type { UIChatMessage } from '@agentasia/types';

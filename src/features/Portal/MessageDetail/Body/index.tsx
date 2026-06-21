@@ -1,4 +1,4 @@
-import { Flexbox, Markdown } from '@lobehub/ui';
+import { Flexbox, Markdown } from '@agentasia/ui';
 import { css, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { useEffect } from 'react';

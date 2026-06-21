@@ -5,9 +5,9 @@ import type {
   InitDocumentArgs,
   ModifyNodesArgs,
   ReplaceTextArgs,
-} from '@lobechat/editor-runtime';
-import type { BuiltinToolResult, ToolAfterCallContext } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/editor-runtime';
+import type { BuiltinToolResult, ToolAfterCallContext } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 import debug from 'debug';
 
 import type {

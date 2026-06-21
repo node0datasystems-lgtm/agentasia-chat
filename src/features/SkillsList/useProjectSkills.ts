@@ -1,4 +1,4 @@
-import { type ListProjectSkillsResult, type ProjectSkillItem } from '@lobechat/electron-client-ipc';
+import { type ListProjectSkillsResult, type ProjectSkillItem } from '@agentasia/electron-client-ipc';
 import { EyeIcon, PencilIcon, Trash2Icon } from 'lucide-react';
 import path from 'pathe';
 import { useMemo } from 'react';

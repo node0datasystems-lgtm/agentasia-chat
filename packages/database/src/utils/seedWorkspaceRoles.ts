@@ -5,7 +5,7 @@ import {
   WORKSPACE_ROLE_PERMISSIONS,
   WORKSPACE_SYSTEM_ROLES,
   type WorkspaceSystemRoleName,
-} from '@lobechat/const/rbac';
+} from '@agentasia/const/rbac';
 import { and, eq, inArray } from 'drizzle-orm';
 
 import { permissions, rolePermissions, roles, userRoles } from '../schemas/rbac';

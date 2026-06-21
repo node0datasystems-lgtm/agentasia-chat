@@ -8,7 +8,7 @@ import {
   Flexbox,
   stopPropagation,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { ArrowDownUpIcon } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';

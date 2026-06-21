@@ -2309,7 +2309,7 @@
   {
     "children": {
       "improvements": [
-        "Fix lobehub provider /chat in desktop."
+        "Fix agentasia provider /chat in desktop."
       ]
     },
     "date": "2025-07-21",
@@ -3385,7 +3385,7 @@
   {
     "children": {
       "fixes": [
-        "Bump @lobehub/ui to 2.1.7."
+        "Bump @agentasia/ui to 2.1.7."
       ]
     },
     "date": "2025-05-21",
@@ -9662,7 +9662,7 @@
   {
     "children": {
       "improvements": [
-        "Move model and provider icon components to @lobehub/icons."
+        "Move model and provider icon components to @agentasia/icons."
       ]
     },
     "date": "2024-08-28",

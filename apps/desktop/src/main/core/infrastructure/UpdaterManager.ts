@@ -4,7 +4,7 @@ import type {
   UpdateInfo,
   UpdaterStage,
   UpdaterState,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { app as electronApp } from 'electron';
 import log from 'electron-log';
 import { autoUpdater } from 'electron-updater';
@@ -417,9 +417,9 @@ export class UpdaterManager {
       );
 
       autoUpdater.setFeedURL({
-        owner: 'lobehub',
+        owner: 'agentasia',
         provider: 'github',
-        repo: 'lobehub',
+        repo: 'agentasia',
       });
 
       autoUpdater.allowPrerelease = this.currentChannel !== 'stable';

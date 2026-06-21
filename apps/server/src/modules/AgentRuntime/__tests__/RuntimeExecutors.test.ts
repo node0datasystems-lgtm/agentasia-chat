@@ -1,5 +1,5 @@
-import { type AgentState } from '@lobechat/agent-runtime';
-import { consumeStreamUntilDone } from '@lobechat/model-runtime';
+import { type AgentState } from '@agentasia/agent-runtime';
+import { consumeStreamUntilDone } from '@agentasia/model-runtime';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as ContextEngineering from '@/server/modules/Mecha/ContextEngineering';
@@ -79,7 +79,7 @@ vi.mock('@/business/client/model-bank/loadModels', () => ({
 vi.mock('model-bank', () => ({
   LOBE_DEFAULT_MODEL_LIST: mockBuiltinModels,
   ModelProvider: {
-    LobeHub: 'lobehub',
+    AgentAsia: 'agentasia',
   },
 }));
 
@@ -662,7 +662,7 @@ describe('RuntimeExecutors', () => {
 
     it('retries empty completions on the branded provider then throws ModelEmptyError', async () => {
       // A "gave up" turn: no onText / onThinking / onToolsCalling and ~0 output
-      // tokens — mirrors the empty completion repro (provider=lobehub, `out=1 token`).
+      // tokens — mirrors the empty completion repro (provider=agentasia, `out=1 token`).
       // The branded provider has 0 general retries, but empty completions get a
       // dedicated budget so the request is still re-issued before failing.
       vi.useFakeTimers();
@@ -685,7 +685,7 @@ describe('RuntimeExecutors', () => {
             payload: {
               messages: [{ content: 'Hello', role: 'user' }],
               model: 'deepseek-v4-pro',
-              provider: 'lobehub',
+              provider: 'agentasia',
               tools: [],
             },
             type: 'call_llm' as const,
@@ -725,7 +725,7 @@ describe('RuntimeExecutors', () => {
           payload: {
             messages: [{ content: 'Hello', role: 'user' }],
             model: 'deepseek-v4-pro',
-            provider: 'lobehub',
+            provider: 'agentasia',
             tools: [],
           },
           type: 'call_llm' as const,
@@ -1606,7 +1606,7 @@ describe('RuntimeExecutors', () => {
         );
       });
 
-      it('should resolve LobeHub routed model knowledge cutoff by model id fallback', async () => {
+      it('should resolve AgentAsia routed model knowledge cutoff by model id fallback', async () => {
         const ctxWithConfig: RuntimeExecutorContext = {
           ...ctx,
           agentConfig: {
@@ -1622,7 +1622,7 @@ describe('RuntimeExecutors', () => {
             payload: {
               messages: [{ content: 'Hello', role: 'user' }],
               model: 'gpt-4',
-              provider: 'lobehub',
+              provider: 'agentasia',
             },
             type: 'call_llm' as const,
           },
@@ -1634,7 +1634,7 @@ describe('RuntimeExecutors', () => {
         );
       });
 
-      it('should omit model knowledge cutoff for unknown non-LobeHub providers', async () => {
+      it('should omit model knowledge cutoff for unknown non-AgentAsia providers', async () => {
         const ctxWithConfig: RuntimeExecutorContext = {
           ...ctx,
           agentConfig: {
@@ -2042,13 +2042,13 @@ describe('RuntimeExecutors', () => {
         expect(callArgs.capabilities.isCanUseVision('unknown', 'unknown')).toBe(false);
         expect(callArgs.capabilities.isCanUseVideo('unknown', 'unknown')).toBe(false);
 
-        // Aggregator (e.g. lobehub) routes a known model id under a different
+        // Aggregator (e.g. agentasia) routes a known model id under a different
         // provider — visual capability flags fall back to the upstream model card.
-        expect(callArgs.capabilities.isCanUseVision('gpt-4', 'lobehub')).toBe(true);
+        expect(callArgs.capabilities.isCanUseVision('gpt-4', 'agentasia')).toBe(true);
         expect(
-          callArgs.capabilities.isCanUseVideo('gemini-3.1-flash-lite-preview', 'lobehub'),
+          callArgs.capabilities.isCanUseVideo('gemini-3.1-flash-lite-preview', 'agentasia'),
         ).toBe(true);
-        expect(callArgs.capabilities.isCanUseVision('no-tools-model', 'lobehub')).toBe(false);
+        expect(callArgs.capabilities.isCanUseVision('no-tools-model', 'agentasia')).toBe(false);
       });
 
       it('should filter disabled files and knowledgeBases from agentConfig', async () => {
@@ -4440,7 +4440,7 @@ describe('RuntimeExecutors', () => {
           messages: [{ content: 'Hello', role: 'user' }],
           model: 'gpt-4',
           parentMessageId: 'parent-msg-123',
-          provider: 'lobehub',
+          provider: 'agentasia',
           tools: [],
         },
         type: 'call_llm' as const,

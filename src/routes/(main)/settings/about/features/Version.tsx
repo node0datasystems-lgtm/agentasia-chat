@@ -1,10 +1,10 @@
-import { BRANDING_NAME } from '@lobechat/business-const';
+import { BRANDING_NAME } from '@agentasia/business-const';
 import {
   getElectronIpc,
   type UpdaterState,
   useWatchBroadcast,
-} from '@lobechat/electron-client-ipc';
-import { Block, Button, Flexbox, Tag } from '@lobehub/ui';
+} from '@agentasia/electron-client-ipc';
+import { Block, Button, Flexbox, Tag } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

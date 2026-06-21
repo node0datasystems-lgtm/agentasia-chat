@@ -1,6 +1,6 @@
-import { type UpdateInfo } from '@lobechat/electron-client-ipc';
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
-import { Button, Flexbox, Icon, Markdown } from '@lobehub/ui';
+import { type UpdateInfo } from '@agentasia/electron-client-ipc';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
+import { Button, Flexbox, Icon, Markdown } from '@agentasia/ui';
 import { Modal } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CircleFadingArrowUp } from 'lucide-react';

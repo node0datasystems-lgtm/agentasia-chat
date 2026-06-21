@@ -1,6 +1,6 @@
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
-import { DEFAULT_SETTINGS } from '@lobechat/config';
-import { DEFAULT_MINI_MODEL, DEFAULT_MODEL } from '@lobechat/const';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
+import { DEFAULT_SETTINGS } from '@agentasia/config';
+import { DEFAULT_MINI_MODEL, DEFAULT_MODEL } from '@agentasia/const';
 import { LOBE_DEFAULT_MODEL_LIST } from 'model-bank';
 import { DEFAULT_MODEL_PROVIDER_LIST } from 'model-bank/modelProviders';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -46,18 +46,18 @@ describe('AiModelService', () => {
           type: 'chat',
         },
         {
-          displayName: 'LobeHub Onboarding',
+          displayName: 'AgentAsia Onboarding',
           enabled: true,
-          id: 'lobehub-onboarding-v1',
+          id: 'agentasia-onboarding-v1',
           type: 'chat',
           visible: false,
         },
       ]);
 
-      const result = await aiModelService.getAiProviderModelList('lobehub');
+      const result = await aiModelService.getAiProviderModelList('agentasia');
 
       expect(mockLambdaClient.aiModel.getAiProviderModelList.query).toHaveBeenCalledWith({
-        id: 'lobehub',
+        id: 'agentasia',
       });
       expect(result.map((model) => model.id)).toEqual(['deepseek-v4-pro']);
     });

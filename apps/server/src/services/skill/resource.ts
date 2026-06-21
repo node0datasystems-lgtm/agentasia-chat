@@ -1,10 +1,10 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   type SkillResourceContent,
   type SkillResourceMeta,
   type SkillResourceTreeNode,
-} from '@lobechat/types';
-import { getMimeType } from '@lobechat/utils';
+} from '@agentasia/types';
+import { getMimeType } from '@agentasia/utils';
 import debug from 'debug';
 import { sha256 } from 'js-sha256';
 
@@ -12,7 +12,7 @@ import { FileService } from '@/server/services/file';
 
 import { SkillResourceError } from './errors';
 
-const log = debug('lobe-chat:service:skill-resource');
+const log = debug('agentasia-chat:service:skill-resource');
 
 function isTextMimeType(mimeType: string): boolean {
   if (mimeType.startsWith('text/')) return true;

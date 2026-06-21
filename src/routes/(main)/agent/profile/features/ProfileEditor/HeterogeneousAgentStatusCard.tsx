@@ -1,13 +1,13 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { type ClaudeAuthStatus, type ToolStatus } from '@lobechat/electron-client-ipc';
+import { isDesktop } from '@agentasia/const';
+import { type ClaudeAuthStatus, type ToolStatus } from '@agentasia/electron-client-ipc';
 import {
   getHeterogeneousAgentClientConfig,
   isRemoteHeterogeneousType,
-} from '@lobechat/heterogeneous-agents/client';
-import type { HeterogeneousProviderConfig } from '@lobechat/types';
-import { ActionIcon, CopyButton, Flexbox, Icon, Input, Tag, Text, Tooltip } from '@lobehub/ui';
+} from '@agentasia/heterogeneous-agents/client';
+import type { HeterogeneousProviderConfig } from '@agentasia/types';
+import { ActionIcon, CopyButton, Flexbox, Icon, Input, Tag, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Loader2Icon, PencilLine, RefreshCw, XCircle } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

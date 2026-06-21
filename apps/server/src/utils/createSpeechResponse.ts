@@ -1,4 +1,4 @@
-import { ChatErrorType } from '@lobechat/types';
+import { ChatErrorType } from '@agentasia/types';
 
 import { createErrorResponse } from '@/utils/errorResponse';
 import { createNodeResponse } from '@/utils/server/response';

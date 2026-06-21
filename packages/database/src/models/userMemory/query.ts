@@ -2,8 +2,8 @@ import type {
   QueryTaxonomyOptionsParams,
   QueryTaxonomyOptionsResult,
   SearchMemoryParams,
-} from '@lobechat/types';
-import { LayersEnum } from '@lobechat/types';
+} from '@agentasia/types';
+import { LayersEnum } from '@agentasia/types';
 import type { AnyColumn, SQL } from 'drizzle-orm';
 import {
   and,

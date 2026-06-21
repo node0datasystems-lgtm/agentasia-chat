@@ -1,5 +1,5 @@
-import { TRACING_SCENARIOS } from '@lobechat/const';
-import type { TracingOptions } from '@lobechat/llm-generation-tracing';
+import { TRACING_SCENARIOS } from '@agentasia/const';
+import type { TracingOptions } from '@agentasia/llm-generation-tracing';
 import {
   chainGenerateBrief,
   chainJudgeBriefEmit,
@@ -13,15 +13,15 @@ import {
   TASK_TOPIC_HANDOFF_PROMPT_VERSION,
   TASK_TOPIC_HANDOFF_SCHEMA,
   TASK_TOPIC_HANDOFF_SCHEMA_NAME,
-} from '@lobechat/prompts';
+} from '@agentasia/prompts';
 import type {
   BriefArtifacts,
   BriefDecision,
   TaskItem,
   TaskSchedulerContext,
   TaskTopicHandoff,
-} from '@lobechat/types';
-import { DEFAULT_BRIEF_ACTIONS } from '@lobechat/types';
+} from '@agentasia/types';
+import { DEFAULT_BRIEF_ACTIONS } from '@agentasia/types';
 import debug from 'debug';
 
 import { BriefModel } from '@/database/models/brief';

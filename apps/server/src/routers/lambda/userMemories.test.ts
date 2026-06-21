@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum, TypesEnum } from '@lobechat/types';
+import { LayersEnum, TypesEnum } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { getServerDB } from '@/database/core/db-adaptor';

@@ -1,4 +1,4 @@
-const { defineConfig } = require('@lobehub/i18n-cli');
+const { defineConfig } = require('@agentasia/i18n-cli');
 const fs = require('node:fs');
 const path = require('node:path');
 

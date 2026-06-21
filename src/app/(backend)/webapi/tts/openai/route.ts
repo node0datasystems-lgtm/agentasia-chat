@@ -1,5 +1,5 @@
-import { type OpenAITTSPayload } from '@lobehub/tts';
-import { createOpenaiAudioSpeech } from '@lobehub/tts/server';
+import { type OpenAITTSPayload } from '@agentasia/tts';
+import { createOpenaiAudioSpeech } from '@agentasia/tts/server';
 
 import { createBizOpenAI } from '@/app/(backend)/_deprecated/createBizOpenAI';
 import { createSpeechResponse } from '@/server/utils/createSpeechResponse';

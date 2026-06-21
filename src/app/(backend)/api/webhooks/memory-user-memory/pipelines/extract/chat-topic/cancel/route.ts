@@ -4,7 +4,7 @@ import {
   AsyncTaskStatus,
   AsyncTaskType,
   type UserMemoryExtractionMetadata,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { Client as WorkflowClient } from '@upstash/workflow';
 import { and, eq } from 'drizzle-orm';
 import { NextResponse } from 'next/server';

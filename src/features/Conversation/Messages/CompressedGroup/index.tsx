@@ -1,6 +1,6 @@
 'use client';
 
-import type { CompressionGroupMetadata, UIChatMessage } from '@lobechat/types';
+import type { CompressionGroupMetadata, UIChatMessage } from '@agentasia/types';
 import {
   ActionIcon,
   Flexbox,
@@ -9,8 +9,8 @@ import {
   ScrollShadow,
   Tabs,
   type TabsProps,
-} from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { createStaticStyles, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronDown, ChevronUp, History, Sparkles, Undo2 } from 'lucide-react';

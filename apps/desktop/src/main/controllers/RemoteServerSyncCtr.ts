@@ -4,7 +4,7 @@ import http from 'node:http';
 import https from 'node:https';
 import { URL } from 'node:url';
 
-import type { ProxyTRPCStreamRequestParams } from '@lobechat/electron-client-ipc';
+import type { ProxyTRPCStreamRequestParams } from '@agentasia/electron-client-ipc';
 import type {IpcMainEvent, WebContents } from 'electron';
 import { ipcMain } from 'electron';
 import { HttpProxyAgent } from 'http-proxy-agent';

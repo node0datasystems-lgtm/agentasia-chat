@@ -1,5 +1,5 @@
-import { DEFAULT_PREFERENCE } from '@lobechat/const';
-import type { UserAgentOnboarding, UserOnboarding } from '@lobechat/types';
+import { DEFAULT_PREFERENCE } from '@agentasia/const';
+import type { UserAgentOnboarding, UserOnboarding } from '@agentasia/types';
 import { sql } from 'drizzle-orm';
 import { boolean, index, jsonb, pgTable, text, varchar } from 'drizzle-orm/pg-core';
 

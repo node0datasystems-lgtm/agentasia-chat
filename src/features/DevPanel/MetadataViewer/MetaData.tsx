@@ -1,4 +1,4 @@
-import { Form, Input, TextArea } from '@lobehub/ui';
+import { Form, Input, TextArea } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useHead, useTitle } from './useHead';

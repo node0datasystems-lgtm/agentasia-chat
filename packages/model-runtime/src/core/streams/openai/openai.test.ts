@@ -3428,7 +3428,7 @@ describe('OpenAIStream', () => {
   it('should filter out empty url_citation annotations (OpenRouter built-in search)', async () => {
     // OpenRouter's built-in web search may emit empty citation objects like `{}`,
     // which previously crashed rendering (`new URL(undefined)`) and message persistence.
-    // See https://github.com/lobehub/lobehub/issues/15043
+    // See https://github.com/node0datasystems-lgtm/agentasia-chat/issues/15043
     const mockOpenAIStream = new ReadableStream({
       start(controller) {
         controller.enqueue({

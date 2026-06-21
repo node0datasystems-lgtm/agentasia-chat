@@ -1,7 +1,7 @@
 'use client';
 
 import { LoadingOutlined } from '@ant-design/icons';
-import { Alert, Flexbox, Icon } from '@lobehub/ui';
+import { Alert, Flexbox, Icon } from '@agentasia/ui';
 import { App, Modal, Spin, Typography, Upload } from 'antd';
 import { sha256 } from 'js-sha256';
 import { ArrowLeftRight, InboxIcon, Sparkles, Upload as UploadIcon } from 'lucide-react';

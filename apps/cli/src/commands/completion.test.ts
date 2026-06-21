@@ -41,8 +41,8 @@ describe('completion command', () => {
     const program = createProgram();
     await program.parseAsync(['node', 'test', 'completion']);
 
-    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('compdef _lobehub_completion'));
-    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('lh lobe lobehub'));
+    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('compdef _agentasia_completion'));
+    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('lh lobe agentasia'));
     expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('"${(@)words[@]:1}"'));
   });
 

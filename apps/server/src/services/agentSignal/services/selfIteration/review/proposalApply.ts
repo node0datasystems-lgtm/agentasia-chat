@@ -1,6 +1,6 @@
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
-import { pickString, pickTrimmedString } from '@lobechat/utils';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
+import { pickString, pickTrimmedString } from '@agentasia/utils';
 
 import type { ToolSet, ToolWriteResult } from '../tools/shared';
 import type { RunResult } from '../types';

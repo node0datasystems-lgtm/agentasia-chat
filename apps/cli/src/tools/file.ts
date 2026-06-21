@@ -6,4 +6,4 @@ export {
   readLocalFile,
   searchLocalFiles,
   writeLocalFile,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';

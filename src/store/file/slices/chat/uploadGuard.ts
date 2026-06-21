@@ -123,7 +123,7 @@ const AUDIO_EXTENSION_MIME_TYPES: Record<string, string> = {
 /**
  * Returns the canonical audio mime for a filename whose extension is a known audio container,
  * or `undefined` otherwise. Use this to backfill/override an empty or mis-detected mime so the
- * file is classified and rendered as audio. See lobehub/lobehub#15988.
+ * file is classified and rendered as audio. See node0datasystems-lgtm/agentasia-chat#15988.
  */
 export const audioMimeFromExtension = (filename: string): string | undefined =>
   AUDIO_EXTENSION_MIME_TYPES[getExtension(filename)];

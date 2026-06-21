@@ -1,6 +1,6 @@
 import type { GenerateVideosConfig, GoogleGenAI, Image } from '@google/genai';
 import { GenerateVideosOperation } from '@google/genai';
-import { imageUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64 } from '@agentasia/utils';
 import debug from 'debug';
 
 import type { CreateVideoPayload, CreateVideoResponse } from '../../types/video';

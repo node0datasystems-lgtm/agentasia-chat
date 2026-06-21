@@ -1,4 +1,4 @@
-import type { RuntimeGuardResult, RuntimeProcessorResult } from '@lobechat/agent-signal';
+import type { RuntimeGuardResult, RuntimeProcessorResult } from '@agentasia/agent-signal';
 
 import type { RuntimeProcessorContext } from './context';
 

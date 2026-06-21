@@ -1,4 +1,4 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import debug from 'debug';
 import { type Configuration, type KoaContextWithOIDC } from 'oidc-provider';
 import Provider, { errors } from 'oidc-provider';
@@ -17,7 +17,7 @@ import { createInteractionPolicy } from './interaction-policy';
 
 const logProvider = debug('lobe-oidc:provider');
 
-export const API_AUDIENCE = 'urn:lobehub:chat';
+export const API_AUDIENCE = 'urn:agentasia:chat';
 
 /**
  * Get cookie keys using KEY_VAULTS_SECRET
@@ -278,10 +278,10 @@ export const createOIDCProvider = async (db: LobeChatDatabase): Promise<Provider
       ctx.body = `
         <html>
           <head>
-            <title>LobeHub OIDC Error</title>
+            <title>AgentAsia OIDC Error</title>
           </head>
           <body>
-            <h1>LobeHub OIDC Error</h1>
+            <h1>AgentAsia OIDC Error</h1>
             <p>${JSON.stringify(error, null, 2)}</p>
             <p>${JSON.stringify(out, null, 2)}</p>
           </body>

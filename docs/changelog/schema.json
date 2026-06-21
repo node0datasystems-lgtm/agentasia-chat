@@ -31,7 +31,11 @@
             "maxItems": 2
           }
         },
-        "required": ["date", "id", "versionRange"],
+        "required": [
+          "date",
+          "id",
+          "versionRange"
+        ],
         "additionalProperties": false
       }
     },
@@ -60,11 +64,18 @@
             "maxItems": 2
           }
         },
-        "required": ["date", "id", "versionRange"],
+        "required": [
+          "date",
+          "id",
+          "versionRange"
+        ],
         "additionalProperties": false
       }
     }
   },
-  "required": ["$schema", "community"],
+  "required": [
+    "$schema",
+    "community"
+  ],
   "type": "object"
 }

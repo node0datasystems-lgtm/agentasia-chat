@@ -11,7 +11,7 @@ vi.mock('react-router', () => ({
   useParams: () => ({ aid: 'agent-from-url' }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <div {...(props as Record<string, unknown>)}>{children}</div>
   ),

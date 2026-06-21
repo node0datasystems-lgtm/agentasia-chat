@@ -1,6 +1,6 @@
-import { CUSTOM_FOLDER_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@lobechat/const';
-import { copyToClipboard, createRawModal, Icon } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { CUSTOM_FOLDER_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
+import { copyToClipboard, createRawModal, Icon } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import { type ItemType } from 'antd/es/menu/interface';
 import {

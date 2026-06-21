@@ -3,7 +3,7 @@ import {
   type BriefArtifacts,
   type BriefType,
   type TaskStatus,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 export interface AgentAvatarInfo {
   avatar: string | null;

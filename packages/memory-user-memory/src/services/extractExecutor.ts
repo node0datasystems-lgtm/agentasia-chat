@@ -1,15 +1,15 @@
-import type { LobeChatDatabase } from '@lobechat/database';
-import type { ModelRuntime } from '@lobechat/model-runtime';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
+import type { LobeChatDatabase } from '@agentasia/database';
+import type { ModelRuntime } from '@agentasia/model-runtime';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
 import {
   gateKeeperCallDurationHistogram,
   gateKeeperCallsCounter,
   layerCallDurationHistogram,
   layersCallsCounter,
   tracer,
-} from '@lobechat/observability-otel/modules/memory-user-memory';
-import { attributesCommon } from '@lobechat/observability-otel/node';
-import { LayersEnum } from '@lobechat/types';
+} from '@agentasia/observability-otel/modules/memory-user-memory';
+import { attributesCommon } from '@agentasia/observability-otel/node';
+import { LayersEnum } from '@agentasia/types';
 
 import {
   ActivityExtractor,

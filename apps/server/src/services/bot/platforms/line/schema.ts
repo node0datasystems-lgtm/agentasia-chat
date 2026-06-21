@@ -1,4 +1,4 @@
-import { DEFAULT_BOT_DEBOUNCE_MS, MAX_BOT_DEBOUNCE_MS } from '@lobechat/const';
+import { DEFAULT_BOT_DEBOUNCE_MS, MAX_BOT_DEBOUNCE_MS } from '@agentasia/const';
 
 import { displayToolCallsField, makeUserIdField, watchKeywordsField } from '../const';
 import type { FieldSchema } from '../types';

@@ -1,6 +1,6 @@
-import { getBuiltinPlaceholder } from '@lobechat/builtin-tools/placeholders';
-import { getBuiltinStreaming } from '@lobechat/builtin-tools/streamings';
-import { safeParseJSON } from '@lobechat/utils';
+import { getBuiltinPlaceholder } from '@agentasia/builtin-tools/placeholders';
+import { getBuiltinStreaming } from '@agentasia/builtin-tools/streamings';
+import { safeParseJSON } from '@agentasia/utils';
 import { memo } from 'react';
 
 import Arguments from '../Arguments';

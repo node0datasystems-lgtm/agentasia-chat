@@ -1,6 +1,6 @@
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
 import dayjs from 'dayjs';
 import timezonePlugin from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';

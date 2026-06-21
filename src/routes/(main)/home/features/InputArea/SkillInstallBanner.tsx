@@ -1,7 +1,7 @@
 'use client';
 
-import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@lobechat/const';
-import { ActionIcon, Flexbox, Icon } from '@lobehub/ui';
+import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@agentasia/const';
+import { ActionIcon, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { Blocks, X } from 'lucide-react';
 import React, { createElement, memo, useCallback, useMemo } from 'react';
@@ -74,9 +74,9 @@ const BANNER_SKILL_IDS = [
   { id: 'google-drive', type: 'composio' },
   { id: 'google-calendar', type: 'composio' },
   { id: 'slack', type: 'composio' },
-  { id: 'notion', type: 'lobehub' },
-  { id: 'twitter', type: 'lobehub' },
-  { id: 'github', type: 'lobehub' },
+  { id: 'notion', type: 'agentasia' },
+  { id: 'twitter', type: 'agentasia' },
+  { id: 'github', type: 'agentasia' },
 ] as const;
 
 const SkillInstallBanner = memo(() => {
@@ -99,7 +99,7 @@ const SkillInstallBanner = memo(() => {
     const icons: Array<{ icon: string | React.ComponentType<{ size?: number }>; key: string }> = [];
 
     for (const skill of BANNER_SKILL_IDS) {
-      if (skill.type === 'lobehub') {
+      if (skill.type === 'agentasia') {
         const provider = getLobehubSkillProviderById(skill.id);
         if (provider) {
           icons.push({ icon: provider.icon, key: provider.id });

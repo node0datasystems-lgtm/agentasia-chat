@@ -6,7 +6,7 @@ import type {
   AuthorizationProgress,
   DataSyncConfig,
   MarketAuthorizationParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { BrowserWindow, shell } from 'electron';
 
 import GatewayConnectionService from '@/services/gatewayConnectionSrv';
@@ -105,13 +105,13 @@ export default class AuthCtr extends ControllerModule {
 
       // Add query parameters
       authUrl.search = querystring.stringify({
-        client_id: 'lobehub-desktop',
+        client_id: 'agentasia-desktop',
         code_challenge: codeChallenge,
         code_challenge_method: 'S256',
         prompt: 'consent',
         redirect_uri: redirectUri,
-        // https://github.com/lobehub/lobe-chat/pull/8450
-        resource: 'urn:lobehub:chat',
+        // https://github.com/agentasia/agentasia-chat/pull/8450
+        resource: 'urn:agentasia:chat',
         response_type: 'code',
         scope: 'profile email offline_access',
         state: this.authRequestState,
@@ -475,7 +475,7 @@ export default class AuthCtr extends ControllerModule {
 
       // Construct request body
       const body = querystring.stringify({
-        client_id: 'lobehub-desktop',
+        client_id: 'agentasia-desktop',
         code,
         code_verifier: codeVerifier,
         grant_type: 'authorization_code',

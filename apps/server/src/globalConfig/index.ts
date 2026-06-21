@@ -1,4 +1,4 @@
-import { ENABLE_BUSINESS_FEATURES } from '@lobechat/business-const';
+import { ENABLE_BUSINESS_FEATURES } from '@agentasia/business-const';
 import { ModelProvider } from 'model-bank';
 
 import { composioEnv } from '@/config/composio';
@@ -91,7 +91,7 @@ export const getServerGlobalConfig = async () => {
     for (const provider of Object.values(ModelProvider)) {
       aiProviderSpecificConfig[provider] = {
         ...aiProviderSpecificConfig[provider],
-        enabled: provider === ModelProvider.LobeHub,
+        enabled: provider === ModelProvider.AgentAsia,
       };
     }
   }

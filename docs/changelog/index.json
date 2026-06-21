@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/lobehub/lobe-chat/blob/main/docs/changelog/schema.json",
+  "$schema": "https://github.com/agentasia/agentasia-chat/blob/main/docs/changelog/schema.json",
   "cloud": [],
   "community": [
     {
@@ -312,7 +312,7 @@
     },
     {
       "image": "/blog/assets/37d85fdfccff9ed56e9c6827faee01c7.webp",
-      "id": "2024-08-02-lobe-chat-database-docker",
+      "id": "2024-08-02-agentasia-chat-database-docker",
       "date": "2024-08-02",
       "versionRange": [
         "1.6.1",
@@ -330,7 +330,7 @@
     },
     {
       "image": "/blog/assets/eb477e62217f4d1b644eff975c7ac168.webp",
-      "id": "2024-06-19-lobe-chat-v1",
+      "id": "2024-06-19-agentasia-chat-v1",
       "date": "2024-06-19",
       "versionRange": [
         "0.147.0",

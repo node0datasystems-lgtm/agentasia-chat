@@ -1,4 +1,4 @@
-import type { SearchQuery } from '@lobechat/types';
+import type { SearchQuery } from '@agentasia/types';
 import {
   Block,
   Checkbox,
@@ -8,7 +8,7 @@ import {
   Select,
   Text,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import type { ReactNode } from 'react';
 import { memo, useState } from 'react';

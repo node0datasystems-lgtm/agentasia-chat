@@ -1,6 +1,6 @@
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { SELF_FEEDBACK_INTENT_IDENTIFIER } from '@lobechat/builtin-tool-self-iteration';
-import { RequestTrigger } from '@lobechat/types';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { SELF_FEEDBACK_INTENT_IDENTIFIER } from '@agentasia/builtin-tool-self-iteration';
+import { RequestTrigger } from '@agentasia/types';
 import type * as ModelBankModule from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -570,13 +570,13 @@ describe('AiAgentService.execAgent - builtin agent runtime config', () => {
     );
   });
 
-  it('should not inject lobe-agent when the LobeHub routed model supports visual media natively', async () => {
+  it('should not inject lobe-agent when the AgentAsia routed model supports visual media natively', async () => {
     mockGetAgentConfig.mockResolvedValue({
       chatConfig: {},
       id: 'agent-custom',
       model: 'gemini-3.1-flash-lite-preview',
       plugins: [],
-      provider: 'lobehub',
+      provider: 'agentasia',
       systemRole: '',
     });
     mockMessageQuery.mockResolvedValue([

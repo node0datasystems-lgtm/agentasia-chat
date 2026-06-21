@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Flexbox, Tag } from '@lobehub/ui';
+import { ActionIcon, Button, Flexbox, Tag } from '@agentasia/ui';
 import { Badge } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { LucideRotateCw, LucideTrash2, RotateCwIcon } from 'lucide-react';

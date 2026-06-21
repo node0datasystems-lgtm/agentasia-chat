@@ -1,4 +1,4 @@
-import { CUSTOM_FOLDER_FILE_TYPE } from '@lobechat/const';
+import { CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
 
 import { fileService } from '@/services/file';
 import { resourceService } from '@/services/resource';

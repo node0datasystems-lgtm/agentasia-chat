@@ -1,23 +1,23 @@
 import type { ModelProviderCard } from '@/types/llm';
 
-const LobeHub: ModelProviderCard = {
+const AgentAsia: ModelProviderCard = {
   chatModels: [],
   description:
-    'LobeHub Cloud uses official APIs to access AI models and measures usage with Credits tied to model tokens.',
+    'AgentAsia Cloud uses official APIs to access AI models and measures usage with Credits tied to model tokens.',
   enabled: true,
-  id: 'lobehub',
-  modelsUrl: 'https://lobehub.com/zh/docs/usage/subscription/model-pricing',
-  name: 'LobeHub',
+  id: 'agentasia',
+  modelsUrl: 'https://agentasia.ai/zh/docs/usage/subscription/model-pricing',
+  name: 'AgentAsia',
   settings: {
     modelEditable: false,
     showAddNewModel: false,
     showModelFetcher: false,
   },
   showConfig: false,
-  url: 'https://lobehub.com',
+  url: 'https://agentasia.ai',
 };
 
-export default LobeHub;
+export default AgentAsia;
 
 export const planCardModels = [
   'deepseek-v4-pro',

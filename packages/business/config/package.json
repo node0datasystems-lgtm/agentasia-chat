@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/business-config",
+  "name": "@agentasia/business-config",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -8,11 +8,11 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/business-const": "workspace:*",
-    "@lobechat/const": "workspace:*",
-    "model-bank": "workspace:*"
+    "model-bank": "workspace:*",
+    "@agentasia/business-const": "workspace:*",
+    "@agentasia/const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

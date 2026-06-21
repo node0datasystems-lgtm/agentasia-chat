@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@lobehub/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { Progress } from 'antd';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';

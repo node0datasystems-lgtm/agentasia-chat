@@ -1,5 +1,5 @@
 import type { GenerateContentResponse, Part } from '@google/genai';
-import type { GroundingSearch } from '@lobechat/types';
+import type { GroundingSearch } from '@agentasia/types';
 
 import type { ChatStreamCallbacks } from '../../../types';
 import { nanoid } from '../../../utils/uuid';

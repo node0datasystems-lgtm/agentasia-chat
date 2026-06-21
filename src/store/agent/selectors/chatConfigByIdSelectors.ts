@@ -2,8 +2,8 @@ import {
   DEFAULT_AGENT_CHAT_CONFIG,
   DEFAULT_AGENT_SEARCH_FC_MODEL,
   isDesktop,
-} from '@lobechat/const';
-import { type LobeAgentChatConfig, type RuntimeEnvMode } from '@lobechat/types';
+} from '@agentasia/const';
+import { type LobeAgentChatConfig, type RuntimeEnvMode } from '@agentasia/types';
 
 import { resolveRuntimeMode, resolveToolMode } from '@/helpers/executionTarget';
 import { type AgentStoreState } from '@/store/agent/initialState';

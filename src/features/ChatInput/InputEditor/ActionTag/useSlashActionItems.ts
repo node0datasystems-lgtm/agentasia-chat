@@ -1,7 +1,7 @@
-import { isDesktop } from '@lobechat/const';
-import { type ProjectSkillItem } from '@lobechat/electron-client-ipc';
-import type { IEditor, SlashOptions } from '@lobehub/editor';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { isDesktop } from '@agentasia/const';
+import { type ProjectSkillItem } from '@agentasia/electron-client-ipc';
+import type { IEditor, SlashOptions } from '@agentasia/editor';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import isEqual from 'fast-deep-equal';
 import Fuse from 'fuse.js';
 import { $getSelection, $isRangeSelection } from 'lexical';
@@ -94,7 +94,7 @@ export const useSlashActionItems = (): SlashOptions['items'] => {
     isEqual,
   );
 
-  // Installed skills shared with the @ mention menu (builtin / lobehub / market / user agent skills).
+  // Installed skills shared with the @ mention menu (builtin / agentasia / market / user agent skills).
   // Tools intentionally stay out of slash — they remain @-mention only.
   const installedSkillsAndTools = useInstalledSkillsAndTools();
   const installedSkills = useMemo(

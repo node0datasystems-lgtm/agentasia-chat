@@ -1,4 +1,4 @@
-import { type ExperienceListItem } from '@lobechat/types';
+import { type ExperienceListItem } from '@agentasia/types';
 
 export interface ExperienceSliceState {
   experiences: ExperienceListItem[];

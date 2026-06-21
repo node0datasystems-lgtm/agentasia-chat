@@ -1,8 +1,8 @@
 'use client';
 
-import { type SkillResourceTreeNode } from '@lobechat/types';
-import { Github } from '@lobehub/icons';
-import { ActionIcon, Avatar, Flexbox, Icon } from '@lobehub/ui';
+import { type SkillResourceTreeNode } from '@agentasia/types';
+import { Github } from '@agentasia/icons';
+import { ActionIcon, Avatar, Flexbox, Icon } from '@agentasia/ui';
 import { Skeleton } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { unzip } from 'fflate';

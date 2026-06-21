@@ -1,4 +1,4 @@
-import type { DataSyncConfig } from '@lobechat/electron-client-ipc';
+import type { DataSyncConfig } from '@agentasia/electron-client-ipc';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { App } from '@/core/App';
@@ -38,7 +38,7 @@ vi.mock('electron', () => ({
 
 // Mock @/const/env
 vi.mock('@/const/env', () => ({
-  OFFICIAL_CLOUD_SERVER: 'https://cloud.lobehub.com',
+  OFFICIAL_CLOUD_SERVER: 'https://cloud.agentasia.ai',
 }));
 
 // Mock storeManager
@@ -729,7 +729,7 @@ describe('RemoteServerConfigCtr', () => {
 
       const result = await controller.getRemoteServerUrl();
 
-      expect(result).toBe('https://cloud.lobehub.com');
+      expect(result).toBe('https://cloud.agentasia.ai');
     });
 
     it('should return custom URL for selfHost mode', async () => {

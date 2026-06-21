@@ -1,5 +1,5 @@
 import { electronAPI } from '@electron-toolkit/preload';
-import type { ScreenCaptureSession } from '@lobechat/electron-client-ipc';
+import type { ScreenCaptureSession } from '@agentasia/electron-client-ipc';
 import { contextBridge, ipcRenderer } from 'electron';
 
 import { invoke } from './invoke';

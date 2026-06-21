@@ -1,4 +1,4 @@
-import type { ToulminVerdict, VerifyCheckItem, VerifyRubricConfig } from '@lobechat/types';
+import type { ToulminVerdict, VerifyCheckItem, VerifyRubricConfig } from '@agentasia/types';
 import {
   verifierTypes,
   verifyCheckResultStatuses,
@@ -9,7 +9,7 @@ import {
   verifyRunStatuses,
   verifyUserDecisions,
   verifyVerdicts,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import {
   boolean,
   index,

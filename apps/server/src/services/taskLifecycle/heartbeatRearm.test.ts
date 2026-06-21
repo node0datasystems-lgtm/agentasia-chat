@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { TaskItem, TaskSchedulerContext } from '@lobechat/types';
+import type { TaskItem, TaskSchedulerContext } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { TaskLifecycleService } from './index';

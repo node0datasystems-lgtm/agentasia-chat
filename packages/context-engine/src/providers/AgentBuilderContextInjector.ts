@@ -1,4 +1,4 @@
-import { escapeXml } from '@lobechat/prompts';
+import { escapeXml } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseFirstUserContentProvider } from '../base/BaseFirstUserContentProvider';
@@ -28,8 +28,8 @@ export interface OfficialToolItem {
   installed?: boolean;
   /** Tool display name */
   name: string;
-  /** Tool type: 'builtin' for built-in tools, 'composio' for LobeHub Mcp servers, 'lobehub-skill' for LobeHub Skill providers */
-  type: 'builtin' | 'composio' | 'lobehub-skill';
+  /** Tool type: 'builtin' for built-in tools, 'composio' for AgentAsia Mcp servers, 'agentasia-skill' for AgentAsia Skill providers */
+  type: 'builtin' | 'composio' | 'agentasia-skill';
 }
 
 /**
@@ -133,7 +133,7 @@ const defaultFormatAgentContext = (context: AgentBuilderContext): string => {
   if (context.officialTools && context.officialTools.length > 0) {
     const builtinTools = context.officialTools.filter((t) => t.type === 'builtin');
     const composioTools = context.officialTools.filter((t) => t.type === 'composio');
-    const lobehubSkillTools = context.officialTools.filter((t) => t.type === 'lobehub-skill');
+    const agentasiaSkillTools = context.officialTools.filter((t) => t.type === 'agentasia-skill');
 
     const toolsSections: string[] = [];
 
@@ -165,8 +165,8 @@ const defaultFormatAgentContext = (context: AgentBuilderContext): string => {
       toolsSections.push(`  <composio_tools>\n${composioItems}\n  </composio_tools>`);
     }
 
-    if (lobehubSkillTools.length > 0) {
-      const lobehubSkillItems = lobehubSkillTools
+    if (agentasiaSkillTools.length > 0) {
+      const agentasiaSkillItems = agentasiaSkillTools
         .map((t) => {
           const attrs = [
             `id="${t.identifier}"`,
@@ -177,7 +177,7 @@ const defaultFormatAgentContext = (context: AgentBuilderContext): string => {
           return `    <tool ${attrs}>${escapeXml(t.name)}${desc}</tool>`;
         })
         .join('\n');
-      toolsSections.push(`  <lobehub_skill_tools>\n${lobehubSkillItems}\n  </lobehub_skill_tools>`);
+      toolsSections.push(`  <agentasia_skill_tools>\n${agentasiaSkillItems}\n  </agentasia_skill_tools>`);
     }
 
     if (toolsSections.length > 0) {

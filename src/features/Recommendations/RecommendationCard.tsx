@@ -1,4 +1,4 @@
-import { Block, Button, Flexbox, Tag, Text } from '@lobehub/ui';
+import { Block, Button, Flexbox, Tag, Text } from '@agentasia/ui';
 import { App, Divider } from 'antd';
 import { cssVar, cx } from 'antd-style';
 import { memo, type ReactNode, useCallback, useState } from 'react';

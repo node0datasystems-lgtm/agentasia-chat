@@ -1,6 +1,6 @@
 'use client';
 
-import { MARKDOWN_MIME_TYPES } from '@lobechat/const';
+import { MARKDOWN_MIME_TYPES } from '@agentasia/const';
 import type { CSSProperties } from 'react';
 import { memo } from 'react';
 

@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Accordion, AccordionItem, Flexbox, Tag, Text } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Accordion, AccordionItem, Flexbox, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Text } from '@lobehub/ui';
+import { Text } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useActivityTime } from '@/hooks/useActivityTime';

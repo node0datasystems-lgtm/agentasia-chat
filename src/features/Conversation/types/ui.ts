@@ -1,6 +1,6 @@
-import { type LLMRoleType, type UIChatMessage } from '@lobechat/types';
-import { type ActionIconGroupItemType } from '@lobehub/ui';
-import { type ChatItemProps } from '@lobehub/ui/chat';
+import { type LLMRoleType, type UIChatMessage } from '@agentasia/types';
+import { type ActionIconGroupItemType } from '@agentasia/ui';
+import { type ChatItemProps } from '@agentasia/ui/chat';
 import { type FC, type ReactNode } from 'react';
 
 export type RenderRole = LLMRoleType | 'default' | 'history' | string;

@@ -60,7 +60,7 @@ function download(url, dest, maxRedirects = 5) {
     if (maxRedirects <= 0) return reject(new Error('Too many redirects'));
 
     https
-      .get(url, { headers: { 'User-Agent': 'lobehub-desktop' } }, (res) => {
+      .get(url, { headers: { 'User-Agent': 'agentasia-desktop' } }, (res) => {
         if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
           console.info(`[agent-browser] redirect → ${res.headers.location}`);
           res.resume();

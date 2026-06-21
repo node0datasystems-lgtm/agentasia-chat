@@ -1,10 +1,10 @@
-import { type LobeToolManifest } from '@lobechat/context-engine';
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeToolManifest } from '@agentasia/context-engine';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   type ChatToolPayload,
   type ClientSecretPayload,
   type ExecSubAgentParams,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 export interface ToolExecutionMemoryEmbeddingRuntime {
   /** Embedding model id used by the memory search runtime. */
@@ -159,7 +159,7 @@ export interface ToolExecutionContext {
   projectSkills?: { location: string; name: string }[];
   /** Conversation scope captured when the operation was created */
   scope?: string | null;
-  /** Server database for LobeHub Skills execution */
+  /** Server database for AgentAsia Skills execution */
   serverDB?: LobeChatDatabase;
   /** Skip low-level result truncation so the AgentRuntime boundary can archive full content first. */
   skipResultTruncation?: boolean;

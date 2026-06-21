@@ -1,4 +1,4 @@
-import type { BaseAction, BaseSignal } from '@lobechat/agent-signal';
+import type { BaseAction, BaseSignal } from '@agentasia/agent-signal';
 import { describe, expect, it } from 'vitest';
 
 import {

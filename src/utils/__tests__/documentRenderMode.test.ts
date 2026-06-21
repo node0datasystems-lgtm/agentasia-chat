@@ -2,7 +2,7 @@ import {
   AGENT_DOCUMENT_CATEGORY,
   AGENT_DOCUMENT_FILE_TYPE,
   AGENT_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import { getDocumentRenderMode } from '../documentRenderMode';

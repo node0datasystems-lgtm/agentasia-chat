@@ -1,5 +1,5 @@
-import { imageUrl, OFFICIAL_URL } from '@lobechat/const';
-import { Center, Flexbox, Grid, lobeStaticStylish } from '@lobehub/ui';
+import { imageUrl, OFFICIAL_URL } from '@agentasia/const';
+import { Center, Flexbox, Grid, lobeStaticStylish } from '@agentasia/ui';
 import { createStaticStyles, cx, responsive } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

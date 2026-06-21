@@ -1,4 +1,4 @@
-import { FollowUpExtractInputSchema } from '@lobechat/types';
+import { FollowUpExtractInputSchema } from '@agentasia/types';
 
 import { withScopedPermission } from '@/business/server/trpc-middlewares/rbacPermission';
 import { wsCompatProcedure } from '@/business/server/trpc-middlewares/workspaceAuth';

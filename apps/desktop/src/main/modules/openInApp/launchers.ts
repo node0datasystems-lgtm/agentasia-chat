@@ -3,7 +3,7 @@ import { access } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 
-import type { OpenInAppId, OpenInAppResult } from '@lobechat/electron-client-ipc';
+import type { OpenInAppId, OpenInAppResult } from '@agentasia/electron-client-ipc';
 import { shell } from 'electron';
 
 import { createLogger } from '@/utils/logger';

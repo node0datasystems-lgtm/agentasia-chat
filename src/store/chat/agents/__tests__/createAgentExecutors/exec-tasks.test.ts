@@ -1,7 +1,7 @@
 import {
   type AgentRuntimeContext,
   type SubAgentsBatchResultPayload,
-} from '@lobechat/agent-runtime';
+} from '@agentasia/agent-runtime';
 import { type Mock } from 'vitest';
 import { describe, expect, it, vi } from 'vitest';
 

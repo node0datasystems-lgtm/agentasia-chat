@@ -1,8 +1,8 @@
-import type { DocumentLoadFormat, DocumentLoadRule } from '@lobechat/agent-templates';
-import { buildAgentDocumentUrl } from '@lobechat/builtin-tool-agent-documents';
-import { AgentDocumentsExecutionRuntime } from '@lobechat/builtin-tool-agent-documents/executionRuntime';
-import { AgentDocumentsExecutor } from '@lobechat/builtin-tool-agent-documents/executor';
-import { isDesktop } from '@lobechat/const';
+import type { DocumentLoadFormat, DocumentLoadRule } from '@agentasia/agent-templates';
+import { buildAgentDocumentUrl } from '@agentasia/builtin-tool-agent-documents';
+import { AgentDocumentsExecutionRuntime } from '@agentasia/builtin-tool-agent-documents/executionRuntime';
+import { AgentDocumentsExecutor } from '@agentasia/builtin-tool-agent-documents/executor';
+import { isDesktop } from '@agentasia/const';
 
 import { getActiveWorkspaceSlug } from '@/business/client/hooks/useActiveWorkspaceSlug';
 import { agentDocumentService } from '@/services/agentDocument';

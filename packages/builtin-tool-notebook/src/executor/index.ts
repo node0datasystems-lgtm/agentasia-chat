@@ -11,7 +11,7 @@
  * still resolve on execution. New flows should use
  * `@lobechat/builtin-tool-agent-documents`.
  */
-import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@lobechat/types';
+import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@agentasia/types';
 
 import {
   type CreateDocumentArgs,

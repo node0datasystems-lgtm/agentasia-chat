@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_SOURCE_TYPE,
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { nanoid } from 'nanoid';
 
 import { type AgentDocumentItem, PENDING_ID_PREFIX } from '../types';

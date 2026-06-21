@@ -55,7 +55,7 @@ const agentMeta: RouteMeta = {
 
 const staticMeta: RouteMeta = {
   icon: MessageSquare,
-  titleKey: 'navigation.lobehub',
+  titleKey: 'navigation.agentasia',
 };
 
 const buildRoutes = (): RouteObject[] => [

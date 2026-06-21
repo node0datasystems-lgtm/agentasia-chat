@@ -1,4 +1,4 @@
-import { type ExperienceListResult } from '@lobechat/types';
+import { type ExperienceListResult } from '@agentasia/types';
 import { uniqBy } from 'es-toolkit/compat';
 import { produce } from 'immer';
 import { type SWRResponse } from 'swr';

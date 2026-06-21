@@ -6,8 +6,8 @@ import {
   formatRenameDocumentResult,
   formatReplaceDocumentResult,
   formatUpdateLoadRuleResult,
-} from '@lobechat/prompts';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+} from '@agentasia/prompts';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type {
   CopyDocumentArgs,

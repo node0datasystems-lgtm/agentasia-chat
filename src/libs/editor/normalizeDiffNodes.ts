@@ -1,4 +1,4 @@
-import { isRecord } from '@lobechat/utils';
+import { isRecord } from '@agentasia/utils';
 
 type DiffType =
   | 'add'

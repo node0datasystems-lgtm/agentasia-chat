@@ -1,4 +1,4 @@
-import type { MockCase } from '@lobechat/agent-mock';
+import type { MockCase } from '@agentasia/agent-mock';
 import { act, renderHook } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

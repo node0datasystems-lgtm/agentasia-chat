@@ -1,4 +1,4 @@
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { AlertTriangle } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +16,7 @@ const DeprecatedModelError = memo<DeprecatedModelErrorProps>(({ requestedModel }
     <BaseErrorForm
       avatar={<Icon icon={AlertTriangle} size={24} />}
       title={t('fetchError.title')}
-      desc={t('response.LobeHubModelDeprecated', {
+      desc={t('response.AgentAsiaModelDeprecated', {
         model: requestedModel ?? '-',
       })}
     />

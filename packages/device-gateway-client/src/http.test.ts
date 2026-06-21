@@ -465,7 +465,7 @@ describe('GatewayHttpClient', () => {
         homePath: '/home/test',
         musicPath: '/home/test/Music',
         picturesPath: '/home/test/Pictures',
-        userDataPath: '/home/test/.lobehub',
+        userDataPath: '/home/test/.agentasia',
         videosPath: '/home/test/Videos',
         workingDirectory: '/home/test',
       };

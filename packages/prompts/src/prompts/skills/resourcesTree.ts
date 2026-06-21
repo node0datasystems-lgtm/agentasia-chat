@@ -1,4 +1,4 @@
-import type { SkillResourceMeta } from '@lobechat/types';
+import type { SkillResourceMeta } from '@agentasia/types';
 
 interface TreeNode {
   children: Map<string, TreeNode>;

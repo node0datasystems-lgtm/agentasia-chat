@@ -7,7 +7,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import ChatBody from './ChatBody';
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({
     children,
     flex,

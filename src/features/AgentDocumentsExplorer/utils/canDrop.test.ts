@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_SKILL_CATEGORY,
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import type { ExplorerTreeCanDropCtx, ExplorerTreeNode } from '@/features/ExplorerTree';

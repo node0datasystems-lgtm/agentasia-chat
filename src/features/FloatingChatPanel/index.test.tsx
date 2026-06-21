@@ -16,7 +16,7 @@ const sheetHandlers = vi.hoisted(() => ({
   },
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   FloatingSheet: ({
     children,
     dismissible,
@@ -59,7 +59,7 @@ vi.mock('@lobehub/ui/base-ui', () => ({
   },
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({
     onClick,
     title,

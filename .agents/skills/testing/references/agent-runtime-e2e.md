@@ -37,8 +37,8 @@ Different tests need different LLM responses. `vi.spyOn` provides:
 ### Database Setup
 
 ```typescript
-import { LobeChatDatabase } from '@lobechat/database';
-import { getTestDB } from '@lobechat/database/test-utils';
+import { LobeChatDatabase } from '@agentasia/database';
+import { getTestDB } from '@agentasia/database/test-utils';
 
 let testDB: LobeChatDatabase;
 

@@ -1,18 +1,18 @@
-import type { ILobeAgentRuntimeErrorType } from '@lobechat/types';
-import { AgentRuntimeErrorType, ChatErrorType } from '@lobechat/types';
+import type { ILobeAgentRuntimeErrorType } from '@agentasia/types';
+import { AgentRuntimeErrorType, ChatErrorType } from '@agentasia/types';
 
 import type { ErrorAttribution, ErrorCategory, ErrorSeverity } from './taxonomy';
 
 /**
  * Cloud-only business codes live in `ChatErrorType` (not `AgentRuntimeErrorType`)
- * because they're emitted solely by the managed LobeHub Cloud gateway. They're
+ * because they're emitted solely by the managed AgentAsia Cloud gateway. They're
  * still classified here, distinguished by the `9` tier digit of their
  * `numericId` (e.g. `E2902`). See `CLOUD_TIER_DIGIT` in `./taxonomy`.
  */
 export type CloudErrorCode =
   | typeof ChatErrorType.FreePlanLimit
   | typeof ChatErrorType.InsufficientBudgetForModel
-  | typeof ChatErrorType.LobeHubModelDeprecated;
+  | typeof ChatErrorType.AgentAsiaModelDeprecated;
 
 /** Every code the spec table can classify. */
 export type SpecErrorCode = CloudErrorCode | ILobeAgentRuntimeErrorType;
@@ -178,7 +178,7 @@ export const ERROR_CODE_SPECS: SpecMap = {
     httpStatus: 402,
     retryable: false,
     countAsFailure: false,
-    description: 'LobeHub Cloud free-plan usage limit reached.',
+    description: 'AgentAsia Cloud free-plan usage limit reached.',
   },
   [ChatErrorType.InsufficientBudgetForModel]: {
     code: ChatErrorType.InsufficientBudgetForModel,
@@ -189,7 +189,7 @@ export const ERROR_CODE_SPECS: SpecMap = {
     httpStatus: 402,
     retryable: false,
     countAsFailure: false,
-    description: 'LobeHub Cloud balance is positive but below the model’s estimated cost.',
+    description: 'AgentAsia Cloud balance is positive but below the model’s estimated cost.',
   },
 
   // ─── 3xxx Capacity ────────────────────────────────────────────────────
@@ -306,8 +306,8 @@ export const ERROR_CODE_SPECS: SpecMap = {
     description: 'Upstream rejected the request as malformed (bad JSON / schema / parameters).',
   },
   // —— Cloud-only (tier 9) ——
-  [ChatErrorType.LobeHubModelDeprecated]: {
-    code: ChatErrorType.LobeHubModelDeprecated,
+  [ChatErrorType.AgentAsiaModelDeprecated]: {
+    code: ChatErrorType.AgentAsiaModelDeprecated,
     numericId: 4901,
     category: 'request',
     severity: 'warning',
@@ -315,7 +315,7 @@ export const ERROR_CODE_SPECS: SpecMap = {
     httpStatus: 404,
     retryable: false,
     countAsFailure: false,
-    description: 'Requested LobeHub Cloud model has been deprecated / removed.',
+    description: 'Requested AgentAsia Cloud model has been deprecated / removed.',
   },
 
   // ─── 5xxx Safety ──────────────────────────────────────────────────────

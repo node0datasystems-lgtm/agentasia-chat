@@ -1,8 +1,8 @@
 'use client';
 
-import { inspectorTextStyles, shinyTextStyles } from '@lobechat/shared-tool-ui/styles';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { Github } from '@lobehub/icons';
+import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { Github } from '@agentasia/icons';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

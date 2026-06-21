@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 
-import { eslint } from '@lobehub/lint';
+import { eslint } from '@agentasia/lint';
 import { flat as mdxFlat } from 'eslint-plugin-mdx';
 
 const tsconfigRootDir = fileURLToPath(new URL('.', import.meta.url));
@@ -141,7 +141,7 @@ export default eslint(
       'no-console': 0,
     },
   },
-  // lobehub-cli - console output is the primary interface
+  // agentasia-cli - console output is the primary interface
   {
     files: ['apps/cli/**/*'],
     rules: {

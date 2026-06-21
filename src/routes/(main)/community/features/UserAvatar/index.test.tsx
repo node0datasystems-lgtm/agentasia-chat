@@ -12,7 +12,7 @@ const mocks = vi.hoisted(() => ({
   },
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Avatar: ({ avatar, onClick }: { avatar?: string | null; onClick?: () => void }) => (
     <button data-avatar={avatar ?? ''} data-testid="community-user-avatar" onClick={onClick} />
   ),

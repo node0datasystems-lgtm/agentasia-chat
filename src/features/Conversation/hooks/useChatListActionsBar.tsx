@@ -1,4 +1,4 @@
-import { type ActionIconGroupItemType } from '@lobehub/ui';
+import { type ActionIconGroupItemType } from '@agentasia/ui';
 import { css, cx } from 'antd-style';
 import {
   ArrowDownFromLine,

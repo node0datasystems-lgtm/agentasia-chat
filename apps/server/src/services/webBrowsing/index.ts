@@ -1,4 +1,4 @@
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 import { Md5 } from 'ts-md5';
 
 import { DocumentModel } from '@/database/models/document';

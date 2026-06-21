@@ -1,5 +1,5 @@
-import { type HighlighterProps } from '@lobehub/ui';
-import { Highlighter } from '@lobehub/ui';
+import { type HighlighterProps } from '@agentasia/ui';
+import { Highlighter } from '@agentasia/ui';
 
 const code = `
 const person = { name: "Alice", age: 30 };

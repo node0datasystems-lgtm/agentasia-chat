@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum, RelationshipEnum, UserMemoryContextObjectType } from '@lobechat/types';
+import { LayersEnum, RelationshipEnum, UserMemoryContextObjectType } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { PgDialect } from 'drizzle-orm/pg-core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';

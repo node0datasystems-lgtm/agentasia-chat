@@ -151,7 +151,7 @@ describe('MessengerInstallationModel', () => {
   });
 
   describe('listByInstallerUserId', () => {
-    it('returns only installs the given LobeHub user kicked off', async () => {
+    it('returns only installs the given AgentAsia user kicked off', async () => {
       await MessengerInstallationModel.upsert(serverDB, {
         applicationId: 'A_APP_1',
         credentials: { botToken: 'xoxb-1' },

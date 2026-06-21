@@ -1,4 +1,4 @@
-import type { LobeAgentAgencyConfig } from '@lobechat/types';
+import type { LobeAgentAgencyConfig } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { resolveAgentWorkingDirectory, resolveTargetDeviceId } from './agentWorkingDirectory';

@@ -1,5 +1,5 @@
-import { MemoryApiName, MemoryIdentifier } from '@lobechat/builtin-tool-memory';
-import { LayersEnum } from '@lobechat/types';
+import { MemoryApiName, MemoryIdentifier } from '@agentasia/builtin-tool-memory';
+import { LayersEnum } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { extractSelfIterationCompletionPayload } from '../extractCompletionPayload';

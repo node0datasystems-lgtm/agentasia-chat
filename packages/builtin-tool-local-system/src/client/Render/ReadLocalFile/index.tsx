@@ -1,6 +1,6 @@
-import { useToolRenderCapabilities } from '@lobechat/shared-tool-ui';
-import type { ReadFileState } from '@lobechat/tool-runtime';
-import type { BuiltinRenderProps } from '@lobechat/types';
+import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
+import type { ReadFileState } from '@agentasia/tool-runtime';
+import type { BuiltinRenderProps } from '@agentasia/types';
 import { memo } from 'react';
 
 import ReadFileSkeleton from './ReadFileSkeleton';

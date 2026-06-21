@@ -1,5 +1,5 @@
-import { Icon, Tooltip } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { Icon, Tooltip } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { cx } from 'antd-style';
 import { TerminalIcon, WrenchIcon } from 'lucide-react';
 import type { FC } from 'react';

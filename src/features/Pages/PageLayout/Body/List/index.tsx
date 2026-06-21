@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { MoreHorizontal } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 

@@ -9,7 +9,7 @@ import MarkdownImage from './MarkdownImage';
 const mockImage = vi.hoisted(() => vi.fn());
 const mockUseClientDataSWR = vi.hoisted(() => vi.fn());
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Image: ({
     alt,
     classNames,
@@ -67,7 +67,7 @@ describe('MarkdownImage', () => {
     });
   });
 
-  it('renders remote markdown images with the LobeHub Image component', () => {
+  it('renders remote markdown images with the AgentAsia Image component', () => {
     mockUseClientDataSWR.mockReturnValue({});
 
     render(
@@ -97,7 +97,7 @@ describe('MarkdownImage', () => {
     });
   });
 
-  it('resolves relative markdown images and renders the loaded blob through LobeHub Image', () => {
+  it('resolves relative markdown images and renders the loaded blob through AgentAsia Image', () => {
     mockUseClientDataSWR.mockReturnValue({
       data: {
         blob: new Blob(['image']),

@@ -1,4 +1,4 @@
-import { AgentDocumentsIdentifier } from '@lobechat/builtin-tool-agent-documents';
+import { AgentDocumentsIdentifier } from '@agentasia/builtin-tool-agent-documents';
 
 import {
   emitToolOutcomeSafely,

@@ -1,4 +1,4 @@
-import { Block, Empty, Flexbox } from '@lobehub/ui';
+import { Block, Empty, Flexbox } from '@agentasia/ui';
 import { BookOpen } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

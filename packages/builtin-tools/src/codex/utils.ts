@@ -1,6 +1,6 @@
 'use client';
 
-import type { ClaudeCodeTodoItem, TodoWriteArgs } from '@lobechat/builtin-tool-claude-code';
+import type { ClaudeCodeTodoItem, TodoWriteArgs } from '@agentasia/builtin-tool-claude-code';
 
 export interface CodexTodoListEntry {
   completed?: boolean;

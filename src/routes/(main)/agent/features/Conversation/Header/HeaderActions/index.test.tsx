@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import HeaderActions from './index';
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: () => <button data-testid={'overflow-menu-button'} />,
   DropdownMenu: ({ children, header }: { children?: ReactNode; header?: ReactNode }) => (
     <div>

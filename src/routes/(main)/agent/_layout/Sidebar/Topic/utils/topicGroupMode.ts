@@ -1,4 +1,4 @@
-import type { HeterogeneousProviderConfig } from '@lobechat/types';
+import type { HeterogeneousProviderConfig } from '@agentasia/types';
 
 import type { TopicGroupMode } from '@/types/topic';
 

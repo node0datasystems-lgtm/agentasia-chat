@@ -2,7 +2,7 @@ import {
   formatActivityTime,
   type FormatActivityTimeOptions,
   type FormattedActivityTime,
-} from '@lobechat/utils/time';
+} from '@agentasia/utils/time';
 import { useTranslation } from 'react-i18next';
 
 export type UseActivityTimeOptions = Omit<

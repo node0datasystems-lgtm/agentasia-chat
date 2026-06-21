@@ -1,5 +1,5 @@
-import { getMessageError } from '@lobechat/fetch-sse';
-import { type ChatMessageError, type ChatTTS } from '@lobechat/types';
+import { getMessageError } from '@agentasia/fetch-sse';
+import { type ChatMessageError, type ChatTTS } from '@agentasia/types';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

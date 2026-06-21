@@ -25,7 +25,10 @@
               {
                 "id": "msg-304",
                 "type": "message",
-                "tools": ["msg-305", "msg-306"]
+                "tools": [
+                  "msg-305",
+                  "msg-306"
+                ]
               },
               {
                 "id": "msg-307",

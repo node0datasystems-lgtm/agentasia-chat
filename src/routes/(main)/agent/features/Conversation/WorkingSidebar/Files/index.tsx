@@ -1,7 +1,7 @@
 'use client';
 
-import type { ProjectFileIndexEntry } from '@lobechat/electron-client-ipc';
-import { ActionIcon, Center, copyToClipboard, Empty, Flexbox } from '@lobehub/ui';
+import type { ProjectFileIndexEntry } from '@agentasia/electron-client-ipc';
+import { ActionIcon, Center, copyToClipboard, Empty, Flexbox } from '@agentasia/ui';
 import type { MenuProps } from 'antd';
 import { message } from 'antd';
 import { createStaticStyles } from 'antd-style';

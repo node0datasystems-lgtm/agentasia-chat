@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { imageUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64 } from '@agentasia/utils';
 import { ModelProvider } from 'model-bank';
 import { Ollama } from 'ollama/browser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

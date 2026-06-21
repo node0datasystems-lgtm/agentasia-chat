@@ -1,4 +1,4 @@
-import type { WorkingDirEntry } from '@lobechat/types';
+import type { WorkingDirEntry } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { nextWorkingDirs, WORKING_DIRS_MAX } from './deviceCwd';

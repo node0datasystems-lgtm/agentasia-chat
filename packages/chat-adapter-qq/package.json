@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/chat-adapter-qq",
+  "name": "@agentasia/chat-adapter-qq",
   "version": "0.1.0",
   "description": "QQ Bot adapter for chat SDK",
   "type": "module",

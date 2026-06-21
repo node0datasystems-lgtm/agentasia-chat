@@ -2,13 +2,13 @@ import {
   type CategoryItem,
   type CategoryListQuery,
   type PluginManifest,
-} from '@lobehub/market-sdk';
+} from '@agentasia/market-sdk';
 import {
   type AgentEventRequest,
   type CallReportRequest,
   type InstallReportRequest,
   type PluginEventRequest,
-} from '@lobehub/market-types';
+} from '@agentasia/market-types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { globalHelpers } from '@/store/global/helpers';

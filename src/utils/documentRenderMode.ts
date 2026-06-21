@@ -6,7 +6,7 @@ import {
   EDITOR_DOCUMENT_SOURCE_TYPES,
   hasFilenameExtension,
   MARKDOWN_DOCUMENT_FILE_TYPES,
-} from '@lobechat/const';
+} from '@agentasia/const';
 
 import { getLanguageFromFilename } from './fileLanguage';
 import { isSkillMarkdownDocument } from './skillMarkdown';

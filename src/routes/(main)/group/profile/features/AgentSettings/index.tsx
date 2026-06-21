@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from '@lobehub/ui';
+import { Modal } from '@agentasia/ui';
 import { memo } from 'react';
 
 import Content from './Content';

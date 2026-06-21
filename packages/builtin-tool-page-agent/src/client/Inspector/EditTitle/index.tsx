@@ -1,7 +1,7 @@
 'use client';
 
-import type { EditTitleArgs } from '@lobechat/editor-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import type { EditTitleArgs } from '@agentasia/editor-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { cx } from 'antd-style';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

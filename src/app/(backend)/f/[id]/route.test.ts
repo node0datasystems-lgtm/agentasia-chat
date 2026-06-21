@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { FileModel } from '@/database/models/file';
@@ -53,7 +53,7 @@ describe('file proxy route', () => {
   });
 
   it('should redirect to a cached presigned preview URL instead of a public full file URL', async () => {
-    const response = await GET(new Request('https://lobehub.com/f/file-id'), {
+    const response = await GET(new Request('https://agentasia.ai/f/file-id'), {
       params: Promise.resolve({ id: 'file-id' }),
     });
 

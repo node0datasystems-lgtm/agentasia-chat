@@ -1,4 +1,4 @@
-import type { VerifyEvidence } from '@lobechat/types';
+import type { VerifyEvidence } from '@agentasia/types';
 import { and, asc, eq } from 'drizzle-orm';
 
 import { verifyEvidence } from '../schemas/verify';

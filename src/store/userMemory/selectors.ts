@@ -1,4 +1,4 @@
-import { type RetrieveMemoryParams, type RetrieveMemoryResult } from '@lobechat/types';
+import { type RetrieveMemoryParams, type RetrieveMemoryResult } from '@agentasia/types';
 
 import { type UserMemoryStoreState } from './initialState';
 import { userMemoryCacheKey } from './utils/cacheKey';

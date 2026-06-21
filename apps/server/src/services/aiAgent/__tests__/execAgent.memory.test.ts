@@ -5,9 +5,9 @@
  * Verifies that agent-level memory config takes priority over user-level setting,
  * and falls back to user setting when agent config is absent.
  */
-import type { LobeChatDatabase } from '@lobechat/database';
-import { agents, userSettings } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { agents, userSettings } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { eq } from 'drizzle-orm';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

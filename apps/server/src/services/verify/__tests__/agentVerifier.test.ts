@@ -1,6 +1,6 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { VerifyToolIdentifier } from '@lobechat/builtin-tool-verify';
-import type { VerifyCheckItem } from '@lobechat/types';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { VerifyToolIdentifier } from '@agentasia/builtin-tool-verify';
+import type { VerifyCheckItem } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { createVerifierAgentRunner } from '../agentVerifier';

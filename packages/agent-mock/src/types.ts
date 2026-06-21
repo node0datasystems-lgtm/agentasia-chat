@@ -1,4 +1,4 @@
-import type { AgentStreamEventType } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEventType } from '@agentasia/agent-gateway-client';
 
 export interface MockCase {
   description?: string;

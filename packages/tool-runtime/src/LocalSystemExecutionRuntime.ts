@@ -1,4 +1,4 @@
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import { ComputerRuntime } from './ComputerRuntime';
 import type { ServiceResult } from './types';

@@ -129,7 +129,7 @@ export interface SendMessageParams {
   forceRuntime?: 'client' | 'gateway' | 'hetero';
   /**
    *
-   * https://github.com/lobehub/lobe-chat/pull/2086
+   * https://github.com/agentasia/agentasia-chat/pull/2086
    */
   isWelcomeQuestion?: boolean;
   message: string;

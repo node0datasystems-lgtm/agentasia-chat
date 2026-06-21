@@ -1,5 +1,5 @@
-import { formatTodoStateSummary } from '@lobechat/prompts';
-import type { BuiltinToolResult } from '@lobechat/types';
+import { formatTodoStateSummary } from '@agentasia/prompts';
+import type { BuiltinToolResult } from '@agentasia/types';
 
 import type {
   ClearTodosParams,

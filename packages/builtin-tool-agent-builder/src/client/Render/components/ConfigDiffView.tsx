@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { CheckCircle, ChevronRight } from 'lucide-react';
 import { memo } from 'react';
 

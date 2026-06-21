@@ -1,7 +1,7 @@
 'use client';
 
-import { MAX_ONBOARDING_STEPS } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useCallback, useEffect, useRef } from 'react';
 import { Navigate, useNavigate } from 'react-router';
 

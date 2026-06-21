@@ -1,7 +1,7 @@
 'use client';
 
-import type { IEditor } from '@lobehub/editor';
-import type { EditorState as LobehubEditorState } from '@lobehub/editor/react';
+import type { IEditor } from '@agentasia/editor';
+import type { EditorState as LobehubEditorState } from '@agentasia/editor/react';
 import isEqual from 'fast-deep-equal';
 
 import { EMPTY_EDITOR_STATE } from '@/libs/editor/constants';

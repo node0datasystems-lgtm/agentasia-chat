@@ -389,7 +389,7 @@ Then('文稿应该显示所选的 Emoji 图标', async function (this: CustomWor
   console.log('   📍 Step: 验证显示 Emoji 图标...');
 
   // Look for emoji display - could be in Avatar or span element
-  // The emoji picker uses @lobehub/ui which may render differently
+  // The emoji picker uses @agentasia/ui which may render differently
   const emojiSelectors = [
     '[class*="Avatar"]',
     '[class*="avatar"]',

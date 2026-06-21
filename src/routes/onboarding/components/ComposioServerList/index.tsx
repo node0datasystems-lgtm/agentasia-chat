@@ -1,6 +1,6 @@
 'use client';
 
-import { Grid, ScrollShadow } from '@lobehub/ui';
+import { Grid, ScrollShadow } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 

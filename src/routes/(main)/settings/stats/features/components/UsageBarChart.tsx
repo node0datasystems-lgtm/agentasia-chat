@@ -1,6 +1,6 @@
-import { type BarChartProps } from '@lobehub/charts';
-import { BarChart, ChartTooltipFrame, ChartTooltipRow } from '@lobehub/charts';
-import { Flexbox, Text } from '@lobehub/ui';
+import { type BarChartProps } from '@agentasia/charts';
+import { BarChart, ChartTooltipFrame, ChartTooltipRow } from '@agentasia/charts';
+import { Flexbox, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 
 import { formatNumber, formatTokenNumber } from '@/utils/format';

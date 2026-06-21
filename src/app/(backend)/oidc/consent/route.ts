@@ -1,4 +1,4 @@
-import { getUserAuth } from '@lobechat/utils/server';
+import { getUserAuth } from '@agentasia/utils/server';
 import debug from 'debug';
 import { type NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';

@@ -1,4 +1,4 @@
-import type { AgentDocumentPolicyLoad } from '@lobechat/types';
+import type { AgentDocumentPolicyLoad } from '@agentasia/types';
 
 import type {
   AgentDocumentLoadRule,

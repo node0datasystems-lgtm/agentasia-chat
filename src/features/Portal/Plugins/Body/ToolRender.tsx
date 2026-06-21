@@ -1,4 +1,4 @@
-import { getBuiltinPortal } from '@lobechat/builtin-tools/portals';
+import { getBuiltinPortal } from '@agentasia/builtin-tools/portals';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 

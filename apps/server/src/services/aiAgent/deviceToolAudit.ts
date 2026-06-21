@@ -1,4 +1,4 @@
-import type { ChatTopicBotContext } from '@lobechat/types';
+import type { ChatTopicBotContext } from '@agentasia/types';
 import debug from 'debug';
 
 import type { DeviceAccessReason } from './deviceAccessPolicy';

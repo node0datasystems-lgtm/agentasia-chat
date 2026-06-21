@@ -1,7 +1,7 @@
 'use client';
 
-import { Mermaid } from '@lobehub/ui';
-import { Pre, PreSingleLine } from '@lobehub/ui/mdx';
+import { Mermaid } from '@agentasia/ui';
+import { Pre, PreSingleLine } from '@agentasia/ui/mdx';
 import { type FC, type PropsWithChildren } from 'react';
 
 const countLines = (str: string): number => {

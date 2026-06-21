@@ -1,4 +1,4 @@
-import type { ToolManifest } from '@lobechat/types';
+import type { ToolManifest } from '@agentasia/types';
 
 import type { DecryptedConnector } from '@/database/models/connector';
 import type { UserConnectorToolItem } from '@/database/schemas';

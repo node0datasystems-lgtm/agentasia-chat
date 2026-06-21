@@ -1,4 +1,4 @@
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { filterMessagesForAgent } from '../chatMessages';

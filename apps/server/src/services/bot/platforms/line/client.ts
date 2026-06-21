@@ -4,7 +4,7 @@ import {
   LineApiClient,
   type LineMessage,
   resolveMediaMessageId,
-} from '@lobechat/chat-adapter-line';
+} from '@agentasia/chat-adapter-line';
 import type { Message } from 'chat';
 import debug from 'debug';
 

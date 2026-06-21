@@ -17,9 +17,9 @@ describe('SkillEngine', () => {
       name: 'Agent Browser',
     },
     {
-      description: 'LobeHub management',
-      identifier: 'lobehub-cli',
-      name: 'LobeHub CLI',
+      description: 'AgentAsia management',
+      identifier: 'agentasia-cli',
+      name: 'AgentAsia CLI',
     },
   ];
 
@@ -46,9 +46,9 @@ describe('SkillEngine', () => {
 
   it('should pass through pluginIds to OperationSkillSet', () => {
     const engine = new SkillEngine({ skills: rawSkills });
-    const result = engine.generate(['artifacts', 'lobehub-cli']);
+    const result = engine.generate(['artifacts', 'agentasia-cli']);
 
-    expect(result.enabledPluginIds).toEqual(['artifacts', 'lobehub-cli']);
+    expect(result.enabledPluginIds).toEqual(['artifacts', 'agentasia-cli']);
   });
 
   it('should preserve skill content in output', () => {

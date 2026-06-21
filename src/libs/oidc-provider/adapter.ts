@@ -1,4 +1,4 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   oidcAccessTokens,
   oidcAuthorizationCodes,
@@ -8,7 +8,7 @@ import {
   oidcInteractions,
   oidcRefreshTokens,
   oidcSessions,
-} from '@lobechat/database/schemas';
+} from '@agentasia/database/schemas';
 import debug from 'debug';
 import { eq, sql } from 'drizzle-orm';
 

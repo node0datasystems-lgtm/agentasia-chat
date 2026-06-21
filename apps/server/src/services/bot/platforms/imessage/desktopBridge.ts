@@ -5,7 +5,7 @@ import type {
   BlueBubblesOutboundAttachment,
   BlueBubblesQueryResult,
   BlueBubblesSendOptions,
-} from '@lobechat/chat-adapter-imessage';
+} from '@agentasia/chat-adapter-imessage';
 
 import { deviceGateway } from '@/server/services/deviceGateway';
 

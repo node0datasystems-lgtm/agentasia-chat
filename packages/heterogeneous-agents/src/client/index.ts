@@ -1,5 +1,5 @@
-import type { IconType } from '@lobehub/icons';
-import { ClaudeCode, Codex, getLobeIconCDN } from '@lobehub/icons';
+import type { IconType } from '@agentasia/icons';
+import { ClaudeCode, Codex, getLobeIconCDN } from '@agentasia/icons';
 
 import {
   getHeterogeneousAgentConfig,

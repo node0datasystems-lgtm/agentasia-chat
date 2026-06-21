@@ -1,5 +1,5 @@
-import { Button, DropdownMenu, Flexbox, Icon, stopPropagation } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Button, DropdownMenu, Flexbox, Icon, stopPropagation } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Space } from 'antd';
 import { MoreHorizontalIcon, Trash2 } from 'lucide-react';
 import { memo, useState } from 'react';

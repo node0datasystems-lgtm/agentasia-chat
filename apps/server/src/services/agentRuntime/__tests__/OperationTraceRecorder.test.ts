@@ -49,7 +49,7 @@ describe('OperationTraceRecorder', () => {
         afterStepSignalEvents: [],
         agentState: {
           messages: [],
-          metadata: { agentConfig: { model: 'claude-sonnet-4-6', provider: 'lobehub' } },
+          metadata: { agentConfig: { model: 'claude-sonnet-4-6', provider: 'agentasia' } },
         },
         beforeStepSignalEvents: [],
         currentContext: { phase: 'user_input' },
@@ -62,7 +62,7 @@ describe('OperationTraceRecorder', () => {
 
       const saved = store.savePartial.mock.calls[0][1];
       expect(saved.model).toBe('claude-sonnet-4-6');
-      expect(saved.provider).toBe('lobehub');
+      expect(saved.provider).toBe('agentasia');
       expect(typeof saved.startedAt).toBe('number');
       expect(saved.steps).toHaveLength(1);
     });
@@ -200,7 +200,7 @@ describe('OperationTraceRecorder', () => {
     it('writes the canonical snapshot and removes the partial on success', async () => {
       store.loadPartial.mockResolvedValue({
         model: 'claude-sonnet-4-6',
-        provider: 'lobehub',
+        provider: 'agentasia',
         startedAt: 1000,
         steps: [
           {

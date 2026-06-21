@@ -1,6 +1,6 @@
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import type { LobeToolManifest, ToolsGenerationResult } from '@lobechat/context-engine';
-import { generateToolsFromManifest } from '@lobechat/context-engine';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import type { LobeToolManifest, ToolsGenerationResult } from '@agentasia/context-engine';
+import { generateToolsFromManifest } from '@agentasia/context-engine';
 import { describe, expect, it } from 'vitest';
 
 import { composeEnabledTools } from './toolSetComposer';

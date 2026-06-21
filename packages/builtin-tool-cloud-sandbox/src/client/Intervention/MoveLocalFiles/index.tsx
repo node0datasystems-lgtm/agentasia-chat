@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { ArrowRight } from 'lucide-react';
 import { memo } from 'react';
 

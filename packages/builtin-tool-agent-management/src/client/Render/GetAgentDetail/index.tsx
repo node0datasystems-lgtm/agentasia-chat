@@ -1,8 +1,8 @@
 'use client';
 
-import { DEFAULT_AVATAR } from '@lobechat/const';
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Avatar, Block, Flexbox, Markdown, Tag } from '@lobehub/ui';
+import { DEFAULT_AVATAR } from '@agentasia/const';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Avatar, Block, Flexbox, Markdown, Tag } from '@agentasia/ui';
 import { createStaticStyles, useTheme } from 'antd-style';
 import { memo } from 'react';
 

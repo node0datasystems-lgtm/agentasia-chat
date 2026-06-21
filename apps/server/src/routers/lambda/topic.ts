@@ -3,8 +3,8 @@ import {
   type RecentTopic,
   type RecentTopicGroup,
   type RecentTopicGroupMember,
-} from '@lobechat/types';
-import { cleanObject } from '@lobechat/utils';
+} from '@agentasia/types';
+import { cleanObject } from '@agentasia/utils';
 import { inArray } from 'drizzle-orm';
 import { after } from 'next/server';
 import { z } from 'zod';

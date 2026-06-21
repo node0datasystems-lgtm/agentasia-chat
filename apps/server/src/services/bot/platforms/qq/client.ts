@@ -1,5 +1,5 @@
-import type { QQAdapter } from '@lobechat/chat-adapter-qq';
-import { createQQAdapter, QQApiClient } from '@lobechat/chat-adapter-qq';
+import type { QQAdapter } from '@agentasia/chat-adapter-qq';
+import { createQQAdapter, QQApiClient } from '@agentasia/chat-adapter-qq';
 import type { Chat as ChatBot, Message } from 'chat';
 import debug from 'debug';
 
@@ -162,7 +162,7 @@ class QQGatewayClient implements PlatformClient {
 
       const chatConfig: any = {
         adapters: { qq: adapter },
-        userName: `lobehub-gateway-${this.applicationId}`,
+        userName: `agentasia-gateway-${this.applicationId}`,
       };
 
       if (this.context.redisClient) {

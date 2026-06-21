@@ -12,7 +12,7 @@ export default defineConfig({
   ],
   optimizeDeps: {
     exclude: ['crypto', 'util', 'tty'],
-    include: ['@lobehub/tts'],
+    include: ['@agentasia/tts'],
   },
   test: {
     alias: {

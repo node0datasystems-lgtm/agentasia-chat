@@ -10,7 +10,7 @@ import {
   Flexbox,
   Icon,
   menuSharedStyles,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { cssVar, cx } from 'antd-style';
 import { LucideArrowRight, LucideBolt } from 'lucide-react';
 import type { ComponentType } from 'react';

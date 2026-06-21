@@ -1,4 +1,4 @@
-import { imageUrlToBase64 } from '@lobechat/utils/imageToBase64';
+import { imageUrlToBase64 } from '@agentasia/utils/imageToBase64';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { VisualFileItem } from '../../visualMedia';

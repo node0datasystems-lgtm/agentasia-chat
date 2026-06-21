@@ -1,6 +1,6 @@
-import { type UIChatMessage } from '@lobechat/types';
-import { type FormItemProps } from '@lobehub/ui';
-import { Button, Flexbox, Form, Segmented } from '@lobehub/ui';
+import { type UIChatMessage } from '@agentasia/types';
+import { type FormItemProps } from '@agentasia/ui';
+import { Button, Flexbox, Form, Segmented } from '@agentasia/ui';
 import { Switch } from 'antd';
 import { CopyIcon } from 'lucide-react';
 import { memo, useState } from 'react';

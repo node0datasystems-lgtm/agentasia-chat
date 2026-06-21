@@ -1,4 +1,4 @@
-import { isRecord, pickString } from '@lobechat/utils';
+import { isRecord, pickString } from '@agentasia/utils';
 import { parse } from 'yaml';
 
 const SKILL_INDEX_FILENAME = 'SKILL.md';

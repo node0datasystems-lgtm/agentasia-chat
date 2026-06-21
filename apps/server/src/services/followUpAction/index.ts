@@ -1,6 +1,6 @@
-import { TRACING_SCENARIOS } from '@lobechat/const';
-import type { TracingOptions } from '@lobechat/llm-generation-tracing';
-import type { FollowUpChip, FollowUpExtractInput, FollowUpExtractResult } from '@lobechat/types';
+import { TRACING_SCENARIOS } from '@agentasia/const';
+import type { TracingOptions } from '@agentasia/llm-generation-tracing';
+import type { FollowUpChip, FollowUpExtractInput, FollowUpExtractResult } from '@agentasia/types';
 import debug from 'debug';
 
 import type { LobeChatDatabase } from '@/database/type';

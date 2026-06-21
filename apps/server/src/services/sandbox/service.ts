@@ -2,7 +2,7 @@ import {
   type SandboxCallToolResult,
   type SandboxExportFileResult,
   selectSandboxInitFiles,
-} from '@lobechat/builtin-tool-cloud-sandbox';
+} from '@agentasia/builtin-tool-cloud-sandbox';
 import debug from 'debug';
 import { sha256 } from 'js-sha256';
 

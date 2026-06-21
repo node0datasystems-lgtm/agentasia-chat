@@ -1,5 +1,5 @@
-import { DEFAULT_MINI_PROVIDER } from '@lobechat/business-const';
-import { DEFAULT_MINI_MODEL } from '@lobechat/const';
+import { DEFAULT_MINI_PROVIDER } from '@agentasia/business-const';
+import { DEFAULT_MINI_MODEL } from '@agentasia/const';
 
 import type { BuiltinAgentDefinition } from '../../types';
 import { BUILTIN_AGENT_SLUGS } from '../../types';

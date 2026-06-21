@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/prompts",
+  "name": "@agentasia/prompts",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -13,10 +13,10 @@
     "test:update": "vitest -u"
   },
   "dependencies": {
-    "@lobechat/const": "workspace:*"
+    "@agentasia/const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*",
-    "tsx": "^4.20.6"
+    "tsx": "^4.20.6",
+    "@agentasia/types": "workspace:*"
   }
 }

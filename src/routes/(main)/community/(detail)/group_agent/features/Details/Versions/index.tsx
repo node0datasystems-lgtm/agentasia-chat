@@ -1,4 +1,4 @@
-import { Block, Flexbox, Icon, Tag } from '@lobehub/ui';
+import { Block, Flexbox, Icon, Tag } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { CheckIcon, MinusIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';

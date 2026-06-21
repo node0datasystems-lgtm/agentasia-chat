@@ -1,7 +1,7 @@
 import { promisify } from 'node:util';
 import { zstdCompress, zstdDecompress } from 'node:zlib';
 
-import type { ExecutionSnapshot, ISnapshotStore, SnapshotSummary } from '@lobechat/agent-tracing';
+import type { ExecutionSnapshot, ISnapshotStore, SnapshotSummary } from '@agentasia/agent-tracing';
 import debug from 'debug';
 
 import { FileS3 } from '@/server/modules/S3';

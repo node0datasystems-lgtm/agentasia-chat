@@ -2,8 +2,8 @@ import {
   applyModelExtendParams,
   type ModelExtendParams,
   resolveDefaultThinkingLevelForModel,
-} from '@lobechat/model-runtime';
-import type { LobeAgentChatConfig } from '@lobechat/types';
+} from '@agentasia/model-runtime';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 
 import { aiModelSelectors, getAiInfraStoreState } from '@/store/aiInfra';
 

@@ -1,4 +1,4 @@
-import type { BriefArtifacts, BriefMetadata } from '@lobechat/types';
+import type { BriefArtifacts, BriefMetadata } from '@agentasia/types';
 import { isNotNull, isNull } from 'drizzle-orm';
 import {
   foreignKey,

@@ -1,7 +1,7 @@
 'use client';
 
-import { type FlexboxProps } from '@lobehub/ui';
-import { Flexbox, Text } from '@lobehub/ui';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

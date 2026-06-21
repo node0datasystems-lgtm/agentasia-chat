@@ -7,7 +7,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import Layout from './index';
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <div {...props}>{children}</div>
   ),

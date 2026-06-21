@@ -1,23 +1,23 @@
-import { AgentBuilderIdentifier } from '@lobechat/builtin-tool-agent-builder';
+import { AgentBuilderIdentifier } from '@agentasia/builtin-tool-agent-builder';
 import {
   COMPOSIO_APP_TYPES,
   LOBEHUB_SKILL_PROVIDERS,
   REQUEST_AGENT_ID_HEADER,
   REQUEST_TOPIC_ID_HEADER,
   REQUEST_TRIGGER_HEADER,
-} from '@lobechat/const';
-import { type OfficialToolItem } from '@lobechat/context-engine';
-import { type FetchSSEOptions } from '@lobechat/fetch-sse';
-import { fetchSSE, standardizeAnimationStyle } from '@lobechat/fetch-sse';
-import type { ChatCompletionErrorPayload } from '@lobechat/model-runtime';
-import { AgentRuntimeError, isResponsesAPIModel } from '@lobechat/model-runtime';
+} from '@agentasia/const';
+import { type OfficialToolItem } from '@agentasia/context-engine';
+import { type FetchSSEOptions } from '@agentasia/fetch-sse';
+import { fetchSSE, standardizeAnimationStyle } from '@agentasia/fetch-sse';
+import type { ChatCompletionErrorPayload } from '@agentasia/model-runtime';
+import { AgentRuntimeError, isResponsesAPIModel } from '@agentasia/model-runtime';
 import type {
   RuntimeInitialContext,
   RuntimeStepContext,
   TracePayload,
   UIChatMessage,
-} from '@lobechat/types';
-import { ChatErrorType, TraceTagMap } from '@lobechat/types';
+} from '@agentasia/types';
+import { ChatErrorType, TraceTagMap } from '@agentasia/types';
 import { merge } from 'es-toolkit/compat';
 import { ModelProvider } from 'model-bank';
 
@@ -35,7 +35,7 @@ import { getToolStoreState } from '@/store/tool';
 import {
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
 } from '@/store/tool/selectors';
 import { getUserStoreState, useUserStore } from '@/store/user';
 import {
@@ -238,7 +238,7 @@ class ChatService {
           const server = allComposioServers.find((s) => s.identifier === composioType.identifier);
 
           officialTools.push({
-            description: `LobeHub Mcp Server: ${composioType.label}`,
+            description: `AgentAsia Mcp Server: ${composioType.label}`,
             enabled: enabledPlugins.includes(composioType.identifier),
             identifier: composioType.identifier,
             installed: !!server,
@@ -254,18 +254,18 @@ class ChatService {
         window.global_serverConfigStore?.getState()?.serverConfig?.enableLobehubSkill;
 
       if (isLobehubSkillEnabled) {
-        const allLobehubSkillServers = lobehubSkillStoreSelectors.getServers(toolState);
+        const allLobehubSkillServers = agentasiaSkillStoreSelectors.getServers(toolState);
 
         for (const provider of LOBEHUB_SKILL_PROVIDERS) {
           const server = allLobehubSkillServers.find((s) => s.identifier === provider.id);
 
           officialTools.push({
-            description: `LobeHub Skill Provider: ${provider.label}`,
+            description: `AgentAsia Skill Provider: ${provider.label}`,
             enabled: enabledPlugins.includes(provider.id),
             identifier: provider.id,
             installed: !!server,
             name: provider.label,
-            type: 'lobehub-skill',
+            type: 'agentasia-skill',
           });
         }
       }

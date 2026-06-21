@@ -1,4 +1,4 @@
-import type { TaskTemplate } from '@lobechat/const';
+import type { TaskTemplate } from '@agentasia/const';
 import { App } from 'antd';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { isParkedStatus } from '@lobechat/agent-runtime';
+import { isParkedStatus } from '@agentasia/agent-runtime';
 import debug from 'debug';
 
 import {

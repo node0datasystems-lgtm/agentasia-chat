@@ -1,4 +1,4 @@
-import { type DeploymentOption, type SystemDependency } from '@lobehub/market-sdk';
+import { type DeploymentOption, type SystemDependency } from '@agentasia/market-sdk';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Import after mock setup

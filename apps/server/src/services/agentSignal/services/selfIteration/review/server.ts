@@ -1,7 +1,7 @@
-import type { AgentSignalRuntimeService } from '@lobechat/builtin-tool-agent-signal';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
-import { pickTrimmedString, toRecord } from '@lobechat/utils';
+import type { AgentSignalRuntimeService } from '@agentasia/builtin-tool-agent-signal';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
+import { pickTrimmedString, toRecord } from '@agentasia/utils';
 
 import { AgentSignalNightlyReviewModel } from '@/database/models/agentSignal/nightlyReview';
 import { AgentSignalReviewContextModel } from '@/database/models/agentSignal/reviewContext';

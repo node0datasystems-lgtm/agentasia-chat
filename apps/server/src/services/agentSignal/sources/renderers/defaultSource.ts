@@ -1,4 +1,4 @@
-import type { AgentSignalSource } from '@lobechat/agent-signal';
+import type { AgentSignalSource } from '@agentasia/agent-signal';
 
 import type { SourceRenderer } from '../types';
 import { createBaseSource } from './shared';

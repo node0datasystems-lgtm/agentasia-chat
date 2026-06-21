@@ -1,4 +1,4 @@
-import type { KnowledgeBaseItem } from '@lobechat/types';
+import type { KnowledgeBaseItem } from '@agentasia/types';
 import { and, count, desc, eq, inArray, or, sum } from 'drizzle-orm';
 
 import type { NewDocument, NewFile, NewKnowledgeBase } from '../schemas';

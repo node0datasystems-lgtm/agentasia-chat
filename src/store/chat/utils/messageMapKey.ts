@@ -1,4 +1,4 @@
-import { type MessageMapContext, type MessageMapScope } from '@lobechat/types';
+import { type MessageMapContext, type MessageMapScope } from '@agentasia/types';
 
 /**
  * Input context for messageMapKey function

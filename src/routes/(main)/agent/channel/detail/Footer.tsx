@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Flexbox, Tag } from '@lobehub/ui';
+import { Alert, Flexbox, Tag } from '@agentasia/ui';
 import { Button, Form as AntdForm, type FormInstance } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { RefreshCw, Save, Trash2 } from 'lucide-react';

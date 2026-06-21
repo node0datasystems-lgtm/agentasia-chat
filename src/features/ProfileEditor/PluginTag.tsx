@@ -1,8 +1,8 @@
 'use client';
 
-import { type ComposioAppType, type LobehubSkillProviderType } from '@lobechat/const';
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobechat/const';
-import { Avatar, Icon, Tag } from '@lobehub/ui';
+import { type ComposioAppType, type LobehubSkillProviderType } from '@agentasia/const';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
+import { Avatar, Icon, Tag } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { AlertCircle, Loader2, X } from 'lucide-react';
@@ -17,7 +17,7 @@ import { useToolStore } from '@/store/tool';
 import {
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { type LobeToolMetaWithAvailability } from '@/store/tool/slices/builtin/selectors';
@@ -34,7 +34,7 @@ const ComposioIcon = memo<Pick<ComposioAppType, 'icon' | 'label'>>(({ icon, labe
 });
 
 /**
- * LobeHub Skill Provider icon component
+ * AgentAsia Skill Provider icon component
  */
 const LobehubSkillIcon = memo<Pick<LobehubSkillProviderType, 'icon' | 'label'>>(
   ({ icon, label }) => {
@@ -111,8 +111,8 @@ const PluginTag = memo<PluginTagProps>(
     const allComposioServers = useToolStore(composioStoreSelectors.getServers, isEqual);
     const isComposioEnabledInEnv = useServerConfigStore(serverConfigSelectors.enableComposio);
 
-    // LobeHub Skill-related state
-    const allLobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers, isEqual);
+    // AgentAsia Skill-related state
+    const allLobehubSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers, isEqual);
     const isLobehubSkillEnabled = useServerConfigStore(serverConfigSelectors.enableLobehubSkill);
 
     // Check if plugin is installed
@@ -137,19 +137,19 @@ const PluginTag = memo<PluginTagProps>(
         }
       }
 
-      // Check if it's a LobeHub Skill provider
+      // Check if it's a AgentAsia Skill provider
       if (isLobehubSkillEnabled) {
-        const lobehubSkillProvider = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
-        if (lobehubSkillProvider) {
+        const agentasiaSkillProvider = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
+        if (agentasiaSkillProvider) {
           // Check if this LobehubSkill provider is connected
           const connectedServer = allLobehubSkillServers.find((s) => s.identifier === identifier);
           return {
             availableInWeb: true,
-            icon: lobehubSkillProvider.icon,
+            icon: agentasiaSkillProvider.icon,
             isInstalled: !!connectedServer,
-            label: lobehubSkillProvider.label,
-            title: lobehubSkillProvider.label,
-            type: 'lobehub-skill' as const,
+            label: agentasiaSkillProvider.label,
+            title: agentasiaSkillProvider.label,
+            type: 'agentasia-skill' as const,
           };
         }
       }
@@ -229,8 +229,8 @@ const PluginTag = memo<PluginTagProps>(
         return <ComposioIcon icon={meta.icon} label={meta.label} />;
       }
 
-      // LobeHub Skill type has icon property
-      if (meta.type === 'lobehub-skill' && 'icon' in meta && 'label' in meta) {
+      // AgentAsia Skill type has icon property
+      if (meta.type === 'agentasia-skill' && 'icon' in meta && 'label' in meta) {
         return <LobehubSkillIcon icon={meta.icon} label={meta.label} />;
       }
 

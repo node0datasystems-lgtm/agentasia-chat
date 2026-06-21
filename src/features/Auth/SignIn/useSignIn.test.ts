@@ -53,7 +53,7 @@ vi.mock('@/libs/better-auth/utils/client', () => ({
 }));
 
 vi.mock('@lobechat/business-const', () => ({
-  BRANDING_NAME: 'LobeHub',
+  BRANDING_NAME: 'AgentAsia',
 }));
 
 vi.mock('@/business/client/hooks/useBusinessSignin', () => ({
@@ -427,7 +427,7 @@ describe('useSignIn', () => {
         await result.current.handleSocialSignIn('google');
       });
 
-      expect(localStorage.getItem('lobehub:auth:last-provider:v1')).toBe('google');
+      expect(localStorage.getItem('agentasia:auth:last-provider:v1')).toBe('google');
     });
 
     it('should stop social sign in when business pre-check rejects', async () => {
@@ -511,13 +511,13 @@ describe('useSignIn', () => {
 
   describe('provider sorting', () => {
     it('should sort last used provider first', () => {
-      localStorage.setItem('lobehub:auth:last-provider:v1', 'github');
+      localStorage.setItem('agentasia:auth:last-provider:v1', 'github');
 
       const { result } = renderHook(() => useSignIn());
 
       expect(result.current.oAuthSSOProviders[0]).toBe('github');
 
-      localStorage.removeItem('lobehub:auth:last-provider:v1');
+      localStorage.removeItem('agentasia:auth:last-provider:v1');
     });
 
     it('should use business SSO providers when business features are enabled by server config', () => {

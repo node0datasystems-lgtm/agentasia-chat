@@ -1,5 +1,5 @@
-import { formatSearchResults, promptFileContents, promptNoSearchResults } from '@lobechat/prompts';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import { formatSearchResults, promptFileContents, promptNoSearchResults } from '@agentasia/prompts';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type {
   AddFilesArgs,

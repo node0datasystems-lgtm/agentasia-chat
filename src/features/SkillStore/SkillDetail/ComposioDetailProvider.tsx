@@ -1,6 +1,6 @@
 'use client';
 
-import { getComposioAppByIdentifier } from '@lobechat/const';
+import { getComposioAppByIdentifier } from '@agentasia/const';
 import { type ReactNode } from 'react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

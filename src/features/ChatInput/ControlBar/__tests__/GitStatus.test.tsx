@@ -62,7 +62,7 @@ vi.mock('@/components/RingLoading', () => ({
   default: () => <span data-testid="ring-loading" />,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Icon: () => <span data-testid="icon" />,
   Tooltip: ({ children, title }: { children: ReactNode; title?: ReactNode }) => (
     <div data-title={typeof title === 'string' ? title : undefined}>{children}</div>

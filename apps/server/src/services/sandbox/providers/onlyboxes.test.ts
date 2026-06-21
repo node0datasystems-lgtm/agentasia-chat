@@ -30,7 +30,7 @@ describe('OnlyboxesSandboxProvider', () => {
     vi.setSystemTime(new Date('2026-05-30T00:00:00.000Z'));
     vi.doMock('@/envs/app', () => ({
       appEnv: {
-        APP_URL: 'https://lobehub.example.com',
+        APP_URL: 'https://agentasia.example.com',
       },
     }));
     vi.doMock('@/envs/sandbox', () => ({
@@ -94,7 +94,7 @@ describe('OnlyboxesSandboxProvider', () => {
     expect(verifyJITSignature(authorization)).toBe(true);
     expect(decodeJITPayload(authorization)).toEqual({
       exp: Date.parse('2026-05-30T00:15:00.000Z'),
-      iss: 'https://lobehub.example.com',
+      iss: 'https://agentasia.example.com',
       sub: 'user-1',
     });
   });

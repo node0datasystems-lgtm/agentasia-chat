@@ -9,7 +9,10 @@
         {
           "id": "msg-502",
           "type": "message",
-          "tools": ["msg-503", "msg-504"]
+          "tools": [
+            "msg-503",
+            "msg-504"
+          ]
         }
       ],
       "id": "msg-502",

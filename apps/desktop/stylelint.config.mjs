@@ -1,4 +1,4 @@
-import { stylelint } from '@lobehub/lint';
+import { stylelint } from '@agentasia/lint';
 
 export default {
   ...stylelint,

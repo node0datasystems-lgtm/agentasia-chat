@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { LobeChatDatabase, Transaction } from '@lobechat/database';
+import type { LobeChatDatabase, Transaction } from '@agentasia/database';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {

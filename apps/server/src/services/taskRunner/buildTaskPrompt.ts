@@ -1,5 +1,5 @@
-import { buildTaskRunPrompt } from '@lobechat/prompts';
-import type { TaskItem, TaskTopicHandoff, WorkspaceData } from '@lobechat/types';
+import { buildTaskRunPrompt } from '@agentasia/prompts';
+import type { TaskItem, TaskTopicHandoff, WorkspaceData } from '@agentasia/types';
 
 import type { BriefModel } from '@/database/models/brief';
 import type { TaskModel } from '@/database/models/task';

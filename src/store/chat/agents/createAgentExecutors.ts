@@ -15,10 +15,10 @@ import type {
   InstructionExecutor,
   SubAgentResultPayload,
   SubAgentsBatchResultPayload,
-} from '@lobechat/agent-runtime';
-import { UsageCounter } from '@lobechat/agent-runtime';
-import { countContextTokens, type ToolsEngine } from '@lobechat/context-engine';
-import { chainCompressContext } from '@lobechat/prompts';
+} from '@agentasia/agent-runtime';
+import { UsageCounter } from '@agentasia/agent-runtime';
+import { countContextTokens, type ToolsEngine } from '@agentasia/context-engine';
+import { chainCompressContext } from '@agentasia/prompts';
 import {
   type ChatMessageError,
   type ChatToolPayload,
@@ -27,8 +27,8 @@ import {
   type MessageToolCall,
   type ModelUsage,
   TraceNameMap,
-} from '@lobechat/types';
-import { dedupeBy } from '@lobechat/utils';
+} from '@agentasia/types';
+import { dedupeBy } from '@agentasia/utils';
 import debug from 'debug';
 import { t } from 'i18next';
 import pMap from 'p-map';

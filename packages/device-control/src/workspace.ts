@@ -1,7 +1,7 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
-import { detectRepoType } from '@lobechat/local-file-shell';
+import { detectRepoType } from '@agentasia/local-file-shell';
 
 import type {
   InitWorkspaceParams,

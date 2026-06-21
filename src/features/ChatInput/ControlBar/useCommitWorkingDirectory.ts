@@ -1,5 +1,5 @@
-import type { WorkingDirEntry } from '@lobechat/types';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import type { WorkingDirEntry } from '@agentasia/types';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

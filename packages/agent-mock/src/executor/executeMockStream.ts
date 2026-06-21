@@ -1,4 +1,4 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 
 import { MockPlayer } from '../player/MockPlayer';
 import type { MockCase, SpeedMultiplier } from '../types';

@@ -4,8 +4,8 @@ import type {
   MoveLocalFileParams,
   ProjectFileIndexResult,
   RenameLocalFileResult,
-} from '@lobechat/electron-client-ipc';
-import type { DeviceLocalFilePreview } from '@lobechat/types';
+} from '@agentasia/electron-client-ipc';
+import type { DeviceLocalFilePreview } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { type LocalFilePreview, localFileService } from '@/services/electron/localFileService';

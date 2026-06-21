@@ -77,7 +77,7 @@ Quick reference for assigning issues based on labels.
 
 | Label               | Owner       | Notes                  |
 | ------------------- | ----------- | ---------------------- |
-| `hosting:cloud`     | @tjx666     | Official LobeHub Cloud |
+| `hosting:cloud`     | @tjx666     | Official AgentAsia Cloud |
 | `hosting:self-host` | @nekomeowww | Self-hosting issues    |
 | `hosting:vercel`    | @nekomeowww | Vercel deployment      |
 | `hosting:zeabur`    | @nekomeowww | Zeabur deployment      |

@@ -1,4 +1,4 @@
-import type { StreamInvokeRequestParams } from '@lobechat/electron-client-ipc';
+import type { StreamInvokeRequestParams } from '@agentasia/electron-client-ipc';
 import { ipcRenderer } from 'electron';
 import { v4 as uuid } from 'uuid';
 

@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import type { GitWorkingTreeFiles } from '@lobechat/electron-client-ipc';
+import { isDesktop } from '@agentasia/const';
+import type { GitWorkingTreeFiles } from '@agentasia/electron-client-ipc';
 import type { GitStatusEntry } from '@pierre/trees';
 
 import { useClientDataSWR } from '@/libs/swr';

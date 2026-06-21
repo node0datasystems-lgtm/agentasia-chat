@@ -7,7 +7,9 @@
       "id": "msg_1",
       "role": "user",
       "updatedAt": "2025-12-22T05:28:39.982Z",
-      "metadata": { "activeBranchIndex": 1 }
+      "metadata": {
+        "activeBranchIndex": 1
+      }
     },
     {
       "content": "你好！(回复A)",
@@ -89,7 +91,12 @@
       },
       "pluginState": {
         "query": "杭州天气",
-        "results": [{ "title": "杭州天气", "content": "多云 3-14℃" }]
+        "results": [
+          {
+            "title": "杭州天气",
+            "content": "多云 3-14℃"
+          }
+        ]
       },
       "tool_call_id": "toolu_1"
     },
@@ -127,7 +134,12 @@
       },
       "pluginState": {
         "query": "杭州天气预报",
-        "results": [{ "title": "杭州天气预报", "content": "明天多云转阴 16℃" }]
+        "results": [
+          {
+            "title": "杭州天气预报",
+            "content": "明天多云转阴 16℃"
+          }
+        ]
       },
       "tool_call_id": "toolu_2"
     },

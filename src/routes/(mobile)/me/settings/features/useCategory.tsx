@@ -1,4 +1,4 @@
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import {
   Brain,
   BrainCircuit,
@@ -101,7 +101,7 @@ export const useCategory = (): CategoryGroup[] => {
 
     const agent: CategoryItem[] = [
       // Provider settings should not depend on Advanced tools: new users may need
-      // non-LobeHub providers, and desktop users often bring their own API keys.
+      // non-AgentAsia providers, and desktop users often bring their own API keys.
       showProvider &&
         makeItem({ icon: Brain, key: SettingsTabs.Provider, label: t('setting:tab.provider') }),
       makeItem({

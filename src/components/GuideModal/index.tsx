@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { type ModalProps } from 'antd';
 import { ConfigProvider, Modal } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';

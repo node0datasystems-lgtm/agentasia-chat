@@ -1,4 +1,4 @@
-import { Markdown } from '@lobehub/ui';
+import { Markdown } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 

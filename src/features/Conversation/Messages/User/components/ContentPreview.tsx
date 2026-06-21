@@ -1,4 +1,4 @@
-import { Button, Flexbox, MaskShadow } from '@lobehub/ui';
+import { Button, Flexbox, MaskShadow } from '@agentasia/ui';
 import { useTranslation } from 'react-i18next';
 
 import MarkdownMessage from '@/features/Conversation/Markdown';

@@ -1,7 +1,7 @@
 'use client';
 
-import { type UserCredSummary } from '@lobechat/types';
-import { CopyButton, Flexbox } from '@lobehub/ui';
+import { type UserCredSummary } from '@agentasia/types';
+import { CopyButton, Flexbox } from '@agentasia/ui';
 import { useQuery } from '@tanstack/react-query';
 import { Alert, Descriptions, Skeleton, Typography } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';

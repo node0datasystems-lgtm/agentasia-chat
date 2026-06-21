@@ -1,4 +1,4 @@
-import type { TaskDetailData, TaskStatus } from '@lobechat/types';
+import type { TaskDetailData, TaskStatus } from '@agentasia/types';
 
 import { taskService } from '@/services/task';
 import type { StoreSetter } from '@/store/types';

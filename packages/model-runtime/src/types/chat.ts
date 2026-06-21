@@ -1,4 +1,4 @@
-import type { ModelPerformance, ModelTokensUsage, ModelUsage } from '@lobechat/types';
+import type { ModelPerformance, ModelTokensUsage, ModelUsage } from '@agentasia/types';
 
 import type { MessageToolCall, MessageToolCallChunk } from './toolsCalling';
 

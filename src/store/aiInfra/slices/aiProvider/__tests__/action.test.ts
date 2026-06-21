@@ -1,4 +1,4 @@
-import * as runtimeModule from '@lobechat/model-runtime';
+import * as runtimeModule from '@agentasia/model-runtime';
 import type { AIImageModelCard, EnabledAiModel, ModelParamsSchema, Pricing } from 'model-bank';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -66,7 +66,7 @@ describe('aiProvider action helpers', () => {
         units: [{ name: 'textInput', rate: 1.25, strategy: 'fixed', unit: 'millionTokens' }],
       };
       const model = {
-        ...createChatModel({ id: 'online-chat-model', providerId: 'lobehub' }),
+        ...createChatModel({ id: 'online-chat-model', providerId: 'agentasia' }),
         description: 'Inline description',
         knowledgeCutoff: '2024-06',
         pricing,
@@ -193,16 +193,16 @@ describe('aiProvider action helpers', () => {
           createChatModel({
             displayName: 'Visible Model',
             id: 'visible-model',
-            providerId: 'lobehub',
+            providerId: 'agentasia',
           }),
           createChatModel({
             displayName: 'Onboarding Alias',
-            id: 'lobehub-onboarding-v1',
-            providerId: 'lobehub',
+            id: 'agentasia-onboarding-v1',
+            providerId: 'agentasia',
             visible: false,
           }),
         ],
-        'lobehub',
+        'agentasia',
       );
 
       expect(result.map((model) => model.id)).toEqual(['visible-model']);

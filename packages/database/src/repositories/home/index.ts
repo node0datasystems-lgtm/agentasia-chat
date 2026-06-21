@@ -2,8 +2,8 @@ import {
   type SidebarAgentItem,
   type SidebarAgentListResponse,
   type SidebarGroup,
-} from '@lobechat/types';
-import { cleanObject } from '@lobechat/utils';
+} from '@agentasia/types';
+import { cleanObject } from '@agentasia/utils';
 import { and, count, desc, eq, not, sql } from 'drizzle-orm';
 
 import { ChatGroupModel } from '../../models/chatGroup';
@@ -26,7 +26,7 @@ export type {
   SidebarAgentListResponse,
   SidebarGroup,
   SidebarItemType,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 /**
  * Home Repository - provides sidebar agent list data

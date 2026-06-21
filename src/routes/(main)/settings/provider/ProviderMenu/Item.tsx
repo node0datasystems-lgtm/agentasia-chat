@@ -1,6 +1,6 @@
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { ProviderIcon } from '@lobehub/icons';
-import { Avatar, Center } from '@lobehub/ui';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { ProviderIcon } from '@agentasia/icons';
+import { Avatar, Center } from '@agentasia/ui';
 import { Badge } from 'antd';
 import { memo, useMemo } from 'react';
 import { useLocation } from 'react-router';

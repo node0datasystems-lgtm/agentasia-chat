@@ -1,4 +1,4 @@
-import { Block, Flexbox, Skeleton } from '@lobehub/ui';
+import { Block, Flexbox, Skeleton } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface TaskItemSkeletonProps {

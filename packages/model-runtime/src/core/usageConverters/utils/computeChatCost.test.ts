@@ -1,4 +1,4 @@
-import type { ModelTokensUsage } from '@lobechat/types';
+import type { ModelTokensUsage } from '@agentasia/types';
 import type { Pricing } from 'model-bank';
 import anthropicChatModels from 'model-bank/anthropic';
 import azureChatModels from 'model-bank/azure';
@@ -132,7 +132,7 @@ describe('computeChatPricing', () => {
     });
   });
 
-  describe('LobeHub-hosted DeepSeek', () => {
+  describe('AgentAsia-hosted DeepSeek', () => {
     interface HostedPricingCase {
       expectedCredits: Record<string, number>;
       expectedUnits: Pricing['units'];
@@ -223,7 +223,7 @@ describe('computeChatPricing', () => {
     ] satisfies HostedPricingCase[];
 
     it.each(hostedPricingCases)(
-      'applies LobeHub-hosted official pricing for $modelId',
+      'applies AgentAsia-hosted official pricing for $modelId',
       ({ expectedCredits, expectedUnits, modelId }) => {
         const pricing: Pricing = { units: expectedUnits };
 
@@ -1097,7 +1097,7 @@ describe('computeChatPricing', () => {
       expect(cached?.quantity).toBe(3021);
       expect(cached?.credits).toBe(907); // ceil(906.3) = 907
 
-      // Verify cache write tokens (fixed strategy in lobehub model)
+      // Verify cache write tokens (fixed strategy in agentasia model)
       const cacheWrite = breakdown.find((item) => item.unit.name === 'textInput_cacheWrite');
       expect(cacheWrite?.quantity).toBe(1697);
       expect(cacheWrite?.credits).toBe(6_364); // ceil(6363.75) = 6364

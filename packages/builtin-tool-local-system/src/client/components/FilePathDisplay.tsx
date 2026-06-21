@@ -1,6 +1,6 @@
 'use client';
 
-import { MaterialFileTypeIcon, Text } from '@lobehub/ui';
+import { MaterialFileTypeIcon, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import path from 'path-browserify-esm';
 import { memo, useMemo } from 'react';

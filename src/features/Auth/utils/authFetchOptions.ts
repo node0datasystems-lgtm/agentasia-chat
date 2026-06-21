@@ -1,4 +1,4 @@
-import { headersToRecord } from '@lobechat/fetch-sse/headers';
+import { headersToRecord } from '@agentasia/fetch-sse/headers';
 
 import { CAPTCHA_RESPONSE_HEADER } from '@/libs/better-auth/captcha';
 

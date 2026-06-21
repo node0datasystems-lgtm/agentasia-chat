@@ -1,7 +1,7 @@
 'use client';
 
-import { groupTopicsByProject, groupTopicsByUpdatedTime } from '@lobechat/utils/client/topic';
-import { Flexbox, Skeleton } from '@lobehub/ui';
+import { groupTopicsByProject, groupTopicsByUpdatedTime } from '@agentasia/utils/client/topic';
+import { Flexbox, Skeleton } from '@agentasia/ui';
 import { memo, useEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

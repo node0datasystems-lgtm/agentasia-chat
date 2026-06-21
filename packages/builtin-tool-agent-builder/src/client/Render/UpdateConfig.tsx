@@ -1,5 +1,5 @@
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { memo } from 'react';
 

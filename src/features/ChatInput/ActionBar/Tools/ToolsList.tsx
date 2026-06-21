@@ -1,5 +1,5 @@
-import type { ItemType } from '@lobehub/ui';
-import { Flexbox, Icon, Popover, Text } from '@lobehub/ui';
+import type { ItemType } from '@agentasia/ui';
+import { Flexbox, Icon, Popover, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import type { ReactNode } from 'react';
@@ -7,7 +7,7 @@ import { Fragment, isValidElement, memo, useCallback, useEffect, useRef, useStat
 
 import { useScrollSignal } from './ScrollSignalContext';
 
-const CLOSE_TOOL_DETAIL_POPOVER_EVENT = 'lobe-chat-tool-detail-popover-close';
+const CLOSE_TOOL_DETAIL_POPOVER_EVENT = 'agentasia-chat-tool-detail-popover-close';
 
 export const toolsListStyles = createStaticStyles(({ css }) => ({
   groupLabel: css`

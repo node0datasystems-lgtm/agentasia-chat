@@ -1,4 +1,4 @@
-import { Block, Flexbox, Text } from '@lobehub/ui';
+import { Block, Flexbox, Text } from '@agentasia/ui';
 import { Tag } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { isOnServerSide } from '@lobechat/utils';
+import { isOnServerSide } from '@agentasia/utils';
 import { type ParsedQuery } from 'query-string';
 import qs from 'query-string';
 import { useMemo } from 'react';

@@ -1,6 +1,6 @@
-import { isDesktop } from '@lobechat/const';
-import { Avatar } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { isDesktop } from '@agentasia/const';
+import { Avatar } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import {
   BellIcon,
   Brain,
@@ -145,7 +145,7 @@ export const useCategory = () => {
     // Agent group
     const agentItems: CategoryItem[] = [
       // Provider settings should not depend on Advanced tools: new users may need
-      // non-LobeHub providers, and desktop users often bring their own API keys.
+      // non-AgentAsia providers, and desktop users often bring their own API keys.
       showProvider && {
         icon: Brain,
         key: SettingsTabs.Provider,

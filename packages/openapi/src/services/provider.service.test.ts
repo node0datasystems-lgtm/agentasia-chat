@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type * as BusinessConst from '@lobechat/business-const';
-import { OFFICIAL_PROVIDER_DISABLE_ERROR } from '@lobechat/business-const';
+import type * as BusinessConst from '@agentasia/business-const';
+import { OFFICIAL_PROVIDER_DISABLE_ERROR } from '@agentasia/business-const';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { LobeChatDatabase } from '@/database/type';
@@ -41,9 +41,9 @@ vi.mock('@lobechat/business-const', async () => {
 
   return {
     ...actual,
-    BRANDING_PROVIDER: 'lobehub',
+    BRANDING_PROVIDER: 'agentasia',
     ENABLE_BUSINESS_FEATURES: true,
-    isOfficialProvider: (id: string) => id === 'lobehub',
+    isOfficialProvider: (id: string) => id === 'agentasia',
   };
 });
 
@@ -66,7 +66,7 @@ describe('ProviderService', () => {
       await expect(
         service.createProvider({
           enabled: false,
-          id: 'lobehub',
+          id: 'agentasia',
         }),
       ).rejects.toMatchObject({
         message: OFFICIAL_PROVIDER_DISABLE_ERROR,
@@ -80,7 +80,7 @@ describe('ProviderService', () => {
       await expect(
         service.updateProvider({
           enabled: false,
-          id: 'lobehub',
+          id: 'agentasia',
         }),
       ).rejects.toMatchObject({
         message: OFFICIAL_PROVIDER_DISABLE_ERROR,

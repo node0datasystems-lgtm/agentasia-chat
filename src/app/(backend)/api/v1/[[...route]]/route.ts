@@ -1,4 +1,4 @@
-import lobeOpenApi from '@lobechat/openapi';
+import lobeOpenApi from '@agentasia/openapi';
 
 const handler = (request: Request) => lobeOpenApi.fetch(request);
 

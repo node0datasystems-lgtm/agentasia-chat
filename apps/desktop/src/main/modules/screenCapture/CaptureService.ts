@@ -1,4 +1,4 @@
-import type { CaptureRectParams } from '@lobechat/electron-client-ipc';
+import type { CaptureRectParams } from '@agentasia/electron-client-ipc';
 import { Monitor } from 'node-screenshots';
 
 import { createLogger } from '@/utils/logger';

@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-activator",
+  "name": "@agentasia/builtin-tool-activator",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -10,7 +10,7 @@
   },
   "main": "./src/index.ts",
   "devDependencies": {
-    "@lobechat/prompts": "workspace:*",
-    "@lobechat/types": "workspace:*"
+    "@agentasia/prompts": "workspace:*",
+    "@agentasia/types": "workspace:*"
   }
 }

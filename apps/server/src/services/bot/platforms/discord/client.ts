@@ -37,7 +37,7 @@ export interface GatewayListenerOptions {
    * Override the URL the Gateway listener forwards events to. Defaults to
    * `${appUrl}/api/agent/webhooks/discord/${applicationId}` (the per-agent
    * bot path). Set when the same gateway connection should drive a different
-   * surface — e.g. the LobeHub Messenger forwards to
+   * surface — e.g. the AgentAsia Messenger forwards to
    * `/api/agent/messenger/webhooks/discord`.
    */
   webhookUrl?: string;
@@ -108,7 +108,7 @@ class DiscordGatewayClient implements PlatformClient {
 
       const chatConfig: any = {
         adapters: { discord: adapter },
-        userName: `lobehub-gateway-${this.applicationId}`,
+        userName: `agentasia-gateway-${this.applicationId}`,
       };
 
       if (this.context.redisClient) {

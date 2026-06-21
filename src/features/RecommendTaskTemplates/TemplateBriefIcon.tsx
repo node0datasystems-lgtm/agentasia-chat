@@ -1,4 +1,4 @@
-import { Block, Icon, Image } from '@lobehub/ui';
+import { Block, Icon, Image } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import type { BuiltinInspector } from '@lobechat/types';
+import type { BuiltinInspector } from '@agentasia/types';
 
 import { DocumentApiName } from '../../types';
 import { EditTitleInspector } from './EditTitle';

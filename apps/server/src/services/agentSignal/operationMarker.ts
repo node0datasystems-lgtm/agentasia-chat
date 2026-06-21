@@ -10,7 +10,7 @@
  * channel, this travels on the operation row itself.
  */
 
-import type { AgentSignalOperationKind, AgentSignalOperationMarker } from '@lobechat/types';
+import type { AgentSignalOperationKind, AgentSignalOperationMarker } from '@agentasia/types';
 
 // The marker shape is defined in `@lobechat/types` (so `ExecAgentAppContext` can
 // carry it through `execAgent`); the runtime parser/validator helpers live here.

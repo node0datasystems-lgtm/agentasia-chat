@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { TITLE_BAR_HEIGHT } from '@lobechat/desktop-bridge';
+import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
 import { type BrowserWindow, type BrowserWindowConstructorOptions, nativeTheme } from 'electron';
 
 import { buildDir } from '@/const/dir';

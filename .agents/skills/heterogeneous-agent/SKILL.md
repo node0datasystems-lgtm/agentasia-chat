@@ -1,6 +1,6 @@
 ---
 name: heterogeneous-agent
-description: 'Implement or debug LobeHub heterogeneous agents. Use for Claude Code/Codex adapters, external CLI agents, event mapping, IPC, persistence, tool-call chains, sessions, traces, or adapter bugs.'
+description: 'Implement or debug AgentAsia heterogeneous agents. Use for Claude Code/Codex adapters, external CLI agents, event mapping, IPC, persistence, tool-call chains, sessions, traces, or adapter bugs.'
 ---
 
 # Heterogeneous Agent Development

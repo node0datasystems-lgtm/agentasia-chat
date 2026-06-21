@@ -1,4 +1,4 @@
-import type { ImporterEntryData, ImportPgDataStructure, ImportResultData } from '@lobechat/types';
+import type { ImporterEntryData, ImportPgDataStructure, ImportResultData } from '@agentasia/types';
 import { and, eq, inArray } from 'drizzle-orm';
 
 import { uuid } from '@/utils/uuid';

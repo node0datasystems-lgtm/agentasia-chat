@@ -1,4 +1,4 @@
-import { type ChatToolPayload, type GlobalInterventionAuditConfig } from '@lobechat/types';
+import { type ChatToolPayload, type GlobalInterventionAuditConfig } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { type AgentRuntimeContext, type AgentState } from '../../types';

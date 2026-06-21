@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { useEffect } from 'react';
 
 import { useDeviceStore } from '@/store/device';

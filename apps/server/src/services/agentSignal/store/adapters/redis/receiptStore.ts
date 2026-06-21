@@ -1,4 +1,4 @@
-import { LayersEnum } from '@lobechat/types';
+import { LayersEnum } from '@agentasia/types';
 
 import { AGENT_SIGNAL_KEYS } from '../../../constants';
 import type { AgentSignalReceipt } from '../../../services/receiptService';

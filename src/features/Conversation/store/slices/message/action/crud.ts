@@ -12,9 +12,9 @@ import {
   type MessagePluginItem,
   type ModelReasoning,
   type UpdateMessageRAGParams,
-} from '@lobechat/types';
-import { ChatErrorType } from '@lobechat/types';
-import { merge, nanoid, safeParseJSON } from '@lobechat/utils';
+} from '@agentasia/types';
+import { ChatErrorType } from '@agentasia/types';
+import { merge, nanoid, safeParseJSON } from '@agentasia/utils';
 import isEqual from 'fast-deep-equal';
 import { type StateCreator } from 'zustand';
 

@@ -1,7 +1,7 @@
-import { isDesktop } from '@lobechat/const';
-import { type AgentContextDocument } from '@lobechat/context-engine';
-import { isChatGroupSessionId, pruneWorkingDirByDeviceDeletes } from '@lobechat/types';
-import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
+import { isDesktop } from '@agentasia/const';
+import { type AgentContextDocument } from '@agentasia/context-engine';
+import { isChatGroupSessionId, pruneWorkingDirByDeviceDeletes } from '@agentasia/types';
+import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
 import isEqual from 'fast-deep-equal';
 import { produce } from 'immer';
 import type { SWRResponse } from 'swr';

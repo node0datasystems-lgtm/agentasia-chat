@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type * as BusinessConst from '@lobechat/business-const';
-import { OFFICIAL_PROVIDER_DISABLE_ERROR } from '@lobechat/business-const';
+import type * as BusinessConst from '@agentasia/business-const';
+import { OFFICIAL_PROVIDER_DISABLE_ERROR } from '@agentasia/business-const';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AiProviderModel } from '@/database/models/aiProvider';
@@ -21,9 +21,9 @@ vi.mock('@lobechat/business-const', async () => {
 
   return {
     ...actual,
-    BRANDING_PROVIDER: 'lobehub',
+    BRANDING_PROVIDER: 'agentasia',
     ENABLE_BUSINESS_FEATURES: true,
-    isOfficialProvider: (id: string) => id === 'lobehub',
+    isOfficialProvider: (id: string) => id === 'agentasia',
   };
 });
 
@@ -171,7 +171,7 @@ describe('aiProviderRouter', () => {
       await expect(
         caller.toggleProviderEnabled({
           enabled: false,
-          id: 'lobehub',
+          id: 'agentasia',
         }),
       ).rejects.toMatchObject({
         code: 'BAD_REQUEST',

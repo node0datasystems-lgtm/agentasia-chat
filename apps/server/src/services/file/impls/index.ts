@@ -1,4 +1,4 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 
 import { S3StaticFileImpl } from './s3';
 import { type FileServiceImpl } from './type';

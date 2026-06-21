@@ -1,4 +1,4 @@
-import { ScrollShadow } from '@lobehub/ui';
+import { ScrollShadow } from '@agentasia/ui';
 import { type FC, type PropsWithChildren } from 'react';
 
 const CategoryContainer: FC<PropsWithChildren<{ top?: number }>> = ({ children, top = 16 }) => {

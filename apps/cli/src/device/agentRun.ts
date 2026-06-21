@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import {
   buildHeteroExecStdinPayload,
   type HeteroExecImageRef,
-} from '@lobechat/heterogeneous-agents/protocol';
+} from '@agentasia/heterogeneous-agents/protocol';
 
 export interface SpawnHeteroAgentRunParams {
   agentType: string;

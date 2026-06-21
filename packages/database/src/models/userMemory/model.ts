@@ -1,4 +1,4 @@
-import { AssociatedObjectSchema } from '@lobechat/memory-user-memory';
+import { AssociatedObjectSchema } from '@agentasia/memory-user-memory';
 import type {
   MergeStrategyEnum,
   Optional,
@@ -15,14 +15,14 @@ import type {
   UserMemoryItemSimple,
   UserMemoryPreferenceWithoutVectors,
   UserMemoryWithoutVectors,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import {
   ActivityTypeEnum,
   IdentityTypeEnum,
   LayersEnum,
   MemorySourceType,
   RelationshipEnum,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import type { AnyColumn, SQL } from 'drizzle-orm';
 import { and, asc, cosineDistance, desc, eq, inArray, isNotNull, ne, or, sql } from 'drizzle-orm';
 

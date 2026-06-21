@@ -1,5 +1,5 @@
-import { registerBuiltinToolSurfaces } from '@lobechat/builtin-tools/register';
-import { getBuiltinStreaming } from '@lobechat/builtin-tools/streamings';
+import { registerBuiltinToolSurfaces } from '@agentasia/builtin-tools/register';
+import { getBuiltinStreaming } from '@agentasia/builtin-tools/streamings';
 import { render, screen } from '@testing-library/react';
 import { createElement } from 'react';
 import { beforeAll, describe, expect, it, vi } from 'vitest';

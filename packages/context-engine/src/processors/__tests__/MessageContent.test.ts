@@ -1,4 +1,4 @@
-import type { ChatAudioItem, ChatImageItem, ChatVideoItem, UIChatMessage } from '@lobechat/types';
+import type { ChatAudioItem, ChatImageItem, ChatVideoItem, UIChatMessage } from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import type { PipelineContext } from '../../types';

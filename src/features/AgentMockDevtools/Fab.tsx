@@ -1,4 +1,4 @@
-import { Tooltip } from '@lobehub/ui';
+import { Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Bot } from 'lucide-react';
 import { memo } from 'react';

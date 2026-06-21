@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinPortalTitleProps } from '@lobechat/types';
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import type { BuiltinPortalTitleProps } from '@agentasia/types';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import { Globe } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

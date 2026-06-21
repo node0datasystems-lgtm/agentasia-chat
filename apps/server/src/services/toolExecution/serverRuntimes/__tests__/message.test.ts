@@ -1,4 +1,4 @@
-import { MessageToolIdentifier } from '@lobechat/builtin-tool-message';
+import { MessageToolIdentifier } from '@agentasia/builtin-tool-message';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { ToolExecutionContext } from '../../types';
@@ -403,7 +403,7 @@ describe('messageRuntime', () => {
       mockQuery.mockResolvedValue([]);
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockTelegramSendMessage.mockResolvedValue({ message_id: 99 });
 
@@ -550,7 +550,7 @@ describe('messageRuntime', () => {
       mockListByInstallerUserId.mockResolvedValueOnce([]);
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockLinkFindByPlatform.mockResolvedValueOnce({
         createdAt: new Date('2026-03-01T00:00:00Z'),
@@ -596,7 +596,7 @@ describe('messageRuntime', () => {
       mockListByInstallerUserId.mockResolvedValueOnce([]);
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockLinkFindByPlatform.mockResolvedValueOnce(undefined);
 
@@ -621,7 +621,7 @@ describe('messageRuntime', () => {
       ]);
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockLinkFindByPlatform.mockResolvedValueOnce({
         createdAt: new Date('2026-03-01T00:00:00Z'),
@@ -694,7 +694,7 @@ describe('messageRuntime', () => {
     it('synthesizes detail for the telegram singleton id', async () => {
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockLinkFindByPlatform.mockResolvedValueOnce({
         createdAt: new Date('2026-03-01T00:00:00Z'),
@@ -716,7 +716,7 @@ describe('messageRuntime', () => {
     it('returns null for telegram singleton when user has no link', async () => {
       mockGetMessengerTelegramConfig.mockResolvedValueOnce({
         botToken: 'tg-env-token',
-        botUsername: 'lobehub_bot',
+        botUsername: 'agentasia_bot',
       });
       mockLinkFindByPlatform.mockResolvedValueOnce(undefined);
 
@@ -802,7 +802,7 @@ describe('messageRuntime', () => {
         { id: 'discord', name: 'Discord' },
       ]);
       mockGetMessengerSlackConfig.mockResolvedValueOnce({ appId: 'A123' });
-      mockGetMessengerTelegramConfig.mockResolvedValueOnce({ botUsername: 'lobehub_bot' });
+      mockGetMessengerTelegramConfig.mockResolvedValueOnce({ botUsername: 'agentasia_bot' });
 
       const runtime = await messageRuntime.factory(validContext);
       const result = await runtime.listMessengerPlatforms({});
@@ -812,7 +812,7 @@ describe('messageRuntime', () => {
       expect(result.state.platforms).toHaveLength(2);
       expect(result.content).toContain('slack');
       expect(result.content).toContain('A123');
-      expect(result.content).toContain('lobehub_bot');
+      expect(result.content).toContain('agentasia_bot');
     });
   });
 

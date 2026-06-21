@@ -1,7 +1,7 @@
 'use client';
 
-import { BRANDING_NAME } from '@lobechat/business-const';
-import { ActionIcon, Flexbox, FluentEmoji, SideNav } from '@lobehub/ui';
+import { BRANDING_NAME } from '@agentasia/business-const';
+import { ActionIcon, Flexbox, FluentEmoji, SideNav } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { XIcon } from 'lucide-react';
 import { memo, type ReactNode, useEffect, useState } from 'react';

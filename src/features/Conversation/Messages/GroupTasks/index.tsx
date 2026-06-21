@@ -1,7 +1,7 @@
 'use client';
 
-import { type UIChatMessage } from '@lobechat/types';
-import { Block, Flexbox, GroupAvatar, Icon, Tag } from '@lobehub/ui';
+import { type UIChatMessage } from '@agentasia/types';
+import { Block, Flexbox, GroupAvatar, Icon, Tag } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ListTodo } from 'lucide-react';

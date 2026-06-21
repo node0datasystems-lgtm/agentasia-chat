@@ -1,4 +1,4 @@
-import type { ModelUsage } from '@lobechat/types';
+import type { ModelUsage } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { AgentRuntime } from '../runtime';

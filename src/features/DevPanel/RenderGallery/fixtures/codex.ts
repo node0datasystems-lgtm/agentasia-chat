@@ -28,12 +28,12 @@ const linearIssueResult = {
   links: [
     {
       title: 'PR #15766: refactor(chat): unify agent run lifecycle',
-      url: 'https://github.com/lobehub/lobehub/pull/15766',
+      url: 'https://github.com/node0datasystems-lgtm/agentasia-chat/pull/15766',
     },
   ],
   state: { name: 'In Review' },
   title: '统一三种客户端 Agent Runtime 的 run 生命周期 hooks',
-  url: 'https://linear.app/lobehub/issue/TEST-0000',
+  url: 'https://linear.app/agentasia/issue/TEST-0000',
 };
 
 export default defineFixtures({
@@ -137,14 +137,14 @@ export default defineFixtures({
           server: 'node_repl',
           tool: 'js',
         },
-        content: '@lobehub/desktop',
+        content: '@agentasia/desktop',
         label: 'Node REPL',
         pluginState: {
           arguments: {
             code: "const result = await import('./package.json', { with: { type: 'json' } });\nresult.default.name;",
           },
           result: {
-            content: [{ text: '@lobehub/desktop', type: 'text' }],
+            content: [{ text: '@agentasia/desktop', type: 'text' }],
             isError: false,
           },
           server: 'node_repl',
@@ -200,14 +200,14 @@ export default defineFixtures({
             url: 'https://example.com/codex-render',
           },
           {
-            snippet: 'How LobeHub maps builtin tool inspectors, renders, and display controls.',
-            title: 'LobeHub builtin tool render registry',
-            url: 'https://example.com/lobehub-tools',
+            snippet: 'How AgentAsia maps builtin tool inspectors, renders, and display controls.',
+            title: 'AgentAsia builtin tool render registry',
+            url: 'https://example.com/agentasia-tools',
           },
         ],
       },
       content:
-        'Search results\n\n1. Codex tool render examples - https://example.com/codex-render\n2. LobeHub builtin tool render registry - https://example.com/lobehub-tools',
+        'Search results\n\n1. Codex tool render examples - https://example.com/codex-render\n2. AgentAsia builtin tool render registry - https://example.com/agentasia-tools',
     }),
   },
 });

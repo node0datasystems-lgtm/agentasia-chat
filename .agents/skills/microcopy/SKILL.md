@@ -4,7 +4,7 @@ description: 'UI copy and microcopy guidelines. Use for user-facing copy, button
 user-invocable: false
 ---
 
-# LobeHub UI Microcopy Guidelines
+# AgentAsia UI Microcopy Guidelines
 
 This file is the quick-reference summary. For full prompt-style guidelines with extensive examples (anti-patterns, tone matrices, scenario walk-throughs), load the language-specific reference:
 

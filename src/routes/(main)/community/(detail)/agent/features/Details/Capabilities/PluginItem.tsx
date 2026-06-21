@@ -1,12 +1,12 @@
-import { builtinTools } from '@lobechat/builtin-tools';
+import { builtinTools } from '@agentasia/builtin-tools';
 import {
   COMPOSIO_APP_TYPES,
   type ComposioAppType,
   getLobehubSkillProviderById,
   type LobehubSkillProviderType,
-} from '@lobechat/const';
-import { type DiscoverPluginDetail, type PluginSource } from '@lobechat/types';
-import { Avatar, Block, Flexbox, Icon, Image, Skeleton, Tag, Text } from '@lobehub/ui';
+} from '@agentasia/const';
+import { type DiscoverPluginDetail, type PluginSource } from '@agentasia/types';
+import { Avatar, Block, Flexbox, Icon, Image, Skeleton, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -84,7 +84,7 @@ const PluginItem = memo<PluginItemProps>(({ identifier }) => {
   }, [identifier]);
 
   // Try to get LobehubSkill info if API returns no data
-  const lobehubSkill = useMemo(() => {
+  const agentasiaSkill = useMemo(() => {
     return getLobehubSkillProviderById(identifier);
   }, [identifier]);
 
@@ -104,7 +104,7 @@ const PluginItem = memo<PluginItemProps>(({ identifier }) => {
         avatar: '', // Avatar will be rendered by BuiltinToolIcon component
         category: undefined,
         createdAt: '',
-        description: `LobeHub Mcp Server: ${composioTool.label}`,
+        description: `AgentAsia Mcp Server: ${composioTool.label}`,
         homepage: 'https://composio.dev',
         identifier: composioTool.identifier,
         manifest: undefined,
@@ -117,33 +117,33 @@ const PluginItem = memo<PluginItemProps>(({ identifier }) => {
     }
 
     // Check LobehubSkill providers
-    if (lobehubSkill) {
+    if (agentasiaSkill) {
       return {
-        author: lobehubSkill.author,
+        author: agentasiaSkill.author,
         avatar: '', // Avatar will be rendered by BuiltinToolIcon component
         category: undefined,
         createdAt: '',
-        description: lobehubSkill.description,
-        homepage: lobehubSkill.authorUrl || 'https://lobehub.com',
-        identifier: lobehubSkill.id,
+        description: agentasiaSkill.description,
+        homepage: agentasiaSkill.authorUrl || 'https://agentasia.ai',
+        identifier: agentasiaSkill.id,
         manifest: undefined,
         related: [],
         schemaVersion: 1,
         source: 'builtin' as const,
-        tags: ['lobehub-skill'],
-        title: lobehubSkill.label,
+        tags: ['agentasia-skill'],
+        title: agentasiaSkill.label,
       };
     }
 
     // Check builtin tools (like lobe-cloud-sandbox, lobe-memory, etc.)
     if (builtinTool) {
       return {
-        author: 'LobeHub',
+        author: 'AgentAsia',
         avatar: builtinTool.manifest.meta.avatar || '',
         category: undefined,
         createdAt: '',
         description: builtinTool.manifest.meta.description || '',
-        homepage: 'https://lobehub.com',
+        homepage: 'https://agentasia.ai',
         identifier: builtinTool.identifier,
         manifest: undefined,
         related: [],
@@ -155,7 +155,7 @@ const PluginItem = memo<PluginItemProps>(({ identifier }) => {
     }
 
     return undefined;
-  }, [apiData, composioTool, lobehubSkill, builtinTool]);
+  }, [apiData, composioTool, agentasiaSkill, builtinTool]);
 
   const sourceConfig = useMemo(() => {
     const source: PluginSource = data?.source || 'market';
@@ -208,8 +208,8 @@ const PluginItem = memo<PluginItemProps>(({ identifier }) => {
     if (composioTool) {
       return <BuiltinToolIcon icon={composioTool.icon} label={composioTool.label} />;
     }
-    if (lobehubSkill) {
-      return <BuiltinToolIcon icon={lobehubSkill.icon} label={lobehubSkill.label} />;
+    if (agentasiaSkill) {
+      return <BuiltinToolIcon icon={agentasiaSkill.icon} label={agentasiaSkill.label} />;
     }
     return <Avatar avatar={data.avatar} shape={'square'} size={40} style={{ flex: 'none' }} />;
   };

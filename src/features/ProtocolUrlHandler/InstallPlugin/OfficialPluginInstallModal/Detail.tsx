@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useState } from 'react';
 
 import MCPInstallProgress from '@/features/MCP/MCPInstallProgress';

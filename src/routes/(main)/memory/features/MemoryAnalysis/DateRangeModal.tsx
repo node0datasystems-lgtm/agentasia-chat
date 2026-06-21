@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Text } from '@lobehub/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { DatePicker, Modal } from 'antd';
 import { type RangePickerProps } from 'antd/es/date-picker';
 import dayjs from 'dayjs';

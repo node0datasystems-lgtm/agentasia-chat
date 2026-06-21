@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Flexbox } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { Button, Card, Progress, Typography } from 'antd';
 import { Play, RotateCcw } from 'lucide-react';
 import { memo, useState } from 'react';

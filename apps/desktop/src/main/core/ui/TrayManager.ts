@@ -1,4 +1,4 @@
-import type { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-client-ipc';
+import type { MainBroadcastEventKey, MainBroadcastParams } from '@agentasia/electron-client-ipc';
 
 import { name } from '@/../../package.json';
 import { isMac } from '@/const/env';

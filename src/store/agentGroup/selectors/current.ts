@@ -2,8 +2,8 @@ import {
   DEFAULT_AVATAR,
   DEFAULT_CHAT_GROUP_CHAT_CONFIG,
   DEFAULT_CHAT_GROUP_META_CONFIG,
-} from '@lobechat/const';
-import { type AgentGroupDetail, type AgentGroupMember } from '@lobechat/types';
+} from '@agentasia/const';
+import { type AgentGroupDetail, type AgentGroupMember } from '@agentasia/types';
 
 import { type ChatGroupState } from '../initialState';
 import { type ChatGroupStore } from '../store';

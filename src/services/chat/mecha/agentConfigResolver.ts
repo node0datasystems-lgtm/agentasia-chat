@@ -1,14 +1,14 @@
-import { type BuiltinAgentSlug } from '@lobechat/builtin-agents';
-import { BUILTIN_AGENT_SLUGS, getAgentRuntimeConfig } from '@lobechat/builtin-agents';
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { TaskIdentifier } from '@lobechat/builtin-tool-task';
-import { type LobeToolManifest } from '@lobechat/context-engine';
+import { type BuiltinAgentSlug } from '@agentasia/builtin-agents';
+import { BUILTIN_AGENT_SLUGS, getAgentRuntimeConfig } from '@agentasia/builtin-agents';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { TaskIdentifier } from '@agentasia/builtin-tool-task';
+import { type LobeToolManifest } from '@agentasia/context-engine';
 import {
   type ChatCompletionTool,
   type LobeAgentChatConfig,
   type LobeAgentConfig,
   type MessageMapScope,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 import { produce } from 'immer';
 

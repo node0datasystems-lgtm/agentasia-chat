@@ -1,4 +1,4 @@
-import { chainRewriteGenerationPrompt, chainTranslate } from '@lobechat/prompts';
+import { chainRewriteGenerationPrompt, chainTranslate } from '@agentasia/prompts';
 import { useCallback, useState } from 'react';
 
 import { chatService } from '@/services/chat';

@@ -54,4 +54,4 @@ export {
   type SpawnAgentOptions,
 } from './spawnAgent';
 export { toStreamEvent } from './streamEvent';
-export type { AgentStreamEvent, AgentStreamEventType } from '@lobechat/agent-gateway-client';
+export type { AgentStreamEvent, AgentStreamEventType } from '@agentasia/agent-gateway-client';

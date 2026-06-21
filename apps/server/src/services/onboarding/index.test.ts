@@ -1,7 +1,7 @@
 // @vitest-environment node
-import { CURRENT_ONBOARDING_VERSION } from '@lobechat/const';
-import { SaveUserQuestionInputSchema } from '@lobechat/types';
-import { merge } from '@lobechat/utils';
+import { CURRENT_ONBOARDING_VERSION } from '@agentasia/const';
+import { SaveUserQuestionInputSchema } from '@agentasia/types';
+import { merge } from '@agentasia/utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AgentModel } from '@/database/models/agent';

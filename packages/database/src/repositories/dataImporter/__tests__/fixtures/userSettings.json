@@ -5,7 +5,9 @@
         "id": "DEFAULT_LOBE_CHAT_USER",
         "tts": {},
         "keyVaults": null,
-        "general": { "fontSize": 12 },
+        "general": {
+          "fontSize": 12
+        },
         "languageModel": {},
         "systemAgent": {},
         "defaultAgent": {},

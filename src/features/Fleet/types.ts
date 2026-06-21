@@ -1,4 +1,4 @@
-import { type ConversationContext } from '@lobechat/types';
+import { type ConversationContext } from '@agentasia/types';
 
 /**
  * A single side-by-side column in the Fleet View. Each column maps to one

@@ -1,4 +1,4 @@
-import type { UserPreference } from '@lobechat/types';
+import type { UserPreference } from '@agentasia/types';
 import { eq, sql } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

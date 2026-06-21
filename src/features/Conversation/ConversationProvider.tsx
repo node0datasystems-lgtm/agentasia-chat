@@ -1,6 +1,6 @@
 'use client';
 
-import { type UIChatMessage } from '@lobechat/types';
+import { type UIChatMessage } from '@agentasia/types';
 import debug from 'debug';
 import isEqual from 'fast-deep-equal';
 import { type ReactNode } from 'react';

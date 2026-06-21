@@ -25,7 +25,7 @@ const createState = (parent: any) => ({
   },
 });
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Button: ({
     children,
     icon,

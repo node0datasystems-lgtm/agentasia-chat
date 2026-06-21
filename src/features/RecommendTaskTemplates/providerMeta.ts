@@ -2,8 +2,8 @@ import type {
   LobehubSkillProviderType,
   TaskTemplateConnectorReference,
   TaskTemplateConnectorSource,
-} from '@lobechat/const';
-import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@lobechat/const';
+} from '@agentasia/const';
+import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@agentasia/const';
 
 export interface ConnectorProviderMeta {
   icon: LobehubSkillProviderType['icon'];
@@ -15,10 +15,10 @@ export interface ConnectorProviderMeta {
 export const getProviderMeta = (
   spec: TaskTemplateConnectorReference,
 ): ConnectorProviderMeta | undefined => {
-  if (spec.source === 'lobehub') {
+  if (spec.source === 'agentasia') {
     const p = getLobehubSkillProviderById(spec.identifier);
     if (!p) return undefined;
-    return { icon: p.icon, identifier: spec.identifier, label: p.label, source: 'lobehub' };
+    return { icon: p.icon, identifier: spec.identifier, label: p.label, source: 'agentasia' };
   }
   const p = getComposioAppByIdentifier(spec.identifier);
   if (!p) return undefined;

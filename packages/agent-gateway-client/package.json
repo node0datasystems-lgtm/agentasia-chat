@@ -1,8 +1,8 @@
 {
-  "name": "@lobechat/agent-gateway-client",
+  "name": "@agentasia/agent-gateway-client",
   "version": "1.0.0",
   "private": true,
-  "description": "Browser-compatible WebSocket client for the LobeHub Agent Gateway",
+  "description": "Browser-compatible WebSocket client for the AgentAsia Agent Gateway",
   "exports": {
     ".": "./src/index.ts"
   },

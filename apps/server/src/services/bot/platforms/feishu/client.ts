@@ -4,7 +4,7 @@ import {
   downloadMediaFromRawMessage,
   LarkApiClient,
   type LarkRawMessage,
-} from '@lobechat/chat-adapter-feishu';
+} from '@agentasia/chat-adapter-feishu';
 import type { Chat as ChatBot, Message } from 'chat';
 import debug from 'debug';
 
@@ -314,7 +314,7 @@ class FeishuWSClientImpl implements PlatformClient {
 
       const chatConfig: any = {
         adapters: { [this.config.platform]: adapter },
-        userName: `lobehub-gateway-${this.applicationId}`,
+        userName: `agentasia-gateway-${this.applicationId}`,
       };
 
       if (this.context.redisClient) {

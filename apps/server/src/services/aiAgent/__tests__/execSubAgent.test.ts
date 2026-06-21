@@ -1,4 +1,4 @@
-import { ThreadStatus, ThreadType } from '@lobechat/types';
+import { ThreadStatus, ThreadType } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AiAgentService } from '../index';

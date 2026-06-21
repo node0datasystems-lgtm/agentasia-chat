@@ -3,11 +3,11 @@ import type {
   DOCUMENT_TEMPLATES,
   DocumentLoadRules,
   DocumentTemplateSet,
-} from '@lobechat/agent-templates';
-import { DocumentLoadPosition, getDocumentTemplate, PolicyLoad } from '@lobechat/agent-templates';
-import { buildAgentSkillIdentifier } from '@lobechat/const';
-import type { LobeChatDatabase } from '@lobechat/database';
-import { DOCUMENT_FOLDER_TYPE } from '@lobechat/database/schemas';
+} from '@agentasia/agent-templates';
+import { DocumentLoadPosition, getDocumentTemplate, PolicyLoad } from '@agentasia/agent-templates';
+import { buildAgentSkillIdentifier } from '@agentasia/const';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { DOCUMENT_FOLDER_TYPE } from '@agentasia/database/schemas';
 
 import type {
   AgentDocument,

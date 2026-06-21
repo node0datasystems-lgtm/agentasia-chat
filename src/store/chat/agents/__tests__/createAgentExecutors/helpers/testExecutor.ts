@@ -1,5 +1,5 @@
-import type { AgentInstruction, AgentState } from '@lobechat/agent-runtime';
-import type { MessageMapScope, MessageMetadata } from '@lobechat/types';
+import type { AgentInstruction, AgentState } from '@agentasia/agent-runtime';
+import type { MessageMapScope, MessageMetadata } from '@agentasia/types';
 
 import { DEFAULT_AGENT_CHAT_CONFIG, DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { type ResolvedAgentConfig } from '@/services/chat/mecha';

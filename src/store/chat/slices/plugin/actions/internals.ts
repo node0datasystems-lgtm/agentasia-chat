@@ -1,12 +1,12 @@
-import { builtinTools } from '@lobechat/builtin-tools';
-import { ToolArgumentsRepairer, ToolNameResolver } from '@lobechat/context-engine';
-import { type ChatToolPayload, type MessageToolCall, type ToolManifest } from '@lobechat/types';
+import { builtinTools } from '@agentasia/builtin-tools';
+import { ToolArgumentsRepairer, ToolNameResolver } from '@agentasia/context-engine';
+import { type ChatToolPayload, type MessageToolCall, type ToolManifest } from '@agentasia/types';
 
 import { type ChatStore } from '@/store/chat/store';
 import { useToolStore } from '@/store/tool';
 import {
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { type StoreSetter } from '@/store/types';
@@ -38,7 +38,7 @@ export class PluginInternalsActionImpl {
     const manifests: Record<string, ToolManifest> = {};
 
     // Track source for each identifier
-    const sourceMap: Record<string, 'builtin' | 'mcp' | 'composio' | 'lobehubSkill'> = {};
+    const sourceMap: Record<string, 'builtin' | 'mcp' | 'composio' | 'agentasiaSkill'> = {};
 
     // Get all installed plugins (all treated as MCP now)
     const installedPlugins = pluginSelectors.installedPlugins(toolStoreState);
@@ -66,12 +66,12 @@ export class PluginInternalsActionImpl {
       }
     }
 
-    // Get all LobeHub Skill tools
-    const lobehubSkillTools = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(toolStoreState);
-    for (const tool of lobehubSkillTools) {
+    // Get all AgentAsia Skill tools
+    const agentasiaSkillTools = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(toolStoreState);
+    for (const tool of agentasiaSkillTools) {
       if (tool.manifest) {
         manifests[tool.identifier] = tool.manifest as ToolManifest;
-        sourceMap[tool.identifier] = 'lobehubSkill';
+        sourceMap[tool.identifier] = 'agentasiaSkill';
       }
     }
 

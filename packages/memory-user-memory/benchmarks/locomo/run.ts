@@ -1,6 +1,6 @@
 import { exit } from 'node:process';
 
-import { MemorySourceType } from '@lobechat/types';
+import { MemorySourceType } from '@agentasia/types';
 
 import { convertLocomoFile } from '../../src/converters/locomo';
 

@@ -1,4 +1,4 @@
-import { LexicalRenderer } from '@lobehub/editor/renderer';
+import { LexicalRenderer } from '@agentasia/editor/renderer';
 import type { SerializedEditorState } from 'lexical';
 import type { CSSProperties } from 'react';
 import { memo, useMemo } from 'react';

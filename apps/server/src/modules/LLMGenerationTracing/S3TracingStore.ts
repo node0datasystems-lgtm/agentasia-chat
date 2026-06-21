@@ -6,7 +6,7 @@ import type {
   SaveResult,
   TracingPayload,
   TracingSummary,
-} from '@lobechat/llm-generation-tracing';
+} from '@agentasia/llm-generation-tracing';
 import debug from 'debug';
 
 import { FileS3 } from '@/server/modules/S3';

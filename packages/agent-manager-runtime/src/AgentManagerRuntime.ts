@@ -14,9 +14,9 @@
  * Services must be injected via constructor for runtime-agnostic usage
  * (e.g., server-side services vs client-side services).
  */
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobechat/const';
-import { marketToolsResultsPrompt, modelsResultsPrompt } from '@lobechat/prompts';
-import type { BuiltinToolResult } from '@lobechat/types';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
+import { marketToolsResultsPrompt, modelsResultsPrompt } from '@agentasia/prompts';
+import type { BuiltinToolResult } from '@agentasia/types';
 
 import { getAgentStoreState } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors/selectors';
@@ -25,11 +25,11 @@ import { getToolStoreState } from '@/store/tool';
 import {
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore/types';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 import { getUserStoreState } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 
@@ -708,17 +708,17 @@ export class AgentManagerRuntime {
           window.global_serverConfigStore?.getState()?.serverConfig?.enableLobehubSkill;
 
         if (isLobehubSkillEnabled) {
-          const lobehubSkillServer = lobehubSkillStoreSelectors
+          const agentasiaSkillServer = agentasiaSkillStoreSelectors
             .getServers(toolState)
             .find((s) => s.identifier === identifier);
-          const lobehubSkillProviderInfo = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
+          const agentasiaSkillProviderInfo = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
 
-          if (lobehubSkillProviderInfo) {
+          if (agentasiaSkillProviderInfo) {
             return this.handleLobehubSkillInstall(
               agentId,
               identifier,
-              lobehubSkillProviderInfo,
-              lobehubSkillServer,
+              agentasiaSkillProviderInfo,
+              agentasiaSkillServer,
             );
           }
         }

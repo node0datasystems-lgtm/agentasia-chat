@@ -1,4 +1,4 @@
-import { type BuiltinInspector, type BuiltinRender } from '@lobechat/types';
+import { type BuiltinInspector, type BuiltinRender } from '@agentasia/types';
 
 import GithubRunCommandInspector from './RunCommandInspector';
 import GithubRunCommandRender from './RunCommandRender';

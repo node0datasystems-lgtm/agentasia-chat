@@ -11,9 +11,9 @@
  *   4. The completion bridge backfills the placeholder and resumes the parent.
  *   5. The parent reaches `done`.
  */
-import { type LobeChatDatabase } from '@lobechat/database';
-import { agentOperations, agents, messagePlugins, messages } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { agentOperations, agents, messagePlugins, messages } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { and, eq } from 'drizzle-orm';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

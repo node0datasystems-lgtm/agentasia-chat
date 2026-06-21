@@ -1,5 +1,5 @@
-import type { BriefAction } from '@lobechat/types';
-import { isTrimmedNonEmptyString } from '@lobechat/utils';
+import type { BriefAction } from '@agentasia/types';
+import { isTrimmedNonEmptyString } from '@agentasia/utils';
 import { z } from 'zod';
 
 import type {

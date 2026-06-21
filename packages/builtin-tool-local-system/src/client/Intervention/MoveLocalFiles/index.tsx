@@ -1,6 +1,6 @@
-import type { MoveLocalFilesParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import type { MoveLocalFilesParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

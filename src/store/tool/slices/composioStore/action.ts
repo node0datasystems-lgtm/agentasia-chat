@@ -1,4 +1,4 @@
-import { COMPOSIO_APP_TYPES } from '@lobechat/const';
+import { COMPOSIO_APP_TYPES } from '@agentasia/const';
 import { produce } from 'immer';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';

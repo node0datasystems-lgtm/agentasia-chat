@@ -1,6 +1,6 @@
-# E2E Tests for LobeHub
+# E2E Tests for AgentAsia
 
-This directory contains end-to-end (E2E) tests for LobeHub using Cucumber (BDD) and Playwright.
+This directory contains end-to-end (E2E) tests for AgentAsia using Cucumber (BDD) and Playwright.
 
 ## Directory Structure
 

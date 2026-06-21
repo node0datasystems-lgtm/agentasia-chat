@@ -1,4 +1,4 @@
-import { isOfficialProvider, OFFICIAL_PROVIDER_DISABLE_ERROR } from '@lobechat/business-const';
+import { isOfficialProvider, OFFICIAL_PROVIDER_DISABLE_ERROR } from '@agentasia/business-const';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

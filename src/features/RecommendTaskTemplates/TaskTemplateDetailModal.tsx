@@ -1,8 +1,8 @@
 'use client';
 
-import type { TaskTemplate } from '@lobechat/const';
-import { ActionIcon, Button, Flexbox, Icon, Markdown, Text } from '@lobehub/ui';
-import { createModal, type ModalInstance, useModalContext } from '@lobehub/ui/base-ui';
+import type { TaskTemplate } from '@agentasia/const';
+import { ActionIcon, Button, Flexbox, Icon, Markdown, Text } from '@agentasia/ui';
+import { createModal, type ModalInstance, useModalContext } from '@agentasia/ui/base-ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { Clock, X } from 'lucide-react';

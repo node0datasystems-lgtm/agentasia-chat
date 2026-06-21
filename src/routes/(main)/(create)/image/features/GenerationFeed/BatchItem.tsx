@@ -1,8 +1,8 @@
 'use client';
 
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { ModelTag } from '@lobehub/icons';
-import { ActionIconGroup, Block, Flexbox, Grid, Image, Markdown, Tag, Text } from '@lobehub/ui';
+import { ModelTag } from '@agentasia/icons';
+import { ActionIconGroup, Block, Flexbox, Grid, Image, Markdown, Tag, Text } from '@agentasia/ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import dayjs from 'dayjs';

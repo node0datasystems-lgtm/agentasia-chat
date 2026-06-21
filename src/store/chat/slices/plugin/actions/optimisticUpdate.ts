@@ -3,7 +3,7 @@ import {
   type ChatMessagePluginError,
   type ChatToolPayload,
   type MessagePluginItem,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 
 import { messageService } from '@/services/message';

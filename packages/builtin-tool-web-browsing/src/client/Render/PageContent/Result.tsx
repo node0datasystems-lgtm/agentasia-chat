@@ -1,7 +1,7 @@
 'use client';
 
-import type { CrawlErrorResult, CrawlSuccessResult } from '@lobechat/web-crawler';
-import { ActionIcon, Alert, Block, Flexbox, stopPropagation, Text } from '@lobehub/ui';
+import type { CrawlErrorResult, CrawlSuccessResult } from '@agentasia/web-crawler';
+import { ActionIcon, Alert, Block, Flexbox, stopPropagation, Text } from '@agentasia/ui';
 import { Descriptions } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ExternalLink } from 'lucide-react';

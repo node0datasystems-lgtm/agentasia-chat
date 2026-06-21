@@ -265,10 +265,10 @@ describe('skill command', () => {
       });
 
       const program = createProgram();
-      await program.parseAsync(['node', 'test', 'skill', 'install', 'lobehub/skill-repo']);
+      await program.parseAsync(['node', 'test', 'skill', 'install', 'agentasia/skill-repo']);
 
       expect(mockTrpcClient.agentSkills.importFromGitHub.mutate).toHaveBeenCalledWith(
-        expect.objectContaining({ gitUrl: 'https://github.com/lobehub/skill-repo' }),
+        expect.objectContaining({ gitUrl: 'https://github.com/agentasia/skill-repo' }),
       );
     });
 
@@ -281,14 +281,14 @@ describe('skill command', () => {
         'test',
         'skill',
         'install',
-        'lobehub/skill-repo',
+        'agentasia/skill-repo',
         '--branch',
         'dev',
       ]);
 
       expect(mockTrpcClient.agentSkills.importFromGitHub.mutate).toHaveBeenCalledWith({
         branch: 'dev',
-        gitUrl: 'https://github.com/lobehub/skill-repo',
+        gitUrl: 'https://github.com/agentasia/skill-repo',
       });
     });
 
@@ -340,7 +340,7 @@ describe('skill command', () => {
     });
 
     it('should detect GitHub shorthand', () => {
-      expect(detectSourceType('lobehub/skill-repo')).toBe('github');
+      expect(detectSourceType('agentasia/skill-repo')).toBe('github');
       expect(detectSourceType('user/repo-name')).toBe('github');
     });
 

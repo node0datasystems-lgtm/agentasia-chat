@@ -1,5 +1,5 @@
 import { createIoRedisState } from '@chat-adapter/state-ioredis';
-import { DEFAULT_BOT_DEBOUNCE_MS } from '@lobechat/const';
+import { DEFAULT_BOT_DEBOUNCE_MS } from '@agentasia/const';
 import { Chat, ConsoleLogger, type Message, type MessageContext } from 'chat';
 import debug from 'debug';
 
@@ -451,7 +451,7 @@ export class BotMessageRouter {
       adapters,
       concurrency:
         concurrencyStrategy === 'debounce' ? { debounceMs, strategy: 'debounce' } : 'queue',
-      userName: `lobehub-bot-${label}`,
+      userName: `agentasia-bot-${label}`,
     };
 
     const redisClient = getAgentRuntimeRedisClient();
@@ -1652,7 +1652,7 @@ export class BotMessageRouter {
         name: 'approve',
       },
       {
-        description: 'Send feedback directly to the LobeHub team (no AI reply)',
+        description: 'Send feedback directly to the AgentAsia team (no AI reply)',
         // Declaring the argument so Discord/Slack surface a `/feedback <message>`
         // prompt instead of registering the command as zero-arg (see the
         // `options` comment on the BotCommand interface).

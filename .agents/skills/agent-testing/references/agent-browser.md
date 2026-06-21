@@ -1,6 +1,6 @@
 # agent-browser CLI Reference
 
-Generic reference for the `agent-browser` CLI — automate Chromium-based apps (Electron, Chrome, web) via Chrome DevTools Protocol. LobeHub-specific patterns live in [../ui/electron.md](../ui/electron.md) and [../ui/web.md](../ui/web.md); authentication recipes live in [auth.md](./auth.md).
+Generic reference for the `agent-browser` CLI — automate Chromium-based apps (Electron, Chrome, web) via Chrome DevTools Protocol. AgentAsia-specific patterns live in [../ui/electron.md](../ui/electron.md) and [../ui/web.md](../ui/web.md); authentication recipes live in [auth.md](./auth.md).
 
 Use `agent-browser` to automate Chromium-based apps via Chrome DevTools Protocol.
 
@@ -153,9 +153,9 @@ agent-browser state save auth.json
 agent-browser state load auth.json
 ```
 
-### LobeHub dev server — inject better-auth cookie
+### AgentAsia dev server — inject better-auth cookie
 
-`agent-browser --headed` on macOS can create an off-screen Chromium window, blocking manual login. For a local LobeHub dev server (e.g. `localhost:3010`), copy the `better-auth.session_token` cookie out of a **Network request** in the user's own Chrome DevTools and load it via `state load`. See [auth.md](./auth.md) for the full recipe.
+`agent-browser --headed` on macOS can create an off-screen Chromium window, blocking manual login. For a local AgentAsia dev server (e.g. `localhost:3010`), copy the `better-auth.session_token` cookie out of a **Network request** in the user's own Chrome DevTools and load it via `state load`. See [auth.md](./auth.md) for the full recipe.
 
 ## Semantic Locators (Alternative to Refs)
 

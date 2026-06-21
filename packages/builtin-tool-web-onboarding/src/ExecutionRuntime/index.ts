@@ -2,8 +2,8 @@ import {
   applyMarkdownPatch,
   formatMarkdownPatchError,
   type MarkdownPatchHunk,
-} from '@lobechat/markdown-patch';
-import type { BuiltinServerRuntimeOutput, SaveUserQuestionInput } from '@lobechat/types';
+} from '@agentasia/markdown-patch';
+import type { BuiltinServerRuntimeOutput, SaveUserQuestionInput } from '@agentasia/types';
 
 import {
   AgentMarketplaceExecutionRuntime,

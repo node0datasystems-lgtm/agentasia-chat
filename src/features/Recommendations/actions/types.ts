@@ -1,6 +1,6 @@
-import type { HeterogeneousCliAgentType, ToolStatus } from '@lobechat/electron-client-ipc';
-import type { HeterogeneousAgentClientConfig } from '@lobechat/heterogeneous-agents/client';
-import type { SidebarAgentItem } from '@lobechat/types';
+import type { HeterogeneousCliAgentType, ToolStatus } from '@agentasia/electron-client-ipc';
+import type { HeterogeneousAgentClientConfig } from '@agentasia/heterogeneous-agents/client';
+import type { SidebarAgentItem } from '@agentasia/types';
 import type { TFunction } from 'i18next';
 import type { ReactNode } from 'react';
 

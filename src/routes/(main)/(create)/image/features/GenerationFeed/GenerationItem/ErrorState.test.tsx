@@ -6,7 +6,7 @@ import { type Generation, type GenerationBatch } from '@/types/generation';
 
 import { ErrorState } from './ErrorState';
 
-vi.mock('@lobehub/ui', async () => {
+vi.mock('@agentasia/ui', async () => {
   const React = await import('react');
 
   return {
@@ -53,7 +53,7 @@ describe('ErrorState', () => {
     id: 'batch-id',
     model: 'gpt-image-2',
     prompt: 'test prompt',
-    provider: 'lobehub',
+    provider: 'agentasia',
   };
 
   it('translates provider moderation response keys before rendering', () => {

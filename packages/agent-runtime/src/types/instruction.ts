@@ -3,7 +3,7 @@ import type {
   ModelUsage,
   RuntimeInitialContext,
   RuntimeStepContext,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import type { FinishReason } from './event';
 import type { AgentState, ToolRegistry } from './state';

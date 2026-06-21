@@ -1,4 +1,4 @@
-import { Flexbox, PreviewGroup, ScrollShadow } from '@lobehub/ui';
+import { Flexbox, PreviewGroup, ScrollShadow } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';

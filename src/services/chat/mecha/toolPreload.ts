@@ -1,4 +1,4 @@
-import type { RuntimeSelectedTool } from '@lobechat/types';
+import type { RuntimeSelectedTool } from '@agentasia/types';
 
 import { getToolStoreState } from '@/store/tool';
 

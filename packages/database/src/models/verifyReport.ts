@@ -1,4 +1,4 @@
-import type { VerifyReport } from '@lobechat/types';
+import type { VerifyReport } from '@agentasia/types';
 import { and, eq } from 'drizzle-orm';
 
 import { verifyReports, verifyRuns } from '../schemas/verify';

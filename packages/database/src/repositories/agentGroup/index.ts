@@ -1,6 +1,6 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import type { AgentGroupDetail, AgentGroupMember } from '@lobechat/types';
-import { cleanObject } from '@lobechat/utils';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import type { AgentGroupDetail, AgentGroupMember } from '@agentasia/types';
+import { cleanObject } from '@agentasia/utils';
 import { and, eq, inArray, not } from 'drizzle-orm';
 
 import type {

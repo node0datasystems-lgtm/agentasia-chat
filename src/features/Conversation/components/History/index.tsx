@@ -1,5 +1,5 @@
-import { ModelTag } from '@lobehub/icons';
-import { Center, Flexbox, Icon, Markdown, Text } from '@lobehub/ui';
+import { ModelTag } from '@agentasia/icons';
+import { Center, Flexbox, Icon, Markdown, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ScrollText } from 'lucide-react';
 import { memo } from 'react';

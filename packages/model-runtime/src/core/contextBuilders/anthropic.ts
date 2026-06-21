@@ -1,5 +1,5 @@
 import type Anthropic from '@anthropic-ai/sdk';
-import { imageUrlToBase64, resolveImageMimeTypeFromBase64 } from '@lobechat/utils';
+import { imageUrlToBase64, resolveImageMimeTypeFromBase64 } from '@agentasia/utils';
 import type OpenAI from 'openai';
 
 import type { OpenAIChatMessage, UserMessageContentPart } from '../../types';
@@ -461,7 +461,7 @@ export const buildAnthropicTools = (
   if (!tools) return;
 
   return tools.map((tool, index): Anthropic.Tool => {
-    // OpenAI SDK v6 made `ChatCompletionTool` a function|custom union; lobehub only sends function tools.
+    // OpenAI SDK v6 made `ChatCompletionTool` a function|custom union; agentasia only sends function tools.
     const { function: fn } = tool as OpenAI.ChatCompletionFunctionTool;
     return {
       cache_control:

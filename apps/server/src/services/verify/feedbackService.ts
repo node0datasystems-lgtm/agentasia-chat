@@ -1,4 +1,4 @@
-import type { VerifyUserDecision, VerifyVerdict } from '@lobechat/types';
+import type { VerifyUserDecision, VerifyVerdict } from '@agentasia/types';
 
 import { VerifyCheckResultModel } from '@/database/models/verifyCheckResult';
 import type { LobeChatDatabase } from '@/database/type';

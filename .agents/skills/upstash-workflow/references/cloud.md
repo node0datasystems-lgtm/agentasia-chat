@@ -1,6 +1,6 @@
 # Cloud Project Workflow Configuration
 
-Cloud-specific workflow configurations and patterns for the lobehub-cloud project.
+Cloud-specific workflow configurations and patterns for the agentasia-cloud project.
 
 ## Table of Contents
 
@@ -11,14 +11,14 @@ Cloud-specific workflow configurations and patterns for the lobehub-cloud projec
 5. [Workflow Class Location](#workflow-class-location) — cloud-only vs shared
 6. [Environment Variables](#environment-variables)
 7. [Best Practices](#best-practices) — decide cloud vs OSS, re-export rules, naming
-8. [Migration Guide](#migration-guide) — moving workflows from cloud to lobehub
+8. [Migration Guide](#migration-guide) — moving workflows from cloud to agentasia
 9. [Examples](#examples) — `welcome-placeholder`, `agent-eval-run`
 10. [Troubleshooting](#troubleshooting) — circular imports, 404s, type errors
 11. [Related Documentation](#related-documentation)
 
 ## Overview
 
-The lobehub-cloud project extends the open-source lobehub codebase with cloud-specific features. Workflows can be implemented in either:
+The agentasia-cloud project extends the open-source agentasia codebase with cloud-specific features. Workflows can be implemented in either:
 
 1. **Lobehub (open-source)** - Available to all users
 2. **Lobehub-cloud (proprietary)** - Cloud-specific business logic
@@ -30,7 +30,7 @@ The lobehub-cloud project extends the open-source lobehub codebase with cloud-sp
 ### Lobehub Submodule (Open-source)
 
 ```text
-lobehub/
+agentasia/
 └── src/
     ├── app/(backend)/api/workflows/
     │   ├── memory-user-memory/       # Memory extraction workflows
@@ -43,17 +43,17 @@ lobehub/
 ### Lobehub-cloud (Proprietary)
 
 ```text
-lobehub-cloud/
+agentasia-cloud/
 └── src/
     ├── app/(backend)/api/workflows/
     │   ├── welcome-placeholder/       # Cloud-only: AI placeholder generation
     │   ├── agent-welcome/            # Cloud-only: Agent welcome messages
-    │   ├── agent-eval-run/           # Re-export from lobehub
-    │   └── memory-user-memory/       # Re-export from lobehub
+    │   ├── agent-eval-run/           # Re-export from agentasia
+    │   └── memory-user-memory/       # Re-export from agentasia
     └── server/workflows/
         ├── welcomePlaceholder/
         ├── agentWelcome/
-        └── agentEvalRun/             # Re-export from lobehub
+        └── agentEvalRun/             # Re-export from agentasia
 ```
 
 ---
@@ -68,14 +68,14 @@ lobehub-cloud/
 
 **Implementation**:
 
-- Implement directly in `lobehub-cloud/src/app/(backend)/api/workflows/`
+- Implement directly in `agentasia-cloud/src/app/(backend)/api/workflows/`
 - No need for re-exports
 - Can use cloud-specific packages and services
 
 **Structure**:
 
 ```text
-lobehub-cloud/src/
+agentasia-cloud/src/
 ├── app/(backend)/api/workflows/
 │   └── feature-name/
 │       ├── process-items/route.ts
@@ -102,10 +102,10 @@ lobehub-cloud/src/
 
 #### Re-export Implementation
 
-**Step 1**: Implement workflow in lobehub submodule
+**Step 1**: Implement workflow in agentasia submodule
 
 ```typescript
-// lobehub/src/app/(backend)/api/workflows/feature/layer/route.ts
+// agentasia/src/app/(backend)/api/workflows/feature/layer/route.ts
 import { serve } from '@upstash/workflow/nextjs';
 
 export const { POST } = serve<Payload>(
@@ -116,46 +116,46 @@ export const { POST } = serve<Payload>(
 );
 ```
 
-**Step 2**: Create re-export in lobehub-cloud
+**Step 2**: Create re-export in agentasia-cloud
 
 ```typescript
-// lobehub-cloud/src/app/(backend)/api/workflows/feature/layer/route.ts
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature/layer/route';
+// agentasia-cloud/src/app/(backend)/api/workflows/feature/layer/route.ts
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature/layer/route';
 ```
 
-**Important**: Use `lobehub/src/...` path, NOT `@/...` to avoid circular imports.
+**Important**: Use `agentasia/src/...` path, NOT `@/...` to avoid circular imports.
 
 #### Re-export Directory Structure
 
 ```bash
 # Create directories
-mkdir -p lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-1
-mkdir -p lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-2
-mkdir -p lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-3
+mkdir -p agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-1
+mkdir -p agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-2
+mkdir -p agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-3
 
 # Create re-export files
-echo "export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature-name/layer-1/route';" > \
-  lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-1/route.ts
+echo "export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature-name/layer-1/route';" > \
+  agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-1/route.ts
 
-echo "export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature-name/layer-2/route';" > \
-  lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-2/route.ts
+echo "export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature-name/layer-2/route';" > \
+  agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-2/route.ts
 
-echo "export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature-name/layer-3/route';" > \
-  lobehub-cloud/src/app/(backend)/api/workflows/feature-name/layer-3/route.ts
+echo "export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature-name/layer-3/route';" > \
+  agentasia-cloud/src/app/(backend)/api/workflows/feature-name/layer-3/route.ts
 ```
 
 ---
 
 ## TypeScript Path Mappings
 
-The cloud project uses tsconfig path mappings to override lobehub code:
+The cloud project uses tsconfig path mappings to override agentasia code:
 
 ```json
-// lobehub-cloud/tsconfig.json
+// agentasia-cloud/tsconfig.json
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*", "./lobehub/src/*"]
+      "@/*": ["./src/*", "./agentasia/src/*"]
     }
   }
 }
@@ -164,9 +164,9 @@ The cloud project uses tsconfig path mappings to override lobehub code:
 **Resolution Order**:
 
 1. `./src/*` (cloud code) - checked first
-2. `./lobehub/src/*` (open-source) - fallback
+2. `./agentasia/src/*` (open-source) - fallback
 
-This allows cloud to override specific modules while using lobehub defaults.
+This allows cloud to override specific modules while using agentasia defaults.
 
 ---
 
@@ -177,22 +177,22 @@ This allows cloud to override specific modules while using lobehub defaults.
 Place workflow class in cloud:
 
 ```text
-lobehub-cloud/apps/server/src/workflows/featureName/index.ts
+agentasia-cloud/apps/server/src/workflows/featureName/index.ts
 ```
 
 ### Shared Workflows
 
-Place workflow class in lobehub, re-export in cloud if needed:
+Place workflow class in agentasia, re-export in cloud if needed:
 
 ```text
-lobehub/apps/server/src/workflows/featureName/index.ts
+agentasia/apps/server/src/workflows/featureName/index.ts
 ```
 
 ---
 
 ## Environment Variables
 
-Both lobehub and cloud workflows require:
+Both agentasia and cloud workflows require:
 
 ```bash
 # Required for all workflows
@@ -221,7 +221,7 @@ REDIS_URL=redis://...
 
 **Implement in Lobehub if**:
 
-- Feature is useful for all LobeHub users
+- Feature is useful for all AgentAsia users
 - No proprietary business logic
 - Can be open-sourced
 
@@ -237,7 +237,7 @@ REDIS_URL=redis://...
 
 ```typescript
 // Simple re-export
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature/route';
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature/route';
 ```
 
 ❌ **Don't**:
@@ -251,18 +251,18 @@ export { POST } from '@/app/(backend)/api/workflows/feature/route'; // ❌
 
 For shared features:
 
-- Implement core logic in `lobehub/` (open-source)
+- Implement core logic in `agentasia/` (open-source)
 - Only override if cloud needs different behavior
 - Use re-exports for cloud deployment
 
 ### 4. Directory Naming
 
-Follow consistent naming across lobehub and cloud:
+Follow consistent naming across agentasia and cloud:
 
 ```text
 # Both should use same structure
-lobehub/src/app/(backend)/api/workflows/feature-name/
-lobehub-cloud/src/app/(backend)/api/workflows/feature-name/
+agentasia/src/app/(backend)/api/workflows/feature-name/
+agentasia-cloud/src/app/(backend)/api/workflows/feature-name/
 ```
 
 ---
@@ -271,31 +271,31 @@ lobehub-cloud/src/app/(backend)/api/workflows/feature-name/
 
 ### Moving Workflow from Cloud to Lobehub
 
-**Step 1**: Copy workflow to lobehub
+**Step 1**: Copy workflow to agentasia
 
 ```bash
-cp -r lobehub-cloud/src/app/(backend)/api/workflows/feature \
-      lobehub/src/app/(backend)/api/workflows/
+cp -r agentasia-cloud/src/app/(backend)/api/workflows/feature \
+      agentasia/src/app/(backend)/api/workflows/
 ```
 
 **Step 2**: Remove cloud-specific dependencies
 
 - Replace cloud services with generic interfaces
 - Remove proprietary business logic
-- Update imports to use lobehub paths
+- Update imports to use agentasia paths
 
 **Step 3**: Create re-exports in cloud
 
 ```typescript
-// lobehub-cloud/src/app/(backend)/api/workflows/feature/*/route.ts
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature/*/route';
+// agentasia-cloud/src/app/(backend)/api/workflows/feature/*/route.ts
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature/*/route';
 ```
 
-**Step 4**: Move workflow class to lobehub
+**Step 4**: Move workflow class to agentasia
 
 ```bash
-mv lobehub-cloud/apps/server/src/workflows/feature \
-  lobehub/apps/server/src/workflows/
+mv agentasia-cloud/apps/server/src/workflows/feature \
+  agentasia/apps/server/src/workflows/
 ```
 
 **Step 5**: Update cloud imports
@@ -305,7 +305,7 @@ mv lobehub-cloud/apps/server/src/workflows/feature \
 import { Workflow } from '@/server/workflows/feature';
 
 // To
-import { Workflow } from 'lobehub/apps/server/src/workflows/feature';
+import { Workflow } from 'agentasia/apps/server/src/workflows/feature';
 ```
 
 ---
@@ -314,14 +314,14 @@ import { Workflow } from 'lobehub/apps/server/src/workflows/feature';
 
 ### Cloud-Only Workflow: welcome-placeholder
 
-**Location**: `lobehub-cloud/src/app/(backend)/api/workflows/welcome-placeholder/`
+**Location**: `agentasia-cloud/src/app/(backend)/api/workflows/welcome-placeholder/`
 
 **Why Cloud-Only**: Uses proprietary AI generation service and Redis caching
 
 **Structure**:
 
 ```text
-lobehub-cloud/
+agentasia-cloud/
 ├── src/app/(backend)/api/workflows/welcome-placeholder/
 │   ├── process-users/route.ts
 │   ├── paginate-users/route.ts
@@ -334,19 +334,19 @@ lobehub-cloud/
 
 **Location**:
 
-- Implementation: `lobehub/src/app/(backend)/api/workflows/agent-eval-run/`
-- Re-export: `lobehub-cloud/src/app/(backend)/api/workflows/agent-eval-run/`
+- Implementation: `agentasia/src/app/(backend)/api/workflows/agent-eval-run/`
+- Re-export: `agentasia-cloud/src/app/(backend)/api/workflows/agent-eval-run/`
 
 **Why Re-export**: Core feature available in open-source, also used by cloud
 
 **Cloud Re-export Files**:
 
 ```typescript
-// lobehub-cloud/src/app/(backend)/api/workflows/agent-eval-run/run-benchmark/route.ts
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/agent-eval-run/run-benchmark/route';
+// agentasia-cloud/src/app/(backend)/api/workflows/agent-eval-run/run-benchmark/route.ts
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/agent-eval-run/run-benchmark/route';
 
-// lobehub-cloud/src/app/(backend)/api/workflows/agent-eval-run/paginate-test-cases/route.ts
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/agent-eval-run/paginate-test-cases/route';
+// agentasia-cloud/src/app/(backend)/api/workflows/agent-eval-run/paginate-test-cases/route.ts
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/agent-eval-run/paginate-test-cases/route';
 
 // ... (all layers)
 ```
@@ -361,14 +361,14 @@ export { POST } from 'lobehub/src/app/(backend)/api/workflows/agent-eval-run/pag
 
 **Cause**: Using `@/` path in re-export within cloud codebase
 
-**Solution**: Use `lobehub/src/` path instead
+**Solution**: Use `agentasia/src/` path instead
 
 ```typescript
 // ❌ Wrong
 export { POST } from '@/app/(backend)/api/workflows/feature/route';
 
 // ✅ Correct
-export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature/route';
+export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature/route';
 ```
 
 ### Workflow Not Found (404)
@@ -379,22 +379,22 @@ export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature/route';
 
 ```bash
 # Check if re-export exists
-ls lobehub-cloud/src/app/\(backend\)/api/workflows/feature-name/
+ls agentasia-cloud/src/app/\(backend\)/api/workflows/feature-name/
 
 # If missing, create re-exports
-mkdir -p lobehub-cloud/src/app/\(backend\)/api/workflows/feature-name/layer
-echo "export { POST } from 'lobehub/src/app/(backend)/api/workflows/feature-name/layer/route';" > lobehub-cloud/src/app/\(backend\)/api/workflows/feature-name/layer/route.ts
+mkdir -p agentasia-cloud/src/app/\(backend\)/api/workflows/feature-name/layer
+echo "export { POST } from 'agentasia/src/app/(backend)/api/workflows/feature-name/layer/route';" > agentasia-cloud/src/app/\(backend\)/api/workflows/feature-name/layer/route.ts
 ```
 
 ### Type Errors After Moving to Lobehub
 
-**Cause**: Cloud-specific types or services used in lobehub code
+**Cause**: Cloud-specific types or services used in agentasia code
 
 **Solution**:
 
 1. Extract cloud-specific logic to cloud-only wrapper
 2. Use dependency injection for services
-3. Define generic interfaces in lobehub
+3. Define generic interfaces in agentasia
 
 ---
 

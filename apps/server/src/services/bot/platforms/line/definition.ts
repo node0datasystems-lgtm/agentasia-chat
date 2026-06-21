@@ -9,7 +9,7 @@ export const line: PlatformDefinition = {
   description: 'Connect a LINE Messaging API bot for direct and group chats.',
   documentation: {
     portalUrl: 'https://developers.line.biz/console/',
-    setupGuideUrl: 'https://lobehub.com/docs/usage/channels/line',
+    setupGuideUrl: 'https://agentasia.ai/docs/usage/channels/line',
   },
   schema,
   showWebhookUrl: true,

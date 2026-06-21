@@ -1,5 +1,5 @@
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
-import type { ModelRuntime } from '@lobechat/model-runtime';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
+import type { ModelRuntime } from '@agentasia/model-runtime';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { contextPrompt } from '../prompts';

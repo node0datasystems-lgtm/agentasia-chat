@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon } from '@lobehub/ui';
+import { ActionIcon } from '@agentasia/ui';
 import { Edit } from 'lucide-react';
 import { type MouseEvent } from 'react';
 import { memo, useState } from 'react';

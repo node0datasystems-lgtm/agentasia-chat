@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import type { MarkdownProps } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import type { MarkdownProps } from '@agentasia/ui';
 import {
   ActionIcon,
   Center,
@@ -10,7 +10,7 @@ import {
   Markdown,
   Segmented,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CodeIcon, EyeIcon, RefreshCwIcon } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';

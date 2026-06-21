@@ -1,9 +1,9 @@
 'use client';
 
-import { type AgentItem } from '@lobechat/types';
-import { ModelIcon } from '@lobehub/icons';
-import { ActionIcon, Flexbox, Icon, Popover, Skeleton, Text } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { type AgentItem } from '@agentasia/types';
+import { ModelIcon } from '@agentasia/icons';
+import { ActionIcon, Flexbox, Icon, Popover, Skeleton, Text } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import { BookOpen, FileText, Settings } from 'lucide-react';
 import { memo, type PropsWithChildren, useState } from 'react';

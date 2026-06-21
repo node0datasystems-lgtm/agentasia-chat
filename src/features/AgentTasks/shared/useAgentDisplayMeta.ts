@@ -1,4 +1,4 @@
-import { DEFAULT_AVATAR } from '@lobechat/const';
+import { DEFAULT_AVATAR } from '@agentasia/const';
 import { cssVar } from 'antd-style';
 import { useTranslation } from 'react-i18next';
 

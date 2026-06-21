@@ -1,4 +1,4 @@
-import { AgentRuntimeErrorType, ChatErrorType } from '@lobechat/types';
+import { AgentRuntimeErrorType, ChatErrorType } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { isUserSideError, matchErrorPattern } from './match';
@@ -229,7 +229,7 @@ describe('numericId contract', () => {
     for (const code of [
       ChatErrorType.FreePlanLimit,
       ChatErrorType.InsufficientBudgetForModel,
-      ChatErrorType.LobeHubModelDeprecated,
+      ChatErrorType.AgentAsiaModelDeprecated,
     ]) {
       const spec = ERROR_CODE_SPECS[code];
       expect(spec, code).toBeDefined();

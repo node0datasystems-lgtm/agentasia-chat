@@ -1,4 +1,4 @@
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import { uniqueId } from 'es-toolkit/compat';
 import { ModelProvider } from 'model-bank';
 
@@ -18,9 +18,9 @@ export interface HigressModelCard {
 export const params = {
   constructorOptions: {
     defaultHeaders: {
-      'HTTP-Referer': 'https://lobehub.com',
-      'X-Title': 'LobeHub',
-      'x-Request-Id': uniqueId('lobe-chat-'),
+      'HTTP-Referer': 'https://agentasia.ai',
+      'X-Title': 'AgentAsia',
+      'x-Request-Id': uniqueId('agentasia-chat-'),
     },
   },
   debug: {

@@ -1,7 +1,7 @@
 'use client';
 
-import { type SkillItem } from '@lobechat/types';
-import { CopyButton, Highlighter, Markdown } from '@lobehub/ui';
+import { type SkillItem } from '@agentasia/types';
+import { CopyButton, Highlighter, Markdown } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 

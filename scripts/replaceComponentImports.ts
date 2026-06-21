@@ -198,18 +198,18 @@ function parseArgs(): ReplaceConfig | null {
   --help, -h                      显示帮助信息
 
 示例:
-  # 将 antd 的 Skeleton 和 Empty 替换为 @lobehub/ui
+  # 将 antd 的 Skeleton 和 Empty 替换为 @agentasia/ui
   bun run scripts/replaceComponentImports.ts \\
     --components Skeleton,Empty \\
     --from antd \\
-    --to @lobehub/ui \\
+    --to @agentasia/ui \\
     --dir src
 
   # 仅预览，不修改
   bun run scripts/replaceComponentImports.ts \\
     --components Skeleton,Empty \\
     --from antd \\
-    --to @lobehub/ui \\
+    --to @agentasia/ui \\
     --dry-run
 `);
     return null;

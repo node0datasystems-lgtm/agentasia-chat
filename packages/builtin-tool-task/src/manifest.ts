@@ -1,4 +1,4 @@
-import type { BuiltinToolManifest } from '@lobechat/types';
+import type { BuiltinToolManifest } from '@agentasia/types';
 
 import { TASK_STATUSES, UNFINISHED_TASK_STATUSES } from './constants';
 import { DEFAULT_LIST_TASK_LIMIT } from './listTasks';

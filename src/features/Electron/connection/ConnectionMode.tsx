@@ -1,7 +1,7 @@
-import { type StorageMode } from '@lobechat/electron-client-ipc';
-import { StorageModeEnum } from '@lobechat/electron-client-ipc';
-import { Button, Center, Flexbox, Input, stopPropagation } from '@lobehub/ui';
-import { LobeHub } from '@lobehub/ui/brand';
+import { type StorageMode } from '@agentasia/electron-client-ipc';
+import { StorageModeEnum } from '@agentasia/electron-client-ipc';
+import { Button, Center, Flexbox, Input, stopPropagation } from '@agentasia/ui';
+import { AgentAsia } from '@agentasia/ui/brand';
 import { createStaticStyles } from 'antd-style';
 import { Server } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';
@@ -146,10 +146,10 @@ const ConnectionMode = memo<ConnectionModeProps>(({ setWaiting }) => {
             </div>
           </Flexbox>
           <Option
-            description={t('sync.lobehubCloud.description')}
-            icon={LobeHub}
+            description={t('sync.agentasiaCloud.description')}
+            icon={AgentAsia}
             isSelected={selectedOption === StorageModeEnum.Cloud}
-            label={t('sync.lobehubCloud.title')}
+            label={t('sync.agentasiaCloud.title')}
             value={StorageModeEnum.Cloud}
             onClick={handleSelectOption}
           />

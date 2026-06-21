@@ -1,4 +1,4 @@
-import { TRACING_SCENARIOS, type TracingScenario } from '@lobechat/const';
+import { TRACING_SCENARIOS, type TracingScenario } from '@agentasia/const';
 
 import type { ScenarioDefinition } from './types';
 

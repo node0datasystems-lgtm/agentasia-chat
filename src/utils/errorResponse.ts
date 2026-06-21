@@ -1,8 +1,8 @@
-import { AUTH_REQUIRED_HEADER } from '@lobechat/desktop-bridge';
-import { type ILobeAgentRuntimeErrorType } from '@lobechat/model-runtime';
-import { AgentRuntimeErrorType } from '@lobechat/model-runtime';
-import { type ErrorResponse, type ErrorType } from '@lobechat/types';
-import { ChatErrorType } from '@lobechat/types';
+import { AUTH_REQUIRED_HEADER } from '@agentasia/desktop-bridge';
+import { type ILobeAgentRuntimeErrorType } from '@agentasia/model-runtime';
+import { AgentRuntimeErrorType } from '@agentasia/model-runtime';
+import { type ErrorResponse, type ErrorType } from '@agentasia/types';
+import { ChatErrorType } from '@agentasia/types';
 
 /**
  * Error types that indicate a real authentication failure.
@@ -32,7 +32,7 @@ const getStatus = (errorType: ILobeAgentRuntimeErrorType | ErrorType) => {
     case AgentRuntimeErrorType.ExceededToolLimit:
     case ChatErrorType.SubscriptionKeyMismatch:
     case ChatErrorType.SystemTimeNotMatchError:
-    case ChatErrorType.LobeHubModelDeprecated: {
+    case ChatErrorType.AgentAsiaModelDeprecated: {
       return 400;
     }
 

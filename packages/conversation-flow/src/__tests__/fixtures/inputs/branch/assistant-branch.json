@@ -18,7 +18,7 @@
       "totalInputTokens": 15,
       "totalOutputTokens": 12,
       "totalTokens": 27,
-      "cost": 0.00008,
+      "cost": 8e-05,
       "activeBranchIndex": 1
     }
   },

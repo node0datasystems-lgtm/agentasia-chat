@@ -1,4 +1,4 @@
-import type { BuiltinIntervention } from '@lobechat/types';
+import type { BuiltinIntervention } from '@agentasia/types';
 
 import { LobeAgentApiName } from '../../types';
 import AddTodoIntervention from './AddTodo';

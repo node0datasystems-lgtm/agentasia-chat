@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { Brain, ChartBar, Loader2, MessageSquare } from 'lucide-react';
 import { memo } from 'react';

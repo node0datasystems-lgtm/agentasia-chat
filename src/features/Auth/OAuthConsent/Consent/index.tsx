@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Button, Flexbox, Text } from '@lobehub/ui';
+import { Block, Button, Flexbox, Text } from '@agentasia/ui';
 import React, { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -25,7 +25,7 @@ function getScopeDescription(scope: string, t: any): string {
   return t(`consent.scope.${scope.replace(':', '-')}`, scope);
 }
 
-const BUILTIN_CLIENTS = new Set(['lobehub-desktop', 'lobehub-mobile', 'lobehub-market']);
+const BUILTIN_CLIENTS = new Set(['agentasia-desktop', 'agentasia-mobile', 'agentasia-market']);
 
 const ConsentClient = memo<ClientProps>(({ uid, clientId, scopes, clientMetadata }) => {
   const { t } = useTranslation('oauth');

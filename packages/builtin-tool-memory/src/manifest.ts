@@ -1,4 +1,4 @@
-import type { BuiltinToolManifest } from '@lobechat/types';
+import type { BuiltinToolManifest } from '@agentasia/types';
 import {
   ACTIVITY_TYPES,
   CONTEXT_OBJECT_TYPES,
@@ -8,7 +8,7 @@ import {
   MEMORY_TYPES,
   MERGE_STRATEGIES,
   RELATIONSHIPS,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import type { JSONSchema7 } from 'json-schema';
 
 import { systemPrompt } from './systemRole';

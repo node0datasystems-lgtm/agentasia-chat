@@ -1,4 +1,4 @@
-import { type ContextMenuItem, showContextMenu } from '@lobehub/ui';
+import { type ContextMenuItem, showContextMenu } from '@agentasia/ui';
 import type { MenuProps } from 'antd';
 
 type AntdItem = NonNullable<MenuProps['items']>[number];

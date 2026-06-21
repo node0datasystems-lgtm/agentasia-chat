@@ -8,7 +8,7 @@ import type {
   TaskStatus,
   TaskTopicHandoff,
   WorkspaceData,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 
 import { AgentModel } from '@/database/models/agent';

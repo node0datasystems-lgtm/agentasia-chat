@@ -2,7 +2,7 @@ import type {
   LobeAgentAgencyConfig,
   LobeAgentChatConfig,
   LobeAgentConfig,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import type { GroupSupervisorContext } from './agents/group-supervisor/type';
 

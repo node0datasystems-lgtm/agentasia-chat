@@ -13,7 +13,7 @@ const AiHubMix: ModelProviderCard = {
     showModelFetcher: true,
     supportResponsesApi: true,
   },
-  url: 'https://aihubmix.com?utm_source=lobehub',
+  url: 'https://aihubmix.com?utm_source=agentasia',
 };
 
 export default AiHubMix;

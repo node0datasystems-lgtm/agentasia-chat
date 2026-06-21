@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { RelationshipEnum } from '@lobechat/types';
+import { RelationshipEnum } from '@agentasia/types';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../../core/getTestDB';

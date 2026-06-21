@@ -1,4 +1,4 @@
-import { createAction, createSignal } from '@lobechat/agent-signal';
+import { createAction, createSignal } from '@agentasia/agent-signal';
 import { describe, expect, it, vi } from 'vitest';
 
 const loadCreateRuntime = async () => {

@@ -1,7 +1,7 @@
 'use client';
 
-import { Center } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { Center } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { type CSSProperties, memo } from 'react';
 
 interface SkillAvatarProps {

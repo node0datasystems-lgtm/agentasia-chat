@@ -1,6 +1,6 @@
-import { TopicReferenceIdentifier } from '@lobechat/builtin-tool-topic-reference';
-import type { LobeChatDatabase } from '@lobechat/database';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import { TopicReferenceIdentifier } from '@agentasia/builtin-tool-topic-reference';
+import type { LobeChatDatabase } from '@agentasia/database';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import { MessageModel } from '@/database/models/message';
 import { TopicModel } from '@/database/models/topic';

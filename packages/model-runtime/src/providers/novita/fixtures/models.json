@@ -79,7 +79,10 @@
     "output_token_price_per_m": 50000,
     "title": "meta-llama/llama-3.1-405b-instruct",
     "description": "Meta's latest class of models, Llama 3.1, launched with a variety of sizes and configurations. This 405B instruct-tuned version is optimized for high-quality dialogue use cases. It has demonstrated strong performance compared to leading closed-source models, including GPT-4o and Claude 3.5 Sonnet, in evaluations.",
-    "tags": ["HOT", "UNCENSORED"],
+    "tags": [
+      "HOT",
+      "UNCENSORED"
+    ],
     "context_size": 32768,
     "status": 1,
     "cus_id": "meta-llama-llama-3.1-405b-instruct"

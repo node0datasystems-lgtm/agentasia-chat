@@ -1,5 +1,5 @@
-import { ProviderIcon } from '@lobehub/icons';
-import { Block, Flexbox, Text } from '@lobehub/ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { Block, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

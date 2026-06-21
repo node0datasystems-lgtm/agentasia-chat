@@ -1,6 +1,6 @@
 'use client';
 
-import type { FollowUpChip } from '@lobechat/types';
+import type { FollowUpChip } from '@agentasia/types';
 import { Reply } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
 

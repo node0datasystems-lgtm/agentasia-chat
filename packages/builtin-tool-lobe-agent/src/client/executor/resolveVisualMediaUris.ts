@@ -1,6 +1,6 @@
-import { imageUrlToBase64 } from '@lobechat/utils/imageToBase64';
-import { parseDataUri } from '@lobechat/utils/uriParser';
-import { isDesktopLocalStaticServerUrl } from '@lobechat/utils/url';
+import { imageUrlToBase64 } from '@agentasia/utils/imageToBase64';
+import { parseDataUri } from '@agentasia/utils/uriParser';
+import { isDesktopLocalStaticServerUrl } from '@agentasia/utils/url';
 
 import type { VisualFileItem } from '../../visualMedia';
 

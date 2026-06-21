@@ -1,4 +1,4 @@
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 import {
   oidcAccessTokens,
   oidcAuthorizationCodes,
@@ -7,7 +7,7 @@ import {
   oidcRefreshTokens,
   oidcSessions,
   users,
-} from '@lobechat/database/schemas';
+} from '@agentasia/database/schemas';
 import { eq } from 'drizzle-orm';
 
 export const OIDC_USER_INACTIVE_ERROR_MESSAGE = 'OIDC user is no longer active';

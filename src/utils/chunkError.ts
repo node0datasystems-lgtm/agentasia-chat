@@ -1,4 +1,4 @@
-import { toast } from '@lobehub/ui';
+import { toast } from '@agentasia/ui';
 
 const CHUNK_ERROR_PATTERNS = [
   'Failed to fetch dynamically imported module', // Chrome / Vite

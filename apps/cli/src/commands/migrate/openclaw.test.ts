@@ -32,7 +32,7 @@ vi.mock('../../api/client', () => ({
 }));
 
 vi.mock('../../settings', () => ({
-  resolveServerUrl: () => 'https://app.lobehub.com',
+  resolveServerUrl: () => 'https://app.agentasia.ai',
 }));
 
 vi.mock('../../utils/format', async (importOriginal) => {
@@ -562,7 +562,7 @@ describe('migrate openclaw', () => {
       ]);
 
       const allOutput = consoleSpy.mock.calls.map((c: any[]) => c[0]).join('\n');
-      expect(allOutput).toContain('https://app.lobehub.com/agent/agt_abc123');
+      expect(allOutput).toContain('https://app.agentasia.ai/agent/agt_abc123');
     });
 
     it('should show friendly completion message on success', async () => {

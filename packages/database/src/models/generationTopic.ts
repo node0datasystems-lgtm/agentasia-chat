@@ -2,7 +2,7 @@ import type {
   ImageGenerationAsset,
   ImageGenerationTopic,
   VideoGenerationAsset,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { and, desc, eq } from 'drizzle-orm';
 
 import { FileService } from '@/server/services/file';

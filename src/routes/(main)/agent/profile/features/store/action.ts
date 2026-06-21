@@ -1,4 +1,4 @@
-import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT } from '@lobechat/const';
+import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT } from '@agentasia/const';
 import { debounce } from 'es-toolkit/compat';
 import { type StateCreator } from 'zustand';
 

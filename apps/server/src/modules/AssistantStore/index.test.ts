@@ -1,10 +1,10 @@
 // @vitest-environment node
-import { EdgeConfig } from '@lobechat/edge-config';
+import { EdgeConfig } from '@agentasia/edge-config';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AssistantStore } from './index';
 
-const baseURL = 'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public';
+const baseURL = 'https://registry.npmmirror.com/@agentasia/agents-index/v1/files/public';
 
 vi.mock('@lobechat/edge-config', () => {
   const EdgeConfigMock = vi.fn();

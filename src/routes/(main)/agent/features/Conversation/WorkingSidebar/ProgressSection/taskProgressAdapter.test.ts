@@ -1,4 +1,4 @@
-import type { StepContextTodos } from '@lobechat/types';
+import type { StepContextTodos } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { normalizeTaskProgress } from './taskProgressAdapter';

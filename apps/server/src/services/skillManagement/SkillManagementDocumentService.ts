@@ -1,4 +1,4 @@
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 import { sha256 } from 'js-sha256';
 
 import { AgentDocumentModel, PolicyLoad } from '@/database/models/agentDocuments';

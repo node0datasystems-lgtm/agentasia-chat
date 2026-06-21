@@ -1,4 +1,4 @@
-import type { DeviceListItem, WorkingDirEntry } from '@lobechat/types';
+import type { DeviceListItem, WorkingDirEntry } from '@agentasia/types';
 import { type SWRResponse } from 'swr';
 
 import { mutate, useClientDataSWR } from '@/libs/swr';

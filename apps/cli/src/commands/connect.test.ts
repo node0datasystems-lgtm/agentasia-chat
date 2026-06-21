@@ -8,7 +8,7 @@ vi.mock('../auth/refresh', () => ({
 }));
 vi.mock('../auth/resolveToken', () => ({
   resolveToken: vi.fn().mockResolvedValue({
-    serverUrl: 'https://app.lobehub.com',
+    serverUrl: 'https://app.agentasia.ai',
     token: 'test-token',
     tokenType: 'jwt',
     userId: 'test-user',
@@ -102,7 +102,7 @@ vi.mock('@lobechat/device-gateway-client', () => ({
 }));
 
 // eslint-disable-next-line import-x/first
-import { GatewayClient } from '@lobechat/device-gateway-client';
+import { GatewayClient } from '@agentasia/device-gateway-client';
 
 // eslint-disable-next-line import-x/first
 import { resolveToken } from '../auth/resolveToken';
@@ -176,7 +176,7 @@ describe('connect command', () => {
     await program.parseAsync(['node', 'test', 'connect']);
 
     expect(connectCalled).toBe(true);
-    expect(log.info).toHaveBeenCalledWith(expect.stringContaining('LobeHub CLI'));
+    expect(log.info).toHaveBeenCalledWith(expect.stringContaining('AgentAsia CLI'));
   });
 
   it('should require explicit gateway for custom login server', async () => {
@@ -212,7 +212,7 @@ describe('connect command', () => {
     const program = createProgram();
     await program.parseAsync(['node', 'test', 'connect']);
 
-    expect(clientOptions.serverUrl).toBe('https://app.lobehub.com');
+    expect(clientOptions.serverUrl).toBe('https://app.agentasia.ai');
   });
 
   it('should handle tool call requests', async () => {
@@ -262,7 +262,7 @@ describe('connect command', () => {
 
   it('should retry auth_failed with token refresh when new token available', async () => {
     vi.mocked(resolveToken).mockResolvedValueOnce({
-      serverUrl: 'https://app.lobehub.com',
+      serverUrl: 'https://app.agentasia.ai',
       token: 'refreshed-token',
       tokenType: 'jwt',
       userId: 'test-user',
@@ -282,7 +282,7 @@ describe('connect command', () => {
 
   it('should handle auth_expired', async () => {
     vi.mocked(resolveToken).mockResolvedValueOnce({
-      serverUrl: 'https://app.lobehub.com',
+      serverUrl: 'https://app.agentasia.ai',
       token: 'new-tok',
       tokenType: 'jwt',
       userId: 'user',

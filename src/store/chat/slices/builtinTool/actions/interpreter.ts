@@ -1,9 +1,9 @@
-import { CloudSandboxIdentifier } from '@lobechat/builtin-tool-cloud-sandbox';
+import { CloudSandboxIdentifier } from '@agentasia/builtin-tool-cloud-sandbox';
 import {
   type CodeInterpreterFileItem,
   type CodeInterpreterParams,
   type CodeInterpreterResponse,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 import { produce } from 'immer';
 import pMap from 'p-map';

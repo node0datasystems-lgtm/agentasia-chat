@@ -1,7 +1,7 @@
 'use client';
 
-import { Input, Select, TextArea } from '@lobehub/ui';
-import { useModalContext } from '@lobehub/ui/base-ui';
+import { Input, Select, TextArea } from '@agentasia/ui';
+import { useModalContext } from '@agentasia/ui/base-ui';
 import { App, Form } from 'antd';
 import { type FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

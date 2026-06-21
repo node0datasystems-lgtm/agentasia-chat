@@ -1,6 +1,6 @@
-import { getErrorCodeSpec, refineErrorCode } from '@lobechat/model-runtime';
-import { AgentRuntimeErrorType, ChatErrorType, type ChatMessageError } from '@lobechat/types';
-import { isRecord } from '@lobechat/utils';
+import { getErrorCodeSpec, refineErrorCode } from '@agentasia/model-runtime';
+import { AgentRuntimeErrorType, ChatErrorType, type ChatMessageError } from '@agentasia/types';
+import { isRecord } from '@agentasia/utils';
 
 /** Pull a usable HTTP status out of the nested upstream error object. */
 const extractHttpStatus = (body: unknown): number | undefined => {

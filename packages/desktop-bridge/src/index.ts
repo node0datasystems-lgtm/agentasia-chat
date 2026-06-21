@@ -35,9 +35,9 @@ export const TRPC_ERROR_CODE_UNAUTHORIZED = 'UNAUTHORIZED' as const;
 
 /**
  * Sentinel message placed in TRPCError({ code: 'UNAUTHORIZED' }) when the failure
- * originates from the Market service's own OAuth token, NOT from the user's LobeHub
+ * originates from the Market service's own OAuth token, NOT from the user's AgentAsia
  * session.  responseMeta checks this to suppress the X-Auth-Required header so the
- * desktop "re-login to LobeHub" modal is NOT shown; the Market OAuth flow handles it
+ * desktop "re-login to AgentAsia" modal is NOT shown; the Market OAuth flow handles it
  * instead via the market-unauthorized event.
  */
 export const MARKET_AUTH_REQUIRED_MESSAGE = 'MARKET_AUTH_REQUIRED' as const;

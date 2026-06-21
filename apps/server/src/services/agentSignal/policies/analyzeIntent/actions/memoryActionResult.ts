@@ -1,7 +1,7 @@
-import type { AgentState } from '@lobechat/agent-runtime';
-import { MemoryApiName, MemoryIdentifier } from '@lobechat/builtin-tool-memory';
-import { LayersEnum } from '@lobechat/types';
-import { isRecord, pickTrimmedString } from '@lobechat/utils';
+import type { AgentState } from '@agentasia/agent-runtime';
+import { MemoryApiName, MemoryIdentifier } from '@agentasia/builtin-tool-memory';
+import { LayersEnum } from '@agentasia/types';
+import { isRecord, pickTrimmedString } from '@agentasia/utils';
 
 /**
  * Pure, dependency-light helpers that derive the durable outcome of a

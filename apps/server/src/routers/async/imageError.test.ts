@@ -1,5 +1,5 @@
-import { AgentRuntimeErrorType } from '@lobechat/model-runtime';
-import { AsyncTaskErrorType } from '@lobechat/types';
+import { AgentRuntimeErrorType } from '@agentasia/model-runtime';
+import { AsyncTaskErrorType } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { CONTENT_POLICY_ERROR_MESSAGE } from './contentPolicyError';

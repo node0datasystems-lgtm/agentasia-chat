@@ -1,5 +1,5 @@
-import type { MockCase } from '@lobechat/agent-mock';
-import { BUILTIN_CASES, snapshotToMockCase } from '@lobechat/agent-mock';
+import type { MockCase } from '@agentasia/agent-mock';
+import { BUILTIN_CASES, snapshotToMockCase } from '@agentasia/agent-mock';
 import useSWR from 'swr';
 
 interface SnapshotIndex {

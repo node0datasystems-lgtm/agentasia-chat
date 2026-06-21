@@ -1,7 +1,7 @@
 'use client';
 
-import type { RunCommandState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import type { RunCommandState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, SquareChevronRight, X } from 'lucide-react';
 import { memo } from 'react';

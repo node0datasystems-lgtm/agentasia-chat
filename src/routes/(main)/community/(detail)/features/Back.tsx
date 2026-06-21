@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon } from '@lobehub/ui';
+import { Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowLeft } from 'lucide-react';
 import { type CSSProperties } from 'react';

@@ -1,4 +1,4 @@
-import { Center, Icon } from '@lobehub/ui';
+import { Center, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { Loader2Icon } from 'lucide-react';
 import React from 'react';

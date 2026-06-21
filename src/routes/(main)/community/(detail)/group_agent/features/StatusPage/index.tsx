@@ -1,7 +1,7 @@
 'use client';
 
 import { ExclamationCircleOutlined, FolderOpenOutlined } from '@ant-design/icons';
-import { Button, FluentEmoji, Text } from '@lobehub/ui';
+import { Button, FluentEmoji, Text } from '@agentasia/ui';
 import { Result } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -44,7 +44,7 @@ const StatusPage = memo<StatusPageProps>(({ status }) => {
             <Text fontSize={16} type={'secondary'}>
               {t('groupAgents.status.unpublished.subtitle', {
                 defaultValue:
-                  'This group agent is under review. Please contact support@lobehub.com if you have questions.',
+                  'This group agent is under review. Please contact support@agentasia.ai if you have questions.',
               })}
             </Text>
           }

@@ -1,5 +1,5 @@
-import { type ChatToolPayloadWithResult } from '@lobechat/types';
-import { Accordion, AccordionItem, ActionIcon, Block, Flexbox, Icon, Text } from '@lobehub/ui';
+import { type ChatToolPayloadWithResult } from '@agentasia/types';
+import { Accordion, AccordionItem, ActionIcon, Block, Flexbox, Icon, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { AlertTriangle, Check, HandIcon, Maximize2, Minimize2, X } from 'lucide-react';
 import { AnimatePresence, m as motion } from 'motion/react';

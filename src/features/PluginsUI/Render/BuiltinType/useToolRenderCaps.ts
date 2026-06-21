@@ -1,4 +1,4 @@
-import type { ToolRenderCapabilities } from '@lobechat/shared-tool-ui';
+import type { ToolRenderCapabilities } from '@agentasia/shared-tool-ui';
 import { useMemo } from 'react';
 
 import { localFileService } from '@/services/electron/localFileService';

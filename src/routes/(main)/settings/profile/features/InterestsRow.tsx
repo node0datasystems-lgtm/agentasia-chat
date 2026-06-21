@@ -1,8 +1,8 @@
 'use client';
 
-import type { InterestAreaKey } from '@lobechat/const';
-import { normalizeInterestsForStorage, resolveInterestAreaKey } from '@lobechat/const';
-import { Block, Flexbox, Icon, Input, Text } from '@lobehub/ui';
+import type { InterestAreaKey } from '@agentasia/const';
+import { normalizeInterestsForStorage, resolveInterestAreaKey } from '@agentasia/const';
+import { Block, Flexbox, Icon, Input, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { BriefcaseIcon } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';

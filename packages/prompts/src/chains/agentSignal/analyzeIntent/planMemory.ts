@@ -1,4 +1,4 @@
-import type { ChatStreamPayload } from '@lobechat/types';
+import type { ChatStreamPayload } from '@agentasia/types';
 
 import {
   AGENT_SIGNAL_ANALYZE_INTENT_PLAN_MEMORY_SYSTEM_ROLE,

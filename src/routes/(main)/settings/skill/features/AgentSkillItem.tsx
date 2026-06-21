@@ -1,9 +1,9 @@
 'use client';
 
-import { type BuiltinSkill, type SkillListItem } from '@lobechat/types';
-import { Avatar, Button, DropdownMenu, Flexbox, Icon, Modal, stopPropagation } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { type BuiltinSkill, type SkillListItem } from '@agentasia/types';
+import { Avatar, Button, DropdownMenu, Flexbox, Icon, Modal, stopPropagation } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { Space } from 'antd';
 import { DownloadIcon, MoreHorizontalIcon, Plus, Trash2 } from 'lucide-react';
 import { lazy, memo, Suspense, useState } from 'react';

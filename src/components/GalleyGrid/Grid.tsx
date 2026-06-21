@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { cx } from 'antd-style';
 import { type CSSProperties, type ReactNode } from 'react';
 import { memo, useMemo } from 'react';

@@ -88,7 +88,7 @@ vi.mock('@/store/tool/selectors', () => ({
   composioStoreSelectors: {
     getServers: vi.fn(() => []),
   },
-  lobehubSkillStoreSelectors: {
+  agentasiaSkillStoreSelectors: {
     getServers: vi.fn(() => []),
   },
   pluginSelectors: {

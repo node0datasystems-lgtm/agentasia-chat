@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Flexbox, Icon, Input } from '@lobehub/ui';
+import { ActionIcon, Button, Flexbox, Icon, Input } from '@agentasia/ui';
 import { type FormInstance } from 'antd';
 import { App, Form } from 'antd';
 import { createStaticStyles } from 'antd-style';

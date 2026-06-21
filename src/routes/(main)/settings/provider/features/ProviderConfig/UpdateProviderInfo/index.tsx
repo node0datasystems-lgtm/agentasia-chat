@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Tooltip } from '@lobehub/ui';
+import { Button, Tooltip } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { SettingsIcon } from 'lucide-react';
 import { memo } from 'react';

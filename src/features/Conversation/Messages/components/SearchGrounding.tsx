@@ -1,4 +1,4 @@
-import { Flexbox, Icon, SearchResultCards, Tag } from '@lobehub/ui';
+import { Flexbox, Icon, SearchResultCards, Tag } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronDown, ChevronRight, Globe, Images } from 'lucide-react';
 import { AnimatePresence, m } from 'motion/react';
@@ -12,7 +12,7 @@ import { type GroundingSearch } from '@/types/search';
 // Resolve the favicon host defensively: some providers (e.g. OpenRouter built-in
 // web search) may emit citations with an empty/invalid url, and `new URL(undefined)`
 // would throw and crash the whole message render.
-// See https://github.com/lobehub/lobehub/issues/15043
+// See https://github.com/node0datasystems-lgtm/agentasia-chat/issues/15043
 const getFaviconHost = (favicon?: string, url?: string): string => {
   if (favicon) return favicon;
   if (!url) return '';

@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Progress } from 'antd';
 import { cssVar } from 'antd-style';
 import React, { memo } from 'react';

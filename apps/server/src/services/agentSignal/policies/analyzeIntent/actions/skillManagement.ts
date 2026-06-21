@@ -3,8 +3,8 @@ import type {
   BaseAction,
   ExecutorResult,
   SignalAttempt,
-} from '@lobechat/agent-signal';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
+} from '@agentasia/agent-signal';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
 
 import type { LobeChatDatabase } from '@/database/type';
 import type { AgentSignalOperationMarker } from '@/server/services/agentSignal/operationMarker';

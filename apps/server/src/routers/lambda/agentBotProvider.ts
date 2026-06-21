@@ -1,5 +1,5 @@
-import { LineApiClient } from '@lobechat/chat-adapter-line';
-import { fetchQrCode, pollQrStatus } from '@lobechat/chat-adapter-wechat';
+import { LineApiClient } from '@agentasia/chat-adapter-line';
+import { fetchQrCode, pollQrStatus } from '@agentasia/chat-adapter-wechat';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

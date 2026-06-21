@@ -37,20 +37,20 @@ describe('isNewerVersion', () => {
 
 describe('buildInstallCommand', () => {
   it('builds the global install command per package manager', () => {
-    expect(buildInstallCommand('npm', '@lobehub/cli@1.0.0')).toEqual({
-      args: ['install', '-g', '@lobehub/cli@1.0.0'],
+    expect(buildInstallCommand('npm', '@agentasia/cli@1.0.0')).toEqual({
+      args: ['install', '-g', '@agentasia/cli@1.0.0'],
       command: 'npm',
     });
-    expect(buildInstallCommand('pnpm', '@lobehub/cli@1.0.0')).toEqual({
-      args: ['add', '-g', '@lobehub/cli@1.0.0'],
+    expect(buildInstallCommand('pnpm', '@agentasia/cli@1.0.0')).toEqual({
+      args: ['add', '-g', '@agentasia/cli@1.0.0'],
       command: 'pnpm',
     });
-    expect(buildInstallCommand('bun', '@lobehub/cli@1.0.0')).toEqual({
-      args: ['add', '-g', '@lobehub/cli@1.0.0'],
+    expect(buildInstallCommand('bun', '@agentasia/cli@1.0.0')).toEqual({
+      args: ['add', '-g', '@agentasia/cli@1.0.0'],
       command: 'bun',
     });
-    expect(buildInstallCommand('yarn', '@lobehub/cli@1.0.0')).toEqual({
-      args: ['global', 'add', '@lobehub/cli@1.0.0'],
+    expect(buildInstallCommand('yarn', '@agentasia/cli@1.0.0')).toEqual({
+      args: ['global', 'add', '@agentasia/cli@1.0.0'],
       command: 'yarn',
     });
   });

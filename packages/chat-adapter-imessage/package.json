@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/chat-adapter-imessage",
+  "name": "@agentasia/chat-adapter-imessage",
   "version": "0.1.0",
   "description": "iMessage adapter for chat SDK via BlueBubbles",
   "type": "module",

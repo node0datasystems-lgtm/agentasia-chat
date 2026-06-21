@@ -1,10 +1,10 @@
-import type { FetchSSEOptions } from '@lobechat/fetch-sse';
+import type { FetchSSEOptions } from '@agentasia/fetch-sse';
 import type {
   RequestTrigger,
   RuntimeInitialContext,
   RuntimeStepContext,
   TracePayload,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 interface ChatRequestMetadata extends Record<string, unknown> {
   trigger?: RequestTrigger;

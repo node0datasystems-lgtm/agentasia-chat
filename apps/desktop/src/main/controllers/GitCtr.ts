@@ -16,7 +16,7 @@ import type {
   GitWorkingTreePatches,
   GitWorkingTreeStatus,
   GitWorktreeListItem,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import {
   checkoutGitBranch as runCheckoutGitBranch,
   deleteGitBranch as runDeleteGitBranch,
@@ -36,7 +36,7 @@ import {
   pushGitBranch as runPushGitBranch,
   renameGitBranch as runRenameGitBranch,
   revertGitFile as runRevertGitFile,
-} from '@lobechat/local-file-shell';
+} from '@agentasia/local-file-shell';
 
 import { detectRepoType } from '@/utils/git';
 

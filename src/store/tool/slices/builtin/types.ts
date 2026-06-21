@@ -19,7 +19,7 @@ export type {
   TriggerExecuteTaskItem,
   TriggerExecuteTasksParams,
   TriggerSpeakParams,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 /**
  * Parameters for optimistic tool message update

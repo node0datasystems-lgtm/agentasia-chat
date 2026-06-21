@@ -4,7 +4,7 @@
  * Business logic for image processing including URL fetching
  * and workflow execution
  */
-import { type CreateImagePayload, type CreateImageResponse } from '@lobechat/model-runtime';
+import { type CreateImagePayload, type CreateImageResponse } from '@agentasia/model-runtime';
 import { type PromptBuilder } from '@saintno/comfyui-sdk';
 import debug from 'debug';
 

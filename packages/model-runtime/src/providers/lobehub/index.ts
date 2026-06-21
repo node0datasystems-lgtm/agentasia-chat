@@ -1,8 +1,8 @@
-import { lobehubRouterRuntimeOptions } from '@lobechat/business-model-runtime';
+import { agentasiaRouterRuntimeOptions } from '@agentasia/business-model-runtime';
 
 import { createRouterRuntime } from '../../core/RouterRuntime';
 import type { CreateRouterRuntimeOptions } from '../../core/RouterRuntime/createRuntime';
 
-export const LobeHubAI = createRouterRuntime(
-  lobehubRouterRuntimeOptions as CreateRouterRuntimeOptions,
+export const AgentAsiaAI = createRouterRuntime(
+  agentasiaRouterRuntimeOptions as CreateRouterRuntimeOptions,
 );

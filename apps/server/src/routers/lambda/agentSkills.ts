@@ -1,5 +1,5 @@
-import type { SkillManifest } from '@lobechat/types';
-import { skillManifestSchema } from '@lobechat/types';
+import type { SkillManifest } from '@agentasia/types';
+import { skillManifestSchema } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

@@ -9,12 +9,18 @@
         {
           "id": "msg-102",
           "type": "message",
-          "tools": ["msg-103", "msg-104"]
+          "tools": [
+            "msg-103",
+            "msg-104"
+          ]
         },
         {
           "id": "msg-105",
           "type": "message",
-          "tools": ["msg-106", "msg-107"]
+          "tools": [
+            "msg-106",
+            "msg-107"
+          ]
         },
         {
           "id": "msg-108",

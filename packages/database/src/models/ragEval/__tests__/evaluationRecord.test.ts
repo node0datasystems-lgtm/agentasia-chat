@@ -1,4 +1,4 @@
-import { EvalEvaluationStatus } from '@lobechat/types';
+import { EvalEvaluationStatus } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

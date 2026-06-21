@@ -1,6 +1,6 @@
-import { isDesktop } from '@lobechat/const';
-import type { UserGeneralConfig } from '@lobechat/types';
-import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
+import { isDesktop } from '@agentasia/const';
+import type { UserGeneralConfig } from '@agentasia/types';
+import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';
 import { type PartialDeep } from 'type-fest';

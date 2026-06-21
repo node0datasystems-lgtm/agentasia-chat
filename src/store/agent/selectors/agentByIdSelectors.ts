@@ -1,13 +1,13 @@
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
-import { DEFAULT_MODEL, DEFAUTT_AGENT_TTS_CONFIG, isDesktop } from '@lobechat/const';
-import { type AgentBuilderContext } from '@lobechat/context-engine';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
+import { DEFAULT_MODEL, DEFAUTT_AGENT_TTS_CONFIG, isDesktop } from '@agentasia/const';
+import { type AgentBuilderContext } from '@agentasia/context-engine';
 import {
   type AgentMode,
   type LobeAgentAgencyConfig,
   type LobeAgentTTSConfig,
   type RuntimeEnvConfig,
-} from '@lobechat/types';
-import { VoiceList } from '@lobehub/tts';
+} from '@agentasia/types';
+import { VoiceList } from '@agentasia/tts';
 
 import { resolveTargetDeviceId } from '@/helpers/agentWorkingDirectory';
 import { globalAgentContextManager } from '@/helpers/GlobalAgentContextManager';

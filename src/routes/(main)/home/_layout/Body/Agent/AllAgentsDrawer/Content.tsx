@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { VList } from 'virtua';

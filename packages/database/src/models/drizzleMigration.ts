@@ -1,4 +1,4 @@
-import type { MigrationTableItem } from '@lobechat/types';
+import type { MigrationTableItem } from '@agentasia/types';
 import { sql } from 'drizzle-orm';
 
 import type { LobeChatDatabase } from '../type';

@@ -1,4 +1,4 @@
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
 
 import { contextPrompt } from '../prompts';
 import type { ContextMemory } from '../schemas';

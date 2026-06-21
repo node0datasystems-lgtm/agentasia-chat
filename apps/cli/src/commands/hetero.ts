@@ -9,8 +9,8 @@ import type {
   AgentImageSource,
   AgentPromptInput,
   AgentStreamEvent,
-} from '@lobechat/heterogeneous-agents/spawn';
-import { spawnAgent } from '@lobechat/heterogeneous-agents/spawn';
+} from '@agentasia/heterogeneous-agents/spawn';
+import { spawnAgent } from '@agentasia/heterogeneous-agents/spawn';
 import type { Command } from 'commander';
 
 import { getTrpcClient } from '../api/client';

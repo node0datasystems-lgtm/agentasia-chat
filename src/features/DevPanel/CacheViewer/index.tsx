@@ -1,4 +1,4 @@
-import { Center, Empty } from '@lobehub/ui';
+import { Center, Empty } from '@agentasia/ui';
 import { Database } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 

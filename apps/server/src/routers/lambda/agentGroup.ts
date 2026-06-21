@@ -1,4 +1,4 @@
-import { InsertChatGroupSchema } from '@lobechat/types';
+import { InsertChatGroupSchema } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, eq, isNull } from 'drizzle-orm';
 import { z } from 'zod';

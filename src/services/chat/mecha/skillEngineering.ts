@@ -1,7 +1,7 @@
-import type { OperationSkillSet } from '@lobechat/context-engine';
-import { SkillEngine } from '@lobechat/context-engine';
-import { resourcesTreePrompt } from '@lobechat/prompts';
-import type { SkillItem } from '@lobechat/types';
+import type { OperationSkillSet } from '@agentasia/context-engine';
+import { SkillEngine } from '@agentasia/context-engine';
+import { resourcesTreePrompt } from '@agentasia/prompts';
+import type { SkillItem } from '@agentasia/types';
 import debug from 'debug';
 
 import { isBuiltinSkillAvailableInCurrentEnv } from '@/helpers/toolAvailability';

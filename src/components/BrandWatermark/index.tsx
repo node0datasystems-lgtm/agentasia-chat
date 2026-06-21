@@ -1,9 +1,9 @@
 'use client';
 
-import { ORG_NAME, UTM_SOURCE } from '@lobechat/business-const';
-import { type FlexboxProps } from '@lobehub/ui';
-import { Flexbox } from '@lobehub/ui';
-import { LobeHub } from '@lobehub/ui/brand';
+import { ORG_NAME, UTM_SOURCE } from '@agentasia/business-const';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Flexbox } from '@agentasia/ui';
+import { AgentAsia } from '@agentasia/ui/brand';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 
@@ -37,11 +37,11 @@ const BrandWatermark = memo<Omit<FlexboxProps, 'children'>>(({ style, ...rest })
       ) : (
         <a
           className={styles.logoLink}
-          href={`https://lobehub.com?utm_source=${UTM_SOURCE}&utm_content=brand_watermark`}
+          href={`https://agentasia.ai?utm_source=${UTM_SOURCE}&utm_content=brand_watermark`}
           rel="noreferrer"
           target="_blank"
         >
-          <LobeHub size={20} type={'text'} />
+          <AgentAsia size={20} type={'text'} />
         </a>
       )}
     </Flexbox>

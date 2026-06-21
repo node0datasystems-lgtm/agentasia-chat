@@ -1,4 +1,4 @@
-# Electron (LobeHub Desktop) UI Testing
+# Electron (AgentAsia Desktop) UI Testing
 
 Default surface for verifying **pure frontend changes** (components, store logic, styles, interactions) in the primary product shape. Drives the Electron renderer over CDP with `agent-browser` — see [../references/agent-browser.md](../references/agent-browser.md) for the full command reference.
 
@@ -39,7 +39,7 @@ After `start` succeeds, connect with: `agent-browser --cdp 9222 snapshot -i`
 | `ELECTRON_WAIT_S` | `60`                    | Max seconds to wait for Electron process |
 | `RENDERER_WAIT_S` | `60`                    | Max seconds to wait for SPA to load      |
 
-### LobeHub Probes & Quick Navigation
+### AgentAsia Probes & Quick Navigation
 
 `scripts/app-probe.sh` is the standard fast path into app state — **use it
 instead of hand-rolling `__LOBE_STORES` eval snippets** for these common needs:
@@ -72,7 +72,7 @@ Targets default to Electron (`--cdp 9222`); set `AB_TARGET="--session <name>"`
 for web sessions. For deeper or one-off state inspection, fall back to raw
 eval below.
 
-### LobeHub-Specific Patterns
+### AgentAsia-Specific Patterns
 
 #### Access Zustand Store State
 

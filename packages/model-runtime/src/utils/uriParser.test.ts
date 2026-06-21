@@ -1,4 +1,4 @@
-import { ssrfSafeFetch } from '@lobechat/ssrf-safe-fetch';
+import { ssrfSafeFetch } from '@agentasia/ssrf-safe-fetch';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { parseDataUri, validateExternalUrl } from './uriParser';

@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import type { ConversationContext, UIChatMessage } from '@lobechat/types';
+import type { ConversationContext, UIChatMessage } from '@agentasia/types';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 

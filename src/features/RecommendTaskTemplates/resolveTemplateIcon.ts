@@ -4,7 +4,7 @@ import type {
   TaskTemplate,
   TaskTemplateConnectorReference,
   TaskTemplateIcon,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { type LucideIcon, Sparkles } from 'lucide-react';
 
 import { getProviderMeta } from './providerMeta';
@@ -63,9 +63,9 @@ export const resolveTemplateIcon = (
 export const getMainIconProvider = (
   template: TaskTemplate,
 ): TaskTemplateConnectorReference | undefined => {
-  // The self-icon union is currently the single lobehub provider id 'github';
+  // The self-icon union is currently the single agentasia provider id 'github';
   // expand `SELF_ICON_MAP` and this mapping together when more are added.
-  if (template.icon) return { identifier: template.icon, source: 'lobehub' };
+  if (template.icon) return { identifier: template.icon, source: 'agentasia' };
 
   for (const spec of getPrioritizedConnectors(template)) {
     if (getProviderMeta(spec)) return spec;

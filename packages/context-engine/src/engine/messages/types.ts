@@ -1,11 +1,11 @@
 /* eslint-disable perfectionist/sort-interfaces */
-import type { FileContent, KnowledgeBaseInfo, PageContentContext } from '@lobechat/prompts';
+import type { FileContent, KnowledgeBaseInfo, PageContentContext } from '@agentasia/prompts';
 import type {
   RuntimeInitialContext,
   RuntimeSelectedSkill,
   RuntimeSelectedTool,
   RuntimeStepContext,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import type { OpenAIChatMessage, UIChatMessage } from '@/types/index';
 
@@ -363,4 +363,4 @@ export { type TodoItem, type TodoList } from '../../providers/TodoInjector';
 export { type ToolDiscoveryMeta } from '../../providers/ToolDiscoveryProvider';
 export { type TopicReferenceItem } from '../../providers/TopicReferenceContextInjector';
 export { type OpenAIChatMessage, type UIChatMessage } from '@/types/index';
-export { type FileContent, type KnowledgeBaseInfo } from '@lobechat/prompts';
+export { type FileContent, type KnowledgeBaseInfo } from '@agentasia/prompts';

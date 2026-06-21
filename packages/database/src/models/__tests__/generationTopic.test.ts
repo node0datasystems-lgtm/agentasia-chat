@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { ImageGenerationTopic } from '@lobechat/types';
+import type { ImageGenerationTopic } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -1,4 +1,4 @@
-import { type AssistantContentBlock, type UIChatMessage } from '@lobechat/types';
+import { type AssistantContentBlock, type UIChatMessage } from '@agentasia/types';
 import debug from 'debug';
 import { type RefObject, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { type VListHandle } from 'virtua';

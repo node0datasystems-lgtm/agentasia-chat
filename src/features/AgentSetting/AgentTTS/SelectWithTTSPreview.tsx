@@ -1,8 +1,8 @@
-import { getMessageError } from '@lobechat/fetch-sse';
-import { type ChatMessageError } from '@lobechat/types';
-import { AudioPlayer } from '@lobehub/tts/react';
-import { type SelectProps } from '@lobehub/ui';
-import { Alert, Button, Flexbox, Highlighter, Select } from '@lobehub/ui';
+import { getMessageError } from '@agentasia/fetch-sse';
+import { type ChatMessageError } from '@agentasia/types';
+import { AudioPlayer } from '@agentasia/tts/react';
+import { type SelectProps } from '@agentasia/ui';
+import { Alert, Button, Flexbox, Highlighter, Select } from '@agentasia/ui';
 import { type RefSelectProps } from 'antd';
 import { cssVar } from 'antd-style';
 import { useCallback, useState } from 'react';
@@ -26,7 +26,7 @@ const SelectWithTTSPreview = ({
   const [error, setError] = useState<ChatMessageError>();
   const [voice, setVoice] = useState<string>(value);
   const { t } = useTranslation('welcome');
-  const PREVIEW_TEXT = ['Lobe Chat', t('slogan.title'), t('slogan.desc1')].join('. ');
+  const PREVIEW_TEXT = ['AgentAsia', t('slogan.title'), t('slogan.desc1')].join('. ');
 
   const setDefaultError = useCallback(
     (err?: any) => {

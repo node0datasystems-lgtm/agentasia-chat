@@ -4,8 +4,8 @@ import type {
   ScreenCaptureAgentOption,
   ScreenCaptureModelOption,
   ScreenCaptureOverlayTheme,
-} from '@lobechat/electron-client-ipc';
-import { ModelIcon } from '@lobehub/icons';
+} from '@agentasia/electron-client-ipc';
+import { ModelIcon } from '@agentasia/icons';
 import { AlertCircleIcon, CheckIcon, ChevronDownIcon, Loader2Icon, XIcon } from 'lucide-react';
 import type {
   CSSProperties,

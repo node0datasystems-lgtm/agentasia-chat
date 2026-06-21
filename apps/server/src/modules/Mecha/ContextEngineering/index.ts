@@ -1,6 +1,6 @@
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { MessagesEngine } from '@lobechat/context-engine';
-import { type OpenAIChatMessage } from '@lobechat/types';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { MessagesEngine } from '@agentasia/context-engine';
+import { type OpenAIChatMessage } from '@agentasia/types';
 
 import { type ServerMessagesEngineParams } from './types';
 

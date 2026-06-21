@@ -1,4 +1,4 @@
-import type { ListConnectionsResponse, MarketSDK } from '@lobehub/market-sdk';
+import type { ListConnectionsResponse, MarketSDK } from '@agentasia/market-sdk';
 
 export const MARKET_CONNECTIONS_REQUEST_TIMEOUT_MS = 10_000;
 

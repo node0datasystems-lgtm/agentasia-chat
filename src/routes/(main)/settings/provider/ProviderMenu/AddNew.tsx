@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Tooltip } from '@lobehub/ui';
+import { ActionIcon, Tooltip } from '@agentasia/ui';
 import { PlusIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 

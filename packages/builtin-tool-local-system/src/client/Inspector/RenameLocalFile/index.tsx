@@ -1,8 +1,8 @@
 'use client';
 
-import type { RenameLocalFileParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { MaterialFileTypeIcon } from '@lobehub/ui';
+import type { RenameLocalFileParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { MaterialFileTypeIcon } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import path from 'path-browserify-esm';
 import { memo } from 'react';

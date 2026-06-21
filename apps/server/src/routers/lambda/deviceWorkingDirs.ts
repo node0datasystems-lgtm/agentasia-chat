@@ -1,4 +1,4 @@
-import type { WorkingDirEntry } from '@lobechat/types';
+import type { WorkingDirEntry } from '@agentasia/types';
 
 /**
  * Re-attach the server-owned workspace-init cache (`workspace` /

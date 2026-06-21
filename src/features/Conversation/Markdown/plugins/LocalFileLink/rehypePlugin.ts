@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { SKIP, visit } from 'unist-util-visit';
 
 import { LOBE_LOCAL_FILE_LINK_TAG, parseLocalFileHref } from './parse';

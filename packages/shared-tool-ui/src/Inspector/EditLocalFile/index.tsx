@@ -1,8 +1,8 @@
 'use client';
 
-import type { EditFileState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { Icon, Text } from '@lobehub/ui';
+import type { EditFileState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { Icon, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Minus, Plus } from 'lucide-react';
 import type { ReactNode } from 'react';

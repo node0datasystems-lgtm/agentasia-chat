@@ -1,5 +1,5 @@
-import type { SearchMemoryParams, SearchMemoryTimeIntent } from '@lobechat/types';
-import { searchMemorySchema } from '@lobechat/types';
+import type { SearchMemoryParams, SearchMemoryTimeIntent } from '@agentasia/types';
+import { searchMemorySchema } from '@agentasia/types';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 

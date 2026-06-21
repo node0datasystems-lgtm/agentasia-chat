@@ -1,5 +1,5 @@
-import { type ChatContextContent } from '@lobechat/types';
-import { Tag, Tooltip } from '@lobehub/ui';
+import { type ChatContextContent } from '@agentasia/types';
+import { Tag, Tooltip } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { TextIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';

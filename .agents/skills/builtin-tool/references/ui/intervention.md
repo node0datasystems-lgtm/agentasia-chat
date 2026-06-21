@@ -35,9 +35,9 @@ interface BuiltinInterventionProps<Arguments = any> {
 `packages/builtin-tool-local-system/src/client/Intervention/RunCommand/index.tsx`:
 
 ```tsx
-import type { RunCommandParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox, Highlighter, Text } from '@lobehub/ui';
+import type { RunCommandParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { memo } from 'react';
 
 const RunCommand = memo<BuiltinInterventionProps<RunCommandParams>>(({ args }) => {

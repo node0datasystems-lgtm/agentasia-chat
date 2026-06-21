@@ -312,7 +312,7 @@ describe('topic command', () => {
           role: 'assistant',
           tools: [
             {
-              function: { arguments: '{"query":"lobehub"}', name: 'web_search' },
+              function: { arguments: '{"query":"agentasia"}', name: 'web_search' },
               id: 'call_1',
               type: 'function',
             },
@@ -326,7 +326,7 @@ describe('topic command', () => {
 
       const output = consoleSpy.mock.calls.flat().join('\n');
       expect(output).toContain('web_search');
-      expect(output).toContain('lobehub');
+      expect(output).toContain('agentasia');
     });
 
     it('should render threaded messages with indentation', async () => {

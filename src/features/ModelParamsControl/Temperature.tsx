@@ -1,4 +1,4 @@
-import { Alert, Flexbox, Icon, SliderWithInput } from '@lobehub/ui';
+import { Alert, Flexbox, Icon, SliderWithInput } from '@agentasia/ui';
 import { css, cssVar, cx } from 'antd-style';
 import { Sparkle, Sparkles } from 'lucide-react';
 import { memo } from 'react';

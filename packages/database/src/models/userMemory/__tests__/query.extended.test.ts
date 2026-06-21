@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum, RelationshipEnum, UserMemoryContextObjectType } from '@lobechat/types';
+import { LayersEnum, RelationshipEnum, UserMemoryContextObjectType } from '@agentasia/types';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../../core/getTestDB';

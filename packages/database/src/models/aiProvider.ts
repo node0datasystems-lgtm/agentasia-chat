@@ -4,7 +4,7 @@ import type {
   AiProviderRuntimeConfig,
   CreateAiProviderParams,
   UpdateAiProviderConfigParams,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { and, asc, desc, eq, isNull } from 'drizzle-orm';
 import { isEmpty } from 'es-toolkit/compat';
 import { ModelProvider } from 'model-bank';

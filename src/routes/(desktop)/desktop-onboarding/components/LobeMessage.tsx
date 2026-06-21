@@ -1,8 +1,8 @@
-import { type FlexboxProps } from '@lobehub/ui';
-import { Flexbox, Text } from '@lobehub/ui';
-import { type TypewriterEffectProps } from '@lobehub/ui/awesome';
-import { TypewriterEffect } from '@lobehub/ui/awesome';
-import { LoadingDots } from '@lobehub/ui/chat';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Flexbox, Text } from '@agentasia/ui';
+import { type TypewriterEffectProps } from '@agentasia/ui/awesome';
+import { TypewriterEffect } from '@agentasia/ui/awesome';
+import { LoadingDots } from '@agentasia/ui/chat';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

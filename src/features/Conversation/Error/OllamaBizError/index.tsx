@@ -1,6 +1,6 @@
-import { type ChatMessageError } from '@lobechat/types';
-import { type AlertProps } from '@lobehub/ui';
-import { Skeleton } from '@lobehub/ui';
+import { type ChatMessageError } from '@agentasia/types';
+import { type AlertProps } from '@agentasia/ui';
+import { Skeleton } from '@agentasia/ui';
 import { memo } from 'react';
 
 import ErrorContent from '@/features/Conversation/ChatItem/components/ErrorContent';

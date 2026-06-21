@@ -1,5 +1,5 @@
-import { type MenuRenderProps } from '@lobehub/editor';
-import { Flexbox } from '@lobehub/ui';
+import { type MenuRenderProps } from '@agentasia/editor';
+import { Flexbox } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { type ReactNode } from 'react';
 import { memo, useEffect, useLayoutEffect, useRef, useState } from 'react';

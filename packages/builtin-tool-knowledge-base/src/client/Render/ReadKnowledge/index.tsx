@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { ReadKnowledgeArgs, ReadKnowledgeState } from '../../../types';

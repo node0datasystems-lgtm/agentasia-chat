@@ -1,6 +1,6 @@
 'use client';
 
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
 import { useCallback, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router';
@@ -70,7 +70,7 @@ export const useNavigationHistory = () => {
     const staticMeta = matchRouteMeta(desktopRoutes, currentUrl).static;
     const presetTitle = staticMeta.titleKey
       ? (t(staticMeta.titleKey as never) as string)
-      : (t('navigation.lobehub') as string);
+      : (t('navigation.agentasia') as string);
 
     pushHistory({
       metadata: { timestamp: Date.now() },

@@ -1,8 +1,8 @@
 import type {
   RuntimeDispatchProcessorResult,
   RuntimeProcessorResult,
-} from '@lobechat/agent-signal';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
 
 import type {
   AgentSignalProcedureMarker,

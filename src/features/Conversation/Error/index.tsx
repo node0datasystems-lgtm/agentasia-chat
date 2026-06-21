@@ -1,11 +1,11 @@
-import type { HeterogeneousAgentSessionError } from '@lobechat/electron-client-ipc';
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
-import { type ILobeAgentRuntimeErrorType } from '@lobechat/model-runtime';
-import { AgentRuntimeErrorType, getErrorCodeSpec } from '@lobechat/model-runtime';
-import { type ChatMessageError, type ErrorType, type IToolErrorType } from '@lobechat/types';
-import { ChatErrorType } from '@lobechat/types';
-import { type AlertProps } from '@lobehub/ui';
-import { Block, Highlighter, Skeleton } from '@lobehub/ui';
+import type { HeterogeneousAgentSessionError } from '@agentasia/electron-client-ipc';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
+import { type ILobeAgentRuntimeErrorType } from '@agentasia/model-runtime';
+import { AgentRuntimeErrorType, getErrorCodeSpec } from '@agentasia/model-runtime';
+import { type ChatMessageError, type ErrorType, type IToolErrorType } from '@agentasia/types';
+import { ChatErrorType } from '@agentasia/types';
+import { type AlertProps } from '@agentasia/ui';
+import { Block, Highlighter, Skeleton } from '@agentasia/ui';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -302,7 +302,7 @@ const ErrorMessageExtra = memo<ErrorExtraProps>(({ error: alertError, data, onRe
       break;
     }
 
-    case ChatErrorType.LobeHubModelDeprecated: {
+    case ChatErrorType.AgentAsiaModelDeprecated: {
       if (enableBusinessFeatures)
         return <DeprecatedModelError requestedModel={error?.body?.requestedModel} />;
       break;

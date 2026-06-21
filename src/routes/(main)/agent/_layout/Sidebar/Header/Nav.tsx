@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
-import { BotPromptIcon } from '@lobehub/ui/icons';
+import { Flexbox } from '@agentasia/ui';
+import { BotPromptIcon } from '@agentasia/ui/icons';
 import {
   MessageSquarePlusIcon,
   MessagesSquareIcon,

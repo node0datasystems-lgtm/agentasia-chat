@@ -1,4 +1,4 @@
-import type { DeviceListItem } from '@lobechat/types';
+import type { DeviceListItem } from '@agentasia/types';
 
 export interface DeviceState {
   devices: DeviceListItem[];

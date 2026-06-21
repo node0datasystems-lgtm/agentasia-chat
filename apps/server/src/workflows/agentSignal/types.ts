@@ -1,4 +1,4 @@
-import type { AgentSignalSourceEvent, AgentSignalSourceType } from '@lobechat/agent-signal/source';
+import type { AgentSignalSourceEvent, AgentSignalSourceType } from '@agentasia/agent-signal/source';
 
 type AgentSignalWorkflowSourceType = AgentSignalSourceType;
 

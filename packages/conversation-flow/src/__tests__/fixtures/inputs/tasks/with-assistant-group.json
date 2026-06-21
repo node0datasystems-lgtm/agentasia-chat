@@ -37,9 +37,15 @@
     "pluginState": {
       "type": "execSubAgents",
       "tasks": [
-        { "description": "Research LLM architectures" },
-        { "description": "Research AI agents" },
-        { "description": "Research RAG systems" }
+        {
+          "description": "Research LLM architectures"
+        },
+        {
+          "description": "Research AI agents"
+        },
+        {
+          "description": "Research RAG systems"
+        }
       ],
       "parentMessageId": "msg-tool-1"
     }

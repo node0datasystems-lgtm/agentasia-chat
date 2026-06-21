@@ -1,4 +1,4 @@
-import { INVITATION_EXPIRY_DAYS } from '@lobechat/const';
+import { INVITATION_EXPIRY_DAYS } from '@agentasia/const';
 import { and, eq, isNull } from 'drizzle-orm';
 import { nanoid } from 'nanoid/non-secure';
 

@@ -1,4 +1,4 @@
-import { remarklint } from '@lobehub/lint';
+import { remarklint } from '@agentasia/lint';
 
 export default {
   ...remarklint,

@@ -1,6 +1,6 @@
-import { DEFAULT_AGENT_CONFIG, INBOX_SESSION_ID } from '@lobechat/const';
-import { CreateAgentSchema, type KnowledgeItem } from '@lobechat/types';
-import { KnowledgeType } from '@lobechat/types';
+import { DEFAULT_AGENT_CONFIG, INBOX_SESSION_ID } from '@agentasia/const';
+import { CreateAgentSchema, type KnowledgeItem } from '@agentasia/types';
+import { KnowledgeType } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, eq, isNull } from 'drizzle-orm';
 import { z } from 'zod';

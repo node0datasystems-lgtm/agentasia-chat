@@ -33,8 +33,8 @@ not `127.0.0.1`.
 
 | Surface  | Mechanism                                | Persistence                                                       | Human interaction                              |
 | -------- | ---------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------- |
-| CLI      | Seeded API key or OIDC Device Code Flow  | `.records/env/agent-testing-cli.env` + `$HOME/.lobehub-dev`       | No for seed path; yes for device-code fallback |
-| Web      | Seeded better-auth login or cookie copy  | `~/.lobehub-agent-testing/web-state.json` + agent-browser session | No for seed path; copy cookie only as fallback |
+| CLI      | Seeded API key or OIDC Device Code Flow  | `.records/env/agent-testing-cli.env` + `$HOME/.agentasia-dev`       | No for seed path; yes for device-code fallback |
+| Web      | Seeded better-auth login or cookie copy  | `~/.agentasia-agent-testing/web-state.json` + agent-browser session | No for seed path; copy cookie only as fallback |
 | Electron | App's own login state                    | Electron user-data dir                                            | Log in once manually in the app                |
 | Bot      | Native apps (Discord/WeChat/…) logged in | Each app's own session                                            | Once per app                                   |
 
@@ -65,11 +65,11 @@ bun src/index.ts <command>
 
 Use device-code login only when testing against a non-seeded environment.
 Credentials are isolated from the user's real CLI config via
-`LOBEHUB_CLI_HOME=.lobehub-dev`, which the current CLI stores under
-`$HOME/.lobehub-dev`.
+`LOBEHUB_CLI_HOME=.agentasia-dev`, which the current CLI stores under
+`$HOME/.agentasia-dev`.
 
 ```bash
-cd apps/cli && LOBEHUB_CLI_HOME=.lobehub-dev bun src/index.ts login --server http://localhost:3010
+cd apps/cli && LOBEHUB_CLI_HOME=.agentasia-dev bun src/index.ts login --server http://localhost:3010
 ```
 
 - The `--server` flag is required — an env var does NOT work and login will hit
@@ -80,7 +80,7 @@ cd apps/cli && LOBEHUB_CLI_HOME=.lobehub-dev bun src/index.ts login --server htt
 
 ## Web — seeded better-auth login
 
-The Web test surface is `agent-browser --session lobehub-dev`. The user's
+The Web test surface is `agent-browser --session agentasia-dev`. The user's
 ordinary Chrome is only a cookie source; Chrome screenshots, Chrome Network
 records, and Chrome logged-in state do not prove the agent-browser test session
 is authenticated.
@@ -94,7 +94,7 @@ For the seeded local dev environment, use the automatic path:
 
 `web-seed` posts the seeded email/password to
 `/api/auth/sign-in/email`, stores the returned cookie jar under
-`~/.lobehub-agent-testing/`, converts it to Playwright `storageState`, loads it
+`~/.agentasia-agent-testing/`, converts it to Playwright `storageState`, loads it
 into the `agent-browser` session, and verifies the session does not land on
 `/signin`.
 
@@ -115,7 +115,7 @@ secret: don't paste it into shared logs, PRs, or commit it anywhere.
 3. If repo-root `.env` exists and `web-seed` fails, do **not** seed or modify the current DB; treat it as an existing local environment and use Cookie injection.
 4. Still not green or not using the seed env → `$SCRIPT open-chrome` opens Chrome at `SERVER_URL` with DevTools.
 5. User copies the `Cookie:` header from Network tab → any same-origin request → Request Headers → right-click `Cookie:` → **Copy value**. Must be from Network, NOT `document.cookie` (HttpOnly cookies are invisible to `document.cookie`).
-6. `pbpaste | $SCRIPT web` — filters to better-auth cookies (`session_token`, `session_data`, `state`), builds Playwright `storageState`, loads it into the `agent-browser` session (`lobehub-dev`), opens `SERVER_URL`, and asserts the URL is not `/signin`.
+6. `pbpaste | $SCRIPT web` — filters to better-auth cookies (`session_token`, `session_data`, `state`), builds Playwright `storageState`, loads it into the `agent-browser` session (`agentasia-dev`), opens `SERVER_URL`, and asserts the URL is not `/signin`.
 
 `ENABLE_MOCK_DEV_USER` is not Web auth. It only affects server-side API context
 and does not satisfy Better Auth or stop the SPA from redirecting to `/signin`.
@@ -124,8 +124,8 @@ Do not use it as a substitute for `status --surface web` or Cookie injection.
 ### Using the authenticated session
 
 ```bash
-agent-browser --session lobehub-dev open "$SERVER_URL/"
-agent-browser --session lobehub-dev snapshot -i | head -20
+agent-browser --session agentasia-dev open "$SERVER_URL/"
+agent-browser --session agentasia-dev snapshot -i | head -20
 ```
 
 ### Notes
@@ -133,7 +133,7 @@ agent-browser --session lobehub-dev snapshot -i | head -20
 - `storageState` doesn't enforce the HttpOnly flag on load — the script stores
   cookies with `httpOnly: false`, which is fine for local dev and sidesteps a
   CDP-context quirk where HttpOnly cookies sometimes fail to attach.
-- The state file is kept at `~/.lobehub-agent-testing/web-state.json` so
+- The state file is kept at `~/.agentasia-agent-testing/web-state.json` so
   `setup-auth.sh status` can report web-auth readiness across sessions.
 
 ### Common failure modes
@@ -164,7 +164,7 @@ reachable.
 
 These recipes only cover **local dev** authentication. They do not:
 
-- Work for production — production cookies are `Secure; HttpOnly; Domain=.lobehub.com`
+- Work for production — production cookies are `Secure; HttpOnly; Domain=.agentasia.ai`
   and must be delivered over HTTPS.
 - Replace real OAuth flows — tests that must exercise the login UI itself need a
   real Chromium with `--remote-debugging-port` or a bot account.

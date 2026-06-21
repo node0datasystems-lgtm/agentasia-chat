@@ -1,6 +1,6 @@
 // @vitest-environment node
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { LayersEnum } from '@lobechat/types';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { LayersEnum } from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import { createCompletionPolicy } from '../../../../policies/completionPolicy';

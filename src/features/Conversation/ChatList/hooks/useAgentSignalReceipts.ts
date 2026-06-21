@@ -1,4 +1,4 @@
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 import { useMemo, useRef } from 'react';
 import useSWR from 'swr';
 

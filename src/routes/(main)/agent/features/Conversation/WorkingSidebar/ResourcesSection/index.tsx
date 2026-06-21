@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { useEffectiveWorkingDirectory } from '@/hooks/useEffectiveWorkingDirectory';

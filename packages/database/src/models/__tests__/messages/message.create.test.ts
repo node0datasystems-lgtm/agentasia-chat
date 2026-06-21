@@ -1,4 +1,4 @@
-import type { DBMessageItem } from '@lobechat/types';
+import type { DBMessageItem } from '@agentasia/types';
 import { asc, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

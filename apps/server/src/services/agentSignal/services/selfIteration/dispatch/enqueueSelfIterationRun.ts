@@ -1,5 +1,5 @@
-import type { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { type AgentSignalOperationMarker, RequestTrigger, ThreadType } from '@lobechat/types';
+import type { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { type AgentSignalOperationMarker, RequestTrigger, ThreadType } from '@agentasia/types';
 
 import { ThreadModel } from '@/database/models/thread';
 import type { LobeChatDatabase } from '@/database/type';

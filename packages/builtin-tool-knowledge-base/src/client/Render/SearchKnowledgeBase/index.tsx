@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Empty, Flexbox } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Empty, Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

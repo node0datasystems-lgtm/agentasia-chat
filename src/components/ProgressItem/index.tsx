@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Progress } from 'antd';
 import { createStaticStyles, cssVar, useResponsive } from 'antd-style';
 import { type CSSProperties } from 'react';

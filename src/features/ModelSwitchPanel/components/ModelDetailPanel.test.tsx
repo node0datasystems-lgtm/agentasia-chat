@@ -20,7 +20,7 @@ vi.mock('antd-style', () => ({
   }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Accordion: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   AccordionItem: ({
     action,
@@ -140,9 +140,9 @@ describe('ModelDetailPanel pricing', () => {
   it('renders branding provider token pricing in credits', () => {
     const { container } = render(
       <ModelDetailPanel
-        enabledList={createEnabledList('lobehub', textPricing)}
+        enabledList={createEnabledList('agentasia', textPricing)}
         model="test-model"
-        provider="lobehub"
+        provider="agentasia"
       />,
     );
 
@@ -168,10 +168,10 @@ describe('ModelDetailPanel pricing', () => {
   it('renders branding provider image and video pricing in credits', () => {
     const imageResult = render(
       <ModelDetailPanel
-        enabledList={createEnabledList('lobehub', imagePricing)}
+        enabledList={createEnabledList('agentasia', imagePricing)}
         model="test-model"
         pricingMode="image"
-        provider="lobehub"
+        provider="agentasia"
       />,
     );
 
@@ -183,10 +183,10 @@ describe('ModelDetailPanel pricing', () => {
 
     const videoResult = render(
       <ModelDetailPanel
-        enabledList={createEnabledList('lobehub', imagePricing)}
+        enabledList={createEnabledList('agentasia', imagePricing)}
         model="test-model"
         pricingMode="video"
-        provider="lobehub"
+        provider="agentasia"
       />,
     );
 

@@ -2,8 +2,8 @@ import type {
   UserAgentOnboarding,
   UserAgentOnboardingDraft,
   UserAgentOnboardingNode,
-} from '@lobechat/types';
-import { isRecord } from '@lobechat/utils';
+} from '@agentasia/types';
+import { isRecord } from '@agentasia/utils';
 
 import { getScopedPatch, normalizeFromSchema } from './nodeSchema';
 

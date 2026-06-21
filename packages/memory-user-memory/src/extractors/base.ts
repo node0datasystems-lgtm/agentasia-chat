@@ -1,17 +1,17 @@
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
 import type {
   ChatCompletionTool,
   GenerateObjectPayload,
   GenerateObjectSchema,
   ModelRuntime,
-} from '@lobechat/model-runtime';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
+} from '@agentasia/model-runtime';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
 import {
   ATTR_GEN_AI_OPERATION_NAME,
   ATTR_GEN_AI_REQUEST_MODEL,
-} from '@lobechat/observability-otel/gen-ai';
-import { tracer } from '@lobechat/observability-otel/modules/memory-user-memory';
-import { RequestTrigger } from '@lobechat/types';
+} from '@agentasia/observability-otel/gen-ai';
+import { tracer } from '@agentasia/observability-otel/modules/memory-user-memory';
+import { RequestTrigger } from '@agentasia/types';
 import type { z } from 'zod';
 
 import type {
@@ -136,12 +136,12 @@ export abstract class BaseMemoryExtractor<
             attributes: {
               [ATTR_GEN_AI_OPERATION_NAME]: 'generate_content',
               [ATTR_GEN_AI_REQUEST_MODEL]: this.model,
-              'lobe-chat.memory.extractor.context': options?.retrievedContexts,
-              'lobe-chat.memory.extractor.identities_context': options?.retrievedIdentitiesContext,
-              'lobe-chat.memory.extractor.language': options?.language,
-              'lobe-chat.memory.extractor.source_id': options?.sourceId,
-              'lobe-chat.memory.extractor.top_k': options?.topK,
-              'lobe-chat.memory.extractor.user_id': options?.userId,
+              'agentasia-chat.memory.extractor.context': options?.retrievedContexts,
+              'agentasia-chat.memory.extractor.identities_context': options?.retrievedIdentitiesContext,
+              'agentasia-chat.memory.extractor.language': options?.language,
+              'agentasia-chat.memory.extractor.source_id': options?.sourceId,
+              'agentasia-chat.memory.extractor.top_k': options?.topK,
+              'agentasia-chat.memory.extractor.user_id': options?.userId,
             },
           },
           async (span) => {

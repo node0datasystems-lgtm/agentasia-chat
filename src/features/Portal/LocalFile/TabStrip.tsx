@@ -1,9 +1,9 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { ContextMenuTrigger, type GenericItemType, Icon } from '@lobehub/ui';
-import { confirmModal, ScrollArea } from '@lobehub/ui/base-ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { isDesktop } from '@agentasia/const';
+import { ContextMenuTrigger, type GenericItemType, Icon } from '@agentasia/ui';
+import { confirmModal, ScrollArea } from '@agentasia/ui/base-ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import { XIcon } from 'lucide-react';
 import { memo, useCallback } from 'react';

@@ -1,5 +1,5 @@
-import type { IEditor } from '@lobehub/editor';
-import { INSERT_MENTION_COMMAND } from '@lobehub/editor';
+import type { IEditor } from '@agentasia/editor';
+import { INSERT_MENTION_COMMAND } from '@agentasia/editor';
 import { $getSelection, $isRangeSelection } from 'lexical';
 
 import type { DroppedFolder } from '@/components/DragUploadZone';

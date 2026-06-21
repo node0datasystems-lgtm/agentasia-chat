@@ -1,8 +1,8 @@
-import type { SourceAgentSelfReflectionRequested } from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { createAgentSignalSelfIterationPrompt } from '@lobechat/prompts';
-import { isNonEmptyString } from '@lobechat/utils';
+import type { SourceAgentSelfReflectionRequested } from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { createAgentSignalSelfIterationPrompt } from '@agentasia/prompts';
+import { isNonEmptyString } from '@agentasia/utils';
 
 import type { LobeChatDatabase } from '@/database/type';
 

@@ -2,7 +2,7 @@
 import { promisify } from 'node:util';
 import { zstdCompress, zstdDecompress } from 'node:zlib';
 
-import type { TracingPayload } from '@lobechat/llm-generation-tracing';
+import type { TracingPayload } from '@agentasia/llm-generation-tracing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const compressZstd = promisify(zstdCompress);

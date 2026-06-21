@@ -2,13 +2,13 @@ import {
   type EvalDatasetRecord,
   type InsertEvalDatasetRecord,
   type RAGEvalDataSetItem,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import {
   EvalEvaluationStatus,
   insertEvalDatasetRecordSchema,
   insertEvalDatasetsSchema,
   insertEvalEvaluationSchema,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import dayjs from 'dayjs';
 import JSONL from 'jsonl-parse-stringify';

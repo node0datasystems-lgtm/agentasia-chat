@@ -183,23 +183,23 @@ describe('genServerAiProvidersConfig', () => {
     });
   });
 
-  it('should allow LobeHub models to come from the async model bank loader', async () => {
+  it('should allow AgentAsia models to come from the async model bank loader', async () => {
     const result = await genServerAiProvidersConfig({});
 
-    expect(result).toHaveProperty('lobehub');
-    expect(result.lobehub).toHaveProperty('serverModelLists');
-    expect(Array.isArray(result.lobehub.serverModelLists)).toBe(true);
+    expect(result).toHaveProperty('agentasia');
+    expect(result.agentasia).toHaveProperty('serverModelLists');
+    expect(Array.isArray(result.agentasia.serverModelLists)).toBe(true);
   });
 });
 
 describe('genServerAiProvidersConfig Error Handling', () => {
-  it('should throw error when a non-LobeHub provider is not found in aiModels', async () => {
+  it('should throw error when a non-AgentAsia provider is not found in aiModels', async () => {
     vi.resetModules();
 
     vi.doMock('model-bank', () => ({
       ModelProvider: {
         Anthropic: 'anthropic',
-        LobeHub: 'lobehub',
+        AgentAsia: 'agentasia',
         OpenAI: 'openai',
       },
       anthropic: [

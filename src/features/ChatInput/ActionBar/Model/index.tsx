@@ -1,5 +1,5 @@
-import { ModelIcon } from '@lobehub/icons';
-import { Center, Tooltip } from '@lobehub/ui';
+import { ModelIcon } from '@agentasia/icons';
+import { Center, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo, useCallback } from 'react';
 

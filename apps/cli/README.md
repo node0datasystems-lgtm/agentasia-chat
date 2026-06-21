@@ -1,6 +1,6 @@
-# @lobehub/cli
+# @agentasia/cli
 
-LobeHub command-line interface.
+AgentAsia command-line interface.
 
 ## Local Development
 
@@ -8,7 +8,7 @@ LobeHub command-line interface.
 | ------------------------------------------ | -------------------------- |
 | Run in dev mode                            | `bun run dev -- <command>` |
 | Build the CLI                              | `bun run build`            |
-| Link `lh`/`lobe`/`lobehub` into your shell | `bun run cli:link`         |
+| Link `lh`/`lobe`/`agentasia` into your shell | `bun run cli:link`         |
 | Remove the global link                     | `bun run cli:unlink`       |
 
 - `bun run build` only generates `dist/index.js`.
@@ -17,12 +17,12 @@ LobeHub command-line interface.
 
 ## Custom Server URL
 
-By default the CLI connects to `https://app.lobehub.com`. To point it at a different server (e.g. a local instance):
+By default the CLI connects to `https://app.agentasia.ai`. To point it at a different server (e.g. a local instance):
 
 | Method               | Command                                                         | Persistence                         |
 | -------------------- | --------------------------------------------------------------- | ----------------------------------- |
 | Environment variable | `LOBEHUB_SERVER=http://localhost:4000 bun run dev -- <command>` | Current command only                |
-| Login flag           | `lh login --server http://localhost:4000`                       | Saved to `~/.lobehub/settings.json` |
+| Login flag           | `lh login --server http://localhost:4000`                       | Saved to `~/.agentasia/settings.json` |
 
 Priority: `LOBEHUB_SERVER` env var > `settings.json` > default official URL.
 

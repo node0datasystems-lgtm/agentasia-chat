@@ -1,7 +1,7 @@
-import { getBuiltinRender } from '@lobechat/builtin-tools/renders';
-import { type ChatPluginPayload } from '@lobechat/types';
-import { safeParseJSON } from '@lobechat/utils';
-import { Flexbox } from '@lobehub/ui';
+import { getBuiltinRender } from '@agentasia/builtin-tools/renders';
+import { type ChatPluginPayload } from '@agentasia/types';
+import { safeParseJSON } from '@agentasia/utils';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface CustomRenderProps {

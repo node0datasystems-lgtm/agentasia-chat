@@ -25,7 +25,7 @@ interface BuiltinRenderProps<Arguments = any, State = any, Content = any> {
 
 ```tsx
 // client/Render/CrawlSinglePage.tsx
-import type { BuiltinRenderProps, CrawlPluginState, CrawlSinglePageQuery } from '@lobechat/types';
+import type { BuiltinRenderProps, CrawlPluginState, CrawlSinglePageQuery } from '@agentasia/types';
 import { memo } from 'react';
 
 import PageContent from './PageContent';
@@ -75,12 +75,12 @@ if (pluginError) {
 - Use `pluginState` for server-truth (ids, counts, server-assigned status) and `args` for what the LLM asked. **Combine — neither alone is enough.**
 - For lists, summarize with a header line and show top N items with a "+N more" tail rather than rendering everything.
 - **Keep the Render single-layer** — the tool card is already your surface, so don't open with your own filled container and then nest more filled boxes inside it. See [shared-rules.md](shared-rules.md) → "Stay single-layer".
-- For modals from a Render, use `@lobehub/ui/base-ui` (`createModal`, `useModalContext`, `confirmModal`) — see the **modal** skill.
+- For modals from a Render, use `@agentasia/ui/base-ui` (`createModal`, `useModalContext`, `confirmModal`) — see the **modal** skill.
 
 ## Render registry — `client/Render/index.ts`
 
 ```ts
-import type { BuiltinRender } from '@lobechat/types';
+import type { BuiltinRender } from '@agentasia/types';
 
 import { TaskApiName } from '../../types';
 import CreateTaskRender from './CreateTask';

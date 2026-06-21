@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox } from '@lobehub/ui';
+import { ActionIcon, Flexbox } from '@agentasia/ui';
 import { Plus } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
 

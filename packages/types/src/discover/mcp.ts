@@ -1,5 +1,5 @@
-import type { PluginItem, PluginListResponse } from '@lobehub/market-sdk';
-import type { PluginItemDetail } from '@lobehub/market-types';
+import type { PluginItem, PluginListResponse } from '@agentasia/market-sdk';
+import type { PluginItemDetail } from '@agentasia/market-types';
 
 import type { DiscoverAssistantItem } from './assistants';
 

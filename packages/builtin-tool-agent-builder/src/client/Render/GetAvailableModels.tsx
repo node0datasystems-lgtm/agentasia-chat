@@ -1,5 +1,5 @@
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox, Tag } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox, Tag } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { GetAvailableModelsParams, GetAvailableModelsState } from '../../types';

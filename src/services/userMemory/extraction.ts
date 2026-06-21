@@ -2,7 +2,7 @@ import {
   type AsyncTaskStatus,
   type IAsyncTaskError,
   type UserMemoryExtractionMetadata,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

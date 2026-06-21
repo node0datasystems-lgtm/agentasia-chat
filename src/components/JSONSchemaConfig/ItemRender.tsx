@@ -1,4 +1,4 @@
-import { Input, InputNumber, InputPassword, Select } from '@lobehub/ui';
+import { Input, InputNumber, InputPassword, Select } from '@agentasia/ui';
 import { Slider, Switch } from 'antd';
 import { type JSONSchema7Type } from 'json-schema';
 import { memo } from 'react';

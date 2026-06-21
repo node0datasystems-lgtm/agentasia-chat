@@ -2,12 +2,12 @@ import {
   type MarketSkillItem,
   type SearchSkillParams,
   SkillStoreIdentifier,
-} from '@lobechat/builtin-tool-skill-store';
+} from '@agentasia/builtin-tool-skill-store';
 import {
   type SkillImportServiceResult,
   SkillStoreExecutionRuntime,
   type SkillStoreRuntimeService,
-} from '@lobechat/builtin-tool-skill-store/executionRuntime';
+} from '@agentasia/builtin-tool-skill-store/executionRuntime';
 import debug from 'debug';
 
 import { UserModel } from '@/database/models/user';

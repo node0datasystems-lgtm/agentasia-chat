@@ -5,7 +5,7 @@ import type {
   GoogleGenAI,
   Part,
 } from '@google/genai';
-import { imageUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64 } from '@agentasia/utils';
 
 import { convertGoogleAIUsage } from '../../core/usageConverters/google-ai';
 import { AgentRuntimeErrorType } from '../../types/error';

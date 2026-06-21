@@ -1,5 +1,5 @@
-import { escapeXml } from '@lobechat/prompts';
-import type { RuntimeSelectedSkill } from '@lobechat/types';
+import { escapeXml } from '@agentasia/prompts';
+import type { RuntimeSelectedSkill } from '@agentasia/types';
 import debug from 'debug';
 
 import { BaseLastUserContentProvider } from '../base/BaseLastUserContentProvider';

@@ -1,4 +1,4 @@
-import { type ComfyUIKeyVault } from '@lobechat/types';
+import { type ComfyUIKeyVault } from '@agentasia/types';
 import { z } from 'zod';
 
 import { withScopedPermission } from '@/business/server/trpc-middlewares/rbacPermission';

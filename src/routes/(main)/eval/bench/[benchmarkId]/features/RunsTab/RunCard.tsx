@@ -1,6 +1,6 @@
-import type { AgentEvalRunListItem } from '@lobechat/types';
-import { Flexbox, Icon } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import type { AgentEvalRunListItem } from '@agentasia/types';
+import { Flexbox, Icon } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Card, Dropdown, Progress } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import {

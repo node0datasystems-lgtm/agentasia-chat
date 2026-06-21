@@ -1,7 +1,7 @@
 'use client';
 
-import { createEditLocalFileInspector } from '@lobechat/shared-tool-ui/inspectors';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import { createEditLocalFileInspector } from '@agentasia/shared-tool-ui/inspectors';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { memo, useMemo } from 'react';
 
 import { ClaudeCodeApiName } from '../../types';

@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import type { MemorySourceType } from '@lobechat/types';
-import { MemorySourceType as MemorySourceTypeEnum } from '@lobechat/types';
+import type { MemorySourceType } from '@agentasia/types';
+import { MemorySourceType as MemorySourceTypeEnum } from '@agentasia/types';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import utc from 'dayjs/plugin/utc';

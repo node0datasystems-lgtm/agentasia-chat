@@ -1,9 +1,9 @@
-import { type BuiltinAgentSlug } from '@lobechat/builtin-agents';
-import { BUILTIN_AGENTS } from '@lobechat/builtin-agents';
-import { DEFAULT_AGENT_CONFIG } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
-import { type AgentItem, type LobeAgentConfig } from '@lobechat/types';
-import { cleanObject, merge } from '@lobechat/utils';
+import { type BuiltinAgentSlug } from '@agentasia/builtin-agents';
+import { BUILTIN_AGENTS } from '@agentasia/builtin-agents';
+import { DEFAULT_AGENT_CONFIG } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { type AgentItem, type LobeAgentConfig } from '@agentasia/types';
+import { cleanObject, merge } from '@agentasia/utils';
 import debug from 'debug';
 import { type PartialDeep } from 'type-fest';
 

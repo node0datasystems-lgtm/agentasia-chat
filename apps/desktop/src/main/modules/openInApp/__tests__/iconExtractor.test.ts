@@ -86,7 +86,7 @@ describe('extractAppIcon', () => {
     // plutil CFBundleIconFile lookup
     respondExec({ binary: 'plutil' }, { stdout: 'Code.icns\n' });
     mockedAccess.mockResolvedValueOnce(undefined); // .icns exists
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     // sips conversion
     respondExec({ binary: 'sips' }, { stdout: '' });
     mockedReadFile.mockResolvedValueOnce(Buffer.from([0x89, 0x50, 0x4e, 0x47])); // PNG header
@@ -107,7 +107,7 @@ describe('extractAppIcon', () => {
       if (typeof p === 'string' && p.endsWith('Terminal.icns')) return undefined;
       throw new Error('wrong path: ' + String(p));
     });
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     respondExec({ binary: 'sips' }, { stdout: '' });
     mockedReadFile.mockResolvedValueOnce(Buffer.from([0x89, 0x50]));
 
@@ -124,7 +124,7 @@ describe('extractAppIcon', () => {
     mockedAccess.mockResolvedValueOnce(undefined);
     respondExec({ binary: 'plutil' }, { stdout: 'Terminal\n' });
     mockedAccess.mockResolvedValueOnce(undefined);
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     respondExec({ binary: 'sips' }, { stdout: '' });
     mockedReadFile.mockResolvedValueOnce(Buffer.from([0xff]));
 
@@ -168,7 +168,7 @@ describe('extractAppIcon', () => {
     mockedAccess.mockResolvedValueOnce(undefined);
     respondExec({ binary: 'plutil' }, { stdout: 'Code.icns\n' });
     mockedAccess.mockResolvedValueOnce(undefined);
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     respondExec({ binary: 'sips' }, { error: new Error('sips error') });
 
     const result = await extractAppIcon('vscode', 'darwin');
@@ -181,7 +181,7 @@ describe('extractAppIcon', () => {
     mockedAccess.mockResolvedValueOnce(undefined);
     respondExec({ binary: 'plutil' }, { stdout: 'Code.icns\n' });
     mockedAccess.mockResolvedValueOnce(undefined);
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     respondExec({ binary: 'sips' }, { stdout: '' });
     mockedReadFile.mockResolvedValueOnce(Buffer.alloc(0));
 
@@ -218,7 +218,7 @@ describe('extractAllIcons', () => {
     mockedAccess.mockResolvedValueOnce(undefined); // bundle
     respondExec({ binary: 'plutil' }, { stdout: 'Code.icns\n' });
     mockedAccess.mockResolvedValueOnce(undefined); // .icns
-    mockedMkdtemp.mockResolvedValueOnce('/tmp/lobehub-openinapp-test');
+    mockedMkdtemp.mockResolvedValueOnce('/tmp/agentasia-openinapp-test');
     respondExec({ binary: 'sips' }, { stdout: '' });
     mockedReadFile.mockResolvedValueOnce(Buffer.from('vscode'));
 

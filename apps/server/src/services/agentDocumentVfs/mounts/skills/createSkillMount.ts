@@ -1,4 +1,4 @@
-import type { LobeChatDatabase } from '@lobechat/database';
+import type { LobeChatDatabase } from '@agentasia/database';
 
 import { AgentModel } from '@/database/models/agent';
 import { AgentDocumentModel } from '@/database/models/agentDocuments';

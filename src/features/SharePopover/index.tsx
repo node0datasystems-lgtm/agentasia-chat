@@ -9,8 +9,8 @@ import {
   Skeleton,
   Text,
   usePopoverContext,
-} from '@lobehub/ui';
-import { confirmModal, Select } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal, Select } from '@agentasia/ui/base-ui';
 import { App, Divider } from 'antd';
 import {
   FileOutputIcon,

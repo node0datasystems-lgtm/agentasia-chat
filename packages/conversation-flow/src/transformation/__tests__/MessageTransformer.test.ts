@@ -1,4 +1,4 @@
-import type { AssistantContentBlock } from '@lobechat/types';
+import type { AssistantContentBlock } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import type { Message } from '../../types';

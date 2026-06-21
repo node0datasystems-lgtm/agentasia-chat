@@ -1,6 +1,6 @@
 'use client';
 
-import { OFFICIAL_URL } from '@lobechat/const';
+import { OFFICIAL_URL } from '@agentasia/const';
 import {
   Avatar,
   Block,
@@ -14,7 +14,7 @@ import {
   Text,
   TextArea,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import type { TableColumnsType, UploadProps } from 'antd';
 import { App, Input as AntInput, Table, Upload } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';

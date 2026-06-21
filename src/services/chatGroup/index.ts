@@ -1,4 +1,4 @@
-import { type AgentGroupDetail } from '@lobechat/types';
+import { type AgentGroupDetail } from '@agentasia/types';
 
 import {
   type ChatGroupAgentItem,

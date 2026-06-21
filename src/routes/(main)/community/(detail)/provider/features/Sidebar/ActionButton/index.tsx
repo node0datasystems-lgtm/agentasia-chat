@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelTag, ProviderIcon } from '@lobehub/icons';
-import { Flexbox, Tag } from '@lobehub/ui';
+import { ModelTag, ProviderIcon } from '@agentasia/icons';
+import { Flexbox, Tag } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import urlJoin from 'url-join';

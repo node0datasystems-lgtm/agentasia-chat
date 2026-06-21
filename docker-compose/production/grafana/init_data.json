@@ -35,8 +35,8 @@
       "name": "lobechat",
       "createdTime": "2025-08-11T17:06:30+08:00",
       "displayName": "LobeChat",
-      "logo": "https://lobehub.com/icon-192x192.png",
-      "homepageUrl": "https://lobehub.com",
+      "logo": "https://agentasia.ai/icon-192x192.png",
+      "homepageUrl": "https://agentasia.ai",
       "description": "",
       "organization": "lobechat",
       "cert": "cert-built-in",
@@ -363,8 +363,8 @@
       "signinHtml": "",
       "themeData": null,
       "footerHtml": "",
-      "formCss": "\u003cstyle\u003e\n  .login-panel {\n    padding: 40px 70px 0 70px;\n    border-radius: 10px;\n    background-color: #ffffff;\n    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;\n  }\n  .panel-logo {\n    width: 64px;\n  }\n  .login-logo-box {\n    margin-top: 20px;\n  }\n\n  #parent-area\n    \u003e main\n    \u003e div\n    \u003e div.login-content\n    \u003e div.login-panel\n    \u003e div.login-form\n    \u003e div\n    \u003e div\n    \u003e button {\n    box-shadow: none !important;\n    border-radius: 10px !important;\n    transition-property: all;\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transition-duration: 150ms;\n    border: 1px solid #eee !important;\n  }\n\n  @media (max-width: 640px) {\n    .login-panel {\n      padding: 40px 0 0 0;\n      box-shadow: none;\n    }\n  }\n\u003c/style\u003e",
-      "formCssMobile": "\u003cstyle\u003e\n  .login-panel {\n    padding: 40px 70px 0 70px;\n    border-radius: 10px;\n    background-color: #ffffff;\n    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;\n  }\n  .panel-logo {\n    width: 64px;\n  }\n  .login-logo-box {\n    margin-top: 20px;\n  }\n\n  #parent-area\n    \u003e main\n    \u003e div\n    \u003e div.login-content\n    \u003e div.login-panel\n    \u003e div.login-form\n    \u003e div\n    \u003e div\n    \u003e button {\n    box-shadow: none !important;\n    border-radius: 10px !important;\n    transition-property: all;\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transition-duration: 150ms;\n    border: 1px solid #eee !important;\n  }\n\n  @media (max-width: 640px) {\n    .login-panel {\n      padding: 40px 0 0 0;\n      box-shadow: none;\n    }\n  }\n\u003c/style\u003e",
+      "formCss": "<style>\n  .login-panel {\n    padding: 40px 70px 0 70px;\n    border-radius: 10px;\n    background-color: #ffffff;\n    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;\n  }\n  .panel-logo {\n    width: 64px;\n  }\n  .login-logo-box {\n    margin-top: 20px;\n  }\n\n  #parent-area\n    > main\n    > div\n    > div.login-content\n    > div.login-panel\n    > div.login-form\n    > div\n    > div\n    > button {\n    box-shadow: none !important;\n    border-radius: 10px !important;\n    transition-property: all;\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transition-duration: 150ms;\n    border: 1px solid #eee !important;\n  }\n\n  @media (max-width: 640px) {\n    .login-panel {\n      padding: 40px 0 0 0;\n      box-shadow: none;\n    }\n  }\n</style>",
+      "formCssMobile": "<style>\n  .login-panel {\n    padding: 40px 70px 0 70px;\n    border-radius: 10px;\n    background-color: #ffffff;\n    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;\n  }\n  .panel-logo {\n    width: 64px;\n  }\n  .login-logo-box {\n    margin-top: 20px;\n  }\n\n  #parent-area\n    > main\n    > div\n    > div.login-content\n    > div.login-panel\n    > div.login-form\n    > div\n    > div\n    > button {\n    box-shadow: none !important;\n    border-radius: 10px !important;\n    transition-property: all;\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n    transition-duration: 150ms;\n    border: 1px solid #eee !important;\n  }\n\n  @media (max-width: 640px) {\n    .login-panel {\n      padding: 40px 0 0 0;\n      box-shadow: none;\n    }\n  }\n</style>",
       "formOffset": 2,
       "formSideHtml": "",
       "formBackgroundUrl": "",
@@ -646,7 +646,7 @@
       "createdTime": "2025-08-11T08:43:25Z",
       "displayName": "API Model",
       "description": "",
-      "modelText": "[request_definition]\nr = subOwner, subName, method, urlPath, objOwner, objName\n\n[policy_definition]\np = subOwner, subName, method, urlPath, objOwner, objName\n\n[role_definition]\ng = _, _\n\n[policy_effect]\ne = some(where (p.eft == allow))\n\n[matchers]\nm = (r.subOwner == p.subOwner || p.subOwner == \"*\") \u0026\u0026 \\\n    (r.subName == p.subName || p.subName == \"*\" || r.subName != \"anonymous\" \u0026\u0026 p.subName == \"!anonymous\") \u0026\u0026 \\\n    (r.method == p.method || p.method == \"*\") \u0026\u0026 \\\n    (r.urlPath == p.urlPath || p.urlPath == \"*\") \u0026\u0026 \\\n    (r.objOwner == p.objOwner || p.objOwner == \"*\") \u0026\u0026 \\\n    (r.objName == p.objName || p.objName == \"*\") || \\\n    (r.subOwner == r.objOwner \u0026\u0026 r.subName == r.objName)"
+      "modelText": "[request_definition]\nr = subOwner, subName, method, urlPath, objOwner, objName\n\n[policy_definition]\np = subOwner, subName, method, urlPath, objOwner, objName\n\n[role_definition]\ng = _, _\n\n[policy_effect]\ne = some(where (p.eft == allow))\n\n[matchers]\nm = (r.subOwner == p.subOwner || p.subOwner == \"*\") && \\\n    (r.subName == p.subName || p.subName == \"*\" || r.subName != \"anonymous\" && p.subName == \"!anonymous\") && \\\n    (r.method == p.method || p.method == \"*\") && \\\n    (r.urlPath == p.urlPath || p.urlPath == \"*\") && \\\n    (r.objOwner == p.objOwner || p.objOwner == \"*\") && \\\n    (r.objName == p.objName || p.objName == \"*\") || \\\n    (r.subOwner == r.objOwner && r.subName == r.objName)"
     },
     {
       "owner": "built-in",
@@ -654,7 +654,7 @@
       "createdTime": "2025-08-11T08:43:25Z",
       "displayName": "Built-in Model",
       "description": "",
-      "modelText": "[request_definition]\nr = sub, obj, act\n\n[policy_definition]\np = sub, obj, act\n\n[role_definition]\ng = _, _\n\n[policy_effect]\ne = some(where (p.eft == allow))\n\n[matchers]\nm = g(r.sub, p.sub) \u0026\u0026 r.obj == p.obj \u0026\u0026 r.act == p.act"
+      "modelText": "[request_definition]\nr = sub, obj, act\n\n[policy_definition]\np = sub, obj, act\n\n[role_definition]\ng = _, _\n\n[policy_effect]\ne = some(where (p.eft == allow))\n\n[matchers]\nm = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act"
     }
   ],
   "organizations": [
@@ -663,19 +663,23 @@
       "name": "lobechat",
       "createdTime": "2025-08-11T16:57:04+08:00",
       "displayName": "LobeChat",
-      "websiteUrl": "https://lobehub.com",
-      "logo": "https://lobehub.com/icon-192x192.png",
+      "websiteUrl": "https://agentasia.ai",
+      "logo": "https://agentasia.ai/icon-192x192.png",
       "logoDark": "",
-      "favicon": "https://lobehub.com/favicon.ico",
+      "favicon": "https://agentasia.ai/favicon.ico",
       "hasPrivilegeConsent": false,
       "passwordType": "plain",
       "passwordSalt": "",
-      "passwordOptions": ["AtLeast6"],
+      "passwordOptions": [
+        "AtLeast6"
+      ],
       "passwordObfuscatorType": "Plain",
       "passwordObfuscatorKey": "",
       "passwordExpireDays": 0,
-      "countryCodes": ["US"],
-      "defaultAvatar": "https://lobehub.com/favicon.ico",
+      "countryCodes": [
+        "US"
+      ],
+      "defaultAvatar": "https://agentasia.ai/favicon.ico",
       "defaultApplication": "",
       "userTypes": null,
       "tags": [],
@@ -1038,16 +1042,43 @@
       "hasPrivilegeConsent": false,
       "passwordType": "plain",
       "passwordSalt": "",
-      "passwordOptions": ["AtLeast6"],
+      "passwordOptions": [
+        "AtLeast6"
+      ],
       "passwordObfuscatorType": "",
       "passwordObfuscatorKey": "",
       "passwordExpireDays": 0,
-      "countryCodes": ["US", "ES", "FR", "DE", "GB", "CN", "JP", "KR", "VN", "ID", "SG", "IN"],
+      "countryCodes": [
+        "US",
+        "ES",
+        "FR",
+        "DE",
+        "GB",
+        "CN",
+        "JP",
+        "KR",
+        "VN",
+        "ID",
+        "SG",
+        "IN"
+      ],
       "defaultAvatar": "https://cdn.casbin.org/img/casbin.svg",
       "defaultApplication": "",
       "userTypes": [],
       "tags": [],
-      "languages": ["en", "zh", "es", "fr", "de", "id", "ja", "ko", "ru", "vi", "pt"],
+      "languages": [
+        "en",
+        "zh",
+        "es",
+        "fr",
+        "de",
+        "id",
+        "ja",
+        "ko",
+        "ru",
+        "vi",
+        "pt"
+      ],
       "themeData": null,
       "masterPassword": "",
       "defaultPassword": "",
@@ -1286,15 +1317,23 @@
       "createdTime": "2025-08-11T08:43:22Z",
       "displayName": "Built-in Permission",
       "description": "Built-in Permission",
-      "users": ["built-in/*"],
+      "users": [
+        "built-in/*"
+      ],
       "groups": [],
       "roles": [],
       "domains": [],
       "model": "user-model-built-in",
       "adapter": "",
       "resourceType": "Application",
-      "resources": ["app-built-in"],
-      "actions": ["Read", "Write", "Admin"],
+      "resources": [
+        "app-built-in"
+      ],
+      "actions": [
+        "Read",
+        "Write",
+        "Admin"
+      ],
       "effect": "Allow",
       "isEnabled": true,
       "submitter": "admin",
@@ -1375,7 +1414,7 @@
       "displayName": "User",
       "firstName": "",
       "lastName": "",
-      "avatar": "https://lobehub.com/favicon.ico",
+      "avatar": "https://agentasia.ai/favicon.ico",
       "avatarType": "",
       "permanentAvatar": "",
       "email": "pfub7l@example.com",
@@ -1690,9 +1729,13 @@
           "value": "casdoor-secret"
         }
       ],
-      "events": ["update-user"],
+      "events": [
+        "update-user"
+      ],
       "tokenFields": null,
-      "objectFields": ["All"],
+      "objectFields": [
+        "All"
+      ],
       "isUserExtended": false,
       "singleOrgOnly": false,
       "isEnabled": true

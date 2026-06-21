@@ -27,7 +27,9 @@
       {
         "apiName": "writeMemory",
         "content": "{\"kind\":\"mutation\",\"status\":\"applied\",\"resourceId\":\"mem_001\",\"summary\":\"Stored tone preference: prefer concise replies\"}",
-        "pluginState": { "kind": "mutation" },
+        "pluginState": {
+          "kind": "mutation"
+        },
         "role": "tool",
         "tool_call_id": "call_mut_1"
       },

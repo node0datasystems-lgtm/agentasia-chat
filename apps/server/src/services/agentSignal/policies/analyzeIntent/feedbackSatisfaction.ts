@@ -1,9 +1,9 @@
-import type { RuntimeProcessorResult } from '@lobechat/agent-signal';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { DEFAULT_MINI_SYSTEM_AGENT_ITEM } from '@lobechat/const';
-import type { GenerateObjectPayload, GenerateObjectSchema } from '@lobechat/model-runtime';
-import { chainAgentSignalAnalyzeIntentFeedbackSatisfaction } from '@lobechat/prompts';
-import { RequestTrigger } from '@lobechat/types';
+import type { RuntimeProcessorResult } from '@agentasia/agent-signal';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { DEFAULT_MINI_SYSTEM_AGENT_ITEM } from '@agentasia/const';
+import type { GenerateObjectPayload, GenerateObjectSchema } from '@agentasia/model-runtime';
+import { chainAgentSignalAnalyzeIntentFeedbackSatisfaction } from '@agentasia/prompts';
+import { RequestTrigger } from '@agentasia/types';
 import debug from 'debug';
 import { z } from 'zod';
 

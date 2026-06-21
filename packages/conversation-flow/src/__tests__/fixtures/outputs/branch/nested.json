@@ -123,7 +123,7 @@
         "totalInputTokens": 10,
         "totalOutputTokens": 15,
         "totalTokens": 25,
-        "cost": 0.00008
+        "cost": 8e-05
       },
       "branch": {
         "activeBranchIndex": 0,
@@ -235,7 +235,7 @@
         "totalInputTokens": 10,
         "totalOutputTokens": 15,
         "totalTokens": 25,
-        "cost": 0.00008
+        "cost": 8e-05
       }
     },
     "msg-303": {
@@ -249,7 +249,7 @@
         "totalInputTokens": 10,
         "totalOutputTokens": 12,
         "totalTokens": 22,
-        "cost": 0.00007
+        "cost": 7e-05
       }
     },
     "msg-304": {
@@ -263,7 +263,7 @@
         "totalInputTokens": 10,
         "totalOutputTokens": 13,
         "totalTokens": 23,
-        "cost": 0.000069
+        "cost": 6.9e-05
       }
     },
     "msg-305": {

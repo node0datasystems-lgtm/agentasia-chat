@@ -1,4 +1,4 @@
-import { type ChatToolPayload, type ToolManifest } from '@lobechat/types';
+import { type ChatToolPayload, type ToolManifest } from '@agentasia/types';
 import superjson from 'superjson';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

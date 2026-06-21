@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, DropdownMenu, Icon, Tag } from '@lobehub/ui';
+import { Center, DropdownMenu, Icon, Tag } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { LucideToyBrick } from 'lucide-react';
 import { memo, useMemo } from 'react';

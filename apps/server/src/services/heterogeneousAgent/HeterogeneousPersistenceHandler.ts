@@ -1,5 +1,5 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import { LOADING_FLAT } from '@lobechat/const';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import { LOADING_FLAT } from '@agentasia/const';
 import type {
   MainAgentIntent,
   MainAgentReduceCtx,
@@ -8,20 +8,20 @@ import type {
   SubagentIntent,
   SubagentRunSnapshot,
   ToolCallPayload,
-} from '@lobechat/heterogeneous-agents';
+} from '@agentasia/heterogeneous-agents';
 import {
   createMainAgentRunState,
   reduceMainAgent,
   rehydrateSubagentRunsState,
-} from '@lobechat/heterogeneous-agents';
+} from '@agentasia/heterogeneous-agents';
 import {
   AgentRuntimeErrorType,
   type ChatMessageError,
   type ChatToolPayload,
   ThreadStatus,
   ThreadType,
-} from '@lobechat/types';
-import { createNanoId } from '@lobechat/utils';
+} from '@agentasia/types';
+import { createNanoId } from '@agentasia/utils';
 import debug from 'debug';
 
 import type { MessageModel } from '@/database/models/message';

@@ -2,7 +2,7 @@ import type {
   ShowTrayNotificationParams,
   UpdateTrayIconParams,
   UpdateTrayTooltipParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { createLogger } from '@/utils/logger';
 

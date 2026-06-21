@@ -1,6 +1,6 @@
-import { type UserMemoryEffort } from '@lobechat/types';
-import { Center, Flexbox, Icon } from '@lobehub/ui';
-import { BrainOffIcon } from '@lobehub/ui/icons';
+import { type UserMemoryEffort } from '@agentasia/types';
+import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { BrainOffIcon } from '@agentasia/ui/icons';
 import { Divider } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';

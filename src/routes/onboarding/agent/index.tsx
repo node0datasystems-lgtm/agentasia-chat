@@ -1,5 +1,5 @@
-import { AGENT_ONBOARDING_ENABLED } from '@lobechat/business-const';
-import { isDesktop } from '@lobechat/const';
+import { AGENT_ONBOARDING_ENABLED } from '@agentasia/business-const';
+import { isDesktop } from '@agentasia/const';
 import { memo } from 'react';
 import { Navigate } from 'react-router';
 

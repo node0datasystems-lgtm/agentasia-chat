@@ -11,9 +11,9 @@ vi.mock('./refresh', () => ({
   getValidToken: vi.fn(),
 }));
 vi.mock('../settings', () => ({
-  loadSettings: vi.fn().mockReturnValue({ serverUrl: 'https://app.lobehub.com' }),
+  loadSettings: vi.fn().mockReturnValue({ serverUrl: 'https://app.agentasia.ai' }),
   resolveServerUrl: vi.fn(() =>
-    (process.env.LOBEHUB_SERVER || 'https://app.lobehub.com').replace(/\/$/, ''),
+    (process.env.LOBEHUB_SERVER || 'https://app.agentasia.ai').replace(/\/$/, ''),
   ),
 }));
 vi.mock('../utils/logger', () => ({
@@ -61,7 +61,7 @@ describe('resolveToken', () => {
       const result = await resolveToken({ token });
 
       expect(result).toEqual({
-        serverUrl: 'https://app.lobehub.com',
+        serverUrl: 'https://app.agentasia.ai',
         token,
         tokenType: 'jwt',
         userId: 'user-123',
@@ -91,7 +91,7 @@ describe('resolveToken', () => {
       });
 
       expect(result).toEqual({
-        serverUrl: 'https://app.lobehub.com',
+        serverUrl: 'https://app.agentasia.ai',
         token: 'svc-token',
         tokenType: 'serviceToken',
         userId: 'user-456',
@@ -111,9 +111,9 @@ describe('resolveToken', () => {
 
       const result = await resolveToken({});
 
-      expect(getUserIdFromApiKey).toHaveBeenCalledWith('sk-lh-test', 'https://app.lobehub.com');
+      expect(getUserIdFromApiKey).toHaveBeenCalledWith('sk-lh-test', 'https://app.agentasia.ai');
       expect(result).toEqual({
-        serverUrl: 'https://app.lobehub.com',
+        serverUrl: 'https://app.agentasia.ai',
         token: 'sk-lh-test',
         tokenType: 'apiKey',
         userId: 'user-789',
@@ -147,7 +147,7 @@ describe('resolveToken', () => {
       const result = await resolveToken({});
 
       expect(result).toEqual({
-        serverUrl: 'https://app.lobehub.com',
+        serverUrl: 'https://app.agentasia.ai',
         token,
         tokenType: 'jwt',
         userId: 'stored-user',

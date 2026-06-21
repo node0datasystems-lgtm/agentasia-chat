@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox, Highlighter, Text } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { cssVar, cx } from 'antd-style';
 import { WrapText } from 'lucide-react';

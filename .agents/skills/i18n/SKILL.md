@@ -1,10 +1,10 @@
 ---
 name: i18n
-description: 'LobeHub i18n with react-i18next. Use for user-facing strings, locale keys, namespaces, useTranslation, t(), interpolation, zh-CN/en-US previews, hardcoded UI copy, or pnpm i18n.'
+description: 'AgentAsia i18n with react-i18next. Use for user-facing strings, locale keys, namespaces, useTranslation, t(), interpolation, zh-CN/en-US previews, hardcoded UI copy, or pnpm i18n.'
 user-invocable: false
 ---
 
-# LobeHub Internationalization Guide
+# AgentAsia Internationalization Guide
 
 - Default language: English (en-US)
 - Framework: react-i18next

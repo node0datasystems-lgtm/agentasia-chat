@@ -18,13 +18,13 @@ const permissionMock = vi.hoisted(() => ({
   create_content: true,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <div {...props}>{children}</div>
   ),
 }));
 
-vi.mock('@lobehub/ui/icons', () => ({
+vi.mock('@agentasia/ui/icons', () => ({
   BotPromptIcon: () => null,
 }));
 

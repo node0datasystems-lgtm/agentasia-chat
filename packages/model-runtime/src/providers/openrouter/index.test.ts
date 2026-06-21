@@ -60,8 +60,8 @@ describe('LobeOpenRouterAI - custom features', () => {
     it('should have constructorOptions with headers', () => {
       expect(params.constructorOptions).toBeDefined();
       expect(params.constructorOptions.defaultHeaders).toBeDefined();
-      expect(params.constructorOptions.defaultHeaders['HTTP-Referer']).toBe('https://lobehub.com');
-      expect(params.constructorOptions.defaultHeaders['X-Title']).toBe('LobeHub');
+      expect(params.constructorOptions.defaultHeaders['HTTP-Referer']).toBe('https://agentasia.ai');
+      expect(params.constructorOptions.defaultHeaders['X-Title']).toBe('AgentAsia');
     });
 
     it('should have debug configuration', () => {

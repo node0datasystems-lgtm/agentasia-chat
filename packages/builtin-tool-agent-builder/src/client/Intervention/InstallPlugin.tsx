@@ -1,8 +1,8 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobechat/const';
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Avatar, Flexbox } from '@lobehub/ui';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Avatar, Flexbox } from '@agentasia/ui';
 import { CheckCircle } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,12 +10,12 @@ import { useTranslation } from 'react-i18next';
 import { useToolStore } from '@/store/tool';
 import {
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   mcpStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore/types';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 import type { InstallPluginParams } from '../../types';
 
@@ -40,8 +40,8 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
     );
 
     // Get LobehubSkill server state
-    const lobehubSkillServer = useToolStore((s) =>
-      lobehubSkillStoreSelectors.getServers(s).find((srv) => srv.identifier === identifier),
+    const agentasiaSkillServer = useToolStore((s) =>
+      agentasiaSkillStoreSelectors.getServers(s).find((srv) => srv.identifier === identifier),
     );
 
     // Get Market MCP plugin info
@@ -57,8 +57,8 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
     const isComposio = source === 'official' && !!composioAppInfo;
 
     // Check if it's a LobehubSkill provider
-    const lobehubSkillProviderInfo = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
-    const isLobehubSkill = source === 'official' && !!lobehubSkillProviderInfo;
+    const agentasiaSkillProviderInfo = LOBEHUB_SKILL_PROVIDERS.find((p) => p.id === identifier);
+    const isLobehubSkill = source === 'official' && !!agentasiaSkillProviderInfo;
 
     // Render success state (already installed)
     if (isPluginInstalled) {
@@ -81,7 +81,7 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
                 : t('agentBuilder.installPlugin.installedAndEnabled')}
             </span>
             <span style={{ color: 'var(--lobe-text-secondary)', fontSize: 12 }}>
-              {composioAppInfo?.label || lobehubSkillProviderInfo?.label || identifier}
+              {composioAppInfo?.label || agentasiaSkillProviderInfo?.label || identifier}
             </span>
           </Flexbox>
         </Flexbox>
@@ -129,11 +129,11 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
     // Render LobehubSkill provider
     if (isLobehubSkill) {
       const icon =
-        typeof lobehubSkillProviderInfo?.icon === 'string'
-          ? lobehubSkillProviderInfo.icon
+        typeof agentasiaSkillProviderInfo?.icon === 'string'
+          ? agentasiaSkillProviderInfo.icon
           : undefined;
       const isNotConnected =
-        !lobehubSkillServer || lobehubSkillServer.status !== LobehubSkillStatus.CONNECTED;
+        !agentasiaSkillServer || agentasiaSkillServer.status !== LobehubSkillStatus.CONNECTED;
 
       return (
         <Flexbox
@@ -143,7 +143,7 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
           <Flexbox horizontal align="center" gap={12}>
             {icon ? (
               <img
-                alt={lobehubSkillProviderInfo?.label || identifier}
+                alt={agentasiaSkillProviderInfo?.label || identifier}
                 height={40}
                 src={icon}
                 style={{ borderRadius: 8 }}
@@ -155,10 +155,10 @@ const InstallPluginIntervention = memo<BuiltinInterventionProps<InstallPluginPar
             <Flexbox flex={1} gap={4}>
               <Flexbox horizontal align="center" gap={8}>
                 <span style={{ fontWeight: 600 }}>
-                  {lobehubSkillProviderInfo?.label || identifier}
+                  {agentasiaSkillProviderInfo?.label || identifier}
                 </span>
                 <span style={{ color: 'var(--lobe-text-tertiary)', fontSize: 12 }}>
-                  LobeHub Skill
+                  AgentAsia Skill
                 </span>
               </Flexbox>
               <span style={{ color: 'var(--lobe-text-secondary)', fontSize: 12 }}>

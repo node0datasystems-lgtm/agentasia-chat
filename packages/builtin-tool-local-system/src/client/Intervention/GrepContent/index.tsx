@@ -1,6 +1,6 @@
-import  { type GrepContentParams } from '@lobechat/electron-client-ipc';
-import  { type BuiltinInterventionProps } from '@lobechat/types';
-import { Flexbox, Highlighter, Text } from '@lobehub/ui';
+import  { type GrepContentParams } from '@agentasia/electron-client-ipc';
+import  { type BuiltinInterventionProps } from '@agentasia/types';
+import { Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

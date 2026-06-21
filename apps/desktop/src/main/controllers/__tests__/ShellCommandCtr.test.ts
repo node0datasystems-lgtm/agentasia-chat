@@ -152,10 +152,10 @@ describe('ShellCommandCtr (thin wrapper)', () => {
     expect(mockSpawn).not.toHaveBeenCalled();
   });
 
-  it('should route lobehub commands to CliCtr.runCliCommand', async () => {
+  it('should route agentasia commands to CliCtr.runCliCommand', async () => {
     const result = await ctr.handleRunCommand({
-      command: 'lobehub search test',
-      description: 'lobehub search',
+      command: 'agentasia search test',
+      description: 'agentasia search',
     });
 
     expect(mockCliCtr.runCliCommand).toHaveBeenCalledWith('search test');

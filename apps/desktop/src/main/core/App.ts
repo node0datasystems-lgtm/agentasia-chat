@@ -1,8 +1,8 @@
 import os from 'node:os';
 import path from 'node:path';
 
-import type { ElectronIPCEventHandler } from '@lobechat/electron-server-ipc';
-import { ElectronIPCServer } from '@lobechat/electron-server-ipc';
+import type { ElectronIPCEventHandler } from '@agentasia/electron-server-ipc';
+import { ElectronIPCServer } from '@agentasia/electron-server-ipc';
 import { app, nativeTheme, protocol } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import * as electronIs from 'electron-is';
@@ -93,7 +93,7 @@ export class App {
     logger.info(` lng: ${app.getLocale()}`);
     logger.info(` bin: ${binDir}`);
     logger.info('----------------------------------------------');
-    logger.info('Starting LobeHub...');
+    logger.info('Starting AgentAsia...');
 
     // Append bundled binaries and CLI wrapper directories to PATH for tool resolution
     const pathSep = process.platform === 'win32' ? ';' : ':';
@@ -343,7 +343,7 @@ export class App {
       }
     });
 
-    // refs: https://github.com/lobehub/lobe-chat/pull/7883
+    // refs: https://github.com/agentasia/agentasia-chat/pull/7883
     // https://github.com/electron/electron/issues/46538#issuecomment-2808806722
     app.commandLine.appendSwitch('gtk-version', '3');
 

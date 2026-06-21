@@ -1,4 +1,4 @@
-import { type LobeAgentConfig } from '@lobechat/types';
+import { type LobeAgentConfig } from '@agentasia/types';
 import { type PartialDeep } from 'type-fest';
 
 import { chatGroupService } from '@/services/chatGroup';

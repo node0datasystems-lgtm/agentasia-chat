@@ -11,8 +11,8 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import { horizontalListSortingStrategy, SortableContext } from '@dnd-kit/sortable';
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
-import { ActionIcon, ScrollArea } from '@lobehub/ui';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
+import { ActionIcon, ScrollArea } from '@agentasia/ui';
 import { cx } from 'antd-style';
 import { Plus } from 'lucide-react';
 import { startTransition, useCallback, useEffect, useMemo, useRef } from 'react';

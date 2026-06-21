@@ -104,7 +104,7 @@ vi.mock('../TopicListContent/FlatMode', () => ({
   default: () => <div data-testid="flat-mode" />,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
 }));
 

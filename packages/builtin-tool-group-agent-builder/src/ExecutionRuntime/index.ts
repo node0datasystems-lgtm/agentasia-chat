@@ -1,5 +1,5 @@
-import { formatAgentProfile } from '@lobechat/prompts';
-import type { BuiltinToolResult } from '@lobechat/types';
+import { formatAgentProfile } from '@agentasia/prompts';
+import type { BuiltinToolResult } from '@agentasia/types';
 
 import { agentService } from '@/services/agent';
 import type { GroupMemberConfig } from '@/services/chatGroup';

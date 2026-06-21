@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ArrowLeftRight } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

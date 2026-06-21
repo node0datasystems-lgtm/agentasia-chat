@@ -18,7 +18,7 @@ import {
   SiRust,
   SiYarn,
 } from '@icons-pack/react-simple-icons';
-import { Icon, Tooltip } from '@lobehub/ui';
+import { Icon, Tooltip } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

@@ -1,4 +1,4 @@
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
 import { useTheme } from 'next-themes';
 import { useEffect } from 'react';
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { DEFAULT_INBOX_AVATAR } from '@lobechat/const';
-import { Button, Flexbox, Icon, Text } from '@lobehub/ui';
-import { useModalContext } from '@lobehub/ui/base-ui';
+import { DEFAULT_INBOX_AVATAR } from '@agentasia/const';
+import { Button, Flexbox, Icon, Text } from '@agentasia/ui';
+import { useModalContext } from '@agentasia/ui/base-ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CircleCheck } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

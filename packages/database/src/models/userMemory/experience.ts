@@ -1,4 +1,4 @@
-import type { ExperienceListParams, ExperienceListResult } from '@lobechat/types';
+import type { ExperienceListParams, ExperienceListResult } from '@agentasia/types';
 import type { SQL } from 'drizzle-orm';
 import { and, asc, desc, eq, inArray, or, sql } from 'drizzle-orm';
 

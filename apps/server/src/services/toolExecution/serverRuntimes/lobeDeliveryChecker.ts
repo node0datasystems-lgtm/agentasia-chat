@@ -1,5 +1,5 @@
-import { LobeDeliveryCheckerIdentifier } from '@lobechat/builtin-tool-lobe-delivery-checker';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
+import { LobeDeliveryCheckerIdentifier } from '@agentasia/builtin-tool-lobe-delivery-checker';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 import type { LobeChatDatabase } from '@/database/type';
 

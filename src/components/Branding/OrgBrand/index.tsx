@@ -1,14 +1,14 @@
-import { ORG_NAME } from '@lobechat/business-const';
-import { type LobeHubProps } from '@lobehub/ui/brand';
-import { LobeHub } from '@lobehub/ui/brand';
+import { ORG_NAME } from '@agentasia/business-const';
+import { type AgentAsiaProps } from '@agentasia/ui/brand';
+import { AgentAsia } from '@agentasia/ui/brand';
 import { memo } from 'react';
 
 import { isCustomORG } from '@/const/version';
 
-export const OrgBrand = memo<LobeHubProps>((props) => {
+export const OrgBrand = memo<AgentAsiaProps>((props) => {
   if (isCustomORG) {
     return <span>{ORG_NAME}</span>;
   }
 
-  return <LobeHub {...props} />;
+  return <AgentAsia {...props} />;
 });

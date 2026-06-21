@@ -1,5 +1,5 @@
-import type { BotPlatformInfo } from '@lobechat/prompts';
-import { formatBotPlatformContext } from '@lobechat/prompts';
+import type { BotPlatformInfo } from '@agentasia/prompts';
+import { formatBotPlatformContext } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseSystemRoleProvider } from '../base/BaseSystemRoleProvider';

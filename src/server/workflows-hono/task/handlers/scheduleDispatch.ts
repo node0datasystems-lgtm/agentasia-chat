@@ -1,4 +1,4 @@
-import { isExecutionTime } from '@lobechat/utils/cronEval';
+import { isExecutionTime } from '@agentasia/utils/cronEval';
 import debug from 'debug';
 import type { Context } from 'hono';
 

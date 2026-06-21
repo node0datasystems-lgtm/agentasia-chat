@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Flexbox, Text } from '@lobehub/ui';
+import { ActionIcon, Button, Flexbox, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { ClipboardList } from 'lucide-react';
 import { memo } from 'react';

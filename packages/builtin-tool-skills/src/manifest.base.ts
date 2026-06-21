@@ -1,4 +1,4 @@
-import type { LobeChatPluginApi } from '@lobechat/types';
+import type { LobeChatPluginApi } from '@agentasia/types';
 
 import { SkillsApiName } from './types';
 

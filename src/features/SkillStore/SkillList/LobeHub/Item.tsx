@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, Block, DropdownMenu, Flexbox, Icon, stopPropagation } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { ActionIcon, Block, DropdownMenu, Flexbox, Icon, stopPropagation } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { cssVar } from 'antd-style';
 import { Loader2, MoreVerticalIcon, Plus, Unplug } from 'lucide-react';
 import React, { memo } from 'react';
@@ -20,7 +20,7 @@ interface ItemProps {
   label: string;
   onOpenDetail?: () => void;
   serverName?: string;
-  type: 'composio' | 'lobehub';
+  type: 'composio' | 'agentasia';
 }
 
 const Item = memo<ItemProps>(
@@ -38,7 +38,7 @@ const Item = memo<ItemProps>(
 
     // Get localized description
     const i18nPrefix =
-      type === 'composio' ? 'tools.composio.servers' : 'tools.lobehubSkill.providers';
+      type === 'composio' ? 'tools.composio.servers' : 'tools.agentasiaSkill.providers';
     // @ts-ignore
     const localizedDescription = t(`${i18nPrefix}.${identifier}.description`, {
       defaultValue: description,
@@ -48,11 +48,11 @@ const Item = memo<ItemProps>(
       if (!canEdit) return;
       confirmModal({
         cancelText: t('cancel', { ns: 'common' }),
-        content: t('tools.lobehubSkill.disconnectConfirm.desc', { name: label }),
+        content: t('tools.agentasiaSkill.disconnectConfirm.desc', { name: label }),
         okButtonProps: { danger: true },
-        okText: t('tools.lobehubSkill.disconnect'),
+        okText: t('tools.agentasiaSkill.disconnect'),
         onOk: handleDisconnect,
-        title: t('tools.lobehubSkill.disconnectConfirm.title', { name: label }),
+        title: t('tools.agentasiaSkill.disconnectConfirm.title', { name: label }),
       });
     };
 
@@ -79,7 +79,7 @@ const Item = memo<ItemProps>(
                 disabled: !canEdit,
                 icon: <Icon icon={Unplug} />,
                 key: 'disconnect',
-                label: t('tools.lobehubSkill.disconnect'),
+                label: t('tools.agentasiaSkill.disconnect'),
                 onClick: confirmDisconnect,
               },
             ]}
@@ -93,7 +93,7 @@ const Item = memo<ItemProps>(
         <ActionIcon
           disabled={!canCreate || !canEdit}
           icon={Plus}
-          title={t('tools.lobehubSkill.connect')}
+          title={t('tools.agentasiaSkill.connect')}
           onClick={() => {
             if (!canCreate || !canEdit) return;
             handleConnect();
@@ -127,6 +127,6 @@ const Item = memo<ItemProps>(
   },
 );
 
-Item.displayName = 'LobeHubListItem';
+Item.displayName = 'AgentAsiaListItem';
 
 export default Item;

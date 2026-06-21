@@ -1,11 +1,11 @@
 'use client';
 
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { setAgentTemplatesFetcher } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
-import { SESSION_CHAT_TOPIC_URL } from '@lobechat/const';
-import type { SendMessageParams } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
-import { Button, ErrorBoundary, Flexbox } from '@lobehub/ui';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { setAgentTemplatesFetcher } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
+import { SESSION_CHAT_TOPIC_URL } from '@agentasia/const';
+import type { SendMessageParams } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
+import { Button, ErrorBoundary, Flexbox } from '@agentasia/ui';
 import { Drawer } from 'antd';
 import { History } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';

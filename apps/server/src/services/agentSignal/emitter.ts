@@ -1,4 +1,4 @@
-import type { DedupedSourceEventResult } from '@lobechat/agent-signal';
+import type { DedupedSourceEventResult } from '@agentasia/agent-signal';
 import {
   type AgentSignalSourceEventInput as SharedAgentSignalSourceEventInput,
   type AgentSignalSourceType,
@@ -10,7 +10,7 @@ import {
   type SourceBotMessageMerged,
   type SourceRuntimeAfterStep,
   type SourceRuntimeBeforeStep,
-} from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
 import debug from 'debug';
 
 import { getServerDB } from '@/database/server';

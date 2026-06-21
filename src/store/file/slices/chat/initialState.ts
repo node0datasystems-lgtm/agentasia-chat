@@ -1,4 +1,4 @@
-import { type ChatContextContent } from '@lobechat/types';
+import { type ChatContextContent } from '@agentasia/types';
 
 import { type UploadFileItem } from '@/types/files/upload';
 

@@ -1,4 +1,4 @@
-import { Button, Icon, Text } from '@lobehub/ui';
+import { Button, Icon, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Link2 } from 'lucide-react';
 import { memo } from 'react';

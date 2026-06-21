@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { SEARCH_SEARXNG_NOT_CONFIG } from '@lobechat/types';
+import { SEARCH_SEARXNG_NOT_CONFIG } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { toolsEnv } from '@/envs/tools';

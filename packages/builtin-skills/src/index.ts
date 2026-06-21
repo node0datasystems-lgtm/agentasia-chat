@@ -1,19 +1,19 @@
-import type { BuiltinSkill } from '@lobechat/types';
+import type { BuiltinSkill } from '@agentasia/types';
 
 import { AgentBrowserSkill } from './agent-browser';
 import { ArtifactsSkill } from './artifacts';
-import { LobeHubSkill } from './lobehub';
+import { AgentAsiaSkill } from './agentasia';
 import { TaskSkill } from './task';
 
 export { AgentBrowserIdentifier } from './agent-browser';
 export { ArtifactsIdentifier } from './artifacts';
-export { LobeHubIdentifier } from './lobehub';
+export { AgentAsiaIdentifier } from './agentasia';
 export { TaskIdentifier } from './task';
 
 export const builtinSkills: BuiltinSkill[] = [
   AgentBrowserSkill,
   ArtifactsSkill,
-  LobeHubSkill,
+  AgentAsiaSkill,
   TaskSkill,
   // FindSkillsSkill
 ];

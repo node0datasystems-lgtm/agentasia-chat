@@ -1,5 +1,5 @@
-import { formatLinearMcpShortLabel } from '@lobechat/builtin-tool-claude-code/client/labels';
-import { type ChatToolPayloadWithResult } from '@lobechat/types';
+import { formatLinearMcpShortLabel } from '@agentasia/builtin-tool-claude-code/client/labels';
+import { type ChatToolPayloadWithResult } from '@agentasia/types';
 import { t } from 'i18next';
 
 import { LOADING_FLAT } from '@/const/message';

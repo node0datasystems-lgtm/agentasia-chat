@@ -1,5 +1,5 @@
-import { ChatInput, ChatInputActionBar, SendButton, useEditor } from '@lobehub/editor/react';
-import { Button, Flexbox } from '@lobehub/ui';
+import { ChatInput, ChatInputActionBar, SendButton, useEditor } from '@agentasia/editor/react';
+import { Button, Flexbox } from '@agentasia/ui';
 import { $getRoot } from 'lexical';
 import { ChevronDownIcon, MessageCirclePlus } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';

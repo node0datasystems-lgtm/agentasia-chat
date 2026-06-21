@@ -96,13 +96,13 @@ export const uvDetector: IToolDetector = createCommandDetector('uv', {
 });
 
 /**
- * LobeHub CLI detector
- * Tries lobehub, lobe, lh in order; validates via --help output containing "LobeHub"
+ * AgentAsia CLI detector
+ * Tries agentasia, lobe, lh in order; validates via --help output containing "AgentAsia"
  */
-export const lobehubDetector: IToolDetector = {
-  description: 'LobeHub CLI - manage and connect to LobeHub services',
+export const agentasiaDetector: IToolDetector = {
+  description: 'AgentAsia CLI - manage and connect to AgentAsia services',
   async detect(): Promise<ToolStatus> {
-    const commands = ['lobehub', 'lobe', 'lh'];
+    const commands = ['agentasia', 'lobe', 'lh'];
     const whichCmd = platform() === 'win32' ? 'where' : 'which';
 
     for (const cmd of commands) {
@@ -110,9 +110,9 @@ export const lobehubDetector: IToolDetector = {
         const { stdout: pathOut } = await execPromise(`${whichCmd} ${cmd}`, { timeout: 3000 });
         const toolPath = pathOut.trim().split('\n')[0];
 
-        // Validate it's actually LobeHub CLI by checking help output
+        // Validate it's actually AgentAsia CLI by checking help output
         const { stdout: helpOut } = await execPromise(`${cmd} --help`, { timeout: 3000 });
-        if (!helpOut.includes('LobeHub')) continue;
+        if (!helpOut.includes('AgentAsia')) continue;
 
         const { stdout: versionOut } = await execPromise(`${cmd} --version`, { timeout: 3000 });
         const version = versionOut.trim().split('\n')[0];
@@ -125,7 +125,7 @@ export const lobehubDetector: IToolDetector = {
 
     return { available: false };
   },
-  name: 'lobehub',
+  name: 'agentasia',
   priority: 0,
 };
 
@@ -133,7 +133,7 @@ export const lobehubDetector: IToolDetector = {
  * All runtime environment detectors
  */
 export const runtimeEnvironmentDetectors: IToolDetector[] = [
-  lobehubDetector,
+  agentasiaDetector,
   nodeDetector,
   npmDetector,
   pythonDetector,

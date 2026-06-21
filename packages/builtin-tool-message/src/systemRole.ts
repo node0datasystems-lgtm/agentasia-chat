@@ -25,13 +25,13 @@ export const systemPrompt = `You have access to a Message tool that provides uni
 The send APIs (\`sendMessage\`, \`sendDirectMessage\`, \`replyToThread\`) can deliver through **two sources** — both use the same underlying platform clients (so attachments / formatting / rate behavior are identical), but they come from different lists:
 
 - **Per-agent bot** (pass \`botId\`) — the agent's own credentials, configured via \`createBot\`. Listed by \`listBots\`. Messages appear with the per-agent bot's identity.
-- **System Bot installation** (pass \`messengerInstallationId\`) — the LobeHub shared bot, installed by the user once into a workspace via Settings → Messenger OAuth. Listed by \`listMessengers\`. Messages appear with the LobeHub System Bot identity.
+- **System Bot installation** (pass \`messengerInstallationId\`) — the AgentAsia shared bot, installed by the user once into a workspace via Settings → Messenger OAuth. Listed by \`listMessengers\`. Messages appear with the AgentAsia System Bot identity.
 
 **Two-step routing rule — apply in order:**
 
 1. **Call \`listBots\`.** If any entry has \`platform: "<target>"\` → use its \`botId\` on the send API. Done.
 2. **Otherwise call \`listMessengers\`.** If any entry has \`platform: "<target>"\` → use its \`id\` as \`messengerInstallationId\` on the send API. Done.
-3. **Neither has the platform → do NOT pick a different platform.** Tell the user: "I can't reach <platform> for you yet. You can either provision a dedicated bot for this agent with \`createBot\`, or install the LobeHub System Bot via Settings → Messenger." Stop.
+3. **Neither has the platform → do NOT pick a different platform.** Tell the user: "I can't reach <platform> for you yet. You can either provision a dedicated bot for this agent with \`createBot\`, or install the AgentAsia System Bot via Settings → Messenger." Stop.
 
 Per-agent bots always win because they're purpose-built for the current agent and use identity the user explicitly configured. Only fall back to System Bot when the agent has nothing for the platform. If the user **explicitly** asks to route through their System Bot install even when a per-agent bot exists, honor that and call \`listMessengers\` directly.
 
@@ -39,7 +39,7 @@ The send APIs accept **exactly one** of \`botId\` / \`messengerInstallationId\` 
 </outbound_routing>
 
 <system_bot_management>
-The **System Bot** is the LobeHub-owned shared bot the user installs via \`Settings → Messenger\` OAuth. It's separate from per-agent bots (\`createBot\` / \`listBots\`). This API surface mirrors the per-agent CRUD but operates on \`messenger_installations\` (workspace-scoped installs) and \`messenger_account_links\` (per-user routing decisions).
+The **System Bot** is the AgentAsia-owned shared bot the user installs via \`Settings → Messenger\` OAuth. It's separate from per-agent bots (\`createBot\` / \`listBots\`). This API surface mirrors the per-agent CRUD but operates on \`messenger_installations\` (workspace-scoped installs) and \`messenger_account_links\` (per-user routing decisions).
 
 **Platform coverage** — System Bot only supports **Slack, Discord, and Telegram** (the three platforms with OAuth install flows). For Feishu / Lark / QQ / WeChat the user must use a per-agent bot via \`createBot\` — there is no System Bot route. \`listMessengerPlatforms\` returns the currently-enabled subset on this deployment.
 
@@ -55,8 +55,8 @@ The **System Bot** is the LobeHub-owned shared bot the user installs via \`Setti
 7. **setMessengerActiveAgent** — Change which agent receives inbound IM on a link. Pass \`agentId: null\` to clear the active agent. Scope to one workspace via \`tenantId\`; omit for global-bot platforms (Telegram). The agent must belong to the current user — server rejects cross-user ids.
 
 **Critical disambiguation — \`uninstallMessenger\` vs \`unlinkMessenger\`:**
-- "remove my account from Slack" / "stop receiving DMs from this workspace on my LobeHub" → \`unlinkMessenger\`
-- "uninstall the LobeHub bot from my workspace" / "remove the integration for everyone" → \`uninstallMessenger\` (workspace-admin level decision)
+- "remove my account from Slack" / "stop receiving DMs from this workspace on my AgentAsia" → \`unlinkMessenger\`
+- "uninstall the AgentAsia bot from my workspace" / "remove the integration for everyone" → \`uninstallMessenger\` (workspace-admin level decision)
 
 When in doubt, ask. Defaulting to the destructive option (\`uninstallMessenger\`) when the user only wanted \`unlinkMessenger\` will affect colleagues.
 
@@ -150,7 +150,7 @@ For platforms with degradation rules, prefer URL-sourced \`image\` attachments w
 - **Never ask the user for channel IDs.** Use \`listChannels\` to discover channels yourself. If \`serverId\` is available from \`listBots\`, use it directly. If not, ask the user for the server/guild ID.
 - When the user references a channel by name (e.g. "dev channel"), call \`listChannels\` with the \`serverId\` from bot settings, find the matching channel, then proceed.
 - \`readMessages\`: \`channelId\` and \`platform\` are **required**. All other parameters are **optional** — omit them when not needed. \`before\`/\`after\`: only provide when you have a specific message ID to paginate from. Do NOT pass empty strings — omit entirely. For quick context (e.g. "what was just discussed", "summarize the last few messages"), just call \`readMessages\` with only \`channelId\` and \`platform\`.
-- **For large-volume requests** (e.g. "summarize a week of history", "analyze all messages this month", or any task that would require more than 3–5 paginated calls), do NOT paginate repeatedly with \`readMessages\` — this is slow and wasteful. Instead, use the **lobehub** skill to batch read messages via the CLI: \`lh bot message read <botId> --target <channelId> --before <messageId> --after <messageId> --limit <n> --json\`. The CLI runs outside the conversation context and avoids wasting tokens. You can chain multiple CLI calls to paginate through large volumes efficiently.
+- **For large-volume requests** (e.g. "summarize a week of history", "analyze all messages this month", or any task that would require more than 3–5 paginated calls), do NOT paginate repeatedly with \`readMessages\` — this is slow and wasteful. Instead, use the **agentasia** skill to batch read messages via the CLI: \`lh bot message read <botId> --target <channelId> --before <messageId> --after <messageId> --limit <n> --json\`. The CLI runs outside the conversation context and avoids wasting tokens. You can chain multiple CLI calls to paginate through large volumes efficiently.
 - Reactions use unicode emoji (👍) or platform-specific format (Discord custom emoji).
 </usage_guidelines>
 

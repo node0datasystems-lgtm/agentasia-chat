@@ -1,4 +1,4 @@
-import { AgentDocumentsExecutionRuntime } from '@lobechat/builtin-tool-agent-documents/executionRuntime';
+import { AgentDocumentsExecutionRuntime } from '@agentasia/builtin-tool-agent-documents/executionRuntime';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { TaskModel } from '@/database/models/task';

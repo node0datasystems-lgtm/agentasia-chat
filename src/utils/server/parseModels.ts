@@ -1,5 +1,5 @@
-import { getModelPropertyWithFallback } from '@lobechat/model-runtime';
-import { merge } from '@lobechat/utils';
+import { getModelPropertyWithFallback } from '@agentasia/model-runtime';
+import { merge } from '@agentasia/utils';
 import { produce } from 'immer';
 import { type AiFullModelCard, type AiModelType } from 'model-bank';
 

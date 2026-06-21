@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import type { FC, ReactNode } from 'react';
 import { Outlet } from 'react-router';
 

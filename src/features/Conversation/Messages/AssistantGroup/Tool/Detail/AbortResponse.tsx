@@ -1,4 +1,4 @@
-import { Alert } from '@lobehub/ui';
+import { Alert } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

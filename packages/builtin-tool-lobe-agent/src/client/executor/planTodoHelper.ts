@@ -1,4 +1,4 @@
-import type { BuiltinToolContext } from '@lobechat/types';
+import type { BuiltinToolContext } from '@agentasia/types';
 
 import type { TodoItem } from '../../types';
 

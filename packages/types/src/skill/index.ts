@@ -23,11 +23,11 @@ export const skillManifestSchema = z
     permissions: z.array(z.string()).optional(),
 
     // Project main repository URL
-    // e.g. https://github.com/lobehub/skills
+    // e.g. https://github.com/agentasia/skills
     repository: z.string().url().optional(),
 
     // Source URL where the skill was imported from
-    // e.g. https://github.com/lobehub/skills/tree/main/code-review or https://example.com/skill.md
+    // e.g. https://github.com/agentasia/skills/tree/main/code-review or https://example.com/skill.md
     sourceUrl: z.string().url().optional(),
 
     // Optional fields

@@ -1,7 +1,7 @@
 import {
   AGENT_SIGNAL_SOURCE_TYPES,
   type AgentSignalSourcePayloadMap,
-} from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
 
 import type { AgentSignalSourceEventInput } from './emitter';
 import {

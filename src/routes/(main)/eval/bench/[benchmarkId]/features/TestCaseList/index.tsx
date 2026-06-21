@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Tag } from '@lobehub/ui';
+import { Flexbox, Tag } from '@agentasia/ui';
 import { Table, Typography } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { memo, useState } from 'react';

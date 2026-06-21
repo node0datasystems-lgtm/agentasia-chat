@@ -1,4 +1,4 @@
-import { BRANDING_NAME } from '@lobechat/business-const';
+import { BRANDING_NAME } from '@agentasia/business-const';
 import { act, cleanup, render, waitFor } from '@testing-library/react';
 import type * as ReactModule from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';

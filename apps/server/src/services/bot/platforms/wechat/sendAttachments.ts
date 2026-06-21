@@ -1,5 +1,5 @@
-import type { MessageItem, WechatApiClient } from '@lobechat/chat-adapter-wechat';
-import { MessageItemType, WechatUploadMediaType } from '@lobechat/chat-adapter-wechat';
+import type { MessageItem, WechatApiClient } from '@agentasia/chat-adapter-wechat';
+import { MessageItemType, WechatUploadMediaType } from '@agentasia/chat-adapter-wechat';
 import debug from 'debug';
 
 const log = debug('bot-platform:wechat:send-attachments');

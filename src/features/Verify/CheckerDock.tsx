@@ -1,5 +1,5 @@
-import type { VerifyCheckItem } from '@lobechat/types';
-import { ActionIcon, Button, Flexbox, Icon, Input, TextArea } from '@lobehub/ui';
+import type { VerifyCheckItem } from '@agentasia/types';
+import { ActionIcon, Button, Flexbox, Icon, Input, TextArea } from '@agentasia/ui';
 import { createStyles } from 'antd-style';
 import {
   Check,

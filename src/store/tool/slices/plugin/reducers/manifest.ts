@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 import { produce } from 'immer';
 
 import { type PluginManifestMap } from '@/types/tool/plugin';

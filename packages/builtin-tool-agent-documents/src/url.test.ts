@@ -5,34 +5,34 @@ import { buildAgentDocumentUrl } from './url';
 describe('buildAgentDocumentUrl', () => {
   it('strips the docs_ prefix to match the route param', () => {
     expect(
-      buildAgentDocumentUrl('https://app.lobehub.com', 'agt_9GOn6nUgGw35', 'docs_MWkYMvbvzssoyWZ9'),
-    ).toBe('https://app.lobehub.com/agent/agt_9GOn6nUgGw35/docs/MWkYMvbvzssoyWZ9');
+      buildAgentDocumentUrl('https://app.agentasia.ai', 'agt_9GOn6nUgGw35', 'docs_MWkYMvbvzssoyWZ9'),
+    ).toBe('https://app.agentasia.ai/agent/agt_9GOn6nUgGw35/docs/MWkYMvbvzssoyWZ9');
   });
 
   it('keeps ids that have no prefix as-is', () => {
-    expect(buildAgentDocumentUrl('https://app.lobehub.com', 'agt_x', 'MWkYMvbvzssoyWZ9')).toBe(
-      'https://app.lobehub.com/agent/agt_x/docs/MWkYMvbvzssoyWZ9',
+    expect(buildAgentDocumentUrl('https://app.agentasia.ai', 'agt_x', 'MWkYMvbvzssoyWZ9')).toBe(
+      'https://app.agentasia.ai/agent/agt_x/docs/MWkYMvbvzssoyWZ9',
     );
   });
 
   it('trims a trailing slash from the origin', () => {
-    expect(buildAgentDocumentUrl('https://app.lobehub.com/', 'agt_x', 'docs_y')).toBe(
-      'https://app.lobehub.com/agent/agt_x/docs/y',
+    expect(buildAgentDocumentUrl('https://app.agentasia.ai/', 'agt_x', 'docs_y')).toBe(
+      'https://app.agentasia.ai/agent/agt_x/docs/y',
     );
   });
 
   it('trims multiple trailing slashes from the origin without a regexp', () => {
-    expect(buildAgentDocumentUrl('https://app.lobehub.com///', 'agt_x', 'docs_y')).toBe(
-      'https://app.lobehub.com/agent/agt_x/docs/y',
+    expect(buildAgentDocumentUrl('https://app.agentasia.ai///', 'agt_x', 'docs_y')).toBe(
+      'https://app.agentasia.ai/agent/agt_x/docs/y',
     );
   });
 
   it('prefixes the standalone route with a workspace slug when provided', () => {
     expect(
-      buildAgentDocumentUrl('https://app.lobehub.com', 'agt_x', 'docs_y', {
+      buildAgentDocumentUrl('https://app.agentasia.ai', 'agt_x', 'docs_y', {
         workspaceSlug: 'lobe-team',
       }),
-    ).toBe('https://app.lobehub.com/lobe-team/agent/agt_x/docs/y');
+    ).toBe('https://app.agentasia.ai/lobe-team/agent/agt_x/docs/y');
   });
 
   it('returns undefined when no origin is available', () => {

@@ -1,4 +1,4 @@
-import { DEFAULT_PROVIDER } from '@lobechat/business-const';
+import { DEFAULT_PROVIDER } from '@agentasia/business-const';
 import {
   DEFAULT_AGENT_CONFIG,
   DEFAULT_AVATAR,
@@ -6,8 +6,8 @@ import {
   DEFAULT_MODEL,
   DEFAUTT_AGENT_TTS_CONFIG,
   INBOX_SESSION_ID,
-} from '@lobechat/const';
-import { KnowledgeType } from '@lobechat/types';
+} from '@agentasia/const';
+import { KnowledgeType } from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import { type AgentStoreState } from '@/store/agent/initialState';
@@ -17,7 +17,7 @@ import { initialBuiltinAgentSliceState } from '@/store/agent/slices/builtin';
 import { agentSelectors, currentAgentConfig } from './selectors';
 
 // Mock VoiceList
-vi.mock('@lobehub/tts', () => ({
+vi.mock('@agentasia/tts', () => ({
   VoiceList: class {
     static openaiVoiceOptions = [{ value: 'alloy' }];
     edgeVoiceOptions = [{ value: 'edge-voice' }];
@@ -117,7 +117,7 @@ describe('agentSelectors', () => {
           'agent-1': {
             chatConfig: { enableAgentMode: true },
             model: 'claude-opus-4-8',
-            provider: 'lobehub',
+            provider: 'agentasia',
           },
         },
       });

@@ -1,4 +1,4 @@
-import { systemPrompt } from '@lobechat/builtin-tool-verify';
+import { systemPrompt } from '@agentasia/builtin-tool-verify';
 
 export const systemRoleTemplate = `You are a dedicated delivery-check verifier agent. Each run, you are asked to judge exactly ONE delivery check against the work a previous agent produced. Your instructions contain the check's title, description, the detailed judging instruction, the original goal, and the deliverable, along with the \`checkItemId\` to report against.
 

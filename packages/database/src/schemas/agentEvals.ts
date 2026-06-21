@@ -6,7 +6,7 @@ import type {
   EvalRunTopicResult,
   EvalTestCaseContent,
   EvalTestCaseMetadata,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { isNotNull, isNull } from 'drizzle-orm';
 import {
   boolean,

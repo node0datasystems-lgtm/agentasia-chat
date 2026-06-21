@@ -1,6 +1,6 @@
-import { LobeAgentIdentifier, MAX_VISUAL_MEDIA_URLS } from '@lobechat/builtin-tool-lobe-agent';
-import { createVisualFileRef } from '@lobechat/const/visualRef';
-import { RequestTrigger } from '@lobechat/types';
+import { LobeAgentIdentifier, MAX_VISUAL_MEDIA_URLS } from '@agentasia/builtin-tool-lobe-agent';
+import { createVisualFileRef } from '@agentasia/const/visualRef';
+import { RequestTrigger } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { ToolExecutionContext } from '../../types';

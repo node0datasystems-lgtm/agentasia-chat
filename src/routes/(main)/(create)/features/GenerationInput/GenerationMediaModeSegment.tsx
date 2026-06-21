@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox, Icon } from '@lobehub/ui';
-import { Select, type SelectProps } from '@lobehub/ui/base-ui';
+import { Flexbox, Icon } from '@agentasia/ui';
+import { Select, type SelectProps } from '@agentasia/ui/base-ui';
 import { createStaticStyles } from 'antd-style';
 import { ImageIcon, Video } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';

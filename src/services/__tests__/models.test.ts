@@ -1,5 +1,5 @@
-import type * as FetchSSE from '@lobechat/fetch-sse';
-import { getMessageError } from '@lobechat/fetch-sse';
+import type * as FetchSSE from '@agentasia/fetch-sse';
+import { getMessageError } from '@agentasia/fetch-sse';
 import { type Mock } from 'vitest';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

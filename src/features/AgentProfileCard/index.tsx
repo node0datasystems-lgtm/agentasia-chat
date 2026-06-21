@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Center, Flexbox, Skeleton, Text, Tooltip } from '@lobehub/ui';
+import { Avatar, Center, Flexbox, Skeleton, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, type ReactNode } from 'react';
 

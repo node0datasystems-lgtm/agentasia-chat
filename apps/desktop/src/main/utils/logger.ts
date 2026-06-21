@@ -1,4 +1,4 @@
-import { setLoggerFactory } from '@lobechat/local-file-shell';
+import { setLoggerFactory } from '@agentasia/local-file-shell';
 import debug from 'debug';
 import electronLog from 'electron-log';
 

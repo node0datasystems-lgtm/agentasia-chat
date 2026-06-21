@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { ActionIcon, Flexbox, Icon } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { ActionIcon, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import { Bot, Scale, SlidersHorizontal, SquareTerminal } from 'lucide-react';

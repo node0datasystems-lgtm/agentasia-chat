@@ -1,4 +1,4 @@
-import { Flexbox, ScrollShadow } from '@lobehub/ui';
+import { Flexbox, ScrollShadow } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { isDesktop } from '@/const/version';

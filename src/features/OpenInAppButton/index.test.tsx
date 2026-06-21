@@ -30,7 +30,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   DropdownMenu: ({
     children,
     items,
@@ -97,7 +97,7 @@ vi.mock('lucide-react', () => {
   };
 });
 
-vi.mock('@lobehub/icons', () => ({
+vi.mock('@agentasia/icons', () => ({
   Cursor: function Cursor() {
     return null;
   },

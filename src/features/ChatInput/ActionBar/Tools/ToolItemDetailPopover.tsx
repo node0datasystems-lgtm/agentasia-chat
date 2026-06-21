@@ -1,4 +1,4 @@
-import { Flexbox, Tag, Text } from '@lobehub/ui';
+import { Flexbox, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, type ReactNode } from 'react';
 

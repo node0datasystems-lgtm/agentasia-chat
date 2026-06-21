@@ -1,4 +1,4 @@
-import { Block, Flexbox, Icon, Skeleton, Text } from '@lobehub/ui';
+import { Block, Flexbox, Icon, Skeleton, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { SearchIcon } from 'lucide-react';
 import { memo } from 'react';

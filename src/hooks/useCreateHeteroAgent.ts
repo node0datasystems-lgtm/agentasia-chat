@@ -1,4 +1,4 @@
-import { type HeterogeneousAgentClientConfig } from '@lobechat/heterogeneous-agents/client';
+import { type HeterogeneousAgentClientConfig } from '@agentasia/heterogeneous-agents/client';
 import { useCallback } from 'react';
 
 import { useWorkspaceAwareNavigate } from '@/features/Workspace/useWorkspaceAwareNavigate';

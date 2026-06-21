@@ -12,7 +12,7 @@ export type {
   RunCommandState,
   SearchFilesState as SearchLocalFilesState,
   WriteFileState as WriteLocalFileState,
-} from '@lobechat/tool-runtime';
+} from '@agentasia/tool-runtime';
 
 // ==================== Cloud-Specific State ====================
 

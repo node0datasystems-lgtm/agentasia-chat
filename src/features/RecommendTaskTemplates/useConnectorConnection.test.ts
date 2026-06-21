@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import type { TaskTemplateConnectorReference } from '@lobechat/const';
+import type { TaskTemplateConnectorReference } from '@agentasia/const';
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -20,7 +20,7 @@ const mocks = vi.hoisted(() => ({
     composioServers: [],
     createComposioConnection: vi.fn(),
     getLobehubSkillAuthorizeUrl: vi.fn(),
-    lobehubSkillServers: [],
+    agentasiaSkillServers: [],
     refreshComposioConnectionStatus: vi.fn(),
   },
 }));
@@ -39,7 +39,7 @@ vi.mock('@/store/user', () => ({
   },
 }));
 
-const lobehubSpec: TaskTemplateConnectorReference = { identifier: 'linear', source: 'lobehub' };
+const agentasiaSpec: TaskTemplateConnectorReference = { identifier: 'linear', source: 'agentasia' };
 
 describe('useConnectorConnection', () => {
   beforeEach(() => {
@@ -47,7 +47,7 @@ describe('useConnectorConnection', () => {
     mocks.marketAuth.isAuthenticated = false;
     mocks.marketAuth.signIn.mockResolvedValue(null);
     mocks.toolState.composioServers = [];
-    mocks.toolState.lobehubSkillServers = [];
+    mocks.toolState.agentasiaSkillServers = [];
     mocks.toolState.getLobehubSkillAuthorizeUrl.mockResolvedValue({
       authorizeUrl: 'https://market.example.com/oauth/authorize',
       code: 'code',
@@ -63,8 +63,8 @@ describe('useConnectorConnection', () => {
     vi.restoreAllMocks();
   });
 
-  it('asks the user to sign in to Market before requesting LobeHub connector OAuth', async () => {
-    const { result } = renderHook(() => useConnectorConnection([lobehubSpec]));
+  it('asks the user to sign in to Market before requesting AgentAsia connector OAuth', async () => {
+    const { result } = renderHook(() => useConnectorConnection([agentasiaSpec]));
 
     let error: unknown;
     await act(async () => {
@@ -83,7 +83,7 @@ describe('useConnectorConnection', () => {
 
   it('opens provider OAuth directly when Market is authenticated', async () => {
     mocks.marketAuth.isAuthenticated = true;
-    const { result, unmount } = renderHook(() => useConnectorConnection([lobehubSpec]));
+    const { result, unmount } = renderHook(() => useConnectorConnection([agentasiaSpec]));
 
     await act(async () => {
       await result.current.connect();
@@ -107,7 +107,7 @@ describe('useConnectorConnection', () => {
     mocks.toolState.getLobehubSkillAuthorizeUrl.mockRejectedValue({
       data: { code: 'UNAUTHORIZED', httpStatus: 401 },
     });
-    const { result } = renderHook(() => useConnectorConnection([lobehubSpec]));
+    const { result } = renderHook(() => useConnectorConnection([agentasiaSpec]));
 
     let error: unknown;
     await act(async () => {

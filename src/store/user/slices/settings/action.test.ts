@@ -1,4 +1,4 @@
-import { DEFAULT_SETTINGS } from '@lobechat/config';
+import { DEFAULT_SETTINGS } from '@agentasia/config';
 import { act, renderHook } from '@testing-library/react';
 import type { PartialDeep } from 'type-fest';
 import { describe, expect, it, vi } from 'vitest';

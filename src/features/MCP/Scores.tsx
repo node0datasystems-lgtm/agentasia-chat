@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox, Icon, stopPropagation, Tooltip } from '@lobehub/ui';
+import { Center, Flexbox, Icon, stopPropagation, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { CircleDashedIcon, HammerIcon, LayersIcon, MessageSquareQuoteIcon } from 'lucide-react';
 import qs from 'query-string';

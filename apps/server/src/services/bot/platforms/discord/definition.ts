@@ -10,7 +10,7 @@ export const discord: PlatformDefinition = {
   description: 'Connect a Discord bot',
   documentation: {
     portalUrl: 'https://discord.com/developers/applications',
-    setupGuideUrl: 'https://lobehub.com/docs/usage/channels/discord',
+    setupGuideUrl: 'https://agentasia.ai/docs/usage/channels/discord',
   },
   schema,
   clientFactory: new DiscordClientFactory(),

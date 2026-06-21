@@ -1,7 +1,7 @@
 'use client';
 
-import type { GroupedTopic } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import type { GroupedTopic } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar, responsive } from 'antd-style';
 import { Fragment, memo } from 'react';
 import { useTranslation } from 'react-i18next';

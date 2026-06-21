@@ -1,6 +1,6 @@
-import { type UIChatMessage } from '@lobechat/types';
-import { TraceEventType } from '@lobechat/types';
-import * as lobeUIModules from '@lobehub/ui';
+import { type UIChatMessage } from '@agentasia/types';
+import { TraceEventType } from '@agentasia/types';
+import * as lobeUIModules from '@agentasia/ui';
 import { act, renderHook } from '@testing-library/react';
 import { type Mock } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

@@ -2,10 +2,10 @@ import {
   type ActivateToolsParams,
   ActivatorApiName,
   LobeActivatorIdentifier,
-} from '@lobechat/builtin-tool-activator';
-import { builtinToolIdentifiers } from '@lobechat/builtin-tools/identifiers';
-import { safeParseJSON } from '@lobechat/utils';
-import { ActionIcon, Avatar, Flexbox, Icon } from '@lobehub/ui';
+} from '@agentasia/builtin-tool-activator';
+import { builtinToolIdentifiers } from '@agentasia/builtin-tools/identifiers';
+import { safeParseJSON } from '@agentasia/utils';
+import { ActionIcon, Avatar, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronDown, ChevronRight, Edit3Icon } from 'lucide-react';

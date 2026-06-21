@@ -1,4 +1,4 @@
-import type { EvalRunTopicResult, EvalThreadResult } from '@lobechat/types';
+import type { EvalRunTopicResult, EvalThreadResult } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, asc, eq, isNull } from 'drizzle-orm';
 import { z } from 'zod';

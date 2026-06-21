@@ -1,4 +1,4 @@
-import type { BuiltinPortalProps, CrawlPluginState, SearchQuery } from '@lobechat/types';
+import type { BuiltinPortalProps, CrawlPluginState, SearchQuery } from '@agentasia/types';
 import { memo } from 'react';
 
 import { WebBrowsingApiName } from '../../types';

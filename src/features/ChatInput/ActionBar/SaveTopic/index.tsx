@@ -1,5 +1,5 @@
-import { HotkeyEnum } from '@lobechat/const/hotkeys';
-import { ActionIcon, Flexbox, Hotkey, Tooltip } from '@lobehub/ui';
+import { HotkeyEnum } from '@agentasia/const/hotkeys';
+import { ActionIcon, Flexbox, Hotkey, Tooltip } from '@agentasia/ui';
 import { Popconfirm } from 'antd';
 import { LucideGalleryVerticalEnd, LucideMessageSquarePlus } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

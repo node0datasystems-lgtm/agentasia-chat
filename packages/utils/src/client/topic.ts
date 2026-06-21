@@ -1,4 +1,4 @@
-import type { ChatTopic, ChatTopicStatus, GroupedTopic, TimeGroupId } from '@lobechat/types';
+import type { ChatTopic, ChatTopicStatus, GroupedTopic, TimeGroupId } from '@agentasia/types';
 import dayjs from 'dayjs';
 import isToday from 'dayjs/plugin/isToday';
 import isYesterday from 'dayjs/plugin/isYesterday';

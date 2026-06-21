@@ -5,7 +5,7 @@ import type {
   UserKeyVaults,
   UserPreference,
   UserSettings,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import dayjs from 'dayjs';
 import { and, asc, eq, gt, inArray, or, sql } from 'drizzle-orm';

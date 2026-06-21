@@ -2,7 +2,7 @@ import {
   type AgentEvent,
   type AgentRuntimeContext,
   type AgentState,
-} from '@lobechat/agent-runtime';
+} from '@agentasia/agent-runtime';
 import debug from 'debug';
 import { type Redis } from 'ioredis';
 

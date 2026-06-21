@@ -1,4 +1,4 @@
-import { createSource } from '@lobechat/agent-signal';
+import { createSource } from '@agentasia/agent-signal';
 import { vi } from 'vitest';
 
 export interface AgentSignalRedisTestGlobal {

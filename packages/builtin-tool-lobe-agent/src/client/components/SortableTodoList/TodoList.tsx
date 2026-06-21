@@ -1,6 +1,6 @@
 'use client';
 
-import { SortableList } from '@lobehub/ui';
+import { SortableList } from '@agentasia/ui';
 import { memo, useCallback } from 'react';
 
 import AddItemRow from './AddItemRow';

@@ -1,7 +1,7 @@
 import { expo } from '@better-auth/expo';
 import { passkey } from '@better-auth/passkey';
-import { createNanoId, idGenerator, serverDB } from '@lobechat/database';
-import * as schema from '@lobechat/database/schemas';
+import { createNanoId, idGenerator, serverDB } from '@agentasia/database';
+import * as schema from '@agentasia/database/schemas';
 import bcrypt from 'bcryptjs';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { verifyPassword as defaultVerifyPassword } from 'better-auth/crypto';
@@ -282,8 +282,8 @@ export function defineConfig(customOptions: CustomBetterAuthOptions) {
         },
       }),
       passkey({
-        rpName: 'LobeHub',
-        // Extract rpID from auth URL (e.g., 'lobehub.com' from 'https://lobehub.com')
+        rpName: 'AgentAsia',
+        // Extract rpID from auth URL (e.g., 'agentasia.ai' from 'https://agentasia.ai')
         // Returns undefined if AUTH_URL is not set (e.g., in e2e tests)
         rpID: getPasskeyRpID(),
         // Support multiple origins: web + Android APK key hashes

@@ -1,4 +1,4 @@
-import type { FollowUpChip, FollowUpHint, FollowUpModelConfig } from '@lobechat/types';
+import type { FollowUpChip, FollowUpHint, FollowUpModelConfig } from '@agentasia/types';
 
 import { followUpActionService } from '@/services/followUpAction';
 import { type StoreSetter } from '@/store/types';

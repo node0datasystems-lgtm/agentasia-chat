@@ -19,7 +19,7 @@ const mockArtifactState = vi.hoisted(() => ({
   setState: vi.fn(),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children, style }: { children: ReactNode; style?: CSSProperties }) => (
     <div data-testid={style?.overflow === 'auto' ? 'artifact-scroll-container' : undefined}>
       {children}

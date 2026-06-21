@@ -1,5 +1,5 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import { RequestTrigger } from '@lobechat/types';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import { RequestTrigger } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type * as ConstVersion from '@/const/version';

@@ -1,8 +1,8 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import type { DeviceListItem } from '@lobechat/types';
-import { ActionIcon, Button, Flexbox, Icon, Input, SortableList, Tag, Text } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import type { DeviceListItem } from '@agentasia/types';
+import { ActionIcon, Button, Flexbox, Icon, Input, SortableList, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import dayjs from 'dayjs';
 import { FolderOpenIcon, FolderPlusIcon, XIcon } from 'lucide-react';

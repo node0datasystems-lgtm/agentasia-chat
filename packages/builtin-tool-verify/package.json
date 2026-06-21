@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-verify",
+  "name": "@agentasia/builtin-tool-verify",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -7,6 +7,6 @@
   },
   "main": "./src/index.ts",
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

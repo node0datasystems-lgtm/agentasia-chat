@@ -153,8 +153,8 @@ describe('MessengerAccountLinkModel', () => {
 
   describe('findByPlatformUser (static)', () => {
     it('finds the right row when two users share the same Slack user id under different tenants', async () => {
-      // Same Slack user id — but in different workspaces, bound to different LobeHub users.
-      // (Could happen if two LobeHub accounts both happen to be `U_SHARED` in different workspaces.)
+      // Same Slack user id — but in different workspaces, bound to different AgentAsia users.
+      // (Could happen if two AgentAsia accounts both happen to be `U_SHARED` in different workspaces.)
       await new MessengerAccountLinkModel(serverDB, userA).upsertForPlatform({
         activeAgentId: agentA,
         platform: 'slack',

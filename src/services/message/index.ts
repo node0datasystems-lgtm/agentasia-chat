@@ -12,8 +12,8 @@ import {
   type UpdateMessageParams,
   type UpdateMessageRAGParams,
   type UpdateMessageResult,
-} from '@lobechat/types';
-import { type HeatmapsProps } from '@lobehub/charts';
+} from '@agentasia/types';
+import { type HeatmapsProps } from '@agentasia/charts';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

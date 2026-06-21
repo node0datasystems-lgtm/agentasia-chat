@@ -1,7 +1,7 @@
-import { type GeneralAgentCallLLMResultPayload } from '@lobechat/agent-runtime';
-import { LOADING_FLAT } from '@lobechat/const';
-import type { MessageToolCall } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+import { type GeneralAgentCallLLMResultPayload } from '@agentasia/agent-runtime';
+import { LOADING_FLAT } from '@agentasia/const';
+import type { MessageToolCall } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import { chatService } from '@/services/chat';

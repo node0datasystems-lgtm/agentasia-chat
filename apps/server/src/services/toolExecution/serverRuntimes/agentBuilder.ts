@@ -5,10 +5,10 @@ import {
   type SearchMarketToolsParams,
   type UpdateAgentConfigParams,
   type UpdatePromptParams,
-} from '@lobechat/builtin-tool-agent-builder';
-import { builtinTools } from '@lobechat/builtin-tools';
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { modelsResultsPrompt } from '@lobechat/prompts';
+} from '@agentasia/builtin-tool-agent-builder';
+import { builtinTools } from '@agentasia/builtin-tools';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { modelsResultsPrompt } from '@agentasia/prompts';
 
 import { AgentModel } from '@/database/models/agent';
 import { PluginModel } from '@/database/models/plugin';
@@ -44,7 +44,7 @@ export const agentBuilderRuntime: ServerRuntimeRegistration = {
           const allProviders = await aiInfraRepos.getAiProviderList();
           const enabledProviders = allProviders.filter((p) => p.enabled);
 
-          // LobeHub provider first, then by sort order
+          // AgentAsia provider first, then by sort order
           enabledProviders.sort((a, b) => {
             if (a.id === BRANDING_PROVIDER) return -1;
             if (b.id === BRANDING_PROVIDER) return 1;

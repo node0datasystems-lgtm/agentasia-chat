@@ -1,8 +1,8 @@
 'use client';
 
-import { BRANDING_NAME } from '@lobechat/business-const';
-import { type AvatarProps } from '@lobehub/ui';
-import { Avatar } from '@lobehub/ui';
+import { BRANDING_NAME } from '@agentasia/business-const';
+import { type AvatarProps } from '@agentasia/ui';
+import { Avatar } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { useMemo } from 'react';
 

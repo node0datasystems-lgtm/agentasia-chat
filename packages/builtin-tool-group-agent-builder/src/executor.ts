@@ -4,14 +4,14 @@
  * Handles all group agent builder tool calls for configuring groups and their agents.
  * Extends AgentBuilder functionality with group-specific operations.
  */
-import { AgentManagerRuntime } from '@lobechat/agent-manager-runtime';
+import { AgentManagerRuntime } from '@agentasia/agent-manager-runtime';
 import type {
   GetAvailableModelsParams,
   InstallPluginParams,
   SearchMarketToolsParams,
-} from '@lobechat/builtin-tool-agent-builder';
-import type { BuiltinToolContext, BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/builtin-tool-agent-builder';
+import type { BuiltinToolContext, BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 import { agentService } from '@/services/agent';
 import { discoverService } from '@/services/discover';

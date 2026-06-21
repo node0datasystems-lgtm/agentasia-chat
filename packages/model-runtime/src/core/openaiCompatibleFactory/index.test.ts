@@ -214,7 +214,7 @@ describe('LobeOpenAICompatibleFactory', () => {
         );
       });
 
-      // https://github.com/lobehub/lobe-chat/issues/2752
+      // https://github.com/agentasia/agentasia-chat/issues/2752
       it('should handle burn hair data chunks correctly', async () => {
         const chunks = [
           {

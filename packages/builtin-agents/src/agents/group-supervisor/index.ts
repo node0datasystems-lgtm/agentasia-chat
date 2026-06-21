@@ -1,5 +1,5 @@
-import { GroupAgentBuilderIdentifier } from '@lobechat/builtin-tool-group-agent-builder';
-import { GroupManagementIdentifier } from '@lobechat/builtin-tool-group-management';
+import { GroupAgentBuilderIdentifier } from '@agentasia/builtin-tool-group-agent-builder';
+import { GroupManagementIdentifier } from '@agentasia/builtin-tool-group-management';
 
 import type { BuiltinAgentDefinition } from '../../types';
 import { BUILTIN_AGENT_SLUGS } from '../../types';

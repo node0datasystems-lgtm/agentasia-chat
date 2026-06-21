@@ -1,4 +1,4 @@
-import type { TaskAutomationMode } from '@lobechat/types';
+import type { TaskAutomationMode } from '@agentasia/types';
 import {
   ActionIcon,
   Avatar,
@@ -9,8 +9,8 @@ import {
   Popover,
   Segmented,
   Text,
-} from '@lobehub/ui';
-import { Select } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { Select } from '@agentasia/ui/base-ui';
 import { Switch } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import dayjs from 'dayjs';

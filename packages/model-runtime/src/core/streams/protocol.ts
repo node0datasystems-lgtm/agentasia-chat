@@ -1,4 +1,4 @@
-import type { ChatCitationItem, ModelPerformance, ModelUsage } from '@lobechat/types';
+import type { ChatCitationItem, ModelPerformance, ModelUsage } from '@agentasia/types';
 import type { Pricing } from 'model-bank';
 
 import { parseToolCalls } from '../../helpers';

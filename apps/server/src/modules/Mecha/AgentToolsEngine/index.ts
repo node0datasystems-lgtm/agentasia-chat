@@ -9,22 +9,22 @@
  * - Gets model capabilities from provided function
  * - No dependency on frontend stores (useToolStore, useAgentStore, etc.)
  */
-import { CloudSandboxManifest } from '@lobechat/builtin-tool-cloud-sandbox';
-import { KnowledgeBaseManifest } from '@lobechat/builtin-tool-knowledge-base';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { MemoryManifest } from '@lobechat/builtin-tool-memory';
-import { MessageManifest } from '@lobechat/builtin-tool-message';
-import { RemoteDeviceManifest } from '@lobechat/builtin-tool-remote-device';
-import { WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
+import { CloudSandboxManifest } from '@agentasia/builtin-tool-cloud-sandbox';
+import { KnowledgeBaseManifest } from '@agentasia/builtin-tool-knowledge-base';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { MemoryManifest } from '@agentasia/builtin-tool-memory';
+import { MessageManifest } from '@agentasia/builtin-tool-message';
+import { RemoteDeviceManifest } from '@agentasia/builtin-tool-remote-device';
+import { WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
 import {
   alwaysOnToolIds,
   builtinTools,
   chatModeAllowedToolIds,
   defaultToolIds,
-} from '@lobechat/builtin-tools';
-import { createEnableChecker, type LobeToolManifest } from '@lobechat/context-engine';
-import { ToolsEngine } from '@lobechat/context-engine';
-import { type RuntimeEnvMode, type RuntimePlatform } from '@lobechat/types';
+} from '@agentasia/builtin-tools';
+import { createEnableChecker, type LobeToolManifest } from '@agentasia/context-engine';
+import { ToolsEngine } from '@agentasia/context-engine';
+import { type RuntimeEnvMode, type RuntimePlatform } from '@agentasia/types';
 import debug from 'debug';
 
 import {
@@ -249,7 +249,7 @@ export const createServerAgentToolsEngine = (
   };
 
   return createServerToolsEngine(context, {
-    // Pass additional manifests (e.g., LobeHub Skills)
+    // Pass additional manifests (e.g., AgentAsia Skills)
     additionalManifests,
     // Physically drop device-tool manifests for turns whose access policy
     // denies them. Without this filter, `lobe-activator`'s explicit

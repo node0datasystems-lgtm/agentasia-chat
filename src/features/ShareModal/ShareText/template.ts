@@ -1,4 +1,4 @@
-import { type UIChatMessage } from '@lobechat/types';
+import { type UIChatMessage } from '@agentasia/types';
 
 import { LOADING_FLAT } from '@/const/message';
 import { normalizeThinkTags, processWithArtifact } from '@/features/Conversation/utils/markdown';

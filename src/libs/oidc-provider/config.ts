@@ -3,7 +3,7 @@ import urlJoin from 'url-join';
 
 import { appEnv } from '@/envs/app';
 
-const marketBaseUrl = new URL(appEnv.MARKET_BASE_URL ?? 'https://market.lobehub.com').origin;
+const marketBaseUrl = new URL(appEnv.MARKET_BASE_URL ?? 'https://market.agentasia.ai').origin;
 
 /**
  * Default OIDC client configuration
@@ -11,12 +11,12 @@ const marketBaseUrl = new URL(appEnv.MARKET_BASE_URL ?? 'https://market.lobehub.
 export const defaultClients: ClientMetadata[] = [
   {
     application_type: 'web',
-    client_id: 'lobehub-desktop',
-    client_name: 'LobeHub Desktop',
+    client_id: 'agentasia-desktop',
+    client_name: 'AgentAsia Desktop',
     // Only supports authorization code flow
     grant_types: ['authorization_code', 'refresh_token'],
 
-    logo_uri: 'https://hub-apac-1.lobeobjects.space/lobehub-desktop-icon.png',
+    logo_uri: 'https://hub-apac-1.lobeobjects.space/agentasia-desktop-icon.png',
 
     post_logout_redirect_uris: [
       // Dynamically construct web page callback URL
@@ -40,41 +40,41 @@ export const defaultClients: ClientMetadata[] = [
 
   {
     application_type: 'native', // Mobile uses native type
-    client_id: 'lobehub-mobile',
-    client_name: 'LobeHub Mobile',
+    client_id: 'agentasia-mobile',
+    client_name: 'AgentAsia Mobile',
     // Supports authorization code flow and refresh token
     grant_types: ['authorization_code', 'refresh_token'],
     logo_uri: 'https://hub-apac-1.lobeobjects.space/docs/73f69adfa1b802a0e250f6ff9d62f70b.png',
     // Mobile does not need post_logout_redirect_uris as logout is typically handled within the app
     post_logout_redirect_uris: [],
     // Mobile uses custom URL Scheme
-    redirect_uris: ['com.lobehub.app://auth/callback'],
+    redirect_uris: ['com.agentasia.app://auth/callback'],
     response_types: ['code'],
     // Public client with no secret
     token_endpoint_auth_method: 'none',
   },
   {
     application_type: 'native',
-    client_id: 'lobehub-cli',
-    client_name: 'LobeHub CLI',
+    client_id: 'agentasia-cli',
+    client_name: 'AgentAsia CLI',
     grant_types: ['urn:ietf:params:oauth:grant-type:device_code', 'refresh_token'],
-    logo_uri: 'https://hub-apac-1.lobeobjects.space/lobehub-desktop-icon.png',
+    logo_uri: 'https://hub-apac-1.lobeobjects.space/agentasia-desktop-icon.png',
     response_types: [],
     token_endpoint_auth_method: 'none',
   },
   {
     application_type: 'web',
-    client_id: 'lobehub-market',
-    client_name: 'LobeHub Marketplace',
+    client_id: 'agentasia-market',
+    client_name: 'AgentAsia Marketplace',
     grant_types: ['authorization_code', 'refresh_token'],
-    logo_uri: 'https://hub-apac-1.lobeobjects.space/lobehub-desktop-icon.png',
+    logo_uri: 'https://hub-apac-1.lobeobjects.space/agentasia-desktop-icon.png',
     post_logout_redirect_uris: [
-      urlJoin(marketBaseUrl!, '/lobehub-oidc/logout'),
-      'http://localhost:8787/lobehub-oidc/logout',
+      urlJoin(marketBaseUrl!, '/agentasia-oidc/logout'),
+      'http://localhost:8787/agentasia-oidc/logout',
     ],
     redirect_uris: [
-      urlJoin(marketBaseUrl!, '/lobehub-oidc/consent/callback'),
-      'http://localhost:8787/lobehub-oidc/consent/callback',
+      urlJoin(marketBaseUrl!, '/agentasia-oidc/consent/callback'),
+      'http://localhost:8787/agentasia-oidc/consent/callback',
     ],
     response_types: ['code'],
     token_endpoint_auth_method: 'none',

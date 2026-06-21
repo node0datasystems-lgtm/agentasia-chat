@@ -1,4 +1,4 @@
-import { MARKDOWN_MIME_TYPES } from '@lobechat/const';
+import { MARKDOWN_MIME_TYPES } from '@agentasia/const';
 import {
   type AuditSafePathsParams,
   type AuditSafePathsResult,
@@ -39,7 +39,7 @@ import {
   type ShowSaveDialogParams,
   type ShowSaveDialogResult,
   type WriteLocalFileParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { ensureElectronIpc } from '@/utils/electron/ipc';
 

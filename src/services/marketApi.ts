@@ -2,7 +2,7 @@ import {
   type AgentCreateResponse,
   type AgentItemDetail,
   type AgentListResponse,
-} from '@lobehub/market-sdk';
+} from '@agentasia/market-sdk';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { discoverService } from '@/services/discover';
@@ -179,7 +179,7 @@ export class MarketApiService {
   // ==================== Skills API ====================
 
   /**
-   * Search for skills in the LobeHub Market
+   * Search for skills in the AgentAsia Market
    */
   async searchSkill(params: {
     category?: string;
@@ -199,7 +199,7 @@ export class MarketApiService {
    * Get skill download URL from market
    */
   getSkillDownloadUrl(identifier: string): string {
-    const marketBaseUrl = process.env.NEXT_PUBLIC_MARKET_BASE_URL || 'https://market.lobehub.com';
+    const marketBaseUrl = process.env.NEXT_PUBLIC_MARKET_BASE_URL || 'https://market.agentasia.ai';
     return `${marketBaseUrl}/api/v1/skills/${identifier}/download`;
   }
 }

@@ -1,5 +1,5 @@
-import { parseDataUri } from '@lobechat/model-runtime';
-import { uuid } from '@lobechat/utils';
+import { parseDataUri } from '@agentasia/model-runtime';
+import { uuid } from '@agentasia/utils';
 import dayjs from 'dayjs';
 import { sha256 } from 'js-sha256';
 

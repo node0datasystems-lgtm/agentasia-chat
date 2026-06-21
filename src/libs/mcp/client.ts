@@ -161,7 +161,7 @@ export class MCPClient {
 
   constructor(params: MCPClientParams) {
     this.params = params;
-    this.mcp = new Client({ name: 'lobehub-mcp-client', version: '1.0.0' });
+    this.mcp = new Client({ name: 'agentasia-mcp-client', version: '1.0.0' });
 
     switch (params.type) {
       case 'http': {

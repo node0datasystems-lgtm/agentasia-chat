@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/database",
+  "name": "@agentasia/database",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -14,17 +14,17 @@
     "test:server-db": "vitest run --config vitest.config.server.mts"
   },
   "dependencies": {
-    "@lobechat/agent-templates": "workspace:*",
-    "@lobechat/business-const": "workspace:*",
-    "@lobechat/business-model-bank": "workspace:*",
-    "@lobechat/const": "workspace:*",
-    "@lobechat/conversation-flow": "workspace:*",
-    "@lobechat/types": "workspace:*",
-    "@lobechat/utils": "workspace:*",
     "random-words": "^2.0.1",
     "ts-md5": "^2.0.1",
     "type-fest": "^5.2.0",
-    "ws": "^8.18.3"
+    "ws": "^8.18.3",
+    "@agentasia/agent-templates": "workspace:*",
+    "@agentasia/business-const": "workspace:*",
+    "@agentasia/business-model-bank": "workspace:*",
+    "@agentasia/const": "workspace:*",
+    "@agentasia/conversation-flow": "workspace:*",
+    "@agentasia/types": "workspace:*",
+    "@agentasia/utils": "workspace:*"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.3.14",

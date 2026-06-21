@@ -1,11 +1,11 @@
 'use client';
 
 import { SiApple, SiLinux } from '@icons-pack/react-simple-icons';
-import { isDesktop } from '@lobechat/const';
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
-import type { DeviceExecutionTarget } from '@lobechat/types';
-import { Microsoft } from '@lobehub/icons';
-import { Flexbox, Icon, Popover, Tooltip } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
+import type { DeviceExecutionTarget } from '@agentasia/types';
+import { Microsoft } from '@agentasia/icons';
+import { Flexbox, Icon, Popover, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import {
   BoxIcon,
@@ -492,7 +492,7 @@ const HeteroDeviceSwitcher = memo<HeteroDeviceSwitcherProps>(({ agentId }) => {
         ) : (
           <a
             className={styles.headerLink}
-            href="https://lobehub.com/downloads"
+            href="https://agentasia.ai/downloads"
             rel="noreferrer"
             target="_blank"
           >
@@ -570,7 +570,7 @@ const HeteroDeviceSwitcher = memo<HeteroDeviceSwitcherProps>(({ agentId }) => {
       {showWebDownloadCard ? (
         <a
           className={styles.downloadCard}
-          href="https://lobehub.com/downloads"
+          href="https://agentasia.ai/downloads"
           rel="noreferrer"
           target="_blank"
         >

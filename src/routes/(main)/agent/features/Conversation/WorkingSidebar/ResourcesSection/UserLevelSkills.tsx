@@ -1,5 +1,5 @@
-import { Modal } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { Modal } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { EyeIcon, PencilIcon, Trash2Icon } from 'lucide-react';
@@ -23,7 +23,7 @@ const AgentSkillDetail = lazy(() => import('@/features/AgentSkillDetail'));
 /**
  * Reads user-installed skills (entries in the `agent_skill` table — market
  * imports plus user-created customs) into the `SkillsList` row shape. Builtin
- * tools and LobeHub MCP servers are intentionally excluded — those belong in
+ * tools and AgentAsia MCP servers are intentionally excluded — those belong in
  * the Tools popover, not in the per-user skill inventory.
  *
  * Also triggers the underlying SWR fetch so the working sidebar surfaces the

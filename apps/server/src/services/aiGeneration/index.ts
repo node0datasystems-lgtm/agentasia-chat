@@ -2,8 +2,8 @@ import type {
   ChatCompletionTool,
   GenerateObjectPayload,
   GenerateObjectSchema,
-} from '@lobechat/model-runtime';
-import type { OpenAIChatMessage } from '@lobechat/types';
+} from '@agentasia/model-runtime';
+import type { OpenAIChatMessage } from '@agentasia/types';
 
 import type { LobeChatDatabase } from '@/database/type';
 import { initModelRuntimeFromDB } from '@/server/modules/ModelRuntime';

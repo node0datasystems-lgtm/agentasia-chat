@@ -1,23 +1,23 @@
-import { WEB_ONBOARDING } from '@lobechat/builtin-agents';
-import { ClaudeCodeIdentifier as ClaudeCodeToolIdentifier } from '@lobechat/builtin-tool-claude-code/client';
+import { WEB_ONBOARDING } from '@agentasia/builtin-agents';
+import { ClaudeCodeIdentifier as ClaudeCodeToolIdentifier } from '@agentasia/builtin-tool-claude-code/client';
 import {
   GroupAgentBuilderApiName,
   GroupAgentBuilderIdentifier,
-} from '@lobechat/builtin-tool-group-agent-builder';
-import { GroupAgentBuilderInspectors } from '@lobechat/builtin-tool-group-agent-builder/client';
-import { SkillStoreApiName, SkillStoreIdentifier } from '@lobechat/builtin-tool-skill-store';
-import { SkillStoreInspectors, SkillStoreRenders } from '@lobechat/builtin-tool-skill-store/client';
-import { UserInteractionIdentifier } from '@lobechat/builtin-tool-user-interaction';
+} from '@agentasia/builtin-tool-group-agent-builder';
+import { GroupAgentBuilderInspectors } from '@agentasia/builtin-tool-group-agent-builder/client';
+import { SkillStoreApiName, SkillStoreIdentifier } from '@agentasia/builtin-tool-skill-store';
+import { SkillStoreInspectors, SkillStoreRenders } from '@agentasia/builtin-tool-skill-store/client';
+import { UserInteractionIdentifier } from '@agentasia/builtin-tool-user-interaction';
 import {
   WebOnboardingApiName,
   WebOnboardingIdentifier,
   WebOnboardingManifest,
-} from '@lobechat/builtin-tool-web-onboarding';
-import { getBuiltinRenderDisplayControl } from '@lobechat/builtin-tools/displayControls';
-import { builtinToolIdentifiers } from '@lobechat/builtin-tools/identifiers';
-import { getBuiltinInspector } from '@lobechat/builtin-tools/inspectors';
-import { registerBuiltinToolSurfaces } from '@lobechat/builtin-tools/register';
-import { getBuiltinRender } from '@lobechat/builtin-tools/renders';
+} from '@agentasia/builtin-tool-web-onboarding';
+import { getBuiltinRenderDisplayControl } from '@agentasia/builtin-tools/displayControls';
+import { builtinToolIdentifiers } from '@agentasia/builtin-tools/identifiers';
+import { getBuiltinInspector } from '@agentasia/builtin-tools/inspectors';
+import { registerBuiltinToolSurfaces } from '@agentasia/builtin-tools/register';
+import { getBuiltinRender } from '@agentasia/builtin-tools/renders';
 import { beforeAll, describe, expect, it } from 'vitest';
 
 describe('builtin tool registry', () => {

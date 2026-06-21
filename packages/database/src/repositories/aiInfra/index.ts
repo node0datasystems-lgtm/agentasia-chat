@@ -1,12 +1,12 @@
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { loadModels } from '@lobechat/business-model-bank/model-config';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { loadModels } from '@agentasia/business-model-bank/model-config';
 import type {
   AiProviderDetailItem,
   AiProviderListItem,
   AiProviderRuntimeState,
   EnabledProvider,
   ProviderConfig,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { isEmpty } from 'es-toolkit/compat';
 import type { AIChatModelCard, AiProviderModelListItem, EnabledAiModel } from 'model-bank';
 import { AiModelSourceEnum, isAiModelVisible, normalizeAiModelType } from 'model-bank';

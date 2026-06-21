@@ -1,8 +1,8 @@
 'use client';
 
-import { LayersEnum } from '@lobechat/types';
-import { Icon } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { LayersEnum } from '@agentasia/types';
+import { Icon } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import { Brain, ClipboardCheck } from 'lucide-react';

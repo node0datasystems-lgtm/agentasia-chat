@@ -1,6 +1,6 @@
 // @vitest-environment node
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
 import { describe, expect, it, vi } from 'vitest';
 
 import type { SelfIterationCompletionPayload } from '../services/selfIteration/completion';

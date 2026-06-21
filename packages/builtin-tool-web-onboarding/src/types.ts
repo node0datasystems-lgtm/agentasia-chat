@@ -1,4 +1,4 @@
-import type { MarkdownPatchHunk } from '@lobechat/markdown-patch';
+import type { MarkdownPatchHunk } from '@agentasia/markdown-patch';
 
 export const WebOnboardingIdentifier = 'lobe-web-onboarding';
 

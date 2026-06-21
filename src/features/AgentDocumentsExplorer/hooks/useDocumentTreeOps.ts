@@ -1,4 +1,4 @@
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import { useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

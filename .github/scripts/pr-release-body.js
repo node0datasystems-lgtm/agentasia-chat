@@ -3,7 +3,7 @@
  * This script generates the description text for PR pre-releases
  */
 module.exports = ({ version, prNumber, branch }) => {
-  const prLink = `https://github.com/lobehub/lobe-chat/pull/${prNumber}`;
+  const prLink = `https://github.com/lobehub/agentasia-chat/pull/${prNumber}`;
 
   return `
 ## PR Build Information

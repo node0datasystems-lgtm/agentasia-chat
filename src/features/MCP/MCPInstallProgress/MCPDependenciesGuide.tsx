@@ -1,4 +1,4 @@
-import { Button, Flexbox, Markdown, Snippet, Text } from '@lobehub/ui';
+import { Button, Flexbox, Markdown, Snippet, Text } from '@agentasia/ui';
 import { Card, Space } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { AlertTriangle, CheckCircle, ExternalLink, Terminal } from 'lucide-react';

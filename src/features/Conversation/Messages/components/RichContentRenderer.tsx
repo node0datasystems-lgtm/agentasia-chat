@@ -1,4 +1,4 @@
-import { Flexbox, Image, Markdown } from '@lobehub/ui';
+import { Flexbox, Image, Markdown } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { type MessageContentPart } from '@/types/index';

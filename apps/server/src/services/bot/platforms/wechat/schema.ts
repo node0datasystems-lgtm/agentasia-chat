@@ -1,4 +1,4 @@
-import { MAX_BOT_DEBOUNCE_MS } from '@lobechat/const';
+import { MAX_BOT_DEBOUNCE_MS } from '@agentasia/const';
 
 import { displayToolCallsField, watchKeywordsField } from '../const';
 import type { FieldSchema } from '../types';

@@ -1,5 +1,5 @@
-import { getBuiltinRender } from '@lobechat/builtin-tools/renders';
-import { Accordion, AccordionItem, Flexbox, Skeleton } from '@lobehub/ui';
+import { getBuiltinRender } from '@agentasia/builtin-tools/renders';
+import { Accordion, AccordionItem, Flexbox, Skeleton } from '@agentasia/ui';
 import { type CSSProperties } from 'react';
 import { memo, useState } from 'react';
 

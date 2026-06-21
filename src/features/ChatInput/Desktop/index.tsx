@@ -1,8 +1,8 @@
 'use client';
 
-import { type ChatInputProps } from '@lobehub/editor/react';
-import { ChatInput, ChatInputActionBar } from '@lobehub/editor/react';
-import { Center, Flexbox, Skeleton, Text } from '@lobehub/ui';
+import { type ChatInputProps } from '@agentasia/editor/react';
+import { ChatInput, ChatInputActionBar } from '@agentasia/editor/react';
+import { Center, Flexbox, Skeleton, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { type ReactNode, use } from 'react';
 import { memo, useEffect } from 'react';

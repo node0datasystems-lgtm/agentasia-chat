@@ -1,4 +1,4 @@
-import type { PageSelection } from '@lobechat/types';
+import type { PageSelection } from '@agentasia/types';
 
 /**
  * Format page selections into a system prompt context

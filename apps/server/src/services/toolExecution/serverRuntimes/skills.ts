@@ -1,19 +1,19 @@
-import { builtinSkills } from '@lobechat/builtin-skills';
-import { LocalSystemApiName, LocalSystemIdentifier } from '@lobechat/builtin-tool-local-system';
+import { builtinSkills } from '@agentasia/builtin-skills';
+import { LocalSystemApiName, LocalSystemIdentifier } from '@agentasia/builtin-tool-local-system';
 // Note: only `readFile` is wired through deviceGateway. Directory enumeration is
 // left to the model via `local-system.globFiles` so we don't double-fetch.
 import {
   type CommandResult,
   type ExecScriptActivatedSkill,
   SkillsIdentifier,
-} from '@lobechat/builtin-tool-skills';
+} from '@agentasia/builtin-tool-skills';
 import {
   type DeviceFileAccess,
   type ExportFileResult,
   type SkillRuntimeService,
   SkillsExecutionRuntime,
-} from '@lobechat/builtin-tool-skills/executionRuntime';
-import type { BuiltinSkill, SkillItem, SkillListItem, SkillResourceContent } from '@lobechat/types';
+} from '@agentasia/builtin-tool-skills/executionRuntime';
+import type { BuiltinSkill, SkillItem, SkillListItem, SkillResourceContent } from '@agentasia/types';
 import debug from 'debug';
 
 import { AgentSkillModel } from '@/database/models/agentSkill';
@@ -93,7 +93,7 @@ class SkillServerRuntimeService implements SkillRuntimeService {
       throw new Error('topicId is required for runCommand');
     }
 
-    // Preprocess lh commands: rewrite to npx @lobehub/cli + inject auth env vars
+    // Preprocess lh commands: rewrite to npx @agentasia/cli + inject auth env vars
     const lhResult = await preprocessLhCommand(options.command, this.userId);
     if (lhResult.error) {
       return { exitCode: 1, output: '', stderr: lhResult.error, success: false };

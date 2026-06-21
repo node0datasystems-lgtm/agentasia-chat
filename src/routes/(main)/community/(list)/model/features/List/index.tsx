@@ -1,6 +1,6 @@
 'use client';
 
-import { Grid } from '@lobehub/ui';
+import { Grid } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { type DiscoverModelItem } from '@/types/discover';

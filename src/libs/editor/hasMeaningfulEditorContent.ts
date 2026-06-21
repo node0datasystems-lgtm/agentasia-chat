@@ -1,4 +1,4 @@
-import { isObjectLike } from '@lobechat/utils';
+import { isObjectLike } from '@agentasia/utils';
 
 export const hasMeaningfulEditorContent = (editorData: unknown): boolean => {
   if (!isObjectLike(editorData)) return false;

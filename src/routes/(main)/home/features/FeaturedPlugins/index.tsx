@@ -1,7 +1,7 @@
 'use client';
 
-import { MCP } from '@lobehub/icons';
-import { ActionIcon, DropdownMenu, Grid } from '@lobehub/ui';
+import { MCP } from '@agentasia/icons';
+import { ActionIcon, DropdownMenu, Grid } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { MoreHorizontal } from 'lucide-react';
 import { memo, Suspense } from 'react';

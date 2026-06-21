@@ -6,7 +6,7 @@ import type {
   VerifyReport,
   VerifyRubricConfig,
   VerifyUserDecision,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import type { VerifyStatus } from '@/database/models/agentOperation';
 import type {

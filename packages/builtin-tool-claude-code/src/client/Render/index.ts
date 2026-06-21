@@ -1,5 +1,5 @@
-import { RunCommandRender } from '@lobechat/shared-tool-ui/renders';
-import type { BuiltinRender, RenderDisplayControl } from '@lobechat/types';
+import { RunCommandRender } from '@agentasia/shared-tool-ui/renders';
+import type { BuiltinRender, RenderDisplayControl } from '@agentasia/types';
 
 import { ClaudeCodeApiName } from '../../types';
 import {

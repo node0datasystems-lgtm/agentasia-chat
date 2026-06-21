@@ -1,4 +1,4 @@
-import type { LobeToolMeta, SkillItem, SkillListItem } from '@lobechat/types';
+import type { LobeToolMeta, SkillItem, SkillListItem } from '@agentasia/types';
 
 import type { ToolStoreState } from '../../initialState';
 

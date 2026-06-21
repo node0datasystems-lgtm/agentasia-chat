@@ -77,13 +77,18 @@
         "createdAt": 1710649893011,
         "id": "GjneSJG9",
         "updatedAt": 1710649900678,
-        "extra": { "fromModel": "google/gemma-7b-it:free", "fromProvider": "openrouter" },
+        "extra": {
+          "fromModel": "google/gemma-7b-it:free",
+          "fromProvider": "openrouter"
+        },
         "meta": {}
       },
       {
         "role": "user",
         "content": "这是什么",
-        "files": ["file-wUhrpfNq"],
+        "files": [
+          "file-wUhrpfNq"
+        ],
         "sessionId": "inbox",
         "topicId": "cfwpdErj",
         "createdAt": 1711463400412,
@@ -103,13 +108,18 @@
         "updatedAt": 1711463415440,
         "traceId": "3c622197-74d9-4b13-8047-05224071926f",
         "observationId": "3edebb4a-c8f1-4cc0-a51a-09fdddac2f4c",
-        "extra": { "fromModel": "yi-vl-plus", "fromProvider": "zeroone" },
+        "extra": {
+          "fromModel": "yi-vl-plus",
+          "fromProvider": "zeroone"
+        },
         "meta": {}
       },
       {
         "role": "user",
         "content": "what's this?",
-        "files": ["file-nBHOYnWK"],
+        "files": [
+          "file-nBHOYnWK"
+        ],
         "sessionId": "inbox",
         "topicId": "bqQRiAwL",
         "createdAt": 1711463443244,
@@ -129,7 +139,10 @@
         "updatedAt": 1711463464752,
         "traceId": "0f3225cd-1cc4-4f33-822f-30ce64548726",
         "observationId": "c6f2a771-ea0e-4fca-971f-c5641e35727e",
-        "extra": { "fromModel": "yi-vl-plus", "fromProvider": "zeroone" },
+        "extra": {
+          "fromModel": "yi-vl-plus",
+          "fromProvider": "zeroone"
+        },
         "meta": {}
       },
       {
@@ -155,13 +168,19 @@
         "updatedAt": 1713963716972,
         "error": {
           "body": {
-            "error": { "message": "Failed to fetch", "name": "TypeError" },
+            "error": {
+              "message": "Failed to fetch",
+              "name": "TypeError"
+            },
             "provider": "ollama"
           },
           "message": "Error requesting Ollama service, please troubleshoot or retry based on the following information",
           "type": "OllamaBizError"
         },
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -187,13 +206,19 @@
         "updatedAt": 1714150307155,
         "error": {
           "body": {
-            "error": { "message": "Failed to fetch", "name": "TypeError" },
+            "error": {
+              "message": "Failed to fetch",
+              "name": "TypeError"
+            },
             "provider": "ollama"
           },
           "message": "Error requesting Ollama service, please troubleshoot or retry based on the following information",
           "type": "OllamaBizError"
         },
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -219,13 +244,19 @@
         "updatedAt": 1714150457428,
         "error": {
           "body": {
-            "error": { "message": "Failed to fetch", "name": "TypeError" },
+            "error": {
+              "message": "Failed to fetch",
+              "name": "TypeError"
+            },
             "provider": "ollama"
           },
           "message": "Error requesting Ollama service, please troubleshoot or retry based on the following information",
           "type": "OllamaBizError"
         },
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -251,13 +282,19 @@
         "updatedAt": 1714230184787,
         "error": {
           "body": {
-            "error": { "message": "Failed to fetch", "name": "TypeError" },
+            "error": {
+              "message": "Failed to fetch",
+              "name": "TypeError"
+            },
             "provider": "ollama"
           },
           "message": "Error requesting Ollama service, please troubleshoot or retry based on the following information",
           "type": "OllamaBizError"
         },
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -281,7 +318,10 @@
         "createdAt": 1714230306608,
         "id": "RARh6JLx",
         "updatedAt": 1714230315690,
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -305,7 +345,10 @@
         "createdAt": 1714230319534,
         "id": "yD0tYOHp",
         "updatedAt": 1714230323696,
-        "extra": { "fromModel": "llama3", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "llama3",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -329,7 +372,10 @@
         "createdAt": 1714231085959,
         "id": "dUjPwtOg",
         "updatedAt": 1714231087594,
-        "extra": { "fromModel": "wizardlm2", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "wizardlm2",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -353,7 +399,10 @@
         "createdAt": 1714231091965,
         "id": "VsiyaVt2",
         "updatedAt": 1714231093814,
-        "extra": { "fromModel": "wizardlm2", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "wizardlm2",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -377,7 +426,10 @@
         "createdAt": 1714231099407,
         "id": "CvTAdaHx",
         "updatedAt": 1714231100392,
-        "extra": { "fromModel": "wizardlm2", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "wizardlm2",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -413,7 +465,10 @@
           "message": "Error requesting Ollama service, please troubleshoot or retry based on the following information",
           "type": "OllamaBizError"
         },
-        "extra": { "fromModel": "mixtral", "fromProvider": "ollama" },
+        "extra": {
+          "fromModel": "mixtral",
+          "fromProvider": "ollama"
+        },
         "meta": {}
       },
       {
@@ -438,11 +493,19 @@
         "id": "w28FcqY5",
         "updatedAt": 1717080411485,
         "error": {
-          "body": { "error": { "errorType": "NoOpenAIAPIKey" }, "provider": "openai" },
+          "body": {
+            "error": {
+              "errorType": "NoOpenAIAPIKey"
+            },
+            "provider": "openai"
+          },
           "message": "OpenAI API Key is empty, please add a custom OpenAI API Key",
           "type": "NoOpenAIAPIKey"
         },
-        "extra": { "fromModel": "gpt-3.5-turbo", "fromProvider": "openai" },
+        "extra": {
+          "fromModel": "gpt-3.5-turbo",
+          "fromProvider": "openai"
+        },
         "meta": {}
       }
     ],
@@ -478,7 +541,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "provider": "anthropic",
           "chatConfig": {
@@ -491,7 +556,10 @@
         "meta": {
           "avatar": "📝",
           "description": "Your TOEFL Writing assistant and evaluator, specializing in feedback and guidance.",
-          "tags": ["writing", "study"],
+          "tags": [
+            "writing",
+            "study"
+          ],
           "title": "TOEFL Writing Tutor"
         },
         "type": "agent",
@@ -516,7 +584,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -528,7 +598,13 @@
         "meta": {
           "avatar": "📱",
           "description": "A developer expert in Flutter framework and Dart programming language.",
-          "tags": ["flutter", "development", "dart", "programming", "widgets"],
+          "tags": [
+            "flutter",
+            "development",
+            "dart",
+            "programming",
+            "widgets"
+          ],
           "title": "Flutter Maestro"
         },
         "type": "agent",
@@ -553,7 +629,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -601,7 +679,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -613,7 +693,12 @@
         "meta": {
           "avatar": "📓",
           "description": "Weekly report generation assistant",
-          "tags": ["weekly report", "daily report", "writing", "summary"],
+          "tags": [
+            "weekly report",
+            "daily report",
+            "writing",
+            "summary"
+          ],
           "title": "Weekly Report Assistant"
         },
         "type": "agent",
@@ -638,7 +723,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -650,7 +737,11 @@
         "meta": {
           "avatar": "🇨🇳🇯🇵",
           "description": "Proficient in Chinese and Japanese, providing accurate Chinese to Japanese and Japanese to Chinese translations.",
-          "tags": ["translation", "Chinese-Japanese translation", "language communication"],
+          "tags": [
+            "translation",
+            "Chinese-Japanese translation",
+            "language communication"
+          ],
           "title": "Chinese-Japanese Bilingual Translation Expert"
         },
         "type": "agent",
@@ -675,7 +766,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -687,7 +780,10 @@
         "meta": {
           "avatar": "https://images2.imgbox.com/15/8c/9aVHrtwP_o.jpeg",
           "description": "An AI focused on deeply understanding user needs, accurately capturing user intent and requirements through continuous intent alignment, and providing the most suitable solutions.",
-          "tags": ["conversation", "deep understanding"],
+          "tags": [
+            "conversation",
+            "deep understanding"
+          ],
           "title": "Intent Resonance GPT"
         },
         "type": "agent",
@@ -707,12 +803,14 @@
             "top_p": 1
           },
           "plugins": [],
-          "systemRole": "You are a LobeChat technical operator 🍐🐊. You now need to write a developer's guide for LobeChat as a guide for them to develop LobeChat. This guide will include several sections, and you need to output the corresponding document content based on the user's input.\n\nHere is the technical introduction of LobeChat\n\n    LobeChat is an AI conversation application built with the Next.js framework. It uses a series of technology stacks to implement various functions and features.\n\n\n    ## Basic Technology Stack\n\n    The core technology stack of LobeChat is as follows:\n\n    - **Framework**: We chose [Next.js](https://nextjs.org/), a powerful React framework that provides key features such as server-side rendering, routing framework, and Router Handler for our project.\n    - **Component Library**: We use [Ant Design (antd)](https://ant.design/) as the basic component library, and introduce [lobe-ui](https://github.com/lobehub/lobe-ui) as our business component library.\n    - **State Management**: We use [zustand](https://github.com/pmndrs/zustand), a lightweight and easy-to-use state management library.\n    - **Network Request**: We adopt [swr](https://swr.vercel.app/), a React Hooks library for data fetching.\n    - **Routing**: We directly use the routing solution provided by [Next.js](https://nextjs.org/) itself.\n    - **Internationalization**: We use [i18next](https://www.i18next.com/) to implement multi-language support for the application.\n    - **Styling**: We use [antd-style](https://github.com/ant-design/antd-style), a CSS-in-JS library that is compatible with Ant Design.\n    - **Unit Testing**: We use [vitest](https://github.com/vitejs/vitest) for unit testing.\n\n    ## Folder Directory Structure\n\n    The folder directory structure of LobeChat is as follows:\n\n    \\`\\`\\`bash\n    src\n    ├── app        # Main logic and state management related code of the application\n    ├── components # Reusable UI components\n    ├── config     # Application configuration files, including client environment variables and server environment variables\n    ├── const      # Used to define constants, such as action types, route names, etc.\n    ├── features   # Function modules related to business functions, such as Agent settings, plugin development pop-ups, etc.\n    ├── hooks      # Custom utility Hooks reused throughout the application\n    ├── layout     # Layout components of the application, such as navigation bar, sidebar, etc.\n    ├── locales    # Language files for internationalization\n    ├── services   # Encapsulated backend service interfaces, such as HTTP requests\n    ├── store      # Zustand store for state management\n    ├── types      # TypeScript type definition files\n    └── utils      # Common utility functions\n    \\`\\`\\`\n",
+          "systemRole": "You are a LobeChat technical operator 🍐🐊. You now need to write a developer's guide for LobeChat as a guide for them to develop LobeChat. This guide will include several sections, and you need to output the corresponding document content based on the user's input.\n\nHere is the technical introduction of LobeChat\n\n    LobeChat is an AI conversation application built with the Next.js framework. It uses a series of technology stacks to implement various functions and features.\n\n\n    ## Basic Technology Stack\n\n    The core technology stack of LobeChat is as follows:\n\n    - **Framework**: We chose [Next.js](https://nextjs.org/), a powerful React framework that provides key features such as server-side rendering, routing framework, and Router Handler for our project.\n    - **Component Library**: We use [Ant Design (antd)](https://ant.design/) as the basic component library, and introduce [lobe-ui](https://github.com/agentasia/lobe-ui) as our business component library.\n    - **State Management**: We use [zustand](https://github.com/pmndrs/zustand), a lightweight and easy-to-use state management library.\n    - **Network Request**: We adopt [swr](https://swr.vercel.app/), a React Hooks library for data fetching.\n    - **Routing**: We directly use the routing solution provided by [Next.js](https://nextjs.org/) itself.\n    - **Internationalization**: We use [i18next](https://www.i18next.com/) to implement multi-language support for the application.\n    - **Styling**: We use [antd-style](https://github.com/ant-design/antd-style), a CSS-in-JS library that is compatible with Ant Design.\n    - **Unit Testing**: We use [vitest](https://github.com/vitejs/vitest) for unit testing.\n\n    ## Folder Directory Structure\n\n    The folder directory structure of LobeChat is as follows:\n\n    \\`\\`\\`bash\n    src\n    ├── app        # Main logic and state management related code of the application\n    ├── components # Reusable UI components\n    ├── config     # Application configuration files, including client environment variables and server environment variables\n    ├── const      # Used to define constants, such as action types, route names, etc.\n    ├── features   # Function modules related to business functions, such as Agent settings, plugin development pop-ups, etc.\n    ├── hooks      # Custom utility Hooks reused throughout the application\n    ├── layout     # Layout components of the application, such as navigation bar, sidebar, etc.\n    ├── locales    # Language files for internationalization\n    ├── services   # Encapsulated backend service interfaces, such as HTTP requests\n    ├── store      # Zustand store for state management\n    ├── types      # TypeScript type definition files\n    └── utils      # Common utility functions\n    \\`\\`\\`\n",
           "tts": {
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -729,7 +827,7 @@
             "Technical Introduction",
             "next-js",
             "react",
-            "lobe-chat"
+            "agentasia-chat"
           ],
           "title": "LobeChat Technical Documentation Expert"
         },
@@ -755,7 +853,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -802,7 +902,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -814,7 +916,13 @@
         "meta": {
           "avatar": "🎥",
           "description": "Proficient in React, Three.js, React Three Fiber (r3f), Drei, and other related libraries, capable of creating advanced 3D visual effects and animations in web applications.",
-          "tags": ["3D animation", "react", "three-js", "web design", "animation"],
+          "tags": [
+            "3D animation",
+            "react",
+            "three-js",
+            "web design",
+            "animation"
+          ],
           "title": "3D Animation Engineer"
         },
         "type": "agent",
@@ -839,7 +947,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -851,7 +961,11 @@
         "meta": {
           "avatar": "📝",
           "description": "Highly skilled in advanced research proofreading and language editing, specializing in multiple research fields and proficient in academic English.",
-          "tags": ["proofreading", "writing", "research"],
+          "tags": [
+            "proofreading",
+            "writing",
+            "research"
+          ],
           "title": "Academic Proofreading Expert"
         },
         "type": "agent",
@@ -876,7 +990,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -888,7 +1004,10 @@
         "meta": {
           "avatar": "🤡",
           "description": "Just chad",
-          "tags": ["humor", "funny"],
+          "tags": [
+            "humor",
+            "funny"
+          ],
           "title": "Chad"
         },
         "type": "agent",
@@ -913,10 +1032,15 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "openingMessage": "I'm an AI assistant, how can I help you today?",
-          "openingQuestions": ["Question 1", "Question 2"],
+          "openingQuestions": [
+            "Question 1",
+            "Question 2"
+          ],
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
             "enableAutoCreateTopic": true,
@@ -927,7 +1051,10 @@
         "meta": {
           "avatar": "🧠",
           "description": "Deeper thinking of question",
-          "tags": ["conversation", "thinking"],
+          "tags": [
+            "conversation",
+            "thinking"
+          ],
           "title": "Deep Think"
         },
         "type": "agent",
@@ -952,7 +1079,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -964,7 +1093,12 @@
         "meta": {
           "avatar": "💼",
           "description": "Accountant Agent: Comprehensive accounting support and expertise for individuals and businesses worldwide.",
-          "tags": ["accounting", "financial-management", "tax-planning", "budgeting"],
+          "tags": [
+            "accounting",
+            "financial-management",
+            "tax-planning",
+            "budgeting"
+          ],
           "title": "Accounting Expert Assistant"
         },
         "type": "agent",
@@ -989,7 +1123,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -1001,7 +1137,13 @@
         "meta": {
           "avatar": "🔧",
           "description": "DIY project assistant, providing detailed guidance, programming support, and personalized customization",
-          "tags": ["diy", "guide", "project", "programming", "assembly"],
+          "tags": [
+            "diy",
+            "guide",
+            "project",
+            "programming",
+            "assembly"
+          ],
           "title": "DIY Guide Assistant"
         },
         "type": "agent",
@@ -1026,7 +1168,9 @@
             "showAllLocaleVoice": false,
             "sttLocale": "auto",
             "ttsService": "openai",
-            "voice": { "openai": "alloy" }
+            "voice": {
+              "openai": "alloy"
+            }
           },
           "chatConfig": {
             "autoCreateTopicThreshold": 2,
@@ -1038,7 +1182,9 @@
         "meta": {
           "avatar": "📊",
           "description": "Business Consultant: Providing comprehensive business support and expertise worldwide.Capabilities: Business strategy, market research, financial analysis, operations improvement, marketing and sales strategies, organizational development, talent management.Instructions: Define scope, gather business knowledge, develop industry expertise, implement market research and analysis, enable financial analysis and forecasting, facilitate operations and process improvement, provide marketing and sales strategies, support organizational development and talent management, test and refine, ensure data privacy and security.",
-          "tags": ["business-consultant"],
+          "tags": [
+            "business-consultant"
+          ],
           "title": "Business Guru"
         },
         "type": "agent",

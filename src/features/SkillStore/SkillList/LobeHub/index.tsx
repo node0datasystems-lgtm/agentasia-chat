@@ -1,7 +1,7 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobechat/const';
-import { type BuiltinSkill, type LobeToolMeta } from '@lobechat/types';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
+import { type BuiltinSkill, type LobeToolMeta } from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -15,9 +15,9 @@ import {
 import { serverConfigSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { useToolStore } from '@/store/tool';
 import { type ToolStoreState } from '@/store/tool/initialState';
-import { composioStoreSelectors, lobehubSkillStoreSelectors } from '@/store/tool/selectors';
+import { composioStoreSelectors, agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 
 import BuiltinItem from '../Builtin/Item';
 import Empty from '../Empty';
@@ -25,7 +25,7 @@ import { gridStyles } from '../style';
 import WantMoreSkills from '../WantMoreSkills';
 import Item from './Item';
 
-interface LobeHubListProps {
+interface AgentAsiaListProps {
   keywords: string;
 }
 
@@ -34,18 +34,18 @@ const getBuiltinToolsOnly = (s: ToolStoreState): LobeToolMeta[] => {
   return s.builtinTools
     .filter((item) => !item.hidden)
     .map((t) => ({
-      author: 'LobeHub',
+      author: 'AgentAsia',
       identifier: t.identifier,
       meta: t.manifest.meta,
       type: 'builtin' as const,
     }));
 };
 
-export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
+export const AgentAsiaList = memo<AgentAsiaListProps>(({ keywords }) => {
   const { t } = useTranslation('setting');
   const isLobehubSkillEnabled = useServerConfigStore(serverConfigSelectors.enableLobehubSkill);
   const isComposioEnabled = useServerConfigStore(serverConfigSelectors.enableComposio);
-  const allLobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers, isEqual);
+  const allLobehubSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers, isEqual);
   const allComposioServers = useToolStore(composioStoreSelectors.getServers, isEqual);
   // Use custom selector to get only actual builtin tools (not Composio)
   const builtinTools = useToolStore(getBuiltinToolsOnly, isEqual);
@@ -75,7 +75,7 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
 
   const filteredItems = useMemo(() => {
     const items: Array<
-      | { provider: (typeof LOBEHUB_SKILL_PROVIDERS)[number]; type: 'lobehub' }
+      | { provider: (typeof LOBEHUB_SKILL_PROVIDERS)[number]; type: 'agentasia' }
       | { serverType: (typeof COMPOSIO_APP_TYPES)[number]; type: 'composio' }
       | { skill: BuiltinSkill; type: 'builtinAgentSkill' }
       | { tool: LobeToolMeta; type: 'builtin' }
@@ -91,10 +91,10 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
       items.push({ tool, type: 'builtin' });
     }
 
-    // Add LobeHub skills
+    // Add AgentAsia skills
     if (isLobehubSkillEnabled) {
       for (const provider of LOBEHUB_SKILL_PROVIDERS) {
-        items.push({ provider, type: 'lobehub' });
+        items.push({ provider, type: 'agentasia' });
       }
     }
 
@@ -120,7 +120,7 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
         const identifier = item.tool.identifier?.toLowerCase() || '';
         return title.includes(lowerKeywords) || identifier.includes(lowerKeywords);
       }
-      const label = item.type === 'lobehub' ? item.provider.label : item.serverType.label;
+      const label = item.type === 'agentasia' ? item.provider.label : item.serverType.label;
       return label.toLowerCase().includes(lowerKeywords);
     });
   }, [keywords, isLobehubSkillEnabled, isComposioEnabled, builtinTools, builtinSkills]);
@@ -173,7 +173,7 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
               />
             );
           }
-          if (item.type === 'lobehub') {
+          if (item.type === 'agentasia') {
             const server = getLobehubSkillServerByProvider(item.provider.id);
             const isConnected = server?.status === LobehubSkillStatus.CONNECTED;
             return (
@@ -184,7 +184,7 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
                 isConnected={isConnected}
                 key={item.provider.id}
                 label={item.provider.label}
-                type="lobehub"
+                type="agentasia"
                 onOpenDetail={() => createLobehubSkillDetailModal({ identifier: item.provider.id })}
               />
             );
@@ -216,6 +216,6 @@ export const LobeHubList = memo<LobeHubListProps>(({ keywords }) => {
   );
 });
 
-LobeHubList.displayName = 'LobeHubList';
+AgentAsiaList.displayName = 'AgentAsiaList';
 
-export default LobeHubList;
+export default AgentAsiaList;

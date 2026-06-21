@@ -1,4 +1,4 @@
-import type { LobeTool } from '@lobechat/types';
+import type { LobeTool } from '@agentasia/types';
 import { and, desc, eq } from 'drizzle-orm';
 
 import type { InstalledPluginItem, NewInstalledPlugin } from '../schemas';

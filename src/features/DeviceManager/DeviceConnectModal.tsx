@@ -1,8 +1,8 @@
 'use client';
 
-import { DOWNLOAD_URL } from '@lobechat/const';
-import type { DeviceScope } from '@lobechat/types';
-import { Button, CopyButton, Flexbox, Icon, Modal, Segmented, Text } from '@lobehub/ui';
+import { DOWNLOAD_URL } from '@agentasia/const';
+import type { DeviceScope } from '@agentasia/types';
+import { Button, CopyButton, Flexbox, Icon, Modal, Segmented, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { DownloadIcon, MonitorDownIcon, ShieldCheckIcon, TerminalIcon } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';
@@ -138,7 +138,7 @@ const DeviceConnectModal = memo<DeviceConnectModalProps>(({ onClose, open, initi
         index={1}
         title={t('devices.connectWizard.cli.installTitle')}
       >
-        <CommandLine command={'npm install -g @lobehub/cli'} />
+        <CommandLine command={'npm install -g @agentasia/cli'} />
       </Step>
       <Step
         desc={t('devices.connectWizard.cli.loginDesc')}

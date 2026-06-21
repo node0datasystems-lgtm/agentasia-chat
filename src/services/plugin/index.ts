@@ -1,4 +1,4 @@
-import { type LobeTool, type ToolManifest } from '@lobechat/types';
+import { type LobeTool, type ToolManifest } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { type LobeToolCustomPlugin } from '@/types/tool/plugin';

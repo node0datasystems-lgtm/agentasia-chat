@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { useRef } from 'react';
 import type { VirtuosoHandle } from 'react-virtuoso';
 

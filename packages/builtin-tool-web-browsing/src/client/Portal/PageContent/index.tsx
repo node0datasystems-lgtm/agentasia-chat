@@ -1,5 +1,5 @@
-import type { CrawlResult } from '@lobechat/types';
-import type { CrawlSuccessResult } from '@lobechat/web-crawler';
+import type { CrawlResult } from '@agentasia/types';
+import type { CrawlSuccessResult } from '@agentasia/web-crawler';
 import {
   Alert,
   CopyButton,
@@ -10,7 +10,7 @@ import {
   Segmented,
   stopPropagation,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { Descriptions } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ExternalLink } from 'lucide-react';

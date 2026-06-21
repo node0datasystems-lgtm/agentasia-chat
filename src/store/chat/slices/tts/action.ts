@@ -1,4 +1,4 @@
-import { type ChatTTS } from '@lobechat/types';
+import { type ChatTTS } from '@agentasia/types';
 
 import { messageService } from '@/services/message';
 import { type ChatStore } from '@/store/chat/store';

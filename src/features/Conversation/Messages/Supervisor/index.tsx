@@ -1,7 +1,7 @@
 'use client';
 
-import type { EmojiReaction } from '@lobechat/types';
-import { Tag } from '@lobehub/ui';
+import type { EmojiReaction } from '@agentasia/types';
+import { Tag } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { type MouseEventHandler } from 'react';
 import { memo, useCallback } from 'react';

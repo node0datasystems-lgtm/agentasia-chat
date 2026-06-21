@@ -1,5 +1,5 @@
-import type { BuiltinToolContext, BuiltinToolResult, ChatStreamPayload } from '@lobechat/types';
-import { BaseExecutor, RequestTrigger } from '@lobechat/types';
+import type { BuiltinToolContext, BuiltinToolResult, ChatStreamPayload } from '@agentasia/types';
+import { BaseExecutor, RequestTrigger } from '@agentasia/types';
 
 import { notebookService } from '@/services/notebook';
 import { useNotebookStore } from '@/store/notebook';

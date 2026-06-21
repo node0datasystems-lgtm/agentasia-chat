@@ -1,4 +1,4 @@
-import { builtinSkills } from '@lobechat/builtin-skills';
+import { builtinSkills } from '@agentasia/builtin-skills';
 
 import { filterBuiltinSkills } from '@/helpers/skillFilters';
 import { AgentDocumentVfsError } from '@/server/services/agentDocumentVfs/errors';

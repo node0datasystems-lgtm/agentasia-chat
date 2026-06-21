@@ -1,4 +1,4 @@
-import { Center, Flexbox } from '@lobehub/ui';
+import { Center, Flexbox } from '@agentasia/ui';
 import { Drawer } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Suspense, useCallback } from 'react';

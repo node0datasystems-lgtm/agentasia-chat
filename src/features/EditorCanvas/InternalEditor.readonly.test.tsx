@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import { type IEditor, ReactToolbarPlugin } from '@lobehub/editor';
+import { type IEditor, ReactToolbarPlugin } from '@agentasia/editor';
 import { render } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -11,7 +11,7 @@ const editorProps = vi.hoisted(() => ({
   last: undefined as any,
 }));
 
-vi.mock('@lobehub/editor/react', () => ({
+vi.mock('@agentasia/editor/react', () => ({
   Editor: Object.assign(
     vi.fn((props: any) => {
       editorProps.last = props;
@@ -22,7 +22,7 @@ vi.mock('@lobehub/editor/react', () => ({
   useEditorState: () => ({}),
 }));
 
-vi.mock('@lobehub/editor', () => ({
+vi.mock('@agentasia/editor', () => ({
   ReactImagePlugin: vi.fn(),
   ReactLinkPlugin: vi.fn(),
   ReactLiteXmlPlugin: vi.fn(),

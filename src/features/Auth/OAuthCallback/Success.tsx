@@ -1,6 +1,6 @@
 'use client';
 
-import { FluentEmoji, Text } from '@lobehub/ui';
+import { FluentEmoji, Text } from '@agentasia/ui';
 import { Result } from 'antd';
 import React, { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ const SuccessPage = memo(() => {
   const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
-    // Check if this is a LobeHub Skill OAuth callback
+    // Check if this is a AgentAsia Skill OAuth callback
     const provider = searchParams.get('provider');
 
     if (provider && window.opener) {

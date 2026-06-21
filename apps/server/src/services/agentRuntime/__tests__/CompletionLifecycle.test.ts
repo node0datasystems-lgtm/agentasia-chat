@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { ChatErrorType } from '@lobechat/types';
+import { ChatErrorType } from '@agentasia/types';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { CompletionLifecycle } from '../CompletionLifecycle';
@@ -11,10 +11,10 @@ describe('CompletionLifecycle.extractErrorMessage', () => {
   it('extracts message from ChatCompletionErrorPayload (InsufficientBudgetForModel)', () => {
     const lifecycle = buildLifecycle();
     const error = {
-      _responseBody: { provider: 'lobehub' },
+      _responseBody: { provider: 'agentasia' },
       error: { message: 'Budget exceeded' },
       errorType: 'InsufficientBudgetForModel',
-      provider: 'lobehub',
+      provider: 'agentasia',
     };
 
     expect(lifecycle.extractErrorMessage(error)).toBe('Budget exceeded');
@@ -84,10 +84,10 @@ describe('CompletionLifecycle.extractErrorMessage', () => {
   it('never returns [object Object] for nested error objects', () => {
     const lifecycle = buildLifecycle();
     const error = {
-      _responseBody: { provider: 'lobehub' },
+      _responseBody: { provider: 'agentasia' },
       error: { message: 'Budget exceeded' },
       errorType: 'InsufficientBudgetForModel',
-      provider: 'lobehub',
+      provider: 'agentasia',
     };
 
     const result = lifecycle.extractErrorMessage(error);
@@ -244,7 +244,7 @@ describe('CompletionLifecycle.dispatchHooks — error persistence', () => {
           budget,
           error: { message: 'Budget exceeded' },
           errorType: ChatErrorType.FreePlanLimit,
-          provider: 'lobehub',
+          provider: 'agentasia',
         },
         metadata: { _hooks: [], assistantMessageId: 'msg-1' },
         status: 'error',
@@ -257,7 +257,7 @@ describe('CompletionLifecycle.dispatchHooks — error persistence', () => {
         body: expect.objectContaining({
           budget,
           message: 'Budget exceeded',
-          provider: 'lobehub',
+          provider: 'agentasia',
         }),
         message: 'Budget exceeded',
         type: ChatErrorType.FreePlanLimit,

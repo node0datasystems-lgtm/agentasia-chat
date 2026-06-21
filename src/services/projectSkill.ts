@@ -1,4 +1,4 @@
-import type { ListProjectSkillsResult } from '@lobechat/electron-client-ipc';
+import type { ListProjectSkillsResult } from '@agentasia/electron-client-ipc';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { localFileService } from '@/services/electron/localFileService';

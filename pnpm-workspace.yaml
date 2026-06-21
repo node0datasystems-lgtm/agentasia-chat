@@ -7,7 +7,7 @@ packages:
 
 onlyBuiltDependencies:
   - '@google/genai'
-  - '@lobehub/editor'
+  - '@agentasia/editor'
   - '@vercel/speed-insights'
 
 overrides:

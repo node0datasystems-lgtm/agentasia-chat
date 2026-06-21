@@ -1,4 +1,4 @@
-import { Center, Empty, Highlighter } from '@lobehub/ui';
+import { Center, Empty, Highlighter } from '@agentasia/ui';
 import { Code } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

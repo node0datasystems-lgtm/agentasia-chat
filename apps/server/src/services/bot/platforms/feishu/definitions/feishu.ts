@@ -10,7 +10,7 @@ export const feishu: PlatformDefinition = {
   description: 'Connect a Feishu bot',
   documentation: {
     portalUrl: 'https://open.feishu.cn/app',
-    setupGuideUrl: 'https://lobehub.com/docs/usage/channels/feishu',
+    setupGuideUrl: 'https://agentasia.ai/docs/usage/channels/feishu',
   },
   schema: sharedSchema,
   supportsMarkdown: false,

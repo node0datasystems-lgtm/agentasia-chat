@@ -1,6 +1,6 @@
-import { CategoryBar, useThemeColorRange } from '@lobehub/charts';
-import { ModelIcon, ProviderIcon } from '@lobehub/icons';
-import { Avatar, Collapse, Flexbox, Skeleton, Tag } from '@lobehub/ui';
+import { CategoryBar, useThemeColorRange } from '@agentasia/charts';
+import { ModelIcon, ProviderIcon } from '@agentasia/icons';
+import { Avatar, Collapse, Flexbox, Skeleton, Tag } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

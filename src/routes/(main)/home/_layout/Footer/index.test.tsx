@@ -1,4 +1,4 @@
-import type * as LobechatConst from '@lobechat/const';
+import type * as LobechatConst from '@agentasia/const';
 import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router';
@@ -118,7 +118,7 @@ const renderFooter = async ({
       analytics: { track: analyticsTrack },
     };
   }
-  vi.doMock('@lobehub/analytics/react', () => ({
+  vi.doMock('@agentasia/analytics/react', () => ({
     useAnalytics: createAnalyticsApi,
   }));
   vi.doMock('@/components/ChangelogModal', () => ({
@@ -235,7 +235,7 @@ afterEach(() => {
   cleanup();
   vi.unstubAllGlobals();
   vi.doUnmock('@lobechat/const');
-  vi.doUnmock('@lobehub/analytics/react');
+  vi.doUnmock('@agentasia/analytics/react');
   vi.doUnmock('@/components/ChangelogModal');
   vi.doUnmock('@/components/FeedbackModal');
   vi.doUnmock('@/components/HighlightNotification');

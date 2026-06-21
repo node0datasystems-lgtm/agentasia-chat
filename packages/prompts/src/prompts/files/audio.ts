@@ -1,5 +1,5 @@
-import { createVisualFileRef } from '@lobechat/const/visualRef';
-import type { ChatAudioItem } from '@lobechat/types';
+import { createVisualFileRef } from '@agentasia/const/visualRef';
+import type { ChatAudioItem } from '@agentasia/types';
 
 const audioPrompt = (
   item: ChatAudioItem,

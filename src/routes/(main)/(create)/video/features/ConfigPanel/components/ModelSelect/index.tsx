@@ -1,5 +1,5 @@
-import type { SelectProps } from '@lobehub/ui';
-import { ActionIcon, Flexbox, Icon, Select } from '@lobehub/ui';
+import type { SelectProps } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Icon, Select } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { LucideArrowRight, LucideBolt } from 'lucide-react';
 import { memo, useMemo } from 'react';

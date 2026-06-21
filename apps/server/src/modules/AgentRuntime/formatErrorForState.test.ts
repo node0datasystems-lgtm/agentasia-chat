@@ -1,4 +1,4 @@
-import { AgentRuntimeErrorType, ChatErrorType } from '@lobechat/types';
+import { AgentRuntimeErrorType, ChatErrorType } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { formatErrorForState } from './formatErrorForState';
@@ -30,7 +30,7 @@ describe('formatErrorForState', () => {
         budget,
         error: { message: 'Budget exceeded' },
         errorType: ChatErrorType.FreePlanLimit,
-        provider: 'lobehub',
+        provider: 'agentasia',
       });
 
       expect(result).toMatchObject({
@@ -38,7 +38,7 @@ describe('formatErrorForState', () => {
         body: {
           budget,
           message: 'Budget exceeded',
-          provider: 'lobehub',
+          provider: 'agentasia',
         },
         category: 'quota',
         httpStatus: 402,
@@ -210,7 +210,7 @@ describe('formatErrorForState', () => {
 
     it('keeps payload.error available when _responseBody is present', () => {
       const result = formatErrorForState({
-        _responseBody: { provider: 'lobehub' },
+        _responseBody: { provider: 'agentasia' },
         error: { status: 402 },
         errorType: AgentRuntimeErrorType.ProviderBizError,
         message: 'opaque upstream message',
@@ -220,7 +220,7 @@ describe('formatErrorForState', () => {
         body: {
           error: { status: 402 },
           message: 'opaque upstream message',
-          provider: 'lobehub',
+          provider: 'agentasia',
         },
         category: 'quota',
         type: AgentRuntimeErrorType.InsufficientQuota,
@@ -229,7 +229,7 @@ describe('formatErrorForState', () => {
 
     it('merges payload status into an existing _responseBody error object', () => {
       const result = formatErrorForState({
-        _responseBody: { error: { message: 'Payment required' }, provider: 'lobehub' },
+        _responseBody: { error: { message: 'Payment required' }, provider: 'agentasia' },
         error: { status: 402 },
         errorType: AgentRuntimeErrorType.ProviderBizError,
         message: 'opaque upstream message',
@@ -238,7 +238,7 @@ describe('formatErrorForState', () => {
       expect(result).toMatchObject({
         body: {
           error: { message: 'Payment required', status: 402 },
-          provider: 'lobehub',
+          provider: 'agentasia',
         },
         category: 'quota',
         type: AgentRuntimeErrorType.InsufficientQuota,

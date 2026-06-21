@@ -11,10 +11,10 @@ import type {
   MoveLocalFilesParams,
   RunCommandParams,
   WriteLocalFileParams,
-} from '@lobechat/electron-client-ipc';
-import { LocalSystemExecutionRuntime } from '@lobechat/tool-runtime';
-import type { BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/electron-client-ipc';
+import { LocalSystemExecutionRuntime } from '@agentasia/tool-runtime';
+import type { BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 import { localFileService } from '@/services/electron/localFileService';
 

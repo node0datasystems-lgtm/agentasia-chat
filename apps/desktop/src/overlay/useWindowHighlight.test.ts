@@ -1,4 +1,4 @@
-import type { ScreenCaptureWindowInfo } from '@lobechat/electron-client-ipc';
+import type { ScreenCaptureWindowInfo } from '@agentasia/electron-client-ipc';
 import { describe, expect, it } from 'vitest';
 
 import { getTopmostWindowAtPoint } from './useWindowHighlight';

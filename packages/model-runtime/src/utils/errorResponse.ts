@@ -1,4 +1,4 @@
-import type { ErrorResponse, ErrorType } from '@lobechat/types';
+import type { ErrorResponse, ErrorType } from '@agentasia/types';
 
 import { getErrorCodeSpec } from '../errors';
 import type { ILobeAgentRuntimeErrorType } from '../types';

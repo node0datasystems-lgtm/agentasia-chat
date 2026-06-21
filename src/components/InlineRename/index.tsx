@@ -1,7 +1,7 @@
 'use client';
 
-import { type InputProps } from '@lobehub/ui';
-import { Input, Popover, stopPropagation } from '@lobehub/ui';
+import { type InputProps } from '@agentasia/ui';
+import { Input, Popover, stopPropagation } from '@agentasia/ui';
 import { type InputRef, type PopoverProps } from 'antd';
 import { type KeyboardEvent } from 'react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

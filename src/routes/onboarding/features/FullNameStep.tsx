@@ -1,7 +1,7 @@
 'use client';
 
-import { SendButton } from '@lobehub/editor/react';
-import { Button, Flexbox, Icon, Input } from '@lobehub/ui';
+import { SendButton } from '@agentasia/editor/react';
+import { Button, Flexbox, Icon, Input } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { SignatureIcon, Undo2Icon } from 'lucide-react';
 import { memo, useCallback, useRef, useState } from 'react';

@@ -1,7 +1,7 @@
 import type { ChildProcess } from 'node:child_process';
 import { spawn } from 'node:child_process';
 
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 
 import { AgentStreamPipeline } from './agentStreamPipeline';
 import { resolveCliSpawnPlan } from './cliSpawn';
@@ -111,7 +111,7 @@ export interface SpawnAgentHandle {
  * `is_error: "Answer questions?"` tool_result in `-p` mode before the host
  * can surface the questions, so the model falls back to plain-text prompting
  * anyway. Remove this once a local MCP-backed replacement is wired to
- * LobeHub's intervention UI.
+ * AgentAsia's intervention UI.
  */
 export const CLAUDE_CODE_BASE_ARGS = [
   '-p',

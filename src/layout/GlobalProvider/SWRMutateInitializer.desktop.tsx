@@ -1,6 +1,6 @@
 'use client';
 
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
 import { type PropsWithChildren, useEffect } from 'react';
 import { useSWRConfig } from 'swr';
 

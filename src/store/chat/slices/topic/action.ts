@@ -1,8 +1,8 @@
 // Note: To make the code more logic and readable, we just disable the auto sort key eslint rule
 // DON'T REMOVE THE FIRST LINE
-import { chainSummaryTitle } from '@lobechat/prompts';
-import { type ChatTopicMetadata, type MessageMapScope, type UIChatMessage } from '@lobechat/types';
-import { TraceNameMap } from '@lobechat/types';
+import { chainSummaryTitle } from '@agentasia/prompts';
+import { type ChatTopicMetadata, type MessageMapScope, type UIChatMessage } from '@agentasia/types';
+import { TraceNameMap } from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 import { t } from 'i18next';
 import { type SWRResponse } from 'swr';

@@ -1,4 +1,4 @@
-import { Button, Flexbox } from '@lobehub/ui';
+import { Button, Flexbox } from '@agentasia/ui';
 import { useTranslation } from 'react-i18next';
 
 import type { SelectAllState } from '@/routes/(main)/resource/features/store/initialState';

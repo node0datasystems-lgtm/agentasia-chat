@@ -9,11 +9,11 @@ import type {
   SystemInfoRequestMessage,
   ToolCallRequestMessage,
   ToolCallResponseMessage,
-} from '@lobechat/device-gateway-client';
-import { GatewayClient } from '@lobechat/device-gateway-client';
-import type { IdentitySource } from '@lobechat/device-identity';
-import { deriveDeviceId } from '@lobechat/device-identity';
-import type { GatewayConnectionStatus } from '@lobechat/electron-client-ipc';
+} from '@agentasia/device-gateway-client';
+import { GatewayClient } from '@agentasia/device-gateway-client';
+import type { IdentitySource } from '@agentasia/device-identity';
+import { deriveDeviceId } from '@agentasia/device-identity';
+import type { GatewayConnectionStatus } from '@agentasia/electron-client-ipc';
 import { app, powerSaveBlocker } from 'electron';
 
 import { isDev } from '@/const/env';
@@ -24,7 +24,7 @@ import { ServiceModule } from './index';
 
 const logger = createLogger('services:GatewayConnectionSrv');
 
-const DEFAULT_GATEWAY_URL = 'https://device-gateway.lobehub.com';
+const DEFAULT_GATEWAY_URL = 'https://device-gateway.agentasia.ai';
 
 /**
  * Result envelope a tool-call handler must return. Mirrors
@@ -202,7 +202,7 @@ export default class GatewayConnectionService extends ServiceModule {
   }
 
   /**
-   * Derive the stable, user-scoped device id. Survives LobeHub reinstalls
+   * Derive the stable, user-scoped device id. Survives AgentAsia reinstalls
    * because it hashes the OS machine id; falls back to the stored random UUID
    * when the machine id is unavailable. Caches the result for this session.
    */

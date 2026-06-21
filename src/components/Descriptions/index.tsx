@@ -1,5 +1,5 @@
-import { type GridProps, type IconProps } from '@lobehub/ui';
-import { Flexbox, Grid, Icon, Text } from '@lobehub/ui';
+import { type GridProps, type IconProps } from '@agentasia/ui';
+import { Flexbox, Grid, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx, responsive } from 'antd-style';
 import { type CSSProperties, type ReactNode } from 'react';
 import { memo } from 'react';

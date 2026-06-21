@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { VerifyCheckItem } from '@lobechat/types';
+import type { VerifyCheckItem } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../core/getTestDB';

@@ -1,4 +1,4 @@
-import { type LobeToolManifest } from '@lobechat/context-engine';
+import { type LobeToolManifest } from '@agentasia/context-engine';
 
 /**
  * Global fallback when neither the LLM nor the tool manifest specifies a

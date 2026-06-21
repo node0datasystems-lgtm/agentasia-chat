@@ -1,4 +1,4 @@
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { type CollapseProps } from 'antd';
 import { Collapse } from 'antd';
 import { createStaticStyles, responsive } from 'antd-style';

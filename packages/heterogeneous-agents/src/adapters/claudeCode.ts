@@ -3,7 +3,7 @@
  *
  * Converts Claude Code CLI `--output-format stream-json --verbose` (ndjson)
  * events into unified HeterogeneousAgentEvent[] that the executor feeds into
- * LobeHub's Gateway event handler.
+ * AgentAsia's Gateway event handler.
  *
  * Stream-json event shapes (from real CLI output):
  *
@@ -105,7 +105,7 @@ const TASK_UPDATE_RESULT_PATTERN = /^Updated task #\d+/;
 const TASK_LIST_LINE_PATTERN = /^#(\d+) \[(pending|in_progress|completed)\] (.+)$/;
 
 /**
- * Tool name CC sees for the LobeHub-hosted MCP `ask_user_question` server.
+ * Tool name CC sees for the AgentAsia-hosted MCP `ask_user_question` server.
  * Source of truth lives in `../askUser/constants.ts`; replicated here as a
  * literal so the adapter compiles in browser bundles without dragging in
  * any of the askUser package's runtime (node:http, MCP SDK, etc.) by

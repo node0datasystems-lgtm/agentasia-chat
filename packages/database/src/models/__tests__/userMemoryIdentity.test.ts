@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { RelationshipEnum } from '@lobechat/types';
+import { RelationshipEnum } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { nanoid } from 'nanoid';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';

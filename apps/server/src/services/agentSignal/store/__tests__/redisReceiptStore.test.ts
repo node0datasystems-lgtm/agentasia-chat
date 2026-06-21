@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum } from '@lobechat/types';
+import { LayersEnum } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {

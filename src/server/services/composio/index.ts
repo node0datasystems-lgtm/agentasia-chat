@@ -1,6 +1,6 @@
-import { COMPOSIO_APP_TYPES } from '@lobechat/const';
-import type { LobeToolManifest } from '@lobechat/context-engine';
-import type { LobeChatDatabase } from '@lobechat/database';
+import { COMPOSIO_APP_TYPES } from '@agentasia/const';
+import type { LobeToolManifest } from '@agentasia/context-engine';
+import type { LobeChatDatabase } from '@agentasia/database';
 import debug from 'debug';
 
 import { PluginModel } from '@/database/models/plugin';

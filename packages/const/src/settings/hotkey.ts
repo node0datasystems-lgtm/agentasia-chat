@@ -1,4 +1,4 @@
-import type { HotkeyId } from '@lobechat/types';
+import type { HotkeyId } from '@agentasia/types';
 
 import { HOTKEYS_REGISTRATION } from '../hotkeys';
 

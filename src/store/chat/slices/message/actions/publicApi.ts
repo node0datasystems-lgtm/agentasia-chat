@@ -1,5 +1,5 @@
-import { TraceEventType } from '@lobechat/types';
-import { copyToClipboard } from '@lobehub/ui';
+import { TraceEventType } from '@agentasia/types';
+import { copyToClipboard } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 
 import { messageService } from '@/services/message';

@@ -1,4 +1,4 @@
-import { sleep } from '@lobechat/utils';
+import { sleep } from '@agentasia/utils';
 import debug from 'debug';
 import { Expo, type ExpoPushMessage } from 'expo-server-sdk';
 

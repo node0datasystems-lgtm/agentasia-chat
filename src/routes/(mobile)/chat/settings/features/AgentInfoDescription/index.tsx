@@ -1,8 +1,8 @@
 'use client';
 
 import { ProDescriptions } from '@ant-design/pro-components';
-import { type AgentItemDetail } from '@lobehub/market-sdk';
-import { Flexbox, Tag } from '@lobehub/ui';
+import { type AgentItemDetail } from '@agentasia/market-sdk';
+import { Flexbox, Tag } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

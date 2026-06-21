@@ -1,4 +1,4 @@
-export { DEFAULT_MINI_MODEL, DEFAULT_MODEL } from '@lobechat/business-const';
+export { DEFAULT_MINI_MODEL, DEFAULT_MODEL } from '@agentasia/business-const';
 
 export const DEFAULT_EMBEDDING_MODEL = 'text-embedding-3-small';
 

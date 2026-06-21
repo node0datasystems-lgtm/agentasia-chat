@@ -110,7 +110,7 @@ describe('GET /api/agent/messenger/:platform/install', () => {
       expect(await res.text()).toMatch(/Slack messenger is not configured/);
     });
 
-    it('issues a state token bound to the LobeHub user and 302s to Slack authorize', async () => {
+    it('issues a state token bound to the AgentAsia user and 302s to Slack authorize', async () => {
       const res = await messengerInstall(
         buildContext('slack', '/api/agent/messenger/slack/install'),
       );

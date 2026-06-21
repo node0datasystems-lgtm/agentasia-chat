@@ -1,5 +1,5 @@
-import type { VerifyCheckItem } from '@lobechat/types';
-import { DEFAULT_MAX_REPAIR_ROUNDS } from '@lobechat/types';
+import type { VerifyCheckItem } from '@agentasia/types';
+import { DEFAULT_MAX_REPAIR_ROUNDS } from '@agentasia/types';
 import debug from 'debug';
 
 import { AgentOperationModel } from '@/database/models/agentOperation';

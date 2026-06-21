@@ -3,8 +3,8 @@ import {
   mergeModelRuntimeHooks,
   ModelRuntime,
   type ModelRuntimeHooks,
-} from '@lobechat/model-runtime';
-import { LobeVertexAI } from '@lobechat/model-runtime/vertexai';
+} from '@agentasia/model-runtime';
+import { LobeVertexAI } from '@agentasia/model-runtime/vertexai';
 import {
   type AWSBedrockKeyVault,
   type AzureOpenAIKeyVault,
@@ -14,8 +14,8 @@ import {
   type GithubCopilotKeyVault,
   type OpenAICompatibleKeyVault,
   type VertexAIKeyVault,
-} from '@lobechat/types';
-import { safeParseJSON } from '@lobechat/utils';
+} from '@agentasia/types';
+import { safeParseJSON } from '@agentasia/utils';
 import { ModelProvider } from 'model-bank';
 
 import { getBusinessModelRuntimeHooks } from '@/business/server/model-runtime';
@@ -170,7 +170,7 @@ const getParamsFromPayload = (provider: string, payload: ClientSecretPayload) =>
   const llmConfig = getLLMConfig() as Record<string, any>;
 
   switch (provider) {
-    case ModelProvider.LobeHub: {
+    case ModelProvider.AgentAsia: {
       return { apikey: payload.apiKey, baseURL: payload.baseURL, ...payload };
     }
 

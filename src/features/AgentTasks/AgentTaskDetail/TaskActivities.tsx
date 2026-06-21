@@ -1,5 +1,5 @@
-import type { BriefType, TaskDetailActivity } from '@lobechat/types';
-import { Accordion, AccordionItem, Avatar, Empty, Flexbox, Icon, Tag, Text } from '@lobehub/ui';
+import type { BriefType, TaskDetailActivity } from '@agentasia/types';
+import { Accordion, AccordionItem, Avatar, Empty, Flexbox, Icon, Tag, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import type { TFunction } from 'i18next';
 import { BotMessageSquare, CircleDot, CirclePlus, MessageCircle } from 'lucide-react';

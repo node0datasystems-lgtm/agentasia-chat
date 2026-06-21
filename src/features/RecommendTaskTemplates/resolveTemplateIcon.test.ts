@@ -1,5 +1,5 @@
 import { SiGithub } from '@icons-pack/react-simple-icons';
-import type { TaskTemplate } from '@lobechat/const';
+import type { TaskTemplate } from '@agentasia/const';
 import { BookOpen, type LucideIcon, Sparkles } from 'lucide-react';
 import { describe, expect, it } from 'vitest';
 
@@ -31,7 +31,7 @@ describe('resolveTemplateIcon', () => {
   it('falls back to a required connector provider icon (component form)', () => {
     const spec = resolveTemplateIcon(
       make({
-        connectors: [{ identifier: 'github', required: true, source: 'lobehub' }],
+        connectors: [{ identifier: 'github', required: true, source: 'agentasia' }],
         interests: ['coding'],
       }),
       interestMap,
@@ -55,8 +55,8 @@ describe('resolveTemplateIcon', () => {
     const spec = resolveTemplateIcon(
       make({
         connectors: [
-          { identifier: 'notion', required: false, source: 'lobehub' },
-          { identifier: 'github', required: true, source: 'lobehub' },
+          { identifier: 'notion', required: false, source: 'agentasia' },
+          { identifier: 'github', required: true, source: 'agentasia' },
         ],
       }),
       interestMap,
@@ -67,7 +67,7 @@ describe('resolveTemplateIcon', () => {
   it('falls back to optional connector icon when required is absent', () => {
     const spec = resolveTemplateIcon(
       make({
-        connectors: [{ identifier: 'notion', required: false, source: 'lobehub' }],
+        connectors: [{ identifier: 'notion', required: false, source: 'agentasia' }],
         interests: ['coding'],
       }),
       interestMap,
@@ -80,8 +80,8 @@ describe('resolveTemplateIcon', () => {
     const spec = resolveTemplateIcon(
       make({
         connectors: [
-          { identifier: 'nonexistent-x', required: true, source: 'lobehub' },
-          { identifier: 'notion', required: false, source: 'lobehub' },
+          { identifier: 'nonexistent-x', required: true, source: 'agentasia' },
+          { identifier: 'notion', required: false, source: 'agentasia' },
         ],
       }),
       interestMap,

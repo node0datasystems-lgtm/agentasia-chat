@@ -1,5 +1,5 @@
-import { Icon } from '@lobehub/ui';
-import type { DropdownItem } from '@lobehub/ui/base-ui';
+import { Icon } from '@agentasia/ui';
+import type { DropdownItem } from '@agentasia/ui/base-ui';
 import { LucideCheck } from 'lucide-react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

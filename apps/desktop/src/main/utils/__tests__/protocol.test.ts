@@ -27,7 +27,7 @@ describe('Protocol', () => {
         marketId: 'higress',
       });
 
-      expect(url).toMatch(/^lobehub:\/\/plugin\/install\?/);
+      expect(url).toMatch(/^agentasia:\/\/plugin\/install\?/);
       expect(url).toContain('id=edgeone-mcp');
       expect(url).toContain('marketId=higress');
 
@@ -62,7 +62,7 @@ describe('Protocol', () => {
         marketId: 'smithery',
       });
 
-      expect(url).toMatch(/^lobehub:\/\/plugin\/install\?/);
+      expect(url).toMatch(/^agentasia:\/\/plugin\/install\?/);
       expect(url).toContain('id=awesome-api');
       expect(url).toContain('marketId=smithery');
     });
@@ -101,7 +101,7 @@ describe('Protocol', () => {
       const url = generateRFCProtocolUrl({
         id: 'test-mcp',
         schema,
-        marketId: 'lobehub',
+        marketId: 'agentasia',
       });
 
       const parsed = parseProtocolUrl(url);
@@ -111,7 +111,7 @@ describe('Protocol', () => {
       expect(parsed?.action).toBe('install');
       expect(parsed?.params.type).toBe('mcp');
       expect(parsed?.params.id).toBe('test-mcp');
-      expect(parsed?.params.marketId).toBe('lobehub');
+      expect(parsed?.params.marketId).toBe('agentasia');
       expect(parsed?.originalUrl).toBe(url);
 
       // Verify that the schema can be parsed
@@ -125,7 +125,7 @@ describe('Protocol', () => {
     });
 
     it('should parse URLs with any action', () => {
-      const result = parseProtocolUrl('lobehub://plugin/configure?id=test');
+      const result = parseProtocolUrl('agentasia://plugin/configure?id=test');
       expect(result).toBeTruthy();
       expect(result?.urlType).toBe('plugin');
       expect(result?.action).toBe('configure');
@@ -133,7 +133,7 @@ describe('Protocol', () => {
     });
 
     it('should parse URLs with any query parameters', () => {
-      const result = parseProtocolUrl('lobehub://plugin/install?custom=value&another=param');
+      const result = parseProtocolUrl('agentasia://plugin/install?custom=value&another=param');
       expect(result).toBeTruthy();
       expect(result?.urlType).toBe('plugin');
       expect(result?.action).toBe('install');
@@ -142,7 +142,7 @@ describe('Protocol', () => {
     });
 
     it('should handle URLs without query parameters', () => {
-      const result = parseProtocolUrl('lobehub://plugin/install');
+      const result = parseProtocolUrl('agentasia://plugin/install');
       expect(result).toBeTruthy();
       expect(result?.urlType).toBe('plugin');
       expect(result?.action).toBe('install');
@@ -150,7 +150,7 @@ describe('Protocol', () => {
     });
 
     it('should return null for URLs without action', () => {
-      const result = parseProtocolUrl('lobehub://plugin/');
+      const result = parseProtocolUrl('agentasia://plugin/');
       expect(result).toBeNull();
     });
   });
@@ -184,10 +184,10 @@ describe('Protocol', () => {
 
     it('should handle different protocol schemes', () => {
       const testCases = [
-        'lobehub://plugin/install?test=value',
-        'lobehub-dev://plugin/install?test=value',
-        'lobehub-beta://plugin/install?test=value',
-        'lobehub-nightly://plugin/install?test=value',
+        'agentasia://plugin/install?test=value',
+        'agentasia-dev://plugin/install?test=value',
+        'agentasia-beta://plugin/install?test=value',
+        'agentasia-nightly://plugin/install?test=value',
       ];
 
       testCases.forEach((url) => {

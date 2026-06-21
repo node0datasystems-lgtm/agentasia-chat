@@ -1,4 +1,4 @@
-import { buildTrustedClientPayload, createTrustedClientToken } from '@lobehub/market-sdk';
+import { buildTrustedClientPayload, createTrustedClientToken } from '@agentasia/market-sdk';
 
 import { appEnv } from '@/envs/app';
 

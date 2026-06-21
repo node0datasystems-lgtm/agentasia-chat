@@ -3,26 +3,26 @@
  *
  * Creates and exports the ActivatorExecutor instance for registration.
  * Resolves tool manifests from the tool store (installedPlugins + builtinTools +
- * lobehubSkillServers + composio servers).
+ * agentasiaSkillServers + composio servers).
  *
  * State tracking (getActivatedToolIds / markActivated) is intentionally a no-op
  * because the activated state is persisted in message pluginState and accumulated
  * by selectActivatedToolIdsFromMessages at each agentic loop step.
  */
-import { builtinSkills } from '@lobechat/builtin-skills';
+import { builtinSkills } from '@agentasia/builtin-skills';
 import {
   ActivatorExecutionRuntime,
   type ActivatorRuntimeService,
   type ToolManifestInfo,
-} from '@lobechat/builtin-tool-activator/executionRuntime';
-import { ActivatorExecutor } from '@lobechat/builtin-tool-activator/executor';
-import { SkillsExecutionRuntime } from '@lobechat/builtin-tool-skills/executionRuntime';
+} from '@agentasia/builtin-tool-activator/executionRuntime';
+import { ActivatorExecutor } from '@agentasia/builtin-tool-activator/executor';
+import { SkillsExecutionRuntime } from '@agentasia/builtin-tool-skills/executionRuntime';
 
 import { filterBuiltinSkills } from '@/helpers/skillFilters';
 import { agentSkillService } from '@/services/skill';
 import { getToolStoreState } from '@/store/tool';
 import { toolSelectors } from '@/store/tool/selectors/tool';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore';
 
 const skillsRuntime = new SkillsExecutionRuntime({
   builtinSkills: filterBuiltinSkills(builtinSkills),
@@ -82,19 +82,19 @@ const service: ActivatorRuntimeService = {
         continue;
       }
 
-      // Search LobeHub Skill servers
-      const lobehubSkillServer = s.lobehubSkillServers?.find(
+      // Search AgentAsia Skill servers
+      const agentasiaSkillServer = s.agentasiaSkillServers?.find(
         (server) => server.identifier === id && server.status === LobehubSkillStatus.CONNECTED,
       );
-      if (lobehubSkillServer?.tools) {
+      if (agentasiaSkillServer?.tools) {
         results.push({
-          apiDescriptions: lobehubSkillServer.tools.map((t) => ({
+          apiDescriptions: agentasiaSkillServer.tools.map((t) => ({
             description: t.description || '',
             name: t.name,
           })),
-          avatar: lobehubSkillServer.icon,
-          identifier: lobehubSkillServer.identifier,
-          name: lobehubSkillServer.name,
+          avatar: agentasiaSkillServer.icon,
+          identifier: agentasiaSkillServer.identifier,
+          name: agentasiaSkillServer.name,
         });
         continue;
       }

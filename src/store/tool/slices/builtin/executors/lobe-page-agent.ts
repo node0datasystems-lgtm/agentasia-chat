@@ -4,8 +4,8 @@
  * Creates and exports the PageAgentExecutor instance for registration.
  * Also exports the runtime for editor instance injection.
  */
-import { PageAgentExecutor } from '@lobechat/builtin-tool-page-agent/client';
-import { EditorRuntime } from '@lobechat/editor-runtime';
+import { PageAgentExecutor } from '@agentasia/builtin-tool-page-agent/client';
+import { EditorRuntime } from '@agentasia/editor-runtime';
 
 // Create singleton instance of the runtime
 export const pageAgentRuntime = new EditorRuntime();

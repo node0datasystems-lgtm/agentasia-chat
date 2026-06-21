@@ -1,5 +1,5 @@
-import { KnowledgeBaseIdentifier } from '@lobechat/builtin-tool-knowledge-base';
-import { KnowledgeBaseExecutionRuntime } from '@lobechat/builtin-tool-knowledge-base/executionRuntime';
+import { KnowledgeBaseIdentifier } from '@agentasia/builtin-tool-knowledge-base';
+import { KnowledgeBaseExecutionRuntime } from '@agentasia/builtin-tool-knowledge-base/executionRuntime';
 
 import { AgentModel } from '@/database/models/agent';
 import { FileModel } from '@/database/models/file';

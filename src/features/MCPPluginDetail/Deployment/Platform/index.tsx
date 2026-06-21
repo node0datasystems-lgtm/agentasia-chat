@@ -1,5 +1,5 @@
-import { type ConnectionConfig } from '@lobehub/market-types';
-import { Block, Highlighter } from '@lobehub/ui';
+import { type ConnectionConfig } from '@agentasia/market-types';
+import { Block, Highlighter } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 

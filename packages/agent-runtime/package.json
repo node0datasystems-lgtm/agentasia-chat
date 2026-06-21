@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/agent-runtime",
+  "name": "@agentasia/agent-runtime",
   "version": "1.0.0",
   "private": true,
   "main": "./src/index.ts",
@@ -12,8 +12,8 @@
     "p-map": "^7.0.4"
   },
   "devDependencies": {
-    "@lobechat/context-engine": "workspace:*",
-    "@lobechat/types": "workspace:*",
-    "openai": "^6.42.0"
+    "openai": "^6.42.0",
+    "@agentasia/context-engine": "workspace:*",
+    "@agentasia/types": "workspace:*"
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Avatar, Block, Flexbox, Markdown } from '@lobehub/ui';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Avatar, Block, Flexbox, Markdown } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';

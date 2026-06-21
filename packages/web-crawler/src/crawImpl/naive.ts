@@ -1,4 +1,4 @@
-import { ssrfSafeFetch } from '@lobechat/ssrf-safe-fetch';
+import { ssrfSafeFetch } from '@agentasia/ssrf-safe-fetch';
 
 import type { CrawlImpl, CrawlSuccessResult } from '../type';
 import { PageNotFoundError, toFetchError } from '../utils/errorType';

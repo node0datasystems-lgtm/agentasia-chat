@@ -1,11 +1,11 @@
-import { PLUGIN_SCHEMA_API_MD5_PREFIX, PLUGIN_SCHEMA_SEPARATOR } from '@lobechat/const';
-import { ToolNameResolver } from '@lobechat/context-engine';
+import { PLUGIN_SCHEMA_API_MD5_PREFIX, PLUGIN_SCHEMA_SEPARATOR } from '@agentasia/const';
+import { ToolNameResolver } from '@agentasia/context-engine';
 import type {
   BuiltinToolContext,
   ChatToolPayload,
   MessageToolCall,
   UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { act, renderHook } from '@testing-library/react';
 import { type Mock } from 'vitest';
 import { afterEach, describe, expect, it, vi } from 'vitest';

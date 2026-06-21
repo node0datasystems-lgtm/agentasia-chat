@@ -1,12 +1,12 @@
-import { type LobeChatDatabase } from '@lobechat/database';
-import { CompressionRepository } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { CompressionRepository } from '@agentasia/database';
 import {
   type CreateMessageParams,
   type QueryMessageParams,
   type UIChatMessage,
   type UpdateMessageParams,
-} from '@lobechat/types';
-import { createTimingHelpers, getDurationMs } from '@lobechat/utils';
+} from '@agentasia/types';
+import { createTimingHelpers, getDurationMs } from '@agentasia/utils';
 
 import { MessageModel } from '@/database/models/message';
 
@@ -23,7 +23,7 @@ interface QueryOptions {
 }
 
 const { createPrefixedTimingContext, logTiming, toTimingContext } = createTimingHelpers(
-  'lobe-server:chat:lobehub:timing',
+  'lobe-server:chat:agentasia:timing',
 );
 
 const logMessageTiming = (

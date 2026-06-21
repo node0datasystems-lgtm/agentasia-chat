@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { GenerationConfig } from '@lobechat/types';
-import { AsyncTaskStatus } from '@lobechat/types';
+import type { GenerationConfig } from '@agentasia/types';
+import { AsyncTaskStatus } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { type SlashOptions } from '@lobehub/editor';
-import { type ChatInputActionsProps } from '@lobehub/editor/react';
-import { Alert, Button, Flexbox, type MenuProps } from '@lobehub/ui';
+import { type SlashOptions } from '@agentasia/editor';
+import { type ChatInputActionsProps } from '@agentasia/editor/react';
+import { Alert, Button, Flexbox, type MenuProps } from '@agentasia/ui';
 import { type ReactNode } from 'react';
 import { memo, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinInterventionProps } from '@lobechat/types';
-import { Button, Flexbox, Icon, Tabs, Text, TextArea } from '@lobehub/ui';
+import type { BuiltinInterventionProps } from '@agentasia/types';
+import { Button, Flexbox, Icon, Tabs, Text, TextArea } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowLeft, Check, PenLine, Send, X } from 'lucide-react';
 import { memo } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Modal } from '@lobehub/ui';
+import { Button, Flexbox, Modal } from '@agentasia/ui';
 import { memo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

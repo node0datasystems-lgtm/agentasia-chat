@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { SourceAgentUserMessage } from '@lobechat/agent-signal/source';
-import { RequestTrigger } from '@lobechat/types';
+import type { SourceAgentUserMessage } from '@agentasia/agent-signal/source';
+import { RequestTrigger } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { LobeChatDatabase } from '@/database/type';

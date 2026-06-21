@@ -1,4 +1,4 @@
-import type { PageContentContext } from '@lobechat/prompts';
+import type { PageContentContext } from '@agentasia/prompts';
 import { describe, expect, it } from 'vitest';
 
 import type { PipelineContext } from '../../types';

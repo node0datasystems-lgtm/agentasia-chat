@@ -1,5 +1,5 @@
-import { TITLE_BAR_HEIGHT } from '@lobechat/desktop-bridge';
-import { Flexbox } from '@lobehub/ui';
+import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
+import { Flexbox } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { memo } from 'react';
 

@@ -1,6 +1,6 @@
 // @vitest-environment node
-import { BRANDING_NAME } from '@lobechat/business-const';
-import { OG_URL } from '@lobechat/const';
+import { BRANDING_NAME } from '@agentasia/business-const';
+import { OG_URL } from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import { Meta } from './metadata';
@@ -89,7 +89,7 @@ describe('Metadata', () => {
         title: 'Twitter Title',
         description: 'Twitter description',
         images: ['https://twitter-image.com'],
-        site: '@lobehub',
+        site: '@agentasia',
         url: 'https://example.com/twitter',
       });
     });

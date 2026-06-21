@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { Check, PenLine } from 'lucide-react';
 import { memo } from 'react';

@@ -1,5 +1,5 @@
-import type { VerifierType } from '@lobechat/types';
-import { Button, Flexbox, Markdown, Text } from '@lobehub/ui';
+import type { VerifierType } from '@agentasia/types';
+import { Button, Flexbox, Markdown, Text } from '@agentasia/ui';
 import { createStyles } from 'antd-style';
 import { ListTree } from 'lucide-react';
 import type { ReactNode } from 'react';

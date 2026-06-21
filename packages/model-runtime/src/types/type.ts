@@ -1,4 +1,4 @@
-import type { ErrorType } from '@lobechat/types';
+import type { ErrorType } from '@agentasia/types';
 import type { ModelProvider } from 'model-bank';
 import type OpenAI from 'openai';
 

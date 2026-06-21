@@ -1,7 +1,7 @@
 'use client';
 
-import { type UIChatMessage } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { type UIChatMessage } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { Divider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Fragment, memo } from 'react';

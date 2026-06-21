@@ -1,4 +1,4 @@
-import { Flexbox, Icon } from '@lobehub/ui';
+import { Flexbox, Icon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { CheckIcon } from 'lucide-react';
 

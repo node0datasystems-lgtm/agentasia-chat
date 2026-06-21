@@ -1,4 +1,4 @@
-import type { LobeAgentChatConfig } from '@lobechat/types';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as aiInfraStore from '@/store/aiInfra';

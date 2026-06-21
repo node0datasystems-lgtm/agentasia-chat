@@ -1,4 +1,4 @@
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { type TFunction } from 'i18next';
 import { type ChangeEvent } from 'react';
 import { useCallback } from 'react';

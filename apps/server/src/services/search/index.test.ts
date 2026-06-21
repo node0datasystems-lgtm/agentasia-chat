@@ -1,4 +1,4 @@
-import { Crawler } from '@lobechat/web-crawler';
+import { Crawler } from '@agentasia/web-crawler';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { toolsEnv } from '@/envs/tools';

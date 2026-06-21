@@ -1,6 +1,6 @@
 # Flexbox Layout Components Guide
 
-`@lobehub/ui` provides `Flexbox` and `Center` components for creating flexible layouts.
+`@agentasia/ui` provides `Flexbox` and `Center` components for creating flexible layouts.
 
 ## Flexbox Component
 
@@ -9,7 +9,7 @@ Flexbox is the most commonly used layout component, similar to CSS `display: fle
 ### Basic Usage
 
 ```jsx
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 
 // Default vertical layout
 <Flexbox>
@@ -78,7 +78,7 @@ import { Flexbox } from '@lobehub/ui';
 Center wraps Flexbox with horizontal and vertical centering.
 
 ```jsx
-import { Center } from '@lobehub/ui';
+import { Center } from '@agentasia/ui';
 
 <Center width={'100%'} height={'100%'}>
   <Content />

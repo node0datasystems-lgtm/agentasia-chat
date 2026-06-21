@@ -5,7 +5,7 @@ import {
   FileTracingStore,
   type ITracingStore,
   type TracingPayload,
-} from '@lobechat/llm-generation-tracing';
+} from '@agentasia/llm-generation-tracing';
 import debug from 'debug';
 import { eq } from 'drizzle-orm';
 

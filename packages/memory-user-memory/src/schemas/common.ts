@@ -1,4 +1,4 @@
-import { TypesEnum } from '@lobechat/types';
+import { TypesEnum } from '@agentasia/types';
 import { z } from 'zod';
 
 /**

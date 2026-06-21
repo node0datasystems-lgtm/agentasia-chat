@@ -1,4 +1,4 @@
-import { type ErrorType } from '@lobechat/types';
+import { type ErrorType } from '@agentasia/types';
 
 export interface BusinessErrorContentResult {
   errorType?: string;

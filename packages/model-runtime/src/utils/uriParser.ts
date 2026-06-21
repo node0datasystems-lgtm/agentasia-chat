@@ -1,4 +1,4 @@
-import { ssrfSafeFetch } from '@lobechat/ssrf-safe-fetch';
+import { ssrfSafeFetch } from '@agentasia/ssrf-safe-fetch';
 
 interface UriParserResult {
   base64: string | null;
@@ -152,7 +152,7 @@ export const validateExternalUrl = async (url: string): Promise<ExternalUrlValid
       url,
       {
         headers: {
-          'User-Agent': 'LobeChat/1.0 (https://lobehub.com)',
+          'User-Agent': 'LobeChat/1.0 (https://agentasia.ai)',
         },
         method: 'HEAD',
       },

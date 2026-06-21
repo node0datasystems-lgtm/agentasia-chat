@@ -1,7 +1,7 @@
 'use client';
 
-import type { ConversationContext } from '@lobechat/types';
-import type { DropdownItem } from '@lobehub/ui';
+import type { ConversationContext } from '@agentasia/types';
+import type { DropdownItem } from '@agentasia/ui';
 import {
   ActionIcon,
   copyToClipboard,
@@ -10,7 +10,7 @@ import {
   Flexbox,
   Freeze,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Copy, MoreHorizontal, Share2 } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';

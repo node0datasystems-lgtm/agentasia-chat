@@ -1,4 +1,4 @@
-import { fetchEventSource } from '@lobechat/utils/client';
+import { fetchEventSource } from '@agentasia/utils/client';
 import debug from 'debug';
 
 import { type StreamConnectionOptions, type StreamEvent } from './type';

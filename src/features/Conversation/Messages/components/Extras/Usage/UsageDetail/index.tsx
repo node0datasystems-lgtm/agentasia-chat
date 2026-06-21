@@ -1,6 +1,6 @@
-import { type ModelPerformance, type ModelUsage } from '@lobechat/types';
-import { formatUsageValue } from '@lobechat/utils';
-import { Center, Flexbox, Icon, Popover } from '@lobehub/ui';
+import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
+import { formatUsageValue } from '@agentasia/utils';
+import { Center, Flexbox, Icon, Popover } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { BadgeCent, CoinsIcon } from 'lucide-react';
@@ -250,7 +250,7 @@ const TokenDetail = memo<TokenDetailProps>(({ usage, performance, model, provide
         <AnimatedNumber
           duration={1500}
           // Force remount when switching between token/credit to prevent unwanted animation
-          // See: https://github.com/lobehub/lobe-chat/pull/10098
+          // See: https://github.com/agentasia/agentasia-chat/pull/10098
           key={isShowCredit ? 'credit' : 'token'}
           value={totalCount}
           formatter={(value) => {

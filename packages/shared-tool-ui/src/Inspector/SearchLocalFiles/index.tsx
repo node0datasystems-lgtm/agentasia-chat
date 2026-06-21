@@ -1,8 +1,8 @@
 'use client';
 
-import type { SearchFilesState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { Text } from '@lobehub/ui';
+import type { SearchFilesState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { Text } from '@agentasia/ui';
 import { cssVar, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

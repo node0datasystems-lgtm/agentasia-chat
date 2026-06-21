@@ -1,5 +1,5 @@
-import { type FormItemProps } from '@lobehub/ui';
-import { Form, Input, TextArea } from '@lobehub/ui';
+import { type FormItemProps } from '@agentasia/ui';
+import { Form, Input, TextArea } from '@agentasia/ui';
 import { type FormInstance } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -56,13 +56,13 @@ const LocalForm = memo<{ form: FormInstance; mode?: 'edit' | 'create' }>(({ form
       name: ['manifest', 'meta', 'description'],
     },
     {
-      children: <Input placeholder={'LobeHub'} />,
+      children: <Input placeholder={'AgentAsia'} />,
       desc: t('dev.meta.author.desc'),
       label: t('dev.meta.author.label'),
       name: ['manifest', 'author'],
     },
     {
-      children: <Input placeholder={'https://www.lobehub.com'} />,
+      children: <Input placeholder={'https://www.agentasia.ai'} />,
       desc: t('dev.meta.homepage.desc'),
       label: t('dev.meta.homepage.label'),
       name: ['manifest', 'homepage'],

@@ -1,6 +1,6 @@
-import type { TaskTemplate, TaskTemplateConnectorSource } from '@lobechat/const';
-import { TASK_TEMPLATE_RECOMMEND_COUNT } from '@lobechat/const';
-import { createNanoId } from '@lobechat/utils';
+import type { TaskTemplate, TaskTemplateConnectorSource } from '@agentasia/const';
+import { TASK_TEMPLATE_RECOMMEND_COUNT } from '@agentasia/const';
+import { createNanoId } from '@agentasia/utils';
 import { useSessionStorageState } from 'ahooks';
 import { App } from 'antd';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
@@ -17,7 +17,7 @@ import { authSelectors } from '@/store/user/slices/auth/selectors';
 
 import { useResolvedInterestKeys } from './useResolvedInterestKeys';
 
-const REFRESH_SEED_STORAGE_KEY = 'lobehub:taskTemplate:refreshSeed';
+const REFRESH_SEED_STORAGE_KEY = 'agentasia:taskTemplate:refreshSeed';
 const nextRefreshSeed = createNanoId(8);
 
 export type DailyBriefRecommendationsUIState =
@@ -218,7 +218,7 @@ export function useDailyBriefRecommendationsUI(
     (s) => s.useFetchLobehubSkillConnections,
   );
   useFetchUserComposioConnections(requiredSources.has('composio'));
-  useFetchLobehubConnectorConnections(requiredSources.has('lobehub'));
+  useFetchLobehubConnectorConnections(requiredSources.has('agentasia'));
 
   const displayMode = resolveDailyBriefRecommendationDisplayMode({
     canFetchRecommendations,

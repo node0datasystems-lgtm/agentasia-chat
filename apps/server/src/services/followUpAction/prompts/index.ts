@@ -1,4 +1,4 @@
-import type { FollowUpHint } from '@lobechat/types';
+import type { FollowUpHint } from '@agentasia/types';
 
 import { BASE_SYSTEM_PROMPT } from './base';
 import { buildOnboardingAddendum } from './onboarding';

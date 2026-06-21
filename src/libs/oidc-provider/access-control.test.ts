@@ -5,7 +5,7 @@ import {
   oidcGrants,
   oidcRefreshTokens,
   oidcSessions,
-} from '@lobechat/database/schemas';
+} from '@agentasia/database/schemas';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {

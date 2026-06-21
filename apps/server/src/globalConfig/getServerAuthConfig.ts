@@ -1,4 +1,4 @@
-import { ENABLE_BUSINESS_FEATURES } from '@lobechat/business-const';
+import { ENABLE_BUSINESS_FEATURES } from '@agentasia/business-const';
 
 import { appEnv } from '@/envs/app';
 import { authEnv } from '@/envs/auth';

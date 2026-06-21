@@ -2,7 +2,7 @@ import type {
   CallSubAgentParams,
   VisualFileItem,
   VisualSourceMessage,
-} from '@lobechat/builtin-tool-lobe-agent';
+} from '@agentasia/builtin-tool-lobe-agent';
 import {
   buildAnalyzeVisualMediaContent,
   createUrlVisualFileItems,
@@ -14,12 +14,12 @@ import {
   PlanExecutionRuntime,
   selectVisualFileItems,
   validateVisualMediaUrls,
-} from '@lobechat/builtin-tool-lobe-agent';
-import type { LobeChatDatabase } from '@lobechat/database';
-import type { ChatStreamPayload } from '@lobechat/model-runtime';
-import { consumeStreamUntilDone } from '@lobechat/model-runtime';
-import type { BuiltinServerRuntimeOutput } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+} from '@agentasia/builtin-tool-lobe-agent';
+import type { LobeChatDatabase } from '@agentasia/database';
+import type { ChatStreamPayload } from '@agentasia/model-runtime';
+import { consumeStreamUntilDone } from '@agentasia/model-runtime';
+import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 
 import { MessageModel } from '@/database/models/message';
 import { toolsEnv } from '@/envs/tools';

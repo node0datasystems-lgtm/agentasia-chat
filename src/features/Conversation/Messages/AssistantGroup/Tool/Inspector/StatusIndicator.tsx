@@ -1,5 +1,5 @@
-import { type ToolIntervention } from '@lobechat/types';
-import { Block, Icon, Tooltip } from '@lobehub/ui';
+import { type ToolIntervention } from '@agentasia/types';
+import { Block, Icon, Tooltip } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { AlertTriangle, Ban, Check, HandIcon, PauseIcon, X } from 'lucide-react';
 import { memo } from 'react';

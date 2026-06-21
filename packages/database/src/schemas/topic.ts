@@ -1,4 +1,4 @@
-import type { ChatTopicMetadata, ThreadMetadata } from '@lobechat/types';
+import type { ChatTopicMetadata, ThreadMetadata } from '@agentasia/types';
 import { sql } from 'drizzle-orm';
 import {
   boolean,

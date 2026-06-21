@@ -1,15 +1,15 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import type { IEditor } from '@lobehub/editor';
+import { isDesktop } from '@agentasia/const';
+import type { IEditor } from '@agentasia/editor';
 import {
   ReactImagePlugin,
   ReactLinkPlugin,
   ReactLiteXmlPlugin,
   ReactTablePlugin,
   ReactToolbarPlugin,
-} from '@lobehub/editor';
-import { Editor, useEditorState } from '@lobehub/editor/react';
+} from '@agentasia/editor';
+import { Editor, useEditorState } from '@agentasia/editor/react';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, type RefObject, useCallback, useEffect, useMemo, useRef } from 'react';
@@ -196,7 +196,7 @@ const InternalEditor = memo<InternalEditorProps>(
     }, [editor]);
 
     // Open file attachments in a new tab on click (PDFs preview natively).
-    // Workaround for @lobehub/editor's ReactFile decorator not exposing a
+    // Workaround for @agentasia/editor's ReactFile decorator not exposing a
     // download / preview affordance.
     useEffect(() => {
       if (!editor) return;
@@ -255,7 +255,7 @@ const InternalEditor = memo<InternalEditorProps>(
     onContentChangeRef.current = onContentChange;
 
     // Listen to Lexical updates directly to trigger content change
-    // This bypasses @lobehub/editor's onTextChange which has issues with previousContent reset
+    // This bypasses @agentasia/editor's onTextChange which has issues with previousContent reset
     useEffect(() => {
       if (!editor) return;
 

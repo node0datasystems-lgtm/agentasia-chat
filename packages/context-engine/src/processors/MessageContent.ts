@@ -1,8 +1,8 @@
-import { filesPrompts } from '@lobechat/prompts';
-import type { MessageContentPart } from '@lobechat/types';
-import { imageUrlToBase64 } from '@lobechat/utils/imageToBase64';
-import { parseDataUri } from '@lobechat/utils/uriParser';
-import { isDesktopLocalStaticServerUrl } from '@lobechat/utils/url';
+import { filesPrompts } from '@agentasia/prompts';
+import type { MessageContentPart } from '@agentasia/types';
+import { imageUrlToBase64 } from '@agentasia/utils/imageToBase64';
+import { parseDataUri } from '@agentasia/utils/uriParser';
+import { isDesktopLocalStaticServerUrl } from '@agentasia/utils/url';
 import debug from 'debug';
 
 import { BaseProcessor } from '../base/BaseProcessor';

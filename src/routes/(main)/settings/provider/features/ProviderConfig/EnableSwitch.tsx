@@ -1,4 +1,4 @@
-import { Skeleton, Tooltip } from '@lobehub/ui';
+import { Skeleton, Tooltip } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { type FC } from 'react';
 

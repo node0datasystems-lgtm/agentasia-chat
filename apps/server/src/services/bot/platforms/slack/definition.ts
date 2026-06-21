@@ -10,7 +10,7 @@ export const slack: PlatformDefinition = {
   description: 'Connect a Slack bot',
   documentation: {
     portalUrl: 'https://api.slack.com/apps',
-    setupGuideUrl: 'https://lobehub.com/docs/usage/channels/slack',
+    setupGuideUrl: 'https://agentasia.ai/docs/usage/channels/slack',
   },
   schema,
   clientFactory: new SlackClientFactory(),

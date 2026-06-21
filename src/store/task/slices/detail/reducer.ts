@@ -1,4 +1,4 @@
-import type { TaskDetailData, TaskDetailSubtask } from '@lobechat/types';
+import type { TaskDetailData, TaskDetailSubtask } from '@agentasia/types';
 import { produce } from 'immer';
 
 export type TaskDetailDispatch =

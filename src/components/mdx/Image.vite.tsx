@@ -1,4 +1,4 @@
-import { Image } from '@lobehub/ui/mdx';
+import { Image } from '@agentasia/ui/mdx';
 import { type FC } from 'react';
 
 const ImageWrapper: FC<{ alt: string; src: string }> = ({ alt, src, ...rest }) => {

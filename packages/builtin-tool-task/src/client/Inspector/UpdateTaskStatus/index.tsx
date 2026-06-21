@@ -1,6 +1,6 @@
 'use client';
 
-import type { BuiltinInspectorProps, TaskStatus } from '@lobechat/types';
+import type { BuiltinInspectorProps, TaskStatus } from '@agentasia/types';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

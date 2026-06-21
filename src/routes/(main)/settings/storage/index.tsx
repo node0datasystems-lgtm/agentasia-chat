@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, FormGroup, Skeleton } from '@lobehub/ui';
+import { Flexbox, FormGroup, Skeleton } from '@agentasia/ui';
 import { useTranslation } from 'react-i18next';
 
 import SettingHeader from '@/routes/(main)/settings/features/SettingHeader';

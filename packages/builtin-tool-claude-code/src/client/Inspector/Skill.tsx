@@ -1,8 +1,8 @@
 'use client';
 
-import { inspectorTextStyles, shinyTextStyles } from '@lobechat/shared-tool-ui/styles';
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { SkillsIcon } from '@lobehub/ui/icons';
+import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

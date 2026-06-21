@@ -3,7 +3,7 @@ import type {
   ModelReasoning,
   ModelUsage,
   ToolIntervention,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { sql } from 'drizzle-orm';
 import {
   boolean,

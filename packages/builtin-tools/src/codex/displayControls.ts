@@ -1,4 +1,4 @@
-import type { RenderDisplayControl } from '@lobechat/types';
+import type { RenderDisplayControl } from '@agentasia/types';
 
 export const CodexRenderDisplayControls: Record<string, RenderDisplayControl> = {
   collab_tool_call: 'expand',

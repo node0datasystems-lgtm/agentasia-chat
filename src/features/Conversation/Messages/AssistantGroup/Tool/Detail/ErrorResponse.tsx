@@ -1,5 +1,5 @@
-import { type ChatMessageError, type ChatPluginPayload } from '@lobechat/types';
-import { Alert, Flexbox, Highlighter } from '@lobehub/ui';
+import { type ChatMessageError, type ChatPluginPayload } from '@agentasia/types';
+import { Alert, Flexbox, Highlighter } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -2,7 +2,7 @@ import {
   getModelPropertyWithFallback,
   resolveImageSinglePrice,
   resolveVideoSinglePrice,
-} from '@lobechat/model-runtime';
+} from '@agentasia/model-runtime';
 import { uniqBy } from 'es-toolkit/compat';
 import type {
   AiFullModelCard,

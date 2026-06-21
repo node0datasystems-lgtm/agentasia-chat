@@ -1,7 +1,7 @@
 import querystring from 'node:querystring';
 import { URL } from 'node:url';
 
-import type { DataSyncConfig } from '@lobechat/electron-client-ipc';
+import type { DataSyncConfig } from '@agentasia/electron-client-ipc';
 import { safeStorage, session as electronSession } from 'electron';
 
 import { OFFICIAL_CLOUD_SERVER } from '@/const/env';
@@ -429,7 +429,7 @@ export default class RemoteServerConfigCtr extends ControllerModule {
 
       // Construct request body
       const body = querystring.stringify({
-        client_id: 'lobehub-desktop',
+        client_id: 'agentasia-desktop',
         grant_type: 'refresh_token',
         refresh_token: refreshToken,
       });
@@ -537,7 +537,7 @@ export default class RemoteServerConfigCtr extends ControllerModule {
     const session = electronSession.fromPartition(partition);
 
     session.webRequest.onBeforeSendHeaders(
-      { urls: [`https://*.lobehub.com/*`] },
+      { urls: [`https://*.agentasia.ai/*`] },
       async (details, callback) => {
         const requestHeaders = { ...details.requestHeaders };
 

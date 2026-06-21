@@ -1,6 +1,6 @@
 'use client';
 
-import { useEditor, useEditorState } from '@lobehub/editor/react';
+import { useEditor, useEditorState } from '@agentasia/editor/react';
 import { useUnmount } from 'ahooks';
 import { memo, useEffect } from 'react';
 import { createStoreUpdater } from 'zustand-utils';

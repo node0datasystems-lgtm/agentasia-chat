@@ -1,5 +1,5 @@
-import type { CompressionGroupMetadata } from '@lobechat/types';
-import { MessageGroupType } from '@lobechat/types';
+import type { CompressionGroupMetadata } from '@agentasia/types';
+import { MessageGroupType } from '@agentasia/types';
 import { and, eq, inArray, isNull } from 'drizzle-orm';
 
 import type { MessageGroupItem } from '../../schemas';

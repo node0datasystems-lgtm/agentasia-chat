@@ -1,8 +1,8 @@
 'use client';
 
-import { builtinTools } from '@lobechat/builtin-tools';
-import { DEFAULT_INBOX_AVATAR } from '@lobechat/const';
-import type { BuiltinToolManifest, LobeChatPluginApi } from '@lobechat/types';
+import { builtinTools } from '@agentasia/builtin-tools';
+import { DEFAULT_INBOX_AVATAR } from '@agentasia/const';
+import type { BuiltinToolManifest, LobeChatPluginApi } from '@agentasia/types';
 
 import type { ToolRenderFixture } from '../lifecycleMode';
 import { buildSchemaSample, humanize, single, type ToolsetFixtureModule } from './_helpers';

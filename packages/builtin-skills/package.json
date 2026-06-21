@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-skills",
+  "name": "@agentasia/builtin-skills",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,6 +9,6 @@
   "main": "./src/index.ts",
   "dependencies": {},
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

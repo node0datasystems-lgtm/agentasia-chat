@@ -1,4 +1,4 @@
-import type { ModelUsage } from '@lobechat/types';
+import type { ModelUsage } from '@agentasia/types';
 import type { RuntimeImageGenParams } from 'model-bank';
 
 export type CreateImagePayload = {

@@ -1,7 +1,7 @@
 'use client';
 
-import { type UserCredSummary } from '@lobechat/types';
-import { useModalContext } from '@lobehub/ui/base-ui';
+import { type UserCredSummary } from '@agentasia/types';
+import { useModalContext } from '@agentasia/ui/base-ui';
 import { type FC } from 'react';
 
 import EditKVForm from './EditKVForm';

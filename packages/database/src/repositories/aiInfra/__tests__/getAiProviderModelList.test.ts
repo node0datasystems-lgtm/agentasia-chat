@@ -136,9 +136,9 @@ describe('AiInfraRepos', () => {
     });
 
     it('should filter hidden builtin models before applying pagination', async () => {
-      const providerId = 'lobehub';
+      const providerId = 'agentasia';
       const builtinModels = [
-        { enabled: true, id: 'lobehub-onboarding-v1', type: 'chat', visible: false },
+        { enabled: true, id: 'agentasia-onboarding-v1', type: 'chat', visible: false },
         { enabled: true, id: 'deepseek-v4-pro', type: 'chat' },
         { enabled: true, id: 'gpt-5.5', type: 'chat' },
       ] as AiProviderModelListItem[];

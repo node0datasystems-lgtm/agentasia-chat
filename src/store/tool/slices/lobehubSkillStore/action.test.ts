@@ -1,4 +1,4 @@
-import type * as LobechatConstModule from '@lobechat/const';
+import type * as LobechatConstModule from '@agentasia/const';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -39,16 +39,16 @@ vi.mock('@/libs/trpc/client', () => ({
   },
 }));
 
-describe('lobehubSkillStore actions', () => {
+describe('agentasiaSkillStore actions', () => {
   describe('callLobehubSkillTool', () => {
     it('should call tool successfully and return result', async () => {
       const { result } = renderHook(() => useToolStore());
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -80,9 +80,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -101,7 +101,7 @@ describe('lobehubSkillStore actions', () => {
 
       // Tool should be marked as executing during the call
       await waitFor(() => {
-        expect(result.current.lobehubSkillExecutingToolIds.has('linear:createIssue')).toBe(true);
+        expect(result.current.agentasiaSkillExecutingToolIds.has('linear:createIssue')).toBe(true);
       });
 
       // Resolve the promise
@@ -109,7 +109,7 @@ describe('lobehubSkillStore actions', () => {
       await callPromise;
 
       // Tool should no longer be executing after completion
-      expect(result.current.lobehubSkillExecutingToolIds.has('linear:createIssue')).toBe(false);
+      expect(result.current.agentasiaSkillExecutingToolIds.has('linear:createIssue')).toBe(false);
     });
 
     it('should handle NOT_CONNECTED error', async () => {
@@ -117,9 +117,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -140,7 +140,7 @@ describe('lobehubSkillStore actions', () => {
         errorCode: 'NOT_CONNECTED',
         success: false,
       });
-      expect(result.current.lobehubSkillExecutingToolIds.has('linear:createIssue')).toBe(false);
+      expect(result.current.agentasiaSkillExecutingToolIds.has('linear:createIssue')).toBe(false);
     });
 
     it('should handle TOKEN_EXPIRED error', async () => {
@@ -148,9 +148,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -178,9 +178,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -209,9 +209,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -243,8 +243,8 @@ describe('lobehubSkillStore actions', () => {
         providerUsername: 'testuser',
         scopes: ['read', 'write'],
       });
-      expect(result.current.lobehubSkillServers).toHaveLength(1);
-      expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(false);
+      expect(result.current.agentasiaSkillServers).toHaveLength(1);
+      expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(false);
     });
 
     it('should check status and add server when not connected', async () => {
@@ -252,9 +252,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -282,7 +282,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -290,8 +290,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.NOT_CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -314,9 +314,9 @@ describe('lobehubSkillStore actions', () => {
         await result.current.checkLobehubSkillStatus('linear');
       });
 
-      expect(result.current.lobehubSkillServers).toHaveLength(1);
-      expect(result.current.lobehubSkillServers[0].isConnected).toBe(true);
-      expect(result.current.lobehubSkillServers[0].status).toBe(LobehubSkillStatus.CONNECTED);
+      expect(result.current.agentasiaSkillServers).toHaveLength(1);
+      expect(result.current.agentasiaSkillServers[0].isConnected).toBe(true);
+      expect(result.current.agentasiaSkillServers[0].status).toBe(LobehubSkillStatus.CONNECTED);
     });
 
     it('should track loading state during status check', async () => {
@@ -324,9 +324,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -342,7 +342,7 @@ describe('lobehubSkillStore actions', () => {
 
       // Should be loading during the check
       await waitFor(() => {
-        expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(true);
+        expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(true);
       });
 
       // Resolve the promise
@@ -350,7 +350,7 @@ describe('lobehubSkillStore actions', () => {
       await checkPromise;
 
       // Should not be loading after completion
-      expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(false);
+      expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(false);
     });
 
     it('should handle error and return undefined', async () => {
@@ -358,9 +358,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -374,7 +374,7 @@ describe('lobehubSkillStore actions', () => {
       });
 
       expect(server).toBeUndefined();
-      expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(false);
+      expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(false);
     });
   });
 
@@ -441,7 +441,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -449,8 +449,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -461,7 +461,7 @@ describe('lobehubSkillStore actions', () => {
         });
       });
 
-      expect(result.current.lobehubSkillServers[0]).toMatchObject({
+      expect(result.current.agentasiaSkillServers[0]).toMatchObject({
         identifier: 'linear',
         status: LobehubSkillStatus.ERROR,
         errorMessage: 'Token expired',
@@ -473,9 +473,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -485,7 +485,7 @@ describe('lobehubSkillStore actions', () => {
         });
       });
 
-      expect(result.current.lobehubSkillServers).toHaveLength(0);
+      expect(result.current.agentasiaSkillServers).toHaveLength(0);
     });
   });
 
@@ -495,7 +495,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -504,8 +504,8 @@ describe('lobehubSkillStore actions', () => {
               tokenExpiresAt: '2024-01-01T00:00:00Z',
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -523,8 +523,8 @@ describe('lobehubSkillStore actions', () => {
       });
 
       expect(refreshed).toBe(true);
-      expect(result.current.lobehubSkillServers[0].tokenExpiresAt).toBe('2024-12-31T00:00:00Z');
-      expect(result.current.lobehubSkillServers[0].status).toBe(LobehubSkillStatus.CONNECTED);
+      expect(result.current.agentasiaSkillServers[0].tokenExpiresAt).toBe('2024-12-31T00:00:00Z');
+      expect(result.current.agentasiaSkillServers[0].status).toBe(LobehubSkillStatus.CONNECTED);
     });
 
     it('should return false when refresh fails', async () => {
@@ -532,7 +532,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -540,8 +540,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -563,9 +563,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -588,7 +588,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -596,8 +596,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -613,9 +613,9 @@ describe('lobehubSkillStore actions', () => {
         await result.current.refreshLobehubSkillTools('linear');
       });
 
-      expect(result.current.lobehubSkillServers[0].tools).toHaveLength(2);
-      expect(result.current.lobehubSkillServers[0].tools![0].name).toBe('createIssue');
-      expect(result.current.lobehubSkillServers[0].tools![1].name).toBe('listIssues');
+      expect(result.current.agentasiaSkillServers[0].tools).toHaveLength(2);
+      expect(result.current.agentasiaSkillServers[0].tools![0].name).toBe('createIssue');
+      expect(result.current.agentasiaSkillServers[0].tools![1].name).toBe('listIssues');
     });
 
     it('should do nothing when server not found', async () => {
@@ -625,9 +625,9 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -644,7 +644,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -652,8 +652,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -666,7 +666,7 @@ describe('lobehubSkillStore actions', () => {
       });
 
       // Should not crash and server should remain unchanged
-      expect(result.current.lobehubSkillServers[0].tools).toBeUndefined();
+      expect(result.current.agentasiaSkillServers[0].tools).toBeUndefined();
     });
   });
 
@@ -676,7 +676,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -690,8 +690,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -701,8 +701,8 @@ describe('lobehubSkillStore actions', () => {
         await result.current.revokeLobehubSkill('linear');
       });
 
-      expect(result.current.lobehubSkillServers).toHaveLength(1);
-      expect(result.current.lobehubSkillServers[0].identifier).toBe('github');
+      expect(result.current.agentasiaSkillServers).toHaveLength(1);
+      expect(result.current.agentasiaSkillServers[0].identifier).toBe('github');
       expect(toolsClient.market.connectRevoke.mutate).toHaveBeenCalledWith({
         provider: 'linear',
       });
@@ -713,7 +713,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -721,8 +721,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -738,7 +738,7 @@ describe('lobehubSkillStore actions', () => {
 
       // Should be loading during revoke
       await waitFor(() => {
-        expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(true);
+        expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(true);
       });
 
       // Resolve the promise
@@ -746,7 +746,7 @@ describe('lobehubSkillStore actions', () => {
       await revokePromise;
 
       // Should not be loading after completion
-      expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(false);
+      expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(false);
     });
 
     it('should handle error gracefully', async () => {
@@ -754,7 +754,7 @@ describe('lobehubSkillStore actions', () => {
 
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -762,8 +762,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -776,8 +776,8 @@ describe('lobehubSkillStore actions', () => {
       });
 
       // Server should still be in state after error
-      expect(result.current.lobehubSkillServers).toHaveLength(1);
-      expect(result.current.lobehubSkillLoadingIds.has('linear')).toBe(false);
+      expect(result.current.agentasiaSkillServers).toHaveLength(1);
+      expect(result.current.agentasiaSkillLoadingIds.has('linear')).toBe(false);
     });
   });
 
@@ -785,9 +785,9 @@ describe('lobehubSkillStore actions', () => {
     it('should not fetch when disabled', () => {
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -801,9 +801,9 @@ describe('lobehubSkillStore actions', () => {
     it('should fetch connections when enabled', async () => {
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -838,7 +838,7 @@ describe('lobehubSkillStore actions', () => {
     it('should deduplicate servers by identifier when adding new servers', () => {
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [
+          agentasiaSkillServers: [
             {
               identifier: 'linear',
               name: 'Linear',
@@ -846,8 +846,8 @@ describe('lobehubSkillStore actions', () => {
               status: LobehubSkillStatus.CONNECTED,
             },
           ],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -867,16 +867,16 @@ describe('lobehubSkillStore actions', () => {
       ];
 
       act(() => {
-        const existingServers = useToolStore.getState().lobehubSkillServers;
+        const existingServers = useToolStore.getState().agentasiaSkillServers;
         const existingIdentifiers = new Set(existingServers.map((s) => s.identifier));
         const newServers = incomingServers.filter((s) => !existingIdentifiers.has(s.identifier));
 
         useToolStore.setState({
-          lobehubSkillServers: [...existingServers, ...newServers],
+          agentasiaSkillServers: [...existingServers, ...newServers],
         });
       });
 
-      const finalServers = useToolStore.getState().lobehubSkillServers;
+      const finalServers = useToolStore.getState().agentasiaSkillServers;
       expect(finalServers).toHaveLength(2);
       expect(finalServers.find((s) => s.identifier === 'linear')).toBeDefined();
       expect(finalServers.find((s) => s.identifier === 'github')).toBeDefined();
@@ -885,9 +885,9 @@ describe('lobehubSkillStore actions', () => {
     it('should add all servers when none exist', () => {
       act(() => {
         useToolStore.setState({
-          lobehubSkillServers: [],
-          lobehubSkillLoadingIds: new Set(),
-          lobehubSkillExecutingToolIds: new Set(),
+          agentasiaSkillServers: [],
+          agentasiaSkillLoadingIds: new Set(),
+          agentasiaSkillExecutingToolIds: new Set(),
         });
       });
 
@@ -901,16 +901,16 @@ describe('lobehubSkillStore actions', () => {
       ];
 
       act(() => {
-        const existingServers = useToolStore.getState().lobehubSkillServers;
+        const existingServers = useToolStore.getState().agentasiaSkillServers;
         const existingIdentifiers = new Set(existingServers.map((s) => s.identifier));
         const newServers = incomingServers.filter((s) => !existingIdentifiers.has(s.identifier));
 
         useToolStore.setState({
-          lobehubSkillServers: [...existingServers, ...newServers],
+          agentasiaSkillServers: [...existingServers, ...newServers],
         });
       });
 
-      expect(useToolStore.getState().lobehubSkillServers).toHaveLength(1);
+      expect(useToolStore.getState().agentasiaSkillServers).toHaveLength(1);
     });
   });
 });

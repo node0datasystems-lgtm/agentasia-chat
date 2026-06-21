@@ -1,4 +1,4 @@
-import type { BuiltinPortal, BuiltinPortalTitle } from '@lobechat/types';
+import type { BuiltinPortal, BuiltinPortalTitle } from '@agentasia/types';
 
 const builtinToolsPortals: Record<string, BuiltinPortal> = {};
 

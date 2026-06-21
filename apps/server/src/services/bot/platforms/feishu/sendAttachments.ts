@@ -1,4 +1,4 @@
-import type { LarkApiClient } from '@lobechat/chat-adapter-feishu';
+import type { LarkApiClient } from '@agentasia/chat-adapter-feishu';
 import debug from 'debug';
 
 import type { BotMessageAttachment } from '../types';

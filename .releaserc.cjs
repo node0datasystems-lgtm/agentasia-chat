@@ -1,4 +1,4 @@
-const config = require('@lobehub/lint').semanticRelease;
+const config = require('@agentasia/lint').semanticRelease;
 
 config.branches = [
   'main',

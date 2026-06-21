@@ -8,7 +8,7 @@ import {
   Icon,
   Segmented,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
   ChevronDown,

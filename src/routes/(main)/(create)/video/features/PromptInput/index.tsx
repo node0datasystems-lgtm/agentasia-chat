@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelIcon } from '@lobehub/icons';
-import { ActionIcon, Flexbox, InputNumber, Segmented, SliderWithInput, Text } from '@lobehub/ui';
+import { ModelIcon } from '@agentasia/icons';
+import { ActionIcon, Flexbox, InputNumber, Segmented, SliderWithInput, Text } from '@agentasia/ui';
 import { Divider, Switch } from 'antd';
 import { Clock3, Dices } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef } from 'react';

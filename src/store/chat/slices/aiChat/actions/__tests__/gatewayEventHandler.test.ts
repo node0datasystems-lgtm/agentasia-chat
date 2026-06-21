@@ -1,4 +1,4 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { messageService } from '@/services/message';
@@ -1128,7 +1128,7 @@ describe('createGatewayEventHandler', () => {
           budget,
           error: { message: 'Budget exceeded' },
           errorType: 'FreePlanLimit',
-          provider: 'lobehub',
+          provider: 'agentasia',
         }),
       );
       await flush();
@@ -1139,7 +1139,7 @@ describe('createGatewayEventHandler', () => {
           body: expect.objectContaining({
             budget,
             message: 'Budget exceeded',
-            provider: 'lobehub',
+            provider: 'agentasia',
           }),
           message: 'Budget exceeded',
           type: 'FreePlanLimit',
@@ -1156,7 +1156,7 @@ describe('createGatewayEventHandler', () => {
         makeEvent('error', {
           _responseBody: {
             error: { message: 'Payment required' },
-            provider: 'lobehub',
+            provider: 'agentasia',
           },
           error: { status: 402 },
           errorType: 'ProviderBizError',
@@ -1170,7 +1170,7 @@ describe('createGatewayEventHandler', () => {
           body: expect.objectContaining({
             error: { message: 'Payment required', status: 402 },
             message: 'Payment required',
-            provider: 'lobehub',
+            provider: 'agentasia',
           }),
           message: 'Payment required',
           type: 'ProviderBizError',

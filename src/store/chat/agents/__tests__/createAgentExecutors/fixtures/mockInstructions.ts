@@ -7,9 +7,9 @@ import {
   type GeneralAgentCallingToolInstructionPayload,
   type GeneralAgentCallLLMInstructionPayload,
   type SubAgentTask,
-} from '@lobechat/agent-runtime';
-import { type ChatToolPayload } from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/agent-runtime';
+import { type ChatToolPayload } from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 
 /**
  * Create a mock call_llm instruction

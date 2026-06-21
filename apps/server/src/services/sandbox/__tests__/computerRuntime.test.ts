@@ -1,5 +1,5 @@
-import type { ServiceResult } from '@lobechat/tool-runtime';
-import { ComputerRuntime } from '@lobechat/tool-runtime';
+import type { ServiceResult } from '@agentasia/tool-runtime';
+import { ComputerRuntime } from '@agentasia/tool-runtime';
 import { describe, expect, it } from 'vitest';
 
 class TestComputerRuntime extends ComputerRuntime {

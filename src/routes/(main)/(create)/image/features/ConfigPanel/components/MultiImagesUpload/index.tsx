@@ -1,7 +1,7 @@
 'use client';
 
 // Removed Image import - using img tags instead
-import { Center } from '@lobehub/ui';
+import { Center } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Image as ImageIcon, X } from 'lucide-react';
 import { type FC } from 'react';

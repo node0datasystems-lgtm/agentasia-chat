@@ -1,4 +1,4 @@
-import type { UpdateChannel, UpdaterState } from '@lobechat/electron-client-ipc';
+import type { UpdateChannel, UpdaterState } from '@agentasia/electron-client-ipc';
 
 import { UPDATE_CHANNEL } from '@/modules/updater/configs';
 import { createLogger } from '@/utils/logger';

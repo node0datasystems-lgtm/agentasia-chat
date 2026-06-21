@@ -1,4 +1,4 @@
-import { Center, Flexbox, Tooltip } from '@lobehub/ui';
+import { Center, Flexbox, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';
 import { memo, useCallback } from 'react';

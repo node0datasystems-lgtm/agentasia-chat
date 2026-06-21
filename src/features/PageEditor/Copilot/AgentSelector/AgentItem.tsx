@@ -1,5 +1,5 @@
-import { type GroupMemberAvatar } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { type GroupMemberAvatar } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

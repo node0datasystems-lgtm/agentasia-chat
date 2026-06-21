@@ -169,7 +169,7 @@ export const MarketAuthProvider = ({ children, isDesktop }: MarketAuthProviderPr
   // Initialize OIDC client (client-side only)
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const baseUrl = process.env.NEXT_PUBLIC_MARKET_BASE_URL || 'https://market.lobehub.com';
+      const baseUrl = process.env.NEXT_PUBLIC_MARKET_BASE_URL || 'https://market.agentasia.ai';
       const desktopRedirectUri = new URL(MARKET_OIDC_ENDPOINTS.desktopCallback, baseUrl).toString();
 
       // Desktop uses Market's manually maintained Web callback; Web uses the current domain
@@ -179,7 +179,7 @@ export const MarketAuthProvider = ({ children, isDesktop }: MarketAuthProviderPr
 
       const oidcConfig: OIDCConfig = {
         baseUrl,
-        clientId: isDesktop ? 'lobehub-desktop' : 'lobechat-com',
+        clientId: isDesktop ? 'agentasia-desktop' : 'lobechat-com',
         redirectUri,
         scope: 'openid profile email offline_access',
       };
@@ -193,7 +193,7 @@ export const MarketAuthProvider = ({ children, isDesktop }: MarketAuthProviderPr
    */
   const tryRefreshToken = async (refreshTokenValue: string): Promise<boolean> => {
     try {
-      const clientId = isDesktop ? 'lobehub-desktop' : 'lobechat-com';
+      const clientId = isDesktop ? 'agentasia-desktop' : 'lobechat-com';
 
       const response = await lambdaClient.market.oidc.refreshToken.mutate({
         clientId,
@@ -589,7 +589,7 @@ export const MarketAuthProvider = ({ children, isDesktop }: MarketAuthProviderPr
     }
 
     try {
-      const clientId = isDesktop ? 'lobehub-desktop' : 'lobechat-com';
+      const clientId = isDesktop ? 'agentasia-desktop' : 'lobechat-com';
 
       const response = await lambdaClient.market.oidc.refreshToken.mutate({
         clientId,

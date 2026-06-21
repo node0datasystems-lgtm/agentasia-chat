@@ -1,4 +1,4 @@
-import type { VerifyCheckItem, VerifyRunStatus } from '@lobechat/types';
+import type { VerifyCheckItem, VerifyRunStatus } from '@agentasia/types';
 import debug from 'debug';
 
 import { VerifyCheckResultModel } from '@/database/models/verifyCheckResult';

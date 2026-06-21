@@ -28,7 +28,7 @@ vi.mock('@/features/Conversation', () => ({
   ),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Icon: ({ icon }: { icon: () => void }) => <span data-testid="icon">{icon.name}</span>,
 }));
 

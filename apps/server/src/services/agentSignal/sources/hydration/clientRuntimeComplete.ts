@@ -1,8 +1,8 @@
 import type {
   AgentSignalSourceEvent,
   SourceEventAgentUserMessage,
-} from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
 
 import { MessageModel } from '@/database/models/message';
 import type { LobeChatDatabase } from '@/database/type';

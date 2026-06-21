@@ -1,12 +1,12 @@
-import { AGENT_SKILLS_IDENTIFIER_PREFIX } from '@lobechat/const';
-import { formatCommandResult, resourcesTreePrompt } from '@lobechat/prompts';
+import { AGENT_SKILLS_IDENTIFIER_PREFIX } from '@agentasia/const';
+import { formatCommandResult, resourcesTreePrompt } from '@agentasia/prompts';
 import type {
   BuiltinServerRuntimeOutput,
   BuiltinSkill,
   SkillItem,
   SkillListItem,
   SkillResourceContent,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import type {
   ActivateSkillParams,

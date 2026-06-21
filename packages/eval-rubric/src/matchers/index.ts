@@ -1,4 +1,4 @@
-import type { EvalBenchmarkRubric } from '@lobechat/types';
+import type { EvalBenchmarkRubric } from '@agentasia/types';
 
 import { matchAnyOf } from './anyOf';
 import { matchContains } from './contains';

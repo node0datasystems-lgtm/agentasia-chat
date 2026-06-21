@@ -1,8 +1,8 @@
-import { type ChatModelCard } from '@lobechat/types';
-import { type IconAvatarProps } from '@lobehub/icons';
-import { LobeHub, ModelIcon, ProviderIcon } from '@lobehub/icons';
-import { type FlexboxProps } from '@lobehub/ui';
-import { Avatar, Flexbox, Icon, Tag, Text, Tooltip } from '@lobehub/ui';
+import { type ChatModelCard } from '@agentasia/types';
+import { type IconAvatarProps } from '@agentasia/icons';
+import { AgentAsia, ModelIcon, ProviderIcon } from '@agentasia/icons';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Avatar, Flexbox, Icon, Tag, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, useResponsive } from 'antd-style';
 import {
   AudioLines,
@@ -360,8 +360,8 @@ export const ProviderItemRender = memo<ProviderItemRenderProps>(
             style={isMono ? { filter: 'grayscale(1)' } : {}}
             title={name}
           />
-        ) : provider === 'lobehub' ? (
-          <LobeHub.Morden size={size} />
+        ) : provider === 'agentasia' ? (
+          <AgentAsia.Morden size={size} />
         ) : (
           <ProviderIcon provider={provider} size={size} type={type} />
         )}

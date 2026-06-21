@@ -1,5 +1,5 @@
-import type { MockEvent } from '@lobechat/agent-mock';
-import { Center, Text } from '@lobehub/ui';
+import type { MockEvent } from '@agentasia/agent-mock';
+import { Center, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useCallback, useMemo } from 'react';
 import { Virtuoso } from 'react-virtuoso';

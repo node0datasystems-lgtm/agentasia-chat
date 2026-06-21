@@ -1,7 +1,7 @@
 'use client';
 
-import { AsyncTaskStatus } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { AsyncTaskStatus } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useMemo } from 'react';
 
 import AnalysisAction from './Action';

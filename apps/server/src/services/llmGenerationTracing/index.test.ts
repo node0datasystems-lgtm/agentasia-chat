@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { ITracingStore, TracingPayload } from '@lobechat/llm-generation-tracing';
+import type { ITracingStore, TracingPayload } from '@agentasia/llm-generation-tracing';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

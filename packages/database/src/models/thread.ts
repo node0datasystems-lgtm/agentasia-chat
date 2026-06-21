@@ -1,5 +1,5 @@
-import type { CreateThreadParams } from '@lobechat/types';
-import { ThreadStatus } from '@lobechat/types';
+import type { CreateThreadParams } from '@agentasia/types';
+import { ThreadStatus } from '@agentasia/types';
 import { and, desc, eq, sql } from 'drizzle-orm';
 
 import type { ThreadItem } from '../schemas';

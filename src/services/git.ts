@@ -4,7 +4,7 @@ import type {
   GitRemoteBranchListItem,
   GitWorkingTreeFiles,
   GitWorkingTreePatches,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import type {
   DeviceGitAheadBehind,
   DeviceGitBranchListItem,
@@ -15,7 +15,7 @@ import type {
   DeviceGitSyncResult,
   DeviceGitWorkingTreeStatus,
   DeviceGitWorktreeListItem,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { electronGitService } from '@/services/electron/git';

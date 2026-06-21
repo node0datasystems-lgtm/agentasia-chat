@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Modal } from '@lobehub/ui';
+import { Button, Flexbox, Modal } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo, useEffect, useMemo, useState } from 'react';

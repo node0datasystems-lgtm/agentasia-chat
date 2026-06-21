@@ -1,7 +1,7 @@
 'use client';
 
-import { BRANDING_PROVIDER, SOCIAL_URL } from '@lobechat/business-const';
-import { Flexbox, Icon, Tabs } from '@lobehub/ui';
+import { BRANDING_PROVIDER, SOCIAL_URL } from '@agentasia/business-const';
+import { Flexbox, Icon, Tabs } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { BookOpenIcon, BrainCircuitIcon, ListIcon } from 'lucide-react';
 import { memo } from 'react';
@@ -86,7 +86,7 @@ const Nav = memo<NavProps>(({ mobile, setActiveTab, activeTab = ProviderNavKey.O
             rel="noreferrer"
             target="_blank"
             href={urlJoin(
-              'https://github.com/lobehub/lobe-chat/tree/main/src/config/modelProviders',
+              'https://github.com/agentasia/agentasia-chat/tree/main/src/config/modelProviders',
               `${identifier}.ts`,
             )}
           >
@@ -95,7 +95,7 @@ const Nav = memo<NavProps>(({ mobile, setActiveTab, activeTab = ProviderNavKey.O
         )}
         <a
           className={styles.link}
-          href="https://github.com/lobehub/lobe-chat/issues/new/choose"
+          href="https://github.com/agentasia/agentasia-chat/issues/new/choose"
           rel="noreferrer"
           target="_blank"
         >

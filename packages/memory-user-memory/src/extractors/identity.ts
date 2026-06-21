@@ -1,4 +1,4 @@
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
 
 import { identityPrompt } from '../prompts';
 import type { IdentityActions } from '../schemas';

@@ -1,5 +1,5 @@
-import { INTEREST_AREA_KEYS } from '@lobechat/const';
-import type { BuiltinToolManifest, HumanInterventionRule } from '@lobechat/types';
+import { INTEREST_AREA_KEYS } from '@agentasia/const';
+import type { BuiltinToolManifest, HumanInterventionRule } from '@agentasia/types';
 
 import { MARKETPLACE_CATEGORY_VALUES } from './agentMarketplace/types';
 import { toolSystemPrompt } from './toolSystemRole';

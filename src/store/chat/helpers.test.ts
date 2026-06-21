@@ -2,7 +2,7 @@ import {
   type LobeAgentChatConfig,
   type OpenAIChatMessage,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import * as tokenizerObj from '@/utils/tokenizer';

@@ -1,4 +1,4 @@
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 
 // Marks messages that should be rendered locally but never forwarded into the
 // real send pipeline or persisted to the database.

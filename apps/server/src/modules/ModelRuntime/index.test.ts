@@ -20,9 +20,9 @@ import {
   LobeZeroOneAI,
   LobeZhipuAI,
   ModelRuntime,
-} from '@lobechat/model-runtime';
-import { LobeVertexAI } from '@lobechat/model-runtime/vertexai';
-import { type ClientSecretPayload } from '@lobechat/types';
+} from '@agentasia/model-runtime';
+import { LobeVertexAI } from '@agentasia/model-runtime/vertexai';
+import { type ClientSecretPayload } from '@agentasia/types';
 import { ModelProvider } from 'model-bank';
 import { describe, expect, it, vi } from 'vitest';
 

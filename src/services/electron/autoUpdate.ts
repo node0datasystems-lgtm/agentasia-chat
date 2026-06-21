@@ -1,4 +1,4 @@
-import type { UpdateChannel, UpdaterState } from '@lobechat/electron-client-ipc';
+import type { UpdateChannel, UpdaterState } from '@agentasia/electron-client-ipc';
 
 import { ensureElectronIpc } from '@/utils/electron/ipc';
 

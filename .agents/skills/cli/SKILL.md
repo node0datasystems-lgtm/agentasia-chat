@@ -1,18 +1,18 @@
 ---
 name: cli
-description: LobeHub CLI (@lobehub/cli) development guide — commands, subcommands, architecture.
+description: AgentAsia CLI (@agentasia/cli) development guide — commands, subcommands, architecture.
 disable-model-invocation: true
 ---
 
-# LobeHub CLI Development Guide
+# AgentAsia CLI Development Guide
 
 ## Overview
 
-LobeHub CLI (`@lobehub/cli`) is a command-line tool for managing and interacting with LobeHub services. Built with Commander.js + TypeScript.
+AgentAsia CLI (`@agentasia/cli`) is a command-line tool for managing and interacting with AgentAsia services. Built with Commander.js + TypeScript.
 
 - **Package**: `apps/cli/`
 - **Entry**: `apps/cli/src/index.ts`
-- **Binaries**: `lh`, `lobe`, `lobehub` (all aliases for the same CLI)
+- **Binaries**: `lh`, `lobe`, `agentasia` (all aliases for the same CLI)
 - **Build**: tsup
 - **Runtime**: Node.js / Bun
 
@@ -53,7 +53,7 @@ apps/cli/src/
 │   ├── shell.ts              # Shell command execution (for gateway)
 │   └── file.ts               # File operations (for gateway)
 ├── settings/
-│   └── index.ts              # Persistent settings (~/.lobehub/)
+│   └── index.ts              # Persistent settings (~/.agentasia/)
 ├── utils/
 │   ├── logger.ts             # Logging (verbose mode)
 │   ├── format.ts             # Table output, JSON, timeAgo, truncate
@@ -179,13 +179,13 @@ if (!options.yes) {
 
 | File          | Path                          | Purpose                        |
 | ------------- | ----------------------------- | ------------------------------ |
-| Credentials   | `~/.lobehub/credentials.json` | Encrypted tokens (AES-256-GCM) |
-| Settings      | `~/.lobehub/settings.json`    | Custom server/gateway URLs     |
-| Daemon PID    | `~/.lobehub/daemon.pid`       | Background process PID         |
-| Daemon Status | `~/.lobehub/daemon.status`    | Connection status JSON         |
-| Daemon Log    | `~/.lobehub/daemon.log`       | Daemon output log              |
+| Credentials   | `~/.agentasia/credentials.json` | Encrypted tokens (AES-256-GCM) |
+| Settings      | `~/.agentasia/settings.json`    | Custom server/gateway URLs     |
+| Daemon PID    | `~/.agentasia/daemon.pid`       | Background process PID         |
+| Daemon Status | `~/.agentasia/daemon.status`    | Connection status JSON         |
+| Daemon Log    | `~/.agentasia/daemon.log`       | Daemon output log              |
 
-The base directory (`~/.lobehub/`) can be overridden with the `LOBEHUB_CLI_HOME` env var (e.g. `LOBEHUB_CLI_HOME=.lobehub-dev` for dev mode isolation).
+The base directory (`~/.agentasia/`) can be overridden with the `LOBEHUB_CLI_HOME` env var (e.g. `LOBEHUB_CLI_HOME=.agentasia-dev` for dev mode isolation).
 
 ## Key Dependencies
 
@@ -202,14 +202,14 @@ The base directory (`~/.lobehub/`) can be overridden with the `LOBEHUB_CLI_HOME`
 
 ### Running in Dev Mode
 
-Dev mode uses `LOBEHUB_CLI_HOME=.lobehub-dev` to isolate credentials from the global `~/.lobehub/` directory, so dev and production configs never conflict.
+Dev mode uses `LOBEHUB_CLI_HOME=.agentasia-dev` to isolate credentials from the global `~/.agentasia/` directory, so dev and production configs never conflict.
 
 ```bash
 # Run a command in dev mode (from apps/cli/)
 cd apps/cli && bun run dev -- <command>
 
 # This is equivalent to:
-LOBEHUB_CLI_HOME=.lobehub-dev bun src/index.ts <command>
+LOBEHUB_CLI_HOME=.agentasia-dev bun src/index.ts <command>
 ```
 
 ### Connecting to Local Dev Server
@@ -235,8 +235,8 @@ This will:
 1. Call `POST http://localhost:3011/oidc/device/auth` to get a device code
 2. Print a URL like `http://localhost:3011/oidc/device?user_code=XXXX-YYYY`
 3. Open the URL in your browser — log in and authorize
-4. Save credentials to `apps/cli/.lobehub-dev/credentials.json`
-5. Save server URL to `apps/cli/.lobehub-dev/settings.json`
+4. Save credentials to `apps/cli/.agentasia-dev/credentials.json`
+5. Save server URL to `apps/cli/.agentasia-dev/settings.json`
 
 After login, all subsequent `bun run dev -- <command>` calls will use the local server.
 
@@ -252,15 +252,15 @@ cd apps/cli && bun run dev -- agent list
 
 - If login returns `invalid_grant`, make sure the local OIDC provider is properly configured (check `OIDC_*` env vars in `.env`)
 - If you get `UNAUTHORIZED` on API calls, your token may have expired — run `bun run dev -- login --server http://localhost:3011` again
-- Dev credentials are stored in `apps/cli/.lobehub-dev/` (gitignored), not in `~/.lobehub/`
+- Dev credentials are stored in `apps/cli/.agentasia-dev/` (gitignored), not in `~/.agentasia/`
 
 ### Switching Between Local and Production
 
 ```bash
-# Dev mode (local server) — uses .lobehub-dev/
+# Dev mode (local server) — uses .agentasia-dev/
 cd apps/cli && bun run dev -- <command>
 
-# Production (app.lobehub.com) — uses ~/.lobehub/
+# Production (app.agentasia.ai) — uses ~/.agentasia/
 lh <command>
 ```
 
@@ -278,7 +278,7 @@ cd apps/cli && bun run test
 # E2E tests (requires authenticated CLI)
 cd apps/cli && bunx vitest run e2e/kb.e2e.test.ts
 
-# Link globally for testing (installs lh/lobe/lobehub commands)
+# Link globally for testing (installs lh/lobe/agentasia commands)
 cd apps/cli && bun run cli:link
 ```
 

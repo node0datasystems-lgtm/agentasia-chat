@@ -1,6 +1,6 @@
 'use client';
 
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { AnimatePresence, m } from 'motion/react';
 import { memo, useEffect, useRef, useState } from 'react';

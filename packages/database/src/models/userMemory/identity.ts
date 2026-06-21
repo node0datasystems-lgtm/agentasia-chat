@@ -1,5 +1,5 @@
-import type { IdentityListParams, IdentityListResult } from '@lobechat/types';
-import { RelationshipEnum } from '@lobechat/types';
+import type { IdentityListParams, IdentityListResult } from '@agentasia/types';
+import { RelationshipEnum } from '@agentasia/types';
 import type { SQL } from 'drizzle-orm';
 import { and, asc, desc, eq, inArray, isNull, or, sql } from 'drizzle-orm';
 

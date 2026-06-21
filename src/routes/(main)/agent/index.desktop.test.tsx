@@ -25,7 +25,7 @@ vi.hoisted(() => {
   });
 });
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({
     children,
     horizontal,

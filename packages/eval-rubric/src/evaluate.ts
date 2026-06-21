@@ -1,4 +1,4 @@
-import type { AnswerExtractor, EvalBenchmarkRubric, EvalTestCaseContent } from '@lobechat/types';
+import type { AnswerExtractor, EvalBenchmarkRubric, EvalTestCaseContent } from '@agentasia/types';
 
 import { extract } from './extractors';
 import { match, type MatchContext, type MatchResult } from './matchers';

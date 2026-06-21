@@ -193,7 +193,7 @@ export const params = {
     const response = await fetch(url, {
       headers: {
         'Authorization': `Bearer ${client.apiKey}`,
-        'Bigmodel-Organization': 'lobehub',
+        'Bigmodel-Organization': 'agentasia',
         'Bigmodel-Project': 'lobechat',
       },
       method: 'GET',

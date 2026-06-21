@@ -1,4 +1,4 @@
-import type { RubricConfig } from '@lobechat/types';
+import type { RubricConfig } from '@agentasia/types';
 
 import { normalize } from '../normalize';
 import type { MatchResult } from './types';

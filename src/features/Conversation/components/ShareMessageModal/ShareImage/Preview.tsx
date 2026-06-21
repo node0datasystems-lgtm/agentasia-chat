@@ -1,4 +1,4 @@
-import { type ConversationContext, type UIChatMessage } from '@lobechat/types';
+import { type ConversationContext, type UIChatMessage } from '@agentasia/types';
 import { memo } from 'react';
 
 import ShareTopicPreview from '@/features/ShareModal/ShareImage/Preview';

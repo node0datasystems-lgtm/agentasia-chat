@@ -1,5 +1,5 @@
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { RemoteDeviceManifest } from '@lobechat/builtin-tool-remote-device';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { RemoteDeviceManifest } from '@agentasia/builtin-tool-remote-device';
 import type * as ModelBankModule from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

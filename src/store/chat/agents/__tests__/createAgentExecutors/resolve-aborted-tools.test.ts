@@ -1,5 +1,5 @@
-import { type AgentEventDone } from '@lobechat/agent-runtime';
-import { type ChatToolPayload } from '@lobechat/types';
+import { type AgentEventDone } from '@agentasia/agent-runtime';
+import { type ChatToolPayload } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import {

@@ -1,4 +1,4 @@
-import { SKILL_DRAG_MIME } from '@lobechat/const';
+import { SKILL_DRAG_MIME } from '@agentasia/const';
 import type React from 'react';
 import { useCallback } from 'react';
 

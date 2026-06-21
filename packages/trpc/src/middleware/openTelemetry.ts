@@ -1,7 +1,7 @@
 import { env } from 'node:process';
 
-import { type Attributes, type Span } from '@lobechat/observability-otel/api';
-import { context, diag, SpanKind, SpanStatusCode, trace } from '@lobechat/observability-otel/api';
+import { type Attributes, type Span } from '@agentasia/observability-otel/api';
+import { context, diag, SpanKind, SpanStatusCode, trace } from '@agentasia/observability-otel/api';
 import {
   ATTR_ERROR_TYPE,
   ATTR_EXCEPTION_MESSAGE,
@@ -17,7 +17,7 @@ import {
   serverResponsesPerRpcHistogram,
   TRPCAttribute,
   tRPCConventionFromPathAndType,
-} from '@lobechat/observability-otel/trpc';
+} from '@agentasia/observability-otel/trpc';
 import { TRPCError } from '@trpc/server';
 
 import { injectSpanTraceHeaders } from '@/libs/observability/traceparent';

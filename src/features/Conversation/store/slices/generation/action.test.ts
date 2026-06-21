@@ -1,4 +1,4 @@
-import { AgentManagementIdentifier } from '@lobechat/builtin-tool-agent-management';
+import { AgentManagementIdentifier } from '@agentasia/builtin-tool-agent-management';
 import { act } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

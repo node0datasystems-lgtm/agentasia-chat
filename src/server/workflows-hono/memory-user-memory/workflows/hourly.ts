@@ -1,4 +1,4 @@
-import { MemorySourceType } from '@lobechat/types';
+import { MemorySourceType } from '@agentasia/types';
 import { type WorkflowContext } from '@upstash/workflow';
 import { chunk } from 'es-toolkit/compat';
 

@@ -1,4 +1,4 @@
-import type { AssistantContentBlock, ModelPerformance, ModelUsage } from '@lobechat/types';
+import type { AssistantContentBlock, ModelPerformance, ModelUsage } from '@agentasia/types';
 
 import type { Message } from '../types';
 

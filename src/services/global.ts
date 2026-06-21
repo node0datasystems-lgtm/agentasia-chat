@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import { type PartialDeep } from 'type-fest';
 
 import { type VersionResponseData } from '@/app/(backend)/api/version/route';
@@ -9,7 +9,7 @@ import { electronSyncSelectors } from '@/store/electron/selectors';
 import { type LobeAgentConfig } from '@/types/agent';
 import { type GlobalRuntimeConfig } from '@/types/serverConfig';
 
-const VERSION_URL = 'https://registry.npmmirror.com/@lobehub/chat/latest';
+const VERSION_URL = 'https://registry.npmmirror.com/@agentasia/chat/latest';
 const SERVER_VERSION_URL = '/api/version';
 
 class GlobalService extends BusinessGlobalService {

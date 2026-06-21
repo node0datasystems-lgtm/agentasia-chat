@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { memo, Suspense } from 'react';
 
 import SkeletonList from '@/features/NavPanel/components/SkeletonList';

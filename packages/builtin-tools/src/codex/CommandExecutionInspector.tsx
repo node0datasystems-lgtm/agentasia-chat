@@ -4,9 +4,9 @@ import {
   createGrepContentInspector,
   createReadLocalFileInspector,
   RunCommandInspector,
-} from '@lobechat/shared-tool-ui/inspectors';
-import type { RunCommandState } from '@lobechat/tool-runtime';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+} from '@agentasia/shared-tool-ui/inspectors';
+import type { RunCommandState } from '@agentasia/tool-runtime';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { memo } from 'react';
 
 import {

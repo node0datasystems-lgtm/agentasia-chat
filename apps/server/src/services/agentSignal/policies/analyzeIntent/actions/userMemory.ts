@@ -1,18 +1,18 @@
-import type { AgentRuntimeContext } from '@lobechat/agent-runtime';
+import type { AgentRuntimeContext } from '@agentasia/agent-runtime';
 import type {
   AgenticAttempt,
   BaseAction,
   ExecutorResult,
   SignalAttempt,
-} from '@lobechat/agent-signal';
-import { MemoryIdentifier } from '@lobechat/builtin-tool-memory';
-import type { LobeToolManifest, ToolExecutor, ToolSource } from '@lobechat/context-engine';
+} from '@agentasia/agent-signal';
+import { MemoryIdentifier } from '@agentasia/builtin-tool-memory';
+import type { LobeToolManifest, ToolExecutor, ToolSource } from '@agentasia/context-engine';
 import {
   createAgentSignalMemoryWriterPrompt,
   createAgentSignalMemoryWriterSystemRole,
-} from '@lobechat/prompts';
-import { RequestTrigger, ThreadType } from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/prompts';
+import { RequestTrigger, ThreadType } from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 
 import { PluginModel } from '@/database/models/plugin';
 import { ThreadModel } from '@/database/models/thread';

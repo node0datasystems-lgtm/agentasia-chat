@@ -1,30 +1,30 @@
-import { builtinSkills, LobeHubIdentifier } from '@lobechat/builtin-skills';
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
+import { builtinSkills, AgentAsiaIdentifier } from '@agentasia/builtin-skills';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
 import { describe, expect, it } from 'vitest';
 
-const LobeHubSkill = builtinSkills.find((s) => s.identifier === LobeHubIdentifier);
-if (!LobeHubSkill) {
-  throw new Error(`LobeHubSkill not found in builtinSkills (looking for "${LobeHubIdentifier}")`);
+const AgentAsiaSkill = builtinSkills.find((s) => s.identifier === AgentAsiaIdentifier);
+if (!AgentAsiaSkill) {
+  throw new Error(`AgentAsiaSkill not found in builtinSkills (looking for "${AgentAsiaIdentifier}")`);
 }
-const lobeHubContent = LobeHubSkill.content;
+const lobeHubContent = AgentAsiaSkill.content;
 
 /**
  * Regression for .
  *
  * Instead of building a dedicated AgentIdentityContextInjector, we wire current
  * agent / topic identity through the existing PlaceholderVariablesProcessor —
- * the LobeHub builtin skill content references `{{agent_id}}`, `{{topic_id}}`,
+ * the AgentAsia builtin skill content references `{{agent_id}}`, `{{topic_id}}`,
  * etc., and `contextEngineering.ts` provides the matching variable generators.
  *
  * This test pins the contract from BOTH ends:
- *   1. `lobehub/content.ts` actually contains the expected `{{...}}` tokens.
+ *   1. `agentasia/content.ts` actually contains the expected `{{...}}` tokens.
  *   2. The placeholder engine substitutes them with caller-provided values.
  *
  * If anyone renames a token in content.ts without updating the generators (or
  * vice versa), this test fails before users see a broken `lh agent run -a {{agent_id}}`
  * literal in their prompts.
  */
-describe('LobeHub skill identity placeholders ()', () => {
+describe('AgentAsia skill identity placeholders ()', () => {
   const PLACEHOLDER_KEYS = [
     'agent_id',
     'agent_title',

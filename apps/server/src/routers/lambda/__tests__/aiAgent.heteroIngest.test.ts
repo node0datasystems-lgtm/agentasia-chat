@@ -1,7 +1,7 @@
 // @vitest-environment node
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import { type LobeChatDatabase } from '@lobechat/database';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { aiAgentRouter } from '../aiAgent';

@@ -1,6 +1,6 @@
 'use client';
 
-import type { BuiltinStreamingProps } from '@lobechat/types';
+import type { BuiltinStreamingProps } from '@agentasia/types';
 import { memo } from 'react';
 
 import type { AddExperienceMemoryParams } from '../../../types';

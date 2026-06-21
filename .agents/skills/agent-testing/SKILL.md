@@ -1,7 +1,7 @@
 ---
 name: agent-testing
 description: >
-  Agentic end-to-end testing for LobeHub: backend verification via the CLI,
+  Agentic end-to-end testing for AgentAsia: backend verification via the CLI,
   frontend verification via agent-browser (Electron), full-stack verification in
   the browser, and bot-channel verification via osascript. Local-first today,
   designed to extend to cloud automation. Triggers on 'cli test', 'test with cli',
@@ -179,10 +179,10 @@ Default script env:
   triggers QStash/Workflow.
 - `KEY_VAULTS_SECRET`, `AUTH_SECRET`, auth verification off
 - S3 mock vars
-- Managed DB container: `lobehub-agent-testing-postgres`
-- Managed Redis container: `lobehub-agent-testing-redis`
+- Managed DB container: `agentasia-agent-testing-postgres`
+- Managed Redis container: `agentasia-agent-testing-redis`
 
-`seed-user` creates `agent-testing@lobehub.com` / `TestPassword123!` with
+`seed-user` creates `agent-testing@agentasia.ai` / `TestPassword123!` with
 onboarding already completed, plus a local API key in
 `.records/env/agent-testing-cli.env` for CLI automation. When running Cucumber
 against this dev server, pass the same script env into the test process too;
@@ -220,7 +220,7 @@ Login-state checks are standardized — do NOT hand-roll `window.__LOBE_STORES`
 eval snippets; use `scripts/app-probe.sh auth` (returns `{ isSignedIn, userId }`,
 works for Electron CDP and web sessions via `AB_TARGET`).
 
-For Web tests, the test surface is always `agent-browser --session lobehub-dev`.
+For Web tests, the test surface is always `agent-browser --session agentasia-dev`.
 Use `setup-auth.sh web-seed` first in the seeded local env. The user's normal
 Chrome is only a source for copying the Cookie header when seed auth is not
 available or `status --surface web` still fails. If Chrome is already logged in,
@@ -303,7 +303,7 @@ All under `.agents/skills/agent-testing/scripts/`:
 | `test-env.sh`             | Print/export the resolved local test env and ports                           |
 | `setup-auth.sh`           | One-stop auth setup & status check (`status` / `cli` / `web`)                |
 | `init-dev-env.sh`         | Self-contained local dev env (`setup-db` / `seed-user` / `dev-next` / `dev`) |
-| `app-probe.sh`            | LobeHub app probes: `auth` / `route` / `ops` / `goto <path>` / `errors`      |
+| `app-probe.sh`            | AgentAsia app probes: `auth` / `route` / `ops` / `goto <path>` / `errors`      |
 | `record-gif.sh`           | Frame-sequence → GIF for time-based behavior (streaming, timers, animations) |
 | `report-init.sh`          | Scaffold a structured test report (Step 3)                                   |
 | `electron-dev.sh`         | Manage Electron dev env (start/stop/status/restart, CDP 9222)                |
@@ -312,11 +312,11 @@ All under `.agents/skills/agent-testing/scripts/`:
 | `record-electron-demo.sh` | Record Electron app demo with ffmpeg                                         |
 | `agent-gateway/`          | Gateway probe / dump / analyze tools                                         |
 
-`app-probe.sh` is the LobeHub-specific fast path into app state — auth check,
+`app-probe.sh` is the AgentAsia-specific fast path into app state — auth check,
 current route, running operations, and `goto <path>` quick navigation
 (`/agent/<agentId>/<topicId>`, `/task/<taskId>`, `/settings`, …) so a test can
 jump straight to the state under test instead of clicking through the UI. See
-[ui/electron.md](./ui/electron.md#lobehub-probes--quick-navigation) for usage.
+[ui/electron.md](./ui/electron.md#agentasia-probes--quick-navigation) for usage.
 
 ## Step 3 — Structured report (mandatory deliverable)
 
@@ -365,7 +365,7 @@ Two hard rules worth front-loading:
 ```
 agent-testing/
 ├── SKILL.md            # this router
-├── cli/index.md        # backend verification via the LobeHub CLI
+├── cli/index.md        # backend verification via the AgentAsia CLI
 ├── ui/electron.md      # pure-frontend verification in the desktop app
 ├── ui/web.md           # full-stack verification in the browser
 ├── bot/<platform>/     # bot-channel verification (osascript / bridge)

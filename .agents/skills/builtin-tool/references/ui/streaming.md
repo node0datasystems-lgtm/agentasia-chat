@@ -25,8 +25,8 @@ Note there's **no `state` or `result` prop** — the Streaming component is for 
 ```tsx
 'use client';
 
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Highlighter } from '@lobehub/ui';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Highlighter } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface RunCommandParams {

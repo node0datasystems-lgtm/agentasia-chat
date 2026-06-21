@@ -1,4 +1,4 @@
-import type { MarketplaceCategory } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+import type { MarketplaceCategory } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import { cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

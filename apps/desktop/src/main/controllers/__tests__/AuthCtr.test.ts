@@ -1,4 +1,4 @@
-import type { DataSyncConfig } from '@lobechat/electron-client-ipc';
+import type { DataSyncConfig } from '@agentasia/electron-client-ipc';
 import { BrowserWindow, shell } from 'electron';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -53,7 +53,7 @@ vi.mock('electron-is', () => ({
 
 // Mock OFFICIAL_CLOUD_SERVER
 vi.mock('@/const/env', () => ({
-  OFFICIAL_CLOUD_SERVER: 'https://lobehub-cloud.com',
+  OFFICIAL_CLOUD_SERVER: 'https://agentasia-cloud.com',
   isMac: false,
   isWindows: false,
   isLinux: false,
@@ -86,7 +86,7 @@ const mockRemoteServerConfigCtr = {
     if (config?.storageMode === 'selfHost') {
       return config.remoteServerUrl || 'https://mock-server.com';
     }
-    return 'https://lobehub-cloud.com'; // OFFICIAL_CLOUD_SERVER
+    return 'https://agentasia-cloud.com'; // OFFICIAL_CLOUD_SERVER
   }),
   getTokenExpiresAt: vi.fn().mockReturnValue(Date.now() + 3600000),
   isNonRetryableError: vi.fn().mockReturnValue(false),
@@ -166,12 +166,12 @@ describe('AuthCtr', () => {
 
         // Verify shell.openExternal was called with correct URL
         expect(shell.openExternal).toHaveBeenCalledWith(
-          expect.stringContaining('https://lobehub-cloud.com/oidc/auth'),
+          expect.stringContaining('https://agentasia-cloud.com/oidc/auth'),
         );
 
         // Verify URL contains required parameters
         const authUrl = vi.mocked(shell.openExternal).mock.calls[0][0];
-        expect(authUrl).toContain('client_id=lobehub-desktop');
+        expect(authUrl).toContain('client_id=agentasia-desktop');
         expect(authUrl).toContain('response_type=code');
         expect(authUrl).toContain('code_challenge_method=S256');
         expect(authUrl).toContain('scope=profile%20email%20offline_access');
@@ -724,7 +724,7 @@ describe('AuthCtr', () => {
     beforeEach(() => {
       vi.mocked(mockRemoteServerConfigCtr.getRemoteServerConfig).mockResolvedValue({
         active: true,
-        remoteServerUrl: 'https://lobehub-cloud.com',
+        remoteServerUrl: 'https://agentasia-cloud.com',
         storageMode: 'cloud',
       });
       vi.mocked(mockRemoteServerConfigCtr.isRemoteServerConfigured).mockResolvedValue(true);

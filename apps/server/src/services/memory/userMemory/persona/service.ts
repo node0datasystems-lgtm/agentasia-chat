@@ -1,15 +1,15 @@
 import {
   type UserPersonaDocument,
   type UserPersonaDocumentHistoriesItem,
-} from '@lobechat/database/schemas';
-import { userMemories } from '@lobechat/database/schemas';
-import { type UserPersonaExtractionResult } from '@lobechat/memory-user-memory';
+} from '@agentasia/database/schemas';
+import { userMemories } from '@agentasia/database/schemas';
+import { type UserPersonaExtractionResult } from '@agentasia/memory-user-memory';
 import {
   RetrievalUserMemoryContextProvider,
   RetrievalUserMemoryIdentitiesProvider,
   UserPersonaExtractor,
-} from '@lobechat/memory-user-memory';
-import type { UserServiceModelConfig } from '@lobechat/types';
+} from '@agentasia/memory-user-memory';
+import type { UserServiceModelConfig } from '@agentasia/types';
 import { desc, eq } from 'drizzle-orm';
 
 import { getBusinessModelRuntimeHooks } from '@/business/server/model-runtime';
@@ -117,7 +117,7 @@ export class UserPersonaService {
       {} as ProviderKeyVaultMap,
     );
 
-    const hooks = getBusinessModelRuntimeHooks(payload.userId, 'lobehub');
+    const hooks = getBusinessModelRuntimeHooks(payload.userId, 'agentasia');
 
     const runtime = await resolveRuntimeAgentConfig(
       agentConfig,

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, SearchBar } from '@lobehub/ui';
+import { Flexbox, SearchBar } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -10,11 +10,11 @@ import { SkillStoreTab } from '../SkillStoreContent';
 
 interface SearchProps {
   activeTab: SkillStoreTab;
-  onLobeHubSearch: (keywords: string) => void;
+  onAgentAsiaSearch: (keywords: string) => void;
   onSkillSearch: (keywords: string) => void;
 }
 
-export const Search = memo<SearchProps>(({ activeTab, onLobeHubSearch, onSkillSearch }) => {
+export const Search = memo<SearchProps>(({ activeTab, onAgentAsiaSearch, onSkillSearch }) => {
   const { t } = useTranslation('setting');
   const mcpKeywords = useToolStore((s) => s.mcpSearchKeywords);
 
@@ -34,7 +34,7 @@ export const Search = memo<SearchProps>(({ activeTab, onLobeHubSearch, onSkillSe
             } else if (activeTab === SkillStoreTab.Skills) {
               onSkillSearch(keywords);
             } else {
-              onLobeHubSearch(keywords);
+              onAgentAsiaSearch(keywords);
             }
           }}
         />

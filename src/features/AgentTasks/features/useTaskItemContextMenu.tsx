@@ -1,4 +1,4 @@
-import type { TaskStatus } from '@lobechat/types';
+import type { TaskStatus } from '@agentasia/types';
 import {
   closeContextMenu,
   type ContextMenuItem,
@@ -6,8 +6,8 @@ import {
   type GenericItemType,
   Icon,
   type MenuInfo,
-} from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+} from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import { cssVar } from 'antd-style';
 import {

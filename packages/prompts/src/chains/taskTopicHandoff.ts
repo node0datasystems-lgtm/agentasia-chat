@@ -1,4 +1,4 @@
-import type { ChatStreamPayload } from '@lobechat/types';
+import type { ChatStreamPayload } from '@agentasia/types';
 
 /**
  * Bump when editing the system prompt or schema below. Plumbed through

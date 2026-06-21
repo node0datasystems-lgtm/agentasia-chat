@@ -1,4 +1,4 @@
-import { isOfficialProvider, OFFICIAL_PROVIDER_DISABLE_ERROR } from '@lobechat/business-const';
+import { isOfficialProvider, OFFICIAL_PROVIDER_DISABLE_ERROR } from '@agentasia/business-const';
 import { and, asc, count, desc, eq, ilike, or } from 'drizzle-orm';
 
 import type { AiProviderSelectItem } from '@/database/schemas';

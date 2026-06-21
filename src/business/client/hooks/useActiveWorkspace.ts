@@ -1,4 +1,4 @@
-import type { WorkspaceItem } from '@lobechat/database/schemas';
+import type { WorkspaceItem } from '@agentasia/database/schemas';
 
 export type WorkspaceListItem = WorkspaceItem & { plan?: 'hobby' | 'pro'; role?: string };
 

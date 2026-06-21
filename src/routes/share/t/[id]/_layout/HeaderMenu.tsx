@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, copyToClipboard } from '@lobehub/ui';
-import { type DropdownItem, DropdownMenu } from '@lobehub/ui/base-ui';
+import { ActionIcon, copyToClipboard } from '@agentasia/ui';
+import { type DropdownItem, DropdownMenu } from '@agentasia/ui/base-ui';
 import { App } from 'antd';
 import { ExternalLink, Flag, LinkIcon, MoreHorizontal } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 import { mailTo, OFFICIAL_SITE } from '@/const/url';
 
-const REPORT_EMAIL = 'hi@lobehub.com';
+const REPORT_EMAIL = 'hi@agentasia.ai';
 
 const HeaderMenu = memo(() => {
   const { t } = useTranslation('chat');
@@ -30,10 +30,10 @@ const HeaderMenu = memo(() => {
       },
       {
         icon: <ExternalLink size={16} />,
-        key: 'go-to-lobehub',
+        key: 'go-to-agentasia',
         label: (
           <a href={OFFICIAL_SITE} rel="noopener noreferrer" target="_blank">
-            {t('sharePage.menu.goToLobeHub')}
+            {t('sharePage.menu.goToAgentAsia')}
           </a>
         ),
       },

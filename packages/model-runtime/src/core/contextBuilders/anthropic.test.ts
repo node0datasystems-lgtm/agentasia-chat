@@ -1,4 +1,4 @@
-import { imageUrlToBase64 } from '@lobechat/utils';
+import { imageUrlToBase64 } from '@agentasia/utils';
 import type { OpenAI } from 'openai';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -9,7 +9,7 @@ export default defineConfig({
   entry: [
     'src/index.ts',
     'src/modelProviders/index.ts',
-    'src/modelProviders/lobehub.ts',
+    'src/modelProviders/agentasia.ts',
     'src/types/index.ts',
     'src/aiModels/*.ts',
   ],

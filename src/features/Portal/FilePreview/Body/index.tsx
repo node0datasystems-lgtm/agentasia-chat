@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Markdown, Segmented } from '@lobehub/ui';
+import { Flexbox, Icon, Markdown, Segmented } from '@agentasia/ui';
 import { BoltIcon, FileIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

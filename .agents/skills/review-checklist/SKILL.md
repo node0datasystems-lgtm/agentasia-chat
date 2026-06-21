@@ -1,6 +1,6 @@
 ---
 name: review-checklist
-description: 'LobeHub code review checklist. Use when reviewing a PR, diff, or branch for console leftovers, return await, secrets, i18n, desktop router drift, UI imports, migrations, or cloud impact.'
+description: 'AgentAsia code review checklist. Use when reviewing a PR, diff, or branch for console leftovers, return await, secrets, i18n, desktop router drift, UI imports, migrations, or cloud impact.'
 user-invocable: false
 ---
 
@@ -40,7 +40,7 @@ user-invocable: false
 
 - Newly written code duplicates existing utilities in `packages/utils` or shared modules?
 - Copy-pasted blocks with slight variation — extract into shared function
-- `antd` imports replaceable with `@lobehub/ui` wrapped components (`Input`, `Button`, `Modal`, `Avatar`, etc.)
+- `antd` imports replaceable with `@agentasia/ui` wrapped components (`Input`, `Button`, `Modal`, `Avatar`, etc.)
 - Use `antd-style` token system, not hardcoded colors; prefer `createStaticStyles` + `cssVar.*` over `createStyles` + `token` unless runtime computation is required
 
 ## Database

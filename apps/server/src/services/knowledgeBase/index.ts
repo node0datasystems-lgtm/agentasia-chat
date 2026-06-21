@@ -1,11 +1,11 @@
-import { DEFAULT_FILE_EMBEDDING_MODEL_ITEM } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
+import { DEFAULT_FILE_EMBEDDING_MODEL_ITEM } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   type ChatSemanticSearchChunk,
   type FileSearchResult,
   RequestTrigger,
   type SemanticSearchSchemaType,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { inArray } from 'drizzle-orm';
 import pMap from 'p-map';
 

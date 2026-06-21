@@ -3,7 +3,7 @@ import debug from 'debug';
 /**
  * Minimal logger interface. Each level is variadic — the first arg is a
  * message string and the rest are formatter arguments (matches the shape
- * agreed across LobeHub packages).
+ * agreed across AgentAsia packages).
  */
 export interface Logger {
   debug: (message: unknown, ...args: unknown[]) => void;

@@ -1,5 +1,5 @@
-import type { FileContent, KnowledgeBaseInfo } from '@lobechat/prompts';
-import { promptAgentKnowledge } from '@lobechat/prompts';
+import type { FileContent, KnowledgeBaseInfo } from '@agentasia/prompts';
+import { promptAgentKnowledge } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseFirstUserContentProvider } from '../base/BaseFirstUserContentProvider';

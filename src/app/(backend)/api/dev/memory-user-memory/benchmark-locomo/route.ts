@@ -1,5 +1,5 @@
-import { DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM } from '@lobechat/const';
-import { ModelRuntime } from '@lobechat/model-runtime';
+import { DEFAULT_USER_MEMORY_EMBEDDING_MODEL_ITEM } from '@agentasia/const';
+import { ModelRuntime } from '@agentasia/model-runtime';
 import { and, eq, inArray } from 'drizzle-orm';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';

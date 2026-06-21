@@ -37,7 +37,7 @@ vi.mock('@lobechat/electron-client-ipc', () => ({
   useWatchBroadcast: vi.fn(),
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Button: ({
     children,
     disabled,
@@ -55,7 +55,7 @@ vi.mock('@lobehub/ui', () => ({
   Icon: () => <span data-testid="modal-icon" />,
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   createModal: (props: ModalProps) => {
     createModalMock(props);
 

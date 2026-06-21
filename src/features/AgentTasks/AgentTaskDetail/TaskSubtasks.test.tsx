@@ -31,7 +31,7 @@ const mocks = vi.hoisted(() => ({
   } as any,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({ onClick }: { onClick?: () => void }) => (
     <button type="button" onClick={onClick}>
       action
@@ -81,7 +81,7 @@ vi.mock('antd-style', () => ({
   },
 }));
 
-vi.mock('@lobehub/ui/base-ui', () => ({
+vi.mock('@agentasia/ui/base-ui', () => ({
   confirmModal: vi.fn(),
 }));
 

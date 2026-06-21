@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { BRANDING_LOGO_URL } from '@lobechat/business-const';
+import { BRANDING_LOGO_URL } from '@agentasia/business-const';
 import qs from 'query-string';
 import { describe, expect, it, vi } from 'vitest';
 

@@ -1,4 +1,4 @@
-import type { WorkingDirEntry } from '@lobechat/types';
+import type { WorkingDirEntry } from '@agentasia/types';
 
 /** Max number of working directories persisted per device. Matches the
  * `workingDirs` cap enforced by the `device.updateDevice` tRPC input. */

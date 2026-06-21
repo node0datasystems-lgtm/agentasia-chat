@@ -1,18 +1,18 @@
 ---
 name: ux
-description: 'LobeHub product design values / principles / checklists. Load this skill whenever the work touches user-interface features or implementation — designing or building any user-facing flow — to get better UX results.'
+description: 'AgentAsia product design values / principles / checklists. Load this skill whenever the work touches user-interface features or implementation — designing or building any user-facing flow — to get better UX results.'
 user-invocable: false
 ---
 
 # UX — Design Values & Execution Checklists
 
-How LobeHub products should feel, and concrete rules to get there. Use this when
+How AgentAsia products should feel, and concrete rules to get there. Use this when
 **building or reviewing** any user-facing flow. For component/styling choices see
 **react**, for wording see **microcopy**, for imperative modal wiring see **modal**.
 
 ## Design values
 
-LobeHub follows four product design values — **Natural・Meaningful・Certainty・
+AgentAsia follows four product design values — **Natural・Meaningful・Certainty・
 Growth**. Read them before designing:
 **[references/design-values.md](references/design-values.md)** (definitions +
 conflict priority).

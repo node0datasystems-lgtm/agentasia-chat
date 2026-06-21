@@ -13,7 +13,7 @@ import { registerDevice, resolveDeviceIdentity } from '../device/register';
 import { loadSettings, normalizeUrl, saveSettings } from '../settings';
 import { log } from '../utils/logger';
 
-const CLIENT_ID = 'lobehub-cli';
+const CLIENT_ID = 'agentasia-cli';
 const SCOPES = 'openid profile email offline_access';
 
 interface LoginOptions {
@@ -55,8 +55,8 @@ async function parseJsonResponse<T>(res: Response, endpoint: string): Promise<T>
 export function registerLoginCommand(program: Command) {
   program
     .command('login')
-    .description('Log in to LobeHub via browser (Device Code Flow) or configure API key server')
-    .option('--server <url>', 'LobeHub server URL', OFFICIAL_SERVER_URL)
+    .description('Log in to AgentAsia via browser (Device Code Flow) or configure API key server')
+    .option('--server <url>', 'AgentAsia server URL', OFFICIAL_SERVER_URL)
     .action(async (options: LoginOptions) => {
       const serverUrl = normalizeUrl(options.server) || OFFICIAL_SERVER_URL;
 
@@ -98,7 +98,7 @@ export function registerLoginCommand(program: Command) {
         const res = await fetch(`${serverUrl}/oidc/device/auth`, {
           body: new URLSearchParams({
             client_id: CLIENT_ID,
-            resource: 'urn:lobehub:chat',
+            resource: 'urn:agentasia:chat',
             scope: SCOPES,
           }),
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

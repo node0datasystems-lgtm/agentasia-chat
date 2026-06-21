@@ -1,4 +1,4 @@
-import { ARTIFACT_THINKING_TAG_REGEX } from '@lobechat/const';
+import { ARTIFACT_THINKING_TAG_REGEX } from '@agentasia/const';
 
 const ARTIFACT_TAG_REGEX_GLOBAL =
   /<lobeArtifact\b[^>]*>(?<content>[\S\s]*?)(?:<\/lobeArtifact>|$)/g;

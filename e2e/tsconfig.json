@@ -3,16 +3,30 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "ES2020",
-    "lib": ["ES2020"],
-    "types": ["node", "@cucumber/cucumber", "@playwright/test"],
+    "lib": [
+      "ES2020"
+    ],
+    "types": [
+      "node",
+      "@cucumber/cucumber",
+      "@playwright/test"
+    ],
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "paths": {
-      "@/*": ["../*"]
+      "@/*": [
+        "../*"
+      ]
     }
   },
-  "exclude": ["node_modules", "reports"],
+  "exclude": [
+    "node_modules",
+    "reports"
+  ],
   "extends": "../tsconfig.json",
-  "include": ["src/**/*", "*.js"]
+  "include": [
+    "src/**/*",
+    "*.js"
+  ]
 }

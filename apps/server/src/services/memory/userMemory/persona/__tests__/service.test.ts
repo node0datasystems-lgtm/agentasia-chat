@@ -1,7 +1,7 @@
 // @vitest-environment node
-import { type LobeChatDatabase } from '@lobechat/database';
-import { users, userSettings } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { users, userSettings } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { UserPersonaModel } from '@/database/models/userMemory/persona';

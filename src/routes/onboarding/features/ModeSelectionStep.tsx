@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Button, Flexbox, Text } from '@lobehub/ui';
+import { Block, Button, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Undo2Icon } from 'lucide-react';
 import React, { memo, useMemo } from 'react';

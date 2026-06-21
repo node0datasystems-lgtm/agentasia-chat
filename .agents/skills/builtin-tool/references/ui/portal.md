@@ -21,7 +21,7 @@ interface BuiltinPortalProps<Arguments = Record<string, any>, State = any> {
 `packages/builtin-tool-web-browsing/src/client/Portal/index.tsx`:
 
 ```tsx
-import type { BuiltinPortalProps, CrawlPluginState, SearchQuery } from '@lobechat/types';
+import type { BuiltinPortalProps, CrawlPluginState, SearchQuery } from '@agentasia/types';
 import { memo } from 'react';
 
 import { WebBrowsingApiName } from '../../types';
@@ -62,8 +62,8 @@ export default Portal;
 ## Portal registry — `packages/builtin-tools/src/portals.ts`
 
 ```ts
-import { WebBrowsingManifest, WebBrowsingPortal } from '@lobechat/builtin-tool-web-browsing/client';
-import { type BuiltinPortal } from '@lobechat/types';
+import { WebBrowsingManifest, WebBrowsingPortal } from '@agentasia/builtin-tool-web-browsing/client';
+import { type BuiltinPortal } from '@agentasia/types';
 
 export const BuiltinToolsPortals: Record<string, BuiltinPortal> = {
   [WebBrowsingManifest.identifier]: WebBrowsingPortal as BuiltinPortal,

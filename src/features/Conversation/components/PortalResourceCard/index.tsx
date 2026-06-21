@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox, Icon, Text, Tooltip } from '@lobehub/ui';
+import { Center, Flexbox, Icon, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { FileText } from 'lucide-react';
 import type { KeyboardEvent, ReactNode } from 'react';

@@ -1,13 +1,13 @@
-import type { MessagePlatformType } from '@lobechat/builtin-tool-message';
-import type { MessageRuntimeService } from '@lobechat/builtin-tool-message/executionRuntime';
-import { LarkApiClient } from '@lobechat/chat-adapter-feishu';
-import { QQApiClient } from '@lobechat/chat-adapter-qq';
-import { WechatApiClient } from '@lobechat/chat-adapter-wechat';
+import type { MessagePlatformType } from '@agentasia/builtin-tool-message';
+import type { MessageRuntimeService } from '@agentasia/builtin-tool-message/executionRuntime';
+import { LarkApiClient } from '@agentasia/chat-adapter-feishu';
+import { QQApiClient } from '@agentasia/chat-adapter-qq';
+import { WechatApiClient } from '@agentasia/chat-adapter-wechat';
 import {
   DEFAULT_BOT_HISTORY_LIMIT,
   MAX_BOT_HISTORY_LIMIT,
   MIN_BOT_HISTORY_LIMIT,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 
@@ -162,7 +162,7 @@ const resolveBot = async (
  * Resolve a system-bot messenger installation row into a runnable
  * `MessageRuntimeService`. Authorization: only the user who installed the
  * row can target it — workspace admins who installed under a different
- * LobeHub account need their own session.
+ * AgentAsia account need their own session.
  */
 const resolveMessengerInstall = async (
   ctx: { serverDB: any; userId: string },

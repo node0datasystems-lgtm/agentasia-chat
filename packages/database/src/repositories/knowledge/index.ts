@@ -1,5 +1,5 @@
-import type { QueryFileListParams } from '@lobechat/types';
-import { FilesTabs, SortType } from '@lobechat/types';
+import type { QueryFileListParams } from '@agentasia/types';
+import { FilesTabs, SortType } from '@agentasia/types';
 import { and, eq, sql } from 'drizzle-orm';
 
 import { DocumentModel } from '../../models/document';

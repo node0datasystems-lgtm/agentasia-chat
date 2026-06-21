@@ -6,7 +6,7 @@
         "type": "plugin",
         "manifest": {
           "ui": {
-            "url": "https://midjourney.chat-plugin.lobehub.com/iframe",
+            "url": "https://midjourney.chat-plugin.agentasia.ai/iframe",
             "width": 360,
             "height": 420
           },
@@ -15,7 +15,9 @@
               "name": "showMJ",
               "parameters": {
                 "type": "object",
-                "required": ["prompts"],
+                "required": [
+                  "prompts"
+                ],
                 "properties": {
                   "prompts": {
                     "type": "string",
@@ -27,18 +29,24 @@
             }
           ],
           "meta": {
-            "tags": ["AI Image Generation", "Midjourney", "Visualization"],
+            "tags": [
+              "AI Image Generation",
+              "Midjourney",
+              "Visualization"
+            ],
             "title": "Midjourney",
             "avatar": "https://cdn.discordapp.com/icons/662267976984297473/39128f6c9fc33f4c95a27d4c601ad7db.webp",
             "description": "Unleash creativity with Midjourney, effortlessly generating unique AI-driven images through simple prompts. Add visual flair to your conversations with Midjourney's artistic touch."
           },
           "type": "standalone",
-          "author": "LobeHub",
-          "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+          "author": "AgentAsia",
+          "$schema": "../node_modules/@agentasia/chat-plugin-sdk/schema.json",
           "version": "1",
           "settings": {
             "type": "object",
-            "required": ["MIDJOURNEY_PROXY_URL"],
+            "required": [
+              "MIDJOURNEY_PROXY_URL"
+            ],
             "properties": {
               "MIDJOURNEY_PROXY_URL": {
                 "type": "string",
@@ -119,7 +127,13 @@
         "slug": "rapidly-radio-harbor-mountain",
         "title": "CAN",
         "description": "有经验的程序员，精通多种编程语言。提供代码解决方案、指导和实际示例，帮助用户实现他们的编程目标。\"我热爱编程。\"",
-        "tags": ["programming", "coding", "programming-assistance", "code-examples", "guidance"],
+        "tags": [
+          "programming",
+          "coding",
+          "programming-assistance",
+          "code-examples",
+          "guidance"
+        ],
         "avatar": "👨‍💻",
         "backgroundColor": null,
         "plugins": [],
@@ -158,7 +172,9 @@
         "slug": "crowd-society-south-shallow",
         "title": "",
         "description": "",
-        "tags": [""],
+        "tags": [
+          ""
+        ],
         "avatar": "",
         "backgroundColor": "rgba(0,0,0,0)",
         "plugins": [],
@@ -197,10 +213,18 @@
         "slug": "team-energy-settlers-west",
         "title": "量化交易顾问",
         "description": "擅长数字货币市场量化交易与策略优化",
-        "tags": ["数字货币", "量化交易", "市场分析", "风险管理", "策略开发"],
+        "tags": [
+          "数字货币",
+          "量化交易",
+          "市场分析",
+          "风险管理",
+          "策略开发"
+        ],
         "avatar": "📈",
         "backgroundColor": "rgba(0,0,0,0)",
-        "plugins": ["web_search"],
+        "plugins": [
+          "web_search"
+        ],
         "clientId": null,
         "chatConfig": {
           "historyCount": 8,
@@ -236,7 +260,11 @@
         "slug": "load-essential-likely-travel",
         "title": "中英文互译助手",
         "description": "中英文翻译专家，追求翻译信达雅",
-        "tags": ["翻译", "中文", "英文"],
+        "tags": [
+          "翻译",
+          "中文",
+          "英文"
+        ],
         "avatar": "🌐",
         "backgroundColor": null,
         "plugins": [],
@@ -275,7 +303,13 @@
         "slug": "look-quickly-break-yard",
         "title": "全栈开发助手",
         "description": "此角色擅长全栈开发的深度思考与技术分析。",
-        "tags": ["人工智能", "全栈开发", "思维模式", "技术能力", "解决方案"],
+        "tags": [
+          "人工智能",
+          "全栈开发",
+          "思维模式",
+          "技术能力",
+          "解决方案"
+        ],
         "avatar": "🧩",
         "backgroundColor": "rgba(0,0,0,0)",
         "plugins": [],
@@ -314,7 +348,9 @@
         "slug": "everybody-those-unhappy-age",
         "title": "自适应全能产业顾问",
         "description": "你是一个能够适应各个行业和领域的全能人工智能助手。您的任务是根据用户指定的兴趣领域及其后续问题提供专家建议和信息。",
-        "tags": ["产业专家、技术答疑"],
+        "tags": [
+          "产业专家、技术答疑"
+        ],
         "avatar": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ5XrlGZKwN3Q_hEk139JOvb3Ieg5bC08jOqftLpESRRQ6_v4appLaa55PGR4g_1eK3A73UBrF_PaA8XsfswRgPPShCgZRkG8yHMvEIJNllUq3g14Pok0UGjtNZRVl3PNrLcbLxSfLX7TZ/s550/ai_shigoto_makaseru.png",
         "backgroundColor": null,
         "plugins": [],
@@ -353,7 +389,10 @@
         "slug": "swept-name-church-rays",
         "title": "AI代理生成器",
         "description": "擅长创建满足需求的AI代理角色描述。",
-        "tags": ["ai-agent", "角色创建"],
+        "tags": [
+          "ai-agent",
+          "角色创建"
+        ],
         "avatar": "🤖",
         "backgroundColor": null,
         "plugins": [],
@@ -392,7 +431,11 @@
         "slug": "continued-method-equator-attached",
         "title": "Stack Overflow 编程专家",
         "description": "",
-        "tags": ["编程", "专家", "编程语言"],
+        "tags": [
+          "编程",
+          "专家",
+          "编程语言"
+        ],
         "avatar": "🚀",
         "backgroundColor": null,
         "plugins": [],
@@ -434,7 +477,9 @@
         "tags": [],
         "avatar": null,
         "backgroundColor": null,
-        "plugins": ["midjourney"],
+        "plugins": [
+          "midjourney"
+        ],
         "clientId": null,
         "chatConfig": {
           "searchMode": "off",

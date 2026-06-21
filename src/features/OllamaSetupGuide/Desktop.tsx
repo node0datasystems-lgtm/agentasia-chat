@@ -1,5 +1,5 @@
-import { Ollama } from '@lobehub/icons';
-import { Center } from '@lobehub/ui';
+import { Ollama } from '@agentasia/icons';
+import { Center } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

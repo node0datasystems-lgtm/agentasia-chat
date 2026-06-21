@@ -1,4 +1,4 @@
-import type { BriefArtifacts, ChatStreamPayload, TaskTopicHandoff } from '@lobechat/types';
+import type { BriefArtifacts, ChatStreamPayload, TaskTopicHandoff } from '@agentasia/types';
 
 /**
  * Bump when editing the system prompt or schema below. Plumbed through

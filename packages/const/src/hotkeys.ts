@@ -1,4 +1,4 @@
-import type { HotkeyGroupId, HotkeyId, HotkeyRegistration, HotkeyScopeId } from '@lobechat/types';
+import type { HotkeyGroupId, HotkeyId, HotkeyRegistration, HotkeyScopeId } from '@agentasia/types';
 
 const combineKeys = (keys: string[]) => keys.join('+');
 

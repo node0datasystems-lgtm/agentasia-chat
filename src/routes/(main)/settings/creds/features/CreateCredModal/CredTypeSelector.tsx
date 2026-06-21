@@ -1,7 +1,7 @@
 'use client';
 
-import { type CredType } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { type CredType } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { Card } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { File, Globe, Key, TerminalSquare } from 'lucide-react';

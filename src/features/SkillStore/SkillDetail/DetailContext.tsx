@@ -1,6 +1,6 @@
 'use client';
 
-import { type ComposioAppType, type LobehubSkillProviderType } from '@lobechat/const';
+import { type ComposioAppType, type LobehubSkillProviderType } from '@agentasia/const';
 import type React from 'react';
 import { createContext, use } from 'react';
 

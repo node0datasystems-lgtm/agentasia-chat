@@ -1,6 +1,6 @@
-import type { AgentState } from '@lobechat/agent-runtime';
-import { isDesktop } from '@lobechat/const';
-import type { ConversationContext, UIChatMessage } from '@lobechat/types';
+import type { AgentState } from '@agentasia/agent-runtime';
+import { isDesktop } from '@agentasia/const';
+import type { ConversationContext, UIChatMessage } from '@agentasia/types';
 import { t } from 'i18next';
 
 import { getAgentStoreState } from '@/store/agent';

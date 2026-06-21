@@ -2,8 +2,8 @@ import type {
   BuiltinServerRuntimeOutput,
   BuiltinToolContext,
   BuiltinToolResult,
-} from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { ragService } from '@/services/rag';

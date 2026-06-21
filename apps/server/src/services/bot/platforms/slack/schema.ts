@@ -3,7 +3,7 @@ import {
   DEFAULT_BOT_HISTORY_LIMIT,
   MAX_BOT_DEBOUNCE_MS,
   MIN_BOT_HISTORY_LIMIT,
-} from '@lobechat/const';
+} from '@agentasia/const';
 
 import {
   allowFromField,

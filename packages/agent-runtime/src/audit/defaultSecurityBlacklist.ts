@@ -1,4 +1,4 @@
-import { type SecurityBlacklistConfig } from '@lobechat/types';
+import { type SecurityBlacklistConfig } from '@agentasia/types';
 
 /**
  * Default Security Blacklist

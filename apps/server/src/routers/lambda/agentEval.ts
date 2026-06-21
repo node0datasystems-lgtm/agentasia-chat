@@ -1,4 +1,4 @@
-import { parseDataset } from '@lobechat/eval-dataset-parser';
+import { parseDataset } from '@agentasia/eval-dataset-parser';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import { z } from 'zod';

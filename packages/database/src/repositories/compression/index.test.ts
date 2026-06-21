@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { MessageGroupType } from '@lobechat/types';
+import { MessageGroupType } from '@agentasia/types';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { getTestDB } from '../../core/getTestDB';

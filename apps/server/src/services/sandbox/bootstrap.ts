@@ -1,7 +1,7 @@
 import {
   SANDBOX_UPLOADED_FILES_DIR,
   sandboxUploadedFilePath,
-} from '@lobechat/builtin-tool-cloud-sandbox';
+} from '@agentasia/builtin-tool-cloud-sandbox';
 
 /** Marker file written once the uploaded files have been synced for a session. */
 export const SANDBOX_FILES_INIT_MARKER = `${SANDBOX_UPLOADED_FILES_DIR}/.lobe-files-initialized`;

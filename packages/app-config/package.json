@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/app-config",
+  "name": "@agentasia/app-config",
   "version": "0.0.0",
   "private": true,
   "exports": {
@@ -10,12 +10,12 @@
     "test:coverage": "vitest --coverage --silent='passed-only'"
   },
   "dependencies": {
-    "@lobechat/database": "workspace:*",
-    "@lobechat/utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.13.10",
     "debug": "^4.4.3",
     "lucide-react": "*",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "@agentasia/database": "workspace:*",
+    "@agentasia/utils": "workspace:*"
   },
   "devDependencies": {
     "vite-tsconfig-paths": "^6.1.1"

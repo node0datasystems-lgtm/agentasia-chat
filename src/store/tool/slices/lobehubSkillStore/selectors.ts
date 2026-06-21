@@ -3,14 +3,14 @@ import { type LobehubSkillServer } from './types';
 import { LobehubSkillStatus } from './types';
 
 /**
- * LobeHub Skill Store Selectors
+ * AgentAsia Skill Store Selectors
  */
-export const lobehubSkillStoreSelectors = {
+export const agentasiaSkillStoreSelectors = {
   /**
-   * Get all LobeHub Skill server identifiers as a set
+   * Get all AgentAsia Skill server identifiers as a set
    */
   getAllServerIdentifiers: (s: ToolStoreState): Set<string> => {
-    const servers = s.lobehubSkillServers || [];
+    const servers = s.agentasiaSkillServers || [];
     return new Set(servers.map((server) => server.identifier));
   },
 
@@ -18,7 +18,7 @@ export const lobehubSkillStoreSelectors = {
    * Get all available tools from all connected servers
    */
   getAllTools: (s: ToolStoreState) => {
-    const connectedServers = lobehubSkillStoreSelectors.getConnectedServers(s);
+    const connectedServers = agentasiaSkillStoreSelectors.getConnectedServers(s);
     return connectedServers.flatMap((server) =>
       (server.tools || []).map((tool) => ({
         ...tool,
@@ -31,7 +31,7 @@ export const lobehubSkillStoreSelectors = {
    * Get all connected servers
    */
   getConnectedServers: (s: ToolStoreState): LobehubSkillServer[] =>
-    (s.lobehubSkillServers || []).filter(
+    (s.agentasiaSkillServers || []).filter(
       (server) => server.status === LobehubSkillStatus.CONNECTED,
     ),
 
@@ -40,21 +40,21 @@ export const lobehubSkillStoreSelectors = {
    * @param identifier - Provider identifier (e.g., 'linear')
    */
   getServerByIdentifier: (identifier: string) => (s: ToolStoreState) =>
-    s.lobehubSkillServers?.find((server) => server.identifier === identifier),
+    s.agentasiaSkillServers?.find((server) => server.identifier === identifier),
 
   /**
-   * Get all LobeHub Skill servers
+   * Get all AgentAsia Skill servers
    */
-  getServers: (s: ToolStoreState): LobehubSkillServer[] => s.lobehubSkillServers || [],
+  getServers: (s: ToolStoreState): LobehubSkillServer[] => s.agentasiaSkillServers || [],
 
   /**
-   * Check if the given identifier is a LobeHub Skill server
+   * Check if the given identifier is a AgentAsia Skill server
    * @param identifier - Provider identifier (e.g., 'linear')
    */
   isLobehubSkillServer:
     (identifier: string) =>
     (s: ToolStoreState): boolean => {
-      const servers = s.lobehubSkillServers || [];
+      const servers = s.agentasiaSkillServers || [];
       return servers.some((server) => server.identifier === identifier);
     },
 
@@ -63,22 +63,22 @@ export const lobehubSkillStoreSelectors = {
    * @param identifier - Provider identifier (e.g., 'linear')
    */
   isServerLoading: (identifier: string) => (s: ToolStoreState) =>
-    s.lobehubSkillLoadingIds?.has(identifier) || false,
+    s.agentasiaSkillLoadingIds?.has(identifier) || false,
 
   /**
    * Check if a tool is currently executing
    */
   isToolExecuting: (provider: string, toolName: string) => (s: ToolStoreState) => {
     const toolId = `${provider}:${toolName}`;
-    return s.lobehubSkillExecutingToolIds?.has(toolId) || false;
+    return s.agentasiaSkillExecutingToolIds?.has(toolId) || false;
   },
 
   /**
-   * Get all LobeHub Skill tools as LobeTool format for agent use
-   * Converts LobeHub Skill tools into the format expected by ToolNameResolver
+   * Get all AgentAsia Skill tools as LobeTool format for agent use
+   * Converts AgentAsia Skill tools into the format expected by ToolNameResolver
    */
-  lobehubSkillAsLobeTools: (s: ToolStoreState) => {
-    const servers = s.lobehubSkillServers || [];
+  agentasiaSkillAsLobeTools: (s: ToolStoreState) => {
+    const servers = s.agentasiaSkillServers || [];
     const tools: any[] = [];
 
     for (const server of servers) {
@@ -95,13 +95,13 @@ export const lobehubSkillStoreSelectors = {
           identifier: server.identifier,
           manifest: {
             api: apis,
-            author: 'LobeHub Market',
-            homepage: 'https://lobehub.com/market',
+            author: 'AgentAsia Market',
+            homepage: 'https://agentasia.ai/market',
             identifier: server.identifier,
             meta: {
               avatar: server.icon || '🔗',
-              description: `LobeHub Skill: ${server.name}`,
-              tags: ['lobehub-skill', server.identifier],
+              description: `AgentAsia Skill: ${server.name}`,
+              tags: ['agentasia-skill', server.identifier],
               title: server.name,
             },
             type: 'builtin',
@@ -116,11 +116,11 @@ export const lobehubSkillStoreSelectors = {
   },
 
   /**
-   * Get metadata list for all connected LobeHub Skill servers
+   * Get metadata list for all connected AgentAsia Skill servers
    * Used by toolSelectors.metaList for unified tool metadata resolution
    */
   metaList: (s: ToolStoreState) => {
-    const servers = s.lobehubSkillServers || [];
+    const servers = s.agentasiaSkillServers || [];
 
     return servers
       .filter((server) => server.status === LobehubSkillStatus.CONNECTED)
@@ -128,7 +128,7 @@ export const lobehubSkillStoreSelectors = {
         identifier: server.identifier,
         meta: {
           avatar: server.icon || '🔗',
-          description: `LobeHub Skill: ${server.name}`,
+          description: `AgentAsia Skill: ${server.name}`,
           title: server.name,
         },
       }));

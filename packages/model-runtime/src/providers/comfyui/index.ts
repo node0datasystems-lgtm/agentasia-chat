@@ -1,5 +1,5 @@
-import type { ComfyUIKeyVault } from '@lobechat/types';
-import { createBasicAuthCredentials } from '@lobechat/utils';
+import type { ComfyUIKeyVault } from '@agentasia/types';
+import { createBasicAuthCredentials } from '@agentasia/utils';
 import debug from 'debug';
 
 import type { LobeRuntimeAI } from '../../core/BaseAI';

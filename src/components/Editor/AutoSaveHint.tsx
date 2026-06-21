@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon, Tag } from '@lobehub/ui';
+import { Icon, Tag } from '@agentasia/ui';
 import dayjs from 'dayjs';
 import { CloudIcon, Loader2Icon } from 'lucide-react';
 import { type CSSProperties } from 'react';

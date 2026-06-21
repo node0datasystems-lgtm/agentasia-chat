@@ -1,4 +1,4 @@
-import { Avatar } from '@lobehub/ui';
+import { Avatar } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

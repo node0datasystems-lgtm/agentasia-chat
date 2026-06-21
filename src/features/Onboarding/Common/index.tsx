@@ -1,8 +1,8 @@
 'use client';
 
-import { isDesktop } from '@lobechat/const';
-import { MAX_ONBOARDING_STEPS } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useCallback, useEffect, useRef } from 'react';
 import { Navigate, useSearchParams } from 'react-router';
 

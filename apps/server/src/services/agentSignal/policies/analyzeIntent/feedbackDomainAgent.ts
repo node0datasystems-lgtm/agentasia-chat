@@ -1,7 +1,7 @@
-import { DEFAULT_MINI_SYSTEM_AGENT_ITEM } from '@lobechat/const';
-import type { GenerateObjectPayload, GenerateObjectSchema } from '@lobechat/model-runtime';
-import { chainAgentSignalAnalyzeIntentRoute } from '@lobechat/prompts';
-import { RequestTrigger } from '@lobechat/types';
+import { DEFAULT_MINI_SYSTEM_AGENT_ITEM } from '@agentasia/const';
+import type { GenerateObjectPayload, GenerateObjectSchema } from '@agentasia/model-runtime';
+import { chainAgentSignalAnalyzeIntentRoute } from '@agentasia/prompts';
+import { RequestTrigger } from '@agentasia/types';
 import debug from 'debug';
 import { z } from 'zod';
 

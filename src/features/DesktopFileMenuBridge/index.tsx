@@ -1,7 +1,7 @@
 'use client';
 
-import { SESSION_CHAT_URL } from '@lobechat/const';
-import { useWatchBroadcast } from '@lobechat/electron-client-ipc';
+import { SESSION_CHAT_URL } from '@agentasia/const';
+import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
 import { useCallback } from 'react';
 
 import { useWorkspaceAwareNavigate } from '@/features/Workspace/useWorkspaceAwareNavigate';

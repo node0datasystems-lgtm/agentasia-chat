@@ -171,7 +171,7 @@ vi.mock('electron-is', () => ({
 }));
 
 vi.mock('@/const/env', () => ({
-  OFFICIAL_CLOUD_SERVER: 'https://lobehub-cloud.com',
+  OFFICIAL_CLOUD_SERVER: 'https://agentasia-cloud.com',
   isMac: false,
   isWindows: false,
   isLinux: false,
@@ -330,7 +330,7 @@ describe('GatewayConnectionCtr', () => {
       expect(options).not.toBeNull();
       expect(options.token).toBe('mock-access-token');
       expect(options.deviceId).toBe('stored-device-id');
-      expect(options.gatewayUrl).toBe('https://device-gateway.lobehub.com');
+      expect(options.gatewayUrl).toBe('https://device-gateway.agentasia.ai');
       expect(options.logger).toBeDefined();
     });
 

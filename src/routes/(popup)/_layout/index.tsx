@@ -1,7 +1,7 @@
 'use client';
 
-import { HotkeyScopeEnum } from '@lobechat/const/hotkeys';
-import { Flexbox } from '@lobehub/ui';
+import { HotkeyScopeEnum } from '@agentasia/const/hotkeys';
+import { Flexbox } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { type FC } from 'react';
 import { HotkeysProvider } from 'react-hotkeys-hook';

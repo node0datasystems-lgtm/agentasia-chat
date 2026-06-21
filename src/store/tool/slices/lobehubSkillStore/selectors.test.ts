@@ -2,15 +2,15 @@ import { describe, expect, it } from 'vitest';
 
 import { initialState } from '../../initialState';
 import { type ToolStore } from '../../store';
-import { lobehubSkillStoreSelectors } from './selectors';
+import { agentasiaSkillStoreSelectors } from './selectors';
 import { type LobehubSkillServer } from './types';
 import { LobehubSkillStatus } from './types';
 
-describe('lobehubSkillStoreSelectors', () => {
+describe('agentasiaSkillStoreSelectors', () => {
   describe('getServers', () => {
     it('should return empty array when no servers exist', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServers(state);
+      const result = agentasiaSkillStoreSelectors.getServers(state);
       expect(result).toEqual([]);
     });
 
@@ -29,14 +29,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.NOT_CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServers(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getServers(state);
       expect(result).toEqual(servers);
     });
 
-    it('should handle undefined lobehubSkillServers', () => {
-      const state = { ...initialState, lobehubSkillServers: undefined } as unknown as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServers(state);
+    it('should handle undefined agentasiaSkillServers', () => {
+      const state = { ...initialState, agentasiaSkillServers: undefined } as unknown as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getServers(state);
       expect(result).toEqual([]);
     });
   });
@@ -63,8 +63,8 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.ERROR,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getConnectedServers(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getConnectedServers(state);
       expect(result).toHaveLength(1);
       expect(result[0].name).toBe('Linear');
     });
@@ -78,14 +78,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.NOT_CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getConnectedServers(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getConnectedServers(state);
       expect(result).toEqual([]);
     });
 
     it('should return empty array when no servers exist', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getConnectedServers(state);
+      const result = agentasiaSkillStoreSelectors.getConnectedServers(state);
       expect(result).toEqual([]);
     });
   });
@@ -106,14 +106,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.NOT_CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllServerIdentifiers(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getAllServerIdentifiers(state);
       expect(result).toEqual(new Set(['linear', 'github']));
     });
 
     it('should return empty set when no servers exist', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllServerIdentifiers(state);
+      const result = agentasiaSkillStoreSelectors.getAllServerIdentifiers(state);
       expect(result).toEqual(new Set());
     });
   });
@@ -128,21 +128,21 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServerByIdentifier('linear')(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getServerByIdentifier('linear')(state);
       expect(result?.identifier).toBe('linear');
       expect(result?.name).toBe('Linear');
     });
 
     it('should return undefined when server not found', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServerByIdentifier('non-existent')(state);
+      const result = agentasiaSkillStoreSelectors.getServerByIdentifier('non-existent')(state);
       expect(result).toBeUndefined();
     });
 
-    it('should return undefined when lobehubSkillServers is undefined', () => {
-      const state = { ...initialState, lobehubSkillServers: undefined } as unknown as ToolStore;
-      const result = lobehubSkillStoreSelectors.getServerByIdentifier('linear')(state);
+    it('should return undefined when agentasiaSkillServers is undefined', () => {
+      const state = { ...initialState, agentasiaSkillServers: undefined } as unknown as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getServerByIdentifier('linear')(state);
       expect(result).toBeUndefined();
     });
   });
@@ -157,20 +157,20 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isLobehubSkillServer('linear')(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.isLobehubSkillServer('linear')(state);
       expect(result).toBe(true);
     });
 
     it('should return false for non-existing server', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isLobehubSkillServer('non-existent')(state);
+      const result = agentasiaSkillStoreSelectors.isLobehubSkillServer('non-existent')(state);
       expect(result).toBe(false);
     });
 
-    it('should return false when lobehubSkillServers is undefined', () => {
-      const state = { ...initialState, lobehubSkillServers: undefined } as unknown as ToolStore;
-      const result = lobehubSkillStoreSelectors.isLobehubSkillServer('linear')(state);
+    it('should return false when agentasiaSkillServers is undefined', () => {
+      const state = { ...initialState, agentasiaSkillServers: undefined } as unknown as ToolStore;
+      const result = agentasiaSkillStoreSelectors.isLobehubSkillServer('linear')(state);
       expect(result).toBe(false);
     });
   });
@@ -179,27 +179,27 @@ describe('lobehubSkillStoreSelectors', () => {
     it('should return true when server is loading', () => {
       const state = {
         ...initialState,
-        lobehubSkillLoadingIds: new Set(['linear']),
+        agentasiaSkillLoadingIds: new Set(['linear']),
       } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isServerLoading('linear')(state);
+      const result = agentasiaSkillStoreSelectors.isServerLoading('linear')(state);
       expect(result).toBe(true);
     });
 
     it('should return false when server is not loading', () => {
       const state = {
         ...initialState,
-        lobehubSkillLoadingIds: new Set(),
+        agentasiaSkillLoadingIds: new Set(),
       } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isServerLoading('linear')(state);
+      const result = agentasiaSkillStoreSelectors.isServerLoading('linear')(state);
       expect(result).toBe(false);
     });
 
-    it('should return false when lobehubSkillLoadingIds is undefined', () => {
+    it('should return false when agentasiaSkillLoadingIds is undefined', () => {
       const state = {
         ...initialState,
-        lobehubSkillLoadingIds: undefined,
+        agentasiaSkillLoadingIds: undefined,
       } as unknown as ToolStore;
-      const result = lobehubSkillStoreSelectors.isServerLoading('linear')(state);
+      const result = agentasiaSkillStoreSelectors.isServerLoading('linear')(state);
       expect(result).toBe(false);
     });
   });
@@ -208,36 +208,36 @@ describe('lobehubSkillStoreSelectors', () => {
     it('should return true when tool is executing', () => {
       const state = {
         ...initialState,
-        lobehubSkillExecutingToolIds: new Set(['linear:createIssue']),
+        agentasiaSkillExecutingToolIds: new Set(['linear:createIssue']),
       } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
+      const result = agentasiaSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
       expect(result).toBe(true);
     });
 
     it('should return false when tool is not executing', () => {
       const state = {
         ...initialState,
-        lobehubSkillExecutingToolIds: new Set(),
+        agentasiaSkillExecutingToolIds: new Set(),
       } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
+      const result = agentasiaSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
       expect(result).toBe(false);
     });
 
     it('should return false for different tool', () => {
       const state = {
         ...initialState,
-        lobehubSkillExecutingToolIds: new Set(['linear:createIssue']),
+        agentasiaSkillExecutingToolIds: new Set(['linear:createIssue']),
       } as ToolStore;
-      const result = lobehubSkillStoreSelectors.isToolExecuting('linear', 'listIssues')(state);
+      const result = agentasiaSkillStoreSelectors.isToolExecuting('linear', 'listIssues')(state);
       expect(result).toBe(false);
     });
 
-    it('should return false when lobehubSkillExecutingToolIds is undefined', () => {
+    it('should return false when agentasiaSkillExecutingToolIds is undefined', () => {
       const state = {
         ...initialState,
-        lobehubSkillExecutingToolIds: undefined,
+        agentasiaSkillExecutingToolIds: undefined,
       } as unknown as ToolStore;
-      const result = lobehubSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
+      const result = agentasiaSkillStoreSelectors.isToolExecuting('linear', 'createIssue')(state);
       expect(result).toBe(false);
     });
   });
@@ -263,8 +263,8 @@ describe('lobehubSkillStoreSelectors', () => {
           tools: [{ name: 'createPR', description: 'Create PR', inputSchema: { type: 'object' } }],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getAllTools(state);
 
       // Only tools from connected server (Linear) should be returned
       expect(result).toHaveLength(2);
@@ -283,14 +283,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getAllTools(state);
       expect(result).toEqual([]);
     });
 
     it('should return empty array when no servers exist', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllTools(state);
+      const result = agentasiaSkillStoreSelectors.getAllTools(state);
       expect(result).toEqual([]);
     });
 
@@ -313,8 +313,8 @@ describe('lobehubSkillStoreSelectors', () => {
           tools: [{ name: 'createPR', description: 'Create PR', inputSchema: { type: 'object' } }],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.getAllTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.getAllTools(state);
 
       expect(result).toHaveLength(2);
       expect(result[0].provider).toBe('linear');
@@ -322,7 +322,7 @@ describe('lobehubSkillStoreSelectors', () => {
     });
   });
 
-  describe('lobehubSkillAsLobeTools', () => {
+  describe('agentasiaSkillAsLobeTools', () => {
     it('should convert connected servers with tools to LobeTool format', () => {
       const servers: LobehubSkillServer[] = [
         {
@@ -336,8 +336,8 @@ describe('lobehubSkillStoreSelectors', () => {
           ],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
 
       expect(result).toHaveLength(1);
       expect(result[0].identifier).toBe('linear');
@@ -360,8 +360,8 @@ describe('lobehubSkillStoreSelectors', () => {
           ],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
       expect(result).toEqual([]);
     });
 
@@ -374,8 +374,8 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
       expect(result).toEqual([]);
     });
 
@@ -389,8 +389,8 @@ describe('lobehubSkillStoreSelectors', () => {
           tools: [],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
       expect(result).toEqual([]);
     });
 
@@ -406,8 +406,8 @@ describe('lobehubSkillStoreSelectors', () => {
           ],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
 
       expect(result[0].manifest.meta.avatar).toBe('🔗');
     });
@@ -426,8 +426,8 @@ describe('lobehubSkillStoreSelectors', () => {
           ],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
 
       expect(result[0].manifest.api).toHaveLength(3);
       expect(result[0].manifest.api[0].name).toBe('createIssue');
@@ -445,8 +445,8 @@ describe('lobehubSkillStoreSelectors', () => {
           tools: [{ name: 'createIssue', inputSchema: { type: 'object' } }],
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(state);
 
       expect(result[0].manifest.api[0].description).toBe('');
     });
@@ -470,14 +470,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.NOT_CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.metaList(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.metaList(state);
 
       expect(result).toHaveLength(1);
       expect(result[0].identifier).toBe('linear');
       expect(result[0].meta.title).toBe('Linear');
       expect(result[0].meta.avatar).toBe('linear-icon');
-      expect(result[0].meta.description).toBe('LobeHub Skill: Linear');
+      expect(result[0].meta.description).toBe('AgentAsia Skill: Linear');
     });
 
     it('should return empty array when no connected servers', () => {
@@ -489,14 +489,14 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.NOT_CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.metaList(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.metaList(state);
       expect(result).toEqual([]);
     });
 
     it('should return empty array when no servers exist', () => {
       const state = { ...initialState } as ToolStore;
-      const result = lobehubSkillStoreSelectors.metaList(state);
+      const result = agentasiaSkillStoreSelectors.metaList(state);
       expect(result).toEqual([]);
     });
 
@@ -509,8 +509,8 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.metaList(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.metaList(state);
 
       expect(result[0].meta.avatar).toBe('🔗');
     });
@@ -539,8 +539,8 @@ describe('lobehubSkillStoreSelectors', () => {
           status: LobehubSkillStatus.CONNECTED,
         },
       ];
-      const state = { ...initialState, lobehubSkillServers: servers } as ToolStore;
-      const result = lobehubSkillStoreSelectors.metaList(state);
+      const state = { ...initialState, agentasiaSkillServers: servers } as ToolStore;
+      const result = agentasiaSkillStoreSelectors.metaList(state);
 
       expect(result).toHaveLength(3);
       expect(result.map((r) => r.identifier)).toEqual(['linear', 'github', 'slack']);

@@ -1,4 +1,4 @@
-import { type NewChatGroup } from '@lobechat/types';
+import { type NewChatGroup } from '@agentasia/types';
 import urlJoin from 'url-join';
 
 import { chatGroupService } from '@/services/chatGroup';

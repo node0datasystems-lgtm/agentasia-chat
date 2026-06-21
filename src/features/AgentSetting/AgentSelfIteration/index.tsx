@@ -1,7 +1,7 @@
 'use client';
 
-import type { FormGroupItemType } from '@lobehub/ui';
-import { Form } from '@lobehub/ui';
+import type { FormGroupItemType } from '@agentasia/ui';
+import { Form } from '@agentasia/ui';
 import { Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';

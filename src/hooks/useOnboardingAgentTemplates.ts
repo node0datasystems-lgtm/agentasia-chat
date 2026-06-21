@@ -1,4 +1,4 @@
-import { getAgentTemplatesSWRKey } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+import { getAgentTemplatesSWRKey } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 

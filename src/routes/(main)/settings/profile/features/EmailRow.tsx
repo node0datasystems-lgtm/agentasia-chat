@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Input, Text } from '@lobehub/ui';
+import { Button, Flexbox, Input, Text } from '@agentasia/ui';
 import { AnimatePresence, m } from 'motion/react';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

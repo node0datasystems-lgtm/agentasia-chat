@@ -3,7 +3,7 @@ import { writeFile } from 'node:fs/promises';
 import nodePath from 'node:path';
 import { promisify } from 'node:util';
 
-import type { DeleteFilesResponse } from '@lobechat/electron-server-ipc';
+import type { DeleteFilesResponse } from '@agentasia/electron-server-ipc';
 
 import { FILE_STORAGE_DIR, LOCAL_STORAGE_URL_PREFIX } from '@/const/dir';
 import { makeSureDirExist } from '@/utils/file-system';

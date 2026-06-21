@@ -1,4 +1,4 @@
-import type { AgentSignalSource, ExecutorError } from '@lobechat/agent-signal';
+import type { AgentSignalSource, ExecutorError } from '@agentasia/agent-signal';
 
 /** Completed waypoint state for one runtime scope. */
 export interface RuntimeCompletedWaypointState {

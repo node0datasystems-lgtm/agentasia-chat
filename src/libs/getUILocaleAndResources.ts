@@ -18,7 +18,7 @@ const loadBusinessResources = async (locale: string): Promise<UILocaleResources 
 
 const loadLobeUIBuiltinResources = async (locale: string): Promise<UILocaleResources | null> => {
   try {
-    const { en, zhCn } = await import('@lobehub/ui/es/i18n/resources/index');
+    const { en, zhCn } = await import('@agentasia/ui/es/i18n/resources/index');
 
     if (locale.startsWith('zh')) return zhCn as UILocaleResources;
     return en as UILocaleResources;
@@ -44,7 +44,7 @@ export const getUILocaleAndResources = async (
 
   if (!resources)
     throw new Error(
-      `Failed to load UI resources (business + @lobehub/ui builtin) for locale=${normalizedLocale}`,
+      `Failed to load UI resources (business + @agentasia/ui builtin) for locale=${normalizedLocale}`,
     );
 
   return {

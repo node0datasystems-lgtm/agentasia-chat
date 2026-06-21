@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Tag } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Tag } from '@agentasia/ui';
 import { Tooltip } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import dayjs from 'dayjs';

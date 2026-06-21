@@ -2,7 +2,7 @@ import type {
   AgentEvalRunDetail,
   AgentEvalRunListItem,
   AgentEvalRunResults,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 export interface RunSliceState {
   /**

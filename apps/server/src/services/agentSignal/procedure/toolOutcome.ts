@@ -1,6 +1,6 @@
-import type { AgentSignalSource, RuntimeProcessorResult } from '@lobechat/agent-signal';
-import { createSignal } from '@lobechat/agent-signal';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
+import type { AgentSignalSource, RuntimeProcessorResult } from '@agentasia/agent-signal';
+import { createSignal } from '@agentasia/agent-signal';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
 
 import { AGENT_SIGNAL_POLICY_SIGNAL_TYPES } from '../policies/types';
 import type { RuntimeProcessorContext } from '../runtime/context';

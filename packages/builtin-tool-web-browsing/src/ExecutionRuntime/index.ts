@@ -1,4 +1,4 @@
-import { crawlResultsPrompt, searchResultsPrompt } from '@lobechat/prompts';
+import { crawlResultsPrompt, searchResultsPrompt } from '@agentasia/prompts';
 import type {
   BuiltinServerRuntimeOutput,
   CrawlMultiPagesQuery,
@@ -6,8 +6,8 @@ import type {
   SearchContent,
   SearchQuery,
   SearchServiceImpl,
-} from '@lobechat/types';
-import type { CrawlSuccessResult } from '@lobechat/web-crawler';
+} from '@agentasia/types';
+import type { CrawlSuccessResult } from '@agentasia/web-crawler';
 
 import { CRAWL_CONTENT_LIMITED_COUNT, SEARCH_ITEM_LIMITED_COUNT } from '../const';
 

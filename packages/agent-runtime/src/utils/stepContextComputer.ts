@@ -1,4 +1,4 @@
-import type { RuntimeStepContext, StepActivatedSkill, StepContextTodos } from '@lobechat/types';
+import type { RuntimeStepContext, StepActivatedSkill, StepContextTodos } from '@agentasia/types';
 
 /**
  * Input parameters for computeStepContext

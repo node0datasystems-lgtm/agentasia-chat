@@ -180,7 +180,7 @@ export class LobeGoogleAI implements LobeRuntimeAI {
         maxOutputTokens: payload.max_tokens,
         responseModalities: isImageResponseModel ? ['Text', 'Image'] : undefined,
         // avoid wide sensitive words
-        // refs: https://github.com/lobehub/lobe-chat/pull/1418
+        // refs: https://github.com/agentasia/agentasia-chat/pull/1418
         safetySettings: [
           {
             category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,

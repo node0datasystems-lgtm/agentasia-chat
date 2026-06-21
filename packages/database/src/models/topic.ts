@@ -4,13 +4,13 @@ import type {
   DBMessageItem,
   TopicQuerySortBy,
   TopicRankItem,
-} from '@lobechat/types';
-import type { TimingSink } from '@lobechat/utils';
+} from '@agentasia/types';
+import type { TimingSink } from '@agentasia/utils';
 import {
   getDurationMs,
   logTimingSink as logTiming,
   runTimedSinkStage as runTimedStage,
-} from '@lobechat/utils';
+} from '@agentasia/utils';
 import type { SQL } from 'drizzle-orm';
 import {
   and,

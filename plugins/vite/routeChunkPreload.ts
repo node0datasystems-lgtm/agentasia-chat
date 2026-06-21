@@ -303,8 +303,8 @@ function normalizeComparableModuleId(id: string, root = '') {
     normalized = normalized.slice(normalizedRoot.length + 1);
   }
 
-  if (normalized.startsWith('lobehub/src/')) {
-    normalized = normalized.slice('lobehub/'.length);
+  if (normalized.startsWith('agentasia/src/')) {
+    normalized = normalized.slice('agentasia/'.length);
   }
 
   return stripModuleSuffix(normalized);

@@ -1,5 +1,5 @@
-import { type ModalProps } from '@lobehub/ui';
-import { Flexbox, Input, Modal, stopPropagation } from '@lobehub/ui';
+import { type ModalProps } from '@agentasia/ui';
+import { Flexbox, Input, Modal, stopPropagation } from '@agentasia/ui';
 import { App } from 'antd';
 import { type MouseEvent } from 'react';
 import { memo, useState } from 'react';

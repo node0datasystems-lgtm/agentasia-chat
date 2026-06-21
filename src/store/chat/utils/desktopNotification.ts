@@ -3,8 +3,8 @@ import {
   isDesktop,
   SESSION_CHAT_TOPIC_URL,
   SESSION_CHAT_URL,
-} from '@lobechat/const';
-import type { ConversationContext } from '@lobechat/types';
+} from '@agentasia/const';
+import type { ConversationContext } from '@agentasia/types';
 import { t } from 'i18next';
 
 import { getAgentStoreState } from '@/store/agent';

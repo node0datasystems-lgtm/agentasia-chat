@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import { Flexbox, TooltipGroup } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { Flexbox, TooltipGroup } from '@agentasia/ui';
 import React, { memo, Suspense, useCallback } from 'react';
 
 import DragUploadZone, { type DroppedFolder, useUploadFiles } from '@/components/DragUploadZone';

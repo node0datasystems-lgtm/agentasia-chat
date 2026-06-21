@@ -1,4 +1,4 @@
-import { Accordion, Flexbox } from '@lobehub/ui';
+import { Accordion, Flexbox } from '@agentasia/ui';
 import React, { memo } from 'react';
 
 import Members from './Members';

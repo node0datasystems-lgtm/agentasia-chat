@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text, Typography } from '@lobehub/ui';
+import { Flexbox, Icon, Text, Typography } from '@agentasia/ui';
 import { ExternalLink } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

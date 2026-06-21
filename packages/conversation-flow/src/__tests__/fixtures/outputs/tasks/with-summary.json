@@ -11,7 +11,9 @@
         {
           "id": "msg-assistant-1",
           "type": "message",
-          "tools": ["msg-tool-1"]
+          "tools": [
+            "msg-tool-1"
+          ]
         }
       ]
     },

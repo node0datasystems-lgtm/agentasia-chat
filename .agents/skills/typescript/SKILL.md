@@ -1,6 +1,6 @@
 ---
 name: typescript
-description: 'LobeHub TypeScript style and type-safety guide. Use when editing TS/TSX/MTS, fixing types, choosing interface vs type, avoiding any/object, import type, async flow, or ts-expect-error.'
+description: 'AgentAsia TypeScript style and type-safety guide. Use when editing TS/TSX/MTS, fixing types, choosing interface vs type, avoiding any/object, import type, async flow, or ts-expect-error.'
 user-invocable: false
 ---
 
@@ -35,8 +35,8 @@ user-invocable: false
 - When a file already has `import type { ... }` from a package and you need to add a value import, keep them as **two separate statements**:
 
   ```ts
-  import type { ChatTopicBotContext } from '@lobechat/types';
-  import { RequestTrigger } from '@lobechat/types';
+  import type { ChatTopicBotContext } from '@agentasia/types';
+  import { RequestTrigger } from '@agentasia/types';
   ```
 
 - Within each import statement, specifiers are sorted **alphabetically by name**
@@ -52,7 +52,7 @@ user-invocable: false
 
 ## UI and Theming
 
-- Use `@lobehub/ui`, Ant Design components instead of raw HTML tags
+- Use `@agentasia/ui`, Ant Design components instead of raw HTML tags
 - Design for dark mode and mobile responsiveness
 - Use `antd-style` token system instead of hard-coded colors
 

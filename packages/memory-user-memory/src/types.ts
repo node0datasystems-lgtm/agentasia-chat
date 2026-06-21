@@ -2,8 +2,8 @@ import type {
   GenerateObjectPayload,
   ModelRuntime,
   OpenAIChatMessage,
-} from '@lobechat/model-runtime';
-import type { LayersEnum, MemorySourceType } from '@lobechat/types';
+} from '@agentasia/model-runtime';
+import type { LayersEnum, MemorySourceType } from '@agentasia/types';
 
 import type {
   ActivityExtractor,

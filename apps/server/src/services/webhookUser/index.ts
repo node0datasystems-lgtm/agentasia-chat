@@ -1,4 +1,4 @@
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import { and, eq } from 'drizzle-orm';
 import { NextResponse } from 'next/server';
 

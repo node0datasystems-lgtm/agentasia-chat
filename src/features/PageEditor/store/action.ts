@@ -1,5 +1,5 @@
-import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT, isDesktop } from '@lobechat/const';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT, isDesktop } from '@agentasia/const';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import debug from 'debug';
 import { debounce } from 'es-toolkit/compat';
 import { type StateCreator } from 'zustand';

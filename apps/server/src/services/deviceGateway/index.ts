@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { type DeviceAttachment } from '@lobechat/builtin-tool-remote-device';
+import { type DeviceAttachment } from '@agentasia/builtin-tool-remote-device';
 import {
   type DeviceMessageApiResult,
   type DeviceStatusResult,
@@ -8,8 +8,8 @@ import {
   type DeviceToolCallResult,
   GatewayHttpClient,
   type GatewayMcpStdioParams,
-} from '@lobechat/device-gateway-client';
-import type { HeterogeneousAgentType } from '@lobechat/heterogeneous-agents';
+} from '@agentasia/device-gateway-client';
+import type { HeterogeneousAgentType } from '@agentasia/heterogeneous-agents';
 import type {
   DeviceGitAheadBehind,
   DeviceGitBranchDiffPatches,
@@ -35,7 +35,7 @@ import type {
   DeviceWriteProjectFileResult,
   ProjectSkillMeta,
   WorkspaceInitResult,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 
 import { gatewayEnv } from '@/envs/gateway';

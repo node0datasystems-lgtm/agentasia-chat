@@ -31,7 +31,7 @@ export interface BotFeedbackSubmitOptions {
    *  `clientInfo` so operators can correlate feedback with the originating
    *  thread without exposing it in the user-facing message. */
   threadId?: string;
-  /** LobeHub user id. Required — feedback always carries identity so it can
+  /** AgentAsia user id. Required — feedback always carries identity so it can
    *  be tied back to the account / workspace. */
   userId: string;
 }

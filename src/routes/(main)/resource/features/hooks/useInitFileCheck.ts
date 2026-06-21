@@ -1,6 +1,6 @@
 'use client';
 
-import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@lobechat/const';
+import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router';
 

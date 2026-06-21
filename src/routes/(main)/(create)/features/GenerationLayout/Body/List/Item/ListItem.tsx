@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Avatar, type GenericItemType } from '@lobehub/ui';
+import { ActionIcon, Avatar, type GenericItemType } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { Trash } from 'lucide-react';
 import type { CSSProperties, MouseEvent } from 'react';

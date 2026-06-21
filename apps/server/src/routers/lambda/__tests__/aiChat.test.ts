@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { CreateMessageParams } from '@lobechat/types';
-import { AgentRuntimeErrorType, ThreadType } from '@lobechat/types';
+import type { CreateMessageParams } from '@agentasia/types';
+import { AgentRuntimeErrorType, ThreadType } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { describe, expect, it, vi } from 'vitest';
 

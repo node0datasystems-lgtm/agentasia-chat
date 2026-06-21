@@ -1,4 +1,4 @@
-import { ActionIcon, Center, Flexbox, Text, TooltipGroup } from '@lobehub/ui';
+import { ActionIcon, Center, Flexbox, Text, TooltipGroup } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { ArrowDownUpIcon, ToggleLeft } from 'lucide-react';
 import { use, useMemo, useState } from 'react';

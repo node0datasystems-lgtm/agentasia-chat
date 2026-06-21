@@ -20,7 +20,7 @@ const log = debug('lobe-server:messenger:config');
  *
  * Two distribution models still apply downstream:
  *
- * - **Global-token platforms (Telegram, Discord)**: a single LobeHub-owned
+ * - **Global-token platforms (Telegram, Discord)**: a single AgentAsia-owned
  *   bot serves every user. The full credential bundle for the bot lives in
  *   the row.
  *

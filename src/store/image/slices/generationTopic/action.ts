@@ -1,4 +1,4 @@
-import { chainSummaryGenerationTitle } from '@lobechat/prompts';
+import { chainSummaryGenerationTitle } from '@agentasia/prompts';
 import isEqual from 'fast-deep-equal';
 import { type SWRResponse } from 'swr';
 

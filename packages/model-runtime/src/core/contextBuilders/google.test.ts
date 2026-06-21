@@ -1,5 +1,5 @@
 // @vitest-environment node
-import * as imageToBase64Module from '@lobechat/utils';
+import * as imageToBase64Module from '@agentasia/utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { ChatCompletionTool, OpenAIChatMessage, UserMessageContentPart } from '../../types';
@@ -650,7 +650,7 @@ describe('google contextBuilders', () => {
                 language: ['JSON'],
                 path: 'package.json',
                 query: '"version":',
-                repo: 'lobehub/lobe-chat',
+                repo: 'agentasia/agentasia-chat',
               }),
               name: 'grep____searchGitHub____mcp',
             },
@@ -672,7 +672,7 @@ describe('google contextBuilders', () => {
                 language: ['JSON'],
                 path: 'package.json',
                 query: '"version":',
-                repo: 'lobehub/lobe-chat',
+                repo: 'agentasia/agentasia-chat',
               },
               name: 'grep____searchGitHub____mcp',
             },
@@ -1372,7 +1372,7 @@ describe('google contextBuilders', () => {
                   language: ['JSON'],
                   path: 'package.json',
                   query: '"version":',
-                  repo: 'lobehub/lobe-chat',
+                  repo: 'agentasia/agentasia-chat',
                 }),
                 name: 'grep____searchGitHub____mcp',
               },
@@ -1409,7 +1409,7 @@ describe('google contextBuilders', () => {
                   language: ['JSON'],
                   path: 'package.json',
                   query: '"version":',
-                  repo: 'lobehub/lobe-chat',
+                  repo: 'agentasia/agentasia-chat',
                 },
                 name: 'grep____searchGitHub____mcp',
               },

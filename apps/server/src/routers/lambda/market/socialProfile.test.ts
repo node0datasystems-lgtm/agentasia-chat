@@ -42,7 +42,7 @@ describe('socialProfileRouter.submitRepo', () => {
 
     await caller.submitRepo({
       actAs: 123,
-      gitUrl: 'https://github.com/lobehub/example-skill',
+      gitUrl: 'https://github.com/agentasia/example-skill',
       type: 'skill',
     });
 

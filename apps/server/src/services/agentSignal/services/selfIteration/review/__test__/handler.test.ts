@@ -1,8 +1,8 @@
 // @vitest-environment node
-import { createSource } from '@lobechat/agent-signal';
-import type { SourceAgentNightlyReviewRequested } from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
+import { createSource } from '@agentasia/agent-signal';
+import type { SourceAgentNightlyReviewRequested } from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
 import { describe, expect, it, vi } from 'vitest';
 
 import { createDefaultAgentSignalPolicies } from '../../../../policies';

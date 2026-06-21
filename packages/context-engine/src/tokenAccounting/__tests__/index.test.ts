@@ -1,4 +1,4 @@
-import type { UIChatMessage } from '@lobechat/types';
+import type { UIChatMessage } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { countContextTokens, DEFAULT_DRIFT_MULTIPLIER } from '../index';

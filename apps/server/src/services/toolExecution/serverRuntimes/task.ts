@@ -1,5 +1,5 @@
-import { normalizeListTasksParams, TaskIdentifier } from '@lobechat/builtin-tool-task';
-import type { LobeChatDatabase } from '@lobechat/database';
+import { normalizeListTasksParams, TaskIdentifier } from '@agentasia/builtin-tool-task';
+import type { LobeChatDatabase } from '@agentasia/database';
 import {
   formatDependencyAdded,
   formatDependencyRemoved,
@@ -9,8 +9,8 @@ import {
   formatTaskEdited,
   formatTaskList,
   priorityLabel,
-} from '@lobechat/prompts';
-import type { TaskAutomationMode, TaskStatus } from '@lobechat/types';
+} from '@agentasia/prompts';
+import type { TaskAutomationMode, TaskStatus } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 
 import { AgentModel } from '@/database/models/agent';

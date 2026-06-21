@@ -1,9 +1,9 @@
 // @vitest-environment node
-import type { AgentSignalSourceEvent, SourceAgentUserMessage } from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES, createSourceEvent } from '@lobechat/agent-signal/source';
-import type { ISnapshotStore } from '@lobechat/agent-tracing';
-import { agents, messages, threads, topics, users } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { AgentSignalSourceEvent, SourceAgentUserMessage } from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES, createSourceEvent } from '@agentasia/agent-signal/source';
+import type { ISnapshotStore } from '@agentasia/agent-tracing';
+import { agents, messages, threads, topics, users } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 
 import { createProcedurePolicyOptions as createProcedurePolicyOptionsFixture } from '@/server/services/agentSignal/procedure';

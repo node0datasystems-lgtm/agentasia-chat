@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Block, Checkbox, Icon } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Block, Checkbox, Icon } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { CircleArrowRight, CircleCheckBig, ListTodo } from 'lucide-react';
 import { memo, useMemo } from 'react';

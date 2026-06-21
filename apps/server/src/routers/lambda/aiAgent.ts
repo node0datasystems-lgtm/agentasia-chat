@@ -1,12 +1,12 @@
-import { type AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import { parse } from '@lobechat/conversation-flow';
-import { type TaskCurrentActivity, type TaskStatusResult } from '@lobechat/types';
+import { type AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import { parse } from '@agentasia/conversation-flow';
+import { type TaskCurrentActivity, type TaskStatusResult } from '@agentasia/types';
 import {
   RequestTrigger,
   ThreadStatus,
   ThreadType,
   UserInterventionConfigSchema,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';

@@ -3,7 +3,7 @@ import {
   type ElectronAppState,
   type GatewayConnectionStatus,
   type NetworkProxySettings,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { type GatewayDeviceInfo } from './actions/gateway';
 import { type NavigationHistoryState } from './actions/navigationHistory';

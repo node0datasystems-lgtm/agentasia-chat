@@ -1,6 +1,6 @@
-import type { PageContentContext } from '@lobechat/prompts';
-import type { IEditor } from '@lobehub/editor';
-import { LITEXML_APPLY_COMMAND, LITEXML_MODIFY_COMMAND } from '@lobehub/editor/litexml-commands';
+import type { PageContentContext } from '@agentasia/prompts';
+import type { IEditor } from '@agentasia/editor';
+import { LITEXML_APPLY_COMMAND, LITEXML_MODIFY_COMMAND } from '@agentasia/editor/litexml-commands';
 import debug from 'debug';
 
 import type {

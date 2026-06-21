@@ -1,4 +1,4 @@
-import { Center, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Center, Flexbox, Icon, Text } from '@agentasia/ui';
 import { Progress } from 'antd';
 import { cssVar } from 'antd-style';
 import { Loader2 } from 'lucide-react';

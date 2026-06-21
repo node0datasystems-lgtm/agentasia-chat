@@ -1,4 +1,4 @@
-import type { AiProviderListItem } from '@lobechat/types';
+import type { AiProviderListItem } from '@agentasia/types';
 import type { EnabledAiModel, ExtendParamsType } from 'model-bank';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 

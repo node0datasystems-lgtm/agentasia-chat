@@ -1,4 +1,4 @@
-import type { LobeAgentConfig, MetaData } from '@lobechat/types';
+import type { LobeAgentConfig, MetaData } from '@agentasia/types';
 import type { PartialDeep } from 'type-fest';
 
 /**
@@ -164,7 +164,7 @@ export interface InstallPluginParams {
    */
   identifier: string;
   /**
-   * Plugin source type: 'market' for MCP marketplace, 'official' for builtin/composio/lobehubSkill tools
+   * Plugin source type: 'market' for MCP marketplace, 'official' for builtin/composio/agentasiaSkill tools
    */
   source: 'market' | 'official';
 }

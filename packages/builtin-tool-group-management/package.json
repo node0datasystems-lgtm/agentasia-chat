@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-group-management",
+  "name": "@agentasia/builtin-tool-group-management",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,9 +9,9 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/const": "workspace:*"
+    "@agentasia/const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

@@ -1,6 +1,6 @@
-import type { TaskDetailActivity } from '@lobechat/types';
-import { Flexbox, Icon, Text } from '@lobehub/ui';
-import { TreeDownRightIcon } from '@lobehub/ui/icons';
+import type { TaskDetailActivity } from '@agentasia/types';
+import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { TreeDownRightIcon } from '@agentasia/ui/icons';
 import { cssVar } from 'antd-style';
 import type { TFunction } from 'i18next';
 import { memo, useMemo } from 'react';

@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
-import { type LobeChatDatabase } from '@lobechat/database';
+import { type LobeChatDatabase } from '@agentasia/database';
 import {
   type CreateSkillInput,
   type ImportGitHubInput,
@@ -8,8 +8,8 @@ import {
   type ImportZipInput,
   type SkillImportResult,
   type SkillManifest,
-} from '@lobechat/types';
-import { nanoid } from '@lobechat/utils';
+} from '@agentasia/types';
+import { nanoid } from '@agentasia/utils';
 import debug from 'debug';
 
 import { AgentSkillModel } from '@/database/models/agentSkill';
@@ -20,7 +20,7 @@ import { SkillImportError, SkillManifestError } from './errors';
 import { SkillParser } from './parser';
 import { SkillResourceService } from './resource';
 
-const log = debug('lobe-chat:service:skill-importer');
+const log = debug('agentasia-chat:service:skill-importer');
 
 export class SkillImporter {
   private skillModel: AgentSkillModel;
@@ -35,7 +35,7 @@ export class SkillImporter {
     this.parser = new SkillParser();
     this.resourceService = new SkillResourceService(db, userId, workspaceId);
     this.fileService = new FileService(db, userId, workspaceId);
-    this.github = new GitHub({ userAgent: 'LobeHub-Skill-Importer' });
+    this.github = new GitHub({ userAgent: 'AgentAsia-Skill-Importer' });
     this.userId = userId;
   }
 

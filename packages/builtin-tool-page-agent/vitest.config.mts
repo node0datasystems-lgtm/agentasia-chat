@@ -21,7 +21,7 @@ export default defineConfig({
     server: {
       deps: {
         // Inline @emoji-mart packages to avoid ESM JSON import issues
-        inline: [/@emoji-mart/, /@lobehub\/ui/],
+        inline: [/@emoji-mart/, /@agentasia\/ui/],
       },
     },
   },

@@ -6,14 +6,14 @@ import {
   DEFAULT_MEMORY_SETTINGS,
   DEFAULT_SYSTEM_AGENT_CONFIG,
   DEFAULT_TTS_CONFIG,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import {
   type GlobalLLMProviderKey,
   type HotkeyId,
   type ProviderConfig,
   type UserModelProviderConfig,
   type UserSettings,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { type UserStore } from '@/store/user';
 import { merge } from '@/utils/merge';

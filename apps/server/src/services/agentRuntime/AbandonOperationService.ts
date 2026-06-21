@@ -1,6 +1,6 @@
-import type { ISnapshotStore } from '@lobechat/agent-tracing';
-import type { ChatMessageError } from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
+import type { ISnapshotStore } from '@agentasia/agent-tracing';
+import type { ChatMessageError } from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 import debug from 'debug';
 
 import { MessageModel } from '@/database/models/message';

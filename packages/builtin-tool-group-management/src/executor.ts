@@ -15,13 +15,13 @@ import type {
   SpeakParams,
   SummarizeParams,
   VoteParams,
-} from '@lobechat/builtin-tool-group-management';
+} from '@agentasia/builtin-tool-group-management';
 import {
   GroupManagementApiName,
   GroupManagementIdentifier,
-} from '@lobechat/builtin-tool-group-management';
-import type { BuiltinToolContext, BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+} from '@agentasia/builtin-tool-group-management';
+import type { BuiltinToolContext, BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 
 class GroupManagementExecutor extends BaseExecutor<typeof GroupManagementApiName> {
   readonly identifier = GroupManagementIdentifier;

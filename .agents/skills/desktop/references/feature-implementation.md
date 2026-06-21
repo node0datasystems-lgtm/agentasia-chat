@@ -25,7 +25,7 @@ Main Process                    Renderer Process
 import type {
   ShowDesktopNotificationParams,
   DesktopNotificationResult,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { Notification } from 'electron';
 import { ControllerModule, IpcMethod } from '@/controllers';
 
@@ -71,7 +71,7 @@ export interface DesktopNotificationResult {
 
 ```typescript
 // src/services/electron/notificationService.ts
-import type { ShowDesktopNotificationParams } from '@lobechat/electron-client-ipc';
+import type { ShowDesktopNotificationParams } from '@agentasia/electron-client-ipc';
 import { ensureElectronIpc } from '@/utils/electron/ipc';
 
 const ipc = ensureElectronIpc();

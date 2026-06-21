@@ -1,4 +1,4 @@
-import { DatePicker } from '@lobehub/ui';
+import { DatePicker } from '@agentasia/ui';
 import { type DatePickerProps } from 'antd';
 import { Flex } from 'antd';
 import { type Dayjs } from 'dayjs';

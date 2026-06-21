@@ -8,9 +8,9 @@ import { PlaceholderVariablesProcessor } from '../PlaceholderVariables';
  *
  * Confirms that PlaceholderVariablesProcessor does substitute `{{...}}` tokens
  * inside `role: 'tool'` messages. If this test ever fails, it means the
- * processor is silently skipping tool messages and the lobehub skill identity
+ * processor is silently skipping tool messages and the agentasia skill identity
  * placeholders won't be filled in after the model calls
- * `lobe-activator.activateSkill('lobehub')`.
+ * `lobe-activator.activateSkill('agentasia')`.
  */
 describe('PlaceholderVariablesProcessor — tool message substitution', () => {
   const buildContext = (messages: any[]): PipelineContext => ({
@@ -48,7 +48,7 @@ describe('PlaceholderVariablesProcessor — tool message substitution', () => {
         tool_call_id: 'toolu_1',
         name: 'lobe-activator____activateSkill',
         content:
-          '<lobehub_platform_guides>\n| Agent ID | `{{agent_id}}` |\n| Agent Title | {{agent_title}} |\n| Topic ID | `{{topic_id}}` |\n</lobehub_platform_guides>',
+          '<agentasia_platform_guides>\n| Agent ID | `{{agent_id}}` |\n| Agent Title | {{agent_title}} |\n| Topic ID | `{{topic_id}}` |\n</agentasia_platform_guides>',
       },
     ]);
 

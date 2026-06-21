@@ -65,9 +65,9 @@ const installTestStorage = () => {
 enablePatches();
 enableMapSet();
 
-// Global mock for @lobehub/analytics/react to avoid AnalyticsProvider dependency
+// Global mock for @agentasia/analytics/react to avoid AnalyticsProvider dependency
 // This prevents tests from failing when components use useAnalytics hook
-vi.mock('@lobehub/analytics/react', () => ({
+vi.mock('@agentasia/analytics/react', () => ({
   useAnalytics: () => ({
     analytics: {
       track: vi.fn(),

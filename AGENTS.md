@@ -1,13 +1,13 @@
-# LobeHub Development Guidelines
+# AgentAsia Development Guidelines
 
-Guidelines for using AI coding agents in this LobeHub repository.
+Guidelines for using AI coding agents in this AgentAsia repository.
 
 ## Tech Stack
 
 - Next.js 16 + React 19 + TypeScript
 - SPA inside Next.js with `react-router-dom`
-- `@lobehub/ui`, antd for components; antd-style for CSS-in-JS — **prefer `createStaticStyles` with `cssVar.*`** (zero-runtime); only fall back to `createStyles` + `token` when styles genuinely need runtime computation. See `.cursor/docs/createStaticStyles_migration_guide.md`.
-- **Component priority**: `@lobehub/ui/base-ui` (headless primitives) **first**, then `@lobehub/ui` root, then antd as last resort. When the component exists in base-ui, use it — never reach for the root or antd counterpart. Base-ui covers `Select`, `Modal` / `createModal` / `confirmModal`, `DropdownMenu`, `ContextMenu`, `Popover`, `ScrollArea`, `Switch`, `Toast`, `FloatingSheet`. Prefer `@lobehub/ui/base-ui` for new code and migrate root-package call sites opportunistically.
+- `@agentasia/ui`, antd for components; antd-style for CSS-in-JS — **prefer `createStaticStyles` with `cssVar.*`** (zero-runtime); only fall back to `createStyles` + `token` when styles genuinely need runtime computation. See `.cursor/docs/createStaticStyles_migration_guide.md`.
+- **Component priority**: `@agentasia/ui/base-ui` (headless primitives) **first**, then `@agentasia/ui` root, then antd as last resort. When the component exists in base-ui, use it — never reach for the root or antd counterpart. Base-ui covers `Select`, `Modal` / `createModal` / `confirmModal`, `DropdownMenu`, `ContextMenu`, `Popover`, `ScrollArea`, `Switch`, `Toast`, `FloatingSheet`. Prefer `@agentasia/ui/base-ui` for new code and migrate root-package call sites opportunistically.
 - react-i18next for i18n; zustand for state management
 - SWR for data fetching; TRPC for type-safe backend
 - Drizzle ORM with PostgreSQL; Vitest for testing
@@ -15,10 +15,10 @@ Guidelines for using AI coding agents in this LobeHub repository.
 ## Project Structure
 
 ```plaintext
-lobehub/
+agentasia/
 ├── apps/
 │   ├── desktop/            # Electron desktop app
-│   ├── cli/                # LobeHub CLI
+│   ├── cli/                # AgentAsia CLI
 │   └── server/             # Server service
 ├── packages/               # Shared packages (@lobechat/*)
 │   ├── database/           # Database schemas, models, repositories
@@ -85,10 +85,10 @@ bun run dev
 After `dev:spa` starts, the terminal prints a **Debug Proxy** URL:
 
 ```plaintext
-Debug Proxy: https://app.lobehub.com/_dangerous_local_dev_proxy?debug-host=http%3A%2F%2Flocalhost%3A9876
+Debug Proxy: https://app.agentasia.ai/_dangerous_local_dev_proxy?debug-host=http%3A%2F%2Flocalhost%3A9876
 ```
 
-Open this URL to develop locally against the production backend (app.lobehub.com). The proxy page loads your local Vite dev server's SPA into the online environment, enabling HMR with real server config.
+Open this URL to develop locally against the production backend (app.agentasia.ai). The proxy page loads your local Vite dev server's SPA into the online environment, enabling HMR with real server config.
 
 ### Git Workflow
 
@@ -137,4 +137,4 @@ bun run type-check
 
 Before reviewing a PR / diff / branch change, read the **review-checklist** skill (`.agents/skills/review-checklist/SKILL.md`) — it lists the recurring mistakes specific to this codebase.
 
-When designing or reviewing user-facing flows (empty/loading/error states, confirmations, async feedback, button hierarchy, lists at scale, pickers), follow the **ux** skill (`.agents/skills/ux/SKILL.md`) — LobeHub's design values (自然 / 意义感 / 确定性) plus per-aspect execution checklists.
+When designing or reviewing user-facing flows (empty/loading/error states, confirmations, async feedback, button hierarchy, lists at scale, pickers), follow the **ux** skill (`.agents/skills/ux/SKILL.md`) — AgentAsia's design values (自然 / 意义感 / 确定性) plus per-aspect execution checklists.

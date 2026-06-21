@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { createAgentToolsEngine, createToolsEngine, getEnabledTools } from './index';
@@ -108,8 +108,8 @@ vi.mock('@/store/tool/selectors', () => ({
   composioStoreSelectors: {
     composioAsLobeTools: () => [],
   },
-  lobehubSkillStoreSelectors: {
-    lobehubSkillAsLobeTools: () => [],
+  agentasiaSkillStoreSelectors: {
+    agentasiaSkillAsLobeTools: () => [],
   },
 }));
 

@@ -1,7 +1,7 @@
 'use client';
 
-import { type FormGroupItemType } from '@lobehub/ui';
-import { Flexbox, Form, Tag, Text } from '@lobehub/ui';
+import { type FormGroupItemType } from '@agentasia/ui';
+import { Flexbox, Form, Tag, Text } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

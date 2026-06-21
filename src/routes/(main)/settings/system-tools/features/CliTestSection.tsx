@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Input, Text } from '@lobehub/ui';
+import { Button, Flexbox, Input, Text } from '@agentasia/ui';
 import { memo, useCallback, useState } from 'react';
 
 import { electronSystemService } from '@/services/electron/system';
@@ -38,7 +38,7 @@ const CliTestSection = memo(() => {
       <Flexbox horizontal gap={8} wrap="wrap">
         {presetCommands.map((cmd) => (
           <Button key={cmd} loading={running} size="small" onClick={() => runCommand(cmd)}>
-            lobehub {cmd}
+            agentasia {cmd}
           </Button>
         ))}
       </Flexbox>
@@ -75,7 +75,7 @@ const CliTestSection = memo(() => {
           }}
         >
           <Text style={{ color: 'var(--ant-color-primary)', fontWeight: 600 }}>
-            $ lobehub {r.args} (exit: {r.exitCode})
+            $ agentasia {r.args} (exit: {r.exitCode})
           </Text>
           {r.stdout && (
             <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>

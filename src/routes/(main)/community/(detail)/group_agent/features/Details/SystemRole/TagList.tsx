@@ -1,4 +1,4 @@
-import { Flexbox,Tag as AntdTag } from '@lobehub/ui';
+import { Flexbox,Tag as AntdTag } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface TagListProps {

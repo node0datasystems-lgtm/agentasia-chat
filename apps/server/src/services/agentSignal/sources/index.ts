@@ -1,11 +1,11 @@
-import type { EmitSourceEventResult, SignalTriggerMetadata } from '@lobechat/agent-signal';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
+import type { EmitSourceEventResult, SignalTriggerMetadata } from '@agentasia/agent-signal';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
 import {
   sourceEventCounter,
   sourceEventDurationHistogram,
   tracer,
-} from '@lobechat/observability-otel/modules/agent-signal';
-import { attributesCommon } from '@lobechat/observability-otel/node';
+} from '@agentasia/observability-otel/modules/agent-signal';
+import { attributesCommon } from '@agentasia/observability-otel/node';
 
 import { AGENT_SIGNAL_DEFAULTS } from '../constants';
 import { redisSourceEventStore } from '../store/adapters/redis/sourceEventStore';

@@ -1,4 +1,4 @@
-import type { ImporterEntryData } from '@lobechat/types';
+import type { ImporterEntryData } from '@agentasia/types';
 import { and, inArray, sql } from 'drizzle-orm';
 
 import { sanitizeUTF8 } from '@/utils/sanitizeUTF8';

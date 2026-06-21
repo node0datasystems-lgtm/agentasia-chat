@@ -1,4 +1,4 @@
-import type { ChatTopicStatus } from '@lobechat/types';
+import type { ChatTopicStatus } from '@agentasia/types';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

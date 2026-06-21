@@ -1,4 +1,4 @@
-import { AgentRuntimeErrorType, RequestTrigger } from '@lobechat/types';
+import { AgentRuntimeErrorType, RequestTrigger } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { LobeRuntimeAI } from '../BaseAI';
@@ -119,7 +119,7 @@ describe('createRouterRuntime', () => {
       expect(mockChat).toHaveBeenCalledWith(payload, undefined);
     });
 
-    it('should attach route attempt metadata for lobehub runtime only', async () => {
+    it('should attach route attempt metadata for agentasia runtime only', async () => {
       const mockChat = vi.fn().mockResolvedValue('chat-response');
 
       class MockRuntime implements LobeRuntimeAI {
@@ -127,7 +127,7 @@ describe('createRouterRuntime', () => {
       }
 
       const Runtime = createRouterRuntime({
-        id: 'lobehub',
+        id: 'agentasia',
         routers: [
           {
             apiType: 'openai',
@@ -148,14 +148,14 @@ describe('createRouterRuntime', () => {
           apiType: 'openai',
           channelId: 'channel-1',
           optionIndex: 0,
-          providerId: 'lobehub',
+          providerId: 'agentasia',
           success: true,
           totalOptions: 1,
         }),
       );
     });
 
-    it('should not attach route attempt metadata for non-lobehub runtime', async () => {
+    it('should not attach route attempt metadata for non-agentasia runtime', async () => {
       const mockChat = vi.fn().mockResolvedValue('chat-response');
 
       class MockRuntime implements LobeRuntimeAI {
@@ -1317,7 +1317,7 @@ describe('createRouterRuntime', () => {
       });
 
       const OuterRuntime = createRouterRuntime({
-        id: 'lobehub',
+        id: 'agentasia',
         routers: [
           {
             apiType: 'deepseek',
@@ -1331,7 +1331,7 @@ describe('createRouterRuntime', () => {
       const runtime = new OuterRuntime();
       await runtime.chat({ messages: [], model: 'deepseek-v4-pro', temperature: 0.7 });
 
-      expect(constructorOptions[0]).toEqual(expect.objectContaining({ id: 'lobehub' }));
+      expect(constructorOptions[0]).toEqual(expect.objectContaining({ id: 'agentasia' }));
     });
   });
 });

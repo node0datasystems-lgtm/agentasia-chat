@@ -1,6 +1,6 @@
 'use client';
 
-import { Github } from '@lobehub/icons';
+import { Github } from '@agentasia/icons';
 import {
   ActionIcon,
   Avatar,
@@ -11,7 +11,7 @@ import {
   Tag,
   Text,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { App } from 'antd';
 import { createStaticStyles, cssVar, useResponsive } from 'antd-style';
 import {

@@ -1,5 +1,5 @@
-import { type UIChatMessage } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { type UIChatMessage } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useMemo } from 'react';
 
 import { ReactionPicker } from '../../../components/Reaction';

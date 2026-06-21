@@ -1,8 +1,8 @@
 import console from 'node:console';
 import path from 'node:path';
 
-import { APP_WINDOW_MIN_SIZE } from '@lobechat/desktop-bridge';
-import type { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-client-ipc';
+import { APP_WINDOW_MIN_SIZE } from '@agentasia/desktop-bridge';
+import type { MainBroadcastEventKey, MainBroadcastParams } from '@agentasia/electron-client-ipc';
 import type { BrowserWindowConstructorOptions } from 'electron';
 import { app, BrowserWindow, ipcMain, screen, session as electronSession, shell } from 'electron';
 
@@ -617,7 +617,7 @@ export default class Browser {
    * Bind this window's session to the backend proxy. The `app://` request
    * interceptor (wired in `App.ts`) consumes this context to route
    * `/trpc`, `/webapi`, `/api/auth`, and `/market` requests to the remote
-   * LobeHub server.
+   * AgentAsia server.
    */
   private setupRemoteServerRequestHook(browserWindow: BrowserWindow): void {
     const session = browserWindow.webContents.session;

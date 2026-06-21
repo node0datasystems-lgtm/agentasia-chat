@@ -1,5 +1,5 @@
-import { TopicReferenceExecutor } from '@lobechat/builtin-tool-topic-reference/executor';
-import type { BuiltinToolResult } from '@lobechat/types';
+import { TopicReferenceExecutor } from '@agentasia/builtin-tool-topic-reference/executor';
+import type { BuiltinToolResult } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

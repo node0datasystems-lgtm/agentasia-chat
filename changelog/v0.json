@@ -4511,7 +4511,7 @@
   {
     "children": {
       "improvements": [
-        "Switch Modal components to @lobehub/ui."
+        "Switch Modal components to @agentasia/ui."
       ]
     },
     "date": "2023-09-27",
@@ -5066,7 +5066,7 @@
   {
     "children": {
       "improvements": [
-        "Refactor plugin api with @lobehub/chat-plugins-gateway."
+        "Refactor plugin api with @agentasia/chat-plugins-gateway."
       ]
     },
     "date": "2023-08-22",

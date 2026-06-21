@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@lobehub/ui';
+import { Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ClipboardList } from 'lucide-react';
 import { memo, useMemo } from 'react';

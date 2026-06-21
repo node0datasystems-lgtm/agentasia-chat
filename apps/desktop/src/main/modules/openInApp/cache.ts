@@ -1,4 +1,4 @@
-import type { DetectedApp } from '@lobechat/electron-client-ipc';
+import type { DetectedApp } from '@agentasia/electron-client-ipc';
 
 import { detectAllApps } from './detectors';
 

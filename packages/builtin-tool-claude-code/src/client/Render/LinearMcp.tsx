@@ -1,7 +1,7 @@
 'use client';
 
-import { LinearRender } from '@lobechat/shared-tool-ui/renders';
-import type { BuiltinRender } from '@lobechat/types';
+import { LinearRender } from '@agentasia/shared-tool-ui/renders';
+import type { BuiltinRender } from '@agentasia/types';
 
 import {
   isLinearMcpApiName,

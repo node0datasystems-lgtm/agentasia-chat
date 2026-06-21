@@ -1,4 +1,4 @@
-import { type SkillItem, type SkillSource, skillsPrompts } from '@lobechat/prompts';
+import { type SkillItem, type SkillSource, skillsPrompts } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseSystemRoleProvider } from '../base/BaseSystemRoleProvider';

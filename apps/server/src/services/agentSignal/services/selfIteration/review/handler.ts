@@ -1,10 +1,10 @@
-import type { SourceAgentNightlyReviewRequested } from '@lobechat/agent-signal/source';
-import { AGENT_SIGNAL_SOURCE_TYPES } from '@lobechat/agent-signal/source';
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
-import { createAgentSignalSelfIterationPrompt } from '@lobechat/prompts';
-import { isNonEmptyString } from '@lobechat/utils';
+import type { SourceAgentNightlyReviewRequested } from '@agentasia/agent-signal/source';
+import { AGENT_SIGNAL_SOURCE_TYPES } from '@agentasia/agent-signal/source';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
+import { createAgentSignalSelfIterationPrompt } from '@agentasia/prompts';
+import { isNonEmptyString } from '@agentasia/utils';
 
 import type { LobeChatDatabase } from '@/database/type';
 

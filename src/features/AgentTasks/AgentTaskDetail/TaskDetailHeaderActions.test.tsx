@@ -29,7 +29,7 @@ const mocks = vi.hoisted(() => ({
   ] as MenuItem[],
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   ActionIcon: ({ title }: { title?: string }) => <button type="button">{title}</button>,
   DropdownMenu: ({ children, items }: { children?: ReactNode; items: MenuItem[] }) => {
     mocks.dropdownItems = items;

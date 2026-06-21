@@ -1,12 +1,12 @@
 // @vitest-environment node
-import { ASYNC_TASK_TIMEOUT } from '@lobechat/business-config/server';
-import type { UserMemoryExtractionMetadata } from '@lobechat/types';
+import { ASYNC_TASK_TIMEOUT } from '@agentasia/business-config/server';
+import type { UserMemoryExtractionMetadata } from '@agentasia/types';
 import {
   AsyncTaskError,
   AsyncTaskErrorType,
   AsyncTaskStatus,
   AsyncTaskType,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

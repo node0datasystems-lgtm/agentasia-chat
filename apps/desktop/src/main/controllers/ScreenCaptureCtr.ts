@@ -3,7 +3,7 @@ import type {
   CaptureRectParams,
   OverlayCaptureUploadStatusPayload,
   ScreenCaptureSubmitParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import type { OverlaySnapshotPayload } from '@/modules/screenCapture/ScreenCaptureManager';
 import { createLogger } from '@/utils/logger';

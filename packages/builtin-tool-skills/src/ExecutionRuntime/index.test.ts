@@ -163,7 +163,7 @@ describe('SkillsExecutionRuntime', () => {
           encoding: 'utf8',
           fileHash: 'hash-1',
           fileType: 'text/x-python',
-          fullPath: '/Users/test/lobehub/file-storage/skills/extracted/hash-1/bazi.py',
+          fullPath: '/Users/test/agentasia/file-storage/skills/extracted/hash-1/bazi.py',
           path: 'bazi.py',
           size: 14,
         }),
@@ -176,7 +176,7 @@ describe('SkillsExecutionRuntime', () => {
       expect(result.state).toEqual({
         encoding: 'utf8',
         fileType: 'text/x-python',
-        fullPath: '/Users/test/lobehub/file-storage/skills/extracted/hash-1/bazi.py',
+        fullPath: '/Users/test/agentasia/file-storage/skills/extracted/hash-1/bazi.py',
         path: 'bazi.py',
         size: 14,
       });

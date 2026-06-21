@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-notebook",
+  "name": "@agentasia/builtin-tool-notebook",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,9 +9,9 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/prompts": "workspace:*"
+    "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

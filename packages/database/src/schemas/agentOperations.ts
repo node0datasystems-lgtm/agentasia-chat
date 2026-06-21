@@ -1,4 +1,4 @@
-import type { VerifyCheckItem } from '@lobechat/types';
+import type { VerifyCheckItem } from '@agentasia/types';
 import { boolean, index, integer, jsonb, pgTable, text } from 'drizzle-orm/pg-core';
 
 import { amountNumeric, timestamps, timestamptz } from './_helpers';

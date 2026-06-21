@@ -2,7 +2,7 @@ import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { type NextConfig } from 'next';
 import { type Header, type Redirect } from 'next/dist/lib/load-custom-routes';
 
-const LANDING_SITEMAP_URL = 'https://lobehub.com/sitemap.xml';
+const LANDING_SITEMAP_URL = 'https://agentasia.ai/sitemap.xml';
 
 interface CustomNextConfig {
   experimental?: NextConfig['experimental'];
@@ -74,13 +74,13 @@ export function defineConfig(config: CustomNextConfig) {
         '@emoji-mart/react',
         '@emoji-mart/data',
         '@icons-pack/react-simple-icons',
-        '@lobehub/ui',
-        '@lobehub/icons',
+        '@agentasia/ui',
+        '@agentasia/icons',
       ],
       // oidc provider depend on constructor.name
       // but swc minification will remove the name
       // so we need to disable it
-      // refs: https://github.com/lobehub/lobe-chat/pull/7430
+      // refs: https://github.com/agentasia/agentasia-chat/pull/7430
       serverMinification: false,
       webVitalsAttribution: ['CLS', 'LCP'],
       ...config.experimental,
@@ -358,7 +358,7 @@ export function defineConfig(config: CustomNextConfig) {
     serverExternalPackages: config.serverExternalPackages ?? [
       'pdfkit',
       '@napi-rs/canvas',
-      '@lobehub/editor',
+      '@agentasia/editor',
       'discord.js',
       'ffmpeg-static',
       'pdfjs-dist',

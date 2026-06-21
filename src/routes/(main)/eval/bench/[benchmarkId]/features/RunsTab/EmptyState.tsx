@@ -1,4 +1,4 @@
-import { Button, Empty, Flexbox } from '@lobehub/ui';
+import { Button, Empty, Flexbox } from '@agentasia/ui';
 import { Card } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { Activity, Plus } from 'lucide-react';

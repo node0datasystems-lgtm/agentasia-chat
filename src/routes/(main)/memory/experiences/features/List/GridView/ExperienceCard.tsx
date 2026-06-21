@@ -1,4 +1,4 @@
-import { type ExperienceListItem } from '@lobechat/types';
+import { type ExperienceListItem } from '@agentasia/types';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
-import { type LobeToolManifest, type PluginEnableChecker } from '@lobechat/context-engine';
-import { type LobeAgentAgencyConfig, type LobeBuiltinTool, type LobeTool } from '@lobechat/types';
+import { type LobeToolManifest, type PluginEnableChecker } from '@agentasia/context-engine';
+import { type LobeAgentAgencyConfig, type LobeBuiltinTool, type LobeTool } from '@agentasia/types';
 
 import type { ExecutionPlan } from '@/helpers/executionTarget';
 
@@ -50,7 +50,7 @@ export interface ServerAgentToolsEngineConfig {
  * Parameters for createServerAgentToolsEngine
  */
 export interface ServerCreateAgentToolsEngineParams {
-  /** Additional manifests to include (e.g., LobeHub Skills) */
+  /** Additional manifests to include (e.g., AgentAsia Skills) */
   additionalManifests?: LobeToolManifest[];
   /** Agent configuration containing plugins array */
   agentConfig: {

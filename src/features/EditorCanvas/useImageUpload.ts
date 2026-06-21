@@ -5,7 +5,7 @@ import { useFileStore } from '@/store/file';
 import { registerAttachment } from './attachmentRegistry';
 
 /**
- * Upload handler compatible with `@lobehub/editor`'s `ReactImagePlugin` /
+ * Upload handler compatible with `@agentasia/editor`'s `ReactImagePlugin` /
  * `ReactFilePlugin` `handleUpload` signature. Side effect: registers the
  * resulting `url → fileId` pair so callers can recover fileIds from the
  * editor state later (see `attachmentRegistry`).

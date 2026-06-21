@@ -3,35 +3,35 @@ import type {
   AgentRuntimeContext,
   AgentState,
   GeneralAgentConfig,
-} from '@lobechat/agent-runtime';
+} from '@agentasia/agent-runtime';
 import {
   AgentRuntime,
   findInMessages,
   GeneralChatAgent,
   isParkedStatus,
-} from '@lobechat/agent-runtime';
-import type { ISnapshotStore } from '@lobechat/agent-tracing';
-import { dynamicInterventionAudits } from '@lobechat/builtin-tools/dynamicInterventionAudits';
-import { parse } from '@lobechat/conversation-flow';
-import { getModelPropertyWithFallback } from '@lobechat/model-runtime';
+} from '@agentasia/agent-runtime';
+import type { ISnapshotStore } from '@agentasia/agent-tracing';
+import { dynamicInterventionAudits } from '@agentasia/builtin-tools/dynamicInterventionAudits';
+import { parse } from '@agentasia/conversation-flow';
+import { getModelPropertyWithFallback } from '@agentasia/model-runtime';
 import {
   context as otelContext,
   SpanStatusCode,
   trace as otelTrace,
-} from '@lobechat/observability-otel/api';
+} from '@agentasia/observability-otel/api';
 import {
   asyncToolResumeCounter,
   buildInvokeAgentAttributes,
   buildInvokeAgentResultAttributes,
   invokeAgentSpanName,
   tracer as agentRuntimeTracer,
-} from '@lobechat/observability-otel/modules/agent-runtime';
+} from '@agentasia/observability-otel/modules/agent-runtime';
 import {
   type ChatToolPayload,
   type ExecSubAgentParams,
   type ExecVirtualSubAgentParams,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 import urlJoin from 'url-join';
 

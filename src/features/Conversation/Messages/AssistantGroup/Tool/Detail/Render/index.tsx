@@ -1,5 +1,5 @@
-import { getBuiltinRender } from '@lobechat/builtin-tools/renders';
-import { type ChatPluginPayload } from '@lobechat/types';
+import { getBuiltinRender } from '@agentasia/builtin-tools/renders';
+import { type ChatPluginPayload } from '@agentasia/types';
 import { memo } from 'react';
 
 import CustomRender from './CustomRender';

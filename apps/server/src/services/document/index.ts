@@ -1,10 +1,10 @@
 import { randomUUID } from 'node:crypto';
 
-import { CUSTOM_DOCUMENT_FILE_TYPE, CUSTOM_FOLDER_FILE_TYPE } from '@lobechat/const';
-import { type LobeChatDatabase } from '@lobechat/database';
-import { type DocumentItem } from '@lobechat/database/schemas';
-import { documents, files } from '@lobechat/database/schemas';
-import { loadFile, UnsupportedFileTypeError } from '@lobechat/file-loaders';
+import { CUSTOM_DOCUMENT_FILE_TYPE, CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
+import { type LobeChatDatabase } from '@agentasia/database';
+import { type DocumentItem } from '@agentasia/database/schemas';
+import { documents, files } from '@agentasia/database/schemas';
+import { loadFile, UnsupportedFileTypeError } from '@agentasia/file-loaders';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
@@ -35,7 +35,7 @@ import type {
   UpdateDocumentResult,
 } from './types';
 
-const log = debug('lobe-chat:service:document');
+const log = debug('agentasia-chat:service:document');
 
 const normalizeParseFileError = (error: unknown) => {
   if (error instanceof UnsupportedFileTypeError) {

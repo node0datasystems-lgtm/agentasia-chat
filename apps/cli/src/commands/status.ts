@@ -1,4 +1,4 @@
-import { GatewayClient } from '@lobechat/device-gateway-client';
+import { GatewayClient } from '@agentasia/device-gateway-client';
 import type { Command } from 'commander';
 
 import { resolveToken } from '../auth/resolveToken';

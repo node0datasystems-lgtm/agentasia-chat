@@ -2,7 +2,7 @@ import {
   AGENT_DOCUMENT_CATEGORY,
   AGENT_DOCUMENT_SKILL_CATEGORY,
   CUSTOM_DOCUMENT_FILE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import type { AgentDocumentItem } from './types';

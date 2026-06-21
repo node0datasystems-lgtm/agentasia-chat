@@ -1,24 +1,24 @@
-import { LobeActivatorIdentifier } from '@lobechat/builtin-tool-activator';
-import { AgentBuilderIdentifier } from '@lobechat/builtin-tool-agent-builder';
-import { AgentManagementIdentifier } from '@lobechat/builtin-tool-agent-management';
-import { formatUploadedFilesPrompt } from '@lobechat/builtin-tool-cloud-sandbox';
+import { LobeActivatorIdentifier } from '@agentasia/builtin-tool-activator';
+import { AgentBuilderIdentifier } from '@agentasia/builtin-tool-agent-builder';
+import { AgentManagementIdentifier } from '@agentasia/builtin-tool-agent-management';
+import { formatUploadedFilesPrompt } from '@agentasia/builtin-tool-cloud-sandbox';
 import {
   type ComposioServiceSummary,
   CredsIdentifier,
   type CredSummary,
   generateComposioServicesList,
   generateCredsList,
-} from '@lobechat/builtin-tool-creds';
-import { GroupAgentBuilderIdentifier } from '@lobechat/builtin-tool-group-agent-builder';
-import { LobeAgentIdentifier } from '@lobechat/builtin-tool-lobe-agent';
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { WebOnboardingIdentifier } from '@lobechat/builtin-tool-web-onboarding';
+} from '@agentasia/builtin-tool-creds';
+import { GroupAgentBuilderIdentifier } from '@agentasia/builtin-tool-group-agent-builder';
+import { LobeAgentIdentifier } from '@agentasia/builtin-tool-lobe-agent';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { WebOnboardingIdentifier } from '@agentasia/builtin-tool-web-onboarding';
 import {
   AGENT_PLAN_FILE_TYPE,
   COMPOSIO_APP_TYPES,
   isDesktop,
   LOBEHUB_SKILL_PROVIDERS,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import type {
   AgentBuilderContext,
   AgentContextDocument,
@@ -33,15 +33,15 @@ import type {
   PlanTodoConfig,
   ToolDiscoveryConfig,
   UserMemoryData,
-} from '@lobechat/context-engine';
-import { MessagesEngine, resolveTopicReferences } from '@lobechat/context-engine';
-import { historySummaryPrompt } from '@lobechat/prompts';
+} from '@agentasia/context-engine';
+import { MessagesEngine, resolveTopicReferences } from '@agentasia/context-engine';
+import { historySummaryPrompt } from '@agentasia/prompts';
 import type {
   OpenAIChatMessage,
   RuntimeInitialContext,
   RuntimeStepContext,
   UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 
 import { isCanUseFC } from '@/helpers/isCanUseFC';
@@ -64,7 +64,7 @@ import { getToolStoreState } from '@/store/tool';
 import {
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   toolSelectors,
 } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore';
@@ -259,7 +259,7 @@ export const contextEngineering = async ({
             const server = allComposioServers.find((s) => s.identifier === composioType.identifier);
 
             officialTools.push({
-              description: `LobeHub Mcp Server: ${composioType.label}`,
+              description: `AgentAsia Mcp Server: ${composioType.label}`,
               enabled: enabledPlugins.includes(composioType.identifier),
               identifier: composioType.identifier,
               installed: !!server,
@@ -275,18 +275,18 @@ export const contextEngineering = async ({
           window.global_serverConfigStore?.getState()?.serverConfig?.enableLobehubSkill;
 
         if (isLobehubSkillEnabled) {
-          const allLobehubSkillServers = lobehubSkillStoreSelectors.getServers(toolState);
+          const allLobehubSkillServers = agentasiaSkillStoreSelectors.getServers(toolState);
 
           for (const provider of LOBEHUB_SKILL_PROVIDERS) {
             const server = allLobehubSkillServers.find((s) => s.identifier === provider.id);
 
             officialTools.push({
-              description: `LobeHub Skill Provider: ${provider.label}`,
+              description: `AgentAsia Skill Provider: ${provider.label}`,
               enabled: enabledPlugins.includes(provider.id),
               identifier: provider.id,
               installed: !!server,
               name: provider.label,
-              type: 'lobehub-skill',
+              type: 'agentasia-skill',
             });
           }
         }
@@ -584,7 +584,7 @@ export const contextEngineering = async ({
           description: provider.description,
           identifier: provider.id,
           name: provider.label,
-          type: 'lobehub-skill' as const,
+          type: 'agentasia-skill' as const,
         });
       }
     }
@@ -756,8 +756,8 @@ export const contextEngineering = async ({
           : '',
       // NOTICE(@nekomeowww): required by builtin-tool-memory/src/systemRole.ts
       memory_effort: () => (userMemoryConfig ? (memoryContext?.effort ?? '') : ''),
-      // Current agent + topic identity — referenced by the LobeHub builtin
-      // skill (packages/builtin-skills/src/lobehub/content.ts) so the model
+      // Current agent + topic identity — referenced by the AgentAsia builtin
+      // skill (packages/builtin-skills/src/agentasia/content.ts) so the model
       // can run `lh agent run -a {{agent_id}}` etc without first having to
       // search for itself. Read lazily from stores so we only pay the cost
       // when the placeholder actually appears in a rendered message.

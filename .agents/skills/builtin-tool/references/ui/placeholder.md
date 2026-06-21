@@ -21,8 +21,8 @@ No `pluginState` — Placeholder lives entirely in the "executing" gap.
 `packages/builtin-tool-web-browsing/src/client/Placeholder/Search.tsx`:
 
 ```tsx
-import type { BuiltinPlaceholderProps, SearchQuery } from '@lobechat/types';
-import { Flexbox, Icon, Skeleton } from '@lobehub/ui';
+import type { BuiltinPlaceholderProps, SearchQuery } from '@agentasia/types';
+import { Flexbox, Icon, Skeleton } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { SearchIcon } from 'lucide-react';
 import { memo } from 'react';
@@ -71,7 +71,7 @@ export const Search = memo<BuiltinPlaceholderProps<SearchQuery>>(({ args }) => {
 ## Placeholder rules
 
 - **Mirror the eventual Render's layout.** When the result arrives the Placeholder unmounts and the Render mounts; if they share dimensions, the chat doesn't jump.
-- Use `Skeleton.Block` / `Skeleton.Button` from `@lobehub/ui` for placeholder shapes.
+- Use `Skeleton.Block` / `Skeleton.Button` from `@agentasia/ui` for placeholder shapes.
 - Embed any args you have (e.g. the query text) — context helps the user know what's loading.
 - Pulse with `shinyTextStyles.shinyText` if the Placeholder includes literal text.
 

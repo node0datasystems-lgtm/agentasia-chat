@@ -1,4 +1,4 @@
-import { type BuiltinInspector, type BuiltinRender } from '@lobechat/types';
+import { type BuiltinInspector, type BuiltinRender } from '@agentasia/types';
 
 import CollabToolInspector from './CollabToolInspector';
 import CollabToolRender from './CollabToolRender';

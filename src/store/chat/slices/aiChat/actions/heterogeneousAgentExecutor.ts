@@ -2,13 +2,13 @@ import type {
   AgentInterventionRequestData,
   AgentInterventionResponseData,
   AgentStreamEvent,
-} from '@lobechat/agent-gateway-client';
+} from '@agentasia/agent-gateway-client';
 import {
   CLAUDE_CODE_CLI_INSTALL_DOCS_URL,
   CODEX_CLI_INSTALL_DOCS_URL,
   type HeterogeneousAgentSessionError,
   HeterogeneousAgentSessionErrorCode,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import {
   createMainAgentRunState,
   type MainAgentIntent,
@@ -16,7 +16,7 @@ import {
   type MainAgentRunState,
   reduceMainAgent,
   type SubagentIntent,
-} from '@lobechat/heterogeneous-agents';
+} from '@agentasia/heterogeneous-agents';
 import type {
   ChatMessageError,
   ChatToolPayload,
@@ -25,9 +25,9 @@ import type {
   HeterogeneousProviderConfig,
   MessageMapScope,
   UIChatMessage,
-} from '@lobechat/types';
-import { AgentRuntimeErrorType, ThreadStatus, ThreadType } from '@lobechat/types';
-import { createNanoId } from '@lobechat/utils';
+} from '@agentasia/types';
+import { AgentRuntimeErrorType, ThreadStatus, ThreadType } from '@agentasia/types';
+import { createNanoId } from '@agentasia/utils';
 import { t } from 'i18next';
 
 import { message as antdMessage } from '@/components/AntdStaticMethods';

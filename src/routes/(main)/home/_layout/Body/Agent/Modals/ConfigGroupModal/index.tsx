@@ -1,5 +1,5 @@
-import { Button, Modal, type ModalProps, SortableList } from '@lobehub/ui';
-import { Flexbox } from '@lobehub/ui';
+import { Button, Modal, type ModalProps, SortableList } from '@agentasia/ui';
+import { Flexbox } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { Plus } from 'lucide-react';

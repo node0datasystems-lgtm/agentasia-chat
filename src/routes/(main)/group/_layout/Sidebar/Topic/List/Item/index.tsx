@@ -1,5 +1,5 @@
-import type { ChatTopicStatus } from '@lobechat/types';
-import { Flexbox, Icon, Skeleton, Tag, Text, Tooltip } from '@lobehub/ui';
+import type { ChatTopicStatus } from '@agentasia/types';
+import { Flexbox, Icon, Skeleton, Tag, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
   CheckCircle2,

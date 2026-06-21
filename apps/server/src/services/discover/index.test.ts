@@ -10,7 +10,7 @@ import { DiscoverService } from './index';
 // Mock external dependencies
 vi.mock('@/server/modules/AssistantStore');
 vi.mock('@/server/modules/PluginStore');
-vi.mock('@lobehub/market-sdk');
+vi.mock('@agentasia/market-sdk');
 vi.mock('@/locales/resources', () => ({
   normalizeLocale: vi.fn((locale) => {
     if (locale === 'en-US') return 'en';
@@ -58,10 +58,10 @@ vi.mock('model-bank', async (importOriginal) => {
         releasedAt: '2024-02-01T00:00:00Z',
       },
       {
-        id: 'lobehub-onboarding-v1',
-        displayName: 'LobeHub Onboarding',
+        id: 'agentasia-onboarding-v1',
+        displayName: 'AgentAsia Onboarding',
         description: 'Runtime-only onboarding alias model',
-        providerId: 'lobehub',
+        providerId: 'agentasia',
         contextWindowTokens: 1_000_000,
         abilities: {
           functionCall: true,
@@ -720,7 +720,7 @@ describe('DiscoverService', () => {
 
       it('should not expose hidden runtime-only model details', async () => {
         const result = await service.getModelDetail({
-          identifier: 'lobehub-onboarding-v1',
+          identifier: 'agentasia-onboarding-v1',
         });
 
         expect(result).toBeUndefined();
@@ -744,7 +744,7 @@ describe('DiscoverService', () => {
       it('should not include categories that only have hidden models', async () => {
         const result = await service.getModelCategories();
 
-        expect(result.some((item) => item.category === 'lobehub')).toBe(false);
+        expect(result.some((item) => item.category === 'agentasia')).toBe(false);
       });
     });
   });

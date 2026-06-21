@@ -1,5 +1,5 @@
-import type { InterestAreaKey } from '@lobechat/const';
-import { INTEREST_AREA_KEYS } from '@lobechat/const';
+import type { InterestAreaKey } from '@agentasia/const';
+import { INTEREST_AREA_KEYS } from '@agentasia/const';
 import type { LucideIcon } from 'lucide-react';
 import {
   BabyIcon,
@@ -57,4 +57,4 @@ export const INTEREST_AREAS = INTEREST_AREA_KEYS.map((key) => ({
   key,
 }));
 
-export type { InterestAreaKey } from '@lobechat/const';
+export type { InterestAreaKey } from '@agentasia/const';

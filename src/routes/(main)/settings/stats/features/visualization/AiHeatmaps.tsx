@@ -1,6 +1,6 @@
-import { type HeatmapsProps } from '@lobehub/charts';
-import { Heatmaps } from '@lobehub/charts';
-import { Flexbox, Icon, Segmented, Tag } from '@lobehub/ui';
+import { type HeatmapsProps } from '@agentasia/charts';
+import { Heatmaps } from '@agentasia/charts';
+import { Flexbox, Icon, Segmented, Tag } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { CoinsIcon, FlameIcon, MessageSquareIcon } from 'lucide-react';
 import { memo, useState } from 'react';

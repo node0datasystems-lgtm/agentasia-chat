@@ -1,5 +1,5 @@
-import type { SandboxCallToolResult } from '@lobechat/builtin-tool-cloud-sandbox';
-import type { CodeInterpreterToolName } from '@lobehub/market-sdk';
+import type { SandboxCallToolResult } from '@agentasia/builtin-tool-cloud-sandbox';
+import type { CodeInterpreterToolName } from '@agentasia/market-sdk';
 import debug from 'debug';
 
 import { SandboxMiddlewareService } from '../service';

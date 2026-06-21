@@ -1,7 +1,7 @@
 // @vitest-environment node
-import type { LobeChatDatabase } from '@lobechat/database';
-import { agentSkills, files, globalFiles, users } from '@lobechat/database/schemas';
-import { getTestDB } from '@lobechat/database/test-utils';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { agentSkills, files, globalFiles, users } from '@agentasia/database/schemas';
+import { getTestDB } from '@agentasia/database/test-utils';
 import { and, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -353,7 +353,7 @@ describe('SkillImporter', () => {
     it('should import skill from GitHub repository', async () => {
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-demo',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -365,13 +365,13 @@ describe('SkillImporter', () => {
       });
 
       const result = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-demo',
+        gitUrl: 'https://github.com/agentasia/skill-demo',
       });
 
       expect(result).toBeDefined();
       expect(result.status).toBe('created');
       expect(result.skill.name).toBe('GitHub Skill');
-      expect(result.skill.identifier).toBe('lobehub-skill-demo');
+      expect(result.skill.identifier).toBe('agentasia-skill-demo');
       expect(result.skill.source).toBe('market');
 
       // Verify manifest contains repository info
@@ -379,8 +379,8 @@ describe('SkillImporter', () => {
         where: eq(agentSkills.id, result.skill.id),
       });
       expect(dbSkill?.manifest).toMatchObject({
-        repository: 'https://github.com/lobehub/skill-demo',
-        sourceUrl: 'https://github.com/lobehub/skill-demo',
+        repository: 'https://github.com/agentasia/skill-demo',
+        sourceUrl: 'https://github.com/agentasia/skill-demo',
       });
     });
 
@@ -417,7 +417,7 @@ describe('SkillImporter', () => {
     it('should update existing skill when re-importing from same repo', async () => {
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-update',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -431,7 +431,7 @@ describe('SkillImporter', () => {
       });
 
       const first = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-update',
+        gitUrl: 'https://github.com/agentasia/skill-update',
       });
 
       expect(first.status).toBe('created');
@@ -447,7 +447,7 @@ describe('SkillImporter', () => {
       });
 
       const second = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-update',
+        gitUrl: 'https://github.com/agentasia/skill-update',
       });
 
       expect(second.status).toBe('updated');
@@ -460,7 +460,7 @@ describe('SkillImporter', () => {
         .select()
         .from(agentSkills)
         .where(
-          and(eq(agentSkills.userId, userId), eq(agentSkills.identifier, 'lobehub-skill-update')),
+          and(eq(agentSkills.userId, userId), eq(agentSkills.identifier, 'agentasia-skill-update')),
         );
       expect(dbSkills).toHaveLength(1);
     });
@@ -486,7 +486,7 @@ describe('SkillImporter', () => {
       const { GitHubNotFoundError } = await import('@/server/modules/GitHub');
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'non-existent',
       });
       mockGitHubInstance.downloadRepoZip.mockImplementation(() => {
@@ -494,11 +494,11 @@ describe('SkillImporter', () => {
       });
 
       await expect(
-        importer.importFromGitHub({ gitUrl: 'https://github.com/lobehub/non-existent' }),
+        importer.importFromGitHub({ gitUrl: 'https://github.com/agentasia/non-existent' }),
       ).rejects.toThrow(SkillImportError);
 
       try {
-        await importer.importFromGitHub({ gitUrl: 'https://github.com/lobehub/non-existent' });
+        await importer.importFromGitHub({ gitUrl: 'https://github.com/agentasia/non-existent' });
       } catch (e) {
         expect((e as SkillImportError).code).toBe('NOT_FOUND');
       }
@@ -507,7 +507,7 @@ describe('SkillImporter', () => {
     it('should use custom branch when provided', async () => {
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'develop',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-branch',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -520,11 +520,11 @@ describe('SkillImporter', () => {
 
       await importer.importFromGitHub({
         branch: 'develop',
-        gitUrl: 'https://github.com/lobehub/skill-branch',
+        gitUrl: 'https://github.com/agentasia/skill-branch',
       });
 
       expect(mockGitHubInstance.parseRepoUrl).toHaveBeenCalledWith(
-        'https://github.com/lobehub/skill-branch',
+        'https://github.com/agentasia/skill-branch',
         'develop',
       );
     });
@@ -534,7 +534,7 @@ describe('SkillImporter', () => {
 
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-global-only',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -546,7 +546,7 @@ describe('SkillImporter', () => {
       });
 
       const result = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-global-only',
+        gitUrl: 'https://github.com/agentasia/skill-global-only',
       });
 
       expect(result).toBeDefined();
@@ -593,7 +593,7 @@ describe('SkillImporter', () => {
 
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-path-test',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -605,7 +605,7 @@ describe('SkillImporter', () => {
       });
 
       await freshImporter.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-path-test',
+        gitUrl: 'https://github.com/agentasia/skill-path-test',
       });
 
       // Verify uploadBuffer was called with correct path
@@ -619,7 +619,7 @@ describe('SkillImporter', () => {
     it('should call parseZipPackage with repackSkillZip: true', async () => {
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'repack-test',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('large-repo-zip'));
@@ -632,7 +632,7 @@ describe('SkillImporter', () => {
       });
 
       await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/repack-test',
+        gitUrl: 'https://github.com/agentasia/repack-test',
       });
 
       // Verify parseZipPackage was called with repackSkillZip: true
@@ -667,7 +667,7 @@ describe('SkillImporter', () => {
 
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'large-repo',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(largeRepoZip);
@@ -680,7 +680,7 @@ describe('SkillImporter', () => {
       });
 
       await freshImporter.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/large-repo',
+        gitUrl: 'https://github.com/agentasia/large-repo',
       });
 
       // Verify uploadBuffer was called with skillZipBuffer, not the large repo ZIP
@@ -696,7 +696,7 @@ describe('SkillImporter', () => {
 
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-dedup',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -712,7 +712,7 @@ describe('SkillImporter', () => {
 
       // First import
       const first = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-dedup',
+        gitUrl: 'https://github.com/agentasia/skill-dedup',
       });
 
       expect(first).toBeDefined();
@@ -724,7 +724,7 @@ describe('SkillImporter', () => {
 
       // Second import with same zipHash should skip
       const second = await importer.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-dedup',
+        gitUrl: 'https://github.com/agentasia/skill-dedup',
       });
 
       // Should return the existing skill with 'unchanged' status
@@ -742,7 +742,7 @@ describe('SkillImporter', () => {
       const dbSkills = await db
         .select()
         .from(agentSkills)
-        .where(eq(agentSkills.identifier, 'lobehub-skill-dedup'));
+        .where(eq(agentSkills.identifier, 'agentasia-skill-dedup'));
       expect(dbSkills).toHaveLength(1);
     });
 
@@ -769,7 +769,7 @@ describe('SkillImporter', () => {
 
       mockGitHubInstance.parseRepoUrl.mockReturnValue({
         branch: 'main',
-        owner: 'lobehub',
+        owner: 'agentasia',
         repo: 'skill-update-content',
       });
       mockGitHubInstance.downloadRepoZip.mockResolvedValue(Buffer.from('mock-zip'));
@@ -783,7 +783,7 @@ describe('SkillImporter', () => {
       });
 
       const first = await freshImporter.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-update-content',
+        gitUrl: 'https://github.com/agentasia/skill-update-content',
       });
 
       expect(first.status).toBe('created');
@@ -800,7 +800,7 @@ describe('SkillImporter', () => {
       });
 
       const second = await freshImporter.importFromGitHub({
-        gitUrl: 'https://github.com/lobehub/skill-update-content',
+        gitUrl: 'https://github.com/agentasia/skill-update-content',
       });
 
       // Should update the existing skill

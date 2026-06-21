@@ -1,5 +1,5 @@
-import type { FileMetadata } from '@lobechat/types';
-import { AsyncTaskStatus, AsyncTaskType } from '@lobechat/types';
+import type { FileMetadata } from '@agentasia/types';
+import { AsyncTaskStatus, AsyncTaskType } from '@agentasia/types';
 import { and, count, desc, eq, gte, ilike, inArray, lte, sum } from 'drizzle-orm';
 import { sha256 } from 'js-sha256';
 

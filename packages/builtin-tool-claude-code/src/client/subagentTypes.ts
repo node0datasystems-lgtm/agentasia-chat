@@ -1,4 +1,4 @@
-import { GroupBotIcon } from '@lobehub/ui/icons';
+import { GroupBotIcon } from '@agentasia/ui/icons';
 import { Compass, type LucideIcon, Search, Settings } from 'lucide-react';
 import type { FC } from 'react';
 

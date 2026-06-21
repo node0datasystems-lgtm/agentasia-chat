@@ -1,5 +1,5 @@
-import { ActionIcon, Button, DropdownMenu, Flexbox, Skeleton, Text, Tooltip } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { ActionIcon, Button, DropdownMenu, Flexbox, Skeleton, Text, Tooltip } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Space } from 'antd';
 import { cssVar } from 'antd-style';
 import { CircleX, EllipsisVertical, LucideRefreshCcwDot, PlusIcon } from 'lucide-react';

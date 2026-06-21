@@ -1,5 +1,5 @@
-import { type ActivityListItem } from '@lobechat/types';
-import { Tag } from '@lobehub/ui';
+import { type ActivityListItem } from '@agentasia/types';
+import { Tag } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

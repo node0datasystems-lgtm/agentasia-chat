@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { MarketSDK } from '@lobehub/market-sdk';
+import { MarketSDK } from '@agentasia/market-sdk';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { generateTrustedClientToken, getTrustedClientTokenForSession } from '@/libs/trusted-client';
@@ -7,7 +7,7 @@ import { generateTrustedClientToken, getTrustedClientTokenForSession } from '@/l
 import { extractAccessToken, MarketService } from './index';
 
 // Mock dependencies before importing the module under test
-vi.mock('@lobehub/market-sdk', () => {
+vi.mock('@agentasia/market-sdk', () => {
   const MarketSDK = vi.fn().mockImplementation(() => ({
     agentGroups: {
       getAgentGroupDetail: vi.fn(),
@@ -370,8 +370,8 @@ describe('MarketService', () => {
         identifier: 'twitter',
         meta: {
           avatar: '🐦',
-          description: 'LobeHub Skill: X (Twitter)',
-          tags: ['lobehub-skill', 'twitter'],
+          description: 'AgentAsia Skill: X (Twitter)',
+          tags: ['agentasia-skill', 'twitter'],
           title: 'X (Twitter)',
         },
         type: 'builtin',
@@ -409,7 +409,7 @@ describe('MarketService', () => {
       const manifests = await service.getLobehubSkillManifests();
       expect(manifests).toHaveLength(1);
       expect(manifests[0].meta).toMatchObject({
-        description: 'LobeHub Skill: Notion',
+        description: 'AgentAsia Skill: Notion',
         title: 'Notion',
       });
     });

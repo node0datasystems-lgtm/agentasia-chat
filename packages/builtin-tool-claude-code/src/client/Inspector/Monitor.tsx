@@ -1,7 +1,7 @@
 'use client';
 
-import { inspectorTextStyles, shinyTextStyles } from '@lobechat/shared-tool-ui/styles';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, Monitor as MonitorIcon, X } from 'lucide-react';
 import { memo } from 'react';

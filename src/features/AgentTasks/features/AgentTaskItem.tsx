@@ -1,5 +1,5 @@
-import type { TaskStatus } from '@lobechat/types';
-import { Block, ContextMenuTrigger, Flexbox, Text } from '@lobehub/ui';
+import type { TaskStatus } from '@agentasia/types';
+import { Block, ContextMenuTrigger, Flexbox, Text } from '@agentasia/ui';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 

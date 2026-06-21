@@ -1,4 +1,4 @@
-import { MemorySourceType } from '@lobechat/types';
+import { MemorySourceType } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { LobeChatTopicContextProvider } from './chatTopic';

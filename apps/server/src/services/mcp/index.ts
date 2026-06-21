@@ -4,9 +4,9 @@ import {
   type LobeChatPluginApi,
   type ToolManifest,
   type ToolManifestSettings,
-} from '@lobechat/types';
-import { safeParseJSON } from '@lobechat/utils';
-import { type DeploymentOption } from '@lobehub/market-sdk';
+} from '@agentasia/types';
+import { safeParseJSON } from '@agentasia/utils';
+import { type DeploymentOption } from '@agentasia/market-sdk';
 import { McpError } from '@modelcontextprotocol/sdk/types.js';
 import { TRPCError } from '@trpc/server';
 import retry from 'async-retry';

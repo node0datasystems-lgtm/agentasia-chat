@@ -1,4 +1,4 @@
-import { Flexbox, Markdown, Text } from '@lobehub/ui';
+import { Flexbox, Markdown, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

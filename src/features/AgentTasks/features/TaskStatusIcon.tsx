@@ -1,5 +1,5 @@
-import type { TaskStatus } from '@lobechat/types';
-import { ActionIcon } from '@lobehub/ui';
+import type { TaskStatus } from '@agentasia/types';
+import { ActionIcon } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import {

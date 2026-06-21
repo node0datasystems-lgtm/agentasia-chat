@@ -13,7 +13,7 @@ let messageContent: string | undefined = '';
 
 // Drive the Alert's `afterClose` directly via a click, so we exercise
 // ErrorContent's dismiss branching without the real close animation.
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Alert: ({ afterClose }: { afterClose?: () => void }) => (
     <button type="button" onClick={() => afterClose?.()}>
       close

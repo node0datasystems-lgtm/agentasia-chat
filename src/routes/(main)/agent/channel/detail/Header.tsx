@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Tag } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Tag } from '@agentasia/ui';
 import { Button, Switch } from 'antd';
 import { ExternalLink, RefreshCw } from 'lucide-react';
 import { memo } from 'react';

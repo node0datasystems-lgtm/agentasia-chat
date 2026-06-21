@@ -1,9 +1,9 @@
-import * as builtinAgents from '@lobechat/builtin-agents';
-import { GroupManagementIdentifier } from '@lobechat/builtin-tool-group-management';
-import { LobeAgentIdentifier } from '@lobechat/builtin-tool-lobe-agent';
-import { NotebookIdentifier } from '@lobechat/builtin-tool-notebook';
-import { PageAgentIdentifier } from '@lobechat/builtin-tool-page-agent';
-import { TaskIdentifier } from '@lobechat/builtin-tool-task';
+import * as builtinAgents from '@agentasia/builtin-agents';
+import { GroupManagementIdentifier } from '@agentasia/builtin-tool-group-management';
+import { LobeAgentIdentifier } from '@agentasia/builtin-tool-lobe-agent';
+import { NotebookIdentifier } from '@agentasia/builtin-tool-notebook';
+import { PageAgentIdentifier } from '@agentasia/builtin-tool-page-agent';
+import { TaskIdentifier } from '@agentasia/builtin-tool-task';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as agentStore from '@/store/agent';

@@ -1,4 +1,4 @@
-import type { ShareVisibility } from '@lobechat/types';
+import type { ShareVisibility } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { and, asc, eq, sql } from 'drizzle-orm';
 

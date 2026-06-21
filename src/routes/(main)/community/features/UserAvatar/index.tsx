@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Button, Skeleton } from '@lobehub/ui';
+import { Avatar, Button, Skeleton } from '@agentasia/ui';
 import { UserCircleIcon } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

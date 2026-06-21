@@ -1,9 +1,9 @@
 'use client';
 
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { AES_GCM_URL, BASE_PROVIDER_DOC_URL, FORM_STYLE } from '@lobechat/const';
-import { ProviderCombine } from '@lobehub/icons';
-import { type FormGroupItemType, type FormItemProps } from '@lobehub/ui';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { AES_GCM_URL, BASE_PROVIDER_DOC_URL, FORM_STYLE } from '@agentasia/const';
+import { ProviderCombine } from '@agentasia/icons';
+import { type FormGroupItemType, type FormItemProps } from '@agentasia/ui';
 import {
   Avatar,
   Center,
@@ -13,7 +13,7 @@ import {
   Skeleton,
   stopPropagation,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { useDebounceFn } from 'ahooks';
 import { Form as AntdForm, Switch } from 'antd';
 import { createStaticStyles, cssVar, cx, responsive } from 'antd-style';

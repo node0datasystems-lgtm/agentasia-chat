@@ -1,6 +1,6 @@
-import { CURRENT_VERSION, isDesktop } from '@lobechat/const';
-import { type ToolManifest } from '@lobechat/types';
-import { type PluginItem, type PluginListResponse } from '@lobehub/market-sdk';
+import { CURRENT_VERSION, isDesktop } from '@agentasia/const';
+import { type ToolManifest } from '@agentasia/types';
+import { type PluginItem, type PluginListResponse } from '@agentasia/market-sdk';
 import { type TRPCClientError } from '@trpc/client';
 import debug from 'debug';
 import { uniqBy } from 'es-toolkit/compat';
@@ -235,7 +235,7 @@ export class PluginMCPStoreActionImpl {
     let data: any;
     let result: CheckMcpInstallResult | undefined;
     let connection: any;
-    const userAgent = `LobeHub Desktop/${CURRENT_VERSION}`;
+    const userAgent = `AgentAsia Desktop/${CURRENT_VERSION}`;
 
     try {
       // Check if already cancelled

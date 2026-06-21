@@ -1,5 +1,5 @@
-import { DEFAULT_AVATAR, INBOX_SESSION_ID } from '@lobechat/const';
-import { ActionIcon, Avatar, Block, Flexbox, Icon, Text } from '@lobehub/ui';
+import { DEFAULT_AVATAR, INBOX_SESSION_ID } from '@agentasia/const';
+import { ActionIcon, Avatar, Block, Flexbox, Icon, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { Check, ChevronDownIcon, ChevronUpIcon } from 'lucide-react';

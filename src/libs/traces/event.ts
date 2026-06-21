@@ -1,4 +1,4 @@
-import { TraceEventType } from '@lobechat/types';
+import { TraceEventType } from '@agentasia/types';
 import { diffChars } from 'diff';
 import { type LangfuseTraceClient } from 'langfuse-core';
 

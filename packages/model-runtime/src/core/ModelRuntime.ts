@@ -1,5 +1,5 @@
-import type { ModelPerformance, ModelUsage, TracePayload } from '@lobechat/types';
-import { createTimingHelpers, getDurationMs } from '@lobechat/utils';
+import type { ModelPerformance, ModelUsage, TracePayload } from '@agentasia/types';
+import { createTimingHelpers, getDurationMs } from '@agentasia/utils';
 import type { ClientOptions } from 'openai';
 
 import type { LobeBedrockAIParams } from '../providers/bedrock';
@@ -35,12 +35,12 @@ import type {
 import { AgentRuntimeError } from '../utils/createError';
 import type { LobeRuntimeAI } from './BaseAI';
 
-const { logger: timing } = createTimingHelpers('lobe-server:chat:lobehub:timing');
+const { logger: timing } = createTimingHelpers('lobe-server:chat:agentasia:timing');
 
-const getLobeHubTimingMetadata = (options?: {
+const getAgentAsiaTimingMetadata = (options?: {
   metadata?: Record<string, unknown>;
 }): Record<string, unknown> | undefined =>
-  options?.metadata?.provider === 'lobehub' ? options.metadata : undefined;
+  options?.metadata?.provider === 'agentasia' ? options.metadata : undefined;
 
 const buildGenerateObjectSpeed = (startedAt: number, usage: ModelUsage): ModelPerformance => {
   const latency = Math.max(Date.now() - startedAt, 0);
@@ -169,7 +169,7 @@ export class ModelRuntime {
    * ```
    */
   async chat(payload: ChatStreamPayload, options?: ChatMethodOptions) {
-    const metadata = getLobeHubTimingMetadata(options);
+    const metadata = getAgentAsiaTimingMetadata(options);
     const startedAt = Date.now();
     if (metadata) {
       timing(
@@ -243,7 +243,7 @@ export class ModelRuntime {
     payload: ChatStreamPayload,
     options?: ChatMethodOptions,
   ): Promise<ChatMethodOptions | undefined> {
-    const metadata = getLobeHubTimingMetadata(options);
+    const metadata = getAgentAsiaTimingMetadata(options);
     const beforeChatStartedAt = Date.now();
     if (metadata) {
       timing(

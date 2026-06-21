@@ -28,7 +28,7 @@ app.onError((error: Error, c) => {
 // Health check endpoint
 app.get('/health', (c) => {
   return c.json({
-    service: 'lobe-chat-api',
+    service: 'agentasia-chat-api',
     status: 'ok',
     timestamp: new Date().toISOString(),
   });

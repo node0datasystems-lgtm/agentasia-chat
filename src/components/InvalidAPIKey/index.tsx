@@ -1,5 +1,5 @@
-import { ProviderIcon } from '@lobehub/icons';
-import { Button, Center, Flexbox } from '@lobehub/ui';
+import { ProviderIcon } from '@agentasia/icons';
+import { Button, Center, Flexbox } from '@agentasia/ui';
 import { ModelProvider } from 'model-bank';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

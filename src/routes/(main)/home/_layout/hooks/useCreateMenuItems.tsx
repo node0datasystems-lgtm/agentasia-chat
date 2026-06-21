@@ -1,7 +1,7 @@
-import { isDesktop } from '@lobechat/const';
-import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@lobechat/heterogeneous-agents/client';
-import { Icon } from '@lobehub/ui';
-import { GroupBotSquareIcon } from '@lobehub/ui/icons';
+import { isDesktop } from '@agentasia/const';
+import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@agentasia/heterogeneous-agents/client';
+import { Icon } from '@agentasia/ui';
+import { GroupBotSquareIcon } from '@agentasia/ui/icons';
 import { App } from 'antd';
 import type { ItemType } from 'antd/es/menu/interface';
 import { BotIcon, FileTextIcon, FolderCogIcon, FolderPlus, MonitorSmartphone } from 'lucide-react';

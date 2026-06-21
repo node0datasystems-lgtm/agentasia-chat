@@ -1,4 +1,4 @@
-import { isRecord, isTrimmedNonEmptyString, pickTrimmedString } from '@lobechat/utils';
+import { isRecord, isTrimmedNonEmptyString, pickTrimmedString } from '@agentasia/utils';
 
 import type {
   SelfReviewProposalAction,

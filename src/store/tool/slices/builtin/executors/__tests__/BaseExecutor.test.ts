@@ -1,8 +1,8 @@
 /**
  * Tests for BaseExecutor
  */
-import { type BuiltinToolContext, type BuiltinToolResult } from '@lobechat/types';
-import { BaseExecutor } from '@lobechat/types';
+import { type BuiltinToolContext, type BuiltinToolResult } from '@agentasia/types';
+import { BaseExecutor } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 // Test API enum

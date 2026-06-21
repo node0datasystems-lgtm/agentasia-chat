@@ -1,4 +1,4 @@
-import { Button, Flexbox, Modal, SortableList } from '@lobehub/ui';
+import { Button, Flexbox, Modal, SortableList } from '@agentasia/ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo, useState } from 'react';

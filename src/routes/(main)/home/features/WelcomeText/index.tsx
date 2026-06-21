@@ -1,5 +1,5 @@
-import { Flexbox } from '@lobehub/ui';
-import { LoadingDots } from '@lobehub/ui/chat';
+import { Flexbox } from '@agentasia/ui';
+import { LoadingDots } from '@agentasia/ui/chat';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { shuffle } from 'es-toolkit/compat';
 import { memo, type MouseEvent, type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
@@ -61,7 +61,7 @@ interface AutoLinkPattern {
 // becomes clickable.
 const AUTO_LINK_PATTERNS: AutoLinkPattern[] = [
   {
-    build: (match) => `https://github.com/lobehub/lobehub/issues/${match.slice(1)}`,
+    build: (match) => `https://github.com/node0datasystems-lgtm/agentasia-chat/issues/${match.slice(1)}`,
     regex: /#\d+/g,
   },
 ];

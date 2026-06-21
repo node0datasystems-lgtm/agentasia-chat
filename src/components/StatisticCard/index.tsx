@@ -1,7 +1,7 @@
 import { type StatisticCardProps as AntdStatisticCardProps } from '@ant-design/pro-components';
 import { StatisticCard as AntdStatisticCard } from '@ant-design/pro-components';
-import { type BlockProps } from '@lobehub/ui';
-import { Block, Text } from '@lobehub/ui';
+import { type BlockProps } from '@agentasia/ui';
+import { Block, Text } from '@agentasia/ui';
 import { Spin } from 'antd';
 import { createStaticStyles, cx, responsive, useResponsive } from 'antd-style';
 import { memo } from 'react';

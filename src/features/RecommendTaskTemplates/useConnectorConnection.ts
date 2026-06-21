@@ -1,5 +1,5 @@
-import type { TaskTemplateConnectorReference } from '@lobechat/const';
-import { COMPOSIO_APP_TYPES } from '@lobechat/const';
+import type { TaskTemplateConnectorReference } from '@agentasia/const';
+import { COMPOSIO_APP_TYPES } from '@agentasia/const';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { LOBEHUB_SKILL_AUTH_SUCCESS_MESSAGE } from '@/const/skillConnection';
@@ -7,8 +7,8 @@ import { useMarketAuth } from '@/layout/AuthProvider/MarketAuth';
 import { useToolStore } from '@/store/tool';
 import { composioStoreSelectors } from '@/store/tool/slices/composioStore/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore/types';
-import { lobehubSkillStoreSelectors } from '@/store/tool/slices/lobehubSkillStore/selectors';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { agentasiaSkillStoreSelectors } from '@/store/tool/slices/agentasiaSkillStore/selectors';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 import { useUserStore } from '@/store/user';
 
 import type { ConnectorProviderMeta } from './providerMeta';
@@ -34,10 +34,10 @@ export class ConnectorConnectionPopupBlockedError extends Error {
   }
 }
 
-/** Thrown when connecting a LobeHub connector first needs Market auth. */
+/** Thrown when connecting a AgentAsia connector first needs Market auth. */
 export class ConnectorConnectionMarketAuthRequiredError extends Error {
   constructor() {
-    super('Market auth required before connecting LobeHub connector');
+    super('Market auth required before connecting AgentAsia connector');
     this.name = 'ConnectorConnectionMarketAuthRequiredError';
   }
 }
@@ -69,13 +69,13 @@ export interface UseConnectorConnectionResult {
  * (e.g. hiding already-connected providers from the inline auth list).
  */
 export const useIsConnectorConnected = () => {
-  const lobehubServers = useToolStore(lobehubSkillStoreSelectors.getServers);
+  const agentasiaServers = useToolStore(agentasiaSkillStoreSelectors.getServers);
   const composioServers = useToolStore(composioStoreSelectors.getServers);
 
   return useCallback(
     (spec: TaskTemplateConnectorReference): boolean => {
-      if (spec.source === 'lobehub') {
-        return lobehubServers.some(
+      if (spec.source === 'agentasia') {
+        return agentasiaServers.some(
           (s) => s.identifier === spec.identifier && s.status === LobehubSkillStatus.CONNECTED,
         );
       }
@@ -83,7 +83,7 @@ export const useIsConnectorConnected = () => {
         (s) => s.identifier === spec.identifier && s.status === ComposioServerStatus.ACTIVE,
       );
     },
-    [lobehubServers, composioServers],
+    [agentasiaServers, composioServers],
   );
 };
 
@@ -151,7 +151,7 @@ export const useConnectorConnection = (
 
       pollIntervalRef.current = setInterval(async () => {
         try {
-          if (target.source === 'lobehub') {
+          if (target.source === 'agentasia') {
             await checkLobehubStatus(target.identifier);
           } else {
             await refreshComposioConnectionStatus(target.identifier);
@@ -194,7 +194,7 @@ export const useConnectorConnection = (
           // can advance to the next provider immediately, instead of waiting up
           // to 15s for fallback polling to release isWaitingAuth.
           try {
-            if (target.source === 'lobehub') {
+            if (target.source === 'agentasia') {
               await checkLobehubStatus(target.identifier);
             } else {
               await refreshComposioConnectionStatus(target.identifier);
@@ -244,7 +244,7 @@ export const useConnectorConnection = (
     [cleanup, startWindowMonitor],
   );
 
-  // Only LobeHub connector OAuth signals completion via postMessage; Composio relies on polling.
+  // Only AgentAsia connector OAuth signals completion via postMessage; Composio relies on polling.
   useEffect(() => {
     const handler = (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
@@ -268,7 +268,7 @@ export const useConnectorConnection = (
     isConnectingRef.current = true;
     setIsConnecting(true);
     try {
-      if (next.source === 'lobehub') {
+      if (next.source === 'agentasia') {
         if (!isMarketAuthenticated) {
           try {
             await signInMarket('connector');
@@ -305,7 +305,7 @@ export const useConnectorConnection = (
       }
     } catch (error) {
       if (error instanceof ConnectorConnectionMarketAuthRequiredError) throw error;
-      if (next.source === 'lobehub' && isMarketUnauthorizedError(error)) {
+      if (next.source === 'agentasia' && isMarketUnauthorizedError(error)) {
         throw new ConnectorConnectionMarketAuthRequiredError();
       }
       console.error('[useConnectorConnection] Failed to connect:', error);

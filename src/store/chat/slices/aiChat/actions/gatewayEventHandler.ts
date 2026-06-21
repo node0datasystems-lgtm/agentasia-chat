@@ -6,15 +6,15 @@ import type {
   ToolEndData,
   ToolExecuteData,
   ToolStartData,
-} from '@lobechat/agent-gateway-client';
+} from '@agentasia/agent-gateway-client';
 import type {
   BuiltinToolResult,
   ChatMessageError,
   ConversationContext,
   UIChatMessage,
-} from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
-import { isRecord, pickNonEmptyString, toRecord } from '@lobechat/utils/object';
+} from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
+import { isRecord, pickNonEmptyString, toRecord } from '@agentasia/utils/object';
 
 import { messageService } from '@/services/message';
 import { emitClientAgentSignalSourceEvent } from '@/store/chat/slices/aiChat/actions/agentSignalBridge';

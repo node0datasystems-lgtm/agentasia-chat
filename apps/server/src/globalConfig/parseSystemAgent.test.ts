@@ -110,12 +110,12 @@ describe('parseSystemAgent', () => {
 
   it('should parse memory service model assignments explicitly', () => {
     const envValue =
-      'memoryAnalysisAgentConfig=lobehub/gpt-5.4-mini,userMemoryEmbedding=openai/text-embedding-3-large';
+      'memoryAnalysisAgentConfig=agentasia/gpt-5.4-mini,userMemoryEmbedding=openai/text-embedding-3-large';
 
     const result = parseSystemAgent(envValue);
 
     expect(result.memoryAnalysisAgentConfig).toEqual({
-      provider: 'lobehub',
+      provider: 'agentasia',
       model: 'gpt-5.4-mini',
     });
     expect(result.userMemoryEmbedding).toEqual({

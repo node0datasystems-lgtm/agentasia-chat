@@ -2,7 +2,7 @@ import type {
   CapturePreviewResult,
   OverlayCaptureUploadStatusPayload,
   ScreenCaptureSession,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import type { MouseEvent as ReactMouseEvent } from 'react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 

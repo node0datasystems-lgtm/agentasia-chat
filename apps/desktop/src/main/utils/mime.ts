@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { sniffBinaryBuffer } from '@lobechat/file-loaders';
+import { sniffBinaryBuffer } from '@agentasia/file-loaders';
 
 const EXPORT_MIME_MAP: Record<string, string> = {
   '.bash': 'text/plain; charset=utf-8',

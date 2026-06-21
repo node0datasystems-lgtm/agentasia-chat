@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Segmented, Text } from '@lobehub/ui';
+import { Flexbox, Segmented, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { snakeCase } from 'es-toolkit/compat';
 import { memo, useMemo } from 'react';

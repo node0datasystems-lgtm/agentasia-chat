@@ -27,7 +27,7 @@ const testState = vi.hoisted(() => ({
   updateAgentChatConfig: vi.fn(),
 }));
 
-vi.mock('@lobehub/ui', () => {
+vi.mock('@agentasia/ui', () => {
   const MockForm = () => <div data-testid="controls-form" />;
   MockForm.useForm = () => [{ setFieldsValue: testState.setFieldsValue }];
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, ScrollShadow } from '@lobehub/ui';
+import { Flexbox, ScrollShadow } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import urlJoin from 'url-join';
@@ -27,7 +27,7 @@ const Sidebar = memo<{ activeTab?: SkillNavKey; mobile?: boolean }>(
           desc: description,
           hashtags: tags,
           title: name,
-          url: urlJoin('https://lobehub.com/skills', identifier || ''),
+          url: urlJoin('https://agentasia.ai/skills', identifier || ''),
         }}
       >
         {t('share')}

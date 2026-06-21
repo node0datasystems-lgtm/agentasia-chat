@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import { HeterogeneousAgentSessionErrorCode } from '@lobechat/electron-client-ipc';
+import { HeterogeneousAgentSessionErrorCode } from '@agentasia/electron-client-ipc';
 import { render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -12,7 +12,7 @@ const continueGenerationMock = vi.fn();
 const deleteDBMessageMock = vi.fn();
 const navigateMock = vi.fn();
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Block: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Flexbox: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Highlighter: ({ children }: { children?: ReactNode }) => <pre>{children}</pre>,

@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Text, TooltipGroup } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Text, TooltipGroup } from '@agentasia/ui';
 import isEqual from 'fast-deep-equal';
 import { ToggleRightIcon } from 'lucide-react';
 import { memo, useState } from 'react';

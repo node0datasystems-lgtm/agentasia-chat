@@ -23,7 +23,7 @@ const DEFAULT_TOOL_FAILURE_CONTENT = JSON.stringify({
 
 /**
  * Reorder tool messages to ensure that tool messages are displayed in the correct order.
- * see https://github.com/lobehub/lobe-chat/pull/3155
+ * see https://github.com/agentasia/agentasia-chat/pull/3155
  */
 export class ToolMessageReorder extends BaseProcessor {
   readonly name = 'ToolMessageReorder';

@@ -1,6 +1,6 @@
-import type { SearchFilesState } from '@lobechat/tool-runtime';
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import type { SearchFilesState } from '@agentasia/tool-runtime';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo } from 'react';
 
 import SearchResult from './Result';

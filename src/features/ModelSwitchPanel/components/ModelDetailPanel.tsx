@@ -1,6 +1,6 @@
-import { BRANDING_PROVIDER } from '@lobechat/business-const';
-import { getCachedTextInputUnitRate } from '@lobechat/utils';
-import { Accordion, AccordionItem, Flexbox, Icon, Tag, Tooltip } from '@lobehub/ui';
+import { BRANDING_PROVIDER } from '@agentasia/business-const';
+import { getCachedTextInputUnitRate } from '@agentasia/utils';
+import { Accordion, AccordionItem, Flexbox, Icon, Tag, Tooltip } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import {

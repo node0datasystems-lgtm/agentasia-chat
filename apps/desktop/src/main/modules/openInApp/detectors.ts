@@ -2,7 +2,7 @@ import { execFile } from 'node:child_process';
 import { access } from 'node:fs/promises';
 import { promisify } from 'node:util';
 
-import type { DetectedApp, OpenInAppId } from '@lobechat/electron-client-ipc';
+import type { DetectedApp, OpenInAppId } from '@agentasia/electron-client-ipc';
 
 import { createLogger } from '@/utils/logger';
 

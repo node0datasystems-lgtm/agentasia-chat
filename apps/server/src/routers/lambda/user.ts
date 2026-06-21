@@ -1,14 +1,14 @@
 import {
   EMPTY_DOCUMENT_MESSAGES,
   formatWebOnboardingStateMessage,
-} from '@lobechat/builtin-tool-web-onboarding/utils';
-import { isDesktop } from '@lobechat/const';
-import { applyMarkdownPatch, formatMarkdownPatchError } from '@lobechat/markdown-patch';
+} from '@agentasia/builtin-tool-web-onboarding/utils';
+import { isDesktop } from '@agentasia/const';
+import { applyMarkdownPatch, formatMarkdownPatchError } from '@agentasia/markdown-patch';
 import {
   type UserInitializationState,
   type UserPreference,
   type UserSettings,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import {
   Plans,
   SaveUserQuestionInputSchema,
@@ -17,7 +17,7 @@ import {
   UserOnboardingSchema,
   UserPreferenceSchema,
   UserSettingsSchema,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { after } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';

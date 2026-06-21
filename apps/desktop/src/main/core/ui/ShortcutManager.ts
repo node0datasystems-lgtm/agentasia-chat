@@ -1,4 +1,4 @@
-import { DEFAULT_ELECTRON_DESKTOP_SHORTCUTS } from '@lobechat/const/desktopGlobalShortcuts';
+import { DEFAULT_ELECTRON_DESKTOP_SHORTCUTS } from '@agentasia/const/desktopGlobalShortcuts';
 import { globalShortcut } from 'electron';
 
 import { createLogger } from '@/utils/logger';

@@ -1,7 +1,7 @@
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
 
-import { type DeploymentOption, type SystemDependency } from '@lobehub/market-sdk';
+import { type DeploymentOption, type SystemDependency } from '@agentasia/market-sdk';
 import debug from 'debug';
 
 import { type SystemDependencyCheckResult } from '@/types/plugins';

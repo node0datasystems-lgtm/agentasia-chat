@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, Block, DropdownMenu, Flexbox, Icon } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { ActionIcon, Block, DropdownMenu, Flexbox, Icon } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { MoreVerticalIcon, PackageSearch, Trash2 } from 'lucide-react';
 import { memo, useState } from 'react';

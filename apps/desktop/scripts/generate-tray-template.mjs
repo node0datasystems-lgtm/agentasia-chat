@@ -20,7 +20,7 @@ import sharp from 'sharp';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.resolve(__dirname, '..', 'resources');
 
-// Silhouette derived from the LobeHub logo. Eyes and mouth are cut as
+// Silhouette derived from the AgentAsia logo. Eyes and mouth are cut as
 // transparent holes via fill-rule=evenodd so they remain visible when
 // macOS tints the entire shape in a single color.
 const svg = `<?xml version="1.0" encoding="UTF-8"?>

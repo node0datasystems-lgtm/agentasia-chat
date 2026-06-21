@@ -1,5 +1,5 @@
-import type { AgentRuntimeContext } from '@lobechat/agent-runtime';
-import type { ConversationContext, RuntimeActiveTopicDocumentContext } from '@lobechat/types';
+import type { AgentRuntimeContext } from '@agentasia/agent-runtime';
+import type { ConversationContext, RuntimeActiveTopicDocumentContext } from '@agentasia/types';
 
 import { agentDocumentService } from '@/services/agentDocument';
 

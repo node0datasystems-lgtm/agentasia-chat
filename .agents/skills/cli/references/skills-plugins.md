@@ -63,9 +63,9 @@ Install a skill. Auto-detects source type from the input:
 
 ```bash
 # GitHub (URL or owner/repo shorthand)
-lh skill install lobehub/skill-repo
-lh skill install https://github.com/lobehub/skill-repo
-lh skill install lobehub/skill-repo --branch dev
+lh skill install agentasia/skill-repo
+lh skill install https://github.com/agentasia/skill-repo
+lh skill install agentasia/skill-repo --branch dev
 
 # ZIP URL
 lh skill install https://example.com/skill.zip

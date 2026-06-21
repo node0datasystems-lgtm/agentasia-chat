@@ -9,7 +9,7 @@
 import type {
   BotProviderQuery,
   MessageRuntimeService,
-} from '@lobechat/builtin-tool-message/executionRuntime';
+} from '@agentasia/builtin-tool-message/executionRuntime';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

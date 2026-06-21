@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Checkbox, Flexbox, Icon, SortableList } from '@lobehub/ui';
+import { ActionIcon, Checkbox, Flexbox, Icon, SortableList } from '@agentasia/ui';
 import type { InputRef } from 'antd';
 import { Input } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';

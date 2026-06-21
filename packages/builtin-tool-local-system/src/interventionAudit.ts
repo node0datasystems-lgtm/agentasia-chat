@@ -1,4 +1,4 @@
-import { type DynamicInterventionResolver } from '@lobechat/types';
+import { type DynamicInterventionResolver } from '@agentasia/types';
 
 import { normalizePathForScope, resolvePathWithScope } from './utils/path';
 

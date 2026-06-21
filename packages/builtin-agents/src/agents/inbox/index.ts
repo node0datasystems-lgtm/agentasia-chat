@@ -1,4 +1,4 @@
-import { AgentDocumentsIdentifier } from '@lobechat/builtin-tool-agent-documents';
+import { AgentDocumentsIdentifier } from '@agentasia/builtin-tool-agent-documents';
 
 import type { BuiltinAgentDefinition } from '../../types';
 import { BUILTIN_AGENT_SLUGS } from '../../types';

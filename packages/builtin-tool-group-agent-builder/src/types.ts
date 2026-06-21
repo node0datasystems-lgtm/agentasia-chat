@@ -1,5 +1,5 @@
-import type { UpdateAgentConfigParams } from '@lobechat/builtin-tool-agent-builder';
-import type { LobeAgentConfig, MetaData } from '@lobechat/types';
+import type { UpdateAgentConfigParams } from '@agentasia/builtin-tool-agent-builder';
+import type { LobeAgentConfig, MetaData } from '@agentasia/types';
 
 /**
  * Group Agent Builder Tool Identifier

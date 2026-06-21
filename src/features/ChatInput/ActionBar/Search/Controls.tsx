@@ -1,5 +1,5 @@
-import { Center, Flexbox, Icon } from '@lobehub/ui';
-import { GlobeOffIcon } from '@lobehub/ui/icons';
+import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { GlobeOffIcon } from '@agentasia/ui/icons';
 import { Divider } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';

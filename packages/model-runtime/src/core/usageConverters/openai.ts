@@ -1,4 +1,4 @@
-import type { ModelTokensUsage, ModelUsage } from '@lobechat/types';
+import type { ModelTokensUsage, ModelUsage } from '@agentasia/types';
 import debug from 'debug';
 import type { Pricing } from 'model-bank';
 import type OpenAI from 'openai';

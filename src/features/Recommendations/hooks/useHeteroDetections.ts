@@ -1,6 +1,6 @@
-import { isDesktop } from '@lobechat/const';
-import type { ToolStatus } from '@lobechat/electron-client-ipc';
-import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@lobechat/heterogeneous-agents/client';
+import { isDesktop } from '@agentasia/const';
+import type { ToolStatus } from '@agentasia/electron-client-ipc';
+import { HETEROGENEOUS_AGENT_CLIENT_CONFIGS } from '@agentasia/heterogeneous-agents/client';
 import useSWR from 'swr';
 
 import { recommendationsKeys } from '@/libs/swr/keys';

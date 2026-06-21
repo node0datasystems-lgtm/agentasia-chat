@@ -100,7 +100,7 @@ agent-browser --cdp 9222 eval --stdin << 'EOF'
 (function() {
   var store = window.global_serverConfigStore;
   store.setState({ serverConfig: { ...store.getState().serverConfig,
-    agentGatewayUrl: 'https://agent-gateway.lobehub.com' } });
+    agentGatewayUrl: 'https://agent-gateway.agentasia.ai' } });
   return 'ready';
 })()
 EOF

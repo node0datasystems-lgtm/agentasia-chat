@@ -1,4 +1,4 @@
-import type { CheckpointConfig, TaskAutomationMode, TaskDetailData } from '@lobechat/types';
+import type { CheckpointConfig, TaskAutomationMode, TaskDetailData } from '@agentasia/types';
 
 import { taskService } from '@/services/task';
 import type { StoreSetter } from '@/store/types';

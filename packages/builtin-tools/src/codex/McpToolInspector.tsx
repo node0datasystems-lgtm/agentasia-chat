@@ -1,12 +1,12 @@
 'use client';
 
-import { LINEAR_TOOL_NAMES, LinearInspector } from '@lobechat/shared-tool-ui/inspectors';
+import { LINEAR_TOOL_NAMES, LinearInspector } from '@agentasia/shared-tool-ui/inspectors';
 import {
   highlightTextStyles,
   inspectorTextStyles,
   shinyTextStyles,
-} from '@lobechat/shared-tool-ui/styles';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+} from '@agentasia/shared-tool-ui/styles';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { cx } from 'antd-style';
 import type { ComponentType } from 'react';
 import { memo } from 'react';

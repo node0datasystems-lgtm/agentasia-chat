@@ -7,7 +7,7 @@ import {
   RelationshipEnum,
   TypesEnum,
   UserMemoryContextObjectType,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

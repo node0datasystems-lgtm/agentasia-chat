@@ -2,7 +2,7 @@ import {
   type ChatToolPayload,
   type RuntimeStepContext,
   type SubAgentCallbacks,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import debug from 'debug';
 
 import { type MCPToolCallResult } from '@/libs/mcp';
@@ -12,14 +12,14 @@ import { archiveToolResultViaServer } from '@/services/toolResultArchive';
 import { AI_RUNTIME_OPERATION_TYPES } from '@/store/chat/slices/operation';
 import { type ChatStore } from '@/store/chat/store';
 import { useToolStore } from '@/store/tool';
-import { composioStoreSelectors, lobehubSkillStoreSelectors } from '@/store/tool/selectors';
+import { composioStoreSelectors, agentasiaSkillStoreSelectors } from '@/store/tool/selectors';
 import { hasExecutor } from '@/store/tool/slices/builtin/executors';
 import { type StoreSetter } from '@/store/types';
 import { safeParseJSON } from '@/utils/safeParseJSON';
 
 import { dbMessageSelectors } from '../../message/selectors';
 import { type RemoteToolExecutor } from './exector';
-import { composioExecutor, lobehubSkillExecutor } from './exector';
+import { composioExecutor, agentasiaSkillExecutor } from './exector';
 
 const log = debug('lobe-store:plugin-types');
 
@@ -48,7 +48,7 @@ export class PluginTypesActionImpl {
   ): Promise<any> => {
     // When the tool call comes from a DB-stored message (e.g. after humanIntervention approval),
     // the `source` field is not persisted and arrives as undefined. Fall back to a live store
-    // lookup so Composio / LobeHub Skill tools still route correctly.
+    // lookup so Composio / AgentAsia Skill tools still route correctly.
     let effectiveSource = payload.source;
     if (!effectiveSource) {
       const toolStoreState = useToolStore.getState();
@@ -56,10 +56,10 @@ export class PluginTypesActionImpl {
       if (composioTools.some((t) => t.identifier === payload.identifier)) {
         effectiveSource = 'composio';
       } else {
-        const lobehubSkillTools =
-          lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(toolStoreState);
-        if (lobehubSkillTools.some((t) => t.identifier === payload.identifier)) {
-          effectiveSource = 'lobehubSkill';
+        const agentasiaSkillTools =
+          agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(toolStoreState);
+        if (agentasiaSkillTools.some((t) => t.identifier === payload.identifier)) {
+          effectiveSource = 'agentasiaSkill';
         }
       }
     }
@@ -68,7 +68,7 @@ export class PluginTypesActionImpl {
       return await this.#get().invokeComposioTypePlugin(id, { ...payload, source: effectiveSource });
     }
 
-    if (effectiveSource === 'lobehubSkill') {
+    if (effectiveSource === 'agentasiaSkill') {
       return await this.#get().invokeLobehubSkillTypePlugin(id, {
         ...payload,
         source: effectiveSource,
@@ -296,7 +296,7 @@ export class PluginTypesActionImpl {
     return this.#get().internal_invokeRemoteToolPlugin(
       id,
       payload,
-      lobehubSkillExecutor,
+      agentasiaSkillExecutor,
       'invokeLobehubSkillTypePlugin',
     );
   };

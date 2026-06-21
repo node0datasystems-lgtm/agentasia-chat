@@ -1,5 +1,7 @@
 {
-  "files": ["drizzle.config.ts"],
+  "files": [
+    "drizzle.config.ts"
+  ],
   "patterns": [
     "scripts/**",
     "**/*.test.ts",

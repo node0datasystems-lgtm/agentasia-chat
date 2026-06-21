@@ -31,7 +31,7 @@ const { getMessengerTelegramConfig } = await import('@/config/messenger');
 
 const VALID_CONFIG = {
   botToken: 'tg-bot-token',
-  botUsername: 'lobehub_bot',
+  botUsername: 'agentasia_bot',
   webhookSecret: 'tg-secret',
 };
 
@@ -125,7 +125,7 @@ describe('MessengerTelegramBinder.handleUnlinkedMessage', () => {
     expect(sendMessageWithUrlButton).toHaveBeenCalledTimes(1);
     const [chatId, text, button] = sendMessageWithUrlButton.mock.calls[0];
     expect(chatId).toBe('C_DM');
-    expect(text).toContain('Welcome to LobeHub');
+    expect(text).toContain('Welcome to AgentAsia');
     expect(button.text).toContain('Link Account');
     expect(button.url).toContain('https://app.example.com/verify-im');
     expect(button.url).toContain('im_type=telegram');

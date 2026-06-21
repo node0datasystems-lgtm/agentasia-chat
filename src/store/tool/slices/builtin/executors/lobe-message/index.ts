@@ -8,8 +8,8 @@
  * Adding a new API only requires updating `MessageApiName` + the runtime;
  * the frontend executor inherits the new method automatically.
  */
-import { MessageExecutionRuntime } from '@lobechat/builtin-tool-message/executionRuntime';
-import { MessageExecutor } from '@lobechat/builtin-tool-message/executor';
+import { MessageExecutionRuntime } from '@agentasia/builtin-tool-message/executionRuntime';
+import { MessageExecutor } from '@agentasia/builtin-tool-message/executor';
 
 import { trpcBotProvider, trpcMessageService } from './trpcAdapters';
 

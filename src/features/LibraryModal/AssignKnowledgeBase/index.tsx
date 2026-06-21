@@ -1,5 +1,5 @@
-import { Flexbox } from '@lobehub/ui';
-import { createModal, type ModalInstance } from '@lobehub/ui/base-ui';
+import { Flexbox } from '@agentasia/ui';
+import { createModal, type ModalInstance } from '@agentasia/ui/base-ui';
 import { t } from 'i18next';
 import { memo } from 'react';
 

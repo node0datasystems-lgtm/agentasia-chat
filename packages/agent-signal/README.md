@@ -13,8 +13,8 @@ Do not add app integration here. Side effects belong in `src/server/services/age
 Import from the package root when building or inspecting source, signal, action, and executor nodes:
 
 ```ts
-import type { AgentSignalSource, BaseAction, BaseSignal } from '@lobechat/agent-signal';
-import { createAction, createSignal, createSource } from '@lobechat/agent-signal';
+import type { AgentSignalSource, BaseAction, BaseSignal } from '@agentasia/agent-signal';
+import { createAction, createSignal, createSource } from '@agentasia/agent-signal';
 ```
 
 Use these APIs inside runtime, scheduler, policy, and observability code that needs normalized semantic nodes.
@@ -29,7 +29,7 @@ import {
   createSourceEvent,
   type AgentSignalSourceEvent,
   type AgentSignalSourceEventInput,
-} from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
 
 const event = createSourceEvent({
   payload: {
@@ -54,7 +54,7 @@ Use `AgentSignalSourceEventInput<TSourceType>` for producer inputs and `AgentSig
 Use `getSourceEventScopeKey` for source-event payloads and `AgentSignalScopeKey` when code already has structured scope metadata:
 
 ```ts
-import { AgentSignalScopeKey, getSourceEventScopeKey } from '@lobechat/agent-signal/source';
+import { AgentSignalScopeKey, getSourceEventScopeKey } from '@agentasia/agent-signal/source';
 
 const topicScopeKey = getSourceEventScopeKey({ topicId: 'topic_1' });
 const botScopeKey = AgentSignalScopeKey.forBotThread({

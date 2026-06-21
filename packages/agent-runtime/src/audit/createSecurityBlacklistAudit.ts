@@ -3,7 +3,7 @@ import {
   type GlobalInterventionAuditConfig,
   type HumanInterventionPolicy,
   type SecurityBlacklistConfig,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { InterventionChecker } from '../core/InterventionChecker';
 import { DEFAULT_SECURITY_BLACKLIST } from './defaultSecurityBlacklist';

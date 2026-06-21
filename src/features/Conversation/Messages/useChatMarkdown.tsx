@@ -1,6 +1,6 @@
 'use client';
 
-import { type MarkdownProps } from '@lobehub/ui';
+import { type MarkdownProps } from '@agentasia/ui';
 import { type ReactNode, useMemo, useState } from 'react';
 
 import { HtmlPreviewDrawer } from '@/components/HtmlPreview';

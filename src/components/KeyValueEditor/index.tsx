@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Flexbox, Icon } from '@lobehub/ui';
+import { ActionIcon, Button, Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import fastDeepEqual from 'fast-deep-equal';
 import { LucidePlus, LucideTrash } from 'lucide-react';

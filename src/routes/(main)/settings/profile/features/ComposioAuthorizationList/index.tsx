@@ -1,6 +1,6 @@
-import { COMPOSIO_APP_TYPES } from '@lobechat/const';
-import { Avatar, Flexbox, Tag } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { COMPOSIO_APP_TYPES } from '@agentasia/const';
+import { Avatar, Flexbox, Tag } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,7 @@
 'use client';
 
-import { isChatGroupSessionId } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import { isChatGroupSessionId } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

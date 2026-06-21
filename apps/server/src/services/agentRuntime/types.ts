@@ -1,12 +1,12 @@
-import { type AgentRuntimeContext, type AgentState } from '@lobechat/agent-runtime';
+import { type AgentRuntimeContext, type AgentState } from '@agentasia/agent-runtime';
 import type {
   BotPlatformContext,
   LobeToolManifest,
   OperationSkillSet,
   ToolExecutor,
   ToolSource,
-} from '@lobechat/context-engine';
-import type { ChatTopicBotContext, UserInterventionConfig } from '@lobechat/types';
+} from '@agentasia/context-engine';
+import type { ChatTopicBotContext, UserInterventionConfig } from '@agentasia/types';
 
 import type { ExecutionPlan } from '@/helpers/executionTarget';
 import { type ServerUserMemoryConfig } from '@/server/modules/Mecha/ContextEngineering/types';

@@ -1,4 +1,4 @@
-import type { ChatToolPayload } from '@lobechat/types';
+import type { ChatToolPayload } from '@agentasia/types';
 import pMap from 'p-map';
 
 import type {

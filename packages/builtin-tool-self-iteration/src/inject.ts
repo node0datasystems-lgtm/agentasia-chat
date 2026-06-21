@@ -1,4 +1,4 @@
-import type { LobeToolManifest, OperationToolSet, ToolSource } from '@lobechat/context-engine';
+import type { LobeToolManifest, OperationToolSet, ToolSource } from '@agentasia/context-engine';
 
 import { selfFeedbackIntentManifest } from './manifest';
 import type { ShouldExposeSelfFeedbackIntentToolOptions } from './types';

@@ -11,7 +11,9 @@
         {
           "id": "msg-supervisor-1",
           "type": "message",
-          "tools": ["msg-broadcast-tool-1"]
+          "tools": [
+            "msg-broadcast-tool-1"
+          ]
         }
       ]
     },

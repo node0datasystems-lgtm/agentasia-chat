@@ -1,4 +1,4 @@
-import type { BuiltinIntervention } from '@lobechat/types';
+import type { BuiltinIntervention } from '@agentasia/types';
 
 import { WebOnboardingApiName } from '../../../types';
 import PickAgentsIntervention from './PickAgents';

@@ -6,7 +6,7 @@ import type {
   WorkspaceData,
   WorkspaceDocNode,
   WorkspaceTreeNode,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { and, desc, eq, gte, inArray, isNotNull, isNull, ne, notInArray, sql } from 'drizzle-orm';
 import type { AnyPgColumn } from 'drizzle-orm/pg-core';
 

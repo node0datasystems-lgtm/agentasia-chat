@@ -1,7 +1,7 @@
 'use client';
 
-import { type TaskDetail, type ThreadStatus, type UIChatMessage } from '@lobechat/types';
-import { Flexbox, Text } from '@lobehub/ui';
+import { type TaskDetail, type ThreadStatus, type UIChatMessage } from '@agentasia/types';
+import { Flexbox, Text } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

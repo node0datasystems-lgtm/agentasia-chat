@@ -7,7 +7,7 @@ import ExplorerTree, { getItemPathFromEventPath } from './ExplorerTree';
 
 const showContextMenu = vi.hoisted(() => vi.fn());
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   showContextMenu,
 }));
 

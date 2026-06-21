@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Input } from '@lobehub/ui';
+import { Flexbox, Input } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

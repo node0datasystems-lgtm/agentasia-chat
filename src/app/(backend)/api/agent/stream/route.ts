@@ -1,4 +1,4 @@
-import { createSSEHeaders, createSSEWriter } from '@lobechat/utils/server';
+import { createSSEHeaders, createSSEWriter } from '@agentasia/utils/server';
 import debug from 'debug';
 import { type NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';

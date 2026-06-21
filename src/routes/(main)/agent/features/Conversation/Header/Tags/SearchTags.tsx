@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Tag } from '@lobehub/ui';
+import { Flexbox, Icon, Tag } from '@agentasia/ui';
 import { Globe } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

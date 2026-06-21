@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@lobehub/ui';
+import { Icon } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { PlusIcon } from 'lucide-react';
 import { memo, useCallback } from 'react';

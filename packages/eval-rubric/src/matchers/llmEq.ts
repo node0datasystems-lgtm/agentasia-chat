@@ -1,4 +1,4 @@
-import type { EvalBenchmarkRubric, RubricConfigLLM } from '@lobechat/types';
+import type { EvalBenchmarkRubric, RubricConfigLLM } from '@agentasia/types';
 
 import type { MatchContext, MatchResult } from './types';
 

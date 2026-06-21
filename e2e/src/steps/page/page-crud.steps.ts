@@ -115,7 +115,7 @@ async function waitForPageWorkspaceReady(world: CustomWorld): Promise<void> {
     }
 
     // Any of these means the page workspace is ready for interactions.
-    // The new-page button is rendered by `@lobehub/ui` ActionIcon as a
+    // The new-page button is rendered by `@agentasia/ui` ActionIcon as a
     // `<div role="button">` rather than a native `<button>`, so match either.
     const readyCandidates = [
       world.page.locator(':is(button, [role="button"]):has(svg.lucide-square-pen)').first(),

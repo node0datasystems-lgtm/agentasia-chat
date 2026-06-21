@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox, Text } from '@lobehub/ui';
+import { ActionIcon, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { FilePlusIcon, FolderPlusIcon } from 'lucide-react';
 import { memo } from 'react';

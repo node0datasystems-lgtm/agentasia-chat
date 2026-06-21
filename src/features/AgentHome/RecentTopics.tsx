@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Flexbox, Text } from '@lobehub/ui';
+import { Block, Flexbox, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { BotMessageSquareIcon } from 'lucide-react';
 import { memo } from 'react';

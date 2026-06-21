@@ -1,4 +1,4 @@
-import type { ChatCitationItem, ChatMessageError } from '@lobechat/types';
+import type { ChatCitationItem, ChatMessageError } from '@agentasia/types';
 import type OpenAI from 'openai';
 import type { Stream } from 'openai/streaming';
 

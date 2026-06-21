@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 
-import { ShellProcessManager } from '@lobechat/local-file-shell';
+import { ShellProcessManager } from '@agentasia/local-file-shell';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { executeToolCall } from './index';

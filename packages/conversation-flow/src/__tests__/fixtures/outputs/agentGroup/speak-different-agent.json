@@ -11,7 +11,9 @@
         {
           "id": "msg-supervisor-1",
           "type": "message",
-          "tools": ["msg-speak-tool-1"]
+          "tools": [
+            "msg-speak-tool-1"
+          ]
         }
       ]
     },

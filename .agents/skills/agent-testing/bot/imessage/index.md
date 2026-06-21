@@ -4,7 +4,7 @@ The iMessage channel is different from the other bot platforms: there is **no
 native app to drive with osascript**. Instead the Desktop app runs a local
 **BlueBubbles bridge** — a small HTTP server in the Electron main process that
 registers a webhook on a local [BlueBubbles](https://bluebubbles.app/) server,
-receives iMessage events, and forwards them to LobeHub Cloud.
+receives iMessage events, and forwards them to AgentAsia Cloud.
 
 So the test surface is three layers:
 

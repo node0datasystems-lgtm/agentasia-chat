@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_AVATAR } from '@lobechat/const';
-import type { BuiltinInterventionProps } from '@lobechat/types';
+import { DEFAULT_AVATAR } from '@agentasia/const';
+import type { BuiltinInterventionProps } from '@agentasia/types';
 import {
   Accordion,
   AccordionItem,
@@ -10,7 +10,7 @@ import {
   Icon,
   stopPropagation,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { Input, InputNumber } from 'antd';
 import { createStaticStyles, useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';

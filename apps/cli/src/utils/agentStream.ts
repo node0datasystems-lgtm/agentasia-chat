@@ -1,10 +1,10 @@
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 import pc from 'picocolors';
 import urlJoin from 'url-join';
 
 import { log } from './logger';
 
-export type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+export type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 
 interface StreamOptions {
   json?: boolean;
@@ -15,7 +15,7 @@ interface WebSocketStreamOptions extends StreamOptions {
   gatewayUrl: string;
   operationId: string;
   /**
-   * LobeHub server URL the gateway should call back to when verifying
+   * AgentAsia server URL the gateway should call back to when verifying
    * an apiKey token (via `/api/v1/users/me`). Required when
    * `tokenType === 'apiKey'`; ignored for JWT.
    */

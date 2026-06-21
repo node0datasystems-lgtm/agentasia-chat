@@ -1,5 +1,5 @@
-import { deserializeParts } from '@lobechat/utils';
-import { type MarkdownProps } from '@lobehub/ui';
+import { deserializeParts } from '@agentasia/utils';
+import { type MarkdownProps } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { LOADING_FLAT } from '@/const/message';

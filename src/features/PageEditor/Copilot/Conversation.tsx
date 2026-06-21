@@ -1,5 +1,5 @@
-import { isChatGroupSessionId } from '@lobechat/types';
-import { Flexbox } from '@lobehub/ui';
+import { isChatGroupSessionId } from '@agentasia/types';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useCallback, useMemo } from 'react';
 
 import DragUploadZone, { useUploadFiles } from '@/components/DragUploadZone';

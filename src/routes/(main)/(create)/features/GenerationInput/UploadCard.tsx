@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Block } from '@lobehub/ui';
+import { ActionIcon, Block } from '@agentasia/ui';
 import { Spin } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Plus, X } from 'lucide-react';

@@ -1,4 +1,4 @@
-import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@lobechat/const';
+import { CUSTOM_DOCUMENT_FILE_TYPE, DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import {

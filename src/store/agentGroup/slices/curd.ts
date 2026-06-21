@@ -1,4 +1,4 @@
-import { type LobeChatGroupConfig } from '@lobechat/types';
+import { type LobeChatGroupConfig } from '@agentasia/types';
 
 import { DEFAULT_CHAT_GROUP_CHAT_CONFIG } from '@/const/settings';
 import { type ChatGroupItem } from '@/database/schemas/chatGroup';

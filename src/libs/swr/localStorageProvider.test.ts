@@ -100,7 +100,7 @@ describe('createCacheProvider — tiering', () => {
       localPatterns: [...CACHE_TIERS.local],
     });
     const map = provider();
-    const key = 'modelConfig:lobehub';
+    const key = 'modelConfig:agentasia';
 
     map.set(key, { data: { homeNewModels: [{ model: 'gpt-image-2', type: 'image' }] } });
 

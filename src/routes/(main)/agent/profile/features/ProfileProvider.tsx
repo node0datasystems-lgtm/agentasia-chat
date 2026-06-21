@@ -1,6 +1,6 @@
 'use client';
 
-import { useEditor } from '@lobehub/editor/react';
+import { useEditor } from '@agentasia/editor/react';
 import { type PropsWithChildren } from 'react';
 import { memo } from 'react';
 

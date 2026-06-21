@@ -123,7 +123,7 @@ export interface SubmoduleWorkingTreePatches {
    * submodule's own working tree is clean.
    */
   patches: GitWorkingTreePatch[];
-  /** Path relative to the parent repo root (e.g. `lobehub` or `packages/foo`). */
+  /** Path relative to the parent repo root (e.g. `agentasia` or `packages/foo`). */
   relativePath: string;
 }
 

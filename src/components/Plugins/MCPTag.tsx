@@ -1,5 +1,5 @@
-import { MCP } from '@lobehub/icons';
-import { Tag } from '@lobehub/ui';
+import { MCP } from '@agentasia/icons';
+import { Tag } from '@agentasia/ui';
 import { memo } from 'react';
 
 interface MCPTagProps {

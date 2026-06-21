@@ -1,5 +1,5 @@
-import { type FlexboxProps } from '@lobehub/ui';
-import { Flexbox, TooltipGroup } from '@lobehub/ui';
+import { type FlexboxProps } from '@agentasia/ui';
+import { Flexbox, TooltipGroup } from '@agentasia/ui';
 import { type CSSProperties, type ReactNode } from 'react';
 import { memo } from 'react';
 

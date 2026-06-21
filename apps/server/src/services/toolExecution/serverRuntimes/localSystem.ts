@@ -2,7 +2,7 @@ import {
   LocalSystemApiName,
   LocalSystemIdentifier,
   LocalSystemManifest,
-} from '@lobechat/builtin-tool-local-system';
+} from '@agentasia/builtin-tool-local-system';
 
 import { deviceGateway } from '@/server/services/deviceGateway';
 

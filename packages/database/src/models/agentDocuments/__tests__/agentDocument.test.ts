@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_FILE_TYPE,
   AGENT_DOCUMENT_SOURCE_TYPE,
   AGENT_SIGNAL_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { and, eq } from 'drizzle-orm';
 import { beforeEach, describe, expect, it } from 'vitest';
 

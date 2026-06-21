@@ -4,35 +4,35 @@ import { parseLobeLink } from './parse';
 
 describe('parseLobeLink', () => {
   it('parses github pull request', () => {
-    expect(parseLobeLink('https://github.com/lobehub/lobehub/pull/15557')).toEqual({
-      canonicalLabel: 'lobehub/lobehub#15557',
+    expect(parseLobeLink('https://github.com/node0datasystems-lgtm/agentasia-chat/pull/15557')).toEqual({
+      canonicalLabel: 'node0datasystems-lgtm/agentasia-chat#15557',
       kind: 'github',
     });
   });
 
   it('parses github issue', () => {
-    expect(parseLobeLink('https://github.com/lobehub/lobehub/issues/15554')).toEqual({
-      canonicalLabel: 'lobehub/lobehub#15554',
+    expect(parseLobeLink('https://github.com/node0datasystems-lgtm/agentasia-chat/issues/15554')).toEqual({
+      canonicalLabel: 'node0datasystems-lgtm/agentasia-chat#15554',
       kind: 'github',
     });
   });
 
   it('parses github commit (short sha)', () => {
-    expect(parseLobeLink('https://github.com/lobehub/lobehub/commit/d36aa75701abc')).toEqual({
-      canonicalLabel: 'lobehub/lobehub@d36aa75',
+    expect(parseLobeLink('https://github.com/node0datasystems-lgtm/agentasia-chat/commit/d36aa75701abc')).toEqual({
+      canonicalLabel: 'node0datasystems-lgtm/agentasia-chat@d36aa75',
       kind: 'github',
     });
   });
 
   it('parses github repo root', () => {
-    expect(parseLobeLink('https://github.com/lobehub/lobehub')).toEqual({
-      canonicalLabel: 'lobehub/lobehub',
+    expect(parseLobeLink('https://github.com/node0datasystems-lgtm/agentasia-chat')).toEqual({
+      canonicalLabel: 'node0datasystems-lgtm/agentasia-chat',
       kind: 'github',
     });
   });
 
   it('parses linear issue', () => {
-    expect(parseLobeLink('https://linear.app/lobehub/issue/TST-10001/codex-pptx-preview')).toEqual(
+    expect(parseLobeLink('https://linear.app/agentasia/issue/TST-10001/codex-pptx-preview')).toEqual(
       {
         canonicalLabel: 'TST-10001',
         kind: 'linear',
@@ -41,8 +41,8 @@ describe('parseLobeLink', () => {
   });
 
   it('parses github user / org pages with the github icon', () => {
-    expect(parseLobeLink('https://github.com/lobehub')).toEqual({
-      canonicalLabel: 'lobehub',
+    expect(parseLobeLink('https://github.com/agentasia')).toEqual({
+      canonicalLabel: 'agentasia',
       kind: 'github',
     });
   });
@@ -58,8 +58,8 @@ describe('parseLobeLink', () => {
   });
 
   it('labels npm packages by package name', () => {
-    expect(parseLobeLink('https://www.npmjs.com/package/@lobehub/ui')).toEqual({
-      canonicalLabel: '@lobehub/ui',
+    expect(parseLobeLink('https://www.npmjs.com/package/@agentasia/ui')).toEqual({
+      canonicalLabel: '@agentasia/ui',
       domain: 'npmjs.com',
       kind: 'generic',
     });

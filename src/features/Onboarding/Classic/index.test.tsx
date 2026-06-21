@@ -1,4 +1,4 @@
-import { MAX_ONBOARDING_STEPS } from '@lobechat/types';
+import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router';
@@ -21,7 +21,7 @@ const mocks = vi.hoisted(() => ({
   serverConfigInit: true,
 }));
 
-vi.mock('@lobehub/ui', () => ({
+vi.mock('@agentasia/ui', () => ({
   Flexbox: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 

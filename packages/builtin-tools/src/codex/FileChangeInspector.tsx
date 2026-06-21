@@ -1,8 +1,8 @@
 'use client';
 
-import { FilePathDisplay } from '@lobechat/shared-tool-ui/components';
-import { inspectorTextStyles, shinyTextStyles } from '@lobechat/shared-tool-ui/styles';
-import type { BuiltinInspectorProps } from '@lobechat/types';
+import { FilePathDisplay } from '@agentasia/shared-tool-ui/components';
+import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
+import type { BuiltinInspectorProps } from '@agentasia/types';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

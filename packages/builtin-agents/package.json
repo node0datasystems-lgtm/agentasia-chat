@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-agents",
+  "name": "@agentasia/builtin-agents",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -11,19 +11,19 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "dependencies": {
-    "@lobechat/builtin-tool-agent-builder": "workspace:*",
-    "@lobechat/builtin-tool-agent-documents": "workspace:*",
-    "@lobechat/builtin-tool-agent-management": "workspace:*",
-    "@lobechat/builtin-tool-group-agent-builder": "workspace:*",
-    "@lobechat/builtin-tool-group-management": "workspace:*",
-    "@lobechat/builtin-tool-notebook": "workspace:*",
-    "@lobechat/builtin-tool-task": "workspace:*",
-    "@lobechat/builtin-tool-user-interaction": "workspace:*",
-    "@lobechat/builtin-tool-verify": "workspace:*",
-    "@lobechat/business-const": "workspace:*",
-    "@lobechat/const": "workspace:*"
+    "@agentasia/builtin-tool-agent-builder": "workspace:*",
+    "@agentasia/builtin-tool-agent-documents": "workspace:*",
+    "@agentasia/builtin-tool-agent-management": "workspace:*",
+    "@agentasia/builtin-tool-group-agent-builder": "workspace:*",
+    "@agentasia/builtin-tool-group-management": "workspace:*",
+    "@agentasia/builtin-tool-notebook": "workspace:*",
+    "@agentasia/builtin-tool-task": "workspace:*",
+    "@agentasia/builtin-tool-user-interaction": "workspace:*",
+    "@agentasia/builtin-tool-verify": "workspace:*",
+    "@agentasia/business-const": "workspace:*",
+    "@agentasia/const": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   }
 }

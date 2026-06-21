@@ -3,9 +3,9 @@
 import {
   REMOTE_HETEROGENEOUS_AGENT_CONFIGS,
   type RemoteHeterogeneousAgentType,
-} from '@lobechat/heterogeneous-agents';
-import { Button, Flexbox, Icon } from '@lobehub/ui';
-import { Select } from '@lobehub/ui/base-ui';
+} from '@agentasia/heterogeneous-agents';
+import { Button, Flexbox, Icon } from '@agentasia/ui';
+import { Select } from '@agentasia/ui/base-ui';
 import { Alert, Input, Modal, Steps, Tag, Typography } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
@@ -395,7 +395,7 @@ const CreatePlatformAgentModal = memo<CreatePlatformAgentModalProps>(
                   <Flexbox gap={12}>
                     <Flexbox gap={6}>
                       <span>{t('platformAgent.create.noDevicesDesktopHint')}</span>
-                      <a href="https://lobehub.com/downloads" rel="noreferrer" target="_blank">
+                      <a href="https://agentasia.ai/downloads" rel="noreferrer" target="_blank">
                         <Button
                           icon={<Icon icon={Download} size={13} />}
                           size="small"

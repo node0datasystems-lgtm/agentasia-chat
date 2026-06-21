@@ -1,4 +1,4 @@
-import type { BaseAction, BaseSignal, RuntimeProcessorResult } from '@lobechat/agent-signal';
+import type { BaseAction, BaseSignal, RuntimeProcessorResult } from '@agentasia/agent-signal';
 
 import type {
   RuntimeTransitionOptions,

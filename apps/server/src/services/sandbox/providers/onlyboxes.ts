@@ -1,7 +1,7 @@
 import { createHmac } from 'node:crypto';
 
-import type { SandboxCallToolResult } from '@lobechat/builtin-tool-cloud-sandbox';
-import { isRecord } from '@lobechat/utils';
+import type { SandboxCallToolResult } from '@agentasia/builtin-tool-cloud-sandbox';
+import { isRecord } from '@agentasia/utils';
 import debug from 'debug';
 import { sha256 } from 'js-sha256';
 
@@ -67,7 +67,7 @@ export class OnlyboxesSandboxProvider implements SandboxProvider {
   constructor(options: SandboxServiceOptions) {
     this.options = options;
     this.baseUrl = (sandboxEnv.ONLYBOXES_BASE_URL || '').replace(/\/+$/, '');
-    this.jitIssuer = sandboxEnv.ONLYBOXES_JIT_ISSUER || appEnv.APP_URL || 'lobehub';
+    this.jitIssuer = sandboxEnv.ONLYBOXES_JIT_ISSUER || appEnv.APP_URL || 'agentasia';
     this.jitSigningKey = sandboxEnv.ONLYBOXES_JIT_SIGNING_KEY || '';
     this.jitTTLSec = sandboxEnv.ONLYBOXES_JIT_TTL_SEC || DEFAULT_JIT_TTL_SEC;
     this.leaseTTLSec = sandboxEnv.ONLYBOXES_LEASE_TTL_SEC || DEFAULT_LEASE_TTL_SEC;

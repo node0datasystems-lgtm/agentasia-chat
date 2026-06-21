@@ -1,4 +1,4 @@
-import type { MockEvent } from '@lobechat/agent-mock';
+import type { MockEvent } from '@agentasia/agent-mock';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 

@@ -1,4 +1,4 @@
-import type * as LobechatConstModule from '@lobechat/const';
+import type * as LobechatConstModule from '@agentasia/const';
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -19,7 +19,7 @@ vi.mock('@lobechat/const', async (importOriginal) => {
       return mockConstEnv.isDesktop;
     },
     DEFAULT_USER_AVATAR: 'default-avatar.png',
-    OFFICIAL_URL: 'https://app.lobehub.com',
+    OFFICIAL_URL: 'https://app.agentasia.ai',
   };
 });
 
@@ -126,7 +126,7 @@ describe('useUserAvatar', () => {
     const { result } = renderHook(() => useUserAvatar());
 
     // In cloud mode, selector returns OFFICIAL_URL regardless of remoteServerUrl config
-    expect(result.current).toBe('https://app.lobehub.com/api/avatar.png');
+    expect(result.current).toBe('https://app.agentasia.ai/api/avatar.png');
   });
 
   it('should return original avatar when storageMode is selfHost but no URL configured', () => {

@@ -1,5 +1,5 @@
-import { MarketplaceCategory } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
-import type { InterestAreaKey } from '@lobechat/const';
+import { MarketplaceCategory } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
+import type { InterestAreaKey } from '@agentasia/const';
 
 const INTEREST_CATEGORY_MAP: Partial<Record<InterestAreaKey, MarketplaceCategory>> = {
   'business': MarketplaceCategory.BusinessStrategy,

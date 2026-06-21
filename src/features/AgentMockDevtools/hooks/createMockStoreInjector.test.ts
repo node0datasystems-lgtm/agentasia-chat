@@ -1,4 +1,4 @@
-import type { ConversationContext } from '@lobechat/types';
+import type { ConversationContext } from '@agentasia/types';
 import { act } from '@testing-library/react';
 import { beforeEach, describe, expect, it } from 'vitest';
 

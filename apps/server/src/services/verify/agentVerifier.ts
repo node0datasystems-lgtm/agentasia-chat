@@ -1,7 +1,7 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { VerifyToolIdentifier } from '@lobechat/builtin-tool-verify';
-import type { VerifyCheckItem } from '@lobechat/types';
-import { ThreadType } from '@lobechat/types';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { VerifyToolIdentifier } from '@agentasia/builtin-tool-verify';
+import type { VerifyCheckItem } from '@agentasia/types';
+import { ThreadType } from '@agentasia/types';
 import debug from 'debug';
 
 import { AgentModel } from '@/database/models/agent';

@@ -1,5 +1,5 @@
-import type { ChatTopicBotContext, ExecAgentResult } from '@lobechat/types';
-import { RequestTrigger } from '@lobechat/types';
+import type { ChatTopicBotContext, ExecAgentResult } from '@agentasia/types';
+import { RequestTrigger } from '@agentasia/types';
 import type { Message, SentMessage, Thread } from 'chat';
 import debug from 'debug';
 

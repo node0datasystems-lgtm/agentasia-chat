@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/model-runtime",
+  "name": "@agentasia/model-runtime",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -19,11 +19,6 @@
     "@fal-ai/client": "^1.7.2",
     "@google/genai": "^1.43.0",
     "@huggingface/inference": "^4.13.4",
-    "@lobechat/business-model-bank": "workspace:*",
-    "@lobechat/business-model-runtime": "workspace:*",
-    "@lobechat/const": "workspace:*",
-    "@lobechat/ssrf-safe-fetch": "workspace:*",
-    "@lobechat/utils": "workspace:*",
     "async-retry": "^1.3.3",
     "dayjs": "^1.11.19",
     "debug": "^4.4.3",
@@ -37,10 +32,15 @@
     "replicate": "^1.4.0",
     "tokenx": "^1.3.0",
     "type-fest": "^5.2.0",
-    "url-join": "^5.0.0"
+    "url-join": "^5.0.0",
+    "@agentasia/business-model-bank": "workspace:*",
+    "@agentasia/business-model-runtime": "workspace:*",
+    "@agentasia/const": "workspace:*",
+    "@agentasia/ssrf-safe-fetch": "workspace:*",
+    "@agentasia/utils": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
     "zod": "^3.25.76"

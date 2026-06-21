@@ -1,5 +1,5 @@
-import { UserInteractionExecutionRuntime } from '@lobechat/builtin-tool-user-interaction/executionRuntime';
-import { UserInteractionExecutor } from '@lobechat/builtin-tool-user-interaction/executor';
+import { UserInteractionExecutionRuntime } from '@agentasia/builtin-tool-user-interaction/executionRuntime';
+import { UserInteractionExecutor } from '@agentasia/builtin-tool-user-interaction/executor';
 
 const runtime = new UserInteractionExecutionRuntime();
 

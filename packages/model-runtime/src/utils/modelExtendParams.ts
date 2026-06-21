@@ -1,4 +1,4 @@
-import type { LobeAgentChatConfig } from '@lobechat/types';
+import type { LobeAgentChatConfig } from '@agentasia/types';
 import type { ExtendParamsType } from 'model-bank';
 
 /**

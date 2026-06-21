@@ -1,4 +1,4 @@
-import { Center, Collapse, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Center, Collapse, Flexbox, Icon, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CheckCircle, Circle, ListCheck } from 'lucide-react';
 import { memo } from 'react';

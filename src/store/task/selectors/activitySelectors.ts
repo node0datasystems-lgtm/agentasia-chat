@@ -1,4 +1,4 @@
-import type { TaskDetailActivity } from '@lobechat/types';
+import type { TaskDetailActivity } from '@agentasia/types';
 
 import type { TaskStoreState } from '../initialState';
 import { taskDetailSelectors } from './detailSelectors';

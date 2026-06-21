@@ -13,7 +13,7 @@ vi.mock('./Avatar', () => ({
   default: () => null,
 }));
 
-vi.mock('@lobehub/icons', () => ({
+vi.mock('@agentasia/icons', () => ({
   ModelIcon: () => null,
 }));
 

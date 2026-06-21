@@ -1,4 +1,4 @@
-import type { VerifyCheckItem } from '@lobechat/types';
+import type { VerifyCheckItem } from '@agentasia/types';
 
 import type { VerifyStatus } from '@/database/models/agentOperation';
 import type { VerifyCheckResultItem } from '@/database/schemas/verify';

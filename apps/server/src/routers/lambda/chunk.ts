@@ -1,5 +1,5 @@
-import { DEFAULT_FILE_EMBEDDING_MODEL_ITEM } from '@lobechat/const';
-import { RequestTrigger, SemanticSearchSchema } from '@lobechat/types';
+import { DEFAULT_FILE_EMBEDDING_MODEL_ITEM } from '@agentasia/const';
+import { RequestTrigger, SemanticSearchSchema } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 

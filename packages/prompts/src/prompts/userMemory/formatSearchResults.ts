@@ -1,4 +1,4 @@
-import type { SearchMemoryResult } from '@lobechat/types';
+import type { SearchMemoryResult } from '@agentasia/types';
 
 /**
  * Search result item interfaces matching the SearchMemoryResult type

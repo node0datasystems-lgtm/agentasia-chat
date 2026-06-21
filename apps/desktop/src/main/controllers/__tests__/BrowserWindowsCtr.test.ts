@@ -1,4 +1,4 @@
-import type { InterceptRouteParams } from '@lobechat/electron-client-ipc';
+import type { InterceptRouteParams } from '@agentasia/electron-client-ipc';
 import type { Mock } from 'vitest';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

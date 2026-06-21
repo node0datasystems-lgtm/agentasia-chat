@@ -1,4 +1,4 @@
-import { SESSION_CHAT_TOPIC_URL, SESSION_CHAT_URL } from '@lobechat/const';
+import { SESSION_CHAT_TOPIC_URL, SESSION_CHAT_URL } from '@agentasia/const';
 import { useCallback } from 'react';
 
 import type { SendButtonHandler } from '@/features/ChatInput/store/initialState';

@@ -3,8 +3,8 @@ import {
   UpdateMessageParamsSchema,
   UpdateMessagePluginSchema,
   UpdateMessageRAGParamsSchema,
-} from '@lobechat/types';
-import { createTimingHelpers, createTimingRequestId } from '@lobechat/utils';
+} from '@agentasia/types';
+import { createTimingHelpers, createTimingRequestId } from '@agentasia/utils';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 
@@ -24,7 +24,7 @@ import { MessageService } from '@/server/services/message';
 import { resolveAgentIdFromSession, resolveContext } from './_helpers/resolveContext';
 import { basicContextSchema } from './_schema/context';
 
-const { logTiming, runTimedStage } = createTimingHelpers('lobe-server:chat:lobehub:timing');
+const { logTiming, runTimedStage } = createTimingHelpers('lobe-server:chat:agentasia:timing');
 
 const messageProcedure = wsCompatProcedure.use(serverDatabase).use(async (opts) => {
   const { ctx } = opts;

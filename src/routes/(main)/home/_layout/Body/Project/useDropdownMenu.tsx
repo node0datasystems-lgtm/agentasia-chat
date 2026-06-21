@@ -1,4 +1,4 @@
-import { type MenuProps } from '@lobehub/ui';
+import { type MenuProps } from '@agentasia/ui';
 import { useMemo } from 'react';
 
 import { useProjectMenuItems } from '../../hooks';

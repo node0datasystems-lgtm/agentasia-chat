@@ -1,4 +1,4 @@
-import type { BriefDecision, TaskTopicHandoff } from '@lobechat/types';
+import type { BriefDecision, TaskTopicHandoff } from '@agentasia/types';
 import { and, count, desc, eq, gte, sql } from 'drizzle-orm';
 
 import type { TaskTopicItem } from '../schemas/task';

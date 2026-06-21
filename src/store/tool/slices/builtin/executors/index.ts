@@ -6,18 +6,18 @@
  * by importing this registry module.
  */
 
-import { agentBuilderExecutor } from '@lobechat/builtin-tool-agent-builder/executor';
-import { agentManagementExecutor } from '@lobechat/builtin-tool-agent-management/executor';
-import { calculatorExecutor } from '@lobechat/builtin-tool-calculator/executor';
-import { cloudSandboxExecutor } from '@lobechat/builtin-tool-cloud-sandbox/executor';
-import { credsExecutor } from '@lobechat/builtin-tool-creds/executor';
-import { groupAgentBuilderExecutor } from '@lobechat/builtin-tool-group-agent-builder/executor';
-import { groupManagementExecutor } from '@lobechat/builtin-tool-group-management/executor';
-import { knowledgeBaseExecutor } from '@lobechat/builtin-tool-knowledge-base/client/executor';
-import { lobeAgentExecutor } from '@lobechat/builtin-tool-lobe-agent/client/executor';
-import { localSystemExecutor } from '@lobechat/builtin-tool-local-system/client/executor';
-import { memoryExecutor } from '@lobechat/builtin-tool-memory/executor';
-import { taskExecutor } from '@lobechat/builtin-tool-task/client/executor';
+import { agentBuilderExecutor } from '@agentasia/builtin-tool-agent-builder/executor';
+import { agentManagementExecutor } from '@agentasia/builtin-tool-agent-management/executor';
+import { calculatorExecutor } from '@agentasia/builtin-tool-calculator/executor';
+import { cloudSandboxExecutor } from '@agentasia/builtin-tool-cloud-sandbox/executor';
+import { credsExecutor } from '@agentasia/builtin-tool-creds/executor';
+import { groupAgentBuilderExecutor } from '@agentasia/builtin-tool-group-agent-builder/executor';
+import { groupManagementExecutor } from '@agentasia/builtin-tool-group-management/executor';
+import { knowledgeBaseExecutor } from '@agentasia/builtin-tool-knowledge-base/client/executor';
+import { lobeAgentExecutor } from '@agentasia/builtin-tool-lobe-agent/client/executor';
+import { localSystemExecutor } from '@agentasia/builtin-tool-local-system/client/executor';
+import { memoryExecutor } from '@agentasia/builtin-tool-memory/executor';
+import { taskExecutor } from '@agentasia/builtin-tool-task/client/executor';
 
 import type { BuiltinToolContext, BuiltinToolResult, IBuiltinToolExecutor } from '../types';
 import { activatorExecutor } from './lobe-activator';

@@ -1,7 +1,7 @@
-import { type DocumentType } from '@lobechat/builtin-tool-notebook';
-import type { AGENT_PLAN_FILE_TYPE } from '@lobechat/const';
-import { type DocumentItem } from '@lobechat/database/schemas';
-import { type NotebookDocument } from '@lobechat/types';
+import { type DocumentType } from '@agentasia/builtin-tool-notebook';
+import type { AGENT_PLAN_FILE_TYPE } from '@agentasia/const';
+import { type DocumentItem } from '@agentasia/database/schemas';
+import { type NotebookDocument } from '@agentasia/types';
 import isEqual from 'fast-deep-equal';
 import { type SWRResponse } from 'swr';
 

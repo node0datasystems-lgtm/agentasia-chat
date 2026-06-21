@@ -18,13 +18,13 @@ interface PluginInstallConfirmModalProps {
 const getPluginSource = (request: McpInstallRequest): PluginSource => {
   const { marketId } = request;
 
-  // Official LobeHub plugin
-  if (marketId === 'lobehub') {
+  // Official AgentAsia plugin
+  if (marketId === 'agentasia') {
     return PluginSource.OFFICIAL;
   }
 
   // Third-party marketplace plugin (including trusted and untrusted)
-  if (marketId && marketId !== 'lobehub') {
+  if (marketId && marketId !== 'agentasia') {
     return PluginSource.MARKETPLACE;
   }
 

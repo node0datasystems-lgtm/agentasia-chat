@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
-import { ThreadStatus } from '@lobechat/types';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
+import { ThreadStatus } from '@agentasia/types';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {

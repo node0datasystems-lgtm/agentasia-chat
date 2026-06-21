@@ -1,4 +1,4 @@
-import { Button, Flexbox, Input } from '@lobehub/ui';
+import { Button, Flexbox, Input } from '@agentasia/ui';
 import { Dropdown, Pagination, Table } from 'antd';
 import { type ColumnsType } from 'antd/es/table';
 import { createStaticStyles, cssVar } from 'antd-style';

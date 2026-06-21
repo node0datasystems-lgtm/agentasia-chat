@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@lobechat/const';
-import { Claude, Cline, Cursor, OpenAI } from '@lobehub/icons';
+import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@agentasia/const';
+import { Claude, Cline, Cursor, OpenAI } from '@agentasia/icons';
 import {
   Avatar,
   Block,
@@ -13,7 +13,7 @@ import {
   Segmented,
   Select,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { Divider } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { BotIcon, UserRoundIcon } from 'lucide-react';
@@ -35,7 +35,7 @@ enum PlatformType {
   Cline = 'cline',
   Codex = 'codex',
   Cursor = 'cursor',
-  LobeHub = 'lobehub',
+  AgentAsia = 'agentasia',
   VsCode = 'vscode',
 }
 
@@ -62,7 +62,7 @@ const genInstallCommand = (identifier?: string, platform?: PlatformType) => {
     [PlatformType.Claude]: 'claude-code',
     [PlatformType.Cline]: 'cline',
     [PlatformType.Cursor]: 'cursor',
-    [PlatformType.LobeHub]: 'lobehub',
+    [PlatformType.AgentAsia]: 'agentasia',
     [PlatformType.Codex]: 'codex',
     [PlatformType.VsCode]: 'vscode',
   };
@@ -72,13 +72,13 @@ const genInstallCommand = (identifier?: string, platform?: PlatformType) => {
     case PlatformType.Claude:
     case PlatformType.Cline:
     case PlatformType.VsCode: {
-      return `npx -y @lobehub/market-cli skills install ${id} --agent ${agentMap[platform]}`;
+      return `npx -y @agentasia/market-cli skills install ${id} --agent ${agentMap[platform]}`;
     }
     case PlatformType.Codex: {
-      return `npx -y @lobehub/market-cli skills install ${id} --agent ${agentMap[platform]}`;
+      return `npx -y @agentasia/market-cli skills install ${id} --agent ${agentMap[platform]}`;
     }
     default: {
-      return `# Recommended for LobeHub users:
+      return `# Recommended for AgentAsia users:
 # Open the marketplace page and install with one click:
 # https://lobechat.com/community/skills/${id}`;
     }
@@ -89,7 +89,7 @@ const genLayout = (
   identifier: string | undefined,
   platform: PlatformType,
   i18nText: {
-    lobehub: string;
+    agentasia: string;
     resourcesHint: string;
   },
 ) => {
@@ -98,14 +98,14 @@ const genLayout = (
     [PlatformType.Claude]: `~/.claude/skills/${id}`,
     [PlatformType.Cline]: `~/.cline/skills/${id}`,
     [PlatformType.Cursor]: `~/.cursor/skills/${id}`,
-    [PlatformType.LobeHub]: `<managed-by-lobehub>`,
+    [PlatformType.AgentAsia]: `<managed-by-agentasia>`,
     [PlatformType.Codex]: `~/.agents/skills/${id}`,
     [PlatformType.VsCode]: `./.vscode/skills/${id}`,
   };
   const basePath = basePathMap[platform];
 
-  if (platform === PlatformType.LobeHub) {
-    return i18nText.lobehub;
+  if (platform === PlatformType.AgentAsia) {
+    return i18nText.agentasia;
   }
 
   return `${basePath}
@@ -152,10 +152,10 @@ const Platform = memo<PlatformProps>(
 
     const { platform, steps } = useMemo(() => {
       switch (active) {
-        case PlatformType.LobeHub: {
+        case PlatformType.AgentAsia: {
           return {
-            platform: 'LobeHub',
-            steps: t('skills.details.sidebar.platform.steps.lobehub'),
+            platform: 'AgentAsia',
+            steps: t('skills.details.sidebar.platform.steps.agentasia'),
           };
         }
         case PlatformType.Claude: {
@@ -193,7 +193,7 @@ const Platform = memo<PlatformProps>(
 
     const command = genInstallCommand(identifier, active);
 
-    const agentPrompt = `Curl https://lobehub.com/skills/${identifier}/skill.md, then follow the instructions to set up LobeHub Skills Marketplace and install the skill. Once installed, read the SKILL.md file in the installed directory and follow its instructions to complete the task.`;
+    const agentPrompt = `Curl https://agentasia.ai/skills/${identifier}/skill.md, then follow the instructions to set up AgentAsia Skills Marketplace and install the skill. Once installed, read the SKILL.md file in the installed directory and follow its instructions to complete the task.`;
 
     const handleUseOnLobeAI = useCallback(() => {
       if (!inboxAgentId) return;
@@ -314,7 +314,7 @@ const Platform = memo<PlatformProps>(
               variant={lite ? 'borderless' : 'outlined'}
             >
               {genLayout(identifier, active, {
-                lobehub: t('skills.details.sidebar.platform.layout.lobehub'),
+                agentasia: t('skills.details.sidebar.platform.layout.agentasia'),
                 resourcesHint: t('skills.details.sidebar.platform.layout.resourcesHint'),
               })}
             </Highlighter>

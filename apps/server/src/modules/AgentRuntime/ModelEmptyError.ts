@@ -1,4 +1,4 @@
-import { AgentRuntimeErrorType } from '@lobechat/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
 
 /**
  * Thrown by the `call_llm` executor when the model returns an empty completion

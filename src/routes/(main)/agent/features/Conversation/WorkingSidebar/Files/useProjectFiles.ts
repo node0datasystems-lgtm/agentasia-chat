@@ -1,5 +1,5 @@
-import { isDesktop } from '@lobechat/const';
-import type { ProjectFileIndexResult } from '@lobechat/electron-client-ipc';
+import { isDesktop } from '@agentasia/const';
+import type { ProjectFileIndexResult } from '@agentasia/electron-client-ipc';
 
 import { useClientDataSWR } from '@/libs/swr';
 import { localFileKeys } from '@/libs/swr/keys';

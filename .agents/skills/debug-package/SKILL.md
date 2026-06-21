@@ -1,6 +1,6 @@
 ---
 name: debug-package
-description: 'LobeHub debug package and log namespace guide. Use when adding debug() logging, choosing lobe-* namespaces, troubleshooting DEBUG output, localStorage.debug, or log format specifiers.'
+description: 'AgentAsia debug package and log namespace guide. Use when adding debug() logging, choosing lobe-* namespaces, troubleshooting DEBUG output, localStorage.debug, or log format specifiers.'
 user-invocable: false
 ---
 

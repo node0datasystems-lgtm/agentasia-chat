@@ -1,7 +1,7 @@
 'use client';
 
-import type { GroupedTopic } from '@lobechat/types';
-import { ActionIcon, Checkbox, DropdownMenu, Flexbox, Icon, Tag, Text } from '@lobehub/ui';
+import type { GroupedTopic } from '@agentasia/types';
+import { ActionIcon, Checkbox, DropdownMenu, Flexbox, Icon, Tag, Text } from '@agentasia/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { FolderIcon, MoreHorizontal, Star } from 'lucide-react';
 import { Fragment, memo, type MouseEvent, useCallback } from 'react';

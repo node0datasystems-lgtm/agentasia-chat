@@ -1,4 +1,4 @@
-import { type HumanInterventionConfig, type SecurityBlacklistConfig } from '@lobechat/types';
+import { type HumanInterventionConfig, type SecurityBlacklistConfig } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { DEFAULT_SECURITY_BLACKLIST } from '../../audit/defaultSecurityBlacklist';

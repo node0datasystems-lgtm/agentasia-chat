@@ -1,4 +1,4 @@
-import { Flexbox, Markdown } from '@lobehub/ui';
+import { Flexbox, Markdown } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

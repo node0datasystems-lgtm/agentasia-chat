@@ -1,6 +1,6 @@
 'use client';
 
-import { createAnalytics, getSingletonAnalyticsOptional } from '@lobehub/analytics';
+import { createAnalytics, getSingletonAnalyticsOptional } from '@agentasia/analytics';
 import { memo, useEffect, useRef } from 'react';
 
 import { BUSINESS_LINE } from '@/const/analytics';

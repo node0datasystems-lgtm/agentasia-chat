@@ -1,14 +1,14 @@
 'use client';
 
-import { FILE_URL } from '@lobechat/business-const';
+import { FILE_URL } from '@agentasia/business-const';
 import {
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
   DERIVED_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
-import { Notion } from '@lobehub/icons';
-import { type MenuProps } from '@lobehub/ui';
-import { Button, DropdownMenu, Icon, Tooltip } from '@lobehub/ui';
+} from '@agentasia/const';
+import { Notion } from '@agentasia/icons';
+import { type MenuProps } from '@agentasia/ui';
+import { Button, DropdownMenu, Icon, Tooltip } from '@agentasia/ui';
 import { Upload } from 'antd';
 import { FilePenLine, FileUp, FolderIcon, FolderUp, Link, Plus } from 'lucide-react';
 import { type ChangeEvent } from 'react';

@@ -1,5 +1,5 @@
-import { type ChatToolPayload } from '@lobechat/types';
-import { safeParseJSON } from '@lobechat/utils';
+import { type ChatToolPayload } from '@agentasia/types';
+import { safeParseJSON } from '@agentasia/utils';
 import debug from 'debug';
 
 import { ConnectorToolPermission } from '@/database/schemas';

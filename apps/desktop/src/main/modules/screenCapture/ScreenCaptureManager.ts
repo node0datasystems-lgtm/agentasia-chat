@@ -10,7 +10,7 @@ import type {
   ScreenCaptureOverlayTheme,
   ScreenCaptureSession,
   ScreenCaptureSubmitParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { BrowserWindow, dialog, screen } from 'electron';
 
 import { BrowsersIdentifiers } from '@/appBrowsers';

@@ -1,4 +1,4 @@
-import type { HeterogeneousAgentSessionError } from '@lobechat/electron-client-ipc';
+import type { HeterogeneousAgentSessionError } from '@agentasia/electron-client-ipc';
 import type { ComponentType } from 'react';
 
 export type HeterogeneousAgentStatusGuideVariant = 'compact' | 'embedded' | 'inline';

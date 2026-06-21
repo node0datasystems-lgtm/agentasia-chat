@@ -21,7 +21,7 @@ vi.mock('@/envs/auth', () => ({
 }));
 
 vi.mock('@/libs/oidc-provider/config', () => ({
-  defaultClients: [{ client_id: 'lobehub-desktop' }],
+  defaultClients: [{ client_id: 'agentasia-desktop' }],
 }));
 
 vi.mock('@/server/services/oidc', () => ({
@@ -56,14 +56,14 @@ describe('GET /oidc/interaction/[uid]', () => {
   it('returns interaction details for a consent prompt with a first-party client', async () => {
     mocks.getInteractionDetails.mockResolvedValue({
       params: {
-        client_id: 'lobehub-desktop',
+        client_id: 'agentasia-desktop',
         redirect_uri: 'https://example.com/callback',
         scope: 'openid profile email',
       },
       prompt: { name: 'consent' },
     });
     mocks.getClientMetadata.mockResolvedValue({
-      client_name: 'LobeHub Desktop',
+      client_name: 'AgentAsia Desktop',
       logo_uri: 'https://example.com/logo.png',
     });
 
@@ -71,9 +71,9 @@ describe('GET /oidc/interaction/[uid]', () => {
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toEqual({
-      clientId: 'lobehub-desktop',
+      clientId: 'agentasia-desktop',
       clientMetadata: {
-        clientName: 'LobeHub Desktop',
+        clientName: 'AgentAsia Desktop',
         isFirstParty: true,
         logo: 'https://example.com/logo.png',
       },
@@ -83,7 +83,7 @@ describe('GET /oidc/interaction/[uid]', () => {
       uid: 'uid-1',
     });
     expect(mocks.getInteractionDetails).toHaveBeenCalledWith('uid-1');
-    expect(mocks.getClientMetadata).toHaveBeenCalledWith('lobehub-desktop');
+    expect(mocks.getClientMetadata).toHaveBeenCalledWith('agentasia-desktop');
   });
 
   it('marks third-party clients as not first party', async () => {
@@ -107,10 +107,10 @@ describe('GET /oidc/interaction/[uid]', () => {
 
   it('returns interaction details for a login prompt', async () => {
     mocks.getInteractionDetails.mockResolvedValue({
-      params: { client_id: 'lobehub-desktop' },
+      params: { client_id: 'agentasia-desktop' },
       prompt: { name: 'login' },
     });
-    mocks.getClientMetadata.mockResolvedValue({ client_name: 'LobeHub Desktop' });
+    mocks.getClientMetadata.mockResolvedValue({ client_name: 'AgentAsia Desktop' });
 
     const response = await GET(createRequest('uid-3'), createProps('uid-3'));
 

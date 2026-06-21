@@ -12,7 +12,7 @@ import {
   Text,
   Tooltip,
   TooltipGroup,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import {
   AlertTriangle,

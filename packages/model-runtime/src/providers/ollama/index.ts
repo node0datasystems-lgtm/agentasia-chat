@@ -1,5 +1,5 @@
-import type { ChatModelCard } from '@lobechat/types';
-import { imageUrlToBase64 } from '@lobechat/utils';
+import type { ChatModelCard } from '@agentasia/types';
+import { imageUrlToBase64 } from '@agentasia/utils';
 import { ModelProvider } from 'model-bank';
 import type { Tool } from 'ollama/browser';
 import { Ollama } from 'ollama/browser';

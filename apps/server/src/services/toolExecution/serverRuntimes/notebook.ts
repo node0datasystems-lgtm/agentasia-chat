@@ -1,5 +1,5 @@
-import { NotebookIdentifier } from '@lobechat/builtin-tool-notebook';
-import { NotebookExecutionRuntime } from '@lobechat/builtin-tool-notebook/executionRuntime';
+import { NotebookIdentifier } from '@agentasia/builtin-tool-notebook';
+import { NotebookExecutionRuntime } from '@agentasia/builtin-tool-notebook/executionRuntime';
 
 import { NotebookRuntimeService } from '@/server/services/notebook';
 

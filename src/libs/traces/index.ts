@@ -1,4 +1,4 @@
-import { CURRENT_VERSION } from '@lobechat/const';
+import { CURRENT_VERSION } from '@agentasia/const';
 import { Langfuse } from 'langfuse';
 import { type CreateLangfuseTraceBody } from 'langfuse-core';
 

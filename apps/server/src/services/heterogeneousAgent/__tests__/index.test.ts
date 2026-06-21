@@ -1,5 +1,5 @@
 // @vitest-environment node
-import type { AgentStreamEvent } from '@lobechat/agent-gateway-client';
+import type { AgentStreamEvent } from '@agentasia/agent-gateway-client';
 import { describe, expect, it, vi } from 'vitest';
 
 import { type IStreamEventManager } from '@/server/modules/AgentRuntime/types';

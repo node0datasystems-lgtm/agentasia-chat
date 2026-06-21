@@ -1,6 +1,6 @@
 // @vitest-environment node
-import type { TaskTemplate } from '@lobechat/const';
-import { TASK_TEMPLATE_RECOMMEND_MAX_COUNT } from '@lobechat/const';
+import type { TaskTemplate } from '@agentasia/const';
+import { TASK_TEMPLATE_RECOMMEND_MAX_COUNT } from '@agentasia/const';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { createTaskTemplateRecommendationSeedKey, TaskTemplateService } from './index';
@@ -154,7 +154,7 @@ describe('TaskTemplateService.listDailyRecommend', () => {
     const templateWithConnectors = {
       ...template,
       connectors: [
-        { identifier: 'github', required: true, source: 'lobehub' },
+        { identifier: 'github', required: true, source: 'agentasia' },
         { identifier: 'gmail', required: false, source: 'composio' },
       ],
       id: 102,
@@ -194,8 +194,8 @@ describe('TaskTemplateService.listDailyRecommend', () => {
         { ...template, cronPattern: '0 9 * 1 *' },
         { ...template, cronPattern: '0 9 * * 7' },
         { ...template, cronPattern: '0 9 * * 1,7' },
-        { ...template, connectors: [{ identifier: 101, required: true, source: 'lobehub' }] },
-        { ...template, connectors: [{ identifier: 'github', source: 'lobehub' }] },
+        { ...template, connectors: [{ identifier: 101, required: true, source: 'agentasia' }] },
+        { ...template, connectors: [{ identifier: 'github', source: 'agentasia' }] },
         { ...template, connectors: [{ identifier: 'github', required: true, source: 'unknown' }] },
       ],
     });
@@ -246,7 +246,7 @@ describe('TaskTemplateService.listDailyRecommend', () => {
     const validWithConnectors = {
       ...template,
       connectors: [
-        { identifier: 'github', required: true, source: 'lobehub' },
+        { identifier: 'github', required: true, source: 'agentasia' },
         { identifier: 'gmail', required: false, source: 'composio' },
       ],
       id: 102,
@@ -256,7 +256,7 @@ describe('TaskTemplateService.listDailyRecommend', () => {
         validWithConnectors,
         {
           ...template,
-          connectors: [{ identifier: 'unknown-required', required: true, source: 'lobehub' }],
+          connectors: [{ identifier: 'unknown-required', required: true, source: 'agentasia' }],
           id: 103,
         },
         {

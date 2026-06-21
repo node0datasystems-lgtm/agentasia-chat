@@ -1,4 +1,4 @@
-import { LayersEnum } from '@lobechat/types';
+import { LayersEnum } from '@agentasia/types';
 
 import type { AgentSignalOperationMarker } from '@/server/services/agentSignal/operationMarker';
 

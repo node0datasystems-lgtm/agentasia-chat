@@ -1,7 +1,7 @@
 import os from 'node:os';
 
-import type { DeviceIdentity } from '@lobechat/device-identity';
-import { deriveDeviceId } from '@lobechat/device-identity';
+import type { DeviceIdentity } from '@agentasia/device-identity';
+import { deriveDeviceId } from '@agentasia/device-identity';
 
 import { createLambdaClient } from '../api/client';
 

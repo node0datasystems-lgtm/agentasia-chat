@@ -1,4 +1,4 @@
-import { DEFAULT_AVATAR } from '@lobechat/const';
+import { DEFAULT_AVATAR } from '@agentasia/const';
 import {
   ActionIcon,
   Avatar,
@@ -8,7 +8,7 @@ import {
   Input,
   stopPropagation,
   Tooltip,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { type InputRef, message } from 'antd';
 import { Check, PaletteIcon } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

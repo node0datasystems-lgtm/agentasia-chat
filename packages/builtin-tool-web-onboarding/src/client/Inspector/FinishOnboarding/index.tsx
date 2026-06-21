@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinInspectorProps } from '@lobechat/types';
-import { Icon } from '@lobehub/ui';
+import type { BuiltinInspectorProps } from '@agentasia/types';
+import { Icon } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { CheckCircle2 } from 'lucide-react';
 import { memo } from 'react';

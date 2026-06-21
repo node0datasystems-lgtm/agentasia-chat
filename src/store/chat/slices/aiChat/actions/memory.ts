@@ -1,6 +1,6 @@
-import { chainSummaryHistory } from '@lobechat/prompts';
-import { type UIChatMessage } from '@lobechat/types';
-import { TraceNameMap } from '@lobechat/types';
+import { chainSummaryHistory } from '@agentasia/prompts';
+import { type UIChatMessage } from '@agentasia/types';
+import { TraceNameMap } from '@agentasia/types';
 
 import { chatService } from '@/services/chat';
 import { topicService } from '@/services/topic';

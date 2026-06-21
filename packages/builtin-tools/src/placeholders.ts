@@ -1,4 +1,4 @@
-import type { BuiltinPlaceholder } from '@lobechat/types';
+import type { BuiltinPlaceholder } from '@agentasia/types';
 
 /**
  * Builtin tools placeholders registry

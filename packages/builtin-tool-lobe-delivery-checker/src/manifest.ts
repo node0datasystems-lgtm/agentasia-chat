@@ -1,4 +1,4 @@
-import type { BuiltinToolManifest } from '@lobechat/types';
+import type { BuiltinToolManifest } from '@agentasia/types';
 
 import { systemPrompt } from './systemRole';
 import { LobeDeliveryCheckerApiName, LobeDeliveryCheckerIdentifier } from './types';

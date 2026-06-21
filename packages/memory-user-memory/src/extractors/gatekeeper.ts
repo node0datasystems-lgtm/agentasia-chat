@@ -1,5 +1,5 @@
-import { renderPlaceholderTemplate } from '@lobechat/context-engine';
-import type { GenerateObjectSchema } from '@lobechat/model-runtime';
+import { renderPlaceholderTemplate } from '@agentasia/context-engine';
+import type { GenerateObjectSchema } from '@agentasia/model-runtime';
 
 import { gatekeeperPrompt } from '../prompts';
 import type { GatekeeperResult } from '../schemas';

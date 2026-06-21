@@ -1,4 +1,4 @@
-import type { FollowUpChip } from '@lobechat/types';
+import type { FollowUpChip } from '@agentasia/types';
 
 import { type FollowUpActionState, type FollowUpActionStatus } from './initialState';
 

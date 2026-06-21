@@ -1,11 +1,11 @@
 // Disable the auto sort key eslint rule to make the code more logic and readable
-import { type AgentRuntimeContext } from '@lobechat/agent-runtime';
-import { MESSAGE_CANCEL_FLAT } from '@lobechat/const';
+import { type AgentRuntimeContext } from '@agentasia/agent-runtime';
+import { MESSAGE_CANCEL_FLAT } from '@agentasia/const';
 import {
   type ConversationContext,
   type MessageMetadata,
   type UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { getAgentStoreState } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';

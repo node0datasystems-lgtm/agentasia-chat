@@ -1,4 +1,4 @@
-import { DEFAULT_AGENT_CHAT_CONFIG, DEFAULT_AGENT_SEARCH_FC_MODEL } from '@lobechat/const';
+import { DEFAULT_AGENT_CHAT_CONFIG, DEFAULT_AGENT_SEARCH_FC_MODEL } from '@agentasia/const';
 import { describe, expect, it, vi } from 'vitest';
 
 import { type AgentStoreState } from '@/store/agent/initialState';
@@ -65,7 +65,7 @@ describe('chatConfigByIdSelectors', () => {
           'agent-1': {
             chatConfig: { enableAgentMode: true, historyCount: 10 },
             model: 'claude-opus-4-8',
-            provider: 'lobehub',
+            provider: 'agentasia',
           },
         },
       });

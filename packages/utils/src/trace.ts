@@ -1,5 +1,5 @@
-import type { TracePayload } from '@lobechat/const';
-import { LOBE_CHAT_TRACE_HEADER, LOBE_CHAT_TRACE_ID } from '@lobechat/const';
+import type { TracePayload } from '@agentasia/const';
+import { LOBE_CHAT_TRACE_HEADER, LOBE_CHAT_TRACE_ID } from '@agentasia/const';
 import { Buffer } from 'buffer.js';
 
 export const getTracePayload = (req: Request): TracePayload | undefined => {

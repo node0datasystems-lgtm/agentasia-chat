@@ -1,6 +1,6 @@
 import { CheckCircleFilled } from '@ant-design/icons';
-import { type StorageModeEnum } from '@lobechat/electron-client-ipc';
-import { Center, Flexbox } from '@lobehub/ui';
+import { type StorageModeEnum } from '@agentasia/electron-client-ipc';
+import { Center, Flexbox } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { type ComponentType, type ReactNode } from 'react';
 

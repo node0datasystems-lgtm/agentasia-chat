@@ -1,5 +1,5 @@
-import { escapeXml } from '@lobechat/prompts';
-import type { RuntimeMentionedAgent } from '@lobechat/types';
+import { escapeXml } from '@agentasia/prompts';
+import type { RuntimeMentionedAgent } from '@agentasia/types';
 import debug from 'debug';
 
 import { BaseFirstUserContentProvider } from '../base/BaseFirstUserContentProvider';
@@ -68,10 +68,10 @@ export interface AvailablePluginInfo {
   name: string;
   /**
    * Plugin source: 'builtin' for built-in tools, 'composio' for Composio servers,
-   * 'lobehub-skill' for LobehubSkill providers, 'custom' for user-added custom
+   * 'agentasia-skill' for LobehubSkill providers, 'custom' for user-added custom
    * MCP connectors (aligns with ConnectorSourceType.custom).
    */
-  type: 'builtin' | 'composio' | 'lobehub-skill' | 'custom';
+  type: 'builtin' | 'composio' | 'agentasia-skill' | 'custom';
 }
 
 /**
@@ -168,7 +168,7 @@ const defaultFormatContext = (context: AgentManagementContext): string => {
   if (context.availablePlugins && context.availablePlugins.length > 0) {
     const builtinPlugins = context.availablePlugins.filter((p) => p.type === 'builtin');
     const composioPlugins = context.availablePlugins.filter((p) => p.type === 'composio');
-    const lobehubSkillPlugins = context.availablePlugins.filter((p) => p.type === 'lobehub-skill');
+    const agentasiaSkillPlugins = context.availablePlugins.filter((p) => p.type === 'agentasia-skill');
     const customPlugins = context.availablePlugins.filter((p) => p.type === 'custom');
 
     const pluginsSections: string[] = [];
@@ -193,15 +193,15 @@ const defaultFormatContext = (context: AgentManagementContext): string => {
       pluginsSections.push(`  <composio_plugins>\n${composioItems}\n  </composio_plugins>`);
     }
 
-    if (lobehubSkillPlugins.length > 0) {
-      const lobehubSkillItems = lobehubSkillPlugins
+    if (agentasiaSkillPlugins.length > 0) {
+      const agentasiaSkillItems = agentasiaSkillPlugins
         .map((p) => {
           const desc = p.description ? ` - ${escapeXml(p.description)}` : '';
           return `    <plugin id="${p.identifier}">${escapeXml(p.name)}${desc}</plugin>`;
         })
         .join('\n');
       pluginsSections.push(
-        `  <lobehub_skill_plugins>\n${lobehubSkillItems}\n  </lobehub_skill_plugins>`,
+        `  <agentasia_skill_plugins>\n${agentasiaSkillItems}\n  </agentasia_skill_plugins>`,
       );
     }
 

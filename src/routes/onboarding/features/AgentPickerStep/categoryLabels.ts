@@ -1,4 +1,4 @@
-import { MarketplaceCategory } from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+import { MarketplaceCategory } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 
 export const CATEGORY_LABEL_KEYS = {
   [MarketplaceCategory.BusinessStrategy]: 'agentMarketplace.category.businessStrategy',

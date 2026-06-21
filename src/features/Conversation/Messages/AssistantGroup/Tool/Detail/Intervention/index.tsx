@@ -1,6 +1,6 @@
-import { getBuiltinIntervention } from '@lobechat/builtin-tools/interventions';
-import { safeParseJSON } from '@lobechat/utils';
-import { Flexbox } from '@lobehub/ui';
+import { getBuiltinIntervention } from '@agentasia/builtin-tools/interventions';
+import { safeParseJSON } from '@agentasia/utils';
+import { Flexbox } from '@agentasia/ui';
 import { memo, Suspense, useCallback, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 

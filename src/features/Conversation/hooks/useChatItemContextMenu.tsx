@@ -3,8 +3,8 @@ import {
   type ActionIconGroupItemType,
   type DropdownItem,
   type GenericItemType,
-} from '@lobehub/ui';
-import { createRawModal, showContextMenu } from '@lobehub/ui';
+} from '@agentasia/ui';
+import { createRawModal, showContextMenu } from '@agentasia/ui';
 import { App } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { type MouseEvent, type ReactNode } from 'react';

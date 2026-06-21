@@ -29,9 +29,9 @@ const APP_URL = process.env.APP_URL
 // Falls back to APP_URL if not set
 const INTERNAL_APP_URL = process.env.INTERNAL_APP_URL || APP_URL;
 
-const ASSISTANT_INDEX_URL = 'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public';
+const ASSISTANT_INDEX_URL = 'https://registry.npmmirror.com/@agentasia/agents-index/v1/files/public';
 
-const PLUGINS_INDEX_URL = 'https://registry.npmmirror.com/@lobehub/plugins-index/v1/files/public';
+const PLUGINS_INDEX_URL = 'https://registry.npmmirror.com/@agentasia/plugins-index/v1/files/public';
 
 export const getAppConfig = () => {
   return createEnv({
@@ -71,7 +71,7 @@ export const getAppConfig = () => {
       /**
        * Trusted Client ID for Market API authentication
        * Must be registered in Market's TRUSTED_CLIENT_IDS whitelist
-       * e.g., "lobechat-com", "lobehub-desktop"
+       * e.g., "lobechat-com", "agentasia-desktop"
        */
       MARKET_TRUSTED_CLIENT_ID: z.string().optional(),
 

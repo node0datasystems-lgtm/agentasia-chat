@@ -2,65 +2,65 @@ import {
   LobeActivatorInspectors,
   LobeActivatorManifest,
   LobeActivatorRenders,
-} from '@lobechat/builtin-tool-activator/client';
+} from '@agentasia/builtin-tool-activator/client';
 import {
   AgentBuilderInspectors,
   AgentBuilderInterventions,
   AgentBuilderManifest,
   AgentBuilderRenders,
   AgentBuilderStreamings,
-} from '@lobechat/builtin-tool-agent-builder/client';
+} from '@agentasia/builtin-tool-agent-builder/client';
 import {
   AgentDocumentsInspectors,
   AgentDocumentsManifest,
   AgentDocumentsRenders,
   AgentDocumentsStreamings,
-} from '@lobechat/builtin-tool-agent-documents/client';
+} from '@agentasia/builtin-tool-agent-documents/client';
 import {
   AgentManagementInspectors,
   AgentManagementManifest,
   AgentManagementRenders,
   AgentManagementStreamings,
-} from '@lobechat/builtin-tool-agent-management/client';
+} from '@agentasia/builtin-tool-agent-management/client';
 import {
   ClaudeCodeIdentifier,
   ClaudeCodeInspectors,
   ClaudeCodeInterventions,
   ClaudeCodeRenders,
   ClaudeCodeStreamings,
-} from '@lobechat/builtin-tool-claude-code/client';
+} from '@agentasia/builtin-tool-claude-code/client';
 import {
   CloudSandboxInspectors,
   CloudSandboxInterventions,
   CloudSandboxManifest,
   CloudSandboxRenders,
   CloudSandboxStreamings,
-} from '@lobechat/builtin-tool-cloud-sandbox/client';
+} from '@agentasia/builtin-tool-cloud-sandbox/client';
 import {
   GroupAgentBuilderInspectors,
   GroupAgentBuilderManifest,
   GroupAgentBuilderRenders,
   GroupAgentBuilderStreamings,
-} from '@lobechat/builtin-tool-group-agent-builder/client';
+} from '@agentasia/builtin-tool-group-agent-builder/client';
 import {
   GroupManagementInspectors,
   GroupManagementInterventions,
   GroupManagementManifest,
   GroupManagementRenders,
   GroupManagementStreamings,
-} from '@lobechat/builtin-tool-group-management/client';
+} from '@agentasia/builtin-tool-group-management/client';
 import {
   KnowledgeBaseInspectors,
   KnowledgeBaseManifest,
   KnowledgeBaseRenders,
-} from '@lobechat/builtin-tool-knowledge-base/client';
+} from '@agentasia/builtin-tool-knowledge-base/client';
 import {
   LobeAgentInspectors,
   LobeAgentInterventions,
   LobeAgentManifest,
   LobeAgentRenders,
   LobeAgentStreamings,
-} from '@lobechat/builtin-tool-lobe-agent/client';
+} from '@agentasia/builtin-tool-lobe-agent/client';
 import {
   LobeDeliveryCheckerInspectors,
   LobeDeliveryCheckerManifest,
@@ -68,7 +68,7 @@ import {
   LobeDeliveryCheckerPortalActions,
   LobeDeliveryCheckerPortalTitle,
   LobeDeliveryCheckerRenders,
-} from '@lobechat/builtin-tool-lobe-delivery-checker/client';
+} from '@agentasia/builtin-tool-lobe-delivery-checker/client';
 import {
   LocalSystemApiName,
   LocalSystemIdentifier,
@@ -79,50 +79,50 @@ import {
   LocalSystemRenders,
   LocalSystemSearchFilesPlaceholder,
   LocalSystemStreamings,
-} from '@lobechat/builtin-tool-local-system/client';
+} from '@agentasia/builtin-tool-local-system/client';
 import {
   MemoryInspectors,
   MemoryInterventions,
   MemoryManifest,
   MemoryRenders,
   MemoryStreamings,
-} from '@lobechat/builtin-tool-memory/client';
+} from '@agentasia/builtin-tool-memory/client';
 import {
   MessageInspectors,
   MessageInterventions,
   MessageManifest,
   MessageRenders,
   MessageStreamings,
-} from '@lobechat/builtin-tool-message/client';
+} from '@agentasia/builtin-tool-message/client';
 import {
   PageAgentInspectors,
   PageAgentManifest,
   PageAgentRenders,
   PageAgentStreamings,
-} from '@lobechat/builtin-tool-page-agent/client';
+} from '@agentasia/builtin-tool-page-agent/client';
 import {
   RemoteDeviceManifest,
   RemoteDeviceRenders,
-} from '@lobechat/builtin-tool-remote-device/client';
+} from '@agentasia/builtin-tool-remote-device/client';
 import {
   SelfFeedbackIntentInspectors,
   selfFeedbackIntentManifest,
-} from '@lobechat/builtin-tool-self-iteration/client';
+} from '@agentasia/builtin-tool-self-iteration/client';
 import {
   SkillStoreInspectors,
   SkillStoreManifest,
   SkillStoreRenders,
-} from '@lobechat/builtin-tool-skill-store/client';
+} from '@agentasia/builtin-tool-skill-store/client';
 import {
   SkillsInspectors,
   SkillsManifest,
   SkillsRenders,
-} from '@lobechat/builtin-tool-skills/client';
-import { TaskInspectors, TaskManifest, TaskRenders } from '@lobechat/builtin-tool-task/client';
+} from '@agentasia/builtin-tool-skills/client';
+import { TaskInspectors, TaskManifest, TaskRenders } from '@agentasia/builtin-tool-task/client';
 import {
   UserInteractionIdentifier,
   UserInteractionInterventions,
-} from '@lobechat/builtin-tool-user-interaction/client';
+} from '@agentasia/builtin-tool-user-interaction/client';
 import {
   WebBrowsingInspectors,
   WebBrowsingManifest,
@@ -130,14 +130,14 @@ import {
   WebBrowsingPortal,
   WebBrowsingPortalTitle,
   WebBrowsingRenders,
-} from '@lobechat/builtin-tool-web-browsing/client';
+} from '@agentasia/builtin-tool-web-browsing/client';
 import {
   WebOnboardingInspectors,
   WebOnboardingInterventions,
   WebOnboardingManifest,
   WebOnboardingRenders,
-} from '@lobechat/builtin-tool-web-onboarding/client';
-import { RunCommandRender } from '@lobechat/shared-tool-ui/renders';
+} from '@agentasia/builtin-tool-web-onboarding/client';
+import { RunCommandRender } from '@agentasia/shared-tool-ui/renders';
 import type {
   BuiltinInspector,
   BuiltinIntervention,
@@ -146,7 +146,7 @@ import type {
   BuiltinPortalTitle,
   BuiltinRender,
   BuiltinStreaming,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { CodexInspectors, CodexRenders } from './codex';
 import { GithubIdentifier, GithubInspectors, GithubRenders } from './github';

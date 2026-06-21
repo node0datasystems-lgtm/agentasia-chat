@@ -1,8 +1,8 @@
 'use client';
 
-import { SESSION_CHAT_URL } from '@lobechat/const';
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Avatar, Block, Flexbox, Markdown, Tag } from '@lobehub/ui';
+import { SESSION_CHAT_URL } from '@agentasia/const';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Avatar, Block, Flexbox, Markdown, Tag } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowRight } from 'lucide-react';
 import { memo, useCallback } from 'react';

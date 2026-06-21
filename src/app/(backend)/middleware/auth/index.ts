@@ -1,8 +1,8 @@
-import type { ChatCompletionErrorPayload } from '@lobechat/model-runtime';
-import { AgentRuntimeError } from '@lobechat/model-runtime';
-import { context as otContext } from '@lobechat/observability-otel/api';
-import type { ClientSecretPayload } from '@lobechat/types';
-import { ChatErrorType } from '@lobechat/types';
+import type { ChatCompletionErrorPayload } from '@agentasia/model-runtime';
+import { AgentRuntimeError } from '@agentasia/model-runtime';
+import { context as otContext } from '@agentasia/observability-otel/api';
+import type { ClientSecretPayload } from '@agentasia/types';
+import { ChatErrorType } from '@agentasia/types';
 
 import { auth } from '@/auth';
 import { getServerDB } from '@/database/core/db-adaptor';

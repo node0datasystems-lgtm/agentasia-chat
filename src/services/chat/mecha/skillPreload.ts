@@ -3,9 +3,9 @@ import {
   type CredSummary,
   injectCredsContext,
   type UserCredsContext,
-} from '@lobechat/builtin-tool-creds';
-import { resourcesTreePrompt } from '@lobechat/prompts';
-import type { RuntimeSelectedSkill, UserCredSummary } from '@lobechat/types';
+} from '@agentasia/builtin-tool-creds';
+import { resourcesTreePrompt } from '@agentasia/prompts';
+import type { RuntimeSelectedSkill, UserCredSummary } from '@agentasia/types';
 
 import { agentSkillService } from '@/services/skill';
 import { getToolStoreState } from '@/store/tool';

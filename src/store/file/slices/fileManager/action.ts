@@ -3,7 +3,7 @@ import {
   createNanoId,
   sanitizeFolderName,
   topologicalSortFolders,
-} from '@lobechat/utils';
+} from '@agentasia/utils';
 import { t } from 'i18next';
 import pMap from 'p-map';
 import { type SWRResponse } from 'swr';

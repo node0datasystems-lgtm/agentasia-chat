@@ -2,7 +2,7 @@ import type {
   MainBroadcastEventKey,
   MainBroadcastParams,
   TopicPopupInfo,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import type { WebContents } from 'electron';
 
 import { isLinux } from '@/const/env';

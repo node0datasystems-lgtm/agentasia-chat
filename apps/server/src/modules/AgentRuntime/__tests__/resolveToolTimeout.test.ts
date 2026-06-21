@@ -1,4 +1,4 @@
-import { type LobeToolManifest } from '@lobechat/context-engine';
+import { type LobeToolManifest } from '@agentasia/context-engine';
 import { describe, expect, it } from 'vitest';
 
 import {

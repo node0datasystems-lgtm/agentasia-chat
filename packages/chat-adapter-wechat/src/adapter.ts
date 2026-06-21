@@ -536,7 +536,7 @@ export class WechatAdapter implements Adapter<WechatThreadId, WechatRawMessage> 
     return {
       id: `bot_${Date.now()}`,
       raw: {
-        client_id: `lobehub_${Date.now()}`,
+        client_id: `agentasia_${Date.now()}`,
         context_token: contextToken,
         create_time_ms: Date.now(),
         from_user_id: this._botUserId || '',

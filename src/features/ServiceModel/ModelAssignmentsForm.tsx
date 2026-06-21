@@ -1,8 +1,8 @@
 'use client';
 
-import type { FormGroupItemType, FormItemProps } from '@lobehub/ui';
-import { Flexbox, Form, Icon, InputNumber, Skeleton, Tooltip } from '@lobehub/ui';
-import { Switch } from '@lobehub/ui/base-ui';
+import type { FormGroupItemType, FormItemProps } from '@agentasia/ui';
+import { Flexbox, Form, Icon, InputNumber, Skeleton, Tooltip } from '@agentasia/ui';
+import { Switch } from '@agentasia/ui/base-ui';
 import { ConfigProvider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Loader2Icon } from 'lucide-react';

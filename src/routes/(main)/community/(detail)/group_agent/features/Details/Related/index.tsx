@@ -1,4 +1,4 @@
-import { Avatar, Flexbox, Grid, Text } from '@lobehub/ui';
+import { Avatar, Flexbox, Grid, Text } from '@agentasia/ui';
 import qs from 'query-string';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

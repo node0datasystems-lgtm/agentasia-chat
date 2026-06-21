@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Center, Flexbox, Text } from '@lobehub/ui';
+import { Accordion, AccordionItem, Center, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, type ReactNode, useState } from 'react';
 

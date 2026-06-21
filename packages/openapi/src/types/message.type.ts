@@ -1,4 +1,4 @@
-import type { DBMessageItem, FileItem } from '@lobechat/types';
+import type { DBMessageItem, FileItem } from '@agentasia/types';
 import { z } from 'zod';
 
 import type { SessionItem, TopicItem } from '@/database/schemas';

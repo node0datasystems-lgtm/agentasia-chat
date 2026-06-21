@@ -3,13 +3,13 @@ import {
   listProjectSkills as runListProjectSkills,
   statPath as runStatPath,
   type WorkspaceScanDeps,
-} from '@lobechat/device-control';
+} from '@agentasia/device-control';
 import {
   type InitWorkspaceParams,
   type InitWorkspaceResult,
   type ListProjectSkillsParams,
   type ListProjectSkillsResult,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 
 import { createLogger } from '@/utils/logger';
 

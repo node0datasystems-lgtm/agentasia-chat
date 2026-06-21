@@ -1,4 +1,4 @@
-import { type LobeToolCustomPlugin } from '@lobechat/types';
+import { type LobeToolCustomPlugin } from '@agentasia/types';
 import { memo, useEffect, useMemo, useRef, useState } from 'react';
 
 import type { ConnectorCredentials, OIDCConfig } from '@/database/schemas';

@@ -1,4 +1,4 @@
-import type { StreamInvokeRequestParams } from '@lobechat/electron-client-ipc';
+import type { StreamInvokeRequestParams } from '@agentasia/electron-client-ipc';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock electron module

@@ -1,5 +1,5 @@
-import { parse } from '@lobechat/conversation-flow';
-import { type TraceEventPayloads } from '@lobechat/types';
+import { parse } from '@agentasia/conversation-flow';
+import { type TraceEventPayloads } from '@agentasia/types';
 import debug from 'debug';
 import isEqual from 'fast-deep-equal';
 

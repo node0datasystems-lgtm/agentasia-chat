@@ -1,4 +1,4 @@
-import { AccordionItem, ActionIcon, Center, Flexbox, Icon, Text, Tooltip } from '@lobehub/ui';
+import { AccordionItem, ActionIcon, Center, Flexbox, Icon, Text, Tooltip } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx, keyframes } from 'antd-style';
 import {
   FolderClosedIcon,

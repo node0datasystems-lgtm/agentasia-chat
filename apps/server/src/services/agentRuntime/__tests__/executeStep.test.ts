@@ -181,7 +181,7 @@ describe('AgentRuntimeService.executeStep - early exit on terminal state', () =>
     await (service as any).createAgentRuntime({
       metadata: {
         agentConfig: {},
-        modelRuntimeConfig: { model: 'gpt-test', provider: 'lobehub' },
+        modelRuntimeConfig: { model: 'gpt-test', provider: 'agentasia' },
         userId: 'user-1',
       },
       operationId: 'op-workspace',

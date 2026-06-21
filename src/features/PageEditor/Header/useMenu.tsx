@@ -1,6 +1,6 @@
-import { isDesktop } from '@lobechat/const';
-import { type DropdownItem } from '@lobehub/ui';
-import { Icon } from '@lobehub/ui';
+import { isDesktop } from '@agentasia/const';
+import { type DropdownItem } from '@agentasia/ui';
+import { Icon } from '@agentasia/ui';
 import { App } from 'antd';
 import { cssVar, useResponsive } from 'antd-style';
 import dayjs from 'dayjs';

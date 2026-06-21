@@ -6,7 +6,7 @@ import {
   type PreferenceMemoryItemSchema,
   type RemoveIdentityActionSchema,
   type UpdateIdentityActionSchema,
-} from '@lobechat/memory-user-memory/schemas';
+} from '@agentasia/memory-user-memory/schemas';
 import {
   type ActivityListParams,
   type ActivityListResult,
@@ -27,7 +27,7 @@ import {
   type SearchMemoryResult,
   type TypesEnum,
   type UpdateIdentityMemoryResult,
-} from '@lobechat/types';
+} from '@agentasia/types';
 import { type z } from 'zod';
 
 import { lambdaClient } from '@/libs/trpc/client';

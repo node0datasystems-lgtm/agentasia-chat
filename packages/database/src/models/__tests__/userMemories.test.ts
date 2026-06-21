@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { LayersEnum, MemorySourceType, MergeStrategyEnum, TypesEnum } from '@lobechat/types';
+import { LayersEnum, MemorySourceType, MergeStrategyEnum, TypesEnum } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 import { nanoid } from 'nanoid';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

@@ -1,4 +1,4 @@
-import type * as LobechatConstModule from '@lobechat/const';
+import type * as LobechatConstModule from '@agentasia/const';
 import { act, renderHook } from '@testing-library/react';
 import { TRPCClientError } from '@trpc/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

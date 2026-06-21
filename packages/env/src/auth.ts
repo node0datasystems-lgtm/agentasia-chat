@@ -296,5 +296,5 @@ export const getAuthConfig = () => {
 export const authEnv = getAuthConfig();
 
 // Auth headers and constants
-export const LOBE_CHAT_AUTH_HEADER = 'X-lobe-chat-auth';
+export const LOBE_CHAT_AUTH_HEADER = 'X-agentasia-chat-auth';
 export const LOBE_CHAT_OIDC_AUTH_HEADER = 'Oidc-Auth';

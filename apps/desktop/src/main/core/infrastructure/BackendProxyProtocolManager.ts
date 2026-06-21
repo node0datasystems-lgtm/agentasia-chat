@@ -1,4 +1,4 @@
-import { AUTH_REQUIRED_HEADER } from '@lobechat/desktop-bridge';
+import { AUTH_REQUIRED_HEADER } from '@agentasia/desktop-bridge';
 import { BrowserWindow, type Session, session as electronSession } from 'electron';
 
 import { isDev } from '@/const/env';
@@ -23,7 +23,7 @@ interface BackendProxyRemoteBaseOptions {
 
 /**
  * Holds per-session proxy context for routing renderer-originated backend
- * requests (`/trpc`, `/webapi`, `/api/auth`, `/market`) to the remote LobeHub
+ * requests (`/trpc`, `/webapi`, `/api/auth`, `/market`) to the remote AgentAsia
  * server. The context is consumed by `createAppRequestInterceptor`, which the
  * `app://` protocol manager invokes before its static / Vite fallback.
  */
@@ -138,7 +138,7 @@ export class BackendProxyProtocolManager {
   }
 
   /**
-   * Proxy a renderer-originated request through the remote LobeHub backend.
+   * Proxy a renderer-originated request through the remote AgentAsia backend.
    * Returns `null` if the session has no proxy context registered yet (caller
    * decides how to fall back). Throws on upstream fetch failure to mirror the
    * original `protocol.handle` semantics.

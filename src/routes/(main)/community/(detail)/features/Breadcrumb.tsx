@@ -1,6 +1,6 @@
 'use client';
 
-import { CopyButton, Flexbox } from '@lobehub/ui';
+import { CopyButton, Flexbox } from '@agentasia/ui';
 import { type BreadcrumbProps } from 'antd';
 import { Breadcrumb as AntdBreadcrumb } from 'antd';
 import { cssVar } from 'antd-style';

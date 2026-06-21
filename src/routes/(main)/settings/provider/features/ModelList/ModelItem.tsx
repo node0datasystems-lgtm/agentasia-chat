@@ -1,6 +1,6 @@
-import { ModelIcon } from '@lobehub/icons';
-import { ActionIcon, copyToClipboard, Flexbox, Tag, Text } from '@lobehub/ui';
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { ModelIcon } from '@agentasia/icons';
+import { ActionIcon, copyToClipboard, Flexbox, Tag, Text } from '@agentasia/ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Switch } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { LucidePencil, TrashIcon } from 'lucide-react';

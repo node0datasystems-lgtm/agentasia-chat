@@ -1,4 +1,4 @@
-import type { PlaybackState, SpeedMultiplier } from '@lobechat/agent-mock';
+import type { PlaybackState, SpeedMultiplier } from '@agentasia/agent-mock';
 import { create } from 'zustand';
 
 export type DevtoolsTab = 'timeline' | 'fixture';

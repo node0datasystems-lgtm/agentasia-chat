@@ -9,7 +9,7 @@ import {
   type SearchAgentParams,
   type UpdateAgentParams,
   type UpdatePromptParams,
-} from '@lobechat/builtin-tool-agent-management';
+} from '@agentasia/builtin-tool-agent-management';
 
 import { AgentModel } from '@/database/models/agent';
 import { PluginModel } from '@/database/models/plugin';

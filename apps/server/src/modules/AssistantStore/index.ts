@@ -1,4 +1,4 @@
-import { EdgeConfig } from '@lobechat/edge-config';
+import { EdgeConfig } from '@agentasia/edge-config';
 import urlJoin from 'url-join';
 
 import { DEFAULT_LANG, isLocaleNotSupport } from '@/const/locale';

@@ -1,10 +1,10 @@
-import { DocumentLoadFormat, DocumentLoadRule, PolicyLoad } from '@lobechat/agent-templates';
+import { DocumentLoadFormat, DocumentLoadRule, PolicyLoad } from '@agentasia/agent-templates';
 import {
   AGENT_DOCUMENT_CATEGORY,
   AGENT_DOCUMENT_SOURCE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
   WEB_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { describe, expect, it } from 'vitest';
 
 import type { AgentDocumentWithRules } from '@/database/models/agentDocuments';

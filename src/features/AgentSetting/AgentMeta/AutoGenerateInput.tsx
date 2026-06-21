@@ -1,5 +1,5 @@
-import { type InputProps } from '@lobehub/ui';
-import { ActionIcon, Input } from '@lobehub/ui';
+import { type InputProps } from '@agentasia/ui';
+import { ActionIcon, Input } from '@agentasia/ui';
 import { Wand2 } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

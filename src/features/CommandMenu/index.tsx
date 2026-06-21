@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, stopPropagation } from '@lobehub/ui';
+import { Avatar, stopPropagation } from '@agentasia/ui';
 import { Command, defaultFilter } from 'cmdk';
 import { CornerDownLeft } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
@@ -194,7 +194,7 @@ CommandMenuContent.displayName = 'CommandMenuContent';
 /**
  * CMDK Menu.
  *
- * Search everything in LobeHub.
+ * Search everything in AgentAsia.
  */
 const CommandMenu = memo(() => {
   const [open, setOpen] = useGlobalStore((s) => [s.status.showCommandMenu, s.updateSystemStatus]);

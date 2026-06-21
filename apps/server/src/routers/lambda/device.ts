@@ -1,5 +1,5 @@
-import { REMOTE_HETEROGENEOUS_AGENT_CONFIGS } from '@lobechat/heterogeneous-agents';
-import type { DeviceChannel, DeviceListItem, DeviceScope, WorkingDirEntry } from '@lobechat/types';
+import { REMOTE_HETEROGENEOUS_AGENT_CONFIGS } from '@agentasia/heterogeneous-agents';
+import type { DeviceChannel, DeviceListItem, DeviceScope, WorkingDirEntry } from '@agentasia/types';
 import { z } from 'zod';
 
 import {

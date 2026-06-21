@@ -20,10 +20,10 @@ export const useBuildListItems = (
       return text.toLowerCase().includes(keyword);
     };
 
-    // lobehub first, then others
+    // agentasia first, then others
     const sortedProviders = [...enabledList].sort((a, b) => {
-      const aIsLobehub = a.id === 'lobehub';
-      const bIsLobehub = b.id === 'lobehub';
+      const aIsLobehub = a.id === 'agentasia';
+      const bIsLobehub = b.id === 'agentasia';
       if (aIsLobehub && !bIsLobehub) return -1;
       if (!aIsLobehub && bIsLobehub) return 1;
       return 0;
@@ -58,12 +58,12 @@ export const useBuildListItems = (
         }
       }
 
-      // lobehub first
+      // agentasia first
       const modelArray = Array.from(modelMap.values());
       for (const model of modelArray) {
         model.providers.sort((a, b) => {
-          const aIsLobehub = a.id === 'lobehub';
-          const bIsLobehub = b.id === 'lobehub';
+          const aIsLobehub = a.id === 'agentasia';
+          const bIsLobehub = b.id === 'agentasia';
           if (aIsLobehub && !bIsLobehub) return -1;
           if (!aIsLobehub && bIsLobehub) return 1;
           return 0;

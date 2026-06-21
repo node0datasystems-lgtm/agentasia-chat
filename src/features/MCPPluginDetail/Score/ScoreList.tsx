@@ -1,4 +1,4 @@
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { Fragment, memo } from 'react';
 

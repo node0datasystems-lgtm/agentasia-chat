@@ -1,7 +1,7 @@
 import type {
   DesktopNotificationResult,
   ShowDesktopNotificationParams,
-} from '@lobechat/electron-client-ipc';
+} from '@agentasia/electron-client-ipc';
 import { app, Notification } from 'electron';
 import * as electronIs from 'electron-is';
 
@@ -56,7 +56,7 @@ export default class NotificationCtr extends ControllerModule {
     }
 
     const notification = new Notification({
-      body: 'LobeHub can now send you notifications.',
+      body: 'AgentAsia can now send you notifications.',
       title: 'Notification Permission',
     });
 
@@ -89,7 +89,7 @@ export default class NotificationCtr extends ControllerModule {
 
       // Set app user model ID on Windows
       if (electronIs.windows()) {
-        app.setAppUserModelId('com.lobehub.chat');
+        app.setAppUserModelId('com.agentasia.chat');
         logger.debug('Set Windows App User Model ID for notifications');
       }
 

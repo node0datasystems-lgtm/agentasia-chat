@@ -1,4 +1,4 @@
-import type { BuiltinStreaming } from '@lobechat/types';
+import type { BuiltinStreaming } from '@agentasia/types';
 
 import { LobeAgentApiName } from '../../types';
 import { CallSubAgentStreaming } from './CallSubAgent';

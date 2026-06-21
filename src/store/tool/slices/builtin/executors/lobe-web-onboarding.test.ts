@@ -1,5 +1,5 @@
-import { InterventionChecker } from '@lobechat/agent-runtime';
-import { WebOnboardingApiName, WebOnboardingManifest } from '@lobechat/builtin-tool-web-onboarding';
+import { InterventionChecker } from '@agentasia/agent-runtime';
+import { WebOnboardingApiName, WebOnboardingManifest } from '@agentasia/builtin-tool-web-onboarding';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const { finishOnboardingSpy, refreshUserStateSpy } = vi.hoisted(() => ({

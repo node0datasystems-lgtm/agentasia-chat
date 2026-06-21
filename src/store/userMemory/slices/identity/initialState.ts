@@ -1,4 +1,4 @@
-import { type IdentityListItem, type IdentityListSort } from '@lobechat/types';
+import { type IdentityListItem, type IdentityListSort } from '@agentasia/types';
 
 import { type IdentityForInjection } from '../../types';
 

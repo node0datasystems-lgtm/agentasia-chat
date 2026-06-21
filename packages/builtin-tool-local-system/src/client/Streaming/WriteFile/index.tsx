@@ -1,8 +1,8 @@
 'use client';
 
-import type { WriteLocalFileParams } from '@lobechat/electron-client-ipc';
-import type { BuiltinStreamingProps } from '@lobechat/types';
-import { Highlighter, Markdown } from '@lobehub/ui';
+import type { WriteLocalFileParams } from '@agentasia/electron-client-ipc';
+import type { BuiltinStreamingProps } from '@agentasia/types';
+import { Highlighter, Markdown } from '@agentasia/ui';
 import path from 'path-browserify-esm';
 import { memo } from 'react';
 

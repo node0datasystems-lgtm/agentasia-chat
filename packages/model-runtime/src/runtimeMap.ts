@@ -33,7 +33,8 @@ import { LobeInternLMAI } from './providers/internlm';
 import { LobeJinaAI } from './providers/jina';
 import { LobeKimiCodingPlanAI } from './providers/kimiCodingPlan';
 import { LobeLMStudioAI } from './providers/lmstudio';
-import { LobeHubAI } from './providers/lobehub';
+import { LobeLiteLLMAI } from './providers/litellm';
+import { AgentAsiaAI } from './providers/agentasia';
 import { LobeLongCatAI } from './providers/longcat';
 import { LobeMinimaxAI } from './providers/minimax';
 import { LobeMinimaxCodingPlanAI } from './providers/minimaxCodingPlan';
@@ -116,7 +117,8 @@ export const providerRuntimeMap = {
   jina: LobeJinaAI,
   kimicodingplan: LobeKimiCodingPlanAI,
   lmstudio: LobeLMStudioAI,
-  lobehub: LobeHubAI,
+  litellm: LobeLiteLLMAI,
+  agentasia: AgentAsiaAI,
   longcat: LobeLongCatAI,
   minimax: LobeMinimaxAI,
   minimaxcodingplan: LobeMinimaxCodingPlanAI,

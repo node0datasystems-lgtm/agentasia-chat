@@ -1,4 +1,4 @@
-import { formatSpeakerMessage } from '@lobechat/prompts';
+import { formatSpeakerMessage } from '@agentasia/prompts';
 
 interface RawReferencedMessage {
   author?: { global_name?: string; username?: string };

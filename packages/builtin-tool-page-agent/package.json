@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-page-agent",
+  "name": "@agentasia/builtin-tool-page-agent",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,13 +9,13 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/editor-runtime": "workspace:*"
+    "@agentasia/editor-runtime": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd-style": "*",
     "debug": "*",
     "lucide-react": "*",

@@ -1,4 +1,4 @@
-import { DEFAULT_PREFERENCE } from '@lobechat/const';
+import { DEFAULT_PREFERENCE } from '@agentasia/const';
 
 import { type UserState } from '@/store/user/initialState';
 

@@ -1,7 +1,7 @@
 import type {
   AgentSignalSourcePayloadMap,
   AgentSignalSourceType,
-} from '@lobechat/agent-signal/source';
+} from '@agentasia/agent-signal/source';
 
 import { agentSignalService } from '@/services/agentSignal';
 

@@ -1,4 +1,4 @@
-import { Highlighter } from '@lobehub/ui';
+import { Highlighter } from '@agentasia/ui';
 import { AnimatePresence, m as motion } from 'motion/react';
 import { memo, useMemo } from 'react';
 

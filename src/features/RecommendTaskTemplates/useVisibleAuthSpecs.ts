@@ -1,4 +1,4 @@
-import type { TaskTemplate, TaskTemplateConnector } from '@lobechat/const';
+import type { TaskTemplate, TaskTemplateConnector } from '@agentasia/const';
 import { useMemo } from 'react';
 
 import { getMainIconProvider } from './resolveTemplateIcon';

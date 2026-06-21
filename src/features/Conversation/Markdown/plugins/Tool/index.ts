@@ -1,4 +1,4 @@
-import { TOOL_TAG } from '@lobechat/const';
+import { TOOL_TAG } from '@agentasia/const';
 
 import { createRemarkSelfClosingTagPlugin } from '../remarkPlugins/createRemarkSelfClosingTagPlugin';
 import { type MarkdownElement } from '../type';

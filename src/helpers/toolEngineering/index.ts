@@ -1,15 +1,15 @@
 /**
  * Tools Engineering - Unified tools processing using ToolsEngine
  */
-import { CloudSandboxManifest } from '@lobechat/builtin-tool-cloud-sandbox';
-import { KnowledgeBaseManifest } from '@lobechat/builtin-tool-knowledge-base';
-import { LocalSystemManifest } from '@lobechat/builtin-tool-local-system';
-import { MemoryManifest } from '@lobechat/builtin-tool-memory';
-import { WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
-import { alwaysOnToolIds, chatModeAllowedToolIds, defaultToolIds } from '@lobechat/builtin-tools';
-import { createEnableChecker, type PluginEnableChecker } from '@lobechat/context-engine';
-import { ToolsEngine } from '@lobechat/context-engine';
-import { type ChatCompletionTool, type ToolManifest, type WorkingModel } from '@lobechat/types';
+import { CloudSandboxManifest } from '@agentasia/builtin-tool-cloud-sandbox';
+import { KnowledgeBaseManifest } from '@agentasia/builtin-tool-knowledge-base';
+import { LocalSystemManifest } from '@agentasia/builtin-tool-local-system';
+import { MemoryManifest } from '@agentasia/builtin-tool-memory';
+import { WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
+import { alwaysOnToolIds, chatModeAllowedToolIds, defaultToolIds } from '@agentasia/builtin-tools';
+import { createEnableChecker, type PluginEnableChecker } from '@agentasia/context-engine';
+import { ToolsEngine } from '@agentasia/context-engine';
+import { type ChatCompletionTool, type ToolManifest, type WorkingModel } from '@agentasia/types';
 
 import type { ConnectorToolPermission } from '@/database/schemas';
 import { isToolAvailableInCurrentEnv } from '@/helpers/toolAvailability';
@@ -19,7 +19,7 @@ import { agentChatConfigSelectors, agentSelectors } from '@/store/agent/selector
 import { getToolStoreState } from '@/store/tool';
 import {
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { connectorSelectors } from '@/store/tool/slices/connector';
@@ -46,7 +46,7 @@ export interface ToolsEngineConfig {
  * A manifest is usable by ToolsEngine only if it has a non-empty `api` array.
  * ToolsEngine.convertManifestsToTools calls `manifest.api.map(...)` unconditionally,
  * so any entry with `api` missing / non-array will crash the whole tools build.
- * Sources that populate manifests (installed plugins, Composio, LobeHub skills, MCP)
+ * Sources that populate manifests (installed plugins, Composio, AgentAsia skills, MCP)
  * have no shared schema validation, so we guard defensively at the merge point.
  */
 const isValidToolManifest = (m: ToolManifest | undefined): m is ToolManifest =>
@@ -127,9 +127,9 @@ export const createToolsEngine = (config: ToolsEngineConfig = {}): ToolsEngine =
   const composioTools = composioStoreSelectors.composioAsLobeTools(toolStoreState);
   const composioManifests = composioTools.map((tool) => tool.manifest as ToolManifest).filter(Boolean);
 
-  // Get LobeHub Skill tool manifests
-  const lobehubSkillTools = lobehubSkillStoreSelectors.lobehubSkillAsLobeTools(toolStoreState);
-  const lobehubSkillManifests = lobehubSkillTools
+  // Get AgentAsia Skill tool manifests
+  const agentasiaSkillTools = agentasiaSkillStoreSelectors.agentasiaSkillAsLobeTools(toolStoreState);
+  const agentasiaSkillManifests = agentasiaSkillTools
     .map((tool) => tool.manifest as ToolManifest)
     .filter(Boolean);
 
@@ -139,7 +139,7 @@ export const createToolsEngine = (config: ToolsEngineConfig = {}): ToolsEngine =
     ...dropInvalidManifests(pluginManifests, 'installedPlugins'),
     ...dropInvalidManifests(builtinManifests, 'builtinTools'),
     ...dropInvalidManifests(composioManifests, 'composio'),
-    ...dropInvalidManifests(lobehubSkillManifests, 'lobehubSkills'),
+    ...dropInvalidManifests(agentasiaSkillManifests, 'agentasiaSkills'),
     ...dropInvalidManifests(connectorManifests, 'connectors'),
     ...dropInvalidManifests(additionalManifests, 'additionalManifests'),
   ];

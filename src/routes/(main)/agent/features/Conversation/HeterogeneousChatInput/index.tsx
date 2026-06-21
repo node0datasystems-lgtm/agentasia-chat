@@ -3,8 +3,8 @@
 import {
   HETEROGENEOUS_TYPE_LABELS,
   isRemoteHeterogeneousType,
-} from '@lobechat/heterogeneous-agents';
-import { Alert, Button, Flexbox } from '@lobehub/ui';
+} from '@agentasia/heterogeneous-agents';
+import { Alert, Button, Flexbox } from '@agentasia/ui';
 import { memo, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router';
@@ -25,7 +25,7 @@ import { useChatStore } from '@/store/chat';
 import HeteroControlBar from './HeteroControlBar';
 
 // Heterogeneous agents (e.g. Claude Code) bring their own toolchain, memory,
-// and model, so LobeHub-side pickers don't apply. Typo is kept so the user
+// and model, so AgentAsia-side pickers don't apply. Typo is kept so the user
 // can still toggle the rich-text formatting bar.
 const leftActions: ActionKeys[] = ['typo'];
 const rightActions: ActionKeys[] = [];

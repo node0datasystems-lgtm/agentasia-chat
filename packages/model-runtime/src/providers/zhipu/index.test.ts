@@ -1013,7 +1013,7 @@ describe('LobeZhipuAI - custom features', () => {
         {
           headers: {
             'Authorization': 'Bearer test_api_key',
-            'Bigmodel-Organization': 'lobehub',
+            'Bigmodel-Organization': 'agentasia',
             'Bigmodel-Project': 'lobechat',
           },
           method: 'GET',

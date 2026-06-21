@@ -1,4 +1,4 @@
-import type { ChatCitationItem, ChatMessageError } from '@lobechat/types';
+import type { ChatCitationItem, ChatMessageError } from '@agentasia/types';
 import type OpenAI from 'openai';
 import type { Stream } from 'openai/streaming';
 
@@ -44,7 +44,7 @@ const hasThoughtSignature = (
  * Drop citations without a valid url. Some providers (e.g. OpenRouter's built-in
  * web search) emit empty citation objects like `{}`, which would otherwise break
  * downstream rendering (`new URL(undefined)`) and message persistence (Zod requires
- * `url` to be a string). See https://github.com/lobehub/lobehub/issues/15043
+ * `url` to be a string). See https://github.com/node0datasystems-lgtm/agentasia-chat/issues/15043
  */
 const filterValidCitations = (citations: ChatCitationItem[]): ChatCitationItem[] =>
   citations.filter((citation) => !!citation?.url);
@@ -485,8 +485,8 @@ const transformOpenAIStream = (
       // DeepSeek reasoner will put thinking in the reasoning_content field
       // litellm and not set content = null when processing reasoning content
       // en: siliconflow and aliyun bailian has encountered a situation where both content and reasoning_content are present, so need to handle it
-      // refs: https://github.com/lobehub/lobe-chat/issues/5681 (siliconflow)
-      // refs: https://github.com/lobehub/lobe-chat/issues/5956 (aliyun bailian)
+      // refs: https://github.com/agentasia/agentasia-chat/issues/5681 (siliconflow)
+      // refs: https://github.com/agentasia/agentasia-chat/issues/5956 (aliyun bailian)
       if (typeof content === 'string' && typeof reasoning_content === 'string') {
         if (content === '' && reasoning_content === '') {
           content = null;

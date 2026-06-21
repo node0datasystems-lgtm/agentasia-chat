@@ -1,4 +1,4 @@
-import { files } from '@lobechat/database/schemas';
+import { files } from '@agentasia/database/schemas';
 import { and, inArray } from 'drizzle-orm';
 
 import type { LobeChatDatabase } from '@/database/type';

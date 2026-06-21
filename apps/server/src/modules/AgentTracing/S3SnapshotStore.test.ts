@@ -2,7 +2,7 @@
 import { promisify } from 'node:util';
 import { zstdCompress, zstdDecompress } from 'node:zlib';
 
-import type { ExecutionSnapshot } from '@lobechat/agent-tracing';
+import type { ExecutionSnapshot } from '@agentasia/agent-tracing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const compressZstd = promisify(zstdCompress);

@@ -1,5 +1,5 @@
-import { SendButton, useEditor } from '@lobehub/editor/react';
-import { Avatar, Flexbox } from '@lobehub/ui';
+import { SendButton, useEditor } from '@agentasia/editor/react';
+import { Avatar, Flexbox } from '@agentasia/ui';
 import { $getRoot } from 'lexical';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

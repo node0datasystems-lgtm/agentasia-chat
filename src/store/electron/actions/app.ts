@@ -1,4 +1,4 @@
-import { type ElectronAppState } from '@lobechat/electron-client-ipc';
+import { type ElectronAppState } from '@agentasia/electron-client-ipc';
 import { type SWRResponse } from 'swr';
 
 import { globalAgentContextManager } from '@/helpers/GlobalAgentContextManager';

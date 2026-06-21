@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_AVATAR, EDITOR_DEBOUNCE_TIME } from '@lobechat/const';
-import { Block, Flexbox, Icon, Input, Skeleton, Tooltip } from '@lobehub/ui';
+import { DEFAULT_AVATAR, EDITOR_DEBOUNCE_TIME } from '@agentasia/const';
+import { Block, Flexbox, Icon, Input, Skeleton, Tooltip } from '@agentasia/ui';
 import { useDebounceFn } from 'ahooks';
 import { message } from 'antd';
 import isEqual from 'fast-deep-equal';

@@ -1,4 +1,4 @@
-import type { EvalBenchmarkRubric, EvalTestCaseContent } from '@lobechat/types';
+import type { EvalBenchmarkRubric, EvalTestCaseContent } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { evaluate } from '../src';

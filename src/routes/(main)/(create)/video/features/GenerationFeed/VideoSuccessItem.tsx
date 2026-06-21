@@ -1,6 +1,6 @@
 'use client';
 
-import { Block } from '@lobehub/ui';
+import { Block } from '@agentasia/ui';
 import { memo } from 'react';
 
 import { ActionButtons } from '@/routes/(main)/(create)/image/features/GenerationFeed/GenerationItem/ActionButtons';

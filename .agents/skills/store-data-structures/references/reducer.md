@@ -12,7 +12,7 @@
 ```typescript
 // src/store/eval/slices/benchmark/reducer.ts
 import { produce } from 'immer';
-import type { AgentEvalBenchmark } from '@lobechat/types';
+import type { AgentEvalBenchmark } from '@agentasia/types';
 
 // Action types — discriminated union
 type SetBenchmarkDetailAction = {

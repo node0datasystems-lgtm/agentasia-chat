@@ -30,7 +30,7 @@ export default defineFixtures({
             identifier: 'preview-builder',
             installCount: 128,
             name: 'Preview Builder',
-            repository: 'https://github.com/lobehub/preview-builder',
+            repository: 'https://github.com/agentasia/preview-builder',
             summary: 'Reusable preview harness workflows.',
             version: '0.3.1',
           },

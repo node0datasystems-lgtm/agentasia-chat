@@ -1,4 +1,4 @@
-import type { WorkingDirEntry, WorkspaceInitResult } from '@lobechat/types';
+import type { WorkingDirEntry, WorkspaceInitResult } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import {

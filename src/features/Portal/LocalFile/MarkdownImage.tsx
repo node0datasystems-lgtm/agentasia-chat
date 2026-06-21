@@ -1,4 +1,4 @@
-import { Image } from '@lobehub/ui';
+import { Image } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import type { ComponentProps } from 'react';
 import { memo, useEffect, useMemo, useState } from 'react';

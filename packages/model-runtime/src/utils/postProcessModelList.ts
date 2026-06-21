@@ -1,4 +1,4 @@
-import type { ChatModelCard } from '@lobechat/types';
+import type { ChatModelCard } from '@agentasia/types';
 import { omit } from 'es-toolkit/compat';
 import type { AiModelType } from 'model-bank';
 import { CHAT_MODEL_IMAGE_GENERATION_PARAMS } from 'model-bank';

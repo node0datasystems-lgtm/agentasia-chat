@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@lobehub/ui';
+import { Flexbox } from '@agentasia/ui';
 import { memo, useCallback, useMemo, useRef } from 'react';
 import { type VListHandle } from 'virtua';
 import { VList } from 'virtua';

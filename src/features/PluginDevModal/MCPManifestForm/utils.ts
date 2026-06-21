@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 
 import { safeParseJSON } from '@/utils/safeParseJSON';
 

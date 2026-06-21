@@ -2,8 +2,8 @@ import {
   CUSTOM_DOCUMENT_FILE_TYPE,
   CUSTOM_FOLDER_FILE_TYPE,
   MARKDOWN_MIME_TYPES,
-} from '@lobechat/const';
-import { Checkbox, showContextMenu, stopPropagation } from '@lobehub/ui';
+} from '@agentasia/const';
+import { Checkbox, showContextMenu, stopPropagation } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import React, { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 

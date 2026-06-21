@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelTag } from '@lobehub/icons';
-import { ActionIconGroup, Block, Flexbox, Markdown, Tag, Text } from '@lobehub/ui';
+import { ModelTag } from '@agentasia/icons';
+import { ActionIconGroup, Block, Flexbox, Markdown, Tag, Text } from '@agentasia/ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import dayjs from 'dayjs';

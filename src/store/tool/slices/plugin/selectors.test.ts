@@ -1,4 +1,4 @@
-import { type ToolManifest } from '@lobechat/types';
+import { type ToolManifest } from '@agentasia/types';
 import { describe, expect, it } from 'vitest';
 
 import { type ToolStoreState } from '../../initialState';

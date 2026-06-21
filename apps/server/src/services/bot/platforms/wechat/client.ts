@@ -1,4 +1,4 @@
-import type { WechatRawMessage } from '@lobechat/chat-adapter-wechat';
+import type { WechatRawMessage } from '@agentasia/chat-adapter-wechat';
 import {
   createWechatAdapter,
   downloadMediaFromRawMessage,
@@ -6,7 +6,7 @@ import {
   MessageState,
   MessageType,
   WechatApiClient,
-} from '@lobechat/chat-adapter-wechat';
+} from '@agentasia/chat-adapter-wechat';
 import type { Message } from 'chat';
 import debug from 'debug';
 

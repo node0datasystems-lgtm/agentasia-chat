@@ -1,4 +1,4 @@
-import type { BuiltinStreaming } from '@lobechat/types';
+import type { BuiltinStreaming } from '@agentasia/types';
 
 import { GroupManagementApiName } from '../../types';
 import { BroadcastStreaming } from './Broadcast';

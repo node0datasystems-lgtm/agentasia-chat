@@ -1,12 +1,12 @@
-import type { LobeChatDatabase } from '@lobechat/database';
-import { createTimingHelpers } from '@lobechat/utils';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { createTimingHelpers } from '@agentasia/utils';
 
 import { MessageModel } from '@/database/models/message';
 import { TopicModel } from '@/database/models/topic';
 import { FileService } from '@/server/services/file';
 
 const { createPrefixedTimingContext, runTimedStage, toTimingContext } = createTimingHelpers(
-  'lobe-server:chat:lobehub:timing',
+  'lobe-server:chat:agentasia:timing',
 );
 
 interface GetMessagesAndTopicsParams {

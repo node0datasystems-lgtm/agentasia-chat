@@ -1,4 +1,4 @@
-import { type BuiltinSkill } from '@lobechat/types';
+import { type BuiltinSkill } from '@agentasia/types';
 
 import { systemPrompt } from './content';
 

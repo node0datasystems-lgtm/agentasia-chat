@@ -9,10 +9,10 @@ import {
   type LobehubSkillProviderType,
   RECOMMENDED_SKILLS,
   RecommendedSkillType,
-} from '@lobechat/const';
-import { type BuiltinSkill, type LobeBuiltinTool } from '@lobechat/types';
-import { Center, Empty } from '@lobehub/ui';
-import { SkillsIcon } from '@lobehub/ui/icons';
+} from '@agentasia/const';
+import { type BuiltinSkill, type LobeBuiltinTool } from '@agentasia/types';
+import { Center, Empty } from '@agentasia/ui';
+import { SkillsIcon } from '@agentasia/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronDownIcon, ChevronRightIcon } from 'lucide-react';
@@ -27,12 +27,12 @@ import {
   agentSkillsSelectors,
   builtinToolSelectors,
   composioStoreSelectors,
-  lobehubSkillStoreSelectors,
+  agentasiaSkillStoreSelectors,
   pluginSelectors,
 } from '@/store/tool/selectors';
 import { ComposioServerStatus } from '@/store/tool/slices/composioStore';
 import { connectorSelectors } from '@/store/tool/slices/connector';
-import { LobehubSkillStatus } from '@/store/tool/slices/lobehubSkillStore/types';
+import { LobehubSkillStatus } from '@/store/tool/slices/agentasiaSkillStore/types';
 import { type LobeToolType } from '@/types/tool/tool';
 
 import AgentSkillItem from './AgentSkillItem';
@@ -94,7 +94,7 @@ const SkillList = memo<SkillListProps>(
 
     const isLobehubSkillEnabled = useServerConfigStore(serverConfigSelectors.enableLobehubSkill);
     const isComposioEnabled = useServerConfigStore(serverConfigSelectors.enableComposio);
-    const allLobehubSkillServers = useToolStore(lobehubSkillStoreSelectors.getServers, isEqual);
+    const allLobehubSkillServers = useToolStore(agentasiaSkillStoreSelectors.getServers, isEqual);
     const allComposioServers = useToolStore(composioStoreSelectors.getServers, isEqual);
     const installedPluginList = useToolStore(pluginSelectors.installedPluginMetaList, isEqual);
     const marketAgentSkills = useToolStore(agentSkillsSelectors.getMarketAgentSkills, isEqual);
@@ -150,14 +150,14 @@ const SkillList = memo<SkillListProps>(
     };
 
     // Separate skills into three categories:
-    // 1. Integrations (Builtin, LobeHub and Composio skills)
+    // 1. Integrations (Builtin, AgentAsia and Composio skills)
     // 2. Community MCP Tools (type === 'plugin')
     // 3. Custom MCP Tools (type === 'customPlugin')
     const { integrations, communityMCPs, customMCPs } = useMemo(() => {
       type IntegrationItem =
         | { builtinAgentSkill: BuiltinSkill; type: 'builtinAgent' }
         | { builtinTool: LobeBuiltinTool; type: 'builtin' }
-        | { provider: LobehubSkillProviderType; type: 'lobehub' }
+        | { provider: LobehubSkillProviderType; type: 'agentasia' }
         | { serverType: ComposioAppType; type: 'composio' };
 
       let integrationItems: IntegrationItem[] = [];
@@ -183,7 +183,7 @@ const SkillList = memo<SkillListProps>(
           } else if (skill.type === RecommendedSkillType.Lobehub && isLobehubSkillEnabled) {
             const provider = getLobehubSkillProviderById(skill.id);
             if (provider) {
-              integrationItems.push({ provider, type: 'lobehub' });
+              integrationItems.push({ provider, type: 'agentasia' });
               addedLobehubIds.add(skill.id);
             }
           } else if (skill.type === RecommendedSkillType.Composio && isComposioEnabled) {
@@ -215,7 +215,7 @@ const SkillList = memo<SkillListProps>(
             ) {
               const provider = getLobehubSkillProviderById(server.identifier);
               if (provider) {
-                integrationItems.push({ provider, type: 'lobehub' });
+                integrationItems.push({ provider, type: 'agentasia' });
               }
             }
           }
@@ -243,10 +243,10 @@ const SkillList = memo<SkillListProps>(
           }
         }
 
-        // Add lobehub skills
+        // Add agentasia skills
         if (isLobehubSkillEnabled) {
           for (const provider of LOBEHUB_SKILL_PROVIDERS) {
-            integrationItems.push({ provider, type: 'lobehub' });
+            integrationItems.push({ provider, type: 'agentasia' });
           }
         }
 
@@ -257,9 +257,9 @@ const SkillList = memo<SkillListProps>(
           }
         }
 
-        // Filter integrations: show all builtin and lobehub skills, but only connected composio
+        // Filter integrations: show all builtin and agentasia skills, but only connected composio
         integrationItems = integrationItems.filter((item) => {
-          if (item.type === 'builtinAgent' || item.type === 'builtin' || item.type === 'lobehub') {
+          if (item.type === 'builtinAgent' || item.type === 'builtin' || item.type === 'agentasia') {
             return true;
           }
           return (
@@ -278,7 +278,7 @@ const SkillList = memo<SkillListProps>(
           case 'builtin': {
             return isBuiltinToolInstalled(item.builtinTool.identifier);
           }
-          case 'lobehub': {
+          case 'agentasia': {
             return (
               getLobehubSkillServerByProvider(item.provider.id)?.status ===
               LobehubSkillStatus.CONNECTED
@@ -405,7 +405,7 @@ const SkillList = memo<SkillListProps>(
     const builtinToolItems = integrations.filter((i) => i.type === 'builtin');
     const builtinSkillItems = integrations.filter((i) => i.type === 'builtinAgent');
     const communitySkillItems = integrations.filter(
-      (i) => i.type === 'lobehub' || i.type === 'composio',
+      (i) => i.type === 'agentasia' || i.type === 'composio',
     );
 
     const toggleSection = (key: string) => {
@@ -453,7 +453,7 @@ const SkillList = memo<SkillListProps>(
         {hasBuiltinTools &&
           renderSection(
             'builtinTools',
-            t('skillGroup.builtinTools', 'LobeHub 内置 Tools'),
+            t('skillGroup.builtinTools', 'AgentAsia 内置 Tools'),
             builtinToolItems.map((item) => {
               if (item.type !== 'builtin') return null;
               const localizedTitle = t(`tools.builtins.${item.builtinTool.identifier}.title`, {
@@ -501,7 +501,7 @@ const SkillList = memo<SkillListProps>(
             'communityConnectors',
             t('skillGroup.communityConnectors', 'OAuth Connectors'),
             communitySkillItems.map((item) => {
-              if (item.type === 'lobehub') {
+              if (item.type === 'agentasia') {
                 return (
                   <LobehubSkillItem
                     isSelected={selectedIdentifier === item.provider.id}
@@ -510,7 +510,7 @@ const SkillList = memo<SkillListProps>(
                     server={getLobehubSkillServerByProvider(item.provider.id)}
                     onDelete={onDeleteSelected}
                     onSelect={
-                      onSelect ? () => onSelect(item.provider.id, 'lobehub-connector') : undefined
+                      onSelect ? () => onSelect(item.provider.id, 'agentasia-connector') : undefined
                     }
                   />
                 );

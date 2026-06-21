@@ -1,4 +1,4 @@
-import { Block, Flexbox, Highlighter, Text } from '@lobehub/ui';
+import { Block, Flexbox, Highlighter, Text } from '@agentasia/ui';
 import { Divider } from 'antd';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,10 +1,10 @@
 ---
 name: store-data-structures
-description: 'LobeHub Zustand store data-shape patterns. Use when designing store state, list/detail splits, normalized maps, reducers, messagesMap, topicsMap, or choosing shared type sources.'
+description: 'AgentAsia Zustand store data-shape patterns. Use when designing store state, list/detail splits, normalized maps, reducers, messagesMap, topicsMap, or choosing shared type sources.'
 user-invocable: false
 ---
 
-# LobeHub Store Data Structures
+# AgentAsia Store Data Structures
 
 How to structure data in Zustand stores for fast list rendering, multi-detail caching, and ergonomic optimistic updates.
 
@@ -74,7 +74,7 @@ Examples: benchmark list, dataset list, user list.
 
 ```typescript
 // src/store/eval/slices/benchmark/initialState.ts
-import type { AgentEvalBenchmark, AgentEvalBenchmarkListItem } from '@lobechat/types';
+import type { AgentEvalBenchmark, AgentEvalBenchmarkListItem } from '@agentasia/types';
 
 export interface BenchmarkSliceState {
   // List — simple array

@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-import type { TaskTemplate, TaskTemplateConnector } from '@lobechat/const';
+import type { TaskTemplate, TaskTemplateConnector } from '@agentasia/const';
 import {
   getComposioAppByIdentifier,
   getLobehubConnectorProviderById,
@@ -9,7 +9,7 @@ import {
   TASK_TEMPLATE_ICONS,
   TASK_TEMPLATE_RECOMMEND_COUNT,
   TASK_TEMPLATE_RECOMMEND_MAX_COUNT,
-} from '@lobechat/const';
+} from '@agentasia/const';
 import { z } from 'zod';
 
 import { appEnv } from '@/envs/app';
@@ -67,11 +67,11 @@ const taskTemplateConnectorSchema: z.ZodType<TaskTemplateConnector> = z
   .object({
     identifier: z.string(),
     required: z.boolean(),
-    source: z.enum(['composio', 'lobehub']),
+    source: z.enum(['composio', 'agentasia']),
   })
   .refine(
     (connector) =>
-      connector.source === 'lobehub'
+      connector.source === 'agentasia'
         ? !!getLobehubConnectorProviderById(connector.identifier)
         : !!getComposioAppByIdentifier(connector.identifier),
     { message: 'Unknown task template connector' },

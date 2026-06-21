@@ -3,7 +3,7 @@ import {
   AGENT_DOCUMENT_SKILL_CATEGORY,
   AGENT_DOCUMENT_WEB_CATEGORY,
   WEB_DOCUMENT_SOURCE_TYPE,
-} from '@lobechat/const';
+} from '@agentasia/const';
 
 import {
   AGENT_SKILL_TEMPLATE_ID,

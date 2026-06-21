@@ -20,9 +20,9 @@ describe('SkillResolver', () => {
       name: 'Agent Browser',
     },
     {
-      description: 'LobeHub management',
-      identifier: 'lobehub-cli',
-      name: 'LobeHub CLI',
+      description: 'AgentAsia management',
+      identifier: 'agentasia-cli',
+      name: 'AgentAsia CLI',
     },
   ];
 
@@ -76,12 +76,12 @@ describe('SkillResolver', () => {
       skills: baseSkills,
     };
     const accumulated: ActivatedStepSkill[] = [
-      { activatedAtStep: 1, content: 'accumulated content', identifier: 'lobehub-cli' },
+      { activatedAtStep: 1, content: 'accumulated content', identifier: 'agentasia-cli' },
     ];
 
     const resolved = resolver.resolve(operationSkillSet, emptyDelta, accumulated);
 
-    const cli = resolved.enabledSkills.find((s) => s.identifier === 'lobehub-cli');
+    const cli = resolved.enabledSkills.find((s) => s.identifier === 'agentasia-cli');
     expect(cli?.activated).toBe(true);
     expect(cli?.content).toBe('accumulated content');
   });
@@ -94,7 +94,7 @@ describe('SkillResolver', () => {
     const delta: StepSkillDelta = {
       activatedSkills: [{ identifier: 'agent-browser' }],
     };
-    const accumulated: ActivatedStepSkill[] = [{ activatedAtStep: 0, identifier: 'lobehub-cli' }];
+    const accumulated: ActivatedStepSkill[] = [{ activatedAtStep: 0, identifier: 'agentasia-cli' }];
 
     const resolved = resolver.resolve(operationSkillSet, delta, accumulated);
 

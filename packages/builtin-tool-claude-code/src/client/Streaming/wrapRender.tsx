@@ -1,6 +1,6 @@
 'use client';
 
-import type { BuiltinRenderProps, BuiltinStreaming } from '@lobechat/types';
+import type { BuiltinRenderProps, BuiltinStreaming } from '@agentasia/types';
 import { createElement, type ReactNode } from 'react';
 
 type AnyRender = (props: BuiltinRenderProps<any, any, any>) => ReactNode;

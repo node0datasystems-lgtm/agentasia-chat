@@ -1,4 +1,4 @@
-import { Block, Flexbox, Text } from '@lobehub/ui';
+import { Block, Flexbox, Text } from '@agentasia/ui';
 import { memo } from 'react';
 
 import FileIcon from '@/components/FileIcon';

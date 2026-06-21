@@ -1,5 +1,5 @@
-import { Avatar, Icon } from '@lobehub/ui';
-import { McpIcon, SkillsIcon } from '@lobehub/ui/icons';
+import { Avatar, Icon } from '@agentasia/ui';
+import { McpIcon, SkillsIcon } from '@agentasia/ui/icons';
 import { memo } from 'react';
 
 interface MentionItemIconProps {

@@ -1,6 +1,6 @@
-import { getBuiltinRenderDisplayControl } from '@lobechat/builtin-tools/displayControls';
-import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@lobechat/const';
-import { type RenderDisplayControl, type ToolManifest } from '@lobechat/types';
+import { getBuiltinRenderDisplayControl } from '@agentasia/builtin-tools/displayControls';
+import { getComposioAppByIdentifier, getLobehubSkillProviderById } from '@agentasia/const';
+import { type RenderDisplayControl, type ToolManifest } from '@agentasia/types';
 
 import {
   isInstalledPluginAvailableInCurrentEnv,
@@ -12,15 +12,15 @@ import { type LobeToolMeta } from '@/types/tool/tool';
 import { type ToolStoreState } from '../initialState';
 import { builtinToolSelectors } from '../slices/builtin/selectors';
 import { ComposioServerStatus } from '../slices/composioStore';
-import { lobehubSkillStoreSelectors } from '../slices/lobehubSkillStore';
-import { LobehubSkillStatus } from '../slices/lobehubSkillStore/types';
+import { agentasiaSkillStoreSelectors } from '../slices/agentasiaSkillStore';
+import { LobehubSkillStatus } from '../slices/agentasiaSkillStore/types';
 import { pluginSelectors } from '../slices/plugin/selectors';
 
 const metaList = (s: ToolStoreState): LobeToolMeta[] => {
   const pluginList = pluginSelectors.installedPluginMetaList(s) as LobeToolMeta[];
-  const lobehubSkillList = lobehubSkillStoreSelectors.metaList(s) as LobeToolMeta[];
+  const agentasiaSkillList = agentasiaSkillStoreSelectors.metaList(s) as LobeToolMeta[];
 
-  return builtinToolSelectors.metaList(s).concat(pluginList).concat(lobehubSkillList);
+  return builtinToolSelectors.metaList(s).concat(pluginList).concat(agentasiaSkillList);
 };
 
 /**
@@ -31,9 +31,9 @@ const metaList = (s: ToolStoreState): LobeToolMeta[] => {
  */
 const discoverableMetaList = (s: ToolStoreState): LobeToolMeta[] => {
   const pluginList = pluginSelectors.installedPluginMetaList(s) as LobeToolMeta[];
-  const lobehubSkillList = lobehubSkillStoreSelectors.metaList(s) as LobeToolMeta[];
+  const agentasiaSkillList = agentasiaSkillStoreSelectors.metaList(s) as LobeToolMeta[];
 
-  return builtinToolSelectors.discoverableMetaList(s).concat(pluginList).concat(lobehubSkillList);
+  return builtinToolSelectors.discoverableMetaList(s).concat(pluginList).concat(agentasiaSkillList);
 };
 
 const getMetaById =
@@ -117,16 +117,16 @@ export interface AvailableToolForDiscovery {
  *
  * Sources:
  * 1. Builtin tools (from s.builtinTools) — exclude non-discoverable, skills, platform-unavailable
- * 2. User-installed plugins (from s.installedPlugins) — exclude Composio/LobeHub Skill/agent skill overlap
+ * 2. User-installed plugins (from s.installedPlugins) — exclude Composio/AgentAsia Skill/agent skill overlap
  * 3. Composio MCP servers (connected) — description from COMPOSIO_APP_TYPES
- * 4. LobeHub Skill servers (connected) — description from LOBEHUB_SKILL_PROVIDERS
+ * 4. AgentAsia Skill servers (connected) — description from LOBEHUB_SKILL_PROVIDERS
  */
 const availableToolsForDiscovery = (s: ToolStoreState): AvailableToolForDiscovery[] => {
   // Build exclusion sets for deduplication
   const builtinSkillIds = new Set((s.builtinSkills || []).map((skill) => skill.identifier));
   const agentSkillIds = new Set((s.agentSkills || []).map((skill) => skill.identifier));
   const composioIds = new Set((s.composioServers || []).map((server) => server.identifier));
-  const lobehubSkillIds = new Set((s.lobehubSkillServers || []).map((server) => server.identifier));
+  const agentasiaSkillIds = new Set((s.agentasiaSkillServers || []).map((server) => server.identifier));
 
   // 1. Builtin tools — directly from s.builtinTools
   const builtinItems = s.builtinTools
@@ -140,10 +140,10 @@ const availableToolsForDiscovery = (s: ToolStoreState): AvailableToolForDiscover
     }));
 
   // 2. User-installed plugins — directly from s.installedPlugins
-  //    Exclude Composio, LobeHub Skill, and agent skill entries (they are handled in dedicated sources)
+  //    Exclude Composio, AgentAsia Skill, and agent skill entries (they are handled in dedicated sources)
   const pluginItems = s.installedPlugins
     .filter((p) => !composioIds.has(p.identifier))
-    .filter((p) => !lobehubSkillIds.has(p.identifier))
+    .filter((p) => !agentasiaSkillIds.has(p.identifier))
     .filter((p) => !agentSkillIds.has(p.identifier))
     .filter((p) => !p.customParams?.composio) // extra safety for Composio plugins
     .filter((plugin) => isInstalledPluginAvailableInCurrentEnv(plugin))
@@ -168,8 +168,8 @@ const availableToolsForDiscovery = (s: ToolStoreState): AvailableToolForDiscover
       };
     });
 
-  // 4. LobeHub Skill servers (connected only)
-  const lobehubSkillItems = (s.lobehubSkillServers || [])
+  // 4. AgentAsia Skill servers (connected only)
+  const agentasiaSkillItems = (s.agentasiaSkillServers || [])
     .filter((server) => server.status === LobehubSkillStatus.CONNECTED)
     .map((server) => {
       const config = getLobehubSkillProviderById(server.identifier);
@@ -180,7 +180,7 @@ const availableToolsForDiscovery = (s: ToolStoreState): AvailableToolForDiscover
       };
     });
 
-  return [...builtinItems, ...pluginItems, ...composioItems, ...lobehubSkillItems];
+  return [...builtinItems, ...pluginItems, ...composioItems, ...agentasiaSkillItems];
 };
 
 export const toolSelectors = {

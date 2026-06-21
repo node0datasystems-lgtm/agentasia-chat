@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { documentHistories, documents, files, users } from '@lobechat/database/schemas';
+import { documentHistories, documents, files, users } from '@agentasia/database/schemas';
 import { and, desc, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 

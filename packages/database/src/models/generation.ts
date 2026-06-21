@@ -5,8 +5,8 @@ import type {
   GenerationAsset,
   ImageGenerationAsset,
   VideoGenerationAsset,
-} from '@lobechat/types';
-import { FileSource } from '@lobechat/types';
+} from '@agentasia/types';
+import { FileSource } from '@agentasia/types';
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
 

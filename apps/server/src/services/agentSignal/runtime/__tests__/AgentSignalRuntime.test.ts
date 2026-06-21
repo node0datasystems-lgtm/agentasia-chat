@@ -1,5 +1,5 @@
-import type { AgentSignalSource, BaseAction, BaseSignal } from '@lobechat/agent-signal';
-import { createAction, createSignal } from '@lobechat/agent-signal';
+import type { AgentSignalSource, BaseAction, BaseSignal } from '@agentasia/agent-signal';
+import { createAction, createSignal } from '@agentasia/agent-signal';
 import { describe, expect, it } from 'vitest';
 
 import {

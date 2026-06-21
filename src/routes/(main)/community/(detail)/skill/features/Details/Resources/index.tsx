@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Empty, Flexbox, MaterialFileTypeIcon, Text } from '@lobehub/ui';
+import { Block, Empty, Flexbox, MaterialFileTypeIcon, Text } from '@agentasia/ui';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import urlJoin from 'url-join';

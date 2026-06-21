@@ -1,5 +1,5 @@
-import { MessagesEngine } from '@lobechat/context-engine';
-import { type UIChatMessage } from '@lobechat/types';
+import { MessagesEngine } from '@agentasia/context-engine';
+import { type UIChatMessage } from '@agentasia/types';
 import { describe, expect, it, vi } from 'vitest';
 
 import { serverMessagesEngine } from '../index';

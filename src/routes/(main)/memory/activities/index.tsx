@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Tag } from '@lobehub/ui';
+import { Flexbox, Icon, Tag } from '@agentasia/ui';
 import { CalendarClockIcon } from 'lucide-react';
 import { type FC } from 'react';
 import { memo, useCallback, useEffect, useState } from 'react';

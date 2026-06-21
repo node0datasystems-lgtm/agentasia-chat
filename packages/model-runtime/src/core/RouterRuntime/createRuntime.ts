@@ -1,10 +1,10 @@
 /**
- * @see https://github.com/lobehub/lobe-chat/discussions/6563
+ * @see https://github.com/agentasia/agentasia-chat/discussions/6563
  */
 import type { GoogleGenAIOptions } from '@google/genai';
-import type { ChatModelCard } from '@lobechat/types';
-import { AgentRuntimeErrorType } from '@lobechat/types';
-import { createTimingHelpers, getDurationMs } from '@lobechat/utils';
+import type { ChatModelCard } from '@agentasia/types';
+import { AgentRuntimeErrorType } from '@agentasia/types';
+import { createTimingHelpers, getDurationMs } from '@agentasia/utils';
 import debug from 'debug';
 import type { ClientOptions } from 'openai';
 import type OpenAI from 'openai';
@@ -48,7 +48,7 @@ import type {
 import type { ApiType, RuntimeClass } from './apiTypes';
 
 const log = debug('lobe-model-runtime:router-runtime');
-const { logger: timing } = createTimingHelpers('lobe-server:chat:lobehub:timing');
+const { logger: timing } = createTimingHelpers('lobe-server:chat:agentasia:timing');
 
 interface ProviderIniOptions extends Record<string, any> {
   accessKeyId?: string;
@@ -86,7 +86,7 @@ interface RouterInstance {
   runtime?: RuntimeClass;
 }
 
-// OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; lobehub only ever
+// OpenAI SDK v6 widened `apiKey` to `string | ApiKeySetter`; agentasia only ever
 // passes a plain string, so narrow it back to keep `.trim()` / string assignments valid.
 type LobeClientOptions = Omit<ClientOptions, 'apiKey'> & { apiKey?: string };
 type ConstructorOptions<T extends Record<string, any> = any> = LobeClientOptions & T;
@@ -213,7 +213,7 @@ export const createRouterRuntime = ({
       metadata: Record<string, unknown> | undefined,
       routeAttempt: RouteAttemptMetadata,
     ) {
-      if (!metadata || this._id !== 'lobehub') return;
+      if (!metadata || this._id !== 'agentasia') return;
 
       metadata.routeAttempt = routeAttempt;
     }
@@ -231,7 +231,7 @@ export const createRouterRuntime = ({
       this._params = params;
       this._id = options.id ?? id;
 
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'constructor done providerId=%s durationMs=%d hasApiKey=%s hasBaseURL=%s',
           this._id,
@@ -253,7 +253,7 @@ export const createRouterRuntime = ({
             ? await this._routers(this._options, { model })
             : this._routers;
 
-        if (this._id === 'lobehub') {
+        if (this._id === 'agentasia') {
           timing(
             'resolveRouters done model=%s durationMs=%d routerCount=%d dynamic=%s',
             model,
@@ -273,7 +273,7 @@ export const createRouterRuntime = ({
 
         return resolvedRouters;
       } catch (error) {
-        if (this._id === 'lobehub') {
+        if (this._id === 'agentasia') {
           timing('resolveRouters error model=%s durationMs=%d', model, getDurationMs(startedAt));
         }
         throw error;
@@ -289,7 +289,7 @@ export const createRouterRuntime = ({
       if (baseURL) {
         const baseURLMatch = resolvedRouters.find((router) => router.baseURLPattern?.test(baseURL));
         if (baseURLMatch) {
-          if (this._id === 'lobehub') {
+          if (this._id === 'agentasia') {
             timing(
               'resolveMatchedRouter done model=%s match=baseURL routerId=%s apiType=%s durationMs=%d',
               model,
@@ -310,7 +310,7 @@ export const createRouterRuntime = ({
         return false;
       });
       if (modelMatch) {
-        if (this._id === 'lobehub') {
+        if (this._id === 'agentasia') {
           timing(
             'resolveMatchedRouter done model=%s match=models routerId=%s apiType=%s durationMs=%d',
             model,
@@ -324,7 +324,7 @@ export const createRouterRuntime = ({
 
       // Fallback: Use the last router
       const fallbackRouter = resolvedRouters.at(-1)!;
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'resolveMatchedRouter done model=%s match=fallback routerId=%s apiType=%s durationMs=%d',
           model,
@@ -344,7 +344,7 @@ export const createRouterRuntime = ({
         throw new Error('empty provider options');
       }
 
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'normalizeRouterOptions done routerId=%s options=%d durationMs=%d',
           router.id,
@@ -399,7 +399,7 @@ export const createRouterRuntime = ({
         if (project) vertexOptions.project = project;
         if (location) vertexOptions.location = location as GoogleGenAIOptions['location'];
 
-        if (this._id === 'lobehub') {
+        if (this._id === 'agentasia') {
           timing(
             'createRuntimeFromOption done routerId=%s channelId=%s apiType=%s durationMs=%d vertex=true',
             router.id,
@@ -424,7 +424,7 @@ export const createRouterRuntime = ({
           : (baseRuntimeMap[resolvedApiType] ?? LobeOpenAI);
       const runtime: LobeRuntimeAI = new providerAI({ ...finalOptions, id: this._id });
 
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'createRuntimeFromOption done routerId=%s channelId=%s apiType=%s durationMs=%d',
           router.id,
@@ -452,7 +452,7 @@ export const createRouterRuntime = ({
       const routerOptions = this.normalizeRouterOptions(matchedRouter);
       const totalOptions = routerOptions.length;
 
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'runWithFallback start model=%s routerId=%s apiType=%s options=%d traceId=%s',
           model,
@@ -483,7 +483,7 @@ export const createRouterRuntime = ({
         } = await this.createRuntimeFromOption(matchedRouter, optionItem);
 
         try {
-          if (this._id === 'lobehub') {
+          if (this._id === 'agentasia') {
             timing(
               'attempt request start model=%s attempt=%d/%d routerId=%s channelId=%s apiType=%s traceId=%s',
               model,
@@ -496,7 +496,7 @@ export const createRouterRuntime = ({
             );
           }
           const result = await requestHandler(runtime);
-          if (this._id === 'lobehub') {
+          if (this._id === 'agentasia') {
             timing(
               'attempt request success model=%s attempt=%d/%d routerId=%s channelId=%s apiType=%s durationMs=%d totalMs=%d traceId=%s',
               model,
@@ -563,7 +563,7 @@ export const createRouterRuntime = ({
           return result;
         } catch (error) {
           lastError = error;
-          if (this._id === 'lobehub') {
+          if (this._id === 'agentasia') {
             timing(
               'attempt request error model=%s attempt=%d/%d routerId=%s channelId=%s apiType=%s durationMs=%d totalMs=%d traceId=%s',
               model,
@@ -610,7 +610,7 @@ export const createRouterRuntime = ({
               optionIndex: index,
             });
 
-            if (this._id === 'lobehub') {
+            if (this._id === 'agentasia') {
               timing(
                 'shouldStopFallback done model=%s attempt=%d/%d durationMs=%d shouldStop=%s traceId=%s',
                 model,
@@ -658,7 +658,7 @@ export const createRouterRuntime = ({
         }
       }
 
-      if (this._id === 'lobehub') {
+      if (this._id === 'agentasia') {
         timing(
           'runWithFallback failed model=%s routerId=%s options=%d totalMs=%d traceId=%s',
           model,

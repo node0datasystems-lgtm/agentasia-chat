@@ -1,5 +1,5 @@
-import { type UserMemoryData } from '@lobechat/prompts';
-import { promptUserMemory } from '@lobechat/prompts';
+import { type UserMemoryData } from '@agentasia/prompts';
+import { promptUserMemory } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseFirstUserContentProvider } from '../base/BaseFirstUserContentProvider';

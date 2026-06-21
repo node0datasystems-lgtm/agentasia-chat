@@ -1,13 +1,13 @@
-import { type MessageTextChunk } from '@lobechat/fetch-sse';
+import { type MessageTextChunk } from '@agentasia/fetch-sse';
 import {
   chainPickEmoji,
   chainSummaryAgentName,
   chainSummaryDescription,
   chainSummaryTags,
-} from '@lobechat/prompts';
-import { type TracePayload } from '@lobechat/types';
-import { TraceNameMap, TraceTopicType } from '@lobechat/types';
-import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
+} from '@agentasia/prompts';
+import { type TracePayload } from '@agentasia/types';
+import { TraceNameMap, TraceTopicType } from '@agentasia/types';
+import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
 import { type PartialDeep } from 'type-fest';
 import { type StateCreator } from 'zustand/vanilla';
 

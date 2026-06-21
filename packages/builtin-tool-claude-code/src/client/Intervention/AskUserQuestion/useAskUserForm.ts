@@ -1,4 +1,4 @@
-import type { BuiltinInterventionProps } from '@lobechat/types';
+import type { BuiltinInterventionProps } from '@agentasia/types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { useConversationStore } from '@/features/Conversation/store';

@@ -1,5 +1,5 @@
-import { Plans } from '@lobechat/types';
-import { isRecord } from '@lobechat/utils';
+import { Plans } from '@agentasia/types';
+import { isRecord } from '@agentasia/utils';
 
 export type PlanLimitPricingBasis = 'approximate' | 'estimated' | 'exact' | 'unknown';
 

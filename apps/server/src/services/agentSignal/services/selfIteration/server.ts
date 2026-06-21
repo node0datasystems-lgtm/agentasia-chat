@@ -1,5 +1,5 @@
-import { SpanStatusCode } from '@lobechat/observability-otel/api';
-import { tracer } from '@lobechat/observability-otel/modules/agent-signal';
+import { SpanStatusCode } from '@agentasia/observability-otel/api';
+import { tracer } from '@agentasia/observability-otel/modules/agent-signal';
 
 import type { AgentSignalReviewContextModel } from '@/database/models/agentSignal/reviewContext';
 import type { BriefModel } from '@/database/models/brief';

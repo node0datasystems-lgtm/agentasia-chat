@@ -1,4 +1,4 @@
-import { AUTH_REQUIRED_HEADER } from '@lobechat/desktop-bridge';
+import { AUTH_REQUIRED_HEADER } from '@agentasia/desktop-bridge';
 import { BrowserWindow, session as electronSession } from 'electron';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

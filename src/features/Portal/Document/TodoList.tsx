@@ -1,7 +1,7 @@
 'use client';
 
-import { AGENT_PLAN_FILE_TYPE } from '@lobechat/const';
-import { Checkbox, Flexbox, Icon, Tag } from '@lobehub/ui';
+import { AGENT_PLAN_FILE_TYPE } from '@agentasia/const';
+import { Checkbox, Flexbox, Icon, Tag } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronDown, ChevronUp, ListTodo } from 'lucide-react';
 import { memo, useState } from 'react';

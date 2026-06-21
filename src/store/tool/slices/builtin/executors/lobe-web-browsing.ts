@@ -3,18 +3,18 @@
  *
  * Handles web search and page crawling tool calls.
  */
-import { WebBrowsingApiName, WebBrowsingManifest } from '@lobechat/builtin-tool-web-browsing';
+import { WebBrowsingApiName, WebBrowsingManifest } from '@agentasia/builtin-tool-web-browsing';
 import {
   type WebBrowsingDocumentService,
   WebBrowsingExecutionRuntime,
-} from '@lobechat/builtin-tool-web-browsing/executionRuntime';
+} from '@agentasia/builtin-tool-web-browsing/executionRuntime';
 import {
   type BuiltinToolContext,
   type BuiltinToolResult,
   type CrawlMultiPagesQuery,
   type SearchQuery,
-} from '@lobechat/types';
-import { BaseExecutor, SEARCH_SEARXNG_NOT_CONFIG } from '@lobechat/types';
+} from '@agentasia/types';
+import { BaseExecutor, SEARCH_SEARXNG_NOT_CONFIG } from '@agentasia/types';
 
 import { agentDocumentService } from '@/services/agentDocument';
 import { searchService } from '@/services/search';

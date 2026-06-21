@@ -2,7 +2,7 @@ import type {
   AssistantContentBlock,
   ChatToolPayloadWithResult,
   UIChatMessage,
-} from '@lobechat/types';
+} from '@agentasia/types';
 
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';

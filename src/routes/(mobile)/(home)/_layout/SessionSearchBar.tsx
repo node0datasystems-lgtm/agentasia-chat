@@ -1,7 +1,7 @@
 'use client';
 
-import { HotkeyEnum } from '@lobechat/const/hotkeys';
-import { SearchBar } from '@lobehub/ui';
+import { HotkeyEnum } from '@agentasia/const/hotkeys';
+import { SearchBar } from '@agentasia/ui';
 import { type ChangeEvent } from 'react';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

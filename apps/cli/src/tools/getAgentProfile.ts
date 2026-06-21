@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import type { RemoteHeterogeneousAgentType } from '@lobechat/heterogeneous-agents';
+import type { RemoteHeterogeneousAgentType } from '@agentasia/heterogeneous-agents';
 
 export interface GetAgentProfileParams {
   /** Agent ID to query (openclaw only). Defaults to the default agent. */

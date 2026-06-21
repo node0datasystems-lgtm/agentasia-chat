@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Highlighter } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Highlighter } from '@agentasia/ui';
 import { memo } from 'react';
 
 import type { WebSearchArgs } from '../../../types';

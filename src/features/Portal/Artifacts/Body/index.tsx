@@ -1,4 +1,4 @@
-import { Flexbox, Highlighter } from '@lobehub/ui';
+import { Flexbox, Highlighter } from '@agentasia/ui';
 import { memo, useEffect, useMemo } from 'react';
 
 import { useChatStore } from '@/store/chat';

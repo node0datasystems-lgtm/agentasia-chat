@@ -1,5 +1,5 @@
-import { type DocumentType } from '@lobechat/builtin-tool-notebook';
-import type { AGENT_PLAN_FILE_TYPE } from '@lobechat/const';
+import { type DocumentType } from '@agentasia/builtin-tool-notebook';
+import type { AGENT_PLAN_FILE_TYPE } from '@agentasia/const';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

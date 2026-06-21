@@ -1,5 +1,5 @@
-import { type FormItemProps } from '@lobehub/ui';
-import { ActionIcon, Flexbox, Form, Icon, Popover, Segmented, Select } from '@lobehub/ui';
+import { type FormItemProps } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Form, Icon, Popover, Segmented, Select } from '@agentasia/ui';
 import { Switch } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import {

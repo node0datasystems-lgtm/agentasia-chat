@@ -1,5 +1,5 @@
-import { type ChatFileChunk } from '@lobechat/types';
-import { Flexbox, Icon } from '@lobehub/ui';
+import { type ChatFileChunk } from '@agentasia/types';
+import { Flexbox, Icon } from '@agentasia/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { BookOpenTextIcon, ChevronDown, ChevronRight } from 'lucide-react';
 import { memo, useState } from 'react';

@@ -1,4 +1,4 @@
-import { isRemoteHeterogeneousType } from '@lobechat/heterogeneous-agents';
+import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
 import { useCallback, useEffect, useState } from 'react';
 
 import { deviceService } from '@/services/device';

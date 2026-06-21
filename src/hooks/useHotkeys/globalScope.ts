@@ -1,5 +1,5 @@
-import { INBOX_SESSION_ID } from '@lobechat/const';
-import { HotkeyEnum } from '@lobechat/const/hotkeys';
+import { INBOX_SESSION_ID } from '@agentasia/const';
+import { HotkeyEnum } from '@agentasia/const/hotkeys';
 import { useLocation } from 'react-router';
 
 import { useNavigateToAgent } from '@/hooks/useNavigateToAgent';

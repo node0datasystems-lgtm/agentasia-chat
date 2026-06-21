@@ -1,7 +1,7 @@
-import { BriefIdentifier } from '@lobechat/builtin-tool-brief';
-import type { LobeChatDatabase } from '@lobechat/database';
-import { formatBriefCreated, formatCheckpointCreated } from '@lobechat/prompts';
-import { DEFAULT_BRIEF_ACTIONS } from '@lobechat/types';
+import { BriefIdentifier } from '@agentasia/builtin-tool-brief';
+import type { LobeChatDatabase } from '@agentasia/database';
+import { formatBriefCreated, formatCheckpointCreated } from '@agentasia/prompts';
+import { DEFAULT_BRIEF_ACTIONS } from '@agentasia/types';
 import { eq } from 'drizzle-orm';
 
 import { BriefModel } from '@/database/models/brief';

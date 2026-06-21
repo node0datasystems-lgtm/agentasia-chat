@@ -1,5 +1,5 @@
-import { BUILTIN_AGENT_SLUGS } from '@lobechat/builtin-agents';
-import { DraggablePanel } from '@lobehub/ui';
+import { BUILTIN_AGENT_SLUGS } from '@agentasia/builtin-agents';
+import { DraggablePanel } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

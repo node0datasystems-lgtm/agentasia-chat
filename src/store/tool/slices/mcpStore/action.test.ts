@@ -1,6 +1,6 @@
-import type * as LobechatConstModule from '@lobechat/const';
-import { type ToolManifest } from '@lobechat/types';
-import { type PluginItem } from '@lobehub/market-sdk';
+import type * as LobechatConstModule from '@agentasia/const';
+import { type ToolManifest } from '@agentasia/types';
+import { type PluginItem } from '@agentasia/market-sdk';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -3,7 +3,7 @@ import {
   type AgentTemplateFetcher,
   normalizeAgentTemplate,
   type RawAgentTemplate,
-} from '@lobechat/builtin-tool-web-onboarding/agentMarketplace';
+} from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import i18next from 'i18next';
 
 import { lambdaClient } from '@/libs/trpc/client';

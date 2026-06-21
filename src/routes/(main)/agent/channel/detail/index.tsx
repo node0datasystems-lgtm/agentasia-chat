@@ -1,6 +1,6 @@
 'use client';
 
-import { confirmModal } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@agentasia/ui/base-ui';
 import { App, Form } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Avatar, Flexbox, Skeleton, Text } from '@lobehub/ui';
+import { ActionIcon, Avatar, Flexbox, Skeleton, Text } from '@agentasia/ui';
 import { cssVar } from 'antd-style';
 import { XIcon } from 'lucide-react';
 import { memo } from 'react';

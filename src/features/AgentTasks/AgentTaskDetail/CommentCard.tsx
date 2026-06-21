@@ -1,6 +1,6 @@
-import type { TaskDetailActivity } from '@lobechat/types';
-import { useEditor } from '@lobehub/editor/react';
-import { LexicalRenderer } from '@lobehub/editor/renderer';
+import type { TaskDetailActivity } from '@agentasia/types';
+import { useEditor } from '@agentasia/editor/react';
+import { LexicalRenderer } from '@agentasia/editor/renderer';
 import {
   ActionIcon,
   Avatar,
@@ -12,7 +12,7 @@ import {
   Icon,
   Markdown,
   Text,
-} from '@lobehub/ui';
+} from '@agentasia/ui';
 import { App } from 'antd';
 import { cssVar } from 'antd-style';
 import { MessageCircle, MoreHorizontal, Pencil, Trash } from 'lucide-react';

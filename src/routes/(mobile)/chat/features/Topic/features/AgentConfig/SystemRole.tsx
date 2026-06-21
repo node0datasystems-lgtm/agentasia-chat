@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox, Skeleton } from '@lobehub/ui';
-import { EditableMessage } from '@lobehub/ui/chat';
+import { Flexbox, Skeleton } from '@agentasia/ui';
+import { EditableMessage } from '@agentasia/ui/chat';
 import { createStaticStyles } from 'antd-style';
 import { type MouseEvent } from 'react';
 import { memo } from 'react';

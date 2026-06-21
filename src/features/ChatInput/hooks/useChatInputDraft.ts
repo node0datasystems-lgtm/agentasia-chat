@@ -1,4 +1,4 @@
-import type { IEditor } from '@lobehub/editor';
+import type { IEditor } from '@agentasia/editor';
 import { debounce } from 'es-toolkit/compat';
 import { useCallback, useEffect, useMemo } from 'react';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox } from '@lobehub/ui';
+import { ActionIcon, Flexbox } from '@agentasia/ui';
 import { Modal } from 'antd';
 import { cssVar, useTheme } from 'antd-style';
 import { ArrowLeftIcon, DownloadIcon, InfoIcon } from 'lucide-react';

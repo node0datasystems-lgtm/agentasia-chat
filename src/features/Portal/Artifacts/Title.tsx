@@ -1,5 +1,5 @@
-import { ArtifactType } from '@lobechat/types';
-import { ActionIcon, Flexbox, Icon, Segmented, Text } from '@lobehub/ui';
+import { ArtifactType } from '@agentasia/types';
+import { ActionIcon, Flexbox, Icon, Segmented, Text } from '@agentasia/ui';
 import { ConfigProvider } from 'antd';
 import { cx } from 'antd-style';
 import { ArrowLeft, CodeIcon, EyeIcon } from 'lucide-react';

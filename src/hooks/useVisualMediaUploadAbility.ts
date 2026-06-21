@@ -31,7 +31,7 @@ export const useVisualMediaUploadAbility = (model: string, provider: string, age
   // can parse any file via scripts/terminal, so the upload should not be gated on the model's
   // own multimodal ability. Mirror the store's `enforceFileTypeWhitelist` bypass in
   // `uploadChatFiles` so the input UI doesn't silently drop audio/video/image the agent could
-  // still handle (e.g. .m4a on a non-audio model). See lobehub/lobehub#15770.
+  // still handle (e.g. .m4a on a non-audio model). See node0datasystems-lgtm/agentasia-chat#15770.
   const bypassMediaGate = useAgentStore(
     (s) =>
       !!agentId &&

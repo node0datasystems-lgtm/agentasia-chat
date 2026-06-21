@@ -1,5 +1,5 @@
-import { type NeutralColors } from '@lobehub/ui';
-import { ColorSwatches, findCustomThemeName, neutralColors } from '@lobehub/ui';
+import { type NeutralColors } from '@agentasia/ui';
+import { ColorSwatches, findCustomThemeName, neutralColors } from '@agentasia/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@lobechat/builtin-tool-local-system",
+  "name": "@agentasia/builtin-tool-local-system",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -9,15 +9,15 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobechat/electron-client-ipc": "workspace:*",
-    "@lobechat/shared-tool-ui": "workspace:*",
-    "@lobechat/tool-runtime": "workspace:*"
+    "@agentasia/electron-client-ipc": "workspace:*",
+    "@agentasia/shared-tool-ui": "workspace:*",
+    "@agentasia/tool-runtime": "workspace:*"
   },
   "devDependencies": {
-    "@lobechat/types": "workspace:*"
+    "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@lobehub/ui": "^5",
+    "@agentasia/ui": "^5",
     "antd": "^6",
     "antd-style": "*",
     "lucide-react": "*",

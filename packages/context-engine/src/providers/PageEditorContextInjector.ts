@@ -1,5 +1,5 @@
-import type { PageContentContext } from '@lobechat/prompts';
-import { formatPageContentContext } from '@lobechat/prompts';
+import type { PageContentContext } from '@agentasia/prompts';
+import { formatPageContentContext } from '@agentasia/prompts';
 import debug from 'debug';
 
 import { BaseLastUserContentProvider } from '../base/BaseLastUserContentProvider';

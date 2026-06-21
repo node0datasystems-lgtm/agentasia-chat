@@ -1,5 +1,5 @@
-import type { RAGEvalEvaluationItem } from '@lobechat/types';
-import { EvalEvaluationStatus } from '@lobechat/types';
+import type { RAGEvalEvaluationItem } from '@agentasia/types';
+import { EvalEvaluationStatus } from '@agentasia/types';
 import type { SQL } from 'drizzle-orm';
 import { and, count, desc, eq, inArray } from 'drizzle-orm';
 

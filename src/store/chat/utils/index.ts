@@ -1,4 +1,4 @@
-import { isDesktop } from '@lobechat/const';
+import { isDesktop } from '@agentasia/const';
 import i18n from 'i18next';
 import { produce } from 'immer';
 

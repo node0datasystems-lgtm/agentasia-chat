@@ -1,5 +1,5 @@
-import { AgentRuntimeError } from '@lobechat/model-runtime';
-import { ChatErrorType } from '@lobechat/types';
+import { AgentRuntimeError } from '@agentasia/model-runtime';
+import { ChatErrorType } from '@agentasia/types';
 
 interface CheckAuthParams {
   betterAuthAuthorized?: boolean;

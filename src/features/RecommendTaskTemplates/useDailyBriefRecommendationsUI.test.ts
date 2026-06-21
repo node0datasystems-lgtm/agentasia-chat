@@ -1,7 +1,7 @@
 /**
  * @vitest-environment happy-dom
  */
-import type { TaskTemplate } from '@lobechat/const';
+import type { TaskTemplate } from '@agentasia/const';
 import { renderHook, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

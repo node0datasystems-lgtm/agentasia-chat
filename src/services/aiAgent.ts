@@ -1,4 +1,4 @@
-import type { ExecAgentAppContext, ExecAgentResult } from '@lobechat/types';
+import type { ExecAgentAppContext, ExecAgentResult } from '@agentasia/types';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

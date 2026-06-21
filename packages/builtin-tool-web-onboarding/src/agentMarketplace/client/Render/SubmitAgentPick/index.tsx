@@ -1,7 +1,7 @@
 'use client';
 
-import type { BuiltinRenderProps } from '@lobechat/types';
-import { Avatar, Flexbox, Text } from '@lobehub/ui';
+import type { BuiltinRenderProps } from '@agentasia/types';
+import { Avatar, Flexbox, Text } from '@agentasia/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
