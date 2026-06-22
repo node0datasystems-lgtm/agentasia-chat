@@ -1,6 +1,6 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@lobehub/const';
+import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
 import { type BuiltinSkill, type LobeToolMeta } from '@lobehub/types';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useMemo } from 'react';

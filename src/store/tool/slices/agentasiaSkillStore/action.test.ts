@@ -1,4 +1,4 @@
-import type * as LobechatConstModule from '@lobehub/const';
+import type * as LobechatConstModule from '@agentasia/const';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
