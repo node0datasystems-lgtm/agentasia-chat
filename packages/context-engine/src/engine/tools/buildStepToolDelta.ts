@@ -16,7 +16,7 @@ export interface BuildStepToolDeltaParams {
   forceFinish?: boolean;
   /**
    * The local-system manifest to inject when device is active.
-   * Passed in to avoid a hard dependency on @lobechat/builtin-tool-local-system.
+   * Passed in to avoid a hard dependency on @agentasia/builtin-tool-local-system.
    */
   localSystemManifest?: LobeToolManifest;
   /**

@@ -215,7 +215,7 @@ const resolveAdapterType = (config: HeterogeneousProviderConfig): string => {
 /**
  * Subscribe to Electron IPC broadcasts. As of phase 0, the main
  * process runs JSONL framing + adapter conversion + `toStreamEvent` itself
- * (`AgentStreamPipeline` from `@lobechat/heterogeneous-agents/spawn`), so the
+ * (`AgentStreamPipeline` from `@agentasia/heterogeneous-agents/spawn`), so the
  * renderer receives ready-made `AgentStreamEvent`s with no per-event adapter
  * step. Returns unsubscribe function.
  */
@@ -439,7 +439,7 @@ export const executeHeterogeneousAgent = async (
   const toolMsgIdByCallId: Map<string, string> = new Map();
   /**
    * Shared main-agent run coordinator state — the pure reducer in
-   * `@lobechat/heterogeneous-agents`. Owns the main turn/step state machine
+   * `@agentasia/heterogeneous-agents`. Owns the main turn/step state machine
    * (content accumulation, the `asst → tool → asst` parent chain incl. the
    * `lastToolMsgIdEver` toolless-step rescue) AND the nested subagent runs
    * (delegated to `reduceSubagentRuns`). The renderer interpreters

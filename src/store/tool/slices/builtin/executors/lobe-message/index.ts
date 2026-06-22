@@ -2,7 +2,7 @@
  * Lobe Message Executor — frontend entry.
  *
  * Composes the shared `MessageExecutor` + `MessageExecutionRuntime` from
- * `@lobechat/builtin-tool-message` with TRPC-backed adapters so the
+ * `@agentasia/builtin-tool-message` with TRPC-backed adapters so the
  * frontend and server run the same orchestration / formatting code paths.
  *
  * Adding a new API only requires updating `MessageApiName` + the runtime;

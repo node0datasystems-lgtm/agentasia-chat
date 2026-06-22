@@ -1,6 +1,6 @@
 import type { TracingPayload, TracingSummary } from '../types';
 
-// ANSI color helpers — keep parity with @lobechat/agent-tracing's viewer.
+// ANSI color helpers — keep parity with @agentasia/agent-tracing's viewer.
 const dim = (s: string) => `\x1B[2m${s}\x1B[22m`;
 const bold = (s: string) => `\x1B[1m${s}\x1B[22m`;
 const green = (s: string) => `\x1B[32m${s}\x1B[39m`;

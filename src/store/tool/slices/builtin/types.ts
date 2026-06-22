@@ -2,10 +2,10 @@
  * Builtin Tool Types
  *
  * Type definitions for the builtin tool execution framework.
- * Core types are re-exported from @lobechat/types for consistency.
+ * Core types are re-exported from @agentasia/types for consistency.
  */
 
-// Re-export core types from @lobechat/types
+// Re-export core types from @agentasia/types
 export type {
   AfterCompletionCallback,
   BuiltinToolContext,

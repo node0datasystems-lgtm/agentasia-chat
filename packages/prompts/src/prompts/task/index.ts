@@ -55,7 +55,7 @@ export interface TaskSummary {
   status: string;
 }
 
-// Re-export shared types from @lobechat/types for backward compatibility
+// Re-export shared types from @agentasia/types for backward compatibility
 export type {
   TaskDetailActivity,
   TaskDetailData,

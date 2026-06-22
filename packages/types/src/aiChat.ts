@@ -209,7 +209,7 @@ export const StructureOutputSchema = z.object({
   /**
    * Structured tracing config (scenario / promptVersion / schemaName /
    * agentId / topicId / inputHint / ...). See `TracingOptions` from
-   * `@lobechat/llm-generation-tracing` for the typed shape.
+   * `@agentasia/llm-generation-tracing` for the typed shape.
    *
    * `tracingId` is validated as UUID here because the value is reused as the
    * `llm_generation_tracing.id` primary key (uuid column) and is also accepted
@@ -250,7 +250,7 @@ export interface StructureOutputParams {
   /**
    * Structured tracing config (scenario / promptVersion / schemaName /
    * agentId / topicId / inputHint / ...). See `TracingOptions` from
-   * `@lobechat/llm-generation-tracing` for the typed shape.
+   * `@agentasia/llm-generation-tracing` for the typed shape.
    */
   tracing?: Record<string, unknown>;
 }

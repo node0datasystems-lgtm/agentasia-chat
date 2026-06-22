@@ -66,7 +66,7 @@ const styles = createStaticStyles(({ css, cssVar }) => ({
 /**
  * Items shape the CC adapter emits on `pluginState.todos` — normalized
  * `todo|processing|completed` alphabet. Mirrors `StepContextTodos` from
- * `@lobechat/types` but inlined to keep this package light.
+ * `@agentasia/types` but inlined to keep this package light.
  *
  * `id` is optional: legacy TodoWrite-derived snapshots are positional and
  * have no stable id, while the Task* tools (CC 2.1.143+) populate it with

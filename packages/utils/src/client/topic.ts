@@ -169,7 +169,7 @@ export type TopicStatusBucket =
 // treated as `active`.
 //
 // The server orders the query by the underlying status priority (see
-// `STATUS_SORT_RANK` in `@lobechat/database` topic model) so the right page is
+// `STATUS_SORT_RANK` in `@agentasia/database` topic model) so the right page is
 // fetched; this only re-buckets that already-ordered page for display. The one
 // client-only nuance is `loadingTopicIds` (a topic streaming right now), which
 // the server can't know about — see `resolveStatusBucket`. The unread state is

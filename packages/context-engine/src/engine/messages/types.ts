@@ -147,7 +147,7 @@ export interface UserMemoryPersonaItem {
 
 /**
  * User memory data structure
- * Compatible with SearchMemoryResult from @lobechat/types
+ * Compatible with SearchMemoryResult from @agentasia/types
  */
 export interface UserMemoryData {
   activities?: UserMemoryActivityItem[];

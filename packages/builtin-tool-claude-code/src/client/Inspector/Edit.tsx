@@ -13,7 +13,7 @@ interface CCEditArgs {
   replace_all?: boolean;
 }
 
-// Mirrors `EditFileState` from `@lobechat/tool-runtime` — duplicated locally to
+// Mirrors `EditFileState` from `@agentasia/tool-runtime` — duplicated locally to
 // keep this package free of a tool-runtime dep (it only reads the two line
 // counts; the shared inspector accepts the shape via `any`).
 interface SynthesizedEditState {

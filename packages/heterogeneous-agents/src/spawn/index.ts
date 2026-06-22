@@ -9,7 +9,7 @@
  *
  * `AgentStreamEvent` itself is re-exported here so producer-side callers
  * (desktop main, CLI sandbox) only depend on this package, not on
- * `@lobechat/agent-gateway-client` (which is a browser-side WebSocket client
+ * `@agentasia/agent-gateway-client` (which is a browser-side WebSocket client
  * that producers have no business pulling in).
  */
 export type { UsageData } from '../types';

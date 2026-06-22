@@ -50,9 +50,9 @@ import type {
 
 /**
  * The CC tool_use `name` we synthesize `pluginState.todos` for. Inlined here
- * (rather than imported from `@lobechat/builtin-tool-claude-code`) to keep
+ * (rather than imported from `@agentasia/builtin-tool-claude-code`) to keep
  * the adapter package free of UI-tool-package coupling — the canonical
- * `ClaudeCodeApiName` enum still lives in `@lobechat/builtin-tool-claude-code`
+ * `ClaudeCodeApiName` enum still lives in `@agentasia/builtin-tool-claude-code`
  * for renderer / inspector / streaming consumers, but those packages are
  * downstream of the adapter, not upstream.
  *

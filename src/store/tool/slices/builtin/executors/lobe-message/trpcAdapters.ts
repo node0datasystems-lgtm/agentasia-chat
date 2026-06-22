@@ -2,7 +2,7 @@
  * TRPC adapters for the Message tool executor.
  *
  * Implements the `BotProviderQuery` and `MessageRuntimeService` interfaces
- * from `@lobechat/builtin-tool-message/executionRuntime` by routing every
+ * from `@agentasia/builtin-tool-message/executionRuntime` by routing every
  * call through `lambdaClient.*`. This lets the frontend reuse the runtime's
  * orchestration + formatting logic instead of duplicating it.
  */

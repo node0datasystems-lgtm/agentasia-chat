@@ -477,7 +477,7 @@ const getProviderLocalConfig = async (
 
   if (provider === ModelProvider.AgentAsia) {
     const { loadModels } =
-      (await import('@lobechat/business-model-bank/model-config')) as BusinessModelConfigModule;
+      (await import('@agentasia/business-model-bank/model-config')) as BusinessModelConfigModule;
     const models = await loadModels();
     return models.filter((model) => model.providerId === ModelProvider.AgentAsia);
   }
@@ -726,7 +726,7 @@ export const processMultiProviderModelList = async (
   providerid?: ModelProviderKey,
 ): Promise<ChatModelCard[]> => {
   const { loadModels } =
-    (await import('@lobechat/business-model-bank/model-config')) as BusinessModelConfigModule;
+    (await import('@agentasia/business-model-bank/model-config')) as BusinessModelConfigModule;
   const builtinModels = await loadModels();
 
   // If providerid is provided, try to get the local configuration for that provider

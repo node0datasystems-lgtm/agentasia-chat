@@ -59,7 +59,7 @@ type SpecMap = Partial<Record<SpecErrorCode, ErrorCodeSpec>>;
  * Single source of truth for every runtime error code.
  *
  * To add a new code:
- *   1. Add it to `AgentRuntimeErrorType` in `@lobechat/types/agentRuntime.ts`
+ *   1. Add it to `AgentRuntimeErrorType` in `@agentasia/types/agentRuntime.ts`
  *      (or `ChatErrorType` + `CloudErrorCode` above for Cloud-only codes).
  *   2. Add a spec entry here (Cloud-only codes use the `9` tier digit).
  *   3. Add a locale key `response.<code>` in `src/locales/default/error.ts`.

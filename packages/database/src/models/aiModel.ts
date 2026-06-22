@@ -232,7 +232,7 @@ export class AiModelModel {
     }
 
     // Get default model list to preserve type information
-    const { loadModels } = await import('@lobechat/business-model-bank/model-config');
+    const { loadModels } = await import('@agentasia/business-model-bank/model-config');
     const defaultModels = await loadModels();
     const defaultModelMap = new Map(defaultModels.map((m) => [`${m.providerId}:${m.id}`, m]));
 

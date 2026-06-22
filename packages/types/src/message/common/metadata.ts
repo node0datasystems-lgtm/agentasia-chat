@@ -340,7 +340,7 @@ export interface MessageMetadata {
    *
    * Shape mirrors `ExternalSignalContext` in
    * `packages/heterogeneous-agents/src/types.ts` — duplicated here so
-   * `@lobechat/types` stays free of an adapter-package dependency.
+   * `@agentasia/types` stays free of an adapter-package dependency.
    */
   signal?: MessageSignal;
   /**

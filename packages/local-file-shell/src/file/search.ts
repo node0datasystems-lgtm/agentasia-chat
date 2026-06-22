@@ -10,7 +10,7 @@ import { expandTilde } from './expandTilde';
  * Lightweight filename search — backed by `fast-glob` only. For the
  * platform-aware version that prefers Spotlight (`mdfind`) on macOS and
  * `fd` / `find` elsewhere, use `createFileSearchModule()` from
- * `@lobechat/local-file-shell/fileSearch`.
+ * `@agentasia/local-file-shell/fileSearch`.
  */
 export async function searchLocalFiles({
   keywords,

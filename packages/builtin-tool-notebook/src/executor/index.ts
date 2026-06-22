@@ -9,7 +9,7 @@
  * @deprecated The notebook tool is no longer injected into the LLM tools
  * engine. This executor is retained so that legacy tool-call messages can
  * still resolve on execution. New flows should use
- * `@lobechat/builtin-tool-agent-documents`.
+ * `@agentasia/builtin-tool-agent-documents`.
  */
 import { BaseExecutor, type BuiltinToolContext, type BuiltinToolResult } from '@agentasia/types';
 

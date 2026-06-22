@@ -477,7 +477,7 @@ export class SkillsExecutionRuntime {
   }
 
   /**
-   * Format command result using the shared formatCommandResult from @lobechat/prompts.
+   * Format command result using the shared formatCommandResult from @agentasia/prompts.
    * This ensures consistent content format across all runtimes.
    */
   private formatCommandOutput(command: string, result: CommandResult): BuiltinServerRuntimeOutput {

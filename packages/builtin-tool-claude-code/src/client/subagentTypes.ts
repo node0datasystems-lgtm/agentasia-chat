@@ -16,7 +16,7 @@ export interface CCSubagentTypeInfo {
  * render sensibly.
  *
  * UI-level (icons are React components) so it lives in the CC client entry
- * rather than `@lobechat/heterogeneous-agents` — that package stays a
+ * rather than `@agentasia/heterogeneous-agents` — that package stays a
  * pure-data home for adapter orchestration.
  */
 export const CC_SUBAGENT_TYPES: Record<string, CCSubagentTypeInfo> = {

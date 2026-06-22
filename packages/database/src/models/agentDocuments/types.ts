@@ -1,4 +1,4 @@
-// Re-export all types from @lobechat/agent-templates for backward compatibility
+// Re-export all types from @agentasia/agent-templates for backward compatibility
 
 // Runtime values (enums, consts)
 // Database-specific types that remain here

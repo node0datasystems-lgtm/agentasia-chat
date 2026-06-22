@@ -138,7 +138,7 @@ export interface ResolvedAgentConfig {
  *
  * For builtin agents (identified by slug), this will:
  * 1. Get the base config from the agent store
- * 2. Get the runtime config from @lobechat/builtin-agents
+ * 2. Get the runtime config from @agentasia/builtin-agents
  * 3. Merge the runtime systemRole into the agent config
  *
  * For regular agents, this simply returns the config from the store.

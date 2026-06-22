@@ -4,7 +4,7 @@ import { replaceEqualDeep } from '@tanstack/react-query';
  * Recursively replace references in `next` with references from `prev`
  * where the values are deeply equal.
  *
- * Why: `parse()` from @lobechat/conversation-flow rebuilds the entire
+ * Why: `parse()` from @agentasia/conversation-flow rebuilds the entire
  * displayMessages tree on every dispatch (including streaming chunks), which
  * gives every message / block / tool / result a fresh reference. That defeats
  * `memo` and `useStore(selector, isEqual)` for unchanged subtrees and causes

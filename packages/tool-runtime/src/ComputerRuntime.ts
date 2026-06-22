@@ -47,7 +47,7 @@ import type {
  *
  * Subclasses implement `callService` to delegate to their specific backend
  * (Electron IPC, cloud sandbox API, etc.). The base class handles:
- * - Normalizing raw results into formatted content via `@lobechat/prompts`
+ * - Normalizing raw results into formatted content via `@agentasia/prompts`
  * - Building consistent state objects for UI rendering
  */
 export abstract class ComputerRuntime {

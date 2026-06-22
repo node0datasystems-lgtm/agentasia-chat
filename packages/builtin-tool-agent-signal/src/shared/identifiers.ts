@@ -2,7 +2,7 @@
  * Builtin tool identifiers for the self-iteration background agents.
  *
  * These match the `plugins: [...]` declared by the matching builtin agents
- * (`@lobechat/builtin-agents`): nightly-review → review, self-reflection →
+ * (`@agentasia/builtin-agents`): nightly-review → review, self-reflection →
  * reflection, self-feedback-intent → feedback-intent, skill-management →
  * skill-management.
  *

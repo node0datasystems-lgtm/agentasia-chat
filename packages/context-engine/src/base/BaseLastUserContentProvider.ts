@@ -145,7 +145,7 @@ export abstract class BaseLastUserContentProvider extends BaseProcessor {
 
   /**
    * Wrap content with system context markers
-   * Following the format from @lobechat/prompts files/index.ts
+   * Following the format from @agentasia/prompts files/index.ts
    */
   protected wrapWithSystemContext(content: string, contextType: string): string {
     return `${SYSTEM_CONTEXT_START}

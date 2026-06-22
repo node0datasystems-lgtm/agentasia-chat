@@ -7,7 +7,7 @@ import { buildWorkspaceWhere } from '../utils/workspace';
 /**
  * ModelUsage numeric fields summed per (provider, model) to build the
  * `cost.llm.byModel[].usage` breakdown. Mirrors ModelUsageSchema in
- * `@lobechat/types` (message/common/metadata.ts) — keep in sync if it changes.
+ * `@agentasia/types` (message/common/metadata.ts) — keep in sync if it changes.
  */
 const USAGE_FIELDS = [
   'totalInputTokens',

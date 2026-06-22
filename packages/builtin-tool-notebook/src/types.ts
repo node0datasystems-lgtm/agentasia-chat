@@ -1,7 +1,7 @@
 /**
  * @deprecated The notebook builtin tool is deprecated. Topic-scoped documents
  * now flow through the agent-documents pipeline (see
- * `@lobechat/builtin-tool-agent-documents`) while retaining the
+ * `@agentasia/builtin-tool-agent-documents`) while retaining the
  * `topic_documents` junction for topic-scoped listing.
  *
  * The manifest is no longer registered with the LLM tools engine, so the model

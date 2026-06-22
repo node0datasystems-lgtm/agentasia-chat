@@ -14,7 +14,7 @@ const meter = metrics.getMeter('server-services-agent-signal');
  *
  * @returns Shared tracer for AgentSignal runtime observability
  */
-export const tracer = trace.getTracer('@lobechat/agent-signal', '0.0.1');
+export const tracer = trace.getTracer('@agentasia/agent-signal', '0.0.1');
 
 /**
  * Count of persisted AgentSignal source occurrences.

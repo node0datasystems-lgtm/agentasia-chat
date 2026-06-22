@@ -17,7 +17,7 @@ const log = debug('context-engine:provider:SkillContextProvider');
 
 /**
  * Lightweight skill metadata for context injection
- * Compatible with the SkillMeta that will be added in @lobechat/types (Phase 3.2)
+ * Compatible with the SkillMeta that will be added in @agentasia/types (Phase 3.2)
  */
 export interface SkillMeta {
   /**

@@ -7,7 +7,7 @@ import { hasHiddenSegment } from './hasHiddenSegment';
 /**
  * Lightweight glob — backed by `fast-glob` only. For the platform-aware
  * version that prefers `fd` / `find` / `mdfind` when present, use
- * `createFileSearchModule()` from `@lobechat/local-file-shell/fileSearch`.
+ * `createFileSearchModule()` from `@agentasia/local-file-shell/fileSearch`.
  */
 export async function globLocalFiles({
   pattern,

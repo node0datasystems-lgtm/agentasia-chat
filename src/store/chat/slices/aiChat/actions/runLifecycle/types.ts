@@ -112,7 +112,7 @@ export interface RunErrorEvent extends RunLifecycleEventBase {
  * decide where title / signal / queue-drain / notification / metadata effects run.
  *
  * NOT to be confused with the runtime-internal, bidirectional, BLOCKING hooks in
- * `@lobechat/agent-runtime` (`beforeStep` / `beforeToolCall` / `onComplete` …)
+ * `@agentasia/agent-runtime` (`beforeStep` / `beforeToolCall` / `onComplete` …)
  * that intercept execution and can mock/halt it. This layer is one-way and only
  * reacts to a run's lifecycle — the two must not be conflated.
  */

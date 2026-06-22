@@ -10,7 +10,7 @@ const meter = metrics.getMeter('server-services-agent-runtime');
  * When OTEL is not initialized, `getTracer` returns a no-op provider, so calling
  * `tracer.startActiveSpan` is safe and cheap in environments without telemetry.
  */
-export const tracer = trace.getTracer('@lobechat/agent-runtime', '0.0.1');
+export const tracer = trace.getTracer('@agentasia/agent-runtime', '0.0.1');
 
 /**
  * Count of async sub-agent parent resume attempts grouped by `outcome`:

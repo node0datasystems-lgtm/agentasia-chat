@@ -46,7 +46,7 @@ export interface GenerateObjectOptions {
    * Structured tracing config consumed by tracing hooks (e.g.
    * `llm_generation_tracing`). Loosely typed here so the runtime stays
    * tracing-agnostic; callers should import `TracingOptions` from
-   * `@lobechat/llm-generation-tracing` for the strongly-typed shape.
+   * `@agentasia/llm-generation-tracing` for the strongly-typed shape.
    */
   tracing?: Record<string, unknown>;
 

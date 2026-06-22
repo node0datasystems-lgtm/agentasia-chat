@@ -4,7 +4,7 @@ import type {
   LocalReadFileResult,
 } from '@agentasia/electron-client-ipc';
 
-// Re-export shared state types from @lobechat/tool-runtime
+// Re-export shared state types from @agentasia/tool-runtime
 export type {
   EditFileState as EditLocalFileState,
   GlobFilesState,

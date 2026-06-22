@@ -17,7 +17,7 @@ import type { ScenarioDefinition } from './types';
  * local constant — keeping the version next to the thing it versions avoids
  * the drift you'd get from a central table that nobody remembers to update.
  *
- * For the full directory of scenario *names*, see `@lobechat/const`
+ * For the full directory of scenario *names*, see `@agentasia/const`
  * `TRACING_SCENARIOS`.
  */
 export const TRACING_SCENARIO_REGISTRY: Record<string, TracingScenario> = {

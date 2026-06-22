@@ -1,6 +1,6 @@
 /**
  * Types for the device-control RPC surface. These mirror the shapes in
- * `@lobechat/electron-client-ipc` (desktop) and `@lobechat/types` (server), but
+ * `@agentasia/electron-client-ipc` (desktop) and `@agentasia/types` (server), but
  * are re-declared here so this package stays a leaf with no UI / server
  * dependency. They are structurally compatible with their counterparts, so the
  * desktop wiring can pass its own IPC-typed implementations directly.
@@ -133,7 +133,7 @@ export interface WorkspaceScanDeps {
 /**
  * Platform-specific handlers the device-control dispatcher delegates to. Git and
  * workspace-scan methods are implemented inside this package (over
- * `@lobechat/local-file-shell`); the handlers below differ per host:
+ * `@agentasia/local-file-shell`); the handlers below differ per host:
  *
  * - Desktop injects implementations backed by its `localFileProtocolManager`
  *   (preview-protocol approval, secure file reads).

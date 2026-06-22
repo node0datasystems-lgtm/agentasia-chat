@@ -16,7 +16,7 @@ export async function getModelPricing(
   provider?: string,
 ): Promise<Pricing | undefined> {
   const { loadModels } =
-    (await import('@lobechat/business-model-bank/model-config')) as BusinessModelConfigModule;
+    (await import('@agentasia/business-model-bank/model-config')) as BusinessModelConfigModule;
   const models = await loadModels();
 
   // 1. First try to get pricing from the specified provider

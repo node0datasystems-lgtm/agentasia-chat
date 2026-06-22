@@ -1,4 +1,4 @@
-// Re-export shared state types from @lobechat/tool-runtime
+// Re-export shared state types from @agentasia/tool-runtime
 export type {
   EditFileState as EditLocalFileState,
   GetCommandOutputState,

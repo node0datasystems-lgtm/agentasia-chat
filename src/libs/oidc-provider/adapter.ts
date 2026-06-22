@@ -177,7 +177,7 @@ class OIDCAdapter {
       log('[%s] Setting userId: %s', this.name, payload.accountId);
     } else {
       try {
-        const { getUserAuth } = await import('@lobechat/utils/server');
+        const { getUserAuth } = await import('@agentasia/utils/server');
         try {
           const { userId } = await getUserAuth();
           if (userId) {

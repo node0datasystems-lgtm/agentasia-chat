@@ -8,7 +8,7 @@ import { hasHiddenSegment } from './hasHiddenSegment';
  * Lightweight grep — spawns `rg` directly and returns the raw `--json`
  * events. For the platform-aware fallback chain (rg → ag → grep → nodejs)
  * with rich `output_mode` / `-A/-B/-C` support, use
- * `createContentSearchImpl()` from `@lobechat/local-file-shell/contentSearch`.
+ * `createContentSearchImpl()` from `@agentasia/local-file-shell/contentSearch`.
  */
 export async function grepContent({
   pattern,

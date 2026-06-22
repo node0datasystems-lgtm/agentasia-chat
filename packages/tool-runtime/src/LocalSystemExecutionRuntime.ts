@@ -148,7 +148,7 @@ export class LocalSystemExecutionRuntime extends ComputerRuntime {
    */
   async readFiles(params: any): Promise<BuiltinServerRuntimeOutput> {
     try {
-      const { formatMultipleFiles } = await import('@lobechat/prompts/fileSystem');
+      const { formatMultipleFiles } = await import('@agentasia/prompts/fileSystem');
       const results = await this.service.readLocalFiles(params);
 
       return {

@@ -3,7 +3,7 @@ import { BranchResolver } from './BranchResolver';
 
 /**
  * Persisted external-signal lineage on `message.metadata.signal` —
- * mirrors `MessageSignal` in `@lobechat/types/message/common/metadata.ts`.
+ * mirrors `MessageSignal` in `@agentasia/types/message/common/metadata.ts`.
  * Locally duplicated to avoid a cross-package import for a single
  * structural type.
  *

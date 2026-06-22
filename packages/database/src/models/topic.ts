@@ -134,7 +134,7 @@ export interface ListTopicsForMemoryExtractorCursor {
 // Status priority for the sidebar "group by status" ordering. Lower rank =
 // higher in the list. A NULL / unknown status falls through to `active` (3),
 // matching the client which treats a missing status as active. Keep this in
-// sync with `STATUS_GROUP_ORDER` / `resolveStatusBucket` in `@lobechat/utils`
+// sync with `STATUS_GROUP_ORDER` / `resolveStatusBucket` in `@agentasia/utils`
 // (client-side bucketing): `waitingForHuman`, `failed` and `unread` all collapse
 // into the top `pending` bucket, so they must float to the top here too —
 // otherwise such a topic could fall off the first page and vanish from the

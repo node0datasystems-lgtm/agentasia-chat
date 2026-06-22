@@ -11,7 +11,7 @@ import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
  * Context passed to every page-agent server invocation.
  *
  * Mirrors the subset of `BuiltinToolContext` the page-agent tools rely on.
- * Kept minimal so this package does not depend on `@lobechat/types`'
+ * Kept minimal so this package does not depend on `@agentasia/types`'
  * full context shape (which carries renderer-only fields).
  */
 export interface PageAgentInvocationContext {
@@ -46,7 +46,7 @@ export interface PageAgentApiOutput {
  *      patch to the live Lexical editor without an extra DB roundtrip.
  *
  * Keeping the contract here (and the implementation at the registration site)
- * avoids dragging `@lobehub/editor` / `@lobechat/editor-runtime` into this
+ * avoids dragging `@lobehub/editor` / `@agentasia/editor-runtime` into this
  * package's static import graph.
  */
 export interface PageAgentRuntimeService {

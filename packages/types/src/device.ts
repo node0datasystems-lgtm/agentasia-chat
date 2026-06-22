@@ -414,7 +414,7 @@ export interface DeviceWriteProjectFileResult {
 /**
  * A single project skill (`.agents/skills` / `.claude/skills`) discovered on a
  * remote device, returned by the `listProjectSkills` device RPC. Mirrors the
- * desktop `ProjectSkillItem` (`@lobechat/electron-client-ipc`).
+ * desktop `ProjectSkillItem` (`@agentasia/electron-client-ipc`).
  */
 export interface DeviceProjectSkillItem {
   description?: string;

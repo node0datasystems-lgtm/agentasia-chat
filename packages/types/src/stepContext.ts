@@ -192,7 +192,7 @@ export interface RuntimeMentionedAgent {
 
 /**
  * A slim tool manifest injected at runtime by callers (e.g. @mention → callAgent).
- * Structurally compatible with LobeToolManifest from @lobechat/context-engine
+ * Structurally compatible with LobeToolManifest from @agentasia/context-engine
  * without requiring a cross-package import.
  */
 export interface InjectedToolManifest {

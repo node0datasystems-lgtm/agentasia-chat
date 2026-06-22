@@ -17,7 +17,7 @@ export const getModelPropertyWithFallback = async <T>(
   providerId?: string,
 ): Promise<T> => {
   const { loadModels } =
-    (await import('@lobechat/business-model-bank/model-config')) as BusinessModelConfigModule;
+    (await import('@agentasia/business-model-bank/model-config')) as BusinessModelConfigModule;
   const models = await loadModels();
 
   // Step 1: If providerId is provided, prioritize an exact match (same provider + same id)

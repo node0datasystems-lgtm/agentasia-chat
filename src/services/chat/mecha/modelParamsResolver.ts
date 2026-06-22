@@ -23,7 +23,7 @@ export interface ModelParamsContext {
  * Resolves extended parameters for model runtime based on model capabilities and chat config.
  *
  * Looks up the model's supported `extendParams` from the aiInfra store, then delegates the
- * actual resolution to the shared `applyModelExtendParams` (in `@lobechat/model-runtime`) so the
+ * actual resolution to the shared `applyModelExtendParams` (in `@agentasia/model-runtime`) so the
  * client chat service and the server-side agent runtime stay in sync.
  */
 export const resolveModelExtendParams = (ctx: ModelParamsContext): ModelExtendParams => {

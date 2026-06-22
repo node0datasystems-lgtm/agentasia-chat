@@ -161,7 +161,7 @@ export class LobeReplicateAI implements LobeRuntimeAI {
             '[Replicate createImage] Local URL detected, will fetch and upload as data',
           );
           try {
-            const { ssrfSafeFetch } = await import('@lobechat/ssrf-safe-fetch');
+            const { ssrfSafeFetch } = await import('@agentasia/ssrf-safe-fetch');
             const imageResponse = await ssrfSafeFetch(imageUrl);
             if (!imageResponse.ok) {
               throw new Error(

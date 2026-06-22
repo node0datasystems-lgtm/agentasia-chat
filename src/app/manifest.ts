@@ -23,7 +23,7 @@ const manifest = async (): Promise<MetadataRoute.Manifest> => {
 
   const [{ BRANDING_LOGO_URL, BRANDING_NAME }, { kebabCase }, { manifestModule }] =
     await Promise.all([
-      import('@lobechat/business-const'),
+      import('@agentasia/business-const'),
       import('es-toolkit/compat'),
       import('@/server/manifest'),
     ]);

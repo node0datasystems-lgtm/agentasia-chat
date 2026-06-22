@@ -4,7 +4,7 @@ import type { UIChatMessage } from '@agentasia/types';
  * Consumer-side metadata extensions for PipelineContext.metadata.
  *
  * Example:
- * declare module '@lobechat/context-engine' {
+ * declare module '@agentasia/context-engine' {
  *   interface PipelineContextMetadataOverrides {
  *     myCustomFlag?: boolean;
  *   }

@@ -1,6 +1,6 @@
 import { trace } from '@opentelemetry/api';
 
-export const tracer = trace.getTracer('@lobechat/upstash-workflow', '0.0.1');
+export const tracer = trace.getTracer('@agentasia/upstash-workflow', '0.0.1');
 
 export const ATTR_UPSTASH_WORKFLOW_RUN_ID = 'upstash.workflow.run_id' as const;
 export const ATTR_UPSTASH_WORKFLOW_URL = 'upstash.workflow.url' as const;
