@@ -3,7 +3,7 @@ import { timingSafeEqual } from 'node:crypto';
 import {
   buildMappedBusinessModelFields,
   resolveBusinessModelMapping,
-} from '@agentasia/business-model-runtime';
+} from '@/server/services/_businessRuntime';
 import { ModelRuntime } from '@agentasia/model-runtime';
 import {
   AsyncTaskError,
