@@ -49,7 +49,7 @@ export { LobeGoogleAI } from './providers/google';
 export * from './providers/google/googleModelId';
 export { LobeGroq } from './providers/groq';
 export { LobeKimiCodingPlanAI } from './providers/kimiCodingPlan';
-export { AgentAsiaAI } from './providers/agentasia';
+
 export { LobeLongCatAI } from './providers/longcat';
 export { LobeMinimaxAI } from './providers/minimax';
 export { LobeMinimaxCodingPlanAI } from './providers/minimaxCodingPlan';
