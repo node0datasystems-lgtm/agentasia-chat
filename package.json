@@ -434,7 +434,7 @@
     "@agentasia/desktop-bridge": "workspace:*",
     "@agentasia/device-gateway-client": "workspace:*",
     "@agentasia/edge-config": "workspace:*",
-    "@lobehub/editor-runtime": "workspace:*",
+    "@agentasia/editor-runtime": "workspace:*",
     "@agentasia/electron-client-ipc": "workspace:*",
     "@agentasia/electron-server-ipc": "workspace:*",
     "@agentasia/eval-dataset-parser": "workspace:*",
