@@ -1,9 +1,24 @@
 [build]
-command = "rm -rf .next node_modules/.cache && pnpm run build"
+command = "npm install -g bun && rm -rf .next node_modules/.cache && pnpm run build"
 publish = ".next"
+# Netlify doesn't have bun pre-installed, so install it as part of the build step
 
 [build.environment]
-NODE_OPTIONS = "--max-old-space-size=4096"
+NODE_OPTIONS = "--max-old-space-size=8192"
 
 [template.environment]
+# LLM Provider
 OPENAI_API_KEY = "set your OpenAI API Key"
+
+# Database - set via Netlify UI env vars (DO NOT commit)
+# DATABASE_URL = "set via Netlify UI"
+
+# App URL
+APP_URL = "https://agentasia-chat.netlify.app"
+
+# Auth (set via Netlify UI env vars)
+# AUTH_SECRET = "set via Netlify UI"
+# KEY_VAULTS_SECRET = "set via Netlify UI"
+# AUTH_SSO_PROVIDERS = "google"
+# GOOGLE_CLIENT_ID = "set via Netlify UI"
+# GOOGLE_CLIENT_SECRET = "set via Netlify UI"
