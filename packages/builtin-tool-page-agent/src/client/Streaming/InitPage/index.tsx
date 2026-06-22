@@ -1,6 +1,6 @@
 'use client';
 
-import type { InitDocumentArgs } from '@lobehub/editor-runtime';
+import type { InitDocumentArgs } from '@agentasia/editor-runtime';
 import type { BuiltinStreamingProps } from '@agentasia/types';
 import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';

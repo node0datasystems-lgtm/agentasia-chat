@@ -1,6 +1,6 @@
 'use client';
 
-import type { ModifyNodesArgs } from '@lobehub/editor-runtime';
+import type { ModifyNodesArgs } from '@agentasia/editor-runtime';
 import type { BuiltinInspectorProps } from '@agentasia/types';
 import { Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';

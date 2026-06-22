@@ -1,6 +1,6 @@
 'use client';
 
-import type { EditTitleArgs } from '@lobehub/editor-runtime';
+import type { EditTitleArgs } from '@agentasia/editor-runtime';
 import type { BuiltinInspectorProps } from '@agentasia/types';
 import { cx } from 'antd-style';
 import { memo } from 'react';

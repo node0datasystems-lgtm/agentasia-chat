@@ -1,4 +1,4 @@
-import type { SkillResourceMeta } from '@lobehub/types';
+import type { SkillResourceMeta } from '@agentasia/types';
 
 /**
  * Convert a simple path→content map to Record<string, SkillResourceMeta>.

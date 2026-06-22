@@ -4,7 +4,7 @@ import type {
   InitDocumentArgs,
   ModifyNodesArgs,
   ReplaceTextArgs,
-} from '@lobehub/editor-runtime';
+} from '@agentasia/editor-runtime';
 import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 /**

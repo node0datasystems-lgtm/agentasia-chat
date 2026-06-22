@@ -1,4 +1,4 @@
-import { type BuiltinSkill } from '@lobehub/types';
+import { type BuiltinSkill } from '@agentasia/types';
 
 import { systemPrompt } from './content';
 import { toResourceMeta } from './helpers';
