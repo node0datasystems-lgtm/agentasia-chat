@@ -1,4 +1,4 @@
-import { getLobehubSkillProviderById } from '@lobehub/const';
+import { getLobehubSkillProviderById } from '@agentasia/const';
 import { produce } from 'immer';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';

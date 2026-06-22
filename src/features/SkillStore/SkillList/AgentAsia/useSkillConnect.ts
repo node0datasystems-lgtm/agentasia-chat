@@ -1,6 +1,6 @@
 'use client';
 
-import { COMPOSIO_APP_TYPES, getLobehubSkillProviderById } from '@lobehub/const';
+import { COMPOSIO_APP_TYPES, getLobehubSkillProviderById } from '@agentasia/const';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { useToolStore } from '@/store/tool';
