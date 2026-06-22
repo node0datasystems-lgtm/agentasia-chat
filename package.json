@@ -1,5 +1,6 @@
 {
   "name": "@agentasia/agentasia-chat",
+  // QClaw redeploy trigger
   "version": "2.2.6",
   "description": "AgentAsia - an open-source,comprehensive AI Agent framework that supports speech synthesis, multimodal, and extensible Function Call plugin system. Supports one-click free deployment of your private ChatGPT/LLM web application.",
   "keywords": [
