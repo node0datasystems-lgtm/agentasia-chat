@@ -2,7 +2,7 @@ import {
   applyMarkdownPatch,
   formatMarkdownPatchError,
   type MarkdownPatchHunk,
-} from '@lobehub/markdown-patch';
+} from '@agentasia/markdown-patch';
 import type { BuiltinServerRuntimeOutput, SaveUserQuestionInput } from '@agentasia/types';
 
 import {

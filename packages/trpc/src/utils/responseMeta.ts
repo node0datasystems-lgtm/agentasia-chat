@@ -2,7 +2,7 @@ import {
   AUTH_REQUIRED_HEADER,
   MARKET_AUTH_REQUIRED_MESSAGE,
   TRPC_ERROR_CODE_UNAUTHORIZED,
-} from '@lobehub/desktop-bridge';
+} from '@agentasia/desktop-bridge';
 import { type TRPCError } from '@trpc/server';
 
 interface ResponseMetaParams {

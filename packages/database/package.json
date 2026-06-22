@@ -18,7 +18,7 @@
     "ts-md5": "^2.0.1",
     "type-fest": "^5.2.0",
     "ws": "^8.18.3",
-    "@lobehub/agent-templates": "workspace:*",
+    "@agentasia/agent-templates": "workspace:*",
     "@agentasia/business-const": "workspace:*",
     "@agentasia/business-model-bank": "workspace:*",
     "@agentasia/const": "workspace:*",

@@ -14,7 +14,7 @@
   "dependencies": {
     "zod": "^3.25.76",
     "@agentasia/const": "workspace:*",
-    "@lobehub/markdown-patch": "workspace:*",
+    "@agentasia/markdown-patch": "workspace:*",
     "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {

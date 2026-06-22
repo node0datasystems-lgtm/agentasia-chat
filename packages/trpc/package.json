@@ -20,7 +20,7 @@
     "superjson": "^2.2.6",
     "@agentasia/const": "workspace:*",
     "@agentasia/database": "workspace:*",
-    "@lobehub/desktop-bridge": "workspace:*",
+    "@agentasia/desktop-bridge": "workspace:*",
     "@agentasia/env": "workspace:*",
     "@agentasia/observability-otel": "workspace:*",
     "@agentasia/types": "workspace:*",

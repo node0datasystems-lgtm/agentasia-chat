@@ -154,3 +154,4 @@ docs/superpowers/
 
 # Kagura agent runtime
 .kagura/
+.env.production

@@ -1,6 +1,6 @@
 'use client';
 
-import type { MarkdownPatchHunk } from '@lobehub/markdown-patch';
+import type { MarkdownPatchHunk } from '@agentasia/markdown-patch';
 import type { BuiltinRenderProps } from '@agentasia/types';
 import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
