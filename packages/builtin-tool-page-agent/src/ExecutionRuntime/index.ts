@@ -4,7 +4,7 @@ import type {
   InitDocumentArgs,
   ModifyNodesArgs,
   ReplaceTextArgs,
-} from '@agentasia/editor-runtime';
+} from '@lobehub/editor-runtime';
 import type { BuiltinServerRuntimeOutput } from '@agentasia/types';
 
 /**
@@ -46,7 +46,7 @@ export interface PageAgentApiOutput {
  *      patch to the live Lexical editor without an extra DB roundtrip.
  *
  * Keeping the contract here (and the implementation at the registration site)
- * avoids dragging `@agentasia/editor` / `@lobechat/editor-runtime` into this
+ * avoids dragging `@lobehub/editor` / `@lobechat/editor-runtime` into this
  * package's static import graph.
  */
 export interface PageAgentRuntimeService {

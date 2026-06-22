@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Block, Flexbox, Highlighter, Icon, Markdown, Tag, Text } from '@agentasia/ui';
+import { Block, Flexbox, Highlighter, Icon, Markdown, Tag, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ExternalLink, Link2 } from 'lucide-react';
 import type { ReactNode } from 'react';

@@ -2,7 +2,7 @@
 
 import type { WriteLocalFileParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinStreamingProps } from '@agentasia/types';
-import { Highlighter, Markdown } from '@agentasia/ui';
+import { Highlighter, Markdown } from '@lobehub/ui';
 import path from 'path-browserify-esm';
 import { memo } from 'react';
 

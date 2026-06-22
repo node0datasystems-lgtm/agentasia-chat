@@ -1,7 +1,7 @@
 'use client';
 
 import { type BuiltinRenderProps } from '@agentasia/types';
-import { Flexbox, Markdown, ScrollShadow } from '@agentasia/ui';
+import { Flexbox, Markdown, ScrollShadow } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 

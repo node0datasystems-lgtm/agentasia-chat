@@ -18,7 +18,7 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@agentasia/icons": "^5.4.0",
+    "@lobehub/icons": "^5.4.0",
     "@agentasia/builtin-tool-activator": "workspace:*",
     "@agentasia/builtin-tool-agent-builder": "workspace:*",
     "@agentasia/builtin-tool-agent-documents": "workspace:*",
@@ -56,7 +56,7 @@
     "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@agentasia/ui": "^5",
+    "@lobehub/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "react": "*",

@@ -1,6 +1,6 @@
 import type { LocalSearchFilesParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinPlaceholderProps } from '@agentasia/types';
-import { Center, Flexbox, Icon, Skeleton } from '@agentasia/ui';
+import { Center, Flexbox, Icon, Skeleton } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { SearchIcon } from 'lucide-react';
 import React, { memo } from 'react';

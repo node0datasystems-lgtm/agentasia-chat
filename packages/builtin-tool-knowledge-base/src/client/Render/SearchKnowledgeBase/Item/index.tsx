@@ -1,7 +1,7 @@
 'use client';
 
 import type { FileSearchResult } from '@agentasia/types';
-import { Center, Flexbox, MaterialFileTypeIcon, Text, Tooltip } from '@agentasia/ui';
+import { Center, Flexbox, MaterialFileTypeIcon, Text, Tooltip } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { useTheme } from 'next-themes';
 import { memo } from 'react';

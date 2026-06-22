@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Avatar, Flexbox } from '@agentasia/ui';
+import { Avatar, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { Users } from 'lucide-react';
 import { memo } from 'react';

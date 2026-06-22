@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Flexbox, MaterialFileTypeIcon, Text } from '@agentasia/ui';
+import { Alert, Flexbox, MaterialFileTypeIcon, Text } from '@lobehub/ui';
 import { Descriptions } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';

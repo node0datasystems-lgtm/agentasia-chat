@@ -1,5 +1,5 @@
-import type { IEditor } from '@agentasia/editor';
-import { CommonPlugin, Kernel, LitexmlPlugin, MarkdownPlugin, moment } from '@agentasia/editor';
+import type { IEditor } from '@lobehub/editor';
+import { CommonPlugin, Kernel, LitexmlPlugin, MarkdownPlugin, moment } from '@lobehub/editor';
 import { resetRandomKey } from 'lexical';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

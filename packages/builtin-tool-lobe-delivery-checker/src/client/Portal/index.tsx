@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinPortalProps } from '@agentasia/types';
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import { memo } from 'react';
 
 import type { GenerateVerifyPlanParams, GenerateVerifyPlanState } from '../../types';

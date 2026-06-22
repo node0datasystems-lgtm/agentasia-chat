@@ -1,4 +1,4 @@
-import type { EditorRuntime } from '@agentasia/editor-runtime';
+import type { EditorRuntime } from '@lobehub/editor-runtime';
 import type { BuiltinToolContext } from '@agentasia/types';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 

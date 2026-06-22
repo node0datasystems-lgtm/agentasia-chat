@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Avatar, Button, Flexbox, Tag } from '@agentasia/ui';
+import { Avatar, Button, Flexbox, Tag } from '@lobehub/ui';
 import { CheckCircle, Download, Package, Search } from 'lucide-react';
 import { memo, useState } from 'react';
 

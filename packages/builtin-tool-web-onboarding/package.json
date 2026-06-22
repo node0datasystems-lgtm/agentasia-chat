@@ -14,14 +14,14 @@
   "dependencies": {
     "zod": "^3.25.76",
     "@agentasia/const": "workspace:*",
-    "@agentasia/markdown-patch": "workspace:*",
+    "@lobehub/markdown-patch": "workspace:*",
     "@agentasia/prompts": "workspace:*"
   },
   "devDependencies": {
     "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@agentasia/ui": "^5",
+    "@lobehub/ui": "^5",
     "antd": "^6",
     "antd-style": "*",
     "react": "*",

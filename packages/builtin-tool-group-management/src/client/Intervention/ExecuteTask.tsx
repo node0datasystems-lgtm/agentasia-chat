@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Avatar, Flexbox, Tooltip } from '@agentasia/ui';
+import { Avatar, Flexbox, Tooltip } from '@lobehub/ui';
 import { Input, InputNumber } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';

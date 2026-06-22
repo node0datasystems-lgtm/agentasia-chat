@@ -8,7 +8,7 @@ import {
   Select,
   Text,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import type { ReactNode } from 'react';
 import { memo, useState } from 'react';

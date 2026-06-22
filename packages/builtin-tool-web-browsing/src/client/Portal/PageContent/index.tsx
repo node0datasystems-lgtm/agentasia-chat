@@ -10,7 +10,7 @@ import {
   Segmented,
   stopPropagation,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Descriptions } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ExternalLink } from 'lucide-react';

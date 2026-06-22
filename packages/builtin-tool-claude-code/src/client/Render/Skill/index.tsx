@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Flexbox, Icon, Markdown, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Markdown, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { Sparkles } from 'lucide-react';
 import { memo } from 'react';

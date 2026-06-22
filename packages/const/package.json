@@ -21,6 +21,6 @@
   },
   "peerDependencies": {
     "@icons-pack/react-simple-icons": "^13.8.0",
-    "@agentasia/ui": "^5"
+    "@lobehub/ui": "^5"
   }
 }

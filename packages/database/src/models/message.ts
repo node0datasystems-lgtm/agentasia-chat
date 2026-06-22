@@ -29,7 +29,7 @@ import {
   logTimingSink as logTiming,
   runTimedSinkStage as runTimedStage,
 } from '@agentasia/utils';
-import type { HeatmapsProps } from '@agentasia/charts';
+import type { HeatmapsProps } from '@lobehub/charts';
 import dayjs from 'dayjs';
 import type { SQL } from 'drizzle-orm';
 import {

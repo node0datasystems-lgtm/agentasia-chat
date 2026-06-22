@@ -1,6 +1,6 @@
 import type { SearchFilesState } from '@agentasia/tool-runtime';
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import SearchResult from './Result';

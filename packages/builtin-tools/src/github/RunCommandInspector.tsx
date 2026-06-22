@@ -2,7 +2,7 @@
 
 import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Github } from '@agentasia/icons';
+import { Github } from '@lobehub/icons';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

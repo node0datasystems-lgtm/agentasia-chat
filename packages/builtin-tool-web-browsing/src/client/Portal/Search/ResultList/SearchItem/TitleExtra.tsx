@@ -1,4 +1,4 @@
-import { Flexbox, Tag, Text, Tooltip } from '@agentasia/ui';
+import { Flexbox, Tag, Text, Tooltip } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

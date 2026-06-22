@@ -1,6 +1,6 @@
 import type { MoveLocalFilesParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

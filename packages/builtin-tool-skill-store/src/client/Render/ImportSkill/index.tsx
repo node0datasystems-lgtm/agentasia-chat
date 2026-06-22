@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { memo } from 'react';
 

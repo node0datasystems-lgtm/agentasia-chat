@@ -1,6 +1,6 @@
 import type { WriteLocalFileParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Flexbox, Highlighter, Icon, Text } from '@agentasia/ui';
+import { Flexbox, Highlighter, Icon, Text } from '@lobehub/ui';
 import { ChevronRight } from 'lucide-react';
 import path from 'path-browserify-esm';
 import { memo, useMemo } from 'react';

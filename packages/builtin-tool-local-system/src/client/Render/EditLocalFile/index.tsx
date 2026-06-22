@@ -1,6 +1,6 @@
 import type { EditLocalFileState } from '@agentasia/builtin-tool-local-system';
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Alert, Flexbox, PatchDiff, Skeleton } from '@agentasia/ui';
+import { Alert, Flexbox, PatchDiff, Skeleton } from '@lobehub/ui';
 import React, { memo } from 'react';
 
 const EditLocalFile = memo<BuiltinRenderProps<any, EditLocalFileState>>(

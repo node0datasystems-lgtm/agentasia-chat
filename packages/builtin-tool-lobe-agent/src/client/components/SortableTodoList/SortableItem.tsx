@@ -1,6 +1,6 @@
 'use client';
 
-import { SortableList } from '@agentasia/ui';
+import { SortableList } from '@lobehub/ui';
 import { memo } from 'react';
 
 import TodoItemRow from './TodoItemRow';

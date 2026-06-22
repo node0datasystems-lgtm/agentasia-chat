@@ -1,6 +1,6 @@
 import type { RenameLocalFileParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import path from 'path-browserify-esm';
 import { memo } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Highlighter } from '@agentasia/ui';
+import { Highlighter } from '@lobehub/ui';
 import { memo } from 'react';
 
 interface GlobArgs {

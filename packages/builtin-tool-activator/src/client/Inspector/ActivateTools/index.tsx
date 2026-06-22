@@ -1,7 +1,7 @@
 'use client';
 
 import { type BuiltinInspectorProps } from '@agentasia/types';
-import { Avatar, Flexbox, Icon, Tooltip } from '@agentasia/ui';
+import { Avatar, Flexbox, Icon, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { AlertTriangle } from 'lucide-react';
 import { memo } from 'react';

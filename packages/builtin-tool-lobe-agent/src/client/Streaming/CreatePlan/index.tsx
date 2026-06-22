@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinStreamingProps } from '@agentasia/types';
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ListChecksIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -1,5 +1,5 @@
 {
-  "name": "@agentasia/editor-runtime",
+  "name": "@lobehub/editor-runtime",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -13,7 +13,7 @@
     "lexical": "^0.42.0"
   },
   "peerDependencies": {
-    "@agentasia/editor": "^4.17.1",
+    "@lobehub/editor": "^4.17.1",
     "debug": "*"
   }
 }

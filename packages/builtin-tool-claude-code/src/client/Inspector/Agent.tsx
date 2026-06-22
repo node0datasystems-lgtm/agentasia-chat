@@ -3,8 +3,8 @@
 import { AnimatedNumber } from '@agentasia/shared-tool-ui/components';
 import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Tooltip } from '@agentasia/ui';
-import { GroupBotIcon } from '@agentasia/ui/icons';
+import { Tooltip } from '@lobehub/ui';
+import { GroupBotIcon } from '@lobehub/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

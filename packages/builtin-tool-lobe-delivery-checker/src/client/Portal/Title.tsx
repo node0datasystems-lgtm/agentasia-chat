@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { SlidersHorizontal } from 'lucide-react';
 import { memo } from 'react';

@@ -9,9 +9,9 @@ import {
   ReactListPlugin,
   ReactMathPlugin,
   ReactTablePlugin,
-} from '@agentasia/editor';
-import { Editor, useEditor } from '@agentasia/editor/react';
-import { Flexbox, TextArea } from '@agentasia/ui';
+} from '@lobehub/editor';
+import { Editor, useEditor } from '@lobehub/editor/react';
+import { Flexbox, TextArea } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import React, { memo, useCallback, useEffect, useRef, useState } from 'react';

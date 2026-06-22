@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinStreamingProps } from '@agentasia/types';
-import { Block, Flexbox, Markdown, Tag } from '@agentasia/ui';
+import { Block, Flexbox, Markdown, Tag } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 

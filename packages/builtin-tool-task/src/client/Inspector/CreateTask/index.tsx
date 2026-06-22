@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Icon, Tooltip } from '@agentasia/ui';
+import { Icon, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { CornerDownRight } from 'lucide-react';
 import { memo } from 'react';

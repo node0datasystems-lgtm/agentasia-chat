@@ -1,8 +1,8 @@
 'use client';
 
-import type { ReplaceTextArgs } from '@agentasia/editor-runtime';
+import type { ReplaceTextArgs } from '@lobehub/editor-runtime';
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Icon, Text } from '@agentasia/ui';
+import { Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { ArrowRight } from 'lucide-react';
 import { memo } from 'react';

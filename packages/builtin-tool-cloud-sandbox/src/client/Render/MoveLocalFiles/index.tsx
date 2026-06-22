@@ -2,7 +2,7 @@
 
 import { CheckCircleFilled, CloseCircleFilled } from '@ant-design/icons';
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Block, Flexbox, Text } from '@agentasia/ui';
+import { Block, Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ArrowRight } from 'lucide-react';
 import { memo } from 'react';

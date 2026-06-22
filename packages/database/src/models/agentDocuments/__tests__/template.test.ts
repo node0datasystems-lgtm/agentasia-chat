@@ -4,7 +4,7 @@ import {
   DocumentLoadPosition,
   DocumentLoadRule,
   DocumentTemplateManager,
-} from '@agentasia/agent-templates';
+} from '@lobehub/agent-templates';
 import { describe, expect, it } from 'vitest';
 
 describe('DocumentTemplateManager', () => {

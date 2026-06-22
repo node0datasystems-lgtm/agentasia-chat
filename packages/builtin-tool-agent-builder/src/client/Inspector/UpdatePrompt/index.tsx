@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import { memo, useMemo } from 'react';

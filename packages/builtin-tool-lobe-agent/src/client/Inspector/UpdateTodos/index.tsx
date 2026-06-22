@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Icon, Text } from '@agentasia/ui';
+import { Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { CheckCircle, DiffIcon, Minus, Plus } from 'lucide-react';
 import type { ReactNode } from 'react';

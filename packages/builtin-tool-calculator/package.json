@@ -18,7 +18,7 @@
     "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@agentasia/ui": "^5",
+    "@lobehub/ui": "^5",
     "antd-style": "*",
     "lucide-react": "*",
     "react": "*",

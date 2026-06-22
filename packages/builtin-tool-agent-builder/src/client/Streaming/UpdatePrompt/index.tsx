@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinStreamingProps } from '@agentasia/types';
-import { Block, Markdown } from '@agentasia/ui';
+import { Block, Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 
 import type { UpdatePromptParams } from '../../../types';

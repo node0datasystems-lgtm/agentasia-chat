@@ -1,4 +1,4 @@
-import { Button, Center, Flexbox } from '@agentasia/ui';
+import { Button, Center, Flexbox } from '@lobehub/ui';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

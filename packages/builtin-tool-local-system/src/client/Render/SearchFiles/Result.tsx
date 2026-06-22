@@ -1,6 +1,6 @@
 import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
 import type { ChatMessagePluginError } from '@agentasia/types';
-import { Block, Empty, Flexbox, Skeleton } from '@agentasia/ui';
+import { Block, Empty, Flexbox, Skeleton } from '@lobehub/ui';
 import { SearchIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

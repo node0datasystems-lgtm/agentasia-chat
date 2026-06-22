@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import { memo } from 'react';

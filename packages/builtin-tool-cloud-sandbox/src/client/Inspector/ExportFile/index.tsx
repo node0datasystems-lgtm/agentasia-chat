@@ -3,7 +3,7 @@
 import { FilePathDisplay } from '@agentasia/shared-tool-ui/components';
 import { inspectorTextStyles, shinyTextStyles } from '@agentasia/shared-tool-ui/styles';
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

@@ -2,7 +2,7 @@
 
 import type { InterestAreaKey } from '@agentasia/const';
 import type { BuiltinRenderProps, SaveUserQuestionInput } from '@agentasia/types';
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

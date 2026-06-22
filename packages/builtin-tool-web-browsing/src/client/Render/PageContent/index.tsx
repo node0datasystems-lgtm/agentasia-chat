@@ -1,6 +1,6 @@
 import type { CrawlPluginState } from '@agentasia/types';
 import type { CrawlErrorResult } from '@agentasia/web-crawler';
-import { Flexbox, ScrollShadow } from '@agentasia/ui';
+import { Flexbox, ScrollShadow } from '@lobehub/ui';
 import { memo } from 'react';
 
 import Loading from './Loading';

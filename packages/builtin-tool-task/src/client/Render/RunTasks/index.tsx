@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Block, Icon, Text } from '@agentasia/ui';
+import { Block, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Check, X } from 'lucide-react';
 import { memo } from 'react';

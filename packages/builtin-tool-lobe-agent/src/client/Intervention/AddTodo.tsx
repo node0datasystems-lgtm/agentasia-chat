@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Block } from '@agentasia/ui';
+import { Block } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import type { RadioChangeEvent } from 'antd';
 import { Radio } from 'antd';
 import { createStaticStyles } from 'antd-style';

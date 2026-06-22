@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Checkbox, Flexbox, Input } from '@agentasia/ui';
+import { ActionIcon, Checkbox, Flexbox, Input } from '@lobehub/ui';
 import type { InputRef } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { Plus } from 'lucide-react';

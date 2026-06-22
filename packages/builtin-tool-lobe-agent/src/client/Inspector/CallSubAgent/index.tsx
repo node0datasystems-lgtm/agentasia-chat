@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { GroupBotIcon } from '@agentasia/ui/icons';
+import { GroupBotIcon } from '@lobehub/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

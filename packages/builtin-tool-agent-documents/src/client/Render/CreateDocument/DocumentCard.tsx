@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, CopyButton, Flexbox, Markdown, ScrollShadow, TooltipGroup } from '@agentasia/ui';
+import { ActionIcon, CopyButton, Flexbox, Markdown, ScrollShadow, TooltipGroup } from '@lobehub/ui';
 import { Button } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { FileTextIcon, Maximize2, Minimize2, PencilLine } from 'lucide-react';

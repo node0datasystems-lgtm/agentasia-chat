@@ -1,6 +1,6 @@
 import { useToolRenderCapabilities } from '@agentasia/shared-tool-ui';
 import type { ReadFileState } from '@agentasia/tool-runtime';
-import { ActionIcon, Flexbox, Icon, Markdown, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Icon, Markdown, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { AlignLeft, Asterisk, ExternalLink, FolderOpen } from 'lucide-react';
 import React, { memo } from 'react';

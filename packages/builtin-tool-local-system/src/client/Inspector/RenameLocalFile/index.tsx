@@ -2,7 +2,7 @@
 
 import type { RenameLocalFileParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinInspectorProps } from '@agentasia/types';
-import { MaterialFileTypeIcon } from '@agentasia/ui';
+import { MaterialFileTypeIcon } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import path from 'path-browserify-esm';
 import { memo } from 'react';

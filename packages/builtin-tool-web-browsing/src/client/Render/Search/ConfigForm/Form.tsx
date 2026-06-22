@@ -1,4 +1,4 @@
-import { Button, Center, Flexbox, Icon } from '@agentasia/ui';
+import { Button, Center, Flexbox, Icon } from '@lobehub/ui';
 import { KeyRoundIcon, Loader2Icon } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

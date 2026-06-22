@@ -1,4 +1,4 @@
-import type { IEditor } from '@agentasia/editor';
+import type { IEditor } from '@lobehub/editor';
 import {
   CommonPlugin,
   Kernel,
@@ -6,7 +6,7 @@ import {
   LitexmlPlugin,
   MarkdownPlugin,
   moment,
-} from '@agentasia/editor';
+} from '@lobehub/editor';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { EditorRuntime } from '../EditorRuntime';

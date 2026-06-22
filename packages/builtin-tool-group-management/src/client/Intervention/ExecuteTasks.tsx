@@ -10,7 +10,7 @@ import {
   Icon,
   stopPropagation,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Input, InputNumber } from 'antd';
 import { createStaticStyles, useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';

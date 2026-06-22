@@ -1,6 +1,6 @@
 import type { WriteLocalFileParams } from '@agentasia/electron-client-ipc';
 import type { BuiltinRenderProps } from '@agentasia/types';
-import { Flexbox, Icon, Markdown, PatchDiff, Skeleton } from '@agentasia/ui';
+import { Flexbox, Icon, Markdown, PatchDiff, Skeleton } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ChevronRight } from 'lucide-react';
 import path from 'path-browserify-esm';

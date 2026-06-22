@@ -1,5 +1,5 @@
 import type { SearchQuery, UniformSearchResponse } from '@agentasia/types';
-import { Flexbox, Skeleton } from '@agentasia/ui';
+import { Flexbox, Skeleton } from '@lobehub/ui';
 import { uniq } from 'es-toolkit/compat';
 import { memo } from 'react';
 

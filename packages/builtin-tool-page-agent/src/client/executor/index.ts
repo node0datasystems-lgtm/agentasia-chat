@@ -5,7 +5,7 @@ import type {
   InitDocumentArgs,
   ModifyNodesArgs,
   ReplaceTextArgs,
-} from '@agentasia/editor-runtime';
+} from '@lobehub/editor-runtime';
 import type { BuiltinToolResult, ToolAfterCallContext } from '@agentasia/types';
 import { BaseExecutor } from '@agentasia/types';
 import debug from 'debug';

@@ -9,13 +9,13 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@agentasia/editor-runtime": "workspace:*"
+    "@lobehub/editor-runtime": "workspace:*"
   },
   "devDependencies": {
     "@agentasia/types": "workspace:*"
   },
   "peerDependencies": {
-    "@agentasia/ui": "^5",
+    "@lobehub/ui": "^5",
     "antd-style": "*",
     "debug": "*",
     "lucide-react": "*",

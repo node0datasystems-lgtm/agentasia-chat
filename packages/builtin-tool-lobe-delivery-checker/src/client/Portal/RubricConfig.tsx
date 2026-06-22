@@ -1,7 +1,7 @@
 'use client';
 
 import { DEFAULT_MAX_REPAIR_ROUNDS } from '@agentasia/types';
-import { Flexbox, Icon, Input, InputNumber } from '@agentasia/ui';
+import { Flexbox, Icon, Input, InputNumber } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { RefreshCw, Type } from 'lucide-react';
 import { memo } from 'react';

@@ -2,7 +2,7 @@
 
 import { DEFAULT_AVATAR } from '@agentasia/const';
 import type { AgentGroupMember, BuiltinInspectorProps } from '@agentasia/types';
-import { Avatar, Flexbox } from '@agentasia/ui';
+import { Avatar, Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cx, useTheme } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
 import type { SearchQuery, UniformSearchResponse } from '@agentasia/types';
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { uniq } from 'es-toolkit/compat';
 import { XIcon } from 'lucide-react';
 import { memo } from 'react';

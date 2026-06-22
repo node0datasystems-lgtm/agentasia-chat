@@ -8,10 +8,10 @@ import {
   ReactListPlugin,
   ReactMathPlugin,
   ReactTablePlugin,
-} from '@agentasia/editor';
-import { Editor, useEditor } from '@agentasia/editor/react';
-import { Flexbox, Icon, TextArea } from '@agentasia/ui';
-import { Switch } from '@agentasia/ui/base-ui';
+} from '@lobehub/editor';
+import { Editor, useEditor } from '@lobehub/editor/react';
+import { Flexbox, Icon, TextArea } from '@lobehub/ui';
+import { Switch } from '@lobehub/ui/base-ui';
 import { createStaticStyles, cx } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import { Bot, Hand, ListChecks, RefreshCw, RotateCcw, Scale, ShieldCheck } from 'lucide-react';

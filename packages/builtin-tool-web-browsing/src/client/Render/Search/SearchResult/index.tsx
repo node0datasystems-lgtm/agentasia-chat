@@ -1,5 +1,5 @@
 import type { SearchQuery, UniformSearchResponse } from '@agentasia/types';
-import { Block, Button, Empty, Flexbox, Icon, ScrollShadow, Skeleton } from '@agentasia/ui';
+import { Block, Button, Empty, Flexbox, Icon, ScrollShadow, Skeleton } from '@lobehub/ui';
 import { uniq } from 'es-toolkit/compat';
 import { Edit2Icon, SearchIcon } from 'lucide-react';
 import { memo } from 'react';

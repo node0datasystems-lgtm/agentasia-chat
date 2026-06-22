@@ -1,7 +1,7 @@
 'use client';
 
 import type { BuiltinInterventionProps } from '@agentasia/types';
-import { Avatar, Button, Flexbox, Text } from '@agentasia/ui';
+import { Avatar, Button, Flexbox, Text } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import type { KeyboardEvent } from 'react';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
