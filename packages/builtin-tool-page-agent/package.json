@@ -9,7 +9,7 @@
   },
   "main": "./src/index.ts",
   "dependencies": {
-    "@lobehub/editor-runtime": "workspace:*"
+    "@agentasia/editor-runtime": "workspace:*"
   },
   "devDependencies": {
     "@agentasia/types": "workspace:*"
