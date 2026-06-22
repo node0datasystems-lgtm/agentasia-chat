@@ -23,7 +23,7 @@ vi.mock('@/hooks/useAppOrigin', () => ({
   useAppOrigin: () => 'https://example.test',
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({
     disabled,
     onClick,

@@ -1,4 +1,4 @@
-import { Alert, Button, Flexbox, Highlighter, Icon } from '@agentasia/ui';
+import { Alert, Button, Flexbox, Highlighter, Icon } from '@lobehub/ui';
 import { Result } from 'antd';
 import { ShieldAlert } from 'lucide-react';
 import React, { memo } from 'react';

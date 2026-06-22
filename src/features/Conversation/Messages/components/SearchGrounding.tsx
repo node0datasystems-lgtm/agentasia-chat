@@ -1,4 +1,4 @@
-import { Flexbox, Icon, SearchResultCards, Tag } from '@agentasia/ui';
+import { Flexbox, Icon, SearchResultCards, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronDown, ChevronRight, Globe, Images } from 'lucide-react';
 import { AnimatePresence, m } from 'motion/react';

@@ -1,5 +1,5 @@
-import type { AnalyticsEvent, AnalyticsManager } from '@agentasia/analytics';
-import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
+import type { AnalyticsEvent, AnalyticsManager } from '@lobehub/analytics';
+import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 
 import { getUserStoreState } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';

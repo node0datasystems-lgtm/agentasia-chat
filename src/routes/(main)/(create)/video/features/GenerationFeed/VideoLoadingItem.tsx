@@ -1,7 +1,7 @@
 'use client';
 
 import { LoadingOutlined } from '@ant-design/icons';
-import { Block, Center } from '@agentasia/ui';
+import { Block, Center } from '@lobehub/ui';
 import { Progress, Spin } from 'antd';
 import { memo, useEffect, useState } from 'react';
 

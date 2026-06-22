@@ -3,7 +3,7 @@ import {
   CUSTOM_FOLDER_FILE_TYPE,
   MARKDOWN_MIME_TYPES,
 } from '@agentasia/const';
-import { Checkbox, showContextMenu, stopPropagation } from '@agentasia/ui';
+import { Checkbox, showContextMenu, stopPropagation } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import React, { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 

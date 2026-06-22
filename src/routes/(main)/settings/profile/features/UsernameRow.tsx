@@ -1,7 +1,7 @@
 'use client';
 
 import { LoadingOutlined } from '@ant-design/icons';
-import { Button, Flexbox, Input, Text } from '@agentasia/ui';
+import { Button, Flexbox, Input, Text } from '@lobehub/ui';
 import { type InputRef, Spin } from 'antd';
 import { type ChangeEvent } from 'react';
 import { useCallback, useRef, useState } from 'react';

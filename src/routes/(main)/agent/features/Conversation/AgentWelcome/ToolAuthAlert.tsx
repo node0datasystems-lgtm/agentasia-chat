@@ -2,7 +2,7 @@
 
 import { type ComposioAppType } from '@agentasia/const';
 import { COMPOSIO_APP_TYPES } from '@agentasia/const';
-import { ActionIcon, Alert, Avatar, Button, Flexbox, Icon, Text } from '@agentasia/ui';
+import { ActionIcon, Alert, Avatar, Button, Flexbox, Icon, Text } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { createStyles, cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';

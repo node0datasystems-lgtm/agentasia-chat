@@ -50,8 +50,8 @@ type AutoCompleteProps = {
 };
 
 const getAutoCompleteProps = async (): Promise<AutoCompleteProps> => {
-  const { ReactAutoCompletePlugin } = await import('@agentasia/editor');
-  const { Editor } = await import('@agentasia/editor/react');
+  const { ReactAutoCompletePlugin } = await import('@lobehub/editor');
+  const { Editor } = await import('@lobehub/editor/react');
   const autoCompleteCall = vi
     .mocked(Editor.withProps)
     .mock.calls.find(([plugin]) => plugin === ReactAutoCompletePlugin);
@@ -83,12 +83,12 @@ vi.mock('@lobechat/utils', () => ({
   isCommandPressed: vi.fn(() => false),
   merge: vi.fn((...args) => Object.assign({}, ...args)),
 }));
-vi.mock('@agentasia/editor', () => ({
+vi.mock('@lobehub/editor', () => ({
   INSERT_MENTION_COMMAND: 'insert-mention',
   ReactAutoCompletePlugin: vi.fn(),
   ReactMathPlugin: vi.fn(),
 }));
-vi.mock('@agentasia/editor/react', () => {
+vi.mock('@lobehub/editor/react', () => {
   const Editor = Object.assign(
     vi.fn(({ editable }: { editable?: boolean }) => (
       <div data-editable={String(editable)} data-testid="mock-editor" />
@@ -104,7 +104,7 @@ vi.mock('@agentasia/editor/react', () => {
     useEditorState: vi.fn(() => ({ isEmpty: true })),
   };
 });
-vi.mock('@agentasia/ui', () => ({ combineKeys: vi.fn(() => 'alt+enter') }));
+vi.mock('@lobehub/ui', () => ({ combineKeys: vi.fn(() => 'alt+enter') }));
 vi.mock('fuse.js', () => ({
   default: class Fuse {
     search() {

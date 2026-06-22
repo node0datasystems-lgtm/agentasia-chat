@@ -8,8 +8,8 @@ import {
   Flexbox,
   stopPropagation,
   Text,
-} from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+} from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { cssVar } from 'antd-style';
 import { CircleDot, CircleStop, Copy, ExternalLink, MoreHorizontal } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';

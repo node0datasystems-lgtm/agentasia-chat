@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Form, Highlighter } from '@agentasia/ui';
+import { Flexbox, Form, Highlighter } from '@lobehub/ui';
 import { Switch } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { snakeCase } from 'es-toolkit/compat';

@@ -1,4 +1,4 @@
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ArrowLeft } from 'lucide-react';
 import { memo } from 'react';

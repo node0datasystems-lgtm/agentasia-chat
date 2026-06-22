@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Highlighter } from '@agentasia/ui';
+import { Alert, Highlighter } from '@lobehub/ui';
 import { type ErrorInfo } from 'react';
 import { memo } from 'react';
 
@@ -12,7 +12,7 @@ interface ErrorDisplayProps {
 }
 
 /**
- * Error display component using @agentasia/ui Alert
+ * Error display component using @lobehub/ui Alert
  */
 export const ErrorDisplay = memo<ErrorDisplayProps>(({ error, identifier, apiName }) => {
   const title = identifier ? `${identifier}${apiName ? ` / ${apiName}` : ''}` : 'Tool Render Error';

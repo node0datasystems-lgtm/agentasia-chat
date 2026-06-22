@@ -1,5 +1,5 @@
 import { KeyEnum } from '@agentasia/const/hotkeys';
-import { combineKeys, Flexbox, Hotkey } from '@agentasia/ui';
+import { combineKeys, Flexbox, Hotkey } from '@lobehub/ui';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

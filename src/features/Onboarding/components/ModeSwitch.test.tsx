@@ -108,7 +108,7 @@ afterEach(() => {
 });
 
 // Each test does vi.resetModules() + dynamic import of the component, which
-// re-parses antd + @agentasia/ui fresh. On cold CI runs this can blow past the
+// re-parses antd + @lobehub/ui fresh. On cold CI runs this can blow past the
 // default 5s timeout even though the test is doing nothing slow itself.
 const TEST_TIMEOUT_MS = 15_000;
 

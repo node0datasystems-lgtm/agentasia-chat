@@ -1,8 +1,8 @@
 'use client';
 
 import { downloadFile } from '@agentasia/utils/client';
-import { FilePlugin, UploadPlugin, useLexicalComposerContext } from '@agentasia/editor';
-import { ActionIcon } from '@agentasia/ui';
+import { FilePlugin, UploadPlugin, useLexicalComposerContext } from '@lobehub/editor';
+import { ActionIcon } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { DownloadIcon } from 'lucide-react';
 import { type FC, memo, useLayoutEffect } from 'react';

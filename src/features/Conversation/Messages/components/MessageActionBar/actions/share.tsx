@@ -1,4 +1,4 @@
-import { createRawModal } from '@agentasia/ui';
+import { createRawModal } from '@lobehub/ui';
 import { Share2 } from 'lucide-react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

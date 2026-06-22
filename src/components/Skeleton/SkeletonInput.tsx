@@ -1,5 +1,5 @@
 'use client';
 
-import { Skeleton } from '@agentasia/ui';
+import { Skeleton } from '@lobehub/ui';
 
 export const SkeletonInput = () => <Skeleton.Button active block />;

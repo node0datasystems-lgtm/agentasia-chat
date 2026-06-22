@@ -1,6 +1,6 @@
 'use client';
 
-import { Form } from '@agentasia/ui';
+import { Form } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

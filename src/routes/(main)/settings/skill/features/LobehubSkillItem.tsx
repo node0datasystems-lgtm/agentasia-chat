@@ -1,8 +1,8 @@
 'use client';
 
 import { type LobehubSkillProviderType } from '@agentasia/const';
-import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Avatar, Button as LobeButton, DropdownMenu, Flexbox, Icon, Tooltip } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { Button } from 'antd';
 import { cssVar } from 'antd-style';
 import { Loader2, MoreHorizontalIcon, SquareArrowOutUpRight, Unplug } from 'lucide-react';

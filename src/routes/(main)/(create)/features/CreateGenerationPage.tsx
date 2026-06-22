@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { AnimatePresence, m as motion } from 'motion/react';
 import type { ComponentType } from 'react';
 import { memo } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { memo, useRef, useState } from 'react';
 

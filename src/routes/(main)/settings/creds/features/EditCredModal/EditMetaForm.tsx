@@ -1,7 +1,7 @@
 'use client';
 
 import { type UserCredSummary } from '@agentasia/types';
-import { Button } from '@agentasia/ui';
+import { Button } from '@lobehub/ui';
 import { useMutation } from '@tanstack/react-query';
 import { Form, Input } from 'antd';
 import { createStaticStyles } from 'antd-style';

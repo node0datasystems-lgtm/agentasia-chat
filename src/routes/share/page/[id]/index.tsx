@@ -1,6 +1,6 @@
 'use client';
 
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import { memo } from 'react';
 import { useParams } from 'react-router';
 import useSWR from 'swr';

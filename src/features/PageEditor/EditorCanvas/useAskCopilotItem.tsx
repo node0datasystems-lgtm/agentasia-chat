@@ -2,10 +2,10 @@
 
 import { DEFAULT_INBOX_AVATAR } from '@agentasia/const';
 import { nanoid } from '@agentasia/utils';
-import { type IEditor } from '@agentasia/editor';
-import { HIDE_TOOLBAR_COMMAND } from '@agentasia/editor';
-import { type ChatInputActionsProps } from '@agentasia/editor/react';
-import { Avatar, Block } from '@agentasia/ui';
+import { type IEditor } from '@lobehub/editor';
+import { HIDE_TOOLBAR_COMMAND } from '@lobehub/editor';
+import { type ChatInputActionsProps } from '@lobehub/editor/react';
+import { Avatar, Block } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
+import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 
 export const ONBOARDING_METRICS_EVENTS = {
   COMPLETED: 'onboarding_completed',

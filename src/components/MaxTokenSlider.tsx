@@ -1,4 +1,4 @@
-import { Flexbox, InputNumber } from '@agentasia/ui';
+import { Flexbox, InputNumber } from '@lobehub/ui';
 import { Slider } from 'antd';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

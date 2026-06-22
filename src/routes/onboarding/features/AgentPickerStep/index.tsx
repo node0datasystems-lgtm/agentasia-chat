@@ -5,7 +5,7 @@ import type {
   MarketplaceCategory,
 } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
 import { getTemplatesByCategoryPriority } from '@agentasia/builtin-tool-web-onboarding/agentMarketplace';
-import { Button, Flexbox, Text } from '@agentasia/ui';
+import { Button, Flexbox, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Undo2Icon } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';

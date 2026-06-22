@@ -8,7 +8,7 @@ import {
   DropdownMenuSubmenuTrigger,
   Flexbox,
   menuSharedStyles,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { cssVar, cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import type { ComponentType } from 'react';

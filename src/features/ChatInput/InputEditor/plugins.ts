@@ -7,8 +7,8 @@ import {
   ReactMathPlugin,
   ReactMentionPlugin,
   ReactVirtualBlockPlugin,
-} from '@agentasia/editor';
-import { type Editor } from '@agentasia/editor/react';
+} from '@lobehub/editor';
+import { type Editor } from '@lobehub/editor/react';
 
 import { ReactActionTagPlugin } from './ActionTag';
 import { ReactReferTopicPlugin } from './ReferTopic';

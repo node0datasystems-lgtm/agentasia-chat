@@ -1,4 +1,4 @@
-import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
+import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 
 interface TrackLoginOrSignupClickedParams {
   provider?: string;

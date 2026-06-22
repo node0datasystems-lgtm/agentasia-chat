@@ -1,6 +1,6 @@
 'use client';
 
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import { App } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Image as ImageIcon, X } from 'lucide-react';

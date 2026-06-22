@@ -1,6 +1,6 @@
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { type MarkdownProps } from '@agentasia/ui';
-import { Center, Markdown } from '@agentasia/ui';
+import { type MarkdownProps } from '@lobehub/ui';
+import { Center, Markdown } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
 const ChatPreview = ({ fontSize }: Pick<MarkdownProps, 'fontSize'>) => {

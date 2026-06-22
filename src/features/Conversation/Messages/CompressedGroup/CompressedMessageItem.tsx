@@ -1,7 +1,7 @@
 'use client';
 
 import { type UIChatMessage } from '@agentasia/types';
-import { Avatar, Flexbox } from '@agentasia/ui';
+import { Avatar, Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useUserAvatar } from '@/hooks/useUserAvatar';

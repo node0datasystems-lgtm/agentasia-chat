@@ -1,4 +1,4 @@
-import { Block, Collapse, Empty, Highlighter, Icon, Markdown } from '@agentasia/ui';
+import { Block, Collapse, Empty, Highlighter, Icon, Markdown } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { CheckIcon, MessageSquare, MinusIcon } from 'lucide-react';
 import { memo } from 'react';

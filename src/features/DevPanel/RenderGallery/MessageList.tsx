@@ -2,7 +2,7 @@
 
 import { LOADING_FLAT } from '@agentasia/const';
 import type { ChatToolPayload, UIChatMessage } from '@agentasia/types';
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 

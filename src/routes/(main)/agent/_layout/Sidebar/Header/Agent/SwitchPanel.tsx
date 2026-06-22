@@ -1,4 +1,4 @@
-import { Flexbox, Popover } from '@agentasia/ui';
+import { Flexbox, Popover } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { type PropsWithChildren } from 'react';
 import { memo, Suspense, useMemo } from 'react';

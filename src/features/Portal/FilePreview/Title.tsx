@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox, Skeleton, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Skeleton, Text } from '@lobehub/ui';
 import { ArrowLeft } from 'lucide-react';
 
 import { useChatStore } from '@/store/chat';

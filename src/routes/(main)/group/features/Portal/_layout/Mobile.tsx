@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Modal } from '@agentasia/ui';
+import { Flexbox, Modal } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';

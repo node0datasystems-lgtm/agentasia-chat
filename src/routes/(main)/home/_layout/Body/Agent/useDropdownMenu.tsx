@@ -1,5 +1,5 @@
-import { type MenuProps } from '@agentasia/ui';
-import { Icon } from '@agentasia/ui';
+import { type MenuProps } from '@lobehub/ui';
+import { Icon } from '@lobehub/ui';
 import { ArrowDownIcon, ArrowUpIcon, Hash, LucideCheck, SlidersHorizontalIcon } from 'lucide-react';
 import { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

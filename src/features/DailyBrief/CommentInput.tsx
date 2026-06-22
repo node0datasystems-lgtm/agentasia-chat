@@ -1,5 +1,5 @@
-import { ChatInput, Editor, SendButton, useEditor } from '@agentasia/editor/react';
-import { Button, Flexbox } from '@agentasia/ui';
+import { ChatInput, Editor, SendButton, useEditor } from '@lobehub/editor/react';
+import { Button, Flexbox } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { ChevronLeft } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

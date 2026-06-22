@@ -1,4 +1,4 @@
-import { Select } from '@agentasia/ui';
+import { Select } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

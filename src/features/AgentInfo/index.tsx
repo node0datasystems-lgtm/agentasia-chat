@@ -1,4 +1,4 @@
-import { Avatar, Center, Markdown, Tag } from '@agentasia/ui';
+import { Avatar, Center, Markdown, Tag } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { startCase } from 'es-toolkit/compat';

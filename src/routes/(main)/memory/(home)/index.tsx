@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 // import { PencilLineIcon } from 'lucide-react';
 import { type FC } from 'react';
 

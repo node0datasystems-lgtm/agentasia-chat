@@ -13,7 +13,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   DropdownMenuGroup: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   DropdownMenuGroupLabel: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   DropdownMenuItem: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (

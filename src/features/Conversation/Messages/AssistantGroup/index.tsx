@@ -1,7 +1,7 @@
 'use client';
 
 import type { AssistantContentBlock, EmojiReaction, UISignalCallbacksBlock } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import type { MouseEventHandler, ReactNode } from 'react';
 import { memo, Suspense, useCallback, useMemo } from 'react';

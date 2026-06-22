@@ -1,4 +1,4 @@
-import { Flexbox, ScrollShadow } from '@agentasia/ui';
+import { Flexbox, ScrollShadow } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useQuery } from '@/hooks/useQuery';

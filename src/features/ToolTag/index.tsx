@@ -2,7 +2,7 @@
 
 import { type ComposioAppType } from '@agentasia/const';
 import { COMPOSIO_APP_TYPES } from '@agentasia/const';
-import { Avatar, Icon, Tag } from '@agentasia/ui';
+import { Avatar, Icon, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useMemo } from 'react';

@@ -6,7 +6,7 @@ import { type Generation, type GenerationBatch } from '@/types/generation';
 
 import { ErrorState } from './ErrorState';
 
-vi.mock('@agentasia/ui', async () => {
+vi.mock('@lobehub/ui', async () => {
   const React = await import('react');
 
   return {

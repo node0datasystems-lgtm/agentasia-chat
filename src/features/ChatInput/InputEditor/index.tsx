@@ -8,10 +8,10 @@ import {
   INPUT_COMPLETION_SCHEMA_NAME,
 } from '@agentasia/prompts';
 import { isCommandPressed } from '@agentasia/utils';
-import type { IEditor } from '@agentasia/editor';
-import { INSERT_MENTION_COMMAND, ReactAutoCompletePlugin, ReactMathPlugin } from '@agentasia/editor';
-import { Editor, FloatMenu, useEditorState } from '@agentasia/editor/react';
-import { combineKeys } from '@agentasia/ui';
+import type { IEditor } from '@lobehub/editor';
+import { INSERT_MENTION_COMMAND, ReactAutoCompletePlugin, ReactMathPlugin } from '@lobehub/editor';
+import { Editor, FloatMenu, useEditorState } from '@lobehub/editor/react';
+import { combineKeys } from '@lobehub/ui';
 import { css, cx } from 'antd-style';
 import Fuse from 'fuse.js';
 import { KEY_ESCAPE_COMMAND } from 'lexical';

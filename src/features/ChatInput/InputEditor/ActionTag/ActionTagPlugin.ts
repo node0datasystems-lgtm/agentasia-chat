@@ -3,7 +3,7 @@ import {
   type getKernelFromEditor,
   ILitexmlService,
   IMarkdownShortCutService,
-} from '@agentasia/editor';
+} from '@lobehub/editor';
 import type { LexicalEditor, LexicalNode } from 'lexical';
 
 import { $isActionTagNode, ActionTagNode, type SerializedActionTagNode } from './ActionTagNode';

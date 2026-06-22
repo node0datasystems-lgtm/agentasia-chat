@@ -1,6 +1,6 @@
 import { isDesktop } from '@agentasia/const';
-import { Avatar } from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { Avatar } from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import {
   BellIcon,
   Brain,

@@ -1,6 +1,6 @@
 import { getBuiltinIntervention } from '@agentasia/builtin-tools/interventions';
 import { safeParseJSON } from '@agentasia/utils';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, Suspense, useCallback, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 

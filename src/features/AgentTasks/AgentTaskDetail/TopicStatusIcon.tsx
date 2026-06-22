@@ -1,4 +1,4 @@
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import {
   CircleAlert,

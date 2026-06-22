@@ -1,4 +1,4 @@
-import { Block, Empty, Highlighter, Tag } from '@agentasia/ui';
+import { Block, Empty, Highlighter, Tag } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Database } from 'lucide-react';
 import { memo } from 'react';

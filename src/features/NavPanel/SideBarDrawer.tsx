@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Text } from '@lobehub/ui';
 import { Drawer } from 'antd';
 import { cssVar } from 'antd-style';
 import { XIcon } from 'lucide-react';

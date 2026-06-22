@@ -1,8 +1,8 @@
 import { type ChatModelCard } from '@agentasia/types';
-import { type IconAvatarProps } from '@agentasia/icons';
-import { AgentAsia, ModelIcon, ProviderIcon } from '@agentasia/icons';
-import { type FlexboxProps } from '@agentasia/ui';
-import { Avatar, Flexbox, Icon, Tag, Text, Tooltip } from '@agentasia/ui';
+import { type IconAvatarProps } from '@lobehub/icons';
+import { AgentAsia, ModelIcon, ProviderIcon } from '@lobehub/icons';
+import { type FlexboxProps } from '@lobehub/ui';
+import { Avatar, Flexbox, Icon, Tag, Text, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, useResponsive } from 'antd-style';
 import {
   AudioLines,

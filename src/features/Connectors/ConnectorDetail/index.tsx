@@ -1,4 +1,4 @@
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { Button } from 'antd';
 import { PencilIcon, RefreshCwIcon, Trash2 } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

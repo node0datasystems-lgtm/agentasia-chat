@@ -1,4 +1,4 @@
-import { toast } from '@agentasia/ui';
+import { toast } from '@lobehub/ui';
 import i18next from 'i18next';
 
 import { localFileService } from './localFileService';

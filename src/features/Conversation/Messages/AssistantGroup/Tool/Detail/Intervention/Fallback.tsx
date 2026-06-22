@@ -5,7 +5,7 @@ import {
 } from '@agentasia/builtin-tool-activator';
 import { builtinToolIdentifiers } from '@agentasia/builtin-tools/identifiers';
 import { safeParseJSON } from '@agentasia/utils';
-import { ActionIcon, Avatar, Flexbox, Icon } from '@agentasia/ui';
+import { ActionIcon, Avatar, Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronDown, ChevronRight, Edit3Icon } from 'lucide-react';

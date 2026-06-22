@@ -12,7 +12,7 @@ import {
   Flexbox,
   menuSharedStyles,
   Tag,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { Check } from 'lucide-react';
 import { memo, useState } from 'react';

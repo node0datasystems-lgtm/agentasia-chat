@@ -1,5 +1,5 @@
-import { Ollama } from '@agentasia/icons';
-import { Button } from '@agentasia/ui';
+import { Ollama } from '@lobehub/icons';
+import { Button } from '@lobehub/ui';
 import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 

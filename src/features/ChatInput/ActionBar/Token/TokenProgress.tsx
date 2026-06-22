@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import numeral from 'numeral';

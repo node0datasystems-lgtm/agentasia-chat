@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, Flexbox } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Button, Flexbox } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App, Typography } from 'antd';
 import { ArrowLeft, Database, Pencil, Plus, Trash2 } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';

@@ -1,3 +1,3 @@
-import type { FormGroupItemType } from '@agentasia/ui';
+import type { FormGroupItemType } from '@lobehub/ui';
 
 export const useTransferAgentsFormItem = (): FormGroupItemType['children'] | null => null;

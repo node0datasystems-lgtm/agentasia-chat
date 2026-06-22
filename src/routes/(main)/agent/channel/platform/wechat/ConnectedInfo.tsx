@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Flexbox, FormItem } from '@agentasia/ui';
+import { Alert, Flexbox, FormItem } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -111,7 +111,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({ onClick }: { onClick?: () => void }) => <button type="button" onClick={onClick} />,
   Center: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   copyToClipboard: vi.fn(),

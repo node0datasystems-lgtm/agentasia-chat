@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_BLOCK_ANCHOR_PADDING, EditorProvider } from '@agentasia/editor/react';
-import { Flexbox } from '@agentasia/ui';
+import { DEFAULT_BLOCK_ANCHOR_PADDING, EditorProvider } from '@lobehub/editor/react';
+import { Flexbox } from '@lobehub/ui';
 import { createStyles, cssVar } from 'antd-style';
 import type { CSSProperties, FC, ReactNode, UIEvent } from 'react';
 import { memo, useCallback, useEffect, useRef } from 'react';

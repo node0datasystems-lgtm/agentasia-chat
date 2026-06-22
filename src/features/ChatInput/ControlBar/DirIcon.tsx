@@ -1,5 +1,5 @@
-import { Github } from '@agentasia/icons';
-import { Icon } from '@agentasia/ui';
+import { Github } from '@lobehub/icons';
+import { Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { FolderIcon, GitBranchIcon } from 'lucide-react';
 import { memo } from 'react';

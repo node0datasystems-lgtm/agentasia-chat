@@ -1,6 +1,6 @@
-import { type EmptyProps } from '@agentasia/ui';
-import { Center, Empty } from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { type EmptyProps } from '@lobehub/ui';
+import { Center, Empty } from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

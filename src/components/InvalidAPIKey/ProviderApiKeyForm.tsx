@@ -1,4 +1,4 @@
-import { Button, Icon } from '@agentasia/ui';
+import { Button, Icon } from '@lobehub/ui';
 import { Loader2Icon, Network } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { memo, use, useState } from 'react';

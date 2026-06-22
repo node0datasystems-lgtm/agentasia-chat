@@ -1,4 +1,4 @@
-import { type DropdownMenuPlacement } from '@agentasia/ui';
+import { type DropdownMenuPlacement } from '@lobehub/ui';
 import { type AiModelForSelect } from 'model-bank';
 import { type ComponentType } from 'react';
 

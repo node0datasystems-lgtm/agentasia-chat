@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Grid, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Grid, Tag, Text } from '@lobehub/ui';
 import { Button, Input, Pagination } from 'antd';
 import { Plus } from 'lucide-react';
 import { memo, useEffect, useMemo, useState } from 'react';

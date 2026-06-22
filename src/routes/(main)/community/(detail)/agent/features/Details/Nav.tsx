@@ -1,7 +1,7 @@
 'use client';
 
 import { SOCIAL_URL } from '@agentasia/business-const';
-import { Flexbox, Icon, Tabs, Tag } from '@agentasia/ui';
+import { Flexbox, Icon, Tabs, Tag } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { BookOpenIcon, HistoryIcon, LayersIcon, ListIcon, SquareUserIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
 import { EDITOR_DEBOUNCE_TIME } from '@agentasia/const';
-import { Flexbox, Icon, Input, Skeleton, Tooltip } from '@agentasia/ui';
+import { Flexbox, Icon, Input, Skeleton, Tooltip } from '@lobehub/ui';
 import { useDebounceFn } from 'ahooks';
 import { message } from 'antd';
 import isEqual from 'fast-deep-equal';

@@ -1,4 +1,4 @@
-import type { AnalyticsManager } from '@agentasia/analytics';
+import type { AnalyticsManager } from '@lobehub/analytics';
 
 import { trackProductUsageEvent } from '@/libs/analytics/productUsageEvent';
 

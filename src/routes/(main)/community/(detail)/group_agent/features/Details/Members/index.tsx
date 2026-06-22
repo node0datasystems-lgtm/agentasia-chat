@@ -1,4 +1,4 @@
-import { Avatar, Flexbox, Tag } from '@agentasia/ui';
+import { Avatar, Flexbox, Tag } from '@lobehub/ui';
 import { Card, Typography } from 'antd';
 import { Crown, User } from 'lucide-react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { Block, Button, Flexbox, Text } from '@agentasia/ui';
+import { Block, Button, Flexbox, Text } from '@lobehub/ui';
 import { RefreshCw } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 

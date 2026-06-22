@@ -1,8 +1,8 @@
 'use client';
 
-import { Flexbox, Text } from '@agentasia/ui';
-import type { ModalInstance } from '@agentasia/ui/base-ui';
-import { createModal } from '@agentasia/ui/base-ui';
+import { Flexbox, Text } from '@lobehub/ui';
+import type { ModalInstance } from '@lobehub/ui/base-ui';
+import { createModal } from '@lobehub/ui/base-ui';
 import { t } from 'i18next';
 
 import type { DiscoverUserInfo } from '@/types/discover';

@@ -2,7 +2,7 @@
 
 import { HotkeyScopeEnum } from '@agentasia/const/hotkeys';
 import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { type FC } from 'react';
 import { Suspense } from 'react';

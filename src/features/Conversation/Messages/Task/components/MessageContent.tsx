@@ -1,6 +1,6 @@
 import { LOADING_FLAT } from '@agentasia/const';
 import { type UIChatMessage } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { messageStateSelectors, useConversationStore } from '../../../store';

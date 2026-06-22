@@ -16,12 +16,12 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@agentasia/icons', () => ({
+vi.mock('@lobehub/icons', () => ({
   ModelIcon: ({ model }: { model: string }) => <span>{model}</span>,
   ProviderIcon: ({ provider }: { provider: string }) => <span>{provider}</span>,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: () => <button type="button" />,
   Avatar: ({ avatar, title }: { avatar?: string | null; title?: string }) => (
     <span aria-label={title} data-testid="active-user-avatar">

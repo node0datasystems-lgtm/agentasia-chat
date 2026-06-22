@@ -4,7 +4,7 @@ import {
   CODEX_CLI_INSTALL_COMMANDS,
   CODEX_CLI_INSTALL_DOCS_URL,
 } from '@agentasia/electron-client-ipc';
-import { ClaudeCode, Codex } from '@agentasia/icons';
+import { ClaudeCode, Codex } from '@lobehub/icons';
 
 import {
   type HeterogeneousAgentGuideConfig,

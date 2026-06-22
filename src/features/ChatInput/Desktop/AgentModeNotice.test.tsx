@@ -27,7 +27,7 @@ const testState = vi.hoisted(() => ({
 
 type StoreSelector<T = unknown, S = Record<PropertyKey, unknown>> = (state: S) => T;
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Alert: ({ title }: { title: ReactNode }) => <div role="alert">{title}</div>,
 }));
 

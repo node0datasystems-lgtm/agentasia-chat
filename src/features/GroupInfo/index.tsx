@@ -1,4 +1,4 @@
-import { Avatar, Center, Tag } from '@agentasia/ui';
+import { Avatar, Center, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { startCase } from 'es-toolkit/compat';
 import { type CSSProperties } from 'react';

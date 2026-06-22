@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Modal, Text } from '@agentasia/ui';
+import { Block, Modal, Text } from '@lobehub/ui';
 import { App } from 'antd';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

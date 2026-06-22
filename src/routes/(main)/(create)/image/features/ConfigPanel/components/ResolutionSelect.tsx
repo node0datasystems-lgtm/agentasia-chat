@@ -1,4 +1,4 @@
-import { Segmented } from '@agentasia/ui';
+import { Segmented } from '@lobehub/ui';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 

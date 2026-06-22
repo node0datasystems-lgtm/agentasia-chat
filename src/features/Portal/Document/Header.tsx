@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Skeleton, Text } from '@agentasia/ui';
+import { Flexbox, Skeleton, Text } from '@lobehub/ui';
 import { cx } from 'antd-style';
 
 import { useClientDataSWR } from '@/libs/swr';

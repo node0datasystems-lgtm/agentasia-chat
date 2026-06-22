@@ -9,12 +9,12 @@ vi.mock('@lobechat/const', () => ({
   isDesktop: false,
 }));
 
-vi.mock('@agentasia/icons', () => ({
+vi.mock('@lobehub/icons', () => ({
   ClaudeCode: () => <span>Claude Code Icon</span>,
   Codex: () => <span>Codex Icon</span>,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Avatar: ({ avatar }: { avatar?: ReactNode }) => <div>{avatar}</div>,
   Block: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Button: ({ children, onClick }: { children?: ReactNode; onClick?: () => void }) => (

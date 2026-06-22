@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import LibraryHierarchy from '@/features/ResourceManager/components/LibraryHierarchy';

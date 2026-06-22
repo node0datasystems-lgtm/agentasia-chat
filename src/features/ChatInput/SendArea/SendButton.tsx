@@ -1,5 +1,5 @@
-import { SendButton as Send } from '@agentasia/editor/react';
-import { Tooltip } from '@agentasia/ui';
+import { SendButton as Send } from '@lobehub/editor/react';
+import { Tooltip } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 

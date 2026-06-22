@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, type DropdownItem, DropdownMenu } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, type DropdownItem, DropdownMenu } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { Archive, MoreHorizontal } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';

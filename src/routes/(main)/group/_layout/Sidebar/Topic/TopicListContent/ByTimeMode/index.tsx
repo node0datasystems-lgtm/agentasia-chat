@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, Flexbox } from '@agentasia/ui';
+import { Accordion, Flexbox } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { MoreHorizontal } from 'lucide-react';
 import { memo, useEffect, useMemo } from 'react';

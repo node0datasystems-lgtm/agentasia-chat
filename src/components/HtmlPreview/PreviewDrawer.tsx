@@ -1,6 +1,6 @@
 import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
 import { exportFile } from '@agentasia/utils/client';
-import { Block, Button, Flexbox, Highlighter, HtmlPreview, Segmented } from '@agentasia/ui';
+import { Block, Button, Flexbox, Highlighter, HtmlPreview, Segmented } from '@lobehub/ui';
 import { Drawer } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { Code2, Download, Eye } from 'lucide-react';

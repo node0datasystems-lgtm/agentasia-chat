@@ -1,4 +1,4 @@
-import { Block } from '@agentasia/ui';
+import { Block } from '@lobehub/ui';
 import { memo } from 'react';
 
 import OllamaSetupGuide from '@/components/OllamaSetupGuide';

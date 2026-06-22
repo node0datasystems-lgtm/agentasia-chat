@@ -1,6 +1,6 @@
 import { getCachedTextInputUnitRate, getWriteCacheInputUnitRate } from '@agentasia/utils';
-import { ModelIcon } from '@agentasia/icons';
-import { Flexbox, Icon, Segmented, Tooltip } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Flexbox, Icon, Segmented, Tooltip } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowDownToDot, ArrowUpFromDot, BookUp2Icon, CircleFadingArrowUp } from 'lucide-react';
 import { type LobeDefaultAiModelListItem } from 'model-bank';

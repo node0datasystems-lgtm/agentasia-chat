@@ -1,7 +1,7 @@
 'use client';
 
-import { type SlashOptions } from '@agentasia/editor';
-import { Alert, Avatar, Flexbox } from '@agentasia/ui';
+import { type SlashOptions } from '@lobehub/editor';
+import { Alert, Avatar, Flexbox } from '@lobehub/ui';
 import { isEqual } from 'es-toolkit/compat';
 import { memo, Suspense, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

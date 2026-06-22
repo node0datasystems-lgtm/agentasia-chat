@@ -1,4 +1,4 @@
-import { type CategoryListQuery } from '@agentasia/market-sdk';
+import { type CategoryListQuery } from '@lobehub/market-sdk';
 import { type SWRResponse } from 'swr';
 
 import { useClientDataSWR } from '@/libs/swr';

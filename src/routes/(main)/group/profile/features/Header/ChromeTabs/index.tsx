@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Flexbox, Tooltip } from '@agentasia/ui';
+import { Avatar, Flexbox, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { Plus } from 'lucide-react';
 import { type ReactNode } from 'react';

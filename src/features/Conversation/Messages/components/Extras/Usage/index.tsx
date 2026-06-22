@@ -3,8 +3,8 @@ import {
   isRemoteHeterogeneousType,
 } from '@agentasia/heterogeneous-agents';
 import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
-import { ModelIcon } from '@agentasia/icons';
-import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Center, Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { CircleDollarSignIcon } from 'lucide-react';

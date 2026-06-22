@@ -1,5 +1,5 @@
 import { CopyOutlined, EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
-import { Button } from '@agentasia/ui';
+import { Button } from '@lobehub/ui';
 import { App, Flex } from 'antd';
 import { type FC } from 'react';
 import { useState } from 'react';

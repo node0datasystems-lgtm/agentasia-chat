@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { PauseIcon, PlayIcon } from 'lucide-react';
 import { memo, type MouseEvent, useCallback, useRef, useState } from 'react';

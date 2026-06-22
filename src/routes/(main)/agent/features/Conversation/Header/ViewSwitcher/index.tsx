@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Segmented } from '@agentasia/ui';
+import { Flexbox, Segmented } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { FileText, MessageSquareText } from 'lucide-react';
 import { memo, useMemo } from 'react';

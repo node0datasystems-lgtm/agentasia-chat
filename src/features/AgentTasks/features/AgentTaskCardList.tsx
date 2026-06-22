@@ -1,4 +1,4 @@
-import { Block, Flexbox } from '@agentasia/ui';
+import { Block, Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { Fragment, memo, useCallback, useMemo } from 'react';
 

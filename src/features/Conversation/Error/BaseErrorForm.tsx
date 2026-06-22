@@ -1,4 +1,4 @@
-import { Block, Flexbox, Text } from '@agentasia/ui';
+import { Block, Flexbox, Text } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo } from 'react';
 

@@ -1,5 +1,5 @@
-import { ActionIcon } from '@agentasia/ui';
-import { DropdownMenu } from '@agentasia/ui/base-ui';
+import { ActionIcon } from '@lobehub/ui';
+import { DropdownMenu } from '@lobehub/ui/base-ui';
 import { ListFilter } from 'lucide-react';
 import { memo } from 'react';
 

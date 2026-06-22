@@ -61,7 +61,7 @@ const renderMenuItems = (items: MockDropdownItem[]) =>
 
 const getLatestExportedBlob = () => vi.mocked(URL.createObjectURL).mock.calls.at(-1)?.[0] as Blob;
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: () => <button aria-label="more" type="button" />,
   DropdownMenu: ({
     children,
@@ -78,7 +78,7 @@ vi.mock('@agentasia/ui', () => ({
   Icon: () => <span />,
 }));
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   confirmModal: vi.fn(),
 }));
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { normalizeInterestsForStorage } from '@agentasia/const';
-import { Block, Button, Flexbox, Icon, Input, Text } from '@agentasia/ui';
+import { Block, Button, Flexbox, Icon, Input, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { BriefcaseIcon, Undo2Icon } from 'lucide-react';
 import { memo, useCallback, useMemo, useRef, useState } from 'react';

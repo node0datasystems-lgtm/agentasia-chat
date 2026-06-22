@@ -1,4 +1,4 @@
-import { Highlighter, Popover } from '@agentasia/ui';
+import { Highlighter, Popover } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo } from 'react';
 

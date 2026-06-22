@@ -1,5 +1,5 @@
-import { type InputProps as Props } from '@agentasia/ui';
-import { Input } from '@agentasia/ui';
+import { type InputProps as Props } from '@lobehub/ui';
+import { Input } from '@lobehub/ui';
 import { type InputRef } from 'antd/es/input/Input';
 import { memo, useEffect, useRef, useState } from 'react';
 

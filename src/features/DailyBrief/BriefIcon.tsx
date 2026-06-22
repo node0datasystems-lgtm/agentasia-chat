@@ -1,5 +1,5 @@
 import { type BriefType } from '@agentasia/types';
-import { Block, Icon } from '@agentasia/ui';
+import { Block, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import type { CircleDot } from 'lucide-react';
 import { CheckCheckIcon, EyeIcon, HandIcon, Lightbulb, SirenIcon } from 'lucide-react';

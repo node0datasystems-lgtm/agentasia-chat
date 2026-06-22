@@ -7,7 +7,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import TaskSubtaskProgressTag from './TaskSubtaskProgressTag';
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Block: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <div onClick={onClick}>{children}</div>
   ),

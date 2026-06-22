@@ -1,9 +1,9 @@
 /**
  * @vitest-environment happy-dom
  */
-import { type IEditor } from '@agentasia/editor';
-import { moment } from '@agentasia/editor';
-import { useEditor } from '@agentasia/editor/react';
+import { type IEditor } from '@lobehub/editor';
+import { moment } from '@lobehub/editor';
+import { useEditor } from '@lobehub/editor/react';
 import { act, cleanup, render, waitFor } from '@testing-library/react';
 import { memo, useEffect, useRef } from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

@@ -1,7 +1,7 @@
 'use client';
 
 import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
-import { Center, Flexbox, Text } from '@agentasia/ui';
+import { Center, Flexbox, Text } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { css, cx } from 'antd-style';
 import { type FC, type PropsWithChildren } from 'react';

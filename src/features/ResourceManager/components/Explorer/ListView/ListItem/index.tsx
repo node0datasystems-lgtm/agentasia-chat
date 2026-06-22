@@ -1,4 +1,4 @@
-import { Center, Checkbox, ContextMenuTrigger, Flexbox } from '@agentasia/ui';
+import { Center, Checkbox, ContextMenuTrigger, Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { isEqual } from 'es-toolkit';
 import { memo, useCallback } from 'react';

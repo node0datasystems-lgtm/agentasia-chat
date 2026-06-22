@@ -1,4 +1,4 @@
-import { PreviewGroup } from '@agentasia/ui';
+import { PreviewGroup } from '@lobehub/ui';
 import { memo } from 'react';
 
 import GalleyGrid from '@/components/GalleyGrid';

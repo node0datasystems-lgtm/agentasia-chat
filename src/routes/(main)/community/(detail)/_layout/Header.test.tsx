@@ -9,7 +9,7 @@ const mocks = vi.hoisted(() => ({
   useUserProfile: vi.fn(),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({ onClick }: { onClick?: () => void }) => (
     <button data-testid="back-button" onClick={onClick} />
   ),

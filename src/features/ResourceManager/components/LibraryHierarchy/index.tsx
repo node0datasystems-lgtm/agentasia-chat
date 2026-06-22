@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox, Icon, Text } from '@agentasia/ui';
+import { Center, Flexbox, Icon, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { FolderPlusIcon } from 'lucide-react';
 import { memo, useEffect, useMemo } from 'react';

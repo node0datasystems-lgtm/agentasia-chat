@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Highlighter } from '@agentasia/ui';
+import { Alert, Highlighter } from '@lobehub/ui';
 import { memo } from 'react';
 
 interface AlertFallbackProps {

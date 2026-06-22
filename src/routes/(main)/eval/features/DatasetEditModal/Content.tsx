@@ -1,7 +1,7 @@
 'use client';
 
-import { Center, Flexbox, Icon, Input, Text, TextArea } from '@agentasia/ui';
-import { Select, useModalContext } from '@agentasia/ui/base-ui';
+import { Center, Flexbox, Icon, Input, Text, TextArea } from '@lobehub/ui';
+import { Select, useModalContext } from '@lobehub/ui/base-ui';
 import { App, Form } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { type FC, useEffect, useState } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, DropdownMenu, Flexbox, Icon, Text } from '@agentasia/ui';
-import { GithubIcon } from '@agentasia/ui/icons';
+import { Button, DropdownMenu, Flexbox, Icon, Text } from '@lobehub/ui';
+import { GithubIcon } from '@lobehub/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { FileArchive, Grid2x2Plus, Link, Store } from 'lucide-react';

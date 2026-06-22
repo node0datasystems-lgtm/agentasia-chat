@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Button, Flexbox, Input, Text } from '@agentasia/ui';
+import { Block, Button, Flexbox, Input, Text } from '@lobehub/ui';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

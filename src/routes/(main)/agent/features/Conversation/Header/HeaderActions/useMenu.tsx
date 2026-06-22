@@ -1,8 +1,8 @@
 'use client';
 
-import type { DropdownItem } from '@agentasia/ui';
-import { Block, Flexbox, Icon, Text } from '@agentasia/ui';
-import { confirmModal, type ModalInstance } from '@agentasia/ui/base-ui';
+import type { DropdownItem } from '@lobehub/ui';
+import { Block, Flexbox, Icon, Text } from '@lobehub/ui';
+import { confirmModal, type ModalInstance } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import {
   Clock3Icon,

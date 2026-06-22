@@ -1,4 +1,4 @@
-import { Collapse, Flexbox, Markdown } from '@agentasia/ui';
+import { Collapse, Flexbox, Markdown } from '@lobehub/ui';
 import qs from 'query-string';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

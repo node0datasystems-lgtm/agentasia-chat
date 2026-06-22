@@ -1,7 +1,7 @@
 'use client';
 
-import { type FlexboxProps } from '@agentasia/ui';
-import { Flexbox } from '@agentasia/ui';
+import { type FlexboxProps } from '@lobehub/ui';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { type CSSProperties } from 'react';

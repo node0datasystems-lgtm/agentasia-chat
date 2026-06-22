@@ -1,7 +1,7 @@
 'use client';
 
-import { type FormGroupItemType, type FormItemProps } from '@agentasia/ui';
-import { Button, Flexbox, Form, Icon, Skeleton } from '@agentasia/ui';
+import { type FormGroupItemType, type FormItemProps } from '@lobehub/ui';
+import { Button, Flexbox, Form, Icon, Skeleton } from '@lobehub/ui';
 import { Form as AntForm, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Loader2Icon, PencilIcon } from 'lucide-react';

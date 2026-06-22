@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Modal, Text } from '@agentasia/ui';
+import { Button, Flexbox, Modal, Text } from '@lobehub/ui';
 import { Table } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { Info } from 'lucide-react';

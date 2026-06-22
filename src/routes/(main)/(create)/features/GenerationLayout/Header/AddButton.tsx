@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { SquarePenIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { memo, useEffect, useState } from 'react';
 
 interface ExecutionTimeProps {

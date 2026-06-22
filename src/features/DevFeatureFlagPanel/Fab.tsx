@@ -1,6 +1,6 @@
 'use client';
 
-import { Tooltip } from '@agentasia/ui';
+import { Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { FlagIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -16,7 +16,7 @@ const userState = {
   },
 };
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Avatar: ({ avatar }: { avatar?: string }) => <span data-avatar={avatar} />,
   Block: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Button: ({ children, onClick }: { children?: ReactNode; onClick?: () => void }) => (
@@ -31,7 +31,7 @@ vi.mock('@agentasia/ui', () => ({
   Text: ({ children }: { children?: ReactNode }) => <span>{children}</span>,
 }));
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   Select: ({
     classNames,
     options,

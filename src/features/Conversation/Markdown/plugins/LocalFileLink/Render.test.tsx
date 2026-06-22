@@ -39,7 +39,7 @@ vi.mock('@/components/FileIcon', () => ({
   ),
 }));
 
-vi.mock('@agentasia/ui', async (importOriginal) => ({
+vi.mock('@lobehub/ui', async (importOriginal) => ({
   ...((await importOriginal()) as Record<string, unknown>),
   Tooltip: ({
     children,

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Grid, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Grid, Tag, Text } from '@lobehub/ui';
 import { Input, Pagination } from 'antd';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

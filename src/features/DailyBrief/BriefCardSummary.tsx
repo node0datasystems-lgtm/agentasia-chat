@@ -1,4 +1,4 @@
-import { Button, Flexbox, Markdown, MaskShadow } from '@agentasia/ui';
+import { Button, Flexbox, Markdown, MaskShadow } from '@lobehub/ui';
 import { useSize } from 'ahooks';
 import { ChevronsDownUpIcon, ChevronsUpDownIcon } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';

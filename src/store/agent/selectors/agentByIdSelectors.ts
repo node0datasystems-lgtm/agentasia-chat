@@ -7,7 +7,7 @@ import {
   type LobeAgentTTSConfig,
   type RuntimeEnvConfig,
 } from '@agentasia/types';
-import { VoiceList } from '@agentasia/tts';
+import { VoiceList } from '@lobehub/tts';
 
 import { resolveTargetDeviceId } from '@/helpers/agentWorkingDirectory';
 import { globalAgentContextManager } from '@/helpers/GlobalAgentContextManager';

@@ -1,4 +1,4 @@
-import { TextArea, type TextAreaProps } from '@agentasia/ui';
+import { TextArea, type TextAreaProps } from '@lobehub/ui';
 import { type FC } from 'react';
 
 interface EditorCanvasProps {

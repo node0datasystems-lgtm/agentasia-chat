@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox, Icon, Tabs, Tag } from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { Flexbox, Icon, Tabs, Tag } from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import { BookOpenIcon, DownloadIcon, FileTextIcon, HistoryIcon, ListIcon } from 'lucide-react';
 import { memo } from 'react';

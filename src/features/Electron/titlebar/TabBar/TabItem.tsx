@@ -9,7 +9,7 @@ import {
   Flexbox,
   type GenericItemType,
   Icon,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { X } from 'lucide-react';
 import { memo, useCallback } from 'react';

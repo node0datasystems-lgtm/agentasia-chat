@@ -1,6 +1,6 @@
 'use client';
 
-import { type IconType, useFillIds } from '@agentasia/icons';
+import { type IconType, useFillIds } from '@lobehub/icons';
 import { memo } from 'react';
 
 const VsCodeIcon: IconType = memo(({ size = '1em', style, ...rest }) => {

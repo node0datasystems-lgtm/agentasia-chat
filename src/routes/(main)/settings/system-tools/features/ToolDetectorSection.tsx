@@ -1,8 +1,8 @@
 'use client';
 
 import { type ToolStatus } from '@agentasia/electron-client-ipc';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Button, CopyButton, Flexbox, Form, Icon, Tag, Text, Tooltip } from '@agentasia/ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Button, CopyButton, Flexbox, Form, Icon, Tag, Text, Tooltip } from '@lobehub/ui';
 import { CheckCircle2, Loader2Icon, RefreshCw, XCircle } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

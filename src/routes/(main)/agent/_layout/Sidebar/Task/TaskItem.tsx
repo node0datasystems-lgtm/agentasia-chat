@@ -1,6 +1,6 @@
 'use client';
 
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { memo, useCallback } from 'react';
 

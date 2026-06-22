@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Switch } from 'antd';
 import { memo } from 'react';
 

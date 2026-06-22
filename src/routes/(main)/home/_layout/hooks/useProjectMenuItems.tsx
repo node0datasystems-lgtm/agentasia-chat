@@ -1,4 +1,4 @@
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { type ItemType } from 'antd/es/menu/interface';
 import { BoxIcon } from 'lucide-react';
 import { useCallback } from 'react';

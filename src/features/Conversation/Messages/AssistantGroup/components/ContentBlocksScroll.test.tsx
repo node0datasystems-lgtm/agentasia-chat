@@ -8,7 +8,7 @@ import { describe, expect, it, vi } from 'vitest';
 import ContentBlocksScroll from './ContentBlocksScroll';
 import type { RenderableAssistantContentBlock } from './types';
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Flexbox: ({ children, gap }: { children?: ReactNode; gap?: number }) => (
     <div data-gap={gap}>{children}</div>
   ),

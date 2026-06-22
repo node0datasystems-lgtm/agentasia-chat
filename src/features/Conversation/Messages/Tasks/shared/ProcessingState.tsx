@@ -1,7 +1,7 @@
 'use client';
 
 import { type TaskDetail } from '@agentasia/types';
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles, keyframes } from 'antd-style';
 import { Footprints, Timer, Wrench } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';

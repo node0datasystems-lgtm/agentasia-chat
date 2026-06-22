@@ -1,6 +1,6 @@
 import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
 import { formatUsageValue } from '@agentasia/utils';
-import { Center, Flexbox, Icon, Popover } from '@agentasia/ui';
+import { Center, Flexbox, Icon, Popover } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { BadgeCent, CoinsIcon } from 'lucide-react';

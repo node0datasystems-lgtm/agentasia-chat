@@ -1,8 +1,8 @@
 'use client';
 
 import type { DeviceListItem } from '@agentasia/types';
-import { ActionIcon, DropdownMenu, Flexbox, Icon, Tag, Text, Tooltip } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, DropdownMenu, Flexbox, Icon, Tag, Text, Tooltip } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import dayjs from 'dayjs';
 import { FolderIcon, MoreVerticalIcon, Trash2Icon, TriangleAlertIcon } from 'lucide-react';

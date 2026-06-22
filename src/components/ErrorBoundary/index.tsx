@@ -1,6 +1,6 @@
 'use client';
 
-import { ErrorBoundary } from '@agentasia/ui';
+import { ErrorBoundary } from '@lobehub/ui';
 import { type ComponentType, memo, type ReactNode, useCallback } from 'react';
 
 import AlertFallback from './AlertFallback';

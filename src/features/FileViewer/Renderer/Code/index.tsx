@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox, Highlighter } from '@agentasia/ui';
+import { Center, Flexbox, Highlighter } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 

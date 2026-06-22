@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, SearchBar, Skeleton } from '@agentasia/ui';
+import { Flexbox, SearchBar, Skeleton } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { type ChangeEvent } from 'react';
 import { memo, useCallback, useMemo, useState } from 'react';

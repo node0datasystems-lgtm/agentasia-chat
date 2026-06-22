@@ -1,5 +1,5 @@
 import { type SidebarAgentItem } from '@agentasia/types';
-import { ActionIcon, Flexbox, Icon } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Loader2, PinIcon } from 'lucide-react';
 import { type CSSProperties, type DragEvent } from 'react';

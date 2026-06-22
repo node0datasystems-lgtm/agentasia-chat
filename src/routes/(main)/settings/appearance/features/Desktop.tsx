@@ -1,9 +1,9 @@
 'use client';
 
 import { isDesktop } from '@agentasia/const';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Form } from '@agentasia/ui';
-import { Switch } from '@agentasia/ui/base-ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Form } from '@lobehub/ui';
+import { Switch } from '@lobehub/ui/base-ui';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

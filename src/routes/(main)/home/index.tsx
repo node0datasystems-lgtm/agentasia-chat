@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { type FC } from 'react';
 
 import HomePageTracker from '@/components/Analytics/HomePageTracker';

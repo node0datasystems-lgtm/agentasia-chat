@@ -1,9 +1,9 @@
 'use client';
 
 import { isDesktop } from '@agentasia/const';
-import { type FormGroupItemType, type FormItemProps } from '@agentasia/ui';
-import { Form, Icon, Skeleton } from '@agentasia/ui';
-import { Select, Switch } from '@agentasia/ui/base-ui';
+import { type FormGroupItemType, type FormItemProps } from '@lobehub/ui';
+import { Form, Icon, Skeleton } from '@lobehub/ui';
+import { Select, Switch } from '@lobehub/ui/base-ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { Loader2Icon } from 'lucide-react';

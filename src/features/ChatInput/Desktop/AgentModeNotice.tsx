@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert } from '@agentasia/ui';
+import { Alert } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

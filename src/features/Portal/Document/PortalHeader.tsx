@@ -1,7 +1,7 @@
 'use client';
 
 import { DESKTOP_HEADER_ICON_SMALL_SIZE } from '@agentasia/const';
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { Maximize2Icon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

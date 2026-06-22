@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Empty, Flexbox } from '@agentasia/ui';
+import { Center, Empty, Flexbox } from '@lobehub/ui';
 import { Spin } from 'antd';
 import { BookOpenIcon } from 'lucide-react';
 import { memo } from 'react';

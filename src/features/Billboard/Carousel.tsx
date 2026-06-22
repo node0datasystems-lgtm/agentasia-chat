@@ -1,7 +1,7 @@
 'use client';
 
-import { useAnalytics } from '@agentasia/analytics/react';
-import { ActionIcon, Button, Flexbox, Tooltip } from '@agentasia/ui';
+import { useAnalytics } from '@lobehub/analytics/react';
+import { ActionIcon, Button, Flexbox, Tooltip } from '@lobehub/ui';
 import { Carousel as AntCarousel } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { X } from 'lucide-react';

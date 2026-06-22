@@ -1,7 +1,7 @@
 'use client';
 
-import { SendButton } from '@agentasia/editor/react';
-import { Button, Flexbox, Select, Text } from '@agentasia/ui';
+import { SendButton } from '@lobehub/editor/react';
+import { Button, Flexbox, Select, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Undo2Icon } from 'lucide-react';
 import { memo, useCallback, useRef, useState } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { useEffect } from 'react';
 import { Outlet, useParams } from 'react-router';

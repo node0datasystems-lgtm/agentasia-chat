@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { type ComponentType, type FC } from 'react';
 import { useState } from 'react';
 import { Rnd } from 'react-rnd';

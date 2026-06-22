@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
 import { useFolderPath } from '@/routes/(main)/resource/features/hooks/useFolderPath';

@@ -1,5 +1,5 @@
-import { Exa, Google } from '@agentasia/icons';
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Exa, Google } from '@lobehub/icons';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { Switch } from 'antd';
 import { Search } from 'lucide-react';
 import { memo, useState } from 'react';

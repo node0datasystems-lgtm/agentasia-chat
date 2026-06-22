@@ -8,8 +8,8 @@ import {
   Icon,
   Tag,
   Text,
-} from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+} from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { cssVar } from 'antd-style';
 import { FileTextIcon, MoreHorizontal, Package, Trash } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';

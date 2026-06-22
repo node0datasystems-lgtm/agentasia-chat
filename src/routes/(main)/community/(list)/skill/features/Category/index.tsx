@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon, Tag } from '@agentasia/ui';
+import { Icon, Tag } from '@lobehub/ui';
 import qs from 'query-string';
 import { memo, useMemo } from 'react';
 

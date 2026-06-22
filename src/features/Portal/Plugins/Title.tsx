@@ -1,6 +1,6 @@
 import { getBuiltinPortalTitle } from '@agentasia/builtin-tools/portals';
 import type { BuiltinPortalTitle } from '@agentasia/types';
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 
 import PluginAvatar from '@/features/PluginAvatar';

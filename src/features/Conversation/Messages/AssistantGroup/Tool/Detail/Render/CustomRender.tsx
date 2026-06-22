@@ -1,7 +1,7 @@
 import { getBuiltinRender } from '@agentasia/builtin-tools/renders';
 import { type ChatPluginPayload } from '@agentasia/types';
 import { safeParseJSON } from '@agentasia/utils';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 interface CustomRenderProps {

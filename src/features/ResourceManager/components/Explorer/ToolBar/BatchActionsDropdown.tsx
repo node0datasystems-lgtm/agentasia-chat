@@ -1,6 +1,6 @@
-import { type DropdownItem } from '@agentasia/ui';
-import { DropdownMenu, Icon, Tooltip } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { type DropdownItem } from '@lobehub/ui';
+import { DropdownMenu, Icon, Tooltip } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import {
   BookMinusIcon,

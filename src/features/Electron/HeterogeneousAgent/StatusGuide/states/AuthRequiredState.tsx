@@ -1,4 +1,4 @@
-import { Flexbox, Highlighter, Snippet, Text } from '@agentasia/ui';
+import { Flexbox, Highlighter, Snippet, Text } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
 import GuideActions from '../GuideActions';

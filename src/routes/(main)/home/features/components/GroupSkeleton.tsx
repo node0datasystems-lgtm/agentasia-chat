@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton } from '@agentasia/ui';
+import { Skeleton } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

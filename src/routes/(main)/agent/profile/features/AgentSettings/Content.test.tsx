@@ -22,7 +22,7 @@ const mocks = vi.hoisted(() => ({
   },
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Avatar: () => <div data-testid="avatar" />,
   Block: ({ children }: PropsWithChildren) => <div>{children}</div>,
   Flexbox: ({ children }: PropsWithChildren) => <div>{children}</div>,

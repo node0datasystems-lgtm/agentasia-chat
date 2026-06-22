@@ -1,7 +1,7 @@
 'use client';
 
 import { type UserCredSummary } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { type FC } from 'react';

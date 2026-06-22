@@ -1,5 +1,5 @@
-import { ModelIcon, ProviderIcon } from '@agentasia/icons';
-import { ActionIcon, Avatar, Flexbox, Modal } from '@agentasia/ui';
+import { ModelIcon, ProviderIcon } from '@lobehub/icons';
+import { ActionIcon, Avatar, Flexbox, Modal } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { MaximizeIcon } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

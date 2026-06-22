@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, Suspense, useMemo } from 'react';
 
 import ChatMiniMap from '@/features/ChatMiniMap';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Segmented } from '@agentasia/ui';
+import { Flexbox, Segmented } from '@lobehub/ui';
 import { type SegmentedOptions } from 'antd/es/segmented';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

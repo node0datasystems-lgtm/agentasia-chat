@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Skeleton } from '@agentasia/ui';
+import { Flexbox, Skeleton } from '@lobehub/ui';
 import { memo } from 'react';
 
 /**

@@ -1,6 +1,6 @@
 import { DEFAULT_AVATAR, DEFAULT_INBOX_AVATAR } from '@agentasia/const';
-import { Avatar } from '@agentasia/ui';
-import { GroupBotSquareIcon } from '@agentasia/ui/icons';
+import { Avatar } from '@lobehub/ui';
+import { GroupBotSquareIcon } from '@lobehub/ui/icons';
 import { Command } from 'cmdk';
 import { Bot, Image } from 'lucide-react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { Tag } from '@agentasia/ui';
+import { Tag } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useCateColor } from './useCateColor';

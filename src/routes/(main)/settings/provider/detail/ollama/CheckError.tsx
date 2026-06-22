@@ -1,5 +1,5 @@
 import { type ChatMessageError } from '@agentasia/types';
-import { Skeleton } from '@agentasia/ui';
+import { Skeleton } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 
 import dynamic from '@/libs/next/dynamic';

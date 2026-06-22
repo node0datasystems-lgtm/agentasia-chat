@@ -1,5 +1,5 @@
-import { Modal } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Modal } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { EyeIcon, PencilIcon, Trash2Icon } from 'lucide-react';

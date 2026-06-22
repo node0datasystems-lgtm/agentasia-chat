@@ -1,4 +1,4 @@
-import { Flexbox, Skeleton } from '@agentasia/ui';
+import { Flexbox, Skeleton } from '@lobehub/ui';
 import dayjs from 'dayjs';
 import { Clock3Icon, ClockArrowUp, UsersIcon } from 'lucide-react';
 import { memo } from 'react';

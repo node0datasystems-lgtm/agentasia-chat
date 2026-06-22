@@ -1,4 +1,4 @@
-import { AccordionItem, Center, Flexbox, Icon, Text } from '@agentasia/ui';
+import { AccordionItem, Center, Flexbox, Icon, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import {
   Archive,

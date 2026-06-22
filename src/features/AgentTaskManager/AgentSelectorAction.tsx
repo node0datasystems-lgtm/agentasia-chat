@@ -1,4 +1,4 @@
-import { Center, Flexbox, Popover } from '@agentasia/ui';
+import { Center, Flexbox, Popover } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronsUpDownIcon } from 'lucide-react';
 import { memo, Suspense, useCallback, useMemo, useState } from 'react';

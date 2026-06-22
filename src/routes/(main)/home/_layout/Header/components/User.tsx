@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Flexbox, Icon, Text } from '@agentasia/ui';
+import { Block, Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';
 import { memo } from 'react';

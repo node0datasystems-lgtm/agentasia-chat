@@ -1,6 +1,6 @@
 'use client';
 
-import { MCP } from '@agentasia/icons';
+import { MCP } from '@lobehub/icons';
 import {
   ActionIcon,
   Avatar,
@@ -11,7 +11,7 @@ import {
   Text,
   Tooltip,
   TooltipGroup,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { App } from 'antd';
 import { createStaticStyles, cssVar, useResponsive } from 'antd-style';
 import {

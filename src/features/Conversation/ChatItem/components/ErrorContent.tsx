@@ -1,4 +1,4 @@
-import { Alert, Skeleton } from '@agentasia/ui';
+import { Alert, Skeleton } from '@lobehub/ui';
 import { Button } from 'antd';
 import { RotateCcw } from 'lucide-react';
 import { memo, Suspense } from 'react';

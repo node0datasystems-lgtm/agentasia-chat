@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, AccordionItem, ContextMenuTrigger, Flexbox, Text } from '@agentasia/ui';
+import { Accordion, AccordionItem, ContextMenuTrigger, Flexbox, Text } from '@lobehub/ui';
 import React, { memo, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 

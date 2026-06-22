@@ -1,7 +1,7 @@
 'use client';
 
 import { EDITOR_DEBOUNCE_TIME, EDITOR_MAX_WAIT } from '@agentasia/const';
-import { ActionIcon, Button, Flexbox, Text, TextArea } from '@agentasia/ui';
+import { ActionIcon, Button, Flexbox, Text, TextArea } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { debounce } from 'es-toolkit/compat';
 import { CheckIcon, PencilIcon, XIcon } from 'lucide-react';

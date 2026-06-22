@@ -1,6 +1,6 @@
 import { addClassNamesToElement } from '@lexical/utils';
-import { getKernelFromEditor } from '@agentasia/editor';
-import type { HeadlessRenderableNode, HeadlessRenderContext } from '@agentasia/editor/renderer';
+import { getKernelFromEditor } from '@lobehub/editor';
+import type { HeadlessRenderableNode, HeadlessRenderContext } from '@lobehub/editor/renderer';
 import {
   $applyNodeReplacement,
   DecoratorNode,

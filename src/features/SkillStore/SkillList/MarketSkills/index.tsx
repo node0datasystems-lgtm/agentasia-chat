@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Icon, Text } from '@agentasia/ui';
+import { Center, Icon, Text } from '@lobehub/ui';
 import { uniqBy } from 'es-toolkit/compat';
 import { ServerCrash } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

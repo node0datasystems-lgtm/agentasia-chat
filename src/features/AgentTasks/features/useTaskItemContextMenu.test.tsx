@@ -20,7 +20,7 @@ const mocks = vi.hoisted(() => ({
   updateTaskStatus: vi.fn(),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   closeContextMenu: vi.fn(),
   copyToClipboard: mocks.copyToClipboard,
   Flexbox: ({ children }: { children?: ReactNode }) => React.createElement('div', {}, children),

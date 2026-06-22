@@ -1,5 +1,5 @@
 import { CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
-import { Button, Flexbox, stopPropagation, Tooltip } from '@agentasia/ui';
+import { Button, Flexbox, stopPropagation, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { isNull } from 'es-toolkit/compat';
 import { FileBoxIcon, Folder } from 'lucide-react';

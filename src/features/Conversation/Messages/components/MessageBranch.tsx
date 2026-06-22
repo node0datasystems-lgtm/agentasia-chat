@@ -1,4 +1,4 @@
-import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { Center, Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { memo } from 'react';

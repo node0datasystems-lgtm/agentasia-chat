@@ -1,5 +1,5 @@
 import type { IAsyncTaskError } from '@agentasia/types';
-import { Button, Flexbox, stopPropagation } from '@agentasia/ui';
+import { Button, Flexbox, stopPropagation } from '@lobehub/ui';
 import type { ItemType } from 'antd/es/menu/interface';
 import { isNull } from 'es-toolkit/compat';
 import { FileBoxIcon } from 'lucide-react';

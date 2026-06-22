@@ -1,7 +1,7 @@
 import { isDesktop } from '@agentasia/const';
-import { type MenuProps } from '@agentasia/ui';
-import { ActionIcon, DropdownMenu, Flexbox, Text } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { type MenuProps } from '@lobehub/ui';
+import { ActionIcon, DropdownMenu, Flexbox, Text } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { ArrowRight, Plus, Unlink } from 'lucide-react';
 import { type CSSProperties } from 'react';
 import { memo, useMemo } from 'react';

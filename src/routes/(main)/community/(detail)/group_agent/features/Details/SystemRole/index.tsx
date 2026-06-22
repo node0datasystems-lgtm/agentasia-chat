@@ -1,4 +1,4 @@
-import { Block, Flexbox, Icon, Tag } from '@agentasia/ui';
+import { Block, Flexbox, Icon, Tag } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { MessageCircleHeartIcon, MessageCircleQuestionIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -9,7 +9,7 @@ import TopicSelector from './TopicSelector';
 const switchTopic = vi.fn();
 const useFetchTopics = vi.fn();
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({ disabled, onClick, title }: any) => (
     <button disabled={disabled} type="button" onClick={onClick}>
       {title}

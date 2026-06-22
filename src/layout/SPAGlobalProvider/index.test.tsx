@@ -9,7 +9,7 @@ import type SPAGlobalProviderComponent from './index';
 
 let SPAGlobalProvider: typeof SPAGlobalProviderComponent;
 
-vi.mock('@agentasia/ui', async () => {
+vi.mock('@lobehub/ui', async () => {
   const React = await import('react');
   const Passthrough = ({ children }: { children?: ReactNode }) =>
     React.createElement(React.Fragment, null, children);
@@ -21,7 +21,7 @@ vi.mock('@agentasia/ui', async () => {
   };
 });
 
-vi.mock('@agentasia/ui/base-ui', async () => {
+vi.mock('@lobehub/ui/base-ui', async () => {
   const React = await import('react');
 
   return {

@@ -58,8 +58,8 @@ describe('parseLobeLink', () => {
   });
 
   it('labels npm packages by package name', () => {
-    expect(parseLobeLink('https://www.npmjs.com/package/@agentasia/ui')).toEqual({
-      canonicalLabel: '@agentasia/ui',
+    expect(parseLobeLink('https://www.npmjs.com/package/@lobehub/ui')).toEqual({
+      canonicalLabel: '@lobehub/ui',
       domain: 'npmjs.com',
       kind: 'generic',
     });

@@ -19,11 +19,11 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Icon: () => null,
 }));
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   confirmModal: confirmModalMock,
 }));
 

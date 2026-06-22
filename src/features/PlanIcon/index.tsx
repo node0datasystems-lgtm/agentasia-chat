@@ -1,5 +1,5 @@
 import { Plans } from '@agentasia/types';
-import { Center, Flexbox, Tag } from '@agentasia/ui';
+import { Center, Flexbox, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Atom, Box, CircleSlash, Sparkle, Zap } from 'lucide-react';
 import { type CSSProperties, type MouseEvent } from 'react';

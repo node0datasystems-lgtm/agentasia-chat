@@ -1,4 +1,4 @@
-import { Center, Checkbox, Flexbox } from '@agentasia/ui';
+import { Center, Checkbox, Flexbox } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { useTranslation } from 'react-i18next';
 

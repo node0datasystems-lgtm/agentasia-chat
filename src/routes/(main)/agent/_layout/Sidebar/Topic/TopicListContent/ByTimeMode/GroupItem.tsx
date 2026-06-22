@@ -1,4 +1,4 @@
-import { AccordionItem, Flexbox, Text } from '@agentasia/ui';
+import { AccordionItem, Flexbox, Text } from '@lobehub/ui';
 import dayjs from 'dayjs';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

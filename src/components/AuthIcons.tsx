@@ -1,4 +1,4 @@
-import { Apple, Aws, Google, Microsoft } from '@agentasia/icons';
+import { Apple, Aws, Google, Microsoft } from '@lobehub/icons';
 import {
   Auth0,
   Authelia,
@@ -9,7 +9,7 @@ import {
   Logto,
   MicrosoftEntra,
   Zitadel,
-} from '@agentasia/ui/icons';
+} from '@lobehub/ui/icons';
 import { User } from 'lucide-react';
 
 const iconComponents: { [key: string]: any } = {

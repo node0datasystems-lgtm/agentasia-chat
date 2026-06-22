@@ -1,5 +1,5 @@
 import { DEFAULT_INBOX_AVATAR } from '@agentasia/const';
-import { Flexbox, Popover, Text, Tooltip } from '@agentasia/ui';
+import { Flexbox, Popover, Text, Tooltip } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import type { CSSProperties, KeyboardEvent, ReactNode } from 'react';
 import { memo, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';

@@ -1,4 +1,4 @@
-import { Avatar, Center, Flexbox, Text } from '@agentasia/ui';
+import { Avatar, Center, Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { X } from 'lucide-react';
 import { memo } from 'react';

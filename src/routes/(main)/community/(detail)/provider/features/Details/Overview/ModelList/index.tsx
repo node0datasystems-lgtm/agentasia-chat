@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelIcon } from '@agentasia/icons';
-import { ActionIcon, Block, Flexbox, Tooltip, TooltipGroup } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { ActionIcon, Block, Flexbox, Tooltip, TooltipGroup } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { ChevronRightIcon } from 'lucide-react';
 import { memo } from 'react';

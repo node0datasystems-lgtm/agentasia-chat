@@ -1,5 +1,5 @@
 import type { TaskPriority, TaskStatus } from '@agentasia/types';
-import { Block, Text } from '@agentasia/ui';
+import { Block, Text } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEditorState } from '@agentasia/editor/react';
+import { useEditorState } from '@lobehub/editor/react';
 import { memo, useEffect } from 'react';
 
 import { type PublicState } from './store';

@@ -1,4 +1,4 @@
-import { BrandLoading, AgentAsiaText } from '@agentasia/ui/brand';
+import { BrandLoading, AgentAsiaText } from '@lobehub/ui/brand';
 
 import { isCustomBranding } from '@/const/version';
 

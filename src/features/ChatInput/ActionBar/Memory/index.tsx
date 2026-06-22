@@ -1,4 +1,4 @@
-import { BrainOffIcon } from '@agentasia/ui/icons';
+import { BrainOffIcon } from '@lobehub/ui/icons';
 import { cssVar } from 'antd-style';
 import { Brain } from 'lucide-react';
 import { memo } from 'react';

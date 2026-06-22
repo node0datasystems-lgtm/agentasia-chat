@@ -1,7 +1,7 @@
 'use client';
 
 import { LoadingOutlined } from '@ant-design/icons';
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { Spin, Upload } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { PencilIcon } from 'lucide-react';

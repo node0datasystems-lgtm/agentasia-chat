@@ -4,7 +4,7 @@ import {
   WebOnboardingApiName,
   WebOnboardingIdentifier,
 } from '@agentasia/builtin-tool-web-onboarding';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 

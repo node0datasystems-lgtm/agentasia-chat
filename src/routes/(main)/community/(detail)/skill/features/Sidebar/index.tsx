@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, ScrollShadow } from '@agentasia/ui';
+import { Flexbox, ScrollShadow } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import urlJoin from 'url-join';

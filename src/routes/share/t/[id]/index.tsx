@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Center, Flexbox } from '@agentasia/ui';
+import { Button, Center, Flexbox } from '@lobehub/ui';
 import { TRPCClientError } from '@trpc/client';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';

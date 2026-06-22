@@ -1,5 +1,5 @@
 import { type ErrorType } from '@agentasia/types';
-import { type AlertProps } from '@agentasia/ui';
+import { type AlertProps } from '@lobehub/ui';
 
 export default function useBusinessErrorAlertConfig(
   // eslint-disable-next-line unused-imports/no-unused-vars

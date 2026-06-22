@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, SearchBar } from '@agentasia/ui';
+import { Flexbox, SearchBar } from '@lobehub/ui';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

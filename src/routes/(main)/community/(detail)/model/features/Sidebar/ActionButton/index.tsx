@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelIcon } from '@agentasia/icons';
-import { Flexbox } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 import urlJoin from 'url-join';
 

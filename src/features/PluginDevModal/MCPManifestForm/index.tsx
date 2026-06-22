@@ -1,4 +1,4 @@
-import { Alert, Button, Flexbox, FormItem, Input, InputPassword } from '@agentasia/ui';
+import { Alert, Button, Flexbox, FormItem, Input, InputPassword } from '@lobehub/ui';
 import { type FormInstance } from 'antd';
 import { Divider, Form, Radio } from 'antd';
 import isEqual from 'fast-deep-equal';

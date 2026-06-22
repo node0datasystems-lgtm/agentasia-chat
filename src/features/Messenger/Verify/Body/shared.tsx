@@ -1,7 +1,7 @@
 'use client';
 
-import { Block, Button, Flexbox, Icon, Text } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { Block, Button, Flexbox, Icon, Text } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { AlertTriangleIcon, CheckCircle2Icon, LinkIcon } from 'lucide-react';

@@ -11,8 +11,8 @@ import {
   RecommendedSkillType,
 } from '@agentasia/const';
 import { type BuiltinSkill, type LobeBuiltinTool } from '@agentasia/types';
-import { Center, Empty } from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { Center, Empty } from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronDownIcon, ChevronRightIcon } from 'lucide-react';

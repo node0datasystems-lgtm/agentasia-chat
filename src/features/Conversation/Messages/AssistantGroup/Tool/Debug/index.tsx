@@ -1,6 +1,6 @@
 import { type ToolIntervention } from '@agentasia/types';
-import { type TabsProps } from '@agentasia/ui';
-import { Block, Highlighter, Icon, Tabs } from '@agentasia/ui';
+import { type TabsProps } from '@lobehub/ui';
+import { Block, Highlighter, Icon, Tabs } from '@lobehub/ui';
 import {
   BracesIcon,
   CircleAlertIcon,

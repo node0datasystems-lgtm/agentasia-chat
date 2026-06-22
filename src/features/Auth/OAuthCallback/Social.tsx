@@ -1,6 +1,6 @@
 'use client';
 
-import { FluentEmoji, Text } from '@agentasia/ui';
+import { FluentEmoji, Text } from '@lobehub/ui';
 import { Result } from 'antd';
 import React, { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

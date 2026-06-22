@@ -6,8 +6,8 @@ import {
   Icon,
   Text,
   Tooltip,
-} from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+} from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronRightIcon, FileIcon, FolderIcon, type LucideIcon } from 'lucide-react';
 import type React from 'react';

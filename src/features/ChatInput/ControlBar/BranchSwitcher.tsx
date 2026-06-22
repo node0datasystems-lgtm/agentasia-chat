@@ -1,4 +1,4 @@
-import { Icon, Input, Tooltip } from '@agentasia/ui';
+import { Icon, Input, Tooltip } from '@lobehub/ui';
 import {
   confirmModal,
   DropdownMenuItem,
@@ -7,7 +7,7 @@ import {
   DropdownMenuPositioner,
   DropdownMenuRoot,
   DropdownMenuTrigger,
-} from '@agentasia/ui/base-ui';
+} from '@lobehub/ui/base-ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import {
   CheckIcon,

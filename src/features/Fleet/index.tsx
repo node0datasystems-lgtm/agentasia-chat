@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useEffect } from 'react';
 
 import { useFetchAgentList } from '@/hooks/useFetchAgentList';

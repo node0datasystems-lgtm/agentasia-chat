@@ -1,9 +1,9 @@
 'use client';
 
 import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
-import { Button, Flexbox, Icon } from '@agentasia/ui';
-import type { ImperativeModalProps, ModalInstance } from '@agentasia/ui/base-ui';
-import { createModal, ModalFooter } from '@agentasia/ui/base-ui';
+import { Button, Flexbox, Icon } from '@lobehub/ui';
+import type { ImperativeModalProps, ModalInstance } from '@lobehub/ui/base-ui';
+import { createModal, ModalFooter } from '@lobehub/ui/base-ui';
 import debug from 'debug';
 import { AlertCircle, LogIn } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

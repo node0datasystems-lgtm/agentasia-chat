@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, SearchBar } from '@agentasia/ui';
+import { Flexbox, Icon, SearchBar } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { SearchIcon } from 'lucide-react';
 import { type ReactNode } from 'react';

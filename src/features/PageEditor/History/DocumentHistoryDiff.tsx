@@ -1,8 +1,8 @@
 'use client';
 
-import type { LexicalDiffProps } from '@agentasia/editor/renderer';
-import { LexicalDiff } from '@agentasia/editor/renderer';
-import { Empty, Flexbox } from '@agentasia/ui';
+import type { LexicalDiffProps } from '@lobehub/editor/renderer';
+import { LexicalDiff } from '@lobehub/editor/renderer';
+import { Empty, Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import type { SerializedEditorState } from 'lexical';
 import { GitCompareArrowsIcon } from 'lucide-react';

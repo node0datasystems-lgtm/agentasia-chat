@@ -1,4 +1,4 @@
-import { type MenuProps } from '@agentasia/ui';
+import { type MenuProps } from '@lobehub/ui';
 import {
   AccordionItem,
   ActionIcon,
@@ -7,7 +7,7 @@ import {
   Flexbox,
   Icon,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import {
   ArrowDownIcon,
   ArrowUpIcon,

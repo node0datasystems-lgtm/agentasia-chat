@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useCallback } from 'react';
 
 import SafeBoundary from '@/components/ErrorBoundary';

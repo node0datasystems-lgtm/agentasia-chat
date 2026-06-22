@@ -1,4 +1,4 @@
-import { FileTypeIcon, MaterialFileTypeIcon } from '@agentasia/ui';
+import { FileTypeIcon, MaterialFileTypeIcon } from '@lobehub/ui';
 import React, { memo } from 'react';
 
 import { mimeTypeMap } from './config';

@@ -1,5 +1,5 @@
-import { useEditor } from '@agentasia/editor/react';
-import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { useEditor } from '@lobehub/editor/react';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import { Paperclip } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

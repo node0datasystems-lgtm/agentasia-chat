@@ -1,4 +1,4 @@
-import { CLASSNAMES } from '@agentasia/ui';
+import { CLASSNAMES } from '@lobehub/ui';
 import type { Theme } from 'antd-style';
 import { css } from 'antd-style';
 

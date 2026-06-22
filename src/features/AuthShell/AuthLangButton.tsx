@@ -6,7 +6,7 @@ import {
   type DropdownMenuCheckboxItem,
   Flexbox,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Languages } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,7 +1,7 @@
 'use client';
 
-import { ModelIcon } from '@agentasia/icons';
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, useResponsive } from 'antd-style';
 import { DotIcon } from 'lucide-react';
 import { memo } from 'react';

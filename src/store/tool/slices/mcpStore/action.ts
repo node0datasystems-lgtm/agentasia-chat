@@ -1,6 +1,6 @@
 import { CURRENT_VERSION, isDesktop } from '@agentasia/const';
 import { type ToolManifest } from '@agentasia/types';
-import { type PluginItem, type PluginListResponse } from '@agentasia/market-sdk';
+import { type PluginItem, type PluginListResponse } from '@lobehub/market-sdk';
 import { type TRPCClientError } from '@trpc/client';
 import debug from 'debug';
 import { uniqBy } from 'es-toolkit/compat';

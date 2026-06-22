@@ -6,8 +6,8 @@ import {
   type GenericItemType,
   Icon,
   type MenuInfo,
-} from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+} from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { cssVar } from 'antd-style';
 import {

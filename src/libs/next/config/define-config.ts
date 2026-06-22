@@ -74,8 +74,8 @@ export function defineConfig(config: CustomNextConfig) {
         '@emoji-mart/react',
         '@emoji-mart/data',
         '@icons-pack/react-simple-icons',
-        '@agentasia/ui',
-        '@agentasia/icons',
+        '@lobehub/ui',
+        '@lobehub/icons',
       ],
       // oidc provider depend on constructor.name
       // but swc minification will remove the name
@@ -358,7 +358,7 @@ export function defineConfig(config: CustomNextConfig) {
     serverExternalPackages: config.serverExternalPackages ?? [
       'pdfkit',
       '@napi-rs/canvas',
-      '@agentasia/editor',
+      '@lobehub/editor',
       'discord.js',
       'ffmpeg-static',
       'pdfjs-dist',

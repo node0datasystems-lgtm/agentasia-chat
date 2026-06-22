@@ -2,7 +2,7 @@ import {
   type AgentCreateResponse,
   type AgentItemDetail,
   type AgentListResponse,
-} from '@agentasia/market-sdk';
+} from '@lobehub/market-sdk';
 
 import { lambdaClient } from '@/libs/trpc/client';
 import { discoverService } from '@/services/discover';

@@ -1,4 +1,4 @@
-import { Flexbox, ScrollShadow, TooltipGroup } from '@agentasia/ui';
+import { Flexbox, ScrollShadow, TooltipGroup } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo, Suspense } from 'react';
 

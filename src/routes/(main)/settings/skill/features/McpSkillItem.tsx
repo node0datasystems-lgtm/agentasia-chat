@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, Flexbox, Icon, Modal } from '@agentasia/ui';
-import { McpIcon } from '@agentasia/ui/icons';
+import { Avatar, Flexbox, Icon, Modal } from '@lobehub/ui';
+import { McpIcon } from '@lobehub/ui/icons';
 import { memo, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

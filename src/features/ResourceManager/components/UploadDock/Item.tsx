@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { XIcon } from 'lucide-react';
 import { type ReactNode } from 'react';

@@ -1,5 +1,5 @@
-import { ProviderCombine } from '@agentasia/icons';
-import { Flexbox, Highlighter, Snippet, Tabs } from '@agentasia/ui';
+import { ProviderCombine } from '@lobehub/icons';
+import { Flexbox, Highlighter, Snippet, Tabs } from '@lobehub/ui';
 import { Steps } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { readableColor } from 'polished';

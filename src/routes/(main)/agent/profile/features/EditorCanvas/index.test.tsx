@@ -18,7 +18,7 @@ const editor = {
 const handleContentChange = vi.fn();
 const updateAgentConfig = vi.fn();
 
-vi.mock('@agentasia/editor/react', () => ({
+vi.mock('@lobehub/editor/react', () => ({
   Editor: Object.assign(
     vi.fn((props: any) => {
       editorProps.last = props;
@@ -28,7 +28,7 @@ vi.mock('@agentasia/editor/react', () => ({
   ),
 }));
 
-vi.mock('@agentasia/editor', () => ({
+vi.mock('@lobehub/editor', () => ({
   ReactMentionPlugin: vi.fn(),
   ReactTablePlugin: vi.fn(),
   ReactToolbarPlugin: vi.fn(),

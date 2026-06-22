@@ -12,7 +12,7 @@ import {
   Text,
   Tooltip,
   TooltipGroup,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { App } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import {

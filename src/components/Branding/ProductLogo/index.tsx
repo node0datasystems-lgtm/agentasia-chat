@@ -1,7 +1,7 @@
 'use client';
 
-import { type AgentAsiaProps } from '@agentasia/ui/brand';
-import { AgentAsia } from '@agentasia/ui/brand';
+import { type AgentAsiaProps } from '@lobehub/ui/brand';
+import { AgentAsia } from '@lobehub/ui/brand';
 import { memo } from 'react';
 
 import { isCustomBranding } from '@/const/version';

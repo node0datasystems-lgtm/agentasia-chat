@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Input, Segmented, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Input, Segmented, Text } from '@lobehub/ui';
 import { Breadcrumb as AntBreadcrumb } from 'antd';
 import { ChevronRight, LayoutGrid, List as ListIcon, Search } from 'lucide-react';
 import { memo } from 'react';

@@ -1,5 +1,5 @@
-import { type AlertProps, type AvatarProps, type DivProps, type FlexboxProps } from '@agentasia/ui';
-import { type EditableMessageProps, type MetaData } from '@agentasia/ui/chat';
+import { type AlertProps, type AvatarProps, type DivProps, type FlexboxProps } from '@lobehub/ui';
+import { type EditableMessageProps, type MetaData } from '@lobehub/ui/chat';
 import { type ReactNode } from 'react';
 
 export interface ChatItemProps extends Omit<FlexboxProps, 'children' | 'onChange'> {

@@ -1,5 +1,5 @@
-import { Flexbox, Icon, SearchBar, Segmented, stopPropagation } from '@agentasia/ui';
-import { ProviderIcon } from '@agentasia/ui/icons';
+import { Flexbox, Icon, SearchBar, Segmented, stopPropagation } from '@lobehub/ui';
+import { ProviderIcon } from '@lobehub/ui/icons';
 import { Brain } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

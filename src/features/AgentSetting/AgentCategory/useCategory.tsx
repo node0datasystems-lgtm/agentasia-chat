@@ -1,4 +1,4 @@
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { type MenuItemType } from 'antd/es/menu/interface';
 import { Activity, Bot, Handshake, LinkIcon, Mic2 } from 'lucide-react';
 import { useMemo } from 'react';

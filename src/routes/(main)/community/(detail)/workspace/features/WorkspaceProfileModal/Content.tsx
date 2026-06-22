@@ -1,7 +1,7 @@
 'use client';
 
 import { OFFICIAL_URL } from '@agentasia/const';
-import type { CollapseProps } from '@agentasia/ui';
+import type { CollapseProps } from '@lobehub/ui';
 import {
   Button,
   Center,
@@ -12,8 +12,8 @@ import {
   Text,
   TextArea,
   Tooltip,
-} from '@agentasia/ui';
-import { useModalContext } from '@agentasia/ui/base-ui';
+} from '@lobehub/ui';
+import { useModalContext } from '@lobehub/ui/base-ui';
 import type { UploadProps } from 'antd';
 import { App, Form, Input as AntInput, Upload } from 'antd';
 import { cssVar } from 'antd-style';

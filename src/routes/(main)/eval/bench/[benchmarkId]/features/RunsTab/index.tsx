@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, Flexbox } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { Button, Flexbox } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { Plus } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { Avatar, Block, Collapse, Flexbox, Grid, Text } from '@agentasia/ui';
-import { ChatList } from '@agentasia/ui/chat';
+import { Avatar, Block, Collapse, Flexbox, Grid, Text } from '@lobehub/ui';
+import { ChatList } from '@lobehub/ui/chat';
 import { createStaticStyles, useTheme } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

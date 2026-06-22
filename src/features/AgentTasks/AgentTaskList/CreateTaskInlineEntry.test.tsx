@@ -13,7 +13,7 @@ const permissionMock = vi.hoisted(() => ({
 
 const focusMock = vi.hoisted(() => vi.fn());
 
-vi.mock('@agentasia/editor/react', () => ({
+vi.mock('@lobehub/editor/react', () => ({
   useEditor: () => ({
     cleanDocument: vi.fn(),
     focus: focusMock,

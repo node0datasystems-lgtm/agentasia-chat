@@ -1,4 +1,4 @@
-import { Empty as EmptyComponent } from '@agentasia/ui';
+import { Empty as EmptyComponent } from '@lobehub/ui';
 import { BlocksIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

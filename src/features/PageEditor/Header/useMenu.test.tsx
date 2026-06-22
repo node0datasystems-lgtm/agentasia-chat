@@ -22,7 +22,7 @@ vi.mock('@lobechat/const', () => ({
   isDesktop: false,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Icon: () => null,
 }));
 

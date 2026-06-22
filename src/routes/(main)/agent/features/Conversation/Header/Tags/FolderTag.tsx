@@ -1,4 +1,4 @@
-import { Tooltip } from '@agentasia/ui';
+import { Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

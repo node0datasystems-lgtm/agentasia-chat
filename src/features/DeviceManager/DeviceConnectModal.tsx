@@ -2,7 +2,7 @@
 
 import { DOWNLOAD_URL } from '@agentasia/const';
 import type { DeviceScope } from '@agentasia/types';
-import { Button, CopyButton, Flexbox, Icon, Modal, Segmented, Text } from '@agentasia/ui';
+import { Button, CopyButton, Flexbox, Icon, Modal, Segmented, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { DownloadIcon, MonitorDownIcon, ShieldCheckIcon, TerminalIcon } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';

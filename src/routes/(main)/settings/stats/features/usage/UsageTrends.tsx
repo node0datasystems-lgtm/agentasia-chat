@@ -1,5 +1,5 @@
-import { type BarChartProps } from '@agentasia/charts';
-import { Segmented, Skeleton } from '@agentasia/ui';
+import { type BarChartProps } from '@lobehub/charts';
+import { Segmented, Skeleton } from '@lobehub/ui';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

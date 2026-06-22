@@ -1,6 +1,6 @@
 import { BRANDING_PROVIDER } from '@agentasia/business-const';
-import { ProviderCombine, ProviderIcon } from '@agentasia/icons';
-import { Avatar, Flexbox, Skeleton, Tag, Text } from '@agentasia/ui';
+import { ProviderCombine, ProviderIcon } from '@lobehub/icons';
+import { Avatar, Flexbox, Skeleton, Tag, Text } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar, cx } from 'antd-style';
 import { memo } from 'react';

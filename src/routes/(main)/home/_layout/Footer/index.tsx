@@ -2,10 +2,10 @@
 
 import { SOCIAL_URL } from '@agentasia/business-const';
 import { isDesktop } from '@agentasia/const';
-import { useAnalytics } from '@agentasia/analytics/react';
-import { type MenuProps } from '@agentasia/ui';
-import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@agentasia/ui';
-import { DiscordIcon, GithubIcon } from '@agentasia/ui/icons';
+import { useAnalytics } from '@lobehub/analytics/react';
+import { type MenuProps } from '@lobehub/ui';
+import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@lobehub/ui';
+import { DiscordIcon, GithubIcon } from '@lobehub/ui/icons';
 import {
   Book,
   CircleHelp,

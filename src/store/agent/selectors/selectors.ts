@@ -17,7 +17,7 @@ import {
   type RuntimeEnvConfig,
 } from '@agentasia/types';
 import { KnowledgeType } from '@agentasia/types';
-import { VoiceList } from '@agentasia/tts';
+import { VoiceList } from '@lobehub/tts';
 
 import { DEFAULT_OPENING_QUESTIONS } from '@/features/AgentSetting/store/selectors';
 import { resolveTargetDeviceId } from '@/helpers/agentWorkingDirectory';

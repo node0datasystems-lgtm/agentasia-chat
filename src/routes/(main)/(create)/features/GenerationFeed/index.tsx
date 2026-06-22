@@ -1,7 +1,7 @@
 'use client';
 
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { type ReactNode } from 'react';
 import { Fragment, memo, useEffect, useRef } from 'react';

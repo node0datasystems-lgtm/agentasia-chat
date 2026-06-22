@@ -22,7 +22,7 @@ const modalConfirm = vi.hoisted(() => vi.fn());
 const openDocumentMock = vi.hoisted(() => vi.fn());
 const removeDocumentMock = vi.hoisted(() => vi.fn());
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({ onClick, title }: { onClick?: () => void; title?: string }) => (
     <button aria-label={title} onClick={onClick}>
       {title}
@@ -32,7 +32,7 @@ vi.mock('@agentasia/ui', () => ({
   Text: ({ children }: { children?: ReactNode }) => <span>{children}</span>,
 }));
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   confirmModal: modalConfirm,
 }));
 

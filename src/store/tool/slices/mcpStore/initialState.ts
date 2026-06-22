@@ -1,4 +1,4 @@
-import { type PluginItem } from '@agentasia/market-sdk';
+import { type PluginItem } from '@lobehub/market-sdk';
 
 import { type MCPInstallProgressMap } from '@/types/plugins';
 

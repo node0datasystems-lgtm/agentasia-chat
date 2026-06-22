@@ -1,4 +1,4 @@
-import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { Center, Flexbox, Icon } from '@lobehub/ui';
 import { Loader2 } from 'lucide-react';
 import { type DynamicOptions } from 'next/dist/shared/lib/dynamic';
 import { memo } from 'react';

@@ -1,5 +1,5 @@
-import { type ActionIconProps } from '@agentasia/ui';
-import { ActionIcon } from '@agentasia/ui';
+import { type ActionIconProps } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { ChevronLeftIcon } from 'lucide-react';
 import { memo } from 'react';
 import { Link } from 'react-router';

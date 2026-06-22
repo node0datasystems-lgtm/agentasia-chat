@@ -45,11 +45,11 @@ vi.mock('@lobechat/heterogeneous-agents/client', () => ({
   ],
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Icon: () => null,
 }));
 
-vi.mock('@agentasia/ui/icons', () => ({
+vi.mock('@lobehub/ui/icons', () => ({
   GroupBotSquareIcon: () => null,
 }));
 

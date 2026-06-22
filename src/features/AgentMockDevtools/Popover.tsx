@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Flexbox, toast } from '@agentasia/ui';
+import { ActionIcon, Button, Flexbox, toast } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
   GripHorizontal,

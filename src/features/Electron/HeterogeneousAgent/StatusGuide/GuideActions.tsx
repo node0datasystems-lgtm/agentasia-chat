@@ -1,5 +1,5 @@
 import { isDesktop } from '@agentasia/const';
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { ExternalLink, RotateCcw, Settings2 } from 'lucide-react';
 
 import { electronSystemService } from '@/services/electron/system';

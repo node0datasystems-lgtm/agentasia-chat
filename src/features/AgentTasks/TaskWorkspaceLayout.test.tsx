@@ -9,7 +9,7 @@ import { resetNavPanel } from '@/features/NavPanel';
 
 import TaskWorkspaceLayout from './TaskWorkspaceLayout';
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Flexbox: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) => (
     <div {...props}>{children}</div>
   ),

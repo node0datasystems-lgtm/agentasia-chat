@@ -1,5 +1,5 @@
-import { ActionIcon, DropdownMenu, Flexbox, Tooltip } from '@agentasia/ui';
-import { CreateBotIcon } from '@agentasia/ui/icons';
+import { ActionIcon, DropdownMenu, Flexbox, Tooltip } from '@lobehub/ui';
+import { CreateBotIcon } from '@lobehub/ui/icons';
 import { cssVar } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';
 import React, { memo, useCallback, useMemo } from 'react';

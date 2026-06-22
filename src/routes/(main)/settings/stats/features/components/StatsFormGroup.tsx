@@ -1,7 +1,7 @@
 'use client';
 
-import { type BlockProps } from '@agentasia/ui';
-import { Block, Flexbox, Text } from '@agentasia/ui';
+import { type BlockProps } from '@lobehub/ui';
+import { Block, Flexbox, Text } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo } from 'react';
 

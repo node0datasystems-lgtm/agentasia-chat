@@ -1,4 +1,4 @@
-import { Center, Empty, Flexbox } from '@agentasia/ui';
+import { Center, Empty, Flexbox } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { Boxes } from 'lucide-react';
 import { memo, useState } from 'react';

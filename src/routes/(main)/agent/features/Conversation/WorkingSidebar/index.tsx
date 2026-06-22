@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { PanelRightCloseIcon } from 'lucide-react';
 import { lazy, memo } from 'react';

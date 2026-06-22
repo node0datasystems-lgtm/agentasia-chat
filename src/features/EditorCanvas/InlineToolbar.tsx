@@ -1,10 +1,10 @@
 'use client';
 
-import { type IEditor } from '@agentasia/editor';
-import { getHotkeyById, HotkeyEnum, INSERT_HEADING_COMMAND } from '@agentasia/editor';
-import { type ChatInputActionsProps, type EditorState } from '@agentasia/editor/react';
-import { ChatInputActions, FloatActions } from '@agentasia/editor/react';
-import { Block } from '@agentasia/ui';
+import { type IEditor } from '@lobehub/editor';
+import { getHotkeyById, HotkeyEnum, INSERT_HEADING_COMMAND } from '@lobehub/editor';
+import { type ChatInputActionsProps, type EditorState } from '@lobehub/editor/react';
+import { ChatInputActions, FloatActions } from '@lobehub/editor/react';
+import { Block } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import {
   BoldIcon,

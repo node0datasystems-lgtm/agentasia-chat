@@ -2,7 +2,7 @@
 
 import { type ComposioAppType, type LobehubSkillProviderType } from '@agentasia/const';
 import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
-import { Avatar, Icon, Tag } from '@agentasia/ui';
+import { Avatar, Icon, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { AlertCircle, Loader2, X } from 'lucide-react';

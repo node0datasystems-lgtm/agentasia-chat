@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Flexbox, Icon, Text, Tooltip, useModalContext } from '@agentasia/ui';
+import { Avatar, Flexbox, Icon, Text, Tooltip, useModalContext } from '@lobehub/ui';
 import { Button } from 'antd';
 import { cssVar } from 'antd-style';
 import { Loader2, Plus, SquareArrowOutUpRight } from 'lucide-react';

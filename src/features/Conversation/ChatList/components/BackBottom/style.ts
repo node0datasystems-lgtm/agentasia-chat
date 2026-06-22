@@ -1,4 +1,4 @@
-import { lobeStaticStylish } from '@agentasia/ui';
+import { lobeStaticStylish } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 
 export const styles = createStaticStyles(({ css, cssVar }) => ({

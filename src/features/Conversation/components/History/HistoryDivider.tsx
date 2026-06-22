@@ -1,4 +1,4 @@
-import { Icon, Tag } from '@agentasia/ui';
+import { Icon, Tag } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { Timer } from 'lucide-react';
 import { memo } from 'react';

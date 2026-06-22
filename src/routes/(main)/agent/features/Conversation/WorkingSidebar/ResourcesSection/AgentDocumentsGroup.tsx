@@ -3,9 +3,9 @@ import {
   AGENT_DOCUMENT_WEB_CATEGORY,
   buildAgentSkillIdentifier,
 } from '@agentasia/const';
-import { ActionIcon, Center, Empty, Flexbox, Text } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { ActionIcon, Center, Empty, Flexbox, Text } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { App } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import dayjs from 'dayjs';

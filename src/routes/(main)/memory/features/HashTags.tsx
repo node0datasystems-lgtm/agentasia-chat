@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Tag } from '@agentasia/ui';
+import { Flexbox, Icon, Tag } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { HashIcon } from 'lucide-react';
 import { memo } from 'react';

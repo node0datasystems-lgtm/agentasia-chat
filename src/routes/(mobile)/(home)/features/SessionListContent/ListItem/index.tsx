@@ -1,5 +1,5 @@
-import { type ListItemProps } from '@agentasia/ui';
-import { Avatar, List } from '@agentasia/ui';
+import { type ListItemProps } from '@lobehub/ui';
+import { Avatar, List } from '@lobehub/ui';
 import { useHover } from 'ahooks';
 import { createStaticStyles, cx } from 'antd-style';
 import { memo, useMemo, useRef } from 'react';

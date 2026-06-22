@@ -1,5 +1,5 @@
 import { DEFAULT_AVATAR } from '@agentasia/const';
-import { Avatar, Flexbox } from '@agentasia/ui';
+import { Avatar, Flexbox } from '@lobehub/ui';
 import { Command } from 'cmdk';
 import dayjs from 'dayjs';
 import {

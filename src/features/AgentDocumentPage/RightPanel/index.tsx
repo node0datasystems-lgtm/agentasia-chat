@@ -1,7 +1,7 @@
 'use client';
 
 import { AGENT_DOCUMENT_CATEGORY, AGENT_DOCUMENT_SKILL_CATEGORY } from '@agentasia/const';
-import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { PanelRightCloseIcon } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

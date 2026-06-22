@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, ContextMenuTrigger, type GenericItemType, Tooltip } from '@agentasia/ui';
+import { Avatar, ContextMenuTrigger, type GenericItemType, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import type { CSSProperties, MouseEvent } from 'react';
 import { memo } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion, Flexbox } from '@agentasia/ui';
+import { Accordion, Flexbox } from '@lobehub/ui';
 import { LayoutDashboardIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

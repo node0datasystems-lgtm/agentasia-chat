@@ -1,5 +1,5 @@
-import { Button, Checkbox, Flexbox, Icon, Skeleton } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Button, Checkbox, Flexbox, Icon, Skeleton } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { BookMinusIcon, BookPlusIcon, FileBoxIcon, Trash2Icon } from 'lucide-react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import { ArchiveIcon, CheckCheckIcon, ListFilterIcon } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';

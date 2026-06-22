@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Flexbox, Skeleton } from '@agentasia/ui';
+import { Block, Flexbox, Skeleton } from '@lobehub/ui';
 import { memo } from 'react';
 
 import AuthCard from '@/features/AuthCard';

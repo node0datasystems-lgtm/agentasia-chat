@@ -5,7 +5,7 @@ export type LobeLinkKind = 'github' | 'linear' | 'email' | 'generic';
 export interface ParsedLobeLink {
   /**
    * Canonical label used when the link has no author-provided text, e.g.
-   * `node0datasystems-lgtm/agentasia-chat#15554` / `TST-10001` / `@agentasia/ui` / the full URL.
+   * `node0datasystems-lgtm/agentasia-chat#15554` / `TST-10001` / `@lobehub/ui` / the full URL.
    */
   canonicalLabel: string;
   /** Host for generic links, used to fetch a favicon. */

@@ -1,7 +1,7 @@
 'use client';
 
 import { SiGithub, SiX } from '@icons-pack/react-simple-icons';
-import { ActionIcon, Flexbox, Text, Tooltip } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Text, Tooltip } from '@lobehub/ui';
 import { Button, Spin } from 'antd';
 import { cssVar } from 'antd-style';
 import { ArrowRight, Link2Off, Loader2 } from 'lucide-react';

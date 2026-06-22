@@ -1,4 +1,4 @@
-import { genCdnUrl } from '@agentasia/ui';
+import { genCdnUrl } from '@lobehub/ui';
 import type { CSSProperties } from 'react';
 
 // Pierre's unsafeCSS is captured at FileTree construction with no public

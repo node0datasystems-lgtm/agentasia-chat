@@ -1,5 +1,5 @@
 import type { TaskStatus } from '@agentasia/types';
-import { type DropdownItem, DropdownMenu, Icon, type MenuInfo, Tooltip } from '@agentasia/ui';
+import { type DropdownItem, DropdownMenu, Icon, type MenuInfo, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import type { LucideIcon } from 'lucide-react';
 import {

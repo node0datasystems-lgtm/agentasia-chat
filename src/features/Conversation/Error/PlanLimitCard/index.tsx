@@ -1,6 +1,6 @@
 import { BRANDING_URL } from '@agentasia/business-const';
 import { ChatErrorType, Plans } from '@agentasia/types';
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

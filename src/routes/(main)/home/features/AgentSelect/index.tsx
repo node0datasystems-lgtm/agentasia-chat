@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Avatar, Block, Flexbox, Popover, Skeleton, Text } from '@agentasia/ui';
+import { ActionIcon, Avatar, Block, Flexbox, Popover, Skeleton, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ChevronsUpDownIcon } from 'lucide-react';
 import { memo, useState } from 'react';

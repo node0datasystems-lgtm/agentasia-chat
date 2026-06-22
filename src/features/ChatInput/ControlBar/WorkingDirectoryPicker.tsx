@@ -1,7 +1,7 @@
 'use client';
 
 import { isDesktop } from '@agentasia/const';
-import { Flexbox, Icon, Popover, Tooltip } from '@agentasia/ui';
+import { Flexbox, Icon, Popover, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import {
   CheckIcon,

@@ -1,8 +1,8 @@
 'use client';
 
-import { Icon } from '@agentasia/ui';
-import { type MenuProps } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Icon } from '@lobehub/ui';
+import { type MenuProps } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { Trash } from 'lucide-react';
 import type { CSSProperties } from 'react';
 import { memo, useState } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import { memo, useState } from 'react';
 
 import NeuralNetworkLoading from '@/components/NeuralNetworkLoading';

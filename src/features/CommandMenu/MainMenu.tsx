@@ -1,5 +1,5 @@
 import { SOCIAL_URL } from '@agentasia/business-const';
-import { DiscordIcon, GithubIcon } from '@agentasia/ui/icons';
+import { DiscordIcon, GithubIcon } from '@lobehub/ui/icons';
 import { Command } from 'cmdk';
 import {
   Bot,

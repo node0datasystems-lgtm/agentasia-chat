@@ -2,7 +2,7 @@
 
 import { type UIChatMessage } from '@agentasia/types';
 import { ThreadStatus } from '@agentasia/types';
-import { AccordionItem, Block } from '@agentasia/ui';
+import { AccordionItem, Block } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useMemo, useState } from 'react';
 

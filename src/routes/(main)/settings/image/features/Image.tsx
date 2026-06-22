@@ -1,8 +1,8 @@
 'use client';
 
 import { type UserImageConfig } from '@agentasia/types';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Form, Icon, Skeleton, Tooltip } from '@agentasia/ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Form, Icon, Skeleton, Tooltip } from '@lobehub/ui';
 import { Loader2Icon } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { ActionIcon, Flexbox, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Trash } from 'lucide-react';
 import { memo } from 'react';

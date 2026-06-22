@@ -1,7 +1,7 @@
 'use client';
 
 import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@agentasia/const';
-import { Claude, Cline, Cursor, OpenAI } from '@agentasia/icons';
+import { Claude, Cline, Cursor, OpenAI } from '@lobehub/icons';
 import {
   Avatar,
   Block,
@@ -13,7 +13,7 @@ import {
   Segmented,
   Select,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Divider } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { BotIcon, UserRoundIcon } from 'lucide-react';

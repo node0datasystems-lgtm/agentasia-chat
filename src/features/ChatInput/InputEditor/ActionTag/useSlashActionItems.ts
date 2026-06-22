@@ -1,7 +1,7 @@
 import { isDesktop } from '@agentasia/const';
 import { type ProjectSkillItem } from '@agentasia/electron-client-ipc';
-import type { IEditor, SlashOptions } from '@agentasia/editor';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import type { IEditor, SlashOptions } from '@lobehub/editor';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import isEqual from 'fast-deep-equal';
 import Fuse from 'fuse.js';
 import { $getSelection, $isRangeSelection } from 'lexical';

@@ -2,7 +2,7 @@
 
 import { type ErrorShape, type ImportFileUploadState } from '@agentasia/types';
 import { ImportStage } from '@agentasia/types';
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import { Upload } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { ImportIcon } from 'lucide-react';

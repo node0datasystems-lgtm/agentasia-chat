@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, FluentEmoji } from '@agentasia/ui';
+import { Button, Flexbox, FluentEmoji } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

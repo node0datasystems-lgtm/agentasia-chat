@@ -1,6 +1,6 @@
 'use client';
 
-import { Alert, Button, Flexbox, Icon } from '@agentasia/ui';
+import { Alert, Button, Flexbox, Icon } from '@lobehub/ui';
 import { Divider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { InfoIcon, PlayIcon } from 'lucide-react';

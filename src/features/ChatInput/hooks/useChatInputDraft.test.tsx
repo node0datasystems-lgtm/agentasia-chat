@@ -1,4 +1,4 @@
-import type { IEditor } from '@agentasia/editor';
+import type { IEditor } from '@lobehub/editor';
 import { act, renderHook } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

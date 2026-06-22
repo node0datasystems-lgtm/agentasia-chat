@@ -7,7 +7,7 @@ import {
   Input,
   stopPropagation,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { type InputRef, message } from 'antd';
 import { Check, PaletteIcon } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

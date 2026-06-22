@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon } from '@agentasia/ui';
-import { ChatHeader } from '@agentasia/ui/mobile';
+import { ActionIcon } from '@lobehub/ui';
+import { ChatHeader } from '@lobehub/ui/mobile';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme as useNextThemesTheme } from 'next-themes';
 import { memo } from 'react';

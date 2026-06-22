@@ -1,7 +1,7 @@
 import { getBuiltinStreaming } from '@agentasia/builtin-tools/streamings';
 import { type ChatToolResult, type ToolIntervention } from '@agentasia/types';
 import { safeParsePartialJSON } from '@agentasia/utils';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, Suspense } from 'react';
 
 import AbortResponse from './AbortResponse';

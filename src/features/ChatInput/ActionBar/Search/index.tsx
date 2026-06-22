@@ -1,4 +1,4 @@
-import { GlobeOffIcon } from '@agentasia/ui/icons';
+import { GlobeOffIcon } from '@lobehub/ui/icons';
 import { cssVar } from 'antd-style';
 import { Globe } from 'lucide-react';
 import { memo } from 'react';

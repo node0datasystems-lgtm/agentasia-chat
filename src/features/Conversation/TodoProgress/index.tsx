@@ -1,7 +1,7 @@
 'use client';
 
 import { type StepContextTodos } from '@agentasia/types';
-import { Checkbox, Flexbox, Icon, Tag } from '@agentasia/ui';
+import { Checkbox, Flexbox, Icon, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronDown, ChevronUp, CircleArrowRight } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

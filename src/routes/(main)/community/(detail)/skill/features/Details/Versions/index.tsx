@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Flexbox, Tag } from '@agentasia/ui';
+import { Block, Flexbox, Tag } from '@lobehub/ui';
 import qs from 'query-string';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

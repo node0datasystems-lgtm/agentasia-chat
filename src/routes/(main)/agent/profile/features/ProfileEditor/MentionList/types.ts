@@ -1,5 +1,5 @@
 import { type API } from '@agentasia/prompts';
-import { type DropdownItem } from '@agentasia/ui';
+import { type DropdownItem } from '@lobehub/ui';
 
 export type MentionEntityType = 'collection' | 'api';
 

@@ -3,9 +3,9 @@
 import { CheckCircleFilled } from '@ant-design/icons';
 import { type ChatMessageError } from '@agentasia/types';
 import { TraceNameMap } from '@agentasia/types';
-import { ModelIcon } from '@agentasia/icons';
-import { Alert, Button, Flexbox, Highlighter, Icon } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Alert, Button, Flexbox, Highlighter, Icon } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Loader2Icon } from 'lucide-react';
 import { type ReactNode } from 'react';

@@ -1,4 +1,4 @@
-import { Avatar } from '@agentasia/ui';
+import { Avatar } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useDiscoverStore } from '@/store/discover';

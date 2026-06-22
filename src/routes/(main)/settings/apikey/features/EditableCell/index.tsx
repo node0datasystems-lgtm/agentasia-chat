@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Input } from '@agentasia/ui';
+import { ActionIcon, Input } from '@lobehub/ui';
 import { type InputRef } from 'antd';
 import { App } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';

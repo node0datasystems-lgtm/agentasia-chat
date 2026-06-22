@@ -1,7 +1,7 @@
 'use client';
 
-import { ReactMentionPlugin, ReactTablePlugin, ReactToolbarPlugin } from '@agentasia/editor';
-import { Editor } from '@agentasia/editor/react';
+import { ReactMentionPlugin, ReactTablePlugin, ReactToolbarPlugin } from '@lobehub/editor';
+import { Editor } from '@lobehub/editor/react';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

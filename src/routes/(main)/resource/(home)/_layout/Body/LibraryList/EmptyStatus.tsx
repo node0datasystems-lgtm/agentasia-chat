@@ -1,5 +1,5 @@
-import { type IconType } from '@agentasia/icons';
-import { Flexbox } from '@agentasia/ui';
+import { type IconType } from '@lobehub/icons';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';
 import { Trans } from 'react-i18next';

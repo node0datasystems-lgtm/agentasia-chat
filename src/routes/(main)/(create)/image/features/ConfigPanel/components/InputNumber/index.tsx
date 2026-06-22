@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, InputNumber, Tooltip } from '@agentasia/ui';
+import { Button, Flexbox, InputNumber, Tooltip } from '@lobehub/ui';
 import { Dices } from 'lucide-react';
 import { MAX_SEED } from 'model-bank';
 import { type CSSProperties } from 'react';

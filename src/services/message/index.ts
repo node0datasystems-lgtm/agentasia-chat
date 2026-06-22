@@ -13,7 +13,7 @@ import {
   type UpdateMessageRAGParams,
   type UpdateMessageResult,
 } from '@agentasia/types';
-import { type HeatmapsProps } from '@agentasia/charts';
+import { type HeatmapsProps } from '@lobehub/charts';
 
 import { lambdaClient } from '@/libs/trpc/client';
 

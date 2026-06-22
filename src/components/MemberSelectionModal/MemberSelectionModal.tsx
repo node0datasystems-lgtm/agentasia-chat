@@ -11,7 +11,7 @@ import {
   SearchBar,
   Text,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { useHover } from 'ahooks';
 import { List as AntdList, Switch } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';

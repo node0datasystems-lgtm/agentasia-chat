@@ -1,4 +1,4 @@
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { BanIcon, CircleCheckBigIcon, CircleDashedIcon } from 'lucide-react';
 import { type ReactNode } from 'react';

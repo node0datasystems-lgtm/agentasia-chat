@@ -1,7 +1,7 @@
 'use client';
 
 import { isDesktop } from '@agentasia/const';
-import { A, Tooltip } from '@agentasia/ui';
+import { A, Tooltip } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import type { MouseEvent } from 'react';
 import { memo, useCallback } from 'react';

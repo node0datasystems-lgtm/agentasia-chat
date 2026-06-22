@@ -1,5 +1,5 @@
 import { SiApple, SiLinux } from '@icons-pack/react-simple-icons';
-import { Microsoft } from '@agentasia/icons';
+import { Microsoft } from '@lobehub/icons';
 import {
   ActionIcon,
   Block,
@@ -10,7 +10,7 @@ import {
   Popover,
   Snippet,
   Tag,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Divider, Steps } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { startCase } from 'es-toolkit/compat';

@@ -1,4 +1,4 @@
-import type { ISlashMenuOption } from '@agentasia/editor';
+import type { ISlashMenuOption } from '@lobehub/editor';
 import { useEffect } from 'react';
 
 interface KeyboardNavOptions {

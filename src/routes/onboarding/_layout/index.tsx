@@ -3,7 +3,7 @@
 import { AGENT_ONBOARDING_ENABLED } from '@agentasia/business-const';
 import { isDesktop } from '@agentasia/const';
 import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
-import { Center, Flexbox, Text } from '@agentasia/ui';
+import { Center, Flexbox, Text } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cx, useTheme } from 'antd-style';
 import { type FC, type MouseEvent, type PropsWithChildren, useCallback, useEffect } from 'react';

@@ -1,4 +1,4 @@
-import { Block, Center, Icon, Text } from '@agentasia/ui';
+import { Block, Center, Icon, Text } from '@lobehub/ui';
 import { PlusIcon } from 'lucide-react';
 import { memo } from 'react';
 

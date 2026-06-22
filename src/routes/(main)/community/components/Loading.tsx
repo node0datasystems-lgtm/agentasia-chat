@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton } from '@agentasia/ui';
+import { Skeleton } from '@lobehub/ui';
 import { memo } from 'react';
 
 import Title from './Title';

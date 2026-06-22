@@ -1,5 +1,5 @@
-import { type EmptyProps } from '@agentasia/ui';
-import { Center, Empty, Flexbox } from '@agentasia/ui';
+import { type EmptyProps } from '@lobehub/ui';
+import { Center, Empty, Flexbox } from '@lobehub/ui';
 import { BrainCircuitIcon } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { memo } from 'react';

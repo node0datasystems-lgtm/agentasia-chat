@@ -2,7 +2,7 @@
 
 import type { EvalRunTopicResult } from '@agentasia/types';
 import { formatCost, formatShortenNumber } from '@agentasia/utils';
-import { ActionIcon, Flexbox, Tag } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Tag } from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import {

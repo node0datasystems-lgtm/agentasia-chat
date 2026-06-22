@@ -1,6 +1,6 @@
 'use client';
 
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { type CSSProperties, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

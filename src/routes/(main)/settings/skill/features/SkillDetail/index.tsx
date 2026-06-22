@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, Markdown, Skeleton } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Avatar, Markdown, Skeleton } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { Button } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';

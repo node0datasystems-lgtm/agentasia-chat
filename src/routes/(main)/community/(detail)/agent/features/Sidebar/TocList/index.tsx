@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { type AnchorProps } from 'antd';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

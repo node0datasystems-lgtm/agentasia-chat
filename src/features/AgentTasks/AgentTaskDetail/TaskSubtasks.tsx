@@ -1,6 +1,6 @@
 import type { TaskDetailSubtask } from '@agentasia/types';
-import { ActionIcon, Block, Flexbox, Icon, showContextMenu, Text } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, Block, Flexbox, Icon, showContextMenu, Text } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App, ConfigProvider, Tree } from 'antd';
 import type { DataNode } from 'antd/es/tree';
 import { cssVar } from 'antd-style';

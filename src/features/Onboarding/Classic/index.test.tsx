@@ -21,7 +21,7 @@ const mocks = vi.hoisted(() => ({
   serverConfigInit: true,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Flexbox: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 

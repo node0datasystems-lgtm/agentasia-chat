@@ -1,6 +1,6 @@
 'use client';
 
-import { DraggablePanel } from '@agentasia/ui';
+import { DraggablePanel } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { type ReactNode } from 'react';
 import { memo, Suspense, useMemo, useRef } from 'react';

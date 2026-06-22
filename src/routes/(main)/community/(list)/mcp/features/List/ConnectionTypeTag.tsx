@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Tooltip } from '@agentasia/ui';
+import { Flexbox, Icon, Tooltip } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Blend, Cloud, LaptopMinimalIcon } from 'lucide-react';
 import { memo } from 'react';

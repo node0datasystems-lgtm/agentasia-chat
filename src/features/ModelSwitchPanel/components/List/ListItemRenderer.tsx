@@ -9,7 +9,7 @@ import {
   Flexbox,
   Icon,
   menuSharedStyles,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { cssVar, cx } from 'antd-style';
 import { LucideArrowRight, LucideBolt } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';

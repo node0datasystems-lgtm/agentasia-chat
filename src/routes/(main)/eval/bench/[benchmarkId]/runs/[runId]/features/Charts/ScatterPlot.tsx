@@ -1,7 +1,7 @@
 'use client';
 
 import { formatCost, formatShortenNumber } from '@agentasia/utils';
-import { Flexbox, Tag } from '@agentasia/ui';
+import { Flexbox, Tag } from '@lobehub/ui';
 import { Divider, Tooltip } from 'antd';
 import { createStaticStyles, useTheme } from 'antd-style';
 import { memo, useMemo } from 'react';

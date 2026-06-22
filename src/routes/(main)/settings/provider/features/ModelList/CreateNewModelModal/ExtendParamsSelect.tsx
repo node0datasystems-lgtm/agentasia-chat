@@ -1,5 +1,5 @@
-import { Flexbox, Popover } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { Flexbox, Popover } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { Space, Switch, Tag, theme, Typography } from 'antd';
 import { type ExtendParamsType } from 'model-bank';
 import { memo, type ReactNode, type SyntheticEvent, useMemo } from 'react';

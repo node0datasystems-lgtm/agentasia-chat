@@ -1,7 +1,7 @@
 'use client';
 
-import { ProviderIcon } from '@agentasia/icons';
-import { Button, DropdownMenu, Icon } from '@agentasia/ui';
+import { ProviderIcon } from '@lobehub/icons';
+import { Button, DropdownMenu, Icon } from '@lobehub/ui';
 import { Dropdown } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';

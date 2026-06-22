@@ -1,7 +1,7 @@
 'use client';
 
 import { ThreadStatus } from '@agentasia/types';
-import { Avatar, Block, Flexbox, Icon, Text } from '@agentasia/ui';
+import { Avatar, Block, Flexbox, Icon, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Footprints, ListChecksIcon, Wrench, XIcon } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';

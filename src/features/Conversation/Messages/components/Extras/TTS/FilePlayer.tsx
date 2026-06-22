@@ -1,4 +1,4 @@
-import { useAudioPlayer } from '@agentasia/tts/react';
+import { useAudioPlayer } from '@lobehub/tts/react';
 import { memo, useCallback } from 'react';
 
 import { useFileStore } from '@/store/file';

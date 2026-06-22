@@ -1,9 +1,9 @@
 'use client';
 
 import { ORG_NAME, UTM_SOURCE } from '@agentasia/business-const';
-import { type FlexboxProps } from '@agentasia/ui';
-import { Flexbox } from '@agentasia/ui';
-import { AgentAsia } from '@agentasia/ui/brand';
+import { type FlexboxProps } from '@lobehub/ui';
+import { Flexbox } from '@lobehub/ui';
+import { AgentAsia } from '@lobehub/ui/brand';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 

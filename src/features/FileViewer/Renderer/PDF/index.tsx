@@ -3,7 +3,7 @@
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Fragment, memo, useCallback, useState } from 'react';
 
 import NeuralNetworkLoading from '@/components/NeuralNetworkLoading';

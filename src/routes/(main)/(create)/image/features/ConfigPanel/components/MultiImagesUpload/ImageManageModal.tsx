@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Modal } from '@agentasia/ui';
+import { Button, Modal } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { Upload, X } from 'lucide-react';
 import { type FC } from 'react';

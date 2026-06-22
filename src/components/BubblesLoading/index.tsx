@@ -1,5 +1,5 @@
-import { Center } from '@agentasia/ui';
-import { LoadingDots } from '@agentasia/ui/chat';
+import { Center } from '@lobehub/ui';
+import { LoadingDots } from '@lobehub/ui/chat';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

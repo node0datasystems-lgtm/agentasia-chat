@@ -1,4 +1,4 @@
-import { Flexbox, Highlighter } from '@agentasia/ui';
+import { Flexbox, Highlighter } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { memo } from 'react';
 

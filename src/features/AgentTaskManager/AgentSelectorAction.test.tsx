@@ -36,7 +36,7 @@ const mocks = vi.hoisted(() => ({
   },
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Center: ({ children }: { children: ReactNode }) => (
     <div data-testid="selector-trigger">{children}</div>
   ),

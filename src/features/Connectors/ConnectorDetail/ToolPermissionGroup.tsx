@@ -1,4 +1,4 @@
-import { DropdownMenu } from '@agentasia/ui/base-ui';
+import { DropdownMenu } from '@lobehub/ui/base-ui';
 import { Button } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDownIcon, ChevronRightIcon, MoreHorizontalIcon } from 'lucide-react';

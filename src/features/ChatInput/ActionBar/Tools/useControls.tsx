@@ -4,10 +4,10 @@ import {
   RECOMMENDED_SKILLS,
   RecommendedSkillType,
 } from '@agentasia/const';
-import type { ItemType } from '@agentasia/ui';
-import { Avatar, Icon, Popover, SearchBar, stopPropagation, Tag, Tooltip } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
-import { McpIcon, SkillsIcon } from '@agentasia/ui/icons';
+import type { ItemType } from '@lobehub/ui';
+import { Avatar, Icon, Popover, SearchBar, stopPropagation, Tag, Tooltip } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
+import { McpIcon, SkillsIcon } from '@lobehub/ui/icons';
 import { Switch } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';

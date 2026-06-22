@@ -1,4 +1,4 @@
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { Database, FileUp, Plus } from 'lucide-react';
 import { memo } from 'react';

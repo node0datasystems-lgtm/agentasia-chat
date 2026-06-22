@@ -1,5 +1,5 @@
 import { type UIChatMessage } from '@agentasia/types';
-import { Flexbox, Modal, Segmented, Tabs } from '@agentasia/ui';
+import { Flexbox, Modal, Segmented, Tabs } from '@lobehub/ui';
 import { memo, useId, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

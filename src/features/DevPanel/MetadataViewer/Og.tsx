@@ -1,4 +1,4 @@
-import { Flexbox, Form, Input, TextArea } from '@agentasia/ui';
+import { Flexbox, Form, Input, TextArea } from '@lobehub/ui';
 import { memo } from 'react';
 
 import Image from '@/libs/next/Image';

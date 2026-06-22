@@ -1,5 +1,5 @@
 import { resolveCCSubagentType } from '@agentasia/builtin-tool-claude-code/client';
-import { Flexbox, Icon, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Icon, Tag, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ListTree } from 'lucide-react';

@@ -1,7 +1,7 @@
 'use client';
 
 import { CUSTOM_DOCUMENT_FILE_TYPE, CUSTOM_FOLDER_FILE_TYPE } from '@agentasia/const';
-import { Icon, useAppElement } from '@agentasia/ui';
+import { Icon, useAppElement } from '@lobehub/ui';
 import { App } from 'antd';
 import { cssVar } from 'antd-style';
 import { FileText, FolderIcon } from 'lucide-react';

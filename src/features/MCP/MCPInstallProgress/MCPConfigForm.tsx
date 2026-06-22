@@ -1,4 +1,4 @@
-import { Button, Flexbox, Form, Markdown } from '@agentasia/ui';
+import { Button, Flexbox, Form, Markdown } from '@lobehub/ui';
 import { Form as AForm } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import * as m from 'motion/react-m';

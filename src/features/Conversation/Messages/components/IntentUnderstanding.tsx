@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
 import CircleLoader from '@/components/CircleLoader';

@@ -1,4 +1,4 @@
-import { Skeleton } from '@agentasia/ui';
+import { Skeleton } from '@lobehub/ui';
 import { memo, Suspense } from 'react';
 
 import { ChatSettingsTabs } from '@/store/global/initialState';

@@ -5,8 +5,8 @@ import {
   type RemoteHeterogeneousAgentType,
 } from '@agentasia/heterogeneous-agents';
 import type { HeterogeneousProviderConfig } from '@agentasia/types';
-import { ActionIcon, Flexbox, Icon, Text, Tooltip } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { ActionIcon, Flexbox, Icon, Text, Tooltip } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { Button, Modal, Tag } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { BotIcon, CheckCircle2, MonitorSmartphone, RefreshCw, XCircle } from 'lucide-react';

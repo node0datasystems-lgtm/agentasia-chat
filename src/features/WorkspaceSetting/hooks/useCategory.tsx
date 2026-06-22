@@ -1,4 +1,4 @@
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import {
   Brain,
   Building2,

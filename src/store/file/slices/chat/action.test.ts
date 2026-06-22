@@ -1,4 +1,4 @@
-import { toast } from '@agentasia/ui/base-ui';
+import { toast } from '@lobehub/ui/base-ui';
 import { act, renderHook } from '@testing-library/react';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -23,7 +23,7 @@ const mockAgentMode = ({
 
 vi.mock('zustand/traditional');
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   toast: {
     error: vi.fn(),
   },

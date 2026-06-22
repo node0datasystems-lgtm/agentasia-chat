@@ -1,4 +1,4 @@
-import { Flexbox, Tag } from '@agentasia/ui';
+import { Flexbox, Tag } from '@lobehub/ui';
 import { type PropsWithChildren } from 'react';
 import { memo } from 'react';
 

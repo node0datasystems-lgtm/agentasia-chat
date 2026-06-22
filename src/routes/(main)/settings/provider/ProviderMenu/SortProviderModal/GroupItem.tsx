@@ -1,5 +1,5 @@
-import { ProviderIcon } from '@agentasia/icons';
-import { Avatar, Flexbox, SortableList } from '@agentasia/ui';
+import { ProviderIcon } from '@lobehub/icons';
+import { Avatar, Flexbox, SortableList } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { type AiProviderListItem } from '@/types/aiProvider';

@@ -15,7 +15,7 @@ const analyticsMocks = vi.hoisted(() => ({
   getSingletonAnalyticsOptional: vi.fn(),
 }));
 
-vi.mock('@agentasia/analytics', () => ({
+vi.mock('@lobehub/analytics', () => ({
   getSingletonAnalyticsOptional: analyticsMocks.getSingletonAnalyticsOptional,
 }));
 

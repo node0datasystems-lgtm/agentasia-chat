@@ -6,7 +6,7 @@ import {
   type LobehubSkillProviderType,
 } from '@agentasia/const';
 import { type DiscoverPluginDetail, type PluginSource } from '@agentasia/types';
-import { Avatar, Block, Flexbox, Icon, Image, Skeleton, Tag, Text } from '@agentasia/ui';
+import { Avatar, Block, Flexbox, Icon, Image, Skeleton, Tag, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

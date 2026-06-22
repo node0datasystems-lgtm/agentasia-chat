@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
   stopPropagation,
   TooltipGroup,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { memo, useCallback, useState } from 'react';
 
 import { PanelContent } from './components/PanelContent';

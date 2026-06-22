@@ -1,4 +1,4 @@
-import { Center, Flexbox } from '@agentasia/ui';
+import { Center, Flexbox } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import React, { memo } from 'react';
 

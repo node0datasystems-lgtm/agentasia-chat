@@ -1,8 +1,8 @@
 'use client';
 
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Form } from '@agentasia/ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Form } from '@lobehub/ui';
 import { Switch } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
 import { HETEROGENEOUS_TYPE_LABELS } from '@agentasia/heterogeneous-agents';
-import { Tag } from '@agentasia/ui';
+import { Tag } from '@lobehub/ui';
 import type { CSSProperties } from 'react';
 import { memo } from 'react';
 

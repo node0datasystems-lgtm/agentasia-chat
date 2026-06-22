@@ -1,7 +1,7 @@
 'use client';
 
 import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@agentasia/const';
-import { Avatar, Icon } from '@agentasia/ui';
+import { Avatar, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { Loader2 } from 'lucide-react';
 import { memo } from 'react';

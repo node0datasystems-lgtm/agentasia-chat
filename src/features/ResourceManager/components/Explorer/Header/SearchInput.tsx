@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { useDebounce } from 'ahooks';
 import { Input } from 'antd';
 import { SearchIcon, XIcon } from 'lucide-react';

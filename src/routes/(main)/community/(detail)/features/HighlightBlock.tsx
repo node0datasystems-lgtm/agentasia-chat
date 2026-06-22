@@ -1,7 +1,7 @@
 'use client';
 
-import { type FlexboxProps } from '@agentasia/ui';
-import { Flexbox, Icon } from '@agentasia/ui';
+import { type FlexboxProps } from '@lobehub/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';
 import { type ReactNode } from 'react';

@@ -1,4 +1,4 @@
-import { ActionIcon, Avatar, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Avatar, Flexbox } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { t } from 'i18next';
 import { XIcon } from 'lucide-react';

@@ -1,4 +1,4 @@
-import { buildTrustedClientPayload, createTrustedClientToken } from '@agentasia/market-sdk';
+import { buildTrustedClientPayload, createTrustedClientToken } from '@lobehub/market-sdk';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { generateTrustedClientToken, isSyntheticTrustedClientUserId } from './index';
@@ -10,7 +10,7 @@ vi.mock('@/envs/app', () => ({
   },
 }));
 
-vi.mock('@agentasia/market-sdk', () => ({
+vi.mock('@lobehub/market-sdk', () => ({
   buildTrustedClientPayload: vi.fn((params) => ({ ...params, nonce: 'n', timestamp: 0 })),
   createTrustedClientToken: vi.fn(() => 'signed-token'),
 }));

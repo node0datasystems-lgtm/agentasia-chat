@@ -1,4 +1,4 @@
-import { Discord, Slack, Telegram } from '@agentasia/ui/icons';
+import { Discord, Slack, Telegram } from '@lobehub/ui/icons';
 import type { ReactNode } from 'react';
 
 export type MessengerPlatform = 'telegram' | 'slack' | 'discord';

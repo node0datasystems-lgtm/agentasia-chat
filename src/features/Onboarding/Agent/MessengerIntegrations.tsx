@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, Flexbox, Popover, Skeleton, Text } from '@agentasia/ui';
-import { Discord, Slack, Telegram } from '@agentasia/ui/icons';
+import { Button, Flexbox, Popover, Skeleton, Text } from '@lobehub/ui';
+import { Discord, Slack, Telegram } from '@lobehub/ui/icons';
 import { Divider, QRCode } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';

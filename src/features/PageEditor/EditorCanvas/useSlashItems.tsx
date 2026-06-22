@@ -1,4 +1,4 @@
-import { type SlashOptions } from '@agentasia/editor';
+import { type SlashOptions } from '@lobehub/editor';
 import {
   INSERT_CHECK_LIST_COMMAND,
   INSERT_CODEMIRROR_COMMAND,
@@ -9,8 +9,8 @@ import {
   INSERT_ORDERED_LIST_COMMAND,
   INSERT_TABLE_COMMAND,
   INSERT_UNORDERED_LIST_COMMAND,
-} from '@agentasia/editor';
-import { Text } from '@agentasia/ui';
+} from '@lobehub/editor';
+import { Text } from '@lobehub/ui';
 import {
   Heading1Icon,
   Heading2Icon,

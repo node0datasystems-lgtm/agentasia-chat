@@ -1,5 +1,5 @@
 import type { PlaybackState } from '@agentasia/agent-mock';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useMemo } from 'react';
 

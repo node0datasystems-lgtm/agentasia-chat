@@ -1,7 +1,7 @@
 'use client';
 
 import { APP_WINDOW_MIN_SIZE } from '@agentasia/desktop-bridge';
-import { Flexbox, Skeleton } from '@agentasia/ui';
+import { Flexbox, Skeleton } from '@lobehub/ui';
 import { memo, Suspense, useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router';
 

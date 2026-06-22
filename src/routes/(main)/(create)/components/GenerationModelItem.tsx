@@ -2,8 +2,8 @@
 
 import { BRANDING_PROVIDER } from '@agentasia/business-const';
 import { CREDITS_PER_DOLLAR } from '@agentasia/const/currency';
-import { ModelIcon } from '@agentasia/icons';
-import { Flexbox, Popover, Text } from '@agentasia/ui';
+import { ModelIcon } from '@lobehub/icons';
+import { Flexbox, Popover, Text } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import type { AiModelForSelect } from 'model-bank';
 import numeral from 'numeral';

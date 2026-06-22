@@ -1,4 +1,4 @@
-import { Avatar, Center, Icon } from '@agentasia/ui';
+import { Avatar, Center, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { CircleUser } from 'lucide-react';
 import { memo } from 'react';

@@ -1,4 +1,4 @@
-import { CopyButton, Flexbox } from '@agentasia/ui';
+import { CopyButton, Flexbox } from '@lobehub/ui';
 import { Button } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { X } from 'lucide-react';

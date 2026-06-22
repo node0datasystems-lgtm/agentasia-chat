@@ -1,6 +1,6 @@
 'use client';
 
-import { Center } from '@agentasia/ui';
+import { Center } from '@lobehub/ui';
 import type { ComponentType } from 'react';
 import { memo } from 'react';
 

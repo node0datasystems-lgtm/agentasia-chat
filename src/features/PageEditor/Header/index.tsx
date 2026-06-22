@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Avatar, DropdownMenu, Text } from '@agentasia/ui';
+import { ActionIcon, Avatar, DropdownMenu, Text } from '@lobehub/ui';
 import { ArrowLeftIcon, MoreHorizontal } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import DragUploadZone, { useUploadFiles } from '@/components/DragUploadZone';

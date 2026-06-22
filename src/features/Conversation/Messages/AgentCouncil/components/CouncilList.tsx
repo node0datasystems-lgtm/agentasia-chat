@@ -1,7 +1,7 @@
 'use client';
 
 import { type UIChatMessage } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Fragment, memo } from 'react';

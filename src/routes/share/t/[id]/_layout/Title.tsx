@@ -1,7 +1,7 @@
 'use client';
 
 import { type AgentGroupDetail, type AgentGroupMember } from '@agentasia/types';
-import { Text } from '@agentasia/ui';
+import { Text } from '@lobehub/ui';
 import { memo, useEffect } from 'react';
 import { useParams } from 'react-router';
 import useSWR from 'swr';

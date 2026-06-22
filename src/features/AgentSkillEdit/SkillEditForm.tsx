@@ -8,9 +8,9 @@ import {
   ReactListPlugin,
   ReactMathPlugin,
   ReactTablePlugin,
-} from '@agentasia/editor';
-import { Editor, useEditor } from '@agentasia/editor/react';
-import { Form, type FormItemProps } from '@agentasia/ui';
+} from '@lobehub/editor';
+import { Editor, useEditor } from '@lobehub/editor/react';
+import { Form, type FormItemProps } from '@lobehub/ui';
 import { Form as AForm, type FormInstance, Input } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useCallback, useEffect, useRef } from 'react';

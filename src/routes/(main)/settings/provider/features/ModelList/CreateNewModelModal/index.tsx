@@ -1,7 +1,7 @@
 'use client';
 
-import type { ModalInstance } from '@agentasia/ui/base-ui';
-import { createModal } from '@agentasia/ui/base-ui';
+import type { ModalInstance } from '@lobehub/ui/base-ui';
+import { createModal } from '@lobehub/ui/base-ui';
 import type { FormInstance } from 'antd';
 import { t } from 'i18next';
 

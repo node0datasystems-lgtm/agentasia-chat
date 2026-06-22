@@ -1,7 +1,7 @@
 'use client';
 
 import { SESSION_CHAT_URL } from '@agentasia/const';
-import { Avatar, Flexbox } from '@agentasia/ui';
+import { Avatar, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowRight } from 'lucide-react';
 import { memo, useCallback } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, copyToClipboard } from '@agentasia/ui';
-import { type DropdownItem, DropdownMenu } from '@agentasia/ui/base-ui';
+import { ActionIcon, copyToClipboard } from '@lobehub/ui';
+import { type DropdownItem, DropdownMenu } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { ExternalLink, Flag, LinkIcon, MoreHorizontal } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';

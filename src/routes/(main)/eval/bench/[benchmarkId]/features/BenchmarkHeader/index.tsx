@@ -2,8 +2,8 @@
 
 import type { AgentEvalRunListItem } from '@agentasia/types';
 import { formatCost } from '@agentasia/utils';
-import { Button, Flexbox, Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Button, Flexbox, Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { Badge, Dropdown } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {

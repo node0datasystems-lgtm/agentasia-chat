@@ -1,5 +1,5 @@
 import { type ConversationContext, type UIChatMessage } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { ConversationProvider, MessageItem, useConversationStore } from '@/features/Conversation';

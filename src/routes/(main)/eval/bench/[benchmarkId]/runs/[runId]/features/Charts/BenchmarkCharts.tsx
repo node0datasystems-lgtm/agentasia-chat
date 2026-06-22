@@ -1,7 +1,7 @@
 'use client';
 
-import { BarChart } from '@agentasia/charts';
-import { Flexbox } from '@agentasia/ui';
+import { BarChart } from '@lobehub/charts';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles, useTheme } from 'antd-style';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

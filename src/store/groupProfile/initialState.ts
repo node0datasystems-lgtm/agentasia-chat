@@ -1,4 +1,4 @@
-import { type IEditor } from '@agentasia/editor';
+import { type IEditor } from '@lobehub/editor';
 
 export type SaveStatus = 'idle' | 'saving' | 'saved';
 

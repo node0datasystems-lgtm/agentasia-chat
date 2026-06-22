@@ -1,7 +1,7 @@
 'use client';
 
-import { type DraggablePanelProps } from '@agentasia/ui';
-import { DraggablePanel } from '@agentasia/ui';
+import { type DraggablePanelProps } from '@lobehub/ui';
+import { DraggablePanel } from '@lobehub/ui';
 import { createStaticStyles, useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { type PropsWithChildren } from 'react';

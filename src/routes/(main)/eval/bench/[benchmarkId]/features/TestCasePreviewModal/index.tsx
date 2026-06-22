@@ -1,6 +1,6 @@
 'use client';
 
-import { createModal, type ModalInstance } from '@agentasia/ui/base-ui';
+import { createModal, type ModalInstance } from '@lobehub/ui/base-ui';
 import { t } from 'i18next';
 
 import TestCasePreviewContent, { type TestCasePreviewContentProps } from './Content';

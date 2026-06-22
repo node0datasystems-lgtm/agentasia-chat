@@ -2,7 +2,7 @@
 
 import { isDesktop } from '@agentasia/const';
 import type { DeviceListItem } from '@agentasia/types';
-import { ActionIcon, Button, Flexbox, Icon, Input, SortableList, Tag, Text } from '@agentasia/ui';
+import { ActionIcon, Button, Flexbox, Icon, Input, SortableList, Tag, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import dayjs from 'dayjs';
 import { FolderOpenIcon, FolderPlusIcon, XIcon } from 'lucide-react';

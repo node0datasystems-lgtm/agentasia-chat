@@ -1,4 +1,4 @@
-declare module '@agentasia/ui' {
+declare module '@lobehub/ui' {
   export interface DropdownMenuProps {
     'data-no-highlight'?: boolean;
   }

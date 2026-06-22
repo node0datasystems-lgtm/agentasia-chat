@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Tabs } from '@agentasia/ui';
+import { Flexbox, Tabs } from '@lobehub/ui';
 import { useState } from 'react';
 
 import AiProviderRuntimeConfig from './AiProviderRuntimeConfig';

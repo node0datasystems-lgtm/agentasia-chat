@@ -4,7 +4,7 @@ import {
   HETEROGENEOUS_TYPE_LABELS,
   isRemoteHeterogeneousType,
 } from '@agentasia/heterogeneous-agents';
-import { Alert, Button, Flexbox } from '@agentasia/ui';
+import { Alert, Button, Flexbox } from '@lobehub/ui';
 import { memo, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router';

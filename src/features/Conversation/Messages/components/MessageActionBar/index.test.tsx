@@ -11,7 +11,7 @@ const permissionMock = vi.hoisted(() => ({
   canEdit: true,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIconGroup: ({
     items,
     menu,

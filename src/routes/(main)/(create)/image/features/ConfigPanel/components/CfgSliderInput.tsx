@@ -1,4 +1,4 @@
-import { SliderWithInput } from '@agentasia/ui';
+import { SliderWithInput } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useGenerationConfigParam } from '@/store/image/slices/generationConfig/hooks';

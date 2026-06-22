@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Icon, Text } from '@agentasia/ui';
+import { Button, Icon, Text } from '@lobehub/ui';
 import { LinkIcon, ServerIcon, Trash2Icon, UserIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -7,7 +7,7 @@ import {
 } from '@agentasia/prompts';
 import { type TracePayload } from '@agentasia/types';
 import { TraceNameMap, TraceTopicType } from '@agentasia/types';
-import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
+import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 import { type PartialDeep } from 'type-fest';
 import { type StateCreator } from 'zustand/vanilla';
 

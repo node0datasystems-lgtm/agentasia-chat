@@ -4,7 +4,7 @@ import {
   type UpdaterState,
   useWatchBroadcast,
 } from '@agentasia/electron-client-ipc';
-import { Block, Button, Flexbox, Tag } from '@agentasia/ui';
+import { Block, Button, Flexbox, Tag } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { memo, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

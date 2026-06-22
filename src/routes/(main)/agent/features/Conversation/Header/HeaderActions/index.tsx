@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, DropdownMenu } from '@agentasia/ui';
+import { ActionIcon, DropdownMenu } from '@lobehub/ui';
 import { MoreHorizontal } from 'lucide-react';
 import { memo } from 'react';
 

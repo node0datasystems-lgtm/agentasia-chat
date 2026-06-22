@@ -1,6 +1,6 @@
 'use client';
 
-import { useEditor } from '@agentasia/editor/react';
+import { useEditor } from '@lobehub/editor/react';
 import { memo } from 'react';
 
 import { EditorCanvas as SharedEditorCanvas } from '@/features/EditorCanvas';

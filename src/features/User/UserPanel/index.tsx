@@ -1,6 +1,6 @@
 'use client';
 
-import { Popover } from '@agentasia/ui';
+import { Popover } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { type PropsWithChildren } from 'react';
 import { memo, Suspense, useState } from 'react';

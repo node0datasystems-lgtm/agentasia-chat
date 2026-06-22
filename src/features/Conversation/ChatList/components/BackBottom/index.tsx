@@ -1,4 +1,4 @@
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { ArrowDownIcon } from 'lucide-react';
 import { memo } from 'react';

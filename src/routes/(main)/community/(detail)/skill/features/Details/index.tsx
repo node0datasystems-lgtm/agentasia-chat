@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Markdown } from '@agentasia/ui';
+import { Flexbox, Markdown } from '@lobehub/ui';
 import { memo, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router';
 

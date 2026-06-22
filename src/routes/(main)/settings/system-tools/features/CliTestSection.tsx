@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox, Input, Text } from '@agentasia/ui';
+import { Button, Flexbox, Input, Text } from '@lobehub/ui';
 import { memo, useCallback, useState } from 'react';
 
 import { electronSystemService } from '@/services/electron/system';

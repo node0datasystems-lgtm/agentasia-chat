@@ -1,5 +1,5 @@
-import { MCP } from '@agentasia/icons';
-import { Avatar } from '@agentasia/ui';
+import { MCP } from '@lobehub/icons';
+import { Avatar } from '@lobehub/ui';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
 

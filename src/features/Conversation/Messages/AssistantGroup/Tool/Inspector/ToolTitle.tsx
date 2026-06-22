@@ -1,5 +1,5 @@
 import { builtinToolIdentifiers } from '@agentasia/builtin-tools/identifiers';
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { ChevronRight } from 'lucide-react';

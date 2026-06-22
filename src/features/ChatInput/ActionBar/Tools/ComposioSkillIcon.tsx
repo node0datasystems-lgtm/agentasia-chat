@@ -1,5 +1,5 @@
 import { type ComposioAppType } from '@agentasia/const';
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 

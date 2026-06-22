@@ -1,4 +1,4 @@
-import { Center, Flexbox, Icon, stopPropagation } from '@agentasia/ui';
+import { Center, Flexbox, Icon, stopPropagation } from '@lobehub/ui';
 import { Input } from 'antd';
 import { FileText, FolderIcon } from 'lucide-react';
 

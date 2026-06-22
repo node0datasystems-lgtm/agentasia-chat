@@ -1,9 +1,9 @@
 'use client';
 
-import { type IconProps } from '@agentasia/ui';
-import { Block, Button, Flexbox, Icon, Text } from '@agentasia/ui';
-import { TypewriterEffect } from '@agentasia/ui/awesome';
-import { LoadingDots } from '@agentasia/ui/chat';
+import { type IconProps } from '@lobehub/ui';
+import { Block, Button, Flexbox, Icon, Text } from '@lobehub/ui';
+import { TypewriterEffect } from '@lobehub/ui/awesome';
+import { LoadingDots } from '@lobehub/ui/chat';
 import { Steps } from 'antd';
 import { cssVar } from 'antd-style';
 import { BrainIcon, HeartHandshakeIcon, PencilRulerIcon } from 'lucide-react';

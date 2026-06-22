@@ -3,7 +3,7 @@ import { ActivatorApiName, LobeActivatorIdentifier } from '@agentasia/builtin-to
 import { getBuiltinInspector } from '@agentasia/builtin-tools/inspectors';
 import type { ToolIntervention } from '@agentasia/types';
 import { safeParseJSON, safeParsePartialJSON } from '@agentasia/utils';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import SafeBoundary from '@/components/ErrorBoundary';

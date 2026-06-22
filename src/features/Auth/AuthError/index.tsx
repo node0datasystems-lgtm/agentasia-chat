@@ -2,7 +2,7 @@
 
 import { SiDiscord } from '@icons-pack/react-simple-icons';
 import { SOCIAL_URL } from '@agentasia/business-const';
-import { Button, Flexbox, Icon, Text } from '@agentasia/ui';
+import { Button, Flexbox, Icon, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

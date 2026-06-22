@@ -1,5 +1,5 @@
-import { type MarkdownProps } from '@agentasia/ui';
-import { Markdown } from '@agentasia/ui';
+import { type MarkdownProps } from '@lobehub/ui';
+import { Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useUserStore } from '@/store/user';

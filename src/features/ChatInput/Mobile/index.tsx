@@ -1,7 +1,7 @@
 'use client';
 
-import { ChatInput, ChatInputActionBar } from '@agentasia/editor/react';
-import { Flexbox } from '@agentasia/ui';
+import { ChatInput, ChatInputActionBar } from '@lobehub/editor/react';
+import { Flexbox } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { memo } from 'react';
 

@@ -1,4 +1,4 @@
-import { useLexicalComposerContext } from '@agentasia/editor';
+import { useLexicalComposerContext } from '@lobehub/editor';
 import { type FC, useLayoutEffect } from 'react';
 
 import ReferTopic from './ReferTopic';

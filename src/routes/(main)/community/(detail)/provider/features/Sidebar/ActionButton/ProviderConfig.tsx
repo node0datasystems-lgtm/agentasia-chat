@@ -1,7 +1,7 @@
 'use client';
 
 import { isDesktop } from '@agentasia/const';
-import { Button, Icon } from '@agentasia/ui';
+import { Button, Icon } from '@lobehub/ui';
 import { Dropdown } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDownIcon, SquareArrowOutUpRight } from 'lucide-react';

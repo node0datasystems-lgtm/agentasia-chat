@@ -1,5 +1,5 @@
-import { ActionIcon, EditableText, SortableList } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, EditableText, SortableList } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { PencilLine, Trash } from 'lucide-react';

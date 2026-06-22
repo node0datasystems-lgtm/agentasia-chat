@@ -4,8 +4,8 @@ import {
   REMOTE_HETEROGENEOUS_AGENT_CONFIGS,
   type RemoteHeterogeneousAgentType,
 } from '@agentasia/heterogeneous-agents';
-import { Button, Flexbox, Icon } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { Button, Flexbox, Icon } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { Alert, Input, Modal, Steps, Tag, Typography } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {

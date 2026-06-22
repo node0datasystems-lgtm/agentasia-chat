@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Block, Flexbox, Icon, Text } from '@agentasia/ui';
+import { ActionIcon, Block, Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import dayjs from 'dayjs';
 import { ArchiveIcon, BellIcon, ImageIcon, VideoIcon } from 'lucide-react';

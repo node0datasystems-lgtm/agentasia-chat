@@ -1,7 +1,7 @@
 import { LOADING_FLAT } from '@agentasia/const';
 import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
 import { type ModelPerformance, type ModelUsage } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useUserStore } from '@/store/user';

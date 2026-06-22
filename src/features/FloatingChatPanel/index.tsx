@@ -1,8 +1,8 @@
 'use client';
 
 import { type UIChatMessage } from '@agentasia/types';
-import { ActionIcon } from '@agentasia/ui';
-import { FloatingSheet, type FloatingSheetProps } from '@agentasia/ui/base-ui';
+import { ActionIcon } from '@lobehub/ui';
+import { FloatingSheet, type FloatingSheetProps } from '@lobehub/ui/base-ui';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDown } from 'lucide-react';
 import type { ReactNode } from 'react';

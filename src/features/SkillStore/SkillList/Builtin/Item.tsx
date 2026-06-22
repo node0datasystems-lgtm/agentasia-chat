@@ -8,8 +8,8 @@ import {
   Flexbox,
   Icon,
   stopPropagation,
-} from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+} from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { MoreVerticalIcon, Plus, Trash2 } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

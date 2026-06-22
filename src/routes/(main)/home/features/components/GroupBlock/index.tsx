@@ -1,5 +1,5 @@
-import { type FlexboxProps, type IconProps } from '@agentasia/ui';
-import { Flexbox, Icon, Text } from '@agentasia/ui';
+import { type FlexboxProps, type IconProps } from '@lobehub/ui';
+import { Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { type ReactNode } from 'react';
 import { memo, Suspense, useState } from 'react';

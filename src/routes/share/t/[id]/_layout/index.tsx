@@ -1,6 +1,6 @@
 'use client';
 
-import { Center, Flexbox } from '@agentasia/ui';
+import { Center, Flexbox } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import NextLink from 'next/link';
 import { type PropsWithChildren } from 'react';

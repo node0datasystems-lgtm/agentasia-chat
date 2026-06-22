@@ -1,5 +1,5 @@
-import { type IconProps } from '@agentasia/ui';
-import { Flexbox, Icon } from '@agentasia/ui';
+import { type IconProps } from '@lobehub/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { ChevronRight } from 'lucide-react';
 import { type ReactNode } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { Activity, CheckCircle2, Clock, Hourglass, Pause, XCircle } from 'lucide-react';
 import { memo } from 'react';

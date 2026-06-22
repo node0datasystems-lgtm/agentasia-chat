@@ -1,4 +1,4 @@
-import { Modal } from '@agentasia/ui/base-ui';
+import { Modal } from '@lobehub/ui/base-ui';
 import { App, Input } from 'antd';
 import { ChevronDownIcon, ChevronRightIcon } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';

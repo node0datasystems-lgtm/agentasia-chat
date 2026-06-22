@@ -1,8 +1,8 @@
 'use client';
 
 import type { SkillResourceTreeNode } from '@agentasia/types';
-import type { MenuProps } from '@agentasia/ui';
-import { ContextMenuTrigger, Icon } from '@agentasia/ui';
+import type { MenuProps } from '@lobehub/ui';
+import { ContextMenuTrigger, Icon } from '@lobehub/ui';
 import { Input, type InputRef } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDown, ChevronRight, File, FolderIcon, FolderOpenIcon } from 'lucide-react';

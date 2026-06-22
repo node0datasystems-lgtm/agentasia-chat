@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, MaterialFileTypeIcon, Text } from '@agentasia/ui';
+import { Flexbox, Icon, MaterialFileTypeIcon, Text } from '@lobehub/ui';
 import { type GetProps, Tree } from 'antd';
 import type { DataNode } from 'antd/es/tree';
 import { createStaticStyles } from 'antd-style';

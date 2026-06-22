@@ -1,4 +1,4 @@
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import dayjs from 'dayjs';
 import { ChevronRight } from 'lucide-react';

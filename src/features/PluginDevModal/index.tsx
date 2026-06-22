@@ -1,7 +1,7 @@
 import { isDesktop } from '@agentasia/const';
 import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
 import { type LobeToolCustomPlugin } from '@agentasia/types';
-import { Button, Drawer, Flexbox } from '@agentasia/ui';
+import { Button, Drawer, Flexbox } from '@lobehub/ui';
 import { App, Form, Popconfirm } from 'antd';
 import { useResponsive } from 'antd-style';
 import { memo, useEffect, useRef, useState } from 'react';

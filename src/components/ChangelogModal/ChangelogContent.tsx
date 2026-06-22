@@ -1,5 +1,5 @@
-import { Typography } from '@agentasia/ui';
-import { Image } from '@agentasia/ui/mdx';
+import { Typography } from '@lobehub/ui';
+import { Image } from '@lobehub/ui/mdx';
 import { Divider } from 'antd';
 import { Fragment, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import { Flexbox, Text, Tooltip } from '@agentasia/ui';
+import { Flexbox, Text, Tooltip } from '@lobehub/ui';
 import { type ProgressProps } from 'antd';
 import { Progress } from 'antd';
 import { cssVar } from 'antd-style';

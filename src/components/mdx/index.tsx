@@ -1,6 +1,6 @@
-import { type TypographyProps } from '@agentasia/ui';
-import { Typography as Typo } from '@agentasia/ui';
-import { mdxComponents } from '@agentasia/ui/mdx';
+import { type TypographyProps } from '@lobehub/ui';
+import { Typography as Typo } from '@lobehub/ui';
+import { mdxComponents } from '@lobehub/ui/mdx';
 import { type FC } from 'react';
 import Markdown, { type Components, type Options } from 'react-markdown';
 import remarkGfm from 'remark-gfm';

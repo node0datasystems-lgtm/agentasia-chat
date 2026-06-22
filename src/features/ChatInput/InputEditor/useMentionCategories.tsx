@@ -1,5 +1,5 @@
-import { Avatar, Icon } from '@agentasia/ui';
-import { SkillsIcon } from '@agentasia/ui/icons';
+import { Avatar, Icon } from '@lobehub/ui';
+import { SkillsIcon } from '@lobehub/ui/icons';
 import { Bot, MessageSquareText, Users, Wrench } from 'lucide-react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

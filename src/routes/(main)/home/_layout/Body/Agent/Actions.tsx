@@ -1,5 +1,5 @@
-import type { MenuProps } from '@agentasia/ui';
-import { ActionIcon, DropdownMenu, Flexbox } from '@agentasia/ui';
+import type { MenuProps } from '@lobehub/ui';
+import { ActionIcon, DropdownMenu, Flexbox } from '@lobehub/ui';
 import { MoreHorizontalIcon, PlusIcon } from 'lucide-react';
 import { memo } from 'react';
 

@@ -5,7 +5,7 @@ import { setAgentTemplatesFetcher } from '@agentasia/builtin-tool-web-onboarding
 import { SESSION_CHAT_TOPIC_URL } from '@agentasia/const';
 import type { SendMessageParams } from '@agentasia/types';
 import { RequestTrigger } from '@agentasia/types';
-import { Button, ErrorBoundary, Flexbox } from '@agentasia/ui';
+import { Button, ErrorBoundary, Flexbox } from '@lobehub/ui';
 import { Drawer } from 'antd';
 import { History } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';

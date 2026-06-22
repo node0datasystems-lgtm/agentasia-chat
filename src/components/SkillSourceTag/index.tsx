@@ -1,5 +1,5 @@
 import { type SkillSource } from '@agentasia/types';
-import { Icon, Tag } from '@agentasia/ui';
+import { Icon, Tag } from '@lobehub/ui';
 import { BadgeCheck, CircleUser, Package } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

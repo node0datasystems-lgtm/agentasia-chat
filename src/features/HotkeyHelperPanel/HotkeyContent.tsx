@@ -1,4 +1,4 @@
-import { Flexbox, Hotkey } from '@agentasia/ui';
+import { Flexbox, Hotkey } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';

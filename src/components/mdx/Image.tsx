@@ -1,6 +1,6 @@
 'use server';
 
-import { Image } from '@agentasia/ui/mdx';
+import { Image } from '@lobehub/ui/mdx';
 import { getPlaiceholder } from 'plaiceholder';
 import { type FC } from 'react';
 

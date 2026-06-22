@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Center, Icon, Text } from '@agentasia/ui';
+import { Block, Center, Icon, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { VideoOffIcon } from 'lucide-react';
 import { memo, useMemo } from 'react';

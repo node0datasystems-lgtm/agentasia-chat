@@ -1,6 +1,6 @@
 import { type ChatContextContent } from '@agentasia/types';
 import { COMPRESSIBLE_IMAGE_TYPES, compressImageFile } from '@agentasia/utils/compressImage';
-import { toast } from '@agentasia/ui/base-ui';
+import { toast } from '@lobehub/ui/base-ui';
 import { Buffer } from 'buffer.js';
 import { t } from 'i18next';
 

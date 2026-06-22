@@ -1,8 +1,8 @@
 'use client';
 
 import { HotkeyEnum } from '@agentasia/const/hotkeys';
-import { type ActionIconProps } from '@agentasia/ui';
-import { ActionIcon } from '@agentasia/ui';
+import { type ActionIconProps } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { PanelRightClose, PanelRightOpen } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { memo } from 'react';

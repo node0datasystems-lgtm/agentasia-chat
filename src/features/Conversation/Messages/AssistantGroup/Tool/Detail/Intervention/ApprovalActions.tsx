@@ -1,4 +1,4 @@
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { Checkbox } from 'antd';
 import { createStaticStyles, cx } from 'antd-style';
 import { CornerDownLeft } from 'lucide-react';

@@ -7,7 +7,7 @@ import {
   isRemoteHeterogeneousType,
 } from '@agentasia/heterogeneous-agents/client';
 import type { HeterogeneousProviderConfig } from '@agentasia/types';
-import { ActionIcon, CopyButton, Flexbox, Icon, Input, Tag, Text, Tooltip } from '@agentasia/ui';
+import { ActionIcon, CopyButton, Flexbox, Icon, Input, Tag, Text, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Loader2Icon, PencilLine, RefreshCw, XCircle } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';

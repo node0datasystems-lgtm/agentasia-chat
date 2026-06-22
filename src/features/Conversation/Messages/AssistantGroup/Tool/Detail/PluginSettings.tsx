@@ -1,5 +1,5 @@
 import { type ChatPluginPayload } from '@agentasia/types';
-import { Avatar, Button, Center, Flexbox } from '@agentasia/ui';
+import { Avatar, Button, Center, Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';

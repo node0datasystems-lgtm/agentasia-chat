@@ -12,7 +12,7 @@ const mocks = vi.hoisted(() => ({
   params: {} as { aid?: string },
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Text: ({ children }: { children: ReactNode }) => <span>{children}</span>,
 }));
 

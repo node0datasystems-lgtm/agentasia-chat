@@ -20,11 +20,11 @@ const openDocumentMock = vi.hoisted(() => vi.fn());
 const removeDocumentMock = vi.hoisted(() => vi.fn());
 const useParamsMock = vi.hoisted(() => vi.fn());
 
-vi.mock('@agentasia/ui/base-ui', () => ({
+vi.mock('@lobehub/ui/base-ui', () => ({
   confirmModal: modalConfirm,
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Accordion: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   AccordionItem: ({ children, title }: { children?: ReactNode; title?: ReactNode }) => (
     <div>

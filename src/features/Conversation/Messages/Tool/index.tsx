@@ -1,5 +1,5 @@
 import { type UIChatMessage } from '@agentasia/types';
-import { Alert, Button, Flexbox } from '@agentasia/ui';
+import { Alert, Button, Flexbox } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -2,7 +2,7 @@
 
 import 'antd/dist/reset.css';
 
-import { ConfigProvider, ThemeProvider } from '@agentasia/ui';
+import { ConfigProvider, ThemeProvider } from '@lobehub/ui';
 import { App } from 'antd';
 import * as m from 'motion/react-m';
 import { type PropsWithChildren } from 'react';

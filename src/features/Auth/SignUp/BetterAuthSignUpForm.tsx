@@ -1,7 +1,7 @@
 'use client';
 
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { Button, Icon, Text } from '@agentasia/ui';
+import { Button, Icon, Text } from '@lobehub/ui';
 import { Form, Input, type InputRef } from 'antd';
 import { Lock, Mail } from 'lucide-react';
 import { useEffect, useRef } from 'react';

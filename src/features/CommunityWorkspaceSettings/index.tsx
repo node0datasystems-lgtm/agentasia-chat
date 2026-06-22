@@ -14,7 +14,7 @@ import {
   Text,
   TextArea,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import type { TableColumnsType, UploadProps } from 'antd';
 import { App, Input as AntInput, Table, Upload } from 'antd';
 import { createStaticStyles, cssVar } from 'antd-style';

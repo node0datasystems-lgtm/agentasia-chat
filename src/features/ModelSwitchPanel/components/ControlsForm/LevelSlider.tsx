@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Slider } from 'antd';
 import type { SliderSingleProps } from 'antd/es/slider';
 import { createStaticStyles, cx } from 'antd-style';

@@ -1,5 +1,5 @@
-import { BarList } from '@agentasia/charts';
-import { ActionIcon, Icon, Modal } from '@agentasia/ui';
+import { BarList } from '@lobehub/charts';
+import { ActionIcon, Icon, Modal } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { MaximizeIcon, MessageSquareIcon } from 'lucide-react';
 import qs from 'query-string';

@@ -1,4 +1,4 @@
-import { Collapse } from '@agentasia/ui';
+import { Collapse } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

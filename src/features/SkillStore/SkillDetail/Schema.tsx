@@ -1,7 +1,7 @@
 'use client';
 
 import { type SkillItem } from '@agentasia/types';
-import { Flexbox, Segmented, Skeleton, Tag } from '@agentasia/ui';
+import { Flexbox, Segmented, Skeleton, Tag } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

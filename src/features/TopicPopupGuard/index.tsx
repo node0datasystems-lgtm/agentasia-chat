@@ -1,7 +1,7 @@
 'use client';
 
 import { type TopicPopupInfo } from '@agentasia/electron-client-ipc';
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ExternalLinkIcon } from 'lucide-react';
 import { memo } from 'react';

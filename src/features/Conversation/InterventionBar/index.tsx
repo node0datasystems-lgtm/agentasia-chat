@@ -1,4 +1,4 @@
-import { ChatInput } from '@agentasia/editor/react';
+import { ChatInput } from '@lobehub/editor/react';
 import { memo, useCallback, useMemo, useState } from 'react';
 
 import { type PendingIntervention } from '../store/slices/data/pendingInterventions';

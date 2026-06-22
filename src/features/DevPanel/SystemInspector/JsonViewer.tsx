@@ -1,4 +1,4 @@
-import { Flexbox, Highlighter } from '@agentasia/ui';
+import { Flexbox, Highlighter } from '@lobehub/ui';
 import { memo } from 'react';
 
 interface JsonViewerProps {

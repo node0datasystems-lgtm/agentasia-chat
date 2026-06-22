@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Button, DropdownMenu, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Button, DropdownMenu, Flexbox } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { useTheme } from 'antd-style';
 import { MoreHorizontalIcon, PlayIcon, Settings2Icon } from 'lucide-react';

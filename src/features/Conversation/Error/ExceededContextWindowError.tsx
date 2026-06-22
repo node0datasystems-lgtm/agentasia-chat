@@ -1,4 +1,4 @@
-import { Icon } from '@agentasia/ui';
+import { Icon } from '@lobehub/ui';
 import { Button } from 'antd';
 import { Minimize2 } from 'lucide-react';
 import { memo, useCallback } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
 import { type ConversationContext } from '@agentasia/types';
-import { type ModalInstance } from '@agentasia/ui/base-ui';
+import { type ModalInstance } from '@lobehub/ui/base-ui';
 import { useCallback, useEffect, useRef } from 'react';
 
 import { openShareModal as createShareModal } from './Modal';

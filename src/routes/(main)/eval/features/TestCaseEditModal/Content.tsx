@@ -1,7 +1,7 @@
 'use client';
 
-import { Accordion, AccordionItem, Flexbox, Text } from '@agentasia/ui';
-import { Select, useModalContext } from '@agentasia/ui/base-ui';
+import { Accordion, AccordionItem, Flexbox, Text } from '@lobehub/ui';
+import { Select, useModalContext } from '@lobehub/ui/base-ui';
 import { App, Form, Input } from 'antd';
 import { type FC, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

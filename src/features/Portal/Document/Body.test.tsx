@@ -22,7 +22,7 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: () => null,
   Button: ({ children }: { children: ReactNode }) => <button>{children}</button>,
   Flexbox: ({ children }: { children: ReactNode }) => <div>{children}</div>,

@@ -1,4 +1,4 @@
-import { type PluginItem } from '@agentasia/market-sdk';
+import { type PluginItem } from '@lobehub/market-sdk';
 import { describe, expect, it } from 'vitest';
 
 import { MCPInstallStep } from '@/types/plugins';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Flexbox, Markdown, Text } from '@agentasia/ui';
+import { Avatar, Flexbox, Markdown, Text } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

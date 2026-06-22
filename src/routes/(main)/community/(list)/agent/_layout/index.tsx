@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { Outlet } from 'react-router';
 
 import CategoryContainer from '../../../components/CategoryContainer';

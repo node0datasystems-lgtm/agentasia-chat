@@ -1,4 +1,4 @@
-import { Flexbox, Icon, Modal } from '@agentasia/ui';
+import { Flexbox, Icon, Modal } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';
 import { type ReactNode } from 'react';

@@ -1,4 +1,4 @@
-import { Avatar, Block, Flexbox, Icon, Tag, Text } from '@agentasia/ui';
+import { Avatar, Block, Flexbox, Icon, Tag, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ClockIcon } from 'lucide-react';
 import qs from 'query-string';

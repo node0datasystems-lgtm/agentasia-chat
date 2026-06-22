@@ -1,4 +1,4 @@
-import { en, zhCn } from '@agentasia/ui/es/i18n/resources/index';
+import { en, zhCn } from '@lobehub/ui/es/i18n/resources/index';
 
 import type { UILocaleResourceInput, UILocaleResources } from './getUILocaleAndResources.utils';
 import {
@@ -39,7 +39,7 @@ export const getUILocaleAndResources = async (
 
   if (!resources)
     throw new Error(
-      `Failed to load UI resources (business + @agentasia/ui builtin) for locale=${normalizedLocale}`,
+      `Failed to load UI resources (business + @lobehub/ui builtin) for locale=${normalizedLocale}`,
     );
 
   return {

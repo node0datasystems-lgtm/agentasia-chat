@@ -1,4 +1,4 @@
-import { Flexbox, SearchBar } from '@agentasia/ui';
+import { Flexbox, SearchBar } from '@lobehub/ui';
 import { memo } from 'react';
 
 import { useFileStore } from '@/store/file';

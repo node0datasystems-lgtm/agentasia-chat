@@ -1,8 +1,8 @@
 'use client';
 
 import { HotkeyEnum, KeyEnum } from '@agentasia/const/hotkeys';
-import { type MenuProps } from '@agentasia/ui';
-import { Flexbox, Hotkey, Icon } from '@agentasia/ui';
+import { type MenuProps } from '@lobehub/ui';
+import { Flexbox, Hotkey, Icon } from '@lobehub/ui';
 import { BotMessageSquare, LucideCheck, MessageSquarePlus } from 'lucide-react';
 import { useCallback, useMemo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';

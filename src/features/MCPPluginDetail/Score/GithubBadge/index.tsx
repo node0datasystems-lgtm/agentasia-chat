@@ -1,4 +1,4 @@
-import { Markdown, Select, Snippet, Tag } from '@agentasia/ui';
+import { Markdown, Select, Snippet, Tag } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo, useState } from 'react';

@@ -17,7 +17,7 @@ vi.mock('@lobechat/electron-client-ipc', () => ({
   useWatchBroadcast: vi.fn(),
 }));
 
-vi.mock('@agentasia/ui', () => {
+vi.mock('@lobehub/ui', () => {
   const Button = ({
     children,
     disabled,

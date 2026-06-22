@@ -1,4 +1,4 @@
-import { Icon, Tag } from '@agentasia/ui';
+import { Icon, Tag } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { BadgeCheck, CircleUser, Package } from 'lucide-react';
 import { memo } from 'react';

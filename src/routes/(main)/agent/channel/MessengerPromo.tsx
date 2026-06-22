@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon } from '@agentasia/ui';
-import { Discord, Slack, Telegram } from '@agentasia/ui/icons';
+import { ActionIcon } from '@lobehub/ui';
+import { Discord, Slack, Telegram } from '@lobehub/ui/icons';
 import { createStaticStyles } from 'antd-style';
 import { X } from 'lucide-react';
 import React, { memo, useCallback } from 'react';

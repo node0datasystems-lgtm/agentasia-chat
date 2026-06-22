@@ -1,7 +1,7 @@
 'use client';
 
-import { Flexbox, Icon } from '@agentasia/ui';
-import { createModal, type ModalInstance } from '@agentasia/ui/base-ui';
+import { Flexbox, Icon } from '@lobehub/ui';
+import { createModal, type ModalInstance } from '@lobehub/ui/base-ui';
 import { t } from 'i18next';
 import { BrainIcon } from 'lucide-react';
 

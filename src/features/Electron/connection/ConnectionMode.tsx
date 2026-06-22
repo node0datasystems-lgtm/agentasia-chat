@@ -1,7 +1,7 @@
 import { type StorageMode } from '@agentasia/electron-client-ipc';
 import { StorageModeEnum } from '@agentasia/electron-client-ipc';
-import { Button, Center, Flexbox, Input, stopPropagation } from '@agentasia/ui';
-import { AgentAsia } from '@agentasia/ui/brand';
+import { Button, Center, Flexbox, Input, stopPropagation } from '@lobehub/ui';
+import { AgentAsia } from '@lobehub/ui/brand';
 import { createStaticStyles } from 'antd-style';
 import { Server } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

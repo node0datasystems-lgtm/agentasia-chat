@@ -1,7 +1,7 @@
 import type { ChatTopicStatus } from '@agentasia/types';
-import { type MenuProps } from '@agentasia/ui';
-import { Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { type MenuProps } from '@lobehub/ui';
+import { Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import {
   CheckCircle2,

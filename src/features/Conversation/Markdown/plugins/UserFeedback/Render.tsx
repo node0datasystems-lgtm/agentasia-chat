@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { MessageSquareText } from 'lucide-react';
 import { memo, useMemo } from 'react';
@@ -42,7 +42,7 @@ const styles = createStaticStyles(({ css, cssVar }) => ({
     color: ${cssVar.colorTextSecondary};
   `,
   root: css`
-    /* Override @agentasia/ui Markdown's default <details> card chrome (bg + padding + box-shadow).
+    /* Override @lobehub/ui Markdown's default <details> card chrome (bg + padding + box-shadow).
        Need !important because the lib targets via .parent details (higher specificity).
        padding-bottom puts a 12px gap above the divider; margin-bottom puts a 12px gap below it,
        matching the symmetric 12px the task card uses around its own internal divider. */

@@ -1,7 +1,7 @@
 'use client';
 
 import { type FileUploadState } from '@agentasia/types';
-import { Center, Flexbox, Icon, Tag } from '@agentasia/ui';
+import { Center, Flexbox, Icon, Tag } from '@lobehub/ui';
 import { Divider, Progress, Upload } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { CloudUpload, ImportIcon } from 'lucide-react';

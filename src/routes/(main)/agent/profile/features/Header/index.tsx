@@ -1,6 +1,6 @@
 import { isDesktop } from '@agentasia/const';
-import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, DropdownMenu, Flexbox, Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import isEqual from 'fast-deep-equal';
 import type { TFunction } from 'i18next';
 import { BotMessageSquareIcon, Download, MoreHorizontal, Settings2Icon, Trash } from 'lucide-react';

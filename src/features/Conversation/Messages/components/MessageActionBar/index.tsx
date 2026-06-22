@@ -1,5 +1,5 @@
-import type { ActionIconGroupEvent, ActionIconGroupItemType } from '@agentasia/ui';
-import { ActionIconGroup } from '@agentasia/ui';
+import type { ActionIconGroupEvent, ActionIconGroupItemType } from '@lobehub/ui';
+import { ActionIconGroup } from '@lobehub/ui';
 import { memo, useCallback, useMemo } from 'react';
 
 import { usePermission } from '@/hooks/usePermission';

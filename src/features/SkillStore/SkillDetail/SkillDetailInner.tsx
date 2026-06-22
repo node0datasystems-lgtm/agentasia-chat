@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Skeleton } from '@agentasia/ui';
+import { Flexbox, Skeleton } from '@lobehub/ui';
 import { lazy, memo, Suspense, useState } from 'react';
 
 import Agents from './Agents';

@@ -2,7 +2,7 @@
 
 import type { EvalRunMetrics } from '@agentasia/types';
 import { formatCost, formatShortenNumber } from '@agentasia/utils';
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { CheckCircle2, Clock, DollarSign, Hash } from 'lucide-react';
 import { memo } from 'react';

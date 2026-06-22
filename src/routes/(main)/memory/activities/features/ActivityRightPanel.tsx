@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Tag, Text } from '@lobehub/ui';
 import dayjs from 'dayjs';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -12,7 +12,7 @@ const continueGenerationMock = vi.fn();
 const deleteDBMessageMock = vi.fn();
 const navigateMock = vi.fn();
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Block: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Flexbox: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   Highlighter: ({ children }: { children?: ReactNode }) => <pre>{children}</pre>,

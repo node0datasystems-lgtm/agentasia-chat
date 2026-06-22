@@ -1,7 +1,7 @@
 'use client';
 
 // Highlighter is intentionally avoided: it pulls every shiki grammar (~10 MB) into the auth bundle
-import { Block, Button, Flexbox, FluentEmoji, Text } from '@agentasia/ui';
+import { Block, Button, Flexbox, FluentEmoji, Text } from '@lobehub/ui';
 import { Result } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router';

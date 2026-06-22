@@ -1,6 +1,6 @@
 import { GROUP_CHAT_URL } from '@agentasia/const';
 import { type SidebarAgentItem } from '@agentasia/types';
-import { ActionIcon, Icon } from '@agentasia/ui';
+import { ActionIcon, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Loader2, PinIcon } from 'lucide-react';
 import { type CSSProperties, type DragEvent } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { ModalFooter, useModalContext } from '@agentasia/ui/base-ui';
+import { ModalFooter, useModalContext } from '@lobehub/ui/base-ui';
 import { Button, Dropdown, Space } from 'antd';
 import { ChevronDown } from 'lucide-react';
 import { type FC } from 'react';

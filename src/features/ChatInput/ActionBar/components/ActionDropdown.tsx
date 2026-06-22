@@ -8,7 +8,7 @@ import {
   type MenuItemType,
   type MenuProps,
   type PopoverTrigger,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import {
   DropdownMenuPopup,
   DropdownMenuPortal,
@@ -16,7 +16,7 @@ import {
   DropdownMenuRoot,
   DropdownMenuTrigger,
   renderDropdownMenuItems,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { createGlobalStyle, createStaticStyles, cssVar, cx } from 'antd-style';
 import { type CSSProperties, type ReactNode } from 'react';
 import {

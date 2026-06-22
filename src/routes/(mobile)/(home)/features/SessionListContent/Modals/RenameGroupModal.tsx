@@ -1,5 +1,5 @@
-import { type ModalProps } from '@agentasia/ui';
-import { Input, Modal } from '@agentasia/ui';
+import { type ModalProps } from '@lobehub/ui';
+import { Input, Modal } from '@lobehub/ui';
 import { App } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';

@@ -9,7 +9,7 @@ import {
   Text,
   Tooltip,
   TooltipGroup,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { ExternalLink, Globe, Settings } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';

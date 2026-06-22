@@ -1,5 +1,5 @@
-import { Aws } from '@agentasia/icons';
-import { Button, Icon, InputPassword, Select } from '@agentasia/ui';
+import { Aws } from '@lobehub/icons';
+import { Button, Icon, InputPassword, Select } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { Network, ShieldPlus } from 'lucide-react';
 import { ModelProvider } from 'model-bank';

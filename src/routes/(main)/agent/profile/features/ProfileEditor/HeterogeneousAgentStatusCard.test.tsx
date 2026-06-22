@@ -32,7 +32,7 @@ vi.mock('@lobechat/heterogeneous-agents/client', () => ({
     ['openclaw', 'hermes', 'amp', 'opencode'].includes(type),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ActionIcon: ({
     'aria-label': ariaLabel,
     className,

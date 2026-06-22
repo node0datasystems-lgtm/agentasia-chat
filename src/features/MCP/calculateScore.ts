@@ -1,4 +1,4 @@
-import { type DeploymentOption } from '@agentasia/market-types';
+import { type DeploymentOption } from '@lobehub/market-types';
 
 import { type DiscoverMcpDetail } from '@/types/discover';
 

@@ -1,7 +1,7 @@
 'use client';
 
-import { type BlockProps, type GenericItemType, type IconProps } from '@agentasia/ui';
-import { Block, Center, ContextMenuTrigger, Flexbox, Icon, Text } from '@agentasia/ui';
+import { type BlockProps, type GenericItemType, type IconProps } from '@lobehub/ui';
+import { Block, Center, ContextMenuTrigger, Flexbox, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { type ReactNode } from 'react';
 import { memo } from 'react';

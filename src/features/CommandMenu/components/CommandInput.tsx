@@ -1,5 +1,5 @@
 import { DEFAULT_AVATAR } from '@agentasia/const';
-import { Avatar, Tag } from '@agentasia/ui';
+import { Avatar, Tag } from '@lobehub/ui';
 import { Command } from 'cmdk';
 import { ArrowLeft, X } from 'lucide-react';
 import { memo } from 'react';

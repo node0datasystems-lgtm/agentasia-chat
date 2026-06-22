@@ -1,6 +1,6 @@
 'use client';
 
-import { type ICodeMirrorInstance, loadCodeMirror, lobeTheme } from '@agentasia/editor/codemirror';
+import { type ICodeMirrorInstance, loadCodeMirror, lobeTheme } from '@lobehub/editor/codemirror';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { type CSSProperties, memo, useEffect, useRef } from 'react';
 

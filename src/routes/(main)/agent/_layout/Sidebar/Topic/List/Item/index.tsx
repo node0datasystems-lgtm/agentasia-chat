@@ -1,6 +1,6 @@
 import type { ChatTopicMetadata, ChatTopicStatus } from '@agentasia/types';
 import { formatElapsedClockTime } from '@agentasia/utils';
-import { Flexbox, Icon, Skeleton, Tag, Text, Tooltip } from '@agentasia/ui';
+import { Flexbox, Icon, Skeleton, Tag, Text, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar, keyframes, useTheme } from 'antd-style';
 import { CheckCircle2, Hand, HashIcon, MessageSquareDashed, TriangleAlert } from 'lucide-react';
 import { memo, Suspense, useCallback, useEffect, useMemo, useState } from 'react';

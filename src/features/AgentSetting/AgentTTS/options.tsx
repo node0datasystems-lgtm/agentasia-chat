@@ -1,5 +1,5 @@
-import { Azure, OpenAI } from '@agentasia/icons';
-import { type SelectProps } from '@agentasia/ui';
+import { Azure, OpenAI } from '@lobehub/icons';
+import { type SelectProps } from '@lobehub/ui';
 
 import { LabelRenderer } from '@/components/ModelSelect';
 

@@ -1,7 +1,7 @@
 'use client';
 
-import { ProviderIcon } from '@agentasia/icons';
-import { ActionIcon, Block, Flexbox, Icon, Tooltip, TooltipGroup } from '@agentasia/ui';
+import { ProviderIcon } from '@lobehub/icons';
+import { ActionIcon, Block, Flexbox, Icon, Tooltip, TooltipGroup } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { BadgeCheck, BookIcon, ChevronRightIcon, KeyIcon } from 'lucide-react';
 import { memo } from 'react';

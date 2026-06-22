@@ -1,5 +1,5 @@
-import { type ItemType } from '@agentasia/ui';
-import { Flexbox, Icon, SearchBar, stopPropagation } from '@agentasia/ui';
+import { type ItemType } from '@lobehub/ui';
+import { Flexbox, Icon, SearchBar, stopPropagation } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ChevronRight, ExternalLink, Settings, Store } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

@@ -1,5 +1,5 @@
-import { type DivProps } from '@agentasia/ui';
-import { Flexbox, Grid } from '@agentasia/ui';
+import { type DivProps } from '@lobehub/ui';
+import { Flexbox, Grid } from '@lobehub/ui';
 import { memo } from 'react';
 import { type VirtuosoGridProps } from 'react-virtuoso';
 import { VirtuosoGrid } from 'react-virtuoso';

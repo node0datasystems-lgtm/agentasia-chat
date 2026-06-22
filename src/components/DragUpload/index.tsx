@@ -1,5 +1,5 @@
  
-import { Center, Flexbox, Icon } from '@agentasia/ui';
+import { Center, Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { FileImage, FileText, FileUpIcon } from 'lucide-react';
 import { memo } from 'react';

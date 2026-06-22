@@ -4,8 +4,8 @@ import { SiApple, SiLinux } from '@icons-pack/react-simple-icons';
 import { isDesktop } from '@agentasia/const';
 import { isRemoteHeterogeneousType } from '@agentasia/heterogeneous-agents';
 import type { DeviceExecutionTarget } from '@agentasia/types';
-import { Microsoft } from '@agentasia/icons';
-import { Flexbox, Icon, Popover, Tooltip } from '@agentasia/ui';
+import { Microsoft } from '@lobehub/icons';
+import { Flexbox, Icon, Popover, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import {
   BoxIcon,

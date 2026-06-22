@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useMemo } from 'react';
 
 import MarkdownMessage from '@/features/Conversation/Markdown';

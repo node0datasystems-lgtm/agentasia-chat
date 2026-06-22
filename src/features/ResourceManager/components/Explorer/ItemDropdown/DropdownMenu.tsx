@@ -1,4 +1,4 @@
-import { ActionIcon, DropdownMenu as DropdownMenuUI } from '@agentasia/ui';
+import { ActionIcon, DropdownMenu as DropdownMenuUI } from '@lobehub/ui';
 import { type ItemType } from 'antd/es/menu/interface';
 import { MoreHorizontalIcon } from 'lucide-react';
 import { memo } from 'react';

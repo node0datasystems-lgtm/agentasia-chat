@@ -12,7 +12,7 @@ import Group from './Group';
 let mockIsCollapsed = false;
 let mockIsGenerating = false;
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Flexbox: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
 }));
 

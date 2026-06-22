@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Tag, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import dayjs from 'dayjs';
 import { memo, useCallback, useMemo } from 'react';

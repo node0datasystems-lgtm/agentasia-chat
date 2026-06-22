@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon } from '@agentasia/ui';
+import { Flexbox, Icon } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { AlertTriangle, ArrowRight, CheckCircle2, XCircle } from 'lucide-react';
 import { memo } from 'react';

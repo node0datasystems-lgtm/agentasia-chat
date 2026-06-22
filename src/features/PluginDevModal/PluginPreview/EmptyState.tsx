@@ -1,4 +1,4 @@
-import { Icon, Text } from '@agentasia/ui';
+import { Icon, Text } from '@lobehub/ui';
 import { Space } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { Puzzle } from 'lucide-react';

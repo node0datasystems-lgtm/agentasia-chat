@@ -1,5 +1,5 @@
 import { type SidebarGroup } from '@agentasia/types';
-import { Accordion } from '@agentasia/ui';
+import { Accordion } from '@lobehub/ui';
 import React, { memo } from 'react';
 
 import { useGlobalStore } from '@/store/global';

@@ -1,9 +1,9 @@
-import type { IEditor } from '@agentasia/editor';
+import type { IEditor } from '@lobehub/editor';
 import {
   extractMediaFromEditorState,
   INSERT_FILE_COMMAND,
   INSERT_IMAGE_COMMAND,
-} from '@agentasia/editor';
+} from '@lobehub/editor';
 import type { SerializedEditorState } from 'lexical';
 
 import { getFileIdForUrl } from './attachmentRegistry';

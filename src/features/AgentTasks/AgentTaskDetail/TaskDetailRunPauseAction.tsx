@@ -1,4 +1,4 @@
-import { Button, DropdownMenu, Flexbox, Text } from '@agentasia/ui';
+import { Button, DropdownMenu, Flexbox, Text } from '@lobehub/ui';
 import { Space } from 'antd';
 import { CalendarOffIcon, ChevronDown, PlayIcon, RotateCcwIcon } from 'lucide-react';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';

@@ -1,4 +1,4 @@
-import { ActionIcon, createRawModal } from '@agentasia/ui';
+import { ActionIcon, createRawModal } from '@lobehub/ui';
 import { LucideSettings } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import CreateGenerationPage from './CreateGenerationPage';
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Flexbox: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
 }));
 

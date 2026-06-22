@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@agentasia/ui';
+import { copyToClipboard } from '@lobehub/ui';
 import { produce } from 'immer';
 import { type StateCreator } from 'zustand';
 

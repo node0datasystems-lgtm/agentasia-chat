@@ -1,9 +1,9 @@
 'use client';
 
 import { COMPOSIO_APP_TYPES, LOBEHUB_SKILL_PROVIDERS } from '@agentasia/const';
-import { type ItemType } from '@agentasia/ui';
-import { Avatar, Button, Flexbox, Icon } from '@agentasia/ui';
-import { McpIcon, SkillsIcon } from '@agentasia/ui/icons';
+import { type ItemType } from '@lobehub/ui';
+import { Avatar, Button, Flexbox, Icon } from '@lobehub/ui';
+import { McpIcon, SkillsIcon } from '@lobehub/ui/icons';
 import { cssVar } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { PlusIcon } from 'lucide-react';

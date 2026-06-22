@@ -1,7 +1,7 @@
 'use client';
 
 import { AGENT_PROFILE_URL } from '@agentasia/const';
-import { Avatar, Button, Flexbox } from '@agentasia/ui';
+import { Avatar, Button, Flexbox } from '@lobehub/ui';
 import { Descriptions, Tag, Typography } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

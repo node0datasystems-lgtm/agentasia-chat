@@ -17,7 +17,7 @@ import { initialBuiltinAgentSliceState } from '@/store/agent/slices/builtin';
 import { agentSelectors, currentAgentConfig } from './selectors';
 
 // Mock VoiceList
-vi.mock('@agentasia/tts', () => ({
+vi.mock('@lobehub/tts', () => ({
   VoiceList: class {
     static openaiVoiceOptions = [{ value: 'alloy' }];
     edgeVoiceOptions = [{ value: 'edge-voice' }];

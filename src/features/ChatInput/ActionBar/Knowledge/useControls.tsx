@@ -1,5 +1,5 @@
-import { type ItemType } from '@agentasia/ui';
-import { Icon } from '@agentasia/ui';
+import { type ItemType } from '@lobehub/ui';
+import { Icon } from '@lobehub/ui';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { LibraryBig } from 'lucide-react';

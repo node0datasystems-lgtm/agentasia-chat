@@ -1,6 +1,6 @@
 'use client';
 
-import { Github } from '@agentasia/icons';
+import { Github } from '@lobehub/icons';
 import {
   ActionIcon,
   Avatar,
@@ -11,8 +11,8 @@ import {
   Tag,
   Text,
   Tooltip,
-} from '@agentasia/ui';
-import { Spotlight } from '@agentasia/ui/awesome';
+} from '@lobehub/ui';
+import { Spotlight } from '@lobehub/ui/awesome';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ClockIcon } from 'lucide-react';
 import { memo, useCallback } from 'react';

@@ -5,7 +5,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import type { ReactNode } from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Avatar: ({ avatar }: { avatar: string }) => <div>{avatar}</div>,
   EmojiPicker: ({ onChange, value }: { onChange?: (next: string) => void; value?: string }) => (
     <button data-testid="emoji-picker" type="button" onClick={() => onChange?.('🪶')}>

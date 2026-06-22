@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon, Tag } from '@agentasia/ui';
+import { Icon, Tag } from '@lobehub/ui';
 import { GitFork } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';

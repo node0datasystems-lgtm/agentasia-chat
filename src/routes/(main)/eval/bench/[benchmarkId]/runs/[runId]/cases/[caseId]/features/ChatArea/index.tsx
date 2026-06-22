@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useCallback } from 'react';
 
 import { ChatList, ConversationProvider } from '@/features/Conversation';

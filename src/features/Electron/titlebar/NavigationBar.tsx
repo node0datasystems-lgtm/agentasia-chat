@@ -1,7 +1,7 @@
 'use client';
 
 import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
-import { ActionIcon, Flexbox, Popover, Tooltip } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Popover, Tooltip } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import { memo, useCallback, useEffect, useState } from 'react';

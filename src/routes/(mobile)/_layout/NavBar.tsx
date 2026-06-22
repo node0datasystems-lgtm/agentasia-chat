@@ -1,8 +1,8 @@
 'use client';
 
-import { Icon } from '@agentasia/ui';
-import { type TabBarProps } from '@agentasia/ui/mobile';
-import { TabBar } from '@agentasia/ui/mobile';
+import { Icon } from '@lobehub/ui';
+import { type TabBarProps } from '@lobehub/ui/mobile';
+import { TabBar } from '@lobehub/ui/mobile';
 import { createStaticStyles } from 'antd-style';
 import { Compass, MessageSquare, User } from 'lucide-react';
 import { memo, useMemo } from 'react';

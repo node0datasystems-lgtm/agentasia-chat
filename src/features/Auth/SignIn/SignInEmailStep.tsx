@@ -1,5 +1,5 @@
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { Alert, Button, Flexbox, Icon, Input, Skeleton, Text } from '@agentasia/ui';
+import { Alert, Button, Flexbox, Icon, Input, Skeleton, Text } from '@lobehub/ui';
 import { type FormInstance, type InputRef } from 'antd';
 import { Badge, Divider, Form } from 'antd';
 import { createStaticStyles } from 'antd-style';

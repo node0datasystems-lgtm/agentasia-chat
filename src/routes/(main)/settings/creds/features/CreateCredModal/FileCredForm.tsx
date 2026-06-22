@@ -1,7 +1,7 @@
 'use client';
 
 import { InboxOutlined } from '@ant-design/icons';
-import { Button } from '@agentasia/ui';
+import { Button } from '@lobehub/ui';
 import { useMutation } from '@tanstack/react-query';
 import { Form, Input, message, Upload } from 'antd';
 import { createStaticStyles } from 'antd-style';

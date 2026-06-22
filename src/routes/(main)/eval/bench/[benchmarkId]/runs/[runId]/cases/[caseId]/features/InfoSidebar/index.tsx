@@ -2,7 +2,7 @@
 
 import type { EvalRubricScore } from '@agentasia/types';
 import { formatCost, formatShortenNumber } from '@agentasia/utils';
-import { Flexbox, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Tag, Text } from '@lobehub/ui';
 import { Collapse, Divider, Progress, Typography } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo } from 'react';

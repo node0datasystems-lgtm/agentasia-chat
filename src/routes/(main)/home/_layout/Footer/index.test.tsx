@@ -118,7 +118,7 @@ const renderFooter = async ({
       analytics: { track: analyticsTrack },
     };
   }
-  vi.doMock('@agentasia/analytics/react', () => ({
+  vi.doMock('@lobehub/analytics/react', () => ({
     useAnalytics: createAnalyticsApi,
   }));
   vi.doMock('@/components/ChangelogModal', () => ({
@@ -235,7 +235,7 @@ afterEach(() => {
   cleanup();
   vi.unstubAllGlobals();
   vi.doUnmock('@lobechat/const');
-  vi.doUnmock('@agentasia/analytics/react');
+  vi.doUnmock('@lobehub/analytics/react');
   vi.doUnmock('@/components/ChangelogModal');
   vi.doUnmock('@/components/FeedbackModal');
   vi.doUnmock('@/components/HighlightNotification');

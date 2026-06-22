@@ -10,7 +10,7 @@ const mocks = vi.hoisted(() => ({
   updateInterests: vi.fn(),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Block: ({
     children,
     onClick,

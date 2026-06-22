@@ -1,6 +1,6 @@
 import { useDndContext, useDraggable, useDroppable } from '@dnd-kit/core';
 import type { TaskStatus } from '@agentasia/types';
-import { ActionIcon, type DropdownItem, DropdownMenu, Icon, Text } from '@agentasia/ui';
+import { ActionIcon, type DropdownItem, DropdownMenu, Icon, Text } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { EyeOff, MoreHorizontal, Plus } from 'lucide-react';
 import { memo, useMemo } from 'react';

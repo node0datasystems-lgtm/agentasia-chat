@@ -1,6 +1,6 @@
 'use client';
 
-import { type DropdownItem } from '@agentasia/ui';
+import { type DropdownItem } from '@lobehub/ui';
 import {
   ActionIcon,
   Block,
@@ -9,7 +9,7 @@ import {
   Skeleton,
   stopPropagation,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronsUpDownIcon } from 'lucide-react';
 import { type DragEvent } from 'react';

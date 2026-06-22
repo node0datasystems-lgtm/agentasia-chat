@@ -1,7 +1,7 @@
 'use client';
 
 import { LOBE_CHAT_CLOUD, UTM_SOURCE } from '@agentasia/business-const';
-import { Button, Center, Flexbox, Icon, lobeStaticStylish } from '@agentasia/ui';
+import { Button, Center, Flexbox, Icon, lobeStaticStylish } from '@lobehub/ui';
 import { useSize } from 'ahooks';
 import { createStaticStyles, cx } from 'antd-style';
 import { ArrowRightIcon } from 'lucide-react';

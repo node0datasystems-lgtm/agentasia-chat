@@ -1,7 +1,7 @@
 'use client';
 
 import { INBOX_SESSION_ID } from '@agentasia/const';
-import { Avatar, Flexbox, Icon, Input, Popover, Tooltip } from '@agentasia/ui';
+import { Avatar, Flexbox, Icon, Input, Popover, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { MoreHorizontalIcon } from 'lucide-react';

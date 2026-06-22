@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon } from '@agentasia/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { Share2Icon } from 'lucide-react';
 import { memo, useState } from 'react';
 

@@ -1,5 +1,5 @@
-import { Button, DropdownMenu, Flexbox, Icon, Text } from '@agentasia/ui';
-import { GithubIcon } from '@agentasia/ui/icons';
+import { Button, DropdownMenu, Flexbox, Icon, Text } from '@lobehub/ui';
+import { GithubIcon } from '@lobehub/ui/icons';
 import { ChevronDown, FileArchive, Grid2x2Plus, Link, PenLine } from 'lucide-react';
 import { type ReactNode, useState } from 'react';
 import { useTranslation } from 'react-i18next';

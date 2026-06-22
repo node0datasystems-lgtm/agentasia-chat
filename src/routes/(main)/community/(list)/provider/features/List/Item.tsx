@@ -1,5 +1,5 @@
-import { Github, ModelTag, ProviderCombine } from '@agentasia/icons';
-import { ActionIcon, Block, Flexbox, MaskShadow, stopPropagation, Text } from '@agentasia/ui';
+import { Github, ModelTag, ProviderCombine } from '@lobehub/icons';
+import { ActionIcon, Block, Flexbox, MaskShadow, stopPropagation, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { GlobeIcon } from 'lucide-react';
 import { memo } from 'react';

@@ -13,7 +13,7 @@ import {
   stopPropagation,
   Text,
   Tooltip,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { Switch } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { omit } from 'es-toolkit/compat';

@@ -1,7 +1,7 @@
 'use client';
 
-import { Github } from '@agentasia/icons';
-import { ActionIcon, Avatar, Button, Flexbox, Icon, stopPropagation, Text } from '@agentasia/ui';
+import { Github } from '@lobehub/icons';
+import { ActionIcon, Avatar, Button, Flexbox, Icon, stopPropagation, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import {
   DotIcon,

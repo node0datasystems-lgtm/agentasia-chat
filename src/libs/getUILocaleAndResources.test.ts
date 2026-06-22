@@ -14,7 +14,7 @@ describe('getUILocaleAndResources', () => {
     expect(result.resources).toBeDefined();
   });
 
-  it('should normalize business ui.json into a @agentasia/ui consumable resource map', async () => {
+  it('should normalize business ui.json into a @lobehub/ui consumable resource map', async () => {
     const result = await getUILocaleAndResources('zh-CN');
 
     expect(translateFromUILocaleResources(result.resources, 'form.submit')).toBe('提交');
@@ -88,7 +88,7 @@ describe('getUILocaleAndResources', () => {
     expect(result.resources).toBeDefined();
   });
 
-  it('should fallback to @agentasia/ui builtin resources if business ui.json is missing', async () => {
+  it('should fallback to @lobehub/ui builtin resources if business ui.json is missing', async () => {
     vi.resetModules();
     vi.doMock('@/../locales/en-US/ui.json', () => ({ default: null }));
 

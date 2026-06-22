@@ -1,4 +1,4 @@
-import { Icon, Tooltip } from '@agentasia/ui';
+import { Icon, Tooltip } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { ArrowDownIcon, ArrowUpIcon, GitBranchIcon, GitPullRequest } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

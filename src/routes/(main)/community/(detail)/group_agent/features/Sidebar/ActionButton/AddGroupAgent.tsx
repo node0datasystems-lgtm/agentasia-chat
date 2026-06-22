@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, DropdownMenu, Flexbox, Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Button, DropdownMenu, Flexbox, Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { ChevronDownIcon } from 'lucide-react';

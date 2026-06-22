@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Button, Tooltip } from '@agentasia/ui';
+import { ActionIcon, Button, Tooltip } from '@lobehub/ui';
 import { App } from 'antd';
 import { CalendarClockIcon } from 'lucide-react';
 import { memo, useState } from 'react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useLayoutEffect } from 'react';
 import { Outlet } from 'react-router';
 

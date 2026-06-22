@@ -1,9 +1,9 @@
 'use client';
 
 import { BRANDING_NAME } from '@agentasia/business-const';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Button, Form, Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Button, Form, Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App, Switch } from 'antd';
 import { HardDriveDownload, HardDriveUpload } from 'lucide-react';
 import { useCallback } from 'react';

@@ -1,4 +1,4 @@
-import { Avatar, Icon } from '@agentasia/ui';
+import { Avatar, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { type LucideIcon } from 'lucide-react';
 import { memo } from 'react';

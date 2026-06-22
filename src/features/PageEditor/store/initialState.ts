@@ -1,4 +1,4 @@
-import { type IEditor } from '@agentasia/editor';
+import { type IEditor } from '@lobehub/editor';
 
 import { type EditLockHealth } from '@/features/EditLock';
 

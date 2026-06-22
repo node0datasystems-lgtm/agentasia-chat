@@ -1,6 +1,6 @@
 'use client';
 
-import { Block, Flexbox, Icon, Markdown, Tag, Text } from '@agentasia/ui';
+import { Block, Flexbox, Icon, Markdown, Tag, Text } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { Check, CircleHelp, X } from 'lucide-react';
 import { memo } from 'react';

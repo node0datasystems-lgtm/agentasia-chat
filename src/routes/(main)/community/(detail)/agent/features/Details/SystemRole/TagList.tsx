@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Tag } from '@agentasia/ui';
+import { Flexbox, Tag } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import qs from 'query-string';
 import { memo } from 'react';

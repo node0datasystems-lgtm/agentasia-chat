@@ -1,8 +1,8 @@
 'use client';
 
 import { type NetworkProxySettings } from '@agentasia/electron-client-ipc';
-import { type FormGroupItemType } from '@agentasia/ui';
-import { Form, Skeleton, toast } from '@agentasia/ui';
+import { type FormGroupItemType } from '@lobehub/ui';
+import { Form, Skeleton, toast } from '@lobehub/ui';
 import { Button, Form as AntdForm, Input, Radio, Space, Switch } from 'antd';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@agentasia/ui';
+import { Button } from '@lobehub/ui';
 import { App } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { customAlphabet } from 'nanoid/non-secure';

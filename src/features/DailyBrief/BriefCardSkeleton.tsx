@@ -1,4 +1,4 @@
-import { Block, Flexbox, Skeleton } from '@agentasia/ui';
+import { Block, Flexbox, Skeleton } from '@lobehub/ui';
 import { Divider } from 'antd';
 import { cssVar } from 'antd-style';
 import { memo } from 'react';

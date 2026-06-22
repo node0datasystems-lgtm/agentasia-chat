@@ -1,8 +1,8 @@
 'use client';
 
-import type { IEditor } from '@agentasia/editor';
-import { DiffAction, LITEXML_DIFFNODE_ALL_COMMAND } from '@agentasia/editor';
-import { Block, Icon } from '@agentasia/ui';
+import type { IEditor } from '@lobehub/editor';
+import { DiffAction, LITEXML_DIFFNODE_ALL_COMMAND } from '@lobehub/editor';
+import { Block, Icon } from '@lobehub/ui';
 import { Button, Space } from 'antd';
 import { createStaticStyles, cssVar, cx } from 'antd-style';
 import { Check, X } from 'lucide-react';

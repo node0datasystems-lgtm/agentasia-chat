@@ -1,4 +1,4 @@
-import { Block, Flexbox, Input, Popover, stopPropagation } from '@agentasia/ui';
+import { Block, Flexbox, Input, Popover, stopPropagation } from '@lobehub/ui';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -2,7 +2,7 @@
 
 import { AGENT_ONBOARDING_ENABLED } from '@agentasia/business-const';
 import { isDesktop } from '@agentasia/const';
-import { ActionIcon, Flexbox, Segmented, Text } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Segmented, Text } from '@lobehub/ui';
 import { createStaticStyles, cx } from 'antd-style';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { CSSProperties, ReactNode } from 'react';

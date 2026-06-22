@@ -1,4 +1,4 @@
-import { Button, Flexbox, MaskShadow } from '@agentasia/ui';
+import { Button, Flexbox, MaskShadow } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 

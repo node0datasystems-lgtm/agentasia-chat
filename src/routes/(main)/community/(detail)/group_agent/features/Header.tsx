@@ -10,7 +10,7 @@ import {
   Text,
   Tooltip,
   TooltipGroup,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { App } from 'antd';
 import { createStaticStyles, cssVar, useResponsive } from 'antd-style';
 import { BookmarkCheckIcon, BookmarkIcon, DotIcon, GitBranchIcon, UsersIcon } from 'lucide-react';

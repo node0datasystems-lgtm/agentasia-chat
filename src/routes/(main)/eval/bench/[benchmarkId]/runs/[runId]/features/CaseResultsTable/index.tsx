@@ -2,8 +2,8 @@
 
 import type { EvalThreadResult } from '@agentasia/types';
 import { formatCost, formatShortenNumber } from '@agentasia/utils';
-import { ActionIcon, Flexbox, Icon, Tag } from '@agentasia/ui';
-import { Select } from '@agentasia/ui/base-ui';
+import { ActionIcon, Flexbox, Icon, Tag } from '@lobehub/ui';
+import { Select } from '@lobehub/ui/base-ui';
 import { Badge, Input, Table, Tooltip } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { createStaticStyles, cssVar } from 'antd-style';

@@ -12,7 +12,7 @@ import type {
   BuiltinRender,
   BuiltinStreaming,
 } from '@agentasia/types';
-import type { MenuProps } from '@agentasia/ui';
+import type { MenuProps } from '@lobehub/ui';
 import { useMemo } from 'react';
 
 import { getToolRenderFixture, getToolRenderMeta, type ToolRenderFixture } from './fixtures';

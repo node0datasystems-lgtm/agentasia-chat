@@ -60,14 +60,14 @@ vi.mock('@/components/KeyValueEditor', () => ({
   default: vi.fn(() => <div data-testid="key-value-editor">Key-Value Editor</div>),
 }));
 
-vi.mock('@agentasia/icons', () => ({
+vi.mock('@lobehub/icons', () => ({
   ComfyUI: {
     Combine: vi.fn(() => <div data-testid="comfyui-icon">ComfyUI Icon</div>),
   },
   ProviderIcon: vi.fn(() => <div data-testid="provider-icon">Provider Icon</div>),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   ShikiLobeTheme: { name: 'lobe-test', type: 'dark' as const, colors: {} },
   Icon: vi.fn(({ icon, ...props }) => (
     <div data-testid="icon" {...props}>

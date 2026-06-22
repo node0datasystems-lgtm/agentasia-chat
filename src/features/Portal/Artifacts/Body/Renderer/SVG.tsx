@@ -1,6 +1,6 @@
 import { BRANDING_NAME } from '@agentasia/business-const';
 import { copyImageToClipboard, sanitizeSVGContent } from '@agentasia/utils/client';
-import { Button, Center, DropdownMenu, Flexbox, Tooltip } from '@agentasia/ui';
+import { Button, Center, DropdownMenu, Flexbox, Tooltip } from '@lobehub/ui';
 import { snapdom } from '@zumer/snapdom';
 import { App, Space } from 'antd';
 import { css, cx } from 'antd-style';

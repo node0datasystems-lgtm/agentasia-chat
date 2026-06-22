@@ -1,7 +1,7 @@
 'use client';
 
-import { ProviderIcon } from '@agentasia/icons';
-import { Flexbox, Icon, Input, Text, TextArea } from '@agentasia/ui';
+import { ProviderIcon } from '@lobehub/icons';
+import { Flexbox, Icon, Input, Text, TextArea } from '@lobehub/ui';
 import {
   Button,
   confirmModal,
@@ -10,7 +10,7 @@ import {
   type ModalInstance,
   Select,
   useModalContext,
-} from '@agentasia/ui/base-ui';
+} from '@lobehub/ui/base-ui';
 import { App, Form } from 'antd';
 import { cssVar } from 'antd-style';
 import { t as i18nT } from 'i18next';

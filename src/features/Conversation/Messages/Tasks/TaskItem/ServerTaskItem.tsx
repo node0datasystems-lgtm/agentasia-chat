@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionItem, Block } from '@agentasia/ui';
+import { AccordionItem, Block } from '@lobehub/ui';
 import { memo, useMemo, useState } from 'react';
 
 import { type UIChatMessage } from '@/types/index';

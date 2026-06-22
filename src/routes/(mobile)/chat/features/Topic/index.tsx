@@ -1,4 +1,4 @@
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 
 import TopicListContent from '@/routes/(main)/agent/_layout/Sidebar/Topic/TopicListContent';
 import TopicSearchBar from '@/routes/(main)/agent/_layout/Sidebar/Topic/TopicSearchBar';

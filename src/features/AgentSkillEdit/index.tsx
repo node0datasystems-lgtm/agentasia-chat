@@ -3,7 +3,7 @@
 import { isDesktop } from '@agentasia/const';
 import { TITLE_BAR_HEIGHT } from '@agentasia/desktop-bridge';
 import { type SkillResourceTreeNode } from '@agentasia/types';
-import { Button, Drawer, Flexbox } from '@agentasia/ui';
+import { Button, Drawer, Flexbox } from '@lobehub/ui';
 import { Alert, App, Form as AForm, Popconfirm, Skeleton } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { memo, useMemo, useState } from 'react';

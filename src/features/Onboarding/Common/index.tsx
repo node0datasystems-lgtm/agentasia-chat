@@ -2,7 +2,7 @@
 
 import { isDesktop } from '@agentasia/const';
 import { MAX_ONBOARDING_STEPS } from '@agentasia/types';
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { memo, useCallback, useEffect, useRef } from 'react';
 import { Navigate, useSearchParams } from 'react-router';
 

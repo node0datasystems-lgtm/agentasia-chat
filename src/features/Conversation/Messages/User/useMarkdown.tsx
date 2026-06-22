@@ -1,4 +1,4 @@
-import { type MarkdownProps } from '@agentasia/ui';
+import { type MarkdownProps } from '@lobehub/ui';
 import { type ReactNode } from 'react';
 import { useMemo } from 'react';
 

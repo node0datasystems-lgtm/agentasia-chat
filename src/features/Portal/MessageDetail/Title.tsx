@@ -1,4 +1,4 @@
-import { Flexbox, Text } from '@agentasia/ui';
+import { Flexbox, Text } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
 import { oneLineEllipsis } from '@/styles';

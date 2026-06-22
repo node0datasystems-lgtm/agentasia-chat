@@ -1,4 +1,4 @@
-import { Avatar as A } from '@agentasia/ui';
+import { Avatar as A } from '@lobehub/ui';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
 

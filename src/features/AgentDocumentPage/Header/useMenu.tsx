@@ -1,9 +1,9 @@
 import { buildAgentDocumentUrl } from '@agentasia/builtin-tool-agent-documents';
 import { isDesktop } from '@agentasia/const';
-import { useEditor } from '@agentasia/editor/react';
-import { Icon } from '@agentasia/ui';
-import type { DropdownItem } from '@agentasia/ui/base-ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { useEditor } from '@lobehub/editor/react';
+import { Icon } from '@lobehub/ui';
+import type { DropdownItem } from '@lobehub/ui/base-ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { cssVar, useResponsive } from 'antd-style';
 import dayjs from 'dayjs';

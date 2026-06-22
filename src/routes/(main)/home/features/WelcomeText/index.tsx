@@ -1,5 +1,5 @@
-import { Flexbox } from '@agentasia/ui';
-import { LoadingDots } from '@agentasia/ui/chat';
+import { Flexbox } from '@lobehub/ui';
+import { LoadingDots } from '@lobehub/ui/chat';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { shuffle } from 'es-toolkit/compat';
 import { memo, type MouseEvent, type ReactNode, useEffect, useMemo, useRef, useState } from 'react';

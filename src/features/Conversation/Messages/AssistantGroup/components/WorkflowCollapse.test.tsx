@@ -11,7 +11,7 @@ import WorkflowCollapse from './WorkflowCollapse';
 
 let mockIsGenerating = true;
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Accordion: ({
     children,
     expandedKeys,

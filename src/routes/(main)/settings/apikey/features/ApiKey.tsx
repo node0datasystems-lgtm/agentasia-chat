@@ -2,7 +2,7 @@
 
 import { type ActionType, type ProColumns } from '@ant-design/pro-components';
 import { ProTable } from '@ant-design/pro-components';
-import { Button } from '@agentasia/ui';
+import { Button } from '@lobehub/ui';
 import { useMutation } from '@tanstack/react-query';
 import { Popconfirm, Switch } from 'antd';
 import { createStaticStyles } from 'antd-style';

@@ -1,5 +1,5 @@
 import { DEFAULT_AVATAR } from '@agentasia/const';
-import { Avatar } from '@agentasia/ui';
+import { Avatar } from '@lobehub/ui';
 import { memo } from 'react';
 
 interface AgentAvatarProps {

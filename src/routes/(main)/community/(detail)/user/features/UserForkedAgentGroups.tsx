@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Grid, Tag, Text } from '@agentasia/ui';
+import { Flexbox, Grid, Tag, Text } from '@lobehub/ui';
 import { Pagination } from 'antd';
 import { GitForkIcon } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';

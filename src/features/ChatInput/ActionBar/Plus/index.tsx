@@ -1,9 +1,9 @@
 'use client';
 
 import { validateVideoFileSize } from '@agentasia/utils/client';
-import type { IconProps } from '@agentasia/ui';
-import { Icon, Popover, Tag } from '@agentasia/ui';
-import { GlobeOffIcon, SkillsIcon } from '@agentasia/ui/icons';
+import type { IconProps } from '@lobehub/ui';
+import { Icon, Popover, Tag } from '@lobehub/ui';
+import { GlobeOffIcon, SkillsIcon } from '@lobehub/ui/icons';
 import { Upload } from 'antd';
 import { css, cssVar, cx } from 'antd-style';
 import {

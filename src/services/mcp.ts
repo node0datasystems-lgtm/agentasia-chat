@@ -5,8 +5,8 @@ import {
   type CustomPluginMetadata,
 } from '@agentasia/types';
 import { isLocalOrPrivateUrl, safeParseJSON } from '@agentasia/utils';
-import { type PluginManifest } from '@agentasia/market-sdk';
-import { type CallReportRequest } from '@agentasia/market-types';
+import { type PluginManifest } from '@lobehub/market-sdk';
+import { type CallReportRequest } from '@lobehub/market-types';
 import superjson from 'superjson';
 
 import { type MCPToolCallResult } from '@/libs/mcp';

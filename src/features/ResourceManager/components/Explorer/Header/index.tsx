@@ -1,7 +1,7 @@
 'use client';
 
-import { ActionIcon, Flexbox } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { cssVar } from 'antd-style';
 import { BookMinusIcon, FileBoxIcon, Trash2Icon } from 'lucide-react';

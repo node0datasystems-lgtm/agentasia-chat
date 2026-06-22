@@ -1,7 +1,7 @@
 import { type ModelRankItem } from '@agentasia/types';
-import { BarList } from '@agentasia/charts';
-import { ModelIcon } from '@agentasia/icons';
-import { ActionIcon, Modal } from '@agentasia/ui';
+import { BarList } from '@lobehub/charts';
+import { ModelIcon } from '@lobehub/icons';
+import { ActionIcon, Modal } from '@lobehub/ui';
 import { MaximizeIcon } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

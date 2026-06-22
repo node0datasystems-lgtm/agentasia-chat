@@ -1,8 +1,8 @@
 'use client';
 
 import { exportJSONFile } from '@agentasia/utils/client';
-import { Icon, Tag } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Icon, Tag } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App, Dropdown, type MenuProps } from 'antd';
 import { createStaticStyles, cx, useTheme } from 'antd-style';
 import { Book, Download, MoreHorizontal, Trash2, Upload } from 'lucide-react';

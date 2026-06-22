@@ -1,4 +1,4 @@
-import { Avatar, Block, Flexbox, Text } from '@agentasia/ui';
+import { Avatar, Block, Flexbox, Text } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import type { ReactNode } from 'react';
 

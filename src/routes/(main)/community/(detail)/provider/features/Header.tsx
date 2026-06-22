@@ -1,7 +1,7 @@
 'use client';
 
-import { Github, ProviderCombine } from '@agentasia/icons';
-import { ActionIcon, Flexbox, stopPropagation } from '@agentasia/ui';
+import { Github, ProviderCombine } from '@lobehub/icons';
+import { ActionIcon, Flexbox, stopPropagation } from '@lobehub/ui';
 import { cssVar, useResponsive } from 'antd-style';
 import { GlobeIcon } from 'lucide-react';
 import { memo } from 'react';

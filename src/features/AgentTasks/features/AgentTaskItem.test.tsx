@@ -13,7 +13,7 @@ const mocks = vi.hoisted(() => ({
   useFetchTaskDetail: vi.fn(),
 }));
 
-vi.mock('@agentasia/ui', () => ({
+vi.mock('@lobehub/ui', () => ({
   Block: ({
     children,
     clickable,

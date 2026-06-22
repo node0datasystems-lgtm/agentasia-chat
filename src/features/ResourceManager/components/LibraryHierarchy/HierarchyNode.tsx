@@ -2,7 +2,7 @@
 
 import { CaretDownFilled, LoadingOutlined } from '@ant-design/icons';
 import { DERIVED_DOCUMENT_SOURCE_TYPE } from '@agentasia/const';
-import { ActionIcon, Block, Flexbox, Icon, showContextMenu, stopPropagation } from '@agentasia/ui';
+import { ActionIcon, Block, Flexbox, Icon, showContextMenu, stopPropagation } from '@lobehub/ui';
 import { App, Input } from 'antd';
 import { cx } from 'antd-style';
 import { FileText, FolderIcon, FolderOpenIcon } from 'lucide-react';

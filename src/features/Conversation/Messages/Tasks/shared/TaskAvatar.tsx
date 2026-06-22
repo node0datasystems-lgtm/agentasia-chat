@@ -1,4 +1,4 @@
-import { Block, Flexbox, Icon } from '@agentasia/ui';
+import { Block, Flexbox, Icon } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { ListTodo } from 'lucide-react';
 import { type FC, type PropsWithChildren } from 'react';

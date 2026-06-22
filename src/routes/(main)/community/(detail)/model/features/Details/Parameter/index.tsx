@@ -1,6 +1,6 @@
 'use client';
 
-import { Collapse, Flexbox, Icon, Tag } from '@agentasia/ui';
+import { Collapse, Flexbox, Icon, Tag } from '@lobehub/ui';
 import { type LucideIcon } from 'lucide-react';
 import {
   ChartColumnBig,

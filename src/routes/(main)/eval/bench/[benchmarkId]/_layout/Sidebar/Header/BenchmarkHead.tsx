@@ -1,6 +1,6 @@
 'use client';
 
-import { type DropdownItem } from '@agentasia/ui';
+import { type DropdownItem } from '@lobehub/ui';
 import {
   ActionIcon,
   Block,
@@ -9,7 +9,7 @@ import {
   Skeleton,
   stopPropagation,
   Text,
-} from '@agentasia/ui';
+} from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import {
   Activity,

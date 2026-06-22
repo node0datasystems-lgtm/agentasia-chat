@@ -1,4 +1,4 @@
-import { Button, Center, Flexbox, Text } from '@agentasia/ui';
+import { Button, Center, Flexbox, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { Copy } from 'lucide-react';
 import { memo, useMemo } from 'react';

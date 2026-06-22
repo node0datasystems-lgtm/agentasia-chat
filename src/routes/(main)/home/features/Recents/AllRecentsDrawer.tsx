@@ -1,6 +1,6 @@
 'use client';
 
-import { Empty, Flexbox, SearchBar } from '@agentasia/ui';
+import { Empty, Flexbox, SearchBar } from '@lobehub/ui';
 import { SearchIcon } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';

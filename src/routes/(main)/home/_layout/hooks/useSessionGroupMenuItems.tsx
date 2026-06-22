@@ -1,5 +1,5 @@
-import { Icon } from '@agentasia/ui';
-import { confirmModal } from '@agentasia/ui/base-ui';
+import { Icon } from '@lobehub/ui';
+import { confirmModal } from '@lobehub/ui/base-ui';
 import { App } from 'antd';
 import { type ItemType } from 'antd/es/menu/interface';
 import { FolderCogIcon, FolderPenIcon, Trash } from 'lucide-react';

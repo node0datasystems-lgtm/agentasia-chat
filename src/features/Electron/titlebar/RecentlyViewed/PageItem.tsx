@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Flexbox, Icon } from '@agentasia/ui';
+import { ActionIcon, Flexbox, Icon } from '@lobehub/ui';
 import { cx } from 'antd-style';
 import { Pin, PinOff } from 'lucide-react';
 import React, { memo } from 'react';

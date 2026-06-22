@@ -1,7 +1,7 @@
 'use client';
 
-import { type IEditor, type SlashOptions } from '@agentasia/editor';
-import { type ChatInputActionsProps, type Editor } from '@agentasia/editor/react';
+import { type IEditor, type SlashOptions } from '@lobehub/editor';
+import { type ChatInputActionsProps, type Editor } from '@lobehub/editor/react';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
 

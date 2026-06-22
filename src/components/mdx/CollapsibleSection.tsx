@@ -1,6 +1,6 @@
 'use client';
 
-import { Collapse } from '@agentasia/ui';
+import { Collapse } from '@lobehub/ui';
 import { createStaticStyles } from 'antd-style';
 import { kebabCase } from 'es-toolkit';
 import { type FC, type ReactNode } from 'react';

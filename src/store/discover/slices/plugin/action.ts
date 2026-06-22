@@ -4,7 +4,7 @@ import {
   type PluginListResponse,
   type PluginQueryParams,
 } from '@agentasia/types';
-import { type CategoryItem, type CategoryListQuery } from '@agentasia/market-sdk';
+import { type CategoryItem, type CategoryListQuery } from '@lobehub/market-sdk';
 import { type SWRResponse } from 'swr';
 import useSWR from 'swr';
 

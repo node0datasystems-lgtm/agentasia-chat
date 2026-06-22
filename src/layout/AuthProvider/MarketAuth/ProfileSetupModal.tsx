@@ -1,7 +1,7 @@
 'use client';
 
-import { Center, Flexbox, Icon, Input, Text, TextArea, Tooltip } from '@agentasia/ui';
-import { confirmModal, Modal } from '@agentasia/ui/base-ui';
+import { Center, Flexbox, Icon, Input, Text, TextArea, Tooltip } from '@lobehub/ui';
+import { confirmModal, Modal } from '@lobehub/ui/base-ui';
 import { type UploadProps } from 'antd';
 import { App, Form, Upload } from 'antd';
 import { cssVar } from 'antd-style';

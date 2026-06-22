@@ -1,7 +1,7 @@
-import { type IEditor } from '@agentasia/editor';
-import { getHotkeyById, HotkeyEnum } from '@agentasia/editor';
-import { type ChatInputActionsProps } from '@agentasia/editor/react';
-import { ChatInputActionBar, ChatInputActions, useEditorState } from '@agentasia/editor/react';
+import { type IEditor } from '@lobehub/editor';
+import { getHotkeyById, HotkeyEnum } from '@lobehub/editor';
+import { type ChatInputActionsProps } from '@lobehub/editor/react';
+import { ChatInputActionBar, ChatInputActions, useEditorState } from '@lobehub/editor/react';
 import { cssVar } from 'antd-style';
 import {
   BoldIcon,

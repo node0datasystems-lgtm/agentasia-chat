@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flexbox } from '@agentasia/ui';
+import { Button, Flexbox } from '@lobehub/ui';
 import { useMutation } from '@tanstack/react-query';
 import { Avatar, Empty, Form, Input, Select, Spin } from 'antd';
 import { createStaticStyles } from 'antd-style';

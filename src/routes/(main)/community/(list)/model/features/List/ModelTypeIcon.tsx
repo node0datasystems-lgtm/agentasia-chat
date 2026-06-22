@@ -1,4 +1,4 @@
-import { Icon, Tooltip } from '@agentasia/ui';
+import { Icon, Tooltip } from '@lobehub/ui';
 import { cssVar } from 'antd-style';
 import { startCase } from 'es-toolkit/compat';
 import { type LucideIcon } from 'lucide-react';

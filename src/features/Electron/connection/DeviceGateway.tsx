@@ -1,5 +1,5 @@
 import { useWatchBroadcast } from '@agentasia/electron-client-ipc';
-import { ActionIcon, Flexbox } from '@agentasia/ui';
+import { ActionIcon, Flexbox } from '@lobehub/ui';
 import { Input, Popover, Switch } from 'antd';
 import { createStaticStyles } from 'antd-style';
 import { HardDrive } from 'lucide-react';

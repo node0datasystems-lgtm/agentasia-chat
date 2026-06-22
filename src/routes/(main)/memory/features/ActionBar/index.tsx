@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox } from '@agentasia/ui';
+import { Flexbox } from '@lobehub/ui';
 import { type PropsWithChildren } from 'react';
 import { memo } from 'react';
 

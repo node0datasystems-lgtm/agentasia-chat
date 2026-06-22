@@ -1,4 +1,4 @@
-import { getSingletonAnalyticsOptional } from '@agentasia/analytics';
+import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 import isEqual from 'fast-deep-equal';
 import { t } from 'i18next';
 import { type SWRResponse } from 'swr';

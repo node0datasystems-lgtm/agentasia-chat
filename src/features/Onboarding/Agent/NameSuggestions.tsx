@@ -1,4 +1,4 @@
-import { ActionIcon, Block, Flexbox, FluentEmoji, Text } from '@agentasia/ui';
+import { ActionIcon, Block, Flexbox, FluentEmoji, Text } from '@lobehub/ui';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { RefreshCw } from 'lucide-react';
 import { memo, useCallback, useState } from 'react';

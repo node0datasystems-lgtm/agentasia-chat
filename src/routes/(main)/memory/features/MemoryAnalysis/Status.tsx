@@ -1,7 +1,7 @@
 'use client';
 
 import { AsyncTaskStatus } from '@agentasia/types';
-import { Alert, Flexbox, Icon, Text } from '@agentasia/ui';
+import { Alert, Flexbox, Icon, Text } from '@lobehub/ui';
 import { Progress } from 'antd';
 import { Loader2Icon, TriangleAlertIcon } from 'lucide-react';
 import { memo } from 'react';
