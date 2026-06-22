@@ -7,5 +7,5 @@ BEGIN
   CREATE EXTENSION IF NOT EXISTS pg_search;
 EXCEPTION
   WHEN OTHERS THEN
-    RAISE NOTICE 'pg_search extension not available (%, %): %', SQLSTATE, SQLERRM;
+    RAISE NOTICE 'pg_search extension not available: %', SQLERRM;
 END $$;
