@@ -5,7 +5,5 @@
   "scripts": {
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
-    "@agentasia/business-model-runtime": "workspace:*"
-  }
+  "dependencies": {}
 }

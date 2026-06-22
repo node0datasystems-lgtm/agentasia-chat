@@ -5,7 +5,7 @@ import { isAgentAsiaModelAvailable } from '@agentasia/business-model-bank/model-
 import {
   buildMappedBusinessModelFields,
   resolveBusinessModelMapping,
-} from '@agentasia/business-model-runtime';
+} from '@/server/services/_businessRuntime';
 import { ChatErrorType, RequestTrigger } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';

@@ -3,7 +3,7 @@ import { ENABLE_BUSINESS_FEATURES } from '@agentasia/business-const';
 import {
   buildMappedBusinessModelFields,
   resolveBusinessModelMapping,
-} from '@agentasia/business-model-runtime';
+} from '@/server/services/_businessRuntime';
 import { AsyncTaskError, AsyncTaskStatus, RequestTrigger } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';

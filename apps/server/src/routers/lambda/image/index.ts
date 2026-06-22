@@ -1,6 +1,6 @@
 import { BRANDING_PROVIDER } from '@agentasia/business-const';
 import { isAgentAsiaModelAvailable } from '@agentasia/business-model-bank/model-config';
-import { resolveBusinessModelMapping } from '@agentasia/business-model-runtime';
+import { resolveBusinessModelMapping } from '@/server/services/_businessRuntime';
 import { ChatErrorType } from '@agentasia/types';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
