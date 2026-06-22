@@ -1,5 +1,5 @@
 import { type LobeToolManifest } from '@agentasia/context-engine';
-import { MarketSDK, type OrgRef, orgRefToPathSegment } from '@agentasia/market-sdk';
+import { MarketSDK, type OrgRef, orgRefToPathSegment } from '@lobehub/market-sdk';
 import debug from 'debug';
 import { type NextRequest } from 'next/server';
 

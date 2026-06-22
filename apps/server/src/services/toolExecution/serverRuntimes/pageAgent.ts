@@ -4,8 +4,8 @@ import {
   type PageAgentInvocationContext,
   type PageAgentRuntimeService,
 } from '@agentasia/builtin-tool-page-agent/executionRuntime';
-import { EditorRuntime } from '@agentasia/editor-runtime';
-import { createHeadlessEditor, type HeadlessEditor } from '@agentasia/editor/headless';
+import { EditorRuntime } from '@lobehub/editor-runtime';
+import { createHeadlessEditor, type HeadlessEditor } from '@lobehub/editor/headless';
 import type { SerializedEditorState, SerializedLexicalNode } from 'lexical';
 
 import { DocumentModel } from '@/database/models/document';
@@ -140,14 +140,14 @@ const buildEnv = (snapshot: DocumentSnapshot, documentId: string): InvocationEnv
   // Otherwise leave the headless editor in its default empty state.
 
   const runtime = new EditorRuntime();
-  // `headless.kernel` is structurally `IEditor`; pnpm may resolve `@agentasia/editor`
+  // `headless.kernel` is structurally `IEditor`; pnpm may resolve `@lobehub/editor`
   // to a different copy here than `@lobechat/editor-runtime` does, making the two
   // `IEditor` types nominally distinct. They are runtime-identical — bridge via
   // unknown to keep the contract explicit.
   runtime.setEditor(headless.kernel as unknown as EditorRuntimeEditorParam);
   runtime.setCurrentDocId(documentId);
   // `EditorRuntime` dispatches `LITEXML_*_COMMAND` (imported from the DOM-free
-  // `@agentasia/editor/litexml-commands` subpath) straight onto the kernel. The
+  // `@lobehub/editor/litexml-commands` subpath) straight onto the kernel. The
   // headless bundle's `LitexmlPlugin` registers its listeners against the same
   // single command identities, so the dispatch lands without any adapter.
   runtime.setTitleHandlers(
@@ -393,7 +393,7 @@ const buildService = (
  *
  * Each tool invocation:
  *   1. loads the `documents` row,
- *   2. hydrates a `@agentasia/editor` HeadlessEditor from `editorData`/`content`,
+ *   2. hydrates a `@lobehub/editor` HeadlessEditor from `editorData`/`content`,
  *   3. runs the requested page-agent API via the shared `EditorRuntime`,
  *   4. exports the new Lexical state and writes it back via
  *      `DocumentService.updateDocument` (saveSource: 'llm_call' → also appends

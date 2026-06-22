@@ -53,13 +53,13 @@ import {
   type CategoryListQuery,
   type MarketSDK,
   type UserInfoResponse,
-} from '@agentasia/market-sdk';
+} from '@lobehub/market-sdk';
 import {
   type AgentEventRequest,
   type CallReportRequest,
   type InstallReportRequest,
   type PluginEventRequest,
-} from '@agentasia/market-types';
+} from '@lobehub/market-types';
 import dayjs from 'dayjs';
 import debug from 'debug';
 import { cloneDeep, countBy, isString, merge, uniq, uniqBy } from 'es-toolkit/compat';

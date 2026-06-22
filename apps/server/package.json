@@ -1,8 +1,11 @@
 {
-  "name": "@lobechat/server",
+  "name": "@agentasia/server",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@agentasia/business-model-runtime": "workspace:*"
   }
 }

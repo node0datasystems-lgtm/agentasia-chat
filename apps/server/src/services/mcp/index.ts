@@ -6,7 +6,7 @@ import {
   type ToolManifestSettings,
 } from '@agentasia/types';
 import { safeParseJSON } from '@agentasia/utils';
-import { type DeploymentOption } from '@agentasia/market-sdk';
+import { type DeploymentOption } from '@lobehub/market-sdk';
 import { McpError } from '@modelcontextprotocol/sdk/types.js';
 import { TRPCError } from '@trpc/server';
 import retry from 'async-retry';

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
-import type { HeadlessLiteXMLOperation } from '@agentasia/editor/headless';
+import type { HeadlessLiteXMLOperation } from '@lobehub/editor/headless';
 import type { SerializedEditorState, SerializedLexicalNode } from 'lexical';
 
 import { EMPTY_EDITOR_STATE } from '@/libs/editor/constants';
@@ -93,7 +93,7 @@ interface LoadEditorStateParams {
 }
 
 const exportSnapshot = (
-  editor: ReturnType<(typeof import('@agentasia/editor/headless'))['createHeadlessEditor']>,
+  editor: ReturnType<(typeof import('@lobehub/editor/headless'))['createHeadlessEditor']>,
   litexml = false,
 ): AgentDocumentEditorSnapshot => {
   const snapshot = editor.export({ litexml });
@@ -106,7 +106,7 @@ const exportSnapshot = (
 };
 
 const hydrateMarkdownOrEmptyState = (
-  editor: ReturnType<(typeof import('@agentasia/editor/headless'))['createHeadlessEditor']>,
+  editor: ReturnType<(typeof import('@lobehub/editor/headless'))['createHeadlessEditor']>,
   content: string,
   options?: { keepId?: boolean },
 ) => {
@@ -122,7 +122,7 @@ const hydrateMarkdownOrEmptyState = (
 };
 
 const loadEditorState = (
-  editor: ReturnType<(typeof import('@agentasia/editor/headless'))['createHeadlessEditor']>,
+  editor: ReturnType<(typeof import('@lobehub/editor/headless'))['createHeadlessEditor']>,
   { editorData, fallbackContent = '' }: LoadEditorStateParams,
 ) => {
   if (isValidEditorData(editorData)) {
@@ -141,7 +141,7 @@ const loadEditorState = (
 export const createMarkdownEditorSnapshot = async (
   content: string,
 ): Promise<AgentDocumentEditorSnapshot> => {
-  const { createHeadlessEditor } = await import('@agentasia/editor/headless');
+  const { createHeadlessEditor } = await import('@lobehub/editor/headless');
   const editor = createHeadlessEditor();
 
   try {
@@ -155,7 +155,7 @@ export const createMarkdownEditorSnapshot = async (
 export const exportEditorDataSnapshot = async (
   params: LoadEditorStateParams & { litexml?: boolean },
 ): Promise<AgentDocumentEditorSnapshot> => {
-  const { createHeadlessEditor } = await import('@agentasia/editor/headless');
+  const { createHeadlessEditor } = await import('@lobehub/editor/headless');
   const editor = createHeadlessEditor();
 
   try {
@@ -173,7 +173,7 @@ export const applyLiteXMLOperations = async ({
 }: LoadEditorStateParams & {
   operations: AgentDocumentLiteXMLOperation[];
 }): Promise<AgentDocumentEditorSnapshot> => {
-  const { createHeadlessEditor } = await import('@agentasia/editor/headless');
+  const { createHeadlessEditor } = await import('@lobehub/editor/headless');
   const editor = createHeadlessEditor();
 
   try {
