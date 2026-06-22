@@ -1,14 +1,14 @@
 'use client';
 
-import { type AgentAsiaProps } from '@lobehub/ui/brand';
-import { AgentAsia } from '@lobehub/ui/brand';
+import { type LobeHubProps } from '@lobehub/ui/brand';
+import { LobeHub } from '@lobehub/ui/brand';
 import { memo } from 'react';
 
 import { isCustomBranding } from '@/const/version';
 
 import CustomLogo from './Custom';
 
-interface ProductLogoProps extends AgentAsiaProps {
+interface ProductLogoProps extends LobeHubProps {
   height?: number;
   width?: number;
 }
@@ -18,5 +18,5 @@ export const ProductLogo = memo<ProductLogoProps>((props) => {
     return <CustomLogo {...props} />;
   }
 
-  return <AgentAsia {...props} />;
+  return <LobeHub {...props} />;
 });

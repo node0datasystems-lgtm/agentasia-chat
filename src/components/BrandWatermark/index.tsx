@@ -3,7 +3,7 @@
 import { ORG_NAME, UTM_SOURCE } from '@agentasia/business-const';
 import { type FlexboxProps } from '@lobehub/ui';
 import { Flexbox } from '@lobehub/ui';
-import { AgentAsia } from '@lobehub/ui/brand';
+import { LobeHub } from '@lobehub/ui/brand';
 import { createStaticStyles, cssVar } from 'antd-style';
 import { memo } from 'react';
 
@@ -41,7 +41,7 @@ const BrandWatermark = memo<Omit<FlexboxProps, 'children'>>(({ style, ...rest })
           rel="noreferrer"
           target="_blank"
         >
-          <AgentAsia size={20} type={'text'} />
+          <LobeHub size={20} type={'text'} />
         </a>
       )}
     </Flexbox>
