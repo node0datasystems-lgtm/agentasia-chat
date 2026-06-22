@@ -172,7 +172,7 @@ export async function ingestAttachment(
 
   // 4. Upload + create record
   const ext = source.name?.split('.').pop() || 'bin';
-  const { nanoid } = await import('@lobechat/utils');
+  const { nanoid } = await import('@agentasia/utils');
   const pathname = `files/${userId}/${nanoid()}/${source.name || `file.${ext}`}`;
   const { fileId, key } = await fileService.uploadFromBuffer(buffer, mimeType, pathname);
 

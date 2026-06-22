@@ -1029,7 +1029,7 @@ export const createRuntimeExecutors = (
         if (isOnboardingAgent && !alreadyHasOnboardingContext && ctx.serverDB && ctx.userId) {
           try {
             const { formatWebOnboardingStateMessage } =
-              await import('@lobechat/builtin-tool-web-onboarding/utils');
+              await import('@agentasia/builtin-tool-web-onboarding/utils');
             const { UserPersonaModel } = await import('@/database/models/userMemory/persona');
             const onboardingService = new OnboardingService(ctx.serverDB, ctx.userId);
             const docService = new AgentDocumentsService(
@@ -1142,7 +1142,7 @@ export const createRuntimeExecutors = (
           try {
             const { FileModel } = await import('@/database/models/file');
             const { formatUploadedFilesPrompt } =
-              await import('@lobechat/builtin-tool-cloud-sandbox');
+              await import('@agentasia/builtin-tool-cloud-sandbox');
             const fileModel = new FileModel(ctx.serverDB, ctx.userId);
             const uploadedFiles = await fileModel.findFilesToInitInSandbox(agentasiaSkillTopicId);
             sandboxUploadedFiles = formatUploadedFilesPrompt(uploadedFiles);

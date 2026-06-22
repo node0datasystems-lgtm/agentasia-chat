@@ -1142,7 +1142,7 @@ export class DiscoverService {
     }
 
     // Step 3: Try to find in builtin tools
-    const { builtinTools } = await import('@lobechat/builtin-tools');
+    const { builtinTools } = await import('@agentasia/builtin-tools');
     const builtinTool = builtinTools.find((tool) => tool.identifier === identifier);
     if (builtinTool) {
       log('getPluginDetail: found builtin tool for identifier=%s', identifier);

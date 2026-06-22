@@ -433,13 +433,13 @@ export const connectorRouter = router({
 
   /**
    * Bootstrap a connector entry for a builtin tool (lobe-creds, lobe-local-system, etc.)
-   * by reading its manifest from @lobechat/builtin-tools.
+   * by reading its manifest from @agentasia/builtin-tools.
    * Idempotent — safe to call on every open of the detail panel.
    */
   syncBuiltinTool: connectorProcedure
     .input(z.object({ identifier: z.string().min(1) }))
     .mutation(async ({ input, ctx }) => {
-      const { builtinTools } = await import('@lobechat/builtin-tools');
+      const { builtinTools } = await import('@agentasia/builtin-tools');
       const tool = builtinTools.find((t) => t.identifier === input.identifier);
 
       if (!tool) {

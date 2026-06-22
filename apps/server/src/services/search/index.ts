@@ -67,7 +67,7 @@ export class SearchService {
       }
     } catch {}
 
-    const { Crawler } = await import('@lobechat/web-crawler');
+    const { Crawler } = await import('@agentasia/web-crawler');
     const crawler = new Crawler({ impls: this.crawlerImpls });
 
     const results = await pMap(
