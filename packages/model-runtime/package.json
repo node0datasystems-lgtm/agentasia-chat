@@ -34,7 +34,6 @@
     "type-fest": "^5.2.0",
     "url-join": "^5.0.0",
     "@agentasia/business-model-bank": "workspace:*",
-    "@lobehub/business-model-runtime": "workspace:*",
     "@agentasia/const": "workspace:*",
     "@agentasia/ssrf-safe-fetch": "workspace:*",
     "@agentasia/utils": "workspace:*"

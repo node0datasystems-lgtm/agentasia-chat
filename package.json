@@ -421,7 +421,6 @@
     "@agentasia/business-config": "workspace:*",
     "@agentasia/business-const": "workspace:*",
     "@agentasia/business-model-bank": "workspace:*",
-    "@lobehub/business-model-runtime": "workspace:*",
     "@agentasia/chat-adapter-feishu": "workspace:*",
     "@agentasia/chat-adapter-imessage": "workspace:*",
     "@agentasia/chat-adapter-line": "workspace:*",
